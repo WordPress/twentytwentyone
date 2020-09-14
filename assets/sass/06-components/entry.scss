@@ -1,0 +1,227 @@
+.entry-title {
+
+	color: var(--entry-header--color);
+	font-size: var(--entry-header--font-size);
+	letter-spacing: var(--heading--letter-spacing-h2);
+	line-height: var(--heading--line-height);
+	overflow-wrap: break-word;
+
+	a {
+		color: var(--entry-header--color-link);
+
+		&:hover {
+			color: var(--entry-header--color-hover);
+		}
+
+		&:focus {
+			color: var(--entry-header--color-focus);
+		}
+
+		&:active {
+			color: var(--entry-header--color-link);
+		}
+	}
+}
+
+/**
+ * Entry Content
+ */
+
+.entry-content,
+.entry-summary {
+	font-family: var(--entry-content--font-family);
+}
+
+.entry-content {
+
+	p {
+		word-wrap: break-word;
+	}
+
+	.more-link {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	a {
+
+	}
+
+	// Overwrite iframe embeds that have inline styles.
+	> iframe[style] {
+
+		margin: var(--global--spacing-vertical) 0 !important;
+		max-width: 100% !important;
+
+		@include media(mobile) {
+			max-width: var(--global--spacing-vertical) !important;
+		}
+	}
+
+	// Page links
+	.page-links a {
+
+	}
+
+	// Classic editor audio embeds.
+	.wp-audio-shortcode {
+		@extend %responsive-aligndefault-width;
+	}
+}
+
+.entry-attachment {
+	text-align: center;
+}
+
+.entry-meta {
+
+	color: var(--entry-meta--color);
+	clear: both;
+	float: none;
+	font-size: var(--entry-meta--font-size);
+	display: block;
+
+	> span {
+		display: inline-block;
+		margin-right: var(--global--spacing-unit);
+
+		& > *,
+		span .fn {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		.published + .updated {
+			display: none; // Hide updated date?
+		}
+	}
+
+	a {
+		border-color: transparent;
+		color: var(--entry-meta--color-link);
+
+		&:hover,
+		&:focus {
+			color: var(--entry-meta--color-hover);
+		}
+
+		&:hover {
+			border-color: var(--global--color-secondary);
+		}
+
+		&:focus {
+			color: var(--global--color-secondary);
+		}
+
+		&:active {
+			color: var(--entry-meta--color-link);
+		}
+	}
+
+	.svg-icon {
+		fill: currentColor;
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: calc(0.25 * var(--global--spacing-unit));
+	}
+}
+
+.entry-footer {
+
+	color: var(--entry-meta--color);
+	clear: both;
+	float: none;
+	font-size: var(--entry-meta--font-size);
+	display: block;
+
+	> span {
+		margin-right: calc( 0.5 * var(--global--spacing-unit));
+
+		.published + .updated {
+			display: none; // Hide updated date?
+		}
+	}
+
+	a {
+		color: var(--entry-meta--color-link);
+
+		&:hover,
+		&:focus {
+			color: var(--entry-meta--color-hover);
+		}
+
+		&:hover {
+			border-color: transparent;
+		}
+
+		&:active {
+			color: var(--entry-meta--color-link);
+		}
+	}
+}
+
+
+// Extra specificity to override rules in _vertical-margins.scss
+.site-main > article > .entry-footer {
+	margin-top: var(--global--spacing-vertical);
+	padding-top: var(--global--spacing-unit);
+	padding-bottom: calc( 3 * var(--global--spacing-vertical));
+	border-bottom: var(--separator--height) solid var(--separator--border-color);
+}
+
+body:not(.single) .site-main > article:last-of-type .entry-footer {
+	border-bottom: var(--separator--height) solid transparent;
+}
+
+/**
+ * Post Thumbnails
+ */
+
+.post-thumbnail {
+	@extend %responsive-aligndefault-width;
+	text-align: center;
+
+	.singular & {
+		@extend %responsive-alignfull-width-mobile;
+		@extend %responsive-alignfull-width;
+	}
+
+	.post-thumbnail-inner {
+		display: block;
+	}
+}
+
+/**
+ * Author
+ */
+
+/* Author description */
+
+.author-bio {
+
+	font-size: var(--global--font-size-xs);
+	max-width: var(--responsive--aligndefault-width);
+
+	.site-main > article > & {
+		margin-top: calc(2 * var(--global--spacing-vertical));
+	}
+
+	.author-title {
+		font-family: var(--entry-author-bio--font-family);
+		font-size: var(--entry-author-bio--font-size);
+	}
+
+	.author-description {
+		font-size: var(--global--font-size-md);
+	}
+
+	.avatar {
+		border-radius: 50%;
+	}
+}

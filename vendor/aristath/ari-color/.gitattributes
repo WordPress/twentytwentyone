@@ -1,0 +1,7 @@
+.github/ export-ignore
+.codeclimate.yml export-ignore
+.coveralls.yml export-ignore
+.gitignore export-ignore
+.simplecov export-ignore
+.travis.yml export-ignore
+phpunit.xml export-ignore

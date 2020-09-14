@@ -1,0 +1,27 @@
+{
+  "name": "aristath/ari-color",
+  "type": "library",
+  "description": "A PHP library for color manipulation in themes and plugins",
+  "homepage": "http://aristath.github.io/ariColor",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name" : "aristath",
+      "email" : "aristath@gmail.com",
+      "homepage" : "http://aristeides.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.2"
+  },
+  "require-dev": {
+    "composer/installers": "~1.0",
+    "phpunit/phpunit": "~4.0",
+    "satooshi/php-coveralls": "~2.2"
+  },
+  "autoload": {
+    "classmap": [
+      "aricolor.php"
+    ]
+  }
+}

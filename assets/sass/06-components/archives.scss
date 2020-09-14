@@ -1,0 +1,8 @@
+.page-title {
+	font-size: var(--global--font-size-page-title);
+}
+
+.page-header {
+	border-bottom: 3px solid var(--global--color-border);
+	padding-bottom: calc( 2* var(--global--spacing-vertical));
+}
