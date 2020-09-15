@@ -28,7 +28,7 @@ if ( ! function_exists( 'twenty_twenty_one_posted_on' ) ) {
 		printf(
 			/* translators: 2: author link. 3: author name*/
 			'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a>.</span>',
-			__( 'Published', 'twentywentyone' ),
+			__( 'Published', 'twentytwentyone' ),
 			esc_url( get_permalink() ),
 			$time_string
 		);

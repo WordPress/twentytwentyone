@@ -36,6 +36,7 @@ add_action( 'after_switch_theme', 'twenty_twenty_one_switch_theme' );
  * @global string $wp_version WordPress version.
  */
 function twenty_twenty_one_upgrade_notice() {
+	/* Translators: %s: WordPress Version. */
 	$message = sprintf( __( 'This theme requires at least WordPress version 5.3. You are running version %s. Please upgrade and try again.', 'twentytwentyone' ), $GLOBALS['wp_version'] );
 	printf( '<div class="error"><p>%s</p></div>', $message );
 }
@@ -50,6 +51,7 @@ function twenty_twenty_one_upgrade_notice() {
 function twenty_twenty_one_customize() {
 	wp_die(
 		sprintf(
+			/* Translators: %s: WordPress Version. */
 			__( 'This theme requires at least WordPress version 5.3. You are running version %s. Please upgrade and try again.', 'twentytwentyone' ),
 			$GLOBALS['wp_version']
 		),
@@ -70,6 +72,7 @@ add_action( 'load-customize.php', 'twenty_twenty_one_customize' );
  */
 function twenty_twenty_one_preview() {
 	if ( isset( $_GET['preview'] ) ) {
+		/* Translators: %s: WordPress Version. */
 		wp_die( sprintf( __( 'This theme requires at least WordPress version 5.3. You are running version %s. Please upgrade and try again.', 'twentytwentyone' ), $GLOBALS['wp_version'] ) );
 	}
 }
