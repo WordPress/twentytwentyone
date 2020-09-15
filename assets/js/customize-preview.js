@@ -44,7 +44,6 @@
 
             document.documentElement.style.setProperty( '--global--color-primary', textColor );
             document.documentElement.style.setProperty( '--global--color-secondary', textColor );
-            document.documentElement.style.setProperty( '--global--color-foreground', textColor );
         } );
 	} );
 }( wp.customize, _ ) );
