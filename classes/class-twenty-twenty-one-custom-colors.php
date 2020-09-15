@@ -63,16 +63,13 @@ class Twenty_Twenty_One_Custom_Colors {
 
 		$pattern = '~^[a-f0-9]{6,6}$~i'; // accept only valid hexadecimal colour values.
 
-		if ( ! @preg_match( $pattern, $foreground ) || ! @preg_match( $pattern, $background ) ) {
-			echo esc_html( $foreground );
-			trigger_error( 'Invalid hexadecimal color value(s) found', E_USER_WARNING );
+		if ( ! preg_match( $pattern, $foreground ) || ! preg_match( $pattern, $background ) ) {
 			return false;
 		}
 
 		$opacity = intval( $opacity ); // validate opacity data/number.
 
 		if ( $opacity > 100 || $opacity < 0 ) {
-			trigger_error( 'Opacity percentage error, valid numbers are between 0 - 100', E_USER_WARNING );
 			return false;
 		}
 
