@@ -84,22 +84,14 @@ class Twenty_Twenty_One_Custom_Colors {
 		$transparency = 100 - $opacity;
 
 		if ( ! isset( $colors_rgb[ $foreground ] ) ) { // do this only ONCE per script, for each unique colour.
-			$f                         = array(
-				'r' => hexdec( $foreground[0] . $foreground[1] ),
-				'g' => hexdec( $foreground[2] . $foreground[3] ),
-				'b' => hexdec( $foreground[4] . $foreground[5] ),
-			);
+			$f                         = $this->get_rgb_from_hex( $foreground );
 			$colors_rgb[ $foreground ] = $f;
 		} else { // if this function is used 100 times in a script, this block is run 99 times.  Efficient.
 			$f = $colors_rgb[ $foreground ];
 		}
 
 		if ( ! isset( $colors_rgb[ $background ] ) ) { // do this only ONCE per script, for each unique colour.
-			$b                         = array(
-				'r' => hexdec( $background[0] . $background[1] ),
-				'g' => hexdec( $background[2] . $background[3] ),
-				'b' => hexdec( $background[4] . $background[5] ),
-			);
+			$b                         = $this->get_rgb_from_hex( $background );
 			$colors_rgb[ $background ] = $b;
 		} else { // if this FUNCTION is used 100 times in a SCRIPT, this block will run 99 times.  Efficient.
 			$b = $colors_rgb[ $background ];
@@ -201,6 +193,29 @@ class Twenty_Twenty_One_Custom_Colors {
 	 */
 	public function get_relative_luminance_from_hex( $hex ) {
 
+		// Get RGB from HEX.
+		$rgb = $this->get_rgb_from_hex( $hex );
+
+		// Calculate the luminance.
+		$lum = ( 0.2126 * $rgb['r'] ) + ( 0.7152 * $rgb['g'] ) + ( 0.0722 * $rgb['b'] );
+
+		// Return rounded lum.
+		return round( $lum );
+	}
+
+	/**
+	 * Get RBG values from a hex color.
+	 *
+	 * @access public
+	 *
+	 * @since 1.0
+	 *
+	 * @param string $hex The hex color.
+	 *
+	 * @return array Returns an array [r => int, g => int, b => int].
+	 */
+	public function get_rgb_from_hex( $hex ) {
+
 		// Remove the "#" symbol from the beginning of the color.
 		$hex = ltrim( $hex, '#' );
 
@@ -209,14 +224,11 @@ class Twenty_Twenty_One_Custom_Colors {
 			$hex = substr( $hex, 0, 1 ) . substr( $hex, 0, 1 ) . substr( $hex, 1, 1 ) . substr( $hex, 1, 1 ) . substr( $hex, 2, 1 ) . substr( $hex, 2, 1 );
 		}
 
-		// Get red, green, blue.
-		$red   = hexdec( substr( $hex, 0, 2 ) );
-		$green = hexdec( substr( $hex, 2, 2 ) );
-		$blue  = hexdec( substr( $hex, 4, 2 ) );
-
-		// Calculate the luminance.
-		$lum = ( 0.2126 * $red ) + ( 0.7152 * $green ) + ( 0.0722 * $blue );
-		return round( $lum );
+		return array(
+			'r' => hexdec( substr( $hex, 0, 2 ) ),
+			'g' => hexdec( substr( $hex, 2, 2 ) ),
+			'b' => hexdec( substr( $hex, 4, 2 ) ),
+		);
 	}
 }
 
