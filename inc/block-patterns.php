@@ -50,7 +50,8 @@ if ( function_exists( 'register_block_pattern' ) ) {
 		)
 	);
 
-	/*
+	/**
+	 * WIP
 	register_block_pattern(
 		'twentytwentyone/group-image-overlap2',
 		array(

@@ -126,13 +126,16 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 			}
 		}
 
+		/**
+		 * WIP
 		// Posted by
-		// twenty_twenty_one_posted_by();
+		twenty_twenty_one_posted_by();
 
 		// Comment count.
-		// if ( ! is_singular() ) {
-		// twenty_twenty_one_comment_count();
-		// }
+		if ( ! is_singular() ) {
+			twenty_twenty_one_comment_count();
+		}
+		 */
 	}
 }
 
@@ -173,14 +176,22 @@ if ( ! function_exists( 'twenty_twenty_one_post_thumbnail' ) ) {
 if ( ! function_exists( 'twenty_twenty_one_comment_avatar' ) ) {
 	/**
 	 * Returns the HTML markup to generate a user avatar.
+	 *
+	 * @param int|string $id_or_email The user-ID or email.
+	 *
+	 * @return string
 	 */
 	function twenty_twenty_one_get_user_avatar_markup( $id_or_email = null ) {
-
 		if ( ! isset( $id_or_email ) ) {
 			$id_or_email = get_current_user_id();
 		}
-
-		return sprintf( '<div class="comment-user-avatar comment-author vcard">%s</div>', get_avatar( $id_or_email, twenty_twenty_one_get_avatar_size() ) );
+		return sprintf(
+			'<div class="comment-user-avatar comment-author vcard">%s</div>',
+			get_avatar(
+				$id_or_email,
+				twenty_twenty_one_get_avatar_size()
+			)
+		);
 	}
 }
 

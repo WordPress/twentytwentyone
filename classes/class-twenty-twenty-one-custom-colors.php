@@ -12,6 +12,11 @@
  */
 class Twenty_Twenty_One_Custom_Colors {
 
+	/**
+	 * Instantiate the object.
+	 *
+	 * @access public
+	 */
 	public function __construct() {
 
 		/**
@@ -29,20 +34,25 @@ class Twenty_Twenty_One_Custom_Colors {
 	 * Find the resulting colour by blending 2 colours
 	 * and setting an opacity level for the foreground colour.
 	 *
+	 * @access public
+	 *
 	 * @author J de Silva
+	 *
 	 * @link http://www.gidnetwork.com/b-135.html
+	 *
 	 * @param string  $foreground Hexadecimal colour value of the foreground colour.
 	 * @param integer $opacity Opacity percentage (of foreground colour). A number between 0 and 100.
 	 * @param string  $background Optional. Hexadecimal colour value of the background colour. Default is: <code>FFFFFF</code> aka white.
+	 *
 	 * @return string Hexadecimal colour value. <code>false</code> on errors.
 	 */
 	public function color_blend_by_opacity( $foreground, $opacity, $background = null ) {
 		static $colors_rgb = array(); // stores colour values already passed through the hexdec() functions below.
 
 		if ( ! is_null( $foreground ) ) {
-			$foreground = '000000'; // default primary.
+			$foreground = '000000'; // Default primary.
 		} else {
-			$foreground = preg_replace( '/[^0-9a-f]/i', '', $foreground ); // str_replace( '#', '', $foreground );
+			$foreground = preg_replace( '/[^0-9a-f]/i', '', $foreground );
 		}
 
 		if ( ! is_null( $background ) ) {
@@ -114,7 +124,9 @@ class Twenty_Twenty_One_Custom_Colors {
 	/**
 	 * Determine the luminance of the given color and then return #FFFFFF or #222222 so that our text is always readable.
 	 *
-	 * @param $background color string|array
+	 * @access public
+	 *
+	 * @param string $background_color The background color.
 	 *
 	 * @return string (hex color)
 	 */
@@ -124,30 +136,26 @@ class Twenty_Twenty_One_Custom_Colors {
 
 	/**
 	 * Generate color variables.
-	 */
-	/**
+	 *
 	 * Adjust the color value of the CSS variables depending on the background color theme mod.
 	 * Both text and link colors needs to be updated.
 	 * The code below needs to be updated, because the colors are no longer theme mods.
+	 *
+	 * @access public
+	 *
+	 * @param string|null $context Can be "editor" or null.
+	 *
+	 * @return string
 	 */
 	public function generate_custom_color_variables( $context = null ) {
 
 		$theme_css = 'editor' === $context ? ':root .editor-styles-wrapper{' : ':root{';
 
 		if ( get_theme_mod( 'background_color', 'D1E4DD' ) !== 'D1E4DD' ) {
-
-			// Update the global background color value for the editor:
 			$theme_css .= '--global--color-background: #' . get_theme_mod( 'background_color', 'D1E4DD' ) . ';';
-
 			$theme_css .= '--global--color-primary: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
-			// $theme_css .= "--global--color-primary-hover: " . custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ";";
-
 			$theme_css .= '--global--color-secondary: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
-			// $theme_css .= "--global--color-secondary-hover: " . $adjusted_color . ";";
-
 			$theme_css .= '--global--color-foreground: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
-			// $theme_css .= "--global--color-foreground-light: " . $adjusted_color . ";";
-
 		}
 
 		$theme_css .= '}';
@@ -162,6 +170,8 @@ class Twenty_Twenty_One_Custom_Colors {
 
 	/**
 	 * Customizer & frontend custom color variables.
+	 *
+	 * @access public
 	 */
 	public function custom_color_variables() {
 		if ( 'D1E4DD' !== get_theme_mod( 'background_color', 'D1E4DD' ) ) {
@@ -171,6 +181,8 @@ class Twenty_Twenty_One_Custom_Colors {
 
 	/**
 	 * Editor custom color variables.
+	 *
+	 * @access public
 	 */
 	public function editor_custom_color_variables() {
 		wp_enqueue_style( 'twenty-twenty-one-custom-color-overrides', get_template_directory_uri() . '/assets/css/custom-color-overrides.css', array(), wp_get_theme()->get( 'Version' ) );

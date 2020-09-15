@@ -102,16 +102,23 @@ add_filter(
 
 
 /**
- * WCAG 2.0 Attributes for Dropdown Menus
+ * WCAG 2.0 Attributes for Dropdown Menus.
  *
  * Adjustments to menu attributes to support WCAG 2.0 recommendations
  * for flyout and dropdown menus.
  *
- * @ref https://www.w3.org/WAI/tutorials/menus/flyout/
+ * @see https://www.w3.org/WAI/tutorials/menus/flyout/
+ *
+ * @param array    $atts  The HTML attributes applied to the menu item's <a> element, empty strings are ignored.
+ * @param WP_Post  $item  The current menu item.
+ * @param stdClass $args  An object of wp_nav_menu() arguments.
+ * @param int      $depth Depth of menu item. Used for padding.
+ *
+ * @return array
  */
 function twenty_twenty_one_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
 
-	// Add [aria-haspopup] and [aria-expanded] to menu items that have children
+	// Add [aria-haspopup] and [aria-expanded] to menu items that have children.
 	$item_has_children = in_array( 'menu-item-has-children', $item->classes, true );
 	if ( $item_has_children ) {
 		$atts['aria-haspopup'] = 'true';
