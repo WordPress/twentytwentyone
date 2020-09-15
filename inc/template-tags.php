@@ -206,14 +206,14 @@ if ( ! function_exists( 'twenty_twenty_one_the_posts_navigation' ) ) {
 				'prev_text' => sprintf(
 					/* Translators: Left arrow */
 					'%s <span class="nav-prev-text">%s</span>',
-					'&larr;',
+					twenty_twenty_one_get_icon_svg( 'arrow_left' ),
 					__( 'Older posts', 'twentytwentyone' )
 				),
 				'next_text' => sprintf(
 					/* Translators: Right arrow */
 					'<span class="nav-next-text">%s</span> %s',
 					__( 'Newer posts', 'twentytwentyone' ),
-					'&rarr;'
+					twenty_twenty_one_get_icon_svg( 'arrow_right' )
 				),
 			)
 		);

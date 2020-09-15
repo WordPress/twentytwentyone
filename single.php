@@ -36,10 +36,11 @@ while ( have_posts() ) :
 		// Previous/next post navigation.
 		the_post_navigation(
 			array(
-				'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next Post', 'twentytwentyone' ) . ' &rarr;</span> ' .
+				'next_text' => '<span class="meta-nav" aria-hidden="true">' .
+				__( 'Next Post', 'twentytwentyone' ) . ' ' . twenty_twenty_one_get_icon_svg( 'arrow_right' ) . '</span> ' . // phpcs:ignore WordPress.Security.EscapeOutput
 				'<span class="screen-reader-text">' . __( 'Next post:', 'twentytwentyone' ) . '</span> <br/>' .
 				'<span class="post-title">%title</span>',
-				'prev_text' => '<span class="meta-nav" aria-hidden="true">&larr; ' . __( 'Previous Post', 'twentytwentyone' ) . '</span> ' .
+				'prev_text' => '<span class="meta-nav" aria-hidden="true"> '. twenty_twenty_one_get_icon_svg( 'arrow_left' ) . ' ' . __( 'Previous Post', 'twentytwentyone' ) . '</span> ' .
 				'<span class="screen-reader-text">' . __( 'Previous post:', 'twentytwentyone' ) . '</span> <br/>' .
 				'<span class="post-title">%title</span>',
 			)

@@ -92,6 +92,7 @@
 			margin-bottom: 0;
 		}
 	}
+
 }
 
 // Index/archive navigation
@@ -124,7 +125,7 @@
 		&a:hover {
 			color: var(--pagination--color-link-hover);
 		}
-		
+
 		&:last-child {
 			margin-right: 0;
 		}
