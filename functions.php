@@ -83,7 +83,7 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 240, //TODO: Is this the correct logo size?
+				'height'      => 240, // TODO: Is this the correct logo size?
 				'width'       => 240,
 				'flex-width'  => false,
 				'flex-height' => false,
@@ -160,9 +160,9 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 		);
 
 		// Editor color palette.
-		$primary    = '#28303D';
-		$secondary  = '#39414D';
-		$mint       = '#D1E4DD';
+		$primary   = '#28303D';
+		$secondary = '#39414D';
+		$mint      = '#D1E4DD';
 
 		add_theme_support(
 			'editor-color-palette',
@@ -185,7 +185,8 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 			)
 		);
 
-		/* TODO: No gradients are currently included.
+		/*
+		 TODO: No gradients are currently included.
 		add_theme_support(
 			'editor-gradient-presets',
 			array(

@@ -127,12 +127,12 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 		}
 
 		// Posted by
-		//twenty_twenty_one_posted_by();
+		// twenty_twenty_one_posted_by();
 
 		// Comment count.
-		//if ( ! is_singular() ) {
-		//	twenty_twenty_one_comment_count();
-		//}
+		// if ( ! is_singular() ) {
+		// twenty_twenty_one_comment_count();
+		// }
 	}
 }
 

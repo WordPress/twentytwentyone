@@ -31,9 +31,9 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @author J de Silva
 	 * @link http://www.gidnetwork.com/b-135.html
-	 * @param string $foreground Hexadecimal colour value of the foreground colour.
+	 * @param string  $foreground Hexadecimal colour value of the foreground colour.
 	 * @param integer $opacity Opacity percentage (of foreground colour). A number between 0 and 100.
-	 * @param string $background Optional. Hexadecimal colour value of the background colour. Default is: <code>FFFFFF</code> aka white.
+	 * @param string  $background Optional. Hexadecimal colour value of the background colour. Default is: <code>FFFFFF</code> aka white.
 	 * @return string Hexadecimal colour value. <code>false</code> on errors.
 	 */
 	function color_blend_by_opacity( $foreground, $opacity, $background = null ) {
@@ -42,7 +42,7 @@ class Twenty_Twenty_One_Custom_Colors {
 		if ( ! is_null( $foreground ) ) {
 			$foreground = '000000'; // default primary.
 		} else {
-			$foreground = preg_replace( '/[^0-9a-f]/i', '', $foreground ); //str_replace( '#', '', $foreground );
+			$foreground = preg_replace( '/[^0-9a-f]/i', '', $foreground ); // str_replace( '#', '', $foreground );
 		}
 
 		if ( ! is_null( $background ) ) {
@@ -53,53 +53,55 @@ class Twenty_Twenty_One_Custom_Colors {
 
 		$pattern = '~^[a-f0-9]{6,6}$~i'; // accept only valid hexadecimal colour values.
 
-		if ( !@preg_match($pattern, $foreground) or !@preg_match($pattern, $background) ) {
+		if ( ! @preg_match( $pattern, $foreground ) or ! @preg_match( $pattern, $background ) ) {
 			echo $foreground;
-			trigger_error( "Invalid hexadecimal color value(s) found", E_USER_WARNING );
+			trigger_error( 'Invalid hexadecimal color value(s) found', E_USER_WARNING );
 			return false;
 		}
 
 		$opacity = intval( $opacity ); // validate opacity data/number.
 
-		if ( $opacity > 100  || $opacity < 0 ) {
-			trigger_error( "Opacity percentage error, valid numbers are between 0 - 100", E_USER_WARNING );
+		if ( $opacity > 100 || $opacity < 0 ) {
+			trigger_error( 'Opacity percentage error, valid numbers are between 0 - 100', E_USER_WARNING );
 			return false;
 		}
 
-		if ( $opacity == 100 )  // $transparency == 0
+		if ( $opacity == 100 ) {  // $transparency == 0
 			return strtoupper( $foreground );
-		if ( $opacity == 0 )    // $transparency == 100
+		}
+		if ( $opacity == 0 ) {    // $transparency == 100
 			return strtoupper( $background );
-
-		// calculate $transparency value.
-		$transparency = 100-$opacity;
-
-		if ( !isset($colors_rgb[$foreground]) ) { // do this only ONCE per script, for each unique colour.
-			$f = array(
-				'r'=>hexdec($foreground[0].$foreground[1]),
-				'g'=>hexdec($foreground[2].$foreground[3]),
-				'b'=>hexdec($foreground[4].$foreground[5])
-			);
-			$colors_rgb[$foreground] = $f;
-		} else { // if this function is used 100 times in a script, this block is run 99 times.  Efficient.
-			$f = $colors_rgb[$foreground];
 		}
 
-		if ( !isset($colors_rgb[$background]) ) { // do this only ONCE per script, for each unique colour.
-			$b = array(
-				'r'=>hexdec($background[0].$background[1]),
-				'g'=>hexdec($background[2].$background[3]),
-				'b'=>hexdec($background[4].$background[5])
+		// calculate $transparency value.
+		$transparency = 100 - $opacity;
+
+		if ( ! isset( $colors_rgb[ $foreground ] ) ) { // do this only ONCE per script, for each unique colour.
+			$f                         = array(
+				'r' => hexdec( $foreground[0] . $foreground[1] ),
+				'g' => hexdec( $foreground[2] . $foreground[3] ),
+				'b' => hexdec( $foreground[4] . $foreground[5] ),
 			);
-			$colors_rgb[$background] = $b;
+			$colors_rgb[ $foreground ] = $f;
+		} else { // if this function is used 100 times in a script, this block is run 99 times.  Efficient.
+			$f = $colors_rgb[ $foreground ];
+		}
+
+		if ( ! isset( $colors_rgb[ $background ] ) ) { // do this only ONCE per script, for each unique colour.
+			$b                         = array(
+				'r' => hexdec( $background[0] . $background[1] ),
+				'g' => hexdec( $background[2] . $background[3] ),
+				'b' => hexdec( $background[4] . $background[5] ),
+			);
+			$colors_rgb[ $background ] = $b;
 		} else { // if this FUNCTION is used 100 times in a SCRIPT, this block will run 99 times.  Efficient.
-			$b = $colors_rgb[$background];
+			$b = $colors_rgb[ $background ];
 		}
 
 		$add = array(
-			'r'=>( $b['r']-$f['r'] ) / 100,
-			'g'=>( $b['g']-$f['g'] ) / 100,
-			'b'=>( $b['b']-$f['b'] ) / 100
+			'r' => ( $b['r'] - $f['r'] ) / 100,
+			'g' => ( $b['g'] - $f['g'] ) / 100,
+			'b' => ( $b['b'] - $f['b'] ) / 100,
 		);
 
 		$f['r'] += intval( $add['r'] * $transparency );
@@ -111,7 +113,7 @@ class Twenty_Twenty_One_Custom_Colors {
 
 	/**
 	 * Determine the luminance of the given color and then return #FFFFFF or #222222 so that our text is always readable.
-	 * 
+	 *
 	 * @param $background color string|array
 	 *
 	 * @return string (hex color)
@@ -139,25 +141,25 @@ class Twenty_Twenty_One_Custom_Colors {
 		if ( get_theme_mod( 'background_color', 'D1E4DD' ) !== 'D1E4DD' ) {
 
 			// Update the global background color value for the editor:
-			$theme_css .= "--global--color-background: #" . get_theme_mod( 'background_color', 'D1E4DD' ) . ";";
+			$theme_css .= '--global--color-background: #' . get_theme_mod( 'background_color', 'D1E4DD' ) . ';';
 
-			$theme_css .= "--global--color-primary: " . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ";";
-			//$theme_css .= "--global--color-primary-hover: " . custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ";";
+			$theme_css .= '--global--color-primary: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
+			// $theme_css .= "--global--color-primary-hover: " . custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ";";
 
-			$theme_css .= "--global--color-secondary: " . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ";";
-			//$theme_css .= "--global--color-secondary-hover: " . $adjusted_color . ";";
+			$theme_css .= '--global--color-secondary: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
+			// $theme_css .= "--global--color-secondary-hover: " . $adjusted_color . ";";
 
-			$theme_css .= "--global--color-foreground: " . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ";";
-			//$theme_css .= "--global--color-foreground-light: " . $adjusted_color . ";";
+			$theme_css .= '--global--color-foreground: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
+			// $theme_css .= "--global--color-foreground-light: " . $adjusted_color . ";";
 
 		}
 
-		$theme_css .= "}";
+		$theme_css .= '}';
 
 		// Text selection colors.
-		$selection_background = $this->color_blend_by_opacity( '#000000', 5, get_theme_mod( 'background_color', 'D1E4DD' ) ) . ";";
-		$theme_css .= "::selection { background-color: " . $selection_background . "}";
-		$theme_css .= "::-moz-selection { background-color: ". $selection_background . "}";
+		$selection_background = $this->color_blend_by_opacity( '#000000', 5, get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
+		$theme_css           .= '::selection { background-color: ' . $selection_background . '}';
+		$theme_css           .= '::-moz-selection { background-color: ' . $selection_background . '}';
 
 		return $theme_css;
 	}
@@ -183,13 +185,13 @@ class Twenty_Twenty_One_Custom_Colors {
 
 	/**
 	 * Get luminance from a HEX color.
-	 * 
+	 *
 	 * @access public
 	 *
 	 * @since 1.0
-	 * 
+	 *
 	 * @param string $hex The HEX color.
-	 * 
+	 *
 	 * @return int Returns a number (0-255).
 	 */
 	public function get_relative_luminance_from_hex( $hex ) {
@@ -213,4 +215,4 @@ class Twenty_Twenty_One_Custom_Colors {
 	}
 }
 
-new Twenty_Twenty_One_Custom_Colors;
+new Twenty_Twenty_One_Custom_Colors();

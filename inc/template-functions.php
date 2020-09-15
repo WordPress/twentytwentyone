@@ -92,13 +92,15 @@ function twenty_twenty_one_get_the_archive_title() {
 	} elseif ( is_post_type_archive() ) {
 		$cpt = get_post_type_object( get_queried_object()->name );
 		/* translators: %s: Post type singular name */
-		$title = sprintf( esc_html__( '%s Archives', 'twentytwentyone' ),
+		$title = sprintf(
+			esc_html__( '%s Archives', 'twentytwentyone' ),
 			$cpt->labels->singular_name
 		);
 	} elseif ( is_tax() ) {
 		$tax = get_taxonomy( get_queried_object()->taxonomy );
 		/* translators: %s: Taxonomy singular name */
-		$title = sprintf( esc_html__( '%s Archives', 'twentytwentyone' ),
+		$title = sprintf(
+			esc_html__( '%s Archives', 'twentytwentyone' ),
 			$tax->labels->singular_name
 		);
 	} else {
