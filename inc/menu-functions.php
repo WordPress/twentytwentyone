@@ -35,10 +35,10 @@ add_filter(
 	'nav_menu_css_class',
 	function( $classes ) {
 		$item_classes = array( 'wp-block-navigation-link' );
-		if ( in_array( 'current-menu-item', $classes ) ) {
+		if ( in_array( 'current-menu-item', $classes, true ) ) {
 			$item_classes[] = 'current-menu-item';
 		}
-		if ( in_array( 'menu-item-has-children', $classes ) ) {
+		if ( in_array( 'menu-item-has-children', $classes, true ) ) {
 			$item_classes[] = 'has-child';
 		}
 		return $item_classes;
@@ -85,7 +85,7 @@ add_filter(
 add_filter(
 	'walker_nav_menu_start_el',
 	function( $item_output, $item ) {
-		$has_children = in_array( 'menu-item-has-children', $item->classes );
+		$has_children = in_array( 'menu-item-has-children', $item->classes, true );
 		if ( $has_children ) {
 			$item_output = str_replace(
 				'</a>',
@@ -112,7 +112,7 @@ add_filter(
 function twenty_twenty_one_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
 
 	// Add [aria-haspopup] and [aria-expanded] to menu items that have children
-	$item_has_children = in_array( 'menu-item-has-children', $item->classes );
+	$item_has_children = in_array( 'menu-item-has-children', $item->classes, true );
 	if ( $item_has_children ) {
 		$atts['aria-haspopup'] = 'true';
 		$atts['aria-expanded'] = 'false';
