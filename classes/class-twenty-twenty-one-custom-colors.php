@@ -31,83 +31,40 @@ class Twenty_Twenty_One_Custom_Colors {
 	}
 
 	/**
-	 * Find the resulting colour by blending 2 colours
-	 * and setting an opacity level for the foreground colour.
+	 * Find the resulting color by blending 2 colours
+	 * and setting an opacity level for the 2nd color.
 	 *
 	 * @access public
 	 *
-	 * @author J de Silva
+	 * @param string $color1 Hex value of color1.
+	 * @param string $color2 Hex value of color2.
+	 * @param int    $mix    Percentage (of color2) that we want mixed in color1. Number between 0 and 100.
 	 *
-	 * @link http://www.gidnetwork.com/b-135.html
-	 *
-	 * @param string  $foreground Hexadecimal colour value of the foreground colour.
-	 * @param integer $opacity Opacity percentage (of foreground colour). A number between 0 and 100.
-	 * @param string  $background Optional. Hexadecimal colour value of the background colour. Default is: <code>FFFFFF</code> aka white.
-	 *
-	 * @return string Hexadecimal colour value. <code>false</code> on errors.
+	 * @return string Hexadecimal color value.
 	 */
-	public function color_blend_by_opacity( $foreground, $opacity, $background = null ) {
-		static $colors_rgb = array(); // stores colour values already passed through the hexdec() functions below.
+	public function mix_colors( $color1, $color2, $mix ) {
 
-		if ( ! is_null( $foreground ) ) {
-			$foreground = '000000'; // Default primary.
-		} else {
-			$foreground = preg_replace( '/[^0-9a-f]/i', '', $foreground );
+		if ( 100 === $mix ) {
+			return $color2;
+		}
+		if ( 0 === $mix ) {
+			return $color1;
 		}
 
-		if ( ! is_null( $background ) ) {
-			$background = 'FFFFFF'; // default background.
-		} else {
-			$background = preg_replace( '/[^0-9a-f]/i', '', $background );
-		}
-
-		$pattern = '~^[a-f0-9]{6,6}$~i'; // accept only valid hexadecimal colour values.
-
-		if ( ! preg_match( $pattern, $foreground ) || ! preg_match( $pattern, $background ) ) {
-			return false;
-		}
-
-		$opacity = intval( $opacity ); // validate opacity data/number.
-
-		if ( $opacity > 100 || $opacity < 0 ) {
-			return false;
-		}
-
-		if ( 100 === $opacity ) {  // $transparency == 0
-			return strtoupper( $foreground );
-		}
-		if ( 0 === $opacity ) {    // $transparency == 100
-			return strtoupper( $background );
-		}
-
-		// calculate $transparency value.
-		$transparency = 100 - $opacity;
-
-		if ( ! isset( $colors_rgb[ $foreground ] ) ) { // do this only ONCE per script, for each unique colour.
-			$f                         = $this->get_rgb_from_hex( $foreground );
-			$colors_rgb[ $foreground ] = $f;
-		} else { // if this function is used 100 times in a script, this block is run 99 times.  Efficient.
-			$f = $colors_rgb[ $foreground ];
-		}
-
-		if ( ! isset( $colors_rgb[ $background ] ) ) { // do this only ONCE per script, for each unique colour.
-			$b                         = $this->get_rgb_from_hex( $background );
-			$colors_rgb[ $background ] = $b;
-		} else { // if this FUNCTION is used 100 times in a SCRIPT, this block will run 99 times.  Efficient.
-			$b = $colors_rgb[ $background ];
-		}
+		$c1 = $this->get_rgb_from_hex( $color1 );
+		$c2 = $this->get_rgb_from_hex( $color2 );
 
 		$add = array(
-			'r' => ( $b['r'] - $f['r'] ) / 100,
-			'g' => ( $b['g'] - $f['g'] ) / 100,
-			'b' => ( $b['b'] - $f['b'] ) / 100,
+			'r' => ( $c1['r'] - $c2['r'] ) / 100,
+			'g' => ( $c1['g'] - $c2['g'] ) / 100,
+			'b' => ( $c1['b'] - $c2['b'] ) / 100,
 		);
 
-		$f['r'] += intval( $add['r'] * $transparency );
-		$f['g'] += intval( $add['g'] * $transparency );
-		$f['b'] += intval( $add['b'] * $transparency );
+		$c2['r'] += intval( $add['r'] * ( 100 - $mix ) );
+		$c2['g'] += intval( $add['g'] * ( 100 - $mix ) );
+		$c2['b'] += intval( $add['b'] * ( 100 - $mix ) );
 
-		return sprintf( '#%02X%02X%02X', $f['r'], $f['g'], $f['b'] );
+		return sprintf( '#%02X%02X%02X', $c2['r'], $c2['g'], $c2['b'] );
 	}
 
 	/**
@@ -150,7 +107,7 @@ class Twenty_Twenty_One_Custom_Colors {
 		$theme_css .= '}';
 
 		// Text selection colors.
-		$selection_background = $this->color_blend_by_opacity( '#000000', 5, get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
+		$selection_background = $this->mix_colors( get_theme_mod( 'background_color', 'D1E4DD' ), '#000000', 5 ) . ';';
 		$theme_css           .= '::selection { background-color: ' . $selection_background . '}';
 		$theme_css           .= '::-moz-selection { background-color: ' . $selection_background . '}';
 
