@@ -66,10 +66,10 @@ class Twenty_Twenty_One_Custom_Colors {
 			return false;
 		}
 
-		if ( $opacity == 100 ) {  // $transparency == 0
+		if ( 100 === $opacity ) {  // $transparency == 0
 			return strtoupper( $foreground );
 		}
-		if ( $opacity == 0 ) {    // $transparency == 100
+		if ( 0 === $opacity ) {    // $transparency == 100
 			return strtoupper( $background );
 		}
 
@@ -132,11 +132,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 */
 	function generate_custom_color_variables( $context = null ) {
 
-		if ( $context === 'editor' ) {
-			$theme_css = ':root .editor-styles-wrapper {';
-		} else {
-			$theme_css = ':root {';
-		}
+		$theme_css = 'editor' === $context ? ':root .editor-styles-wrapper{' : ':root{';
 
 		if ( get_theme_mod( 'background_color', 'D1E4DD' ) !== 'D1E4DD' ) {
 

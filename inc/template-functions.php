@@ -168,11 +168,10 @@ if ( ! function_exists( 'twenty_twenty_one_post_title' ) ) {
 	 * Add a title to posts that are missing titles.
 	 */
 	function twenty_twenty_one_post_title( $title ) {
-		if ( $title == '' ) {
+		if ( '' === $title ) {
 			return esc_html__( 'Untitled', 'twentytwentyone' );
-		} else {
-			return $title;
 		}
+		return $title;
 	}
 
 	add_filter( 'the_title', 'twenty_twenty_one_post_title' );
