@@ -340,11 +340,6 @@ add_action( 'wp_enqueue_scripts', 'twenty_twenty_one_non_latin_languages' );
 require get_template_directory() . '/classes/class-twenty-twenty-one-svg-icons.php';
 
 /**
- * Composer packages.
- */
-require get_template_directory() . '/packages/autoload.php';
-
-/**
  * Custom color classes.
  */
 require get_template_directory() . '/classes/class-twenty-twenty-one-custom-colors.php';
