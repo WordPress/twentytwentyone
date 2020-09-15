@@ -27,7 +27,7 @@ if ( ! function_exists( 'twenty_twenty_one_posted_on' ) ) {
 
 		printf(
 			/* translators: 2: author link. 3: author name*/
-			'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a>.</span>',
+			'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
 			esc_html__( 'Published', 'twentytwentyone' ),
 			esc_url( get_permalink() ),
 			$time_string // phpcs:ignore WordPress.Security.EscapeOutput
@@ -77,11 +77,12 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_header' ) ) {
 if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
+	 * Footer entry meta is displayed differently in archives and single posts.
 	 */
 	function twenty_twenty_one_entry_meta_footer() {
 
 		// Hide meta information on pages.
-		if ( 'post' === get_post_type() ) {
+		if ( 'post' === get_post_type() && ! is_single() ) {
 			// Posted on.
 			twenty_twenty_one_posted_on();
 
@@ -90,7 +91,7 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers. */
-						__( 'Edit<span class="screen-reader-text"> %s</span>.', 'twentytwentyone' ),
+						__( 'Edit<span class="screen-reader-text"> %s</span>', 'twentytwentyone' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -108,7 +109,7 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 			if ( $categories_list ) {
 				printf(
 					/* translators: 1: posted in label, 2: list of categories. */
-					'<span class="cat-links">%1$s %2$s.</span>',
+					'<span class="cat-links">%1$s %2$s</span>',
 					esc_html__( 'Categorized as', 'twentytwentyone' ),
 					$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
 				);
@@ -119,23 +120,55 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 			if ( $tags_list ) {
 				printf(
 					/* translators: 1: posted in label, 2: list of tags. */
-					'<span class="tags-links">%1$s %2$s.</span>',
+					'<span class="tags-links">%1$s %2$s</span>',
+					esc_html__( 'Tagged', 'twentytwentyone' ),
+					$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
+				);
+			}
+		} elseif ( 'post' === get_post_type() && is_single() ) {
+			// Posted on.
+			twenty_twenty_one_posted_on();
+
+			/* translators: used between list items, there is a space after the comma. */
+			$categories_list = get_the_category_list( __( ', ', 'twentytwentyone' ) );
+			if ( $categories_list ) {
+				printf(
+					/* translators: 1: posted in label, 2: list of categories. */
+					'<span class="cat-links">%1$s %2$s</span>',
+					esc_html__( 'Categorized as', 'twentytwentyone' ),
+					$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
+				);
+			}
+
+			// Edit post link.
+			edit_post_link(
+				sprintf(
+					wp_kses(
+						/* translators: %s: Name of current post. Only visible to screen readers. */
+						__( 'Edit<span class="screen-reader-text"> %s</span>', 'twentytwentyone' ),
+						array(
+							'span' => array(
+								'class' => array(),
+							),
+						)
+					),
+					get_the_title()
+				),
+				'<span class="edit-link">',
+				'</span>'
+			);
+
+			/* translators: used between list items, there is a space after the comma. */
+			$tags_list = get_the_tag_list( '', __( ', ', 'twentytwentyone' ) );
+			if ( $tags_list ) {
+				printf(
+					/* translators: 1: posted in label, 2: list of tags. */
+					'<span class="tags-links">%1$s %2$s</span>',
 					esc_html__( 'Tagged', 'twentytwentyone' ),
 					$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
 				);
 			}
 		}
-
-		/**
-		 * WIP
-		// Posted by
-		twenty_twenty_one_posted_by();
-
-		// Comment count.
-		if ( ! is_singular() ) {
-			twenty_twenty_one_comment_count();
-		}
-		 */
 	}
 }
 
