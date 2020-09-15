@@ -18,12 +18,8 @@ indent_style = space
 indent_size = 2
 
 [*.css]
-indent_style = space
-indent_size = 2
-
-[*.less]
-indent_style = space
-indent_size = 2
+indent_style = tab
+indent_size = 4
 
 [*.scss]
 indent_style = tab
@@ -31,7 +27,3 @@ indent_size = 4
 
 [*.txt]
 end_of_line = crlf
-
-[*.yml]
-indent_style = space
-indent_size = 2
