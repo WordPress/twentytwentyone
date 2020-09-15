@@ -185,8 +185,8 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 			)
 		);
 
-		/*
-		 TODO: No gradients are currently included.
+		/**
+		 * TODO: No gradients are currently included.
 		add_theme_support(
 			'editor-gradient-presets',
 			array(
