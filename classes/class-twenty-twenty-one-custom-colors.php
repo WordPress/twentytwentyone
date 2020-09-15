@@ -194,8 +194,8 @@ class Twenty_Twenty_One_Custom_Colors {
 	 */
 	public function get_relative_luminance_from_hex( $hex ) {
 
-		// Sanitize hex color, removing the hash.
-		$hex = sanitize_hex_color_no_hash( $hex );
+		// Remove the "#" symbol from the beginning of the color.
+		$hex = ltrim( $hex, '#' );
 
 		// Make sure we have 6 digits for the below calculations.
 		if ( 3 === strlen( $hex ) ) {
