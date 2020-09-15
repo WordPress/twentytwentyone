@@ -1,8 +1,5 @@
 {
     "config": {
         "vendor-dir": "packages"
-    },    
-    "require": {
-        "aristath/ari-color": "^1.1"
     }
 }
