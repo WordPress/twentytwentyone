@@ -6,14 +6,9 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitb102e2d75d06d5c6d86e51b488267fae
 {
-    public static $classMap = array (
-        'ariColor' => __DIR__ . '/..' . '/aristath/ari-color/aricolor.php',
-    );
-
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInitb102e2d75d06d5c6d86e51b488267fae::$classMap;
 
         }, null, ClassLoader::class);
     }

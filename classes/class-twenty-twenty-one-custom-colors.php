@@ -117,8 +117,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 * @return string (hex color)
 	 */
 	function custom_get_readable_color( $background_color ) {
-		$color = ariColor::newColor( $background_color );
-		return ( 127 < $color->luminance ) ? '#222222' : '#FFFFFF';
+		return ( 127 < $this->get_relative_luminance_from_hex( $background_color ) ) ? '#222222' : '#FFFFFF';
 	}
 
 	/**
@@ -180,6 +179,37 @@ class Twenty_Twenty_One_Custom_Colors {
 		if ( 'D1E4DD' !== get_theme_mod( 'background_color', 'D1E4DD' ) ) {
 			wp_add_inline_style( 'twenty-twenty-one-custom-color-overrides', $this->generate_custom_color_variables( 'editor' ) );
 		}
+	}
+
+	/**
+	 * Get luminance from a HEX color.
+	 * 
+	 * @access public
+	 *
+	 * @since 1.0
+	 * 
+	 * @param string $hex The HEX color.
+	 * 
+	 * @return int Returns a number (0-255).
+	 */
+	public function get_relative_luminance_from_hex( $hex ) {
+
+		// Remove the "#" symbol from the beginning of the color.
+		$hex = ltrim( $hex, '#' );
+
+		// Make sure we have 6 digits for the below calculations.
+		if ( 3 === strlen( $hex ) ) {
+			$hex = substr( $hex, 0, 1 ) . substr( $hex, 0, 1 ) . substr( $hex, 1, 1 ) . substr( $hex, 1, 1 ) . substr( $hex, 2, 1 ) . substr( $hex, 2, 1 );
+		}
+
+		// Get red, green, blue.
+		$red   = hexdec( substr( $hex, 0, 2 ) );
+		$green = hexdec( substr( $hex, 2, 2 ) );
+		$blue  = hexdec( substr( $hex, 4, 2 ) );
+
+		// Calculate the luminance.
+		$lum = ( 0.2126 * $red ) + ( 0.7152 * $green ) + ( 0.0722 * $blue );
+		return round( $lum );
 	}
 }
 
