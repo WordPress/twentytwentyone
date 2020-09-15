@@ -20,7 +20,7 @@
  */
 function twenty_twenty_one_switch_theme() {
 	switch_theme( WP_DEFAULT_THEME );
-	unset( $_GET['activated'] );
+	unset( $_GET['activated'] ); // phpcs:ignore WordPress.Security.NonceVerification
 	add_action( 'admin_notices', 'twenty_twenty_one_upgrade_notice' );
 }
 add_action( 'after_switch_theme', 'twenty_twenty_one_switch_theme' );
@@ -75,7 +75,7 @@ add_action( 'load-customize.php', 'twenty_twenty_one_customize' );
  * @global string $wp_version WordPress version.
  */
 function twenty_twenty_one_preview() {
-	if ( isset( $_GET['preview'] ) ) {
+	if ( isset( $_GET['preview'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification
 		wp_die(
 			sprintf(
 				/* Translators: %s: WordPress Version. */
