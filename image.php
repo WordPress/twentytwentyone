@@ -64,7 +64,7 @@ while ( have_posts() ) :
 			if ( $metadata ) {
 				printf(
 					'<span class="full-size-link"><span class="screen-reader-text">%1$s</span><a href="%2$s">%2$s &times; %5$s</a></span>',
-					_x( 'Full size', 'Used before full size attachment link.', 'twentytwentyone' ),
+					_x( 'Full size', 'Used before full size attachment link.', 'twentytwentyone' ), // phpcs:ignore WordPress.Security.EscapeOutput
 					esc_url( wp_get_attachment_url() ),
 					absint( $metadata['width'] ),
 					absint( $metadata['height'] )

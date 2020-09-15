@@ -12,7 +12,7 @@
 <div class="author-bio">
 	<?php
 	echo get_avatar( get_the_author_meta( 'ID' ), '90' );
-	_e( 'By', 'twentytwentyone' );
+	esc_html_e( 'By', 'twentytwentyone' );
 	?>
 	<h2 class="author-title">
 		<span class="author-heading">
@@ -30,7 +30,7 @@
 		<?php
 		printf(
 			/* translators: 1: Author name */
-			__( "View all of %s's posts", 'twentytwentyone' ),
+			esc_html__( "View all of %s's posts", 'twentytwentyone' ),
 			get_the_author()
 		);
 		?>

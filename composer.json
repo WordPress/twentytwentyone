@@ -1,5 +1,9 @@
 {
-    "require": {
-        "aristath/ari-color": "^1.1"
-    }
+  "require-dev": {
+    "composer/installers": "~1.0",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2",
+    "wp-coding-standards/wpcs": "^2.3",
+    "wptrt/wpthemereview": "*",
+    "szepeviktor/phpstan-wordpress": "^0.6.0"
+  }
 }

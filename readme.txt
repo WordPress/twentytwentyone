@@ -66,14 +66,6 @@ https://github.com/WordPress/gutenberg/tree/master/packages/icons
 
 This theme bundles the following third-party resources:
 
-Color Contrast Validation
-Copyright (C) 2016 Per Soderlind
-License: GNU General Public License v3 
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Source: https://github.com/soderlind/2016-customizer-demo
-Included as part of the following classes and functions:
-- on_customize_controls_enqueue_scripts()
-
 Images
 Irises, Vincent van Gogh, 1890. Public domain. https://www.metmuseum.org/art/collection/search/436528
 Girl in white, Vincent van Gogh, 1890. Public domain. https://www.nga.gov/collection/art-object-page.46505.html

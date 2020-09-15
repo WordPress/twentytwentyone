@@ -42,8 +42,12 @@ add_filter( 'body_class', 'twenty_twenty_one_body_classes' );
 
 /**
  * Adds custom class to the array of posts classes.
+ *
+ * @param array $classes An array of CSS classes.
+ *
+ * @return array
  */
-function twenty_twenty_one_post_classes( $classes, $class, $post_id ) {
+function twenty_twenty_one_post_classes( $classes ) {
 	$classes[] = 'entry';
 
 	return $classes;
@@ -62,6 +66,10 @@ add_action( 'wp_head', 'twenty_twenty_one_pingback_header' );
 
 /**
  * Changes comment form default fields.
+ *
+ * @param array $defaults The form defaults.
+ *
+ * @return array
  */
 function twenty_twenty_one_comment_form_defaults( $defaults ) {
 	$comment_field = $defaults['comment_field'];
@@ -90,15 +98,17 @@ function twenty_twenty_one_get_the_archive_title() {
 	} elseif ( is_day() ) {
 		$title = __( 'Daily Archives: ', 'twentytwentyone' ) . '<span class="page-description">' . get_the_date() . '</span>';
 	} elseif ( is_post_type_archive() ) {
-		$cpt = get_post_type_object( get_queried_object()->name );
-		/* translators: %s: Post type singular name */
-		$title = sprintf( esc_html__( '%s Archives', 'twentytwentyone' ),
+		$cpt   = get_post_type_object( get_queried_object()->name );
+		$title = sprintf(
+			/* translators: %s: Post type singular name */
+			esc_html__( '%s Archives', 'twentytwentyone' ),
 			$cpt->labels->singular_name
 		);
 	} elseif ( is_tax() ) {
-		$tax = get_taxonomy( get_queried_object()->taxonomy );
-		/* translators: %s: Taxonomy singular name */
-		$title = sprintf( esc_html__( '%s Archives', 'twentytwentyone' ),
+		$tax   = get_taxonomy( get_queried_object()->taxonomy );
+		$title = sprintf(
+			/* translators: %s: Taxonomy singular name */
+			esc_html__( '%s Archives', 'twentytwentyone' ),
 			$tax->labels->singular_name
 		);
 	} else {
@@ -126,6 +136,8 @@ function twenty_twenty_one_get_avatar_size() {
  * Returns true if comment is by author of the post.
  *
  * @see get_comment_class()
+ *
+ * @param Object $comment The comment object.
  */
 function twenty_twenty_one_is_comment_by_post_author( $comment = null ) {
 	if ( is_object( $comment ) && $comment->user_id > 0 ) {
@@ -164,13 +176,16 @@ add_filter( 'the_content_more_link', 'twenty_twenty_one_continue_reading_link' )
 if ( ! function_exists( 'twenty_twenty_one_post_title' ) ) {
 	/**
 	 * Add a title to posts that are missing titles.
+	 *
+	 * @param string $title The title.
+	 *
+	 * @return string
 	 */
 	function twenty_twenty_one_post_title( $title ) {
-		if ( $title == '' ) {
+		if ( '' === $title ) {
 			return esc_html__( 'Untitled', 'twentytwentyone' );
-		} else {
-			return $title;
 		}
+		return $title;
 	}
 
 	add_filter( 'the_title', 'twenty_twenty_one_post_title' );

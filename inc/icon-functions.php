@@ -9,6 +9,11 @@
 
 /**
  * Gets the SVG code for a given icon.
+ *
+ * @param string $icon The icon.
+ * @param int    $size The icon size in pixels.
+ *
+ * @return string
  */
 function twenty_twenty_one_get_icon_svg( $icon, $size = 24 ) {
 	return Twenty_Twenty_One_SVG_Icons::get_svg( 'ui', $icon, $size );
@@ -16,6 +21,11 @@ function twenty_twenty_one_get_icon_svg( $icon, $size = 24 ) {
 
 /**
  * Gets the SVG code for a given social icon.
+ *
+ * @param string $icon The icon.
+ * @param int    $size The icon size in pixels.
+ *
+ * @return string
  */
 function twenty_twenty_one_get_social_icon_svg( $icon, $size = 24 ) {
 	return Twenty_Twenty_One_SVG_Icons::get_svg( 'social', $icon, $size );
@@ -23,6 +33,11 @@ function twenty_twenty_one_get_social_icon_svg( $icon, $size = 24 ) {
 
 /**
  * Detects the social network from a URL and returns the SVG code for its icon.
+ *
+ * @param string $uri  The URI.
+ * @param int    $size The icon size in pixels.
+ *
+ * @return string
  */
 function twenty_twenty_one_get_social_link_svg( $uri, $size = 24 ) {
 	return Twenty_Twenty_One_SVG_Icons::get_social_link_svg( $uri, $size );
