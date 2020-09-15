@@ -383,3 +383,21 @@ require get_template_directory() . '/inc/block-patterns.php';
  * Block Styles.
  */
 require get_template_directory() . '/inc/block-styles.php';
+
+/**
+ * Enqueue scripts for the customizer preview.
+ *
+ * @since Twenty Twenty 1.0
+ *
+ * @return void
+ */
+function twentytwentyone_customize_preview_init() {
+	wp_enqueue_script(
+		'twentytwentyone-customize-preview',
+		get_theme_file_uri( '/assets/js/customize-preview.js' ),
+		array( 'customize-preview', 'customize-selective-refresh', 'jquery' ),
+		get_theme_file_path( 'assets/js/customize-preview.js' ),
+		true
+	);
+}
+add_action( 'customize_preview_init', 'twentytwentyone_customize_preview_init' );
