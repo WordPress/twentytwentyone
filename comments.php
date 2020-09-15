@@ -34,11 +34,11 @@ if ( post_password_required() ) {
 			if ( '1' === $twenty_twenty_one_comment_count ) {
 				esc_html_e( '1 Reply', 'twentytwentyone' );
 			} else {
-				printf( // WPCS: XSS OK.
-					/* translators: 1: comment count number, 2: title. */
+				printf(
+					/* Translators: 1: comment count number, 2: title. */
 					esc_html( _nx( '%1$s Reply', '%1$s Replies', $twenty_twenty_one_comment_count, 'comments title', 'twentytwentyone' ) ),
-					number_format_i18n( $twenty_twenty_one_comment_count ),
-					'<span>' . get_the_title() . '</span>'
+					esc_html( number_format_i18n( $twenty_twenty_one_comment_count ) ),
+					'<span>' . get_the_title() . '</span>' // phpcs:ignore WordPress.Security.EscapeOutput
 				);
 			}
 			?>

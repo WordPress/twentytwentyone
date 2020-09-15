@@ -36,7 +36,7 @@
 				/* translators: 1: Copyright date format, see https://www.php.net/date, 2: Site name */
 				printf(
 					/* Translators: %1$s: Copyright date. %2$s: Site name. */
-					__( '&copy; %1$s %2$s', 'twentytwentyone' ),
+					esc_html__( '&copy; %1$s %2$s', 'twentytwentyone' ),
 					esc_html( date_i18n( _x( 'Y', 'copyright date format', 'twentytwentyone' ) ) ),
 					esc_html( get_bloginfo( 'name' ) . '.' )
 				);
@@ -49,7 +49,7 @@
 				*/
 				?>
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentytwentyone' ) ); ?>"  class="imprint">
-				<?php /* translators: %s: WordPress. */ printf( __( 'Proudly powered by %s.', 'twentytwentyone' ), 'WordPress' ); ?>
+				<?php /* translators: %s: WordPress. */ printf( esc_html__( 'Proudly powered by %s.', 'twentytwentyone' ), 'WordPress' ); ?>
 				</a>
 			</div>
 

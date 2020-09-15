@@ -28,9 +28,9 @@ if ( ! function_exists( 'twenty_twenty_one_posted_on' ) ) {
 		printf(
 			/* translators: 2: author link. 3: author name*/
 			'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a>.</span>',
-			__( 'Published', 'twentytwentyone' ),
+			esc_html__( 'Published', 'twentytwentyone' ),
 			esc_url( get_permalink() ),
-			$time_string
+			$time_string // phpcs:ignore WordPress.Security.EscapeOutput
 		);
 	}
 }
@@ -43,7 +43,7 @@ if ( ! function_exists( 'twenty_twenty_one_posted_by' ) ) {
 		printf(
 			/* translators: 1: post author, only visible to screen readers. 2: author link. 3: author name*/
 			'<span class="byline"><span class="screen-reader-text">%1$s</span><span class="author vcard"><a class="url fn n" href="%2$s">%3$s</a></span></span>',
-			__( 'Posted by', 'twentytwentyone' ),
+			esc_html__( 'Posted by', 'twentytwentyone' ),
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 			esc_html( get_the_author() )
 		);
@@ -109,9 +109,9 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				printf(
 					/* translators: 1: posted in label, 2: list of categories. */
 					'<span class="cat-links">%1$s %2$s.</span>',
-					__( 'Categorized as', 'twentytwentyone' ),
-					$categories_list
-				); // WPCS: XSS OK.
+					esc_html__( 'Categorized as', 'twentytwentyone' ),
+					$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
+				);
 			}
 
 			/* translators: used between list items, there is a space after the comma. */
@@ -120,9 +120,9 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				printf(
 					/* translators: 1: posted in label, 2: list of tags. */
 					'<span class="tags-links">%1$s %2$s.</span>',
-					__( 'Tagged', 'twentytwentyone' ),
-					$tags_list
-				); // WPCS: XSS OK.
+					esc_html__( 'Tagged', 'twentytwentyone' ),
+					$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
+				);
 			}
 		}
 

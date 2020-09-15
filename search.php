@@ -14,14 +14,15 @@ get_header();
 if ( have_posts() ) {
 	?>
 	<header class="page-header default-max-width">
-		<?php
-		printf(
-			/* translators: 1: search result title. 2: search term. */
-			'<h1 class="page-title">%1$s <span class="page-description search-term">%2$s</span></h1>',
-			__( 'Search results for:', 'twentytwentyone' ),
-			get_search_query()
-		);
-		?>
+		<h1 class="page-title">
+			<?php
+			printf(
+				/* translators: %s: search term. */
+				esc_html__( 'Search results for: %s', 'twentytwentyone' ),
+				'<span class="page-description search-term">' . esc_html( get_search_query() ) . '</span>'
+			);
+			?>
+		</h1>
 	</header><!-- .page-header -->
 
 	<?php

@@ -54,7 +54,7 @@ class Twenty_Twenty_One_Custom_Colors {
 		$pattern = '~^[a-f0-9]{6,6}$~i'; // accept only valid hexadecimal colour values.
 
 		if ( ! @preg_match( $pattern, $foreground ) or ! @preg_match( $pattern, $background ) ) {
-			echo $foreground;
+			echo esc_html( $foreground );
 			trigger_error( 'Invalid hexadecimal color value(s) found', E_USER_WARNING );
 			return false;
 		}

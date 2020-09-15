@@ -29,7 +29,7 @@
 
 	$description = get_bloginfo( 'description', 'display' );
 	if ( $description || is_customize_preview() ) {
-		echo '<p class="site-description">' , $description , '</p>';
+		echo '<p class="site-description">' , esc_html( $description ) , '</p>';
 	}
 	?>
 </div><!-- .site-branding -->
