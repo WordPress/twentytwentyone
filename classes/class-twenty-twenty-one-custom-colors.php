@@ -12,7 +12,7 @@
  */
 class Twenty_Twenty_One_Custom_Colors {
 
-	function __construct() {
+	public function __construct() {
 
 		/**
 		 * Enqueue color variables for customizer & frontend.
@@ -36,7 +36,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 * @param string  $background Optional. Hexadecimal colour value of the background colour. Default is: <code>FFFFFF</code> aka white.
 	 * @return string Hexadecimal colour value. <code>false</code> on errors.
 	 */
-	function color_blend_by_opacity( $foreground, $opacity, $background = null ) {
+	public function color_blend_by_opacity( $foreground, $opacity, $background = null ) {
 		static $colors_rgb = array(); // stores colour values already passed through the hexdec() functions below.
 
 		if ( ! is_null( $foreground ) ) {
@@ -118,7 +118,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @return string (hex color)
 	 */
-	function custom_get_readable_color( $background_color ) {
+	public function custom_get_readable_color( $background_color ) {
 		return ( 127 < $this->get_relative_luminance_from_hex( $background_color ) ) ? '#222222' : '#FFFFFF';
 	}
 
@@ -130,7 +130,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 * Both text and link colors needs to be updated.
 	 * The code below needs to be updated, because the colors are no longer theme mods.
 	 */
-	function generate_custom_color_variables( $context = null ) {
+	public function generate_custom_color_variables( $context = null ) {
 
 		$theme_css = 'editor' === $context ? ':root .editor-styles-wrapper{' : ':root{';
 
@@ -163,7 +163,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	/**
 	 * Customizer & frontend custom color variables.
 	 */
-	function custom_color_variables() {
+	public function custom_color_variables() {
 		if ( 'D1E4DD' !== get_theme_mod( 'background_color', 'D1E4DD' ) ) {
 			wp_add_inline_style( 'twenty-twenty-one-style', $this->generate_custom_color_variables() );
 		}
@@ -172,7 +172,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	/**
 	 * Editor custom color variables.
 	 */
-	function editor_custom_color_variables() {
+	public function editor_custom_color_variables() {
 		wp_enqueue_style( 'twenty-twenty-one-custom-color-overrides', get_template_directory_uri() . '/assets/css/custom-color-overrides.css', array(), wp_get_theme()->get( 'Version' ) );
 		if ( 'D1E4DD' !== get_theme_mod( 'background_color', 'D1E4DD' ) ) {
 			wp_add_inline_style( 'twenty-twenty-one-custom-color-overrides', $this->generate_custom_color_variables( 'editor' ) );
