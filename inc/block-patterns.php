@@ -46,11 +46,12 @@ if ( function_exists( 'register_block_pattern' ) ) {
 		array(
 			'title'      => __( 'Alternating Grid of Latest Posts', 'twentytwentyone' ),
 			'categories' => array( 'twentytwentyone' ),
-			'content'    => "<!-- wp:latest-posts {\"displayPostContent\":true,\"columns\":5,\"className\":\"is-style-tto-alternating-grid\"} /-->",
+			'content'    => '<!-- wp:latest-posts {"displayPostContent":true,"columns":5,"className":"is-style-tto-alternating-grid"} /-->',
 		)
 	);
 
-	/*
+	/**
+	 * WIP
 	register_block_pattern(
 		'twentytwentyone/group-image-overlap2',
 		array(

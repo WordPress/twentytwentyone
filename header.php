@@ -23,7 +23,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentytwentyone' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'twentytwentyone' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
 
@@ -33,27 +33,27 @@
 				<nav id="site-navigation" class="primary-navigation wp-block-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Main', 'twentytwentyone' ); ?>">
 					<div class="menu-button-container">
 						<button id="primary-open-menu" class="button open" aria-haspopup="true" aria-controls="primary-navigation">
-							<span class="dropdown-icon open"><?php _e( 'Menu', 'twentytwentyone' ); ?>
+							<span class="dropdown-icon open"><?php esc_html_e( 'Menu', 'twentytwentyone' ); ?>
 								<?php
-								/*TODO: Select menu and close icons */
-								echo twenty_twenty_one_get_icon_svg( 'menu' );
+								/* TODO: Select menu and close icons */
+								echo twenty_twenty_one_get_icon_svg( 'menu' ); // phpcs:ignore WordPress.Security.EscapeOutput
 								?>
-								<svg class="svg-icon" width="24" height="24" aria-hidden="true" role="img" 
+								<svg class="svg-icon" width="24" height="24" aria-hidden="true" role="img"
 								focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd" d="M17 7V5H3v2h14zm0 4V9H3v2h14zm0 4v-2H3v2h14z" fill="currentColor"></path>
 								</svg>
 							</span>
-							<span class="hide-visually expanded-text"><?php _e( 'expanded', 'twentytwentyone' ); ?></span>
+							<span class="hide-visually expanded-text"><?php esc_html_e( 'expanded', 'twentytwentyone' ); ?></span>
 						</button>
 						<button id="primary-close-menu" class="button close" aria-haspopup="true" aria-controls="primary-navigation" aria-expanded="true">
-							<span class="dropdown-icon close"><?php _e( 'Close', 'twentytwentyone' ); ?> 
-								<?php echo twenty_twenty_one_get_icon_svg( 'close' ) ?>
-								<svg class="svg-icon" width="24" height="24" aria-hidden="true" role="img" 
+							<span class="dropdown-icon close"><?php esc_html_e( 'Close', 'twentytwentyone' ); ?>
+								<?php echo twenty_twenty_one_get_icon_svg( 'close' ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
+								<svg class="svg-icon" width="24" height="24" aria-hidden="true" role="img"
 								focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd" d="M13 11.8l6.1-6.3-1-1-6.1 6.2-6.1-6.2-1 1 6.1 6.3-6.5 6.7 1 1 6.5-6.6 6.5 6.6 1-1z" fill="currentColor"></path>
 								</svg>
 							</span>
-							<span class="hide-visually collapsed-text"><?php _e( 'collapsed', 'twentytwentyone' ); ?></span>
+							<span class="hide-visually collapsed-text"><?php esc_html_e( 'collapsed', 'twentytwentyone' ); ?></span>
 						</button>
 					</div>
 					<?php

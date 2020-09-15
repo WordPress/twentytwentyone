@@ -10,11 +10,12 @@
  */
 
 if ( function_exists( 'register_block_style' ) ) {
+	/**
+	 * Register block styles.
+	 *
+	 * @return void
+	 */
 	function twenty_twenty_one_register_block_styles() {
-
-		/**
-		 * Register block styles
-		 */
 		register_block_style(
 			'core/latest-posts',
 			array(
@@ -23,8 +24,6 @@ if ( function_exists( 'register_block_style' ) ) {
 				'style_handle' => 'twenty-twenty-one-alternating-grid',
 			)
 		);
-
 	}
-
 	add_action( 'init', 'twenty_twenty_one_register_block_styles' );
 }
