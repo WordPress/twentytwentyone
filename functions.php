@@ -387,7 +387,7 @@ require get_template_directory() . '/inc/block-styles.php';
 /**
  * Enqueue scripts for the customizer preview.
  *
- * @since Twenty Twenty 1.0
+ * @since Twenty Twenty One 1.0
  *
  * @return void
  */
