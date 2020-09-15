@@ -41,12 +41,12 @@
 					esc_html( get_bloginfo( 'name' ) . '.' )
 				);
 
-				/*
-				Remove or add spacing?
+				/**
+				 * WIP: Remove or add spacing?
 				if ( function_exists( 'the_privacy_policy_link' ) ) {
 					the_privacy_policy_link();
 				}
-				*/
+				 */
 				?>
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentytwentyone' ) ); ?>"  class="imprint">
 				<?php /* translators: %s: WordPress. */ printf( esc_html__( 'Proudly powered by %s.', 'twentytwentyone' ), 'WordPress' ); ?>
