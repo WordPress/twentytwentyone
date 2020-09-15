@@ -43,6 +43,8 @@
                 textColor = 127 < lum ? '#222' : '#fff';
 
             document.documentElement.style.setProperty( '--global--color-primary', textColor );
-		} );
+            document.documentElement.style.setProperty( '--global--color-secondary', textColor );
+            document.documentElement.style.setProperty( '--global--color-foreground', textColor );
+        } );
 	} );
 }( wp.customize, _ ) );
