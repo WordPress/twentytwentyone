@@ -31,94 +31,6 @@ class Twenty_Twenty_One_Custom_Colors {
 	}
 
 	/**
-	 * Find the resulting colour by blending 2 colours
-	 * and setting an opacity level for the foreground colour.
-	 *
-	 * @access public
-	 *
-	 * @author J de Silva
-	 *
-	 * @link http://www.gidnetwork.com/b-135.html
-	 *
-	 * @param string  $foreground Hexadecimal colour value of the foreground colour.
-	 * @param integer $opacity Opacity percentage (of foreground colour). A number between 0 and 100.
-	 * @param string  $background Optional. Hexadecimal colour value of the background colour. Default is: <code>FFFFFF</code> aka white.
-	 *
-	 * @return string Hexadecimal colour value. <code>false</code> on errors.
-	 */
-	public function color_blend_by_opacity( $foreground, $opacity, $background = null ) {
-		static $colors_rgb = array(); // stores colour values already passed through the hexdec() functions below.
-
-		if ( ! is_null( $foreground ) ) {
-			$foreground = '000000'; // Default primary.
-		} else {
-			$foreground = preg_replace( '/[^0-9a-f]/i', '', $foreground );
-		}
-
-		if ( ! is_null( $background ) ) {
-			$background = 'FFFFFF'; // default background.
-		} else {
-			$background = preg_replace( '/[^0-9a-f]/i', '', $background );
-		}
-
-		$pattern = '~^[a-f0-9]{6,6}$~i'; // accept only valid hexadecimal colour values.
-
-		if ( ! preg_match( $pattern, $foreground ) || ! preg_match( $pattern, $background ) ) {
-			return false;
-		}
-
-		$opacity = intval( $opacity ); // validate opacity data/number.
-
-		if ( $opacity > 100 || $opacity < 0 ) {
-			return false;
-		}
-
-		if ( 100 === $opacity ) {  // $transparency == 0
-			return strtoupper( $foreground );
-		}
-		if ( 0 === $opacity ) {    // $transparency == 100
-			return strtoupper( $background );
-		}
-
-		// calculate $transparency value.
-		$transparency = 100 - $opacity;
-
-		if ( ! isset( $colors_rgb[ $foreground ] ) ) { // do this only ONCE per script, for each unique colour.
-			$f                         = array(
-				'r' => hexdec( $foreground[0] . $foreground[1] ),
-				'g' => hexdec( $foreground[2] . $foreground[3] ),
-				'b' => hexdec( $foreground[4] . $foreground[5] ),
-			);
-			$colors_rgb[ $foreground ] = $f;
-		} else { // if this function is used 100 times in a script, this block is run 99 times.  Efficient.
-			$f = $colors_rgb[ $foreground ];
-		}
-
-		if ( ! isset( $colors_rgb[ $background ] ) ) { // do this only ONCE per script, for each unique colour.
-			$b                         = array(
-				'r' => hexdec( $background[0] . $background[1] ),
-				'g' => hexdec( $background[2] . $background[3] ),
-				'b' => hexdec( $background[4] . $background[5] ),
-			);
-			$colors_rgb[ $background ] = $b;
-		} else { // if this FUNCTION is used 100 times in a SCRIPT, this block will run 99 times.  Efficient.
-			$b = $colors_rgb[ $background ];
-		}
-
-		$add = array(
-			'r' => ( $b['r'] - $f['r'] ) / 100,
-			'g' => ( $b['g'] - $f['g'] ) / 100,
-			'b' => ( $b['b'] - $f['b'] ) / 100,
-		);
-
-		$f['r'] += intval( $add['r'] * $transparency );
-		$f['g'] += intval( $add['g'] * $transparency );
-		$f['b'] += intval( $add['b'] * $transparency );
-
-		return sprintf( '#%02X%02X%02X', $f['r'], $f['g'], $f['b'] );
-	}
-
-	/**
 	 * Determine the luminance of the given color and then return #FFFFFF or #222222 so that our text is always readable.
 	 *
 	 * @access public
@@ -156,11 +68,6 @@ class Twenty_Twenty_One_Custom_Colors {
 		}
 
 		$theme_css .= '}';
-
-		// Text selection colors.
-		$selection_background = $this->color_blend_by_opacity( '#000000', 5, get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
-		$theme_css           .= '::selection { background-color: ' . $selection_background . '}';
-		$theme_css           .= '::-moz-selection { background-color: ' . $selection_background . '}';
 
 		return $theme_css;
 	}

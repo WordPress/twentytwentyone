@@ -5473,11 +5473,3 @@ section,
 footer {
 	max-width: none;
 }
-
-::selection {
-	background-color: undefined;
-}
-
-::-moz-selection {
-	background-color: undefined;
-}

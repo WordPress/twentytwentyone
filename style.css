@@ -4084,11 +4084,3 @@ section,
 footer {
 	max-width: none;
 }
-
-::selection {
-	background-color: var(--global--color-text-selection);
-}
-
-::-moz-selection {
-	background-color: var(--global--color-text-selection);
-}
