@@ -14,24 +14,12 @@
 .site-header,
 .site-main,
 .site-footer {
-	padding: var(--global--spacing-unit) var(--global--spacing-horizontal);
+	padding: var(--global--spacing-vertical) var(--global--spacing-horizontal);
 	margin-left: auto;
 	margin-right: auto;
 
 	@include media(mobile) {
-		padding-top: var(--global--spacing-vertical);
-		padding-right: 0;
-		padding-bottom: var(--global--spacing-vertical);
-		padding-left: 0;
-	}
-}
-
-.site-header {
-	padding-top: calc(2 * var(--global--spacing-vertical));
-	padding-bottom: calc(2 * var(--global--spacing-vertical));
-
-	@include media(mobile) {
-		padding-bottom: calc(3 * var(--global--spacing-vertical));
+		padding: calc( 2 * var(--global--spacing-vertical) ) calc( var(--global--spacing-horizontal) / 0.15 );
 	}
 }
 
@@ -40,7 +28,6 @@
  * - Add double vertical margins here for clearer heirarchy
  */
 .site-main > * {
-
 	margin-top: calc(3 * var(--global--spacing-vertical));
 	margin-bottom: calc(3 * var(--global--spacing-vertical));
 

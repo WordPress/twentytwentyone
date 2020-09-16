@@ -1,7 +1,7 @@
 /* Add all variables here. */
 
 // Vertical Rhythm Multiplier
-$baseline-unit: 10px;
+$baseline-unit: 5px;
 
 // Typescale Multipliers
 $typescale-root: 18px; // Set 16px/1em default on html
@@ -89,10 +89,10 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 	--global--color-border: var( --global--color-black ); /* Used for borders (separators) */
 
 	/* Spacing */
-	--global--spacing-unit: #{2 * $baseline-unit}; // 20px
+	--global--spacing-unit: #{$baseline-unit}; // 5px
 	--global--spacing-measure: unset; // Use ch units here. ie: 60ch = 60 character max-width
-	--global--spacing-horizontal: #{2.5 * $baseline-unit}; // 25px
-	--global--spacing-vertical: #{3 * $baseline-unit}; // 30px.
+	--global--spacing-horizontal: #{3 * $baseline-unit}; // 15px
+	--global--spacing-vertical: #{5 * $baseline-unit}; // 25px
 
 	/* Elevation */
 	--global--elevation: 1px 1px 3px 0px rgba( 0, 0, 0, 0.2 );

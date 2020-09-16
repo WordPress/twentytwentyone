@@ -1,14 +1,6 @@
 // Footer
 .site-footer {
 	overflow: hidden;
-	//padding: var(--global--spacing-vertical) var(--global--spacing-horizontal);
-	padding-bottom: calc( 1.7 * var(--global--spacing-vertical));
-	margin-top: calc(6 * var(--global--spacing-vertical));
-
-	@include media(desktop) {
-		margin-left: calc(4 * var(--global--spacing-horizontal));
-		margin-right: calc(4 * var(--global--spacing-horizontal));
-	}
 }
 
 // Footer Branding
@@ -19,7 +11,6 @@
 	line-height: var(--global--line-height-body);
 	border-top: 3px solid var(--global--color-border);
 	padding-top: var(--global--spacing-vertical);
-	margin-top: calc(2 * var(--global--spacing-vertical));
 
 	.site-name {
 		text-transform: var(--branding--title--text-transform);
@@ -36,7 +27,6 @@
 
 	@include media(desktop) {
 		display: flex;
-		margin-top: calc(2 * var(--global--spacing-vertical));
 
 		.imprint {
 			display: initial;

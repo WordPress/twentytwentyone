@@ -10,9 +10,6 @@
 	width: 100%;
 	#primary-open-menu {
 		margin-left: auto;
-		padding: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit))) calc(var(--button--padding-horizontal) - (0.25 * var(--global--spacing-unit)));
-		margin-top: calc(0.60 * var(--global--spacing-unit));
-		margin-right: calc(0.25 * var(--global--spacing-unit));
 	}
 
 	@include media(mobile-only){
@@ -100,19 +97,19 @@
 
 	// Mobile menu closed
 	& > .menu-wrapper {
-		visibility: hidden;
-		opacity: 0;
-		position: fixed;
-		top: 0;
-		right: 0;
+		background-color: var(--global--color-background);
 		bottom: 0;
 		left: 0;
-		padding: calc(4* var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
-		background-color: var(--global--color-background);
+		opacity: 0;
 		overflow-x: hidden;
 		overflow-y: scroll;
+		padding: calc(4* var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
+		position: fixed;
+		right: 0;
+		top: 0;
 		transition: all .15s ease-in-out;
 		transform: translateY(var(--global--spacing-vertical));
+		visibility: hidden;
 
 		@include media(mobile-only) {
 			z-index: 499;
@@ -123,6 +120,7 @@
 	// Mobile menu open
 	.primary-navigation-open & {
 		> .menu-wrapper {
+			display: flex;
 			visibility: visible;
 			opacity: 1;
 			transform: translateY(0);
@@ -190,7 +188,6 @@
 
 	// Menu list wrapper
 	& > .menu-wrapper {
-		display: flex;
 		justify-content: var(--primary-nav--justify-content);
 		flex-wrap: wrap;
 		list-style: none;

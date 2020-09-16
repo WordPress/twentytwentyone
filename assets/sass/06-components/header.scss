@@ -3,13 +3,6 @@
 
 .site-header {
 	display: flex;
-	margin-left: var(--global--spacing-horizontal);
-	margin-right: var(--global--spacing-horizontal);
-
-	@include media(desktop) {
-		margin-left: calc(4 * var(--global--spacing-horizontal));
-		margin-right: calc(4 * var(--global--spacing-horizontal));
-	}
 }
 
 // Site branding

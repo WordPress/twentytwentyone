@@ -129,10 +129,10 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--global--color-border: var( --global--color-black );
 	/* Used for borders (separators) */
 	/* Spacing */
-	--global--spacing-unit: 20px;
+	--global--spacing-unit: 5px;
 	--global--spacing-measure: unset;
-	--global--spacing-horizontal: 25px;
-	--global--spacing-vertical: 30px;
+	--global--spacing-horizontal: 15px;
+	--global--spacing-vertical: 25px;
 	/* Elevation */
 	--global--elevation: 1px 1px 3px 0px rgba( 0, 0, 0, 0.2 );
 	/* Other */
@@ -839,7 +839,7 @@ template {
 .site-header,
 .site-main,
 .site-footer {
-	padding: var(--global--spacing-unit) var(--global--spacing-horizontal);
+	padding: var(--global--spacing-vertical) var(--global--spacing-horizontal);
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -848,21 +848,7 @@ template {
 	.site-header,
 	.site-main,
 	.site-footer {
-		padding-top: var(--global--spacing-vertical);
-		padding-left: 0;
-		padding-bottom: var(--global--spacing-vertical);
-		padding-right: 0;
-	}
-}
-
-.site-header {
-	padding-top: calc(2 * var(--global--spacing-vertical));
-	padding-bottom: calc(2 * var(--global--spacing-vertical));
-}
-
-@media only screen and (min-width: 482px) {
-	.site-header {
-		padding-bottom: calc(3 * var(--global--spacing-vertical));
+		padding: calc( 2 * var(--global--spacing-vertical)) calc( var(--global--spacing-horizontal) / 0.15);
 	}
 }
 
@@ -2681,15 +2667,6 @@ table th,
 /* Category 06 contains all "bigger" components which contain elements of the previous two categories like header, footer, page template, single template, comments section, archives, ... */
 .site-header {
 	display: flex;
-	margin-right: var(--global--spacing-horizontal);
-	margin-left: var(--global--spacing-horizontal);
-}
-
-@media only screen and (min-width: 822px) {
-	.site-header {
-		margin-right: calc(4 * var(--global--spacing-horizontal));
-		margin-left: calc(4 * var(--global--spacing-horizontal));
-	}
 }
 
 .site-branding {
@@ -2772,15 +2749,6 @@ nav a {
 
 .site-footer {
 	overflow: hidden;
-	padding-bottom: calc( 1.7 * var(--global--spacing-vertical));
-	margin-top: calc(6 * var(--global--spacing-vertical));
-}
-
-@media only screen and (min-width: 822px) {
-	.site-footer {
-		margin-right: calc(4 * var(--global--spacing-horizontal));
-		margin-left: calc(4 * var(--global--spacing-horizontal));
-	}
 }
 
 .site-footer > .site-info {
@@ -2790,7 +2758,6 @@ nav a {
 	line-height: var(--global--line-height-body);
 	border-top: 3px solid var(--global--color-border);
 	padding-top: var(--global--spacing-vertical);
-	margin-top: calc(2 * var(--global--spacing-vertical));
 }
 
 .site-footer > .site-info .site-name {
@@ -2809,7 +2776,6 @@ nav a {
 @media only screen and (min-width: 822px) {
 	.site-footer > .site-info {
 		display: flex;
-		margin-top: calc(2 * var(--global--spacing-vertical));
 	}
 	.site-footer > .site-info .imprint {
 		display: initial;
@@ -3458,9 +3424,6 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .menu-button-container #primary-open-menu {
 	margin-right: auto;
-	padding: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit))) calc(var(--button--padding-horizontal) - (0.25 * var(--global--spacing-unit)));
-	margin-top: calc(0.60 * var(--global--spacing-unit));
-	margin-left: calc(0.25 * var(--global--spacing-unit));
 }
 
 @media only screen and (max-width: 481px) {
@@ -3551,19 +3514,19 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .primary-navigation > .menu-wrapper {
-	visibility: hidden;
-	opacity: 0;
-	position: fixed;
-	top: 0;
-	left: 0;
+	background-color: var(--global--color-background);
 	bottom: 0;
 	right: 0;
-	padding: calc(4* var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
-	background-color: var(--global--color-background);
+	opacity: 0;
 	overflow-x: hidden;
 	overflow-y: scroll;
+	padding: calc(4* var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
+	position: fixed;
+	left: 0;
+	top: 0;
 	transition: all .15s ease-in-out;
 	transform: translateY(var(--global--spacing-vertical));
+	visibility: hidden;
 }
 
 @media only screen and (max-width: 481px) {
@@ -3573,6 +3536,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .primary-navigation-open .primary-navigation > .menu-wrapper {
+	display: flex;
 	visibility: visible;
 	opacity: 1;
 	transform: translateY(0);
@@ -3627,7 +3591,6 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .primary-navigation > .menu-wrapper {
-	display: flex;
 	justify-content: var(--primary-nav--justify-content);
 	flex-wrap: wrap;
 	list-style: none;

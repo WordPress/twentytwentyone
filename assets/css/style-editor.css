@@ -74,10 +74,10 @@
 	--global--color-border: var( --global--color-black );
 	/* Used for borders (separators) */
 	/* Spacing */
-	--global--spacing-unit: 20px;
+	--global--spacing-unit: 5px;
 	--global--spacing-measure: unset;
-	--global--spacing-horizontal: 25px;
-	--global--spacing-vertical: 30px;
+	--global--spacing-horizontal: 15px;
+	--global--spacing-vertical: 25px;
 	/* Elevation */
 	--global--elevation: 1px 1px 3px 0px rgba( 0, 0, 0, 0.2 );
 	/* Other */
