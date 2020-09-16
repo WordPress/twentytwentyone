@@ -6,8 +6,6 @@ Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Short Description
-
 == Description ==
 
 == Installation ==
@@ -19,11 +17,6 @@ Short Description
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Changelog ==
-
-= 1.0.0 =
-* Initial release 
-
-
 
 == Copyright ==
 
