@@ -14,7 +14,7 @@ get_header();
 
 	<div class="error-404 not-found default-max-width">
 		<header class="page-header">
-			<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'twentytwentyone' ); ?></h1>
+			<h1 class="page-title"><?php esc_html_e( 'Nothing here', 'twentytwentyone' ); ?></h1>
 		</header><!-- .page-header -->
 
 		<div class="page-content">
