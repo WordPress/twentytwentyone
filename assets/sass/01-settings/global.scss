@@ -45,7 +45,7 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 	--heading--font-size-h3: var(--global--font-size-xl);
 	--heading--font-size-h2: var(--global--font-size-xxl);
 	--heading--font-size-h1: var(--global--font-size-xxxl);
-	
+
 	--heading--letter-spacing-h6: var(--global--letter-spacing);
 	--heading--letter-spacing-h5: var(--global--letter-spacing);
 	--heading--letter-spacing-h4: var(--global--letter-spacing);
@@ -59,7 +59,7 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 	--heading--line-height-h3: var(--heading--line-height);
 	--heading--line-height-h2: var(--heading--line-height);
 	--heading--line-height-h1: var(--heading--line-height);
-	
+
 	--heading--font-weight: normal;
 	--heading--font-weight-strong: 600;
 
@@ -87,7 +87,7 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 	--global--color-white-50: rgba(255, 255, 255, 0.5); /* white 50% opacity used in form fields.*/
 
 	--global--color-border: var( --global--color-black ); /* Used for borders (separators) */
-	
+
 	/* Spacing */
 	--global--spacing-unit: #{2 * $baseline-unit}; // 20px
 	--global--spacing-measure: unset; // Use ch units here. ie: 60ch = 60 character max-width
@@ -151,7 +151,7 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 	--entry-meta--color-link: currentColor;
 	--entry-meta--color-hover: var(--global--color-primary-hover);
 	--entry-meta--font-family: var(--global--font-primary);
-	--entry-meta--font-size: var(--global--font-size-xs);
+	--entry-meta--font-size: var(--global--font-size-sm);
 	--entry-author-bio--font-family: var(--heading--font-family);
 	--entry-author-bio--font-size: var(--heading--font-size-h3);
 
