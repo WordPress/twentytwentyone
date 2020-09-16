@@ -181,7 +181,7 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--entry-meta--color-link: currentColor;
 	--entry-meta--color-hover: var(--global--color-primary-hover);
 	--entry-meta--font-family: var(--global--font-primary);
-	--entry-meta--font-size: var(--global--font-size-xs);
+	--entry-meta--font-size: var(--global--font-size-sm);
 	--entry-author-bio--font-family: var(--heading--font-family);
 	--entry-author-bio--font-size: var(--heading--font-size-h3);
 	/* Header */
@@ -3048,6 +3048,28 @@ nav a {
 
 body:not(.single) .site-main > article:last-of-type .entry-footer {
 	border-bottom: var(--separator--height) solid transparent;
+}
+
+.single .site-main > article > .entry-footer {
+	margin-top: calc( 3.4 * var(--global--spacing-vertical));
+	margin-bottom: calc( 3.4 * var(--global--spacing-vertical));
+	padding-bottom: 0;
+	padding-top: calc( 0.8 * var(--global--spacing-vertical));
+	border-top: 3px solid var(--separator--border-color);
+	border-bottom: var(--separator--height) solid transparent;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: calc( 2 * var(--global--spacing-horizontal));
+}
+
+.single .site-main > article > .entry-footer > span {
+	margin-left: 0;
+}
+
+.single .site-main > article > .entry-footer .cat-links,
+.single .site-main > article > .entry-footer .tags-links {
+	justify-self: end;
+	text-align: left;
 }
 
 /**

@@ -4228,7 +4228,7 @@ nav a {
 	color: #28303D;
 	clear: both;
 	float: none;
-	font-size: 14px;
+	font-size: 16px;
 	display: block;
 }
 
@@ -4280,7 +4280,7 @@ nav a {
 	color: #28303D;
 	clear: both;
 	float: none;
-	font-size: 14px;
+	font-size: 16px;
 	display: block;
 }
 
@@ -4321,6 +4321,28 @@ nav a {
 
 body:not(.single) .site-main > article:last-of-type .entry-footer {
 	border-bottom: 1px solid transparent;
+}
+
+.single .site-main > article > .entry-footer {
+	margin-top: 102px;
+	margin-bottom: 102px;
+	padding-bottom: 0;
+	padding-top: 24px;
+	border-top: 3px solid black;
+	border-bottom: 1px solid transparent;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 50px;
+}
+
+.single .site-main > article > .entry-footer > span {
+	margin-right: 0;
+}
+
+.single .site-main > article > .entry-footer .cat-links,
+.single .site-main > article > .entry-footer .tags-links {
+	justify-self: end;
+	text-align: right;
 }
 
 /**
