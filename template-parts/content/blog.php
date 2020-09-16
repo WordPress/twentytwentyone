@@ -11,8 +11,8 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'default-max-width' ); ?>>
-	<header class="entry-header">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header default-max-width">
 		<?php
 		the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 		twenty_twenty_one_post_thumbnail();
