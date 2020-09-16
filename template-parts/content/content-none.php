@@ -12,13 +12,31 @@
 ?>
 
 <section class="no-results not-found">
-	<header class="page-header default-max-width">
+	<header class="page-header archive-max-width">
+		<?php
+	if ( is_search() ) {
+		?>
+		<h1 class="page-title">
+			<?php
+			printf(
+				/* translators: %s: search term. */
+				esc_html__( 'Results for "%s"', 'twentytwentyone' ),
+				'<span class="page-description search-term">' . esc_html( get_search_query() ) . '</span>'
+			);
+			?>
+		</h1>
+		<?php
+	} else {
+		?>
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'twentytwentyone' ); ?></h1>
+		<?php
+	}
+	?>
 	</header><!-- .page-header -->
 
-	<div class="page-content">
+	<div class="page-content default-max-width">
 		<?php
-		if ( is_home() && current_user_can( 'publish_posts' ) ) :
+		if ( is_home() && current_user_can( 'publish_posts' ) ) {
 
 			printf(
 				'<p>' . wp_kses(
@@ -33,21 +51,21 @@
 				esc_url( admin_url( 'post-new.php' ) )
 			);
 
-		elseif ( is_search() ) :
+		} elseif ( is_search() ) {
 			?>
 
 			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'twentytwentyone' ); ?></p>
 			<?php
 			get_search_form();
 
-		else :
+		} else {
 			?>
 
 			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'twentytwentyone' ); ?></p>
 			<?php
 			get_search_form();
 
-		endif;
+		}
 		?>
 	</div><!-- .page-content -->
 </section><!-- .no-results -->

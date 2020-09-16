@@ -1,0 +1,11 @@
+.error-404 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 60vh;
+	flex-direction: column;
+}
+
+.error404 .page-header {
+	border-bottom: 3px solid transparent;
+}

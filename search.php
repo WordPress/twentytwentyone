@@ -13,21 +13,30 @@ get_header();
 
 if ( have_posts() ) {
 	?>
-	<header class="page-header default-max-width">
+	<header class="page-header archive-max-width">
 		<h1 class="page-title">
 			<?php
 			printf(
 				/* translators: %s: search term. */
-				esc_html__( 'Search results for: %s', 'twentytwentyone' ),
+				esc_html__( 'Results for "%s"', 'twentytwentyone' ),
 				'<span class="page-description search-term">' . esc_html( get_search_query() ) . '</span>'
 			);
 			?>
 		</h1>
 	</header><!-- .page-header -->
 
+	<div class="search-result-count default-max-width">
+		<?php
+		printf(
+			/* translators: %d: the number of search results. */
+			esc_html__( 'We found %d results for your search.', 'twentytwentyone' ),
+			$wp_query->found_posts
+		);
+		?>
+	</div>
 	<?php
 	// Start the Loop.
-	while ( have_posts() ) :
+	while ( have_posts() ) {
 		the_post();
 
 		/*
@@ -36,7 +45,7 @@ if ( have_posts() ) {
 		 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 		 */
 		get_template_part( 'template-parts/content/content-excerpt' );
-	endwhile; // End the loop.
+	} // End the loop.
 
 	// Previous/next page navigation.
 	twenty_twenty_one_the_posts_navigation();

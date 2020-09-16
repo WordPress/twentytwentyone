@@ -1045,7 +1045,7 @@ hr.wp-block-separator.is-style-wide {
 	}
 }
 
-.blog-max-width {
+.archive-max-width {
 	margin-left: auto;
 	margin-right: auto;
 	width: calc(100% - 100px);
@@ -1053,7 +1053,7 @@ hr.wp-block-separator.is-style-wide {
 }
 
 @media only screen and (min-width: 822px) {
-	.blog-max-width {
+	.archive-max-width {
 		margin-left: auto;
 		margin-right: auto;
 		width: calc(100% - 200px);
@@ -3543,9 +3543,9 @@ table th {
 
 /* Block Alignments */
 /**
- * These selectors set the default max width for content appearing inside a post or page. 
+ * These selectors set the default max width for content appearing inside a post or page.
  */
-.blog-max-width .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce) {
+.archive-max-width .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce) {
 	margin-left: 0;
 	margin-right: 0;
 }
@@ -3930,8 +3930,8 @@ table th {
 	padding-left: 30px !important;
 }
 
-/* 
- * Custom gradients 
+/*
+ * Custom gradients
 */
 /* Category 06 contains all "bigger" components which contain elements of the previous two categories like header, footer, page template, single template, comments section, archives, ... */
 .site-header {
@@ -4422,6 +4422,22 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .page-header {
 	border-bottom: 3px solid black;
 	padding-bottom: 60px;
+}
+
+.error-404 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 60vh;
+	flex-direction: column;
+}
+
+.error404 .page-header {
+	border-bottom: 3px solid transparent;
+}
+
+.search-no-results .page-content {
+	margin-top: 90px;
 }
 
 /**

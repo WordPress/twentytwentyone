@@ -1,14 +1,14 @@
 /* Block Alignments */
 
 /**
- * These selectors set the default max width for content appearing inside a post or page. 
+ * These selectors set the default max width for content appearing inside a post or page.
  */
 .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce),
 *[class*="inner-container"] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce) {
 	@extend %responsive-aligndefault-width;
 }
 
-.blog-max-width .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce) {
+.archive-max-width .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce) {
 	margin-left: 0;
 	margin-right: 0;
 }
@@ -27,7 +27,7 @@
 	margin-bottom: var(--global--spacing-vertical);
 }
 
-// Targeting the .entry-content class is necessary to ensure these styles 
+// Targeting the .entry-content class is necessary to ensure these styles
 // only apply when the block isn't nested.
 .entry-content > .alignleft {
 	max-width: var(--responsive--aligndefault-width);
@@ -59,7 +59,7 @@
 	margin-left: var(--global--spacing-horizontal);
 }
 
-// Targeting the .entry-content class is necessary to ensure these styles 
+// Targeting the .entry-content class is necessary to ensure these styles
 // only apply when the block isn't nested.
 .entry-content > .alignright {
 	max-width: var(--responsive--aligndefault-width);
@@ -225,6 +225,6 @@
 
 @import "spacing-overrides";
 
-/* 
- * Custom gradients 
+/*
+ * Custom gradients
 */

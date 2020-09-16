@@ -781,7 +781,7 @@ template {
 	max-width: var(--responsive--alignfull-width);
 }
 
-.blog-max-width {
+.archive-max-width {
 	margin-right: auto;
 	margin-left: auto;
 	width: calc(var(--responsive--alignfull-width) - calc(2 * var(--responsive--spacing-horizontal)));
@@ -789,7 +789,7 @@ template {
 }
 
 @media only screen and (min-width: 822px) {
-	.blog-max-width {
+	.archive-max-width {
 		margin-right: auto;
 		margin-left: auto;
 		width: calc(var(--responsive--alignfull-width) - calc(4 * var(--responsive--spacing-horizontal)));
@@ -2392,9 +2392,9 @@ table th,
 
 /* Block Alignments */
 /**
- * These selectors set the default max width for content appearing inside a post or page. 
+ * These selectors set the default max width for content appearing inside a post or page.
  */
-.blog-max-width .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce) {
+.archive-max-width .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce) {
 	margin-right: 0;
 	margin-left: 0;
 }
@@ -2675,8 +2675,8 @@ table th,
 	padding-left: var(--global--spacing-vertical) !important;
 }
 
-/* 
- * Custom gradients 
+/*
+ * Custom gradients
 */
 /* Category 06 contains all "bigger" components which contain elements of the previous two categories like header, footer, page template, single template, comments section, archives, ... */
 .site-header {
@@ -3124,6 +3124,22 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .page-header {
 	border-bottom: 3px solid var(--global--color-border);
 	padding-bottom: calc( 2* var(--global--spacing-vertical));
+}
+
+.error-404 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 60vh;
+	flex-direction: column;
+}
+
+.error404 .page-header {
+	border-bottom: 3px solid transparent;
+}
+
+.search-no-results .page-content {
+	margin-top: calc( 3 * var(--global--spacing-vertical));
 }
 
 /**

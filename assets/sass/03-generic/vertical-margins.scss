@@ -75,7 +75,7 @@
 	@extend %responsive-alignfull-width;
 }
 
-.blog-max-width {
+.archive-max-width {
 	@extend %responsive-alignfull-width-nested;
 }
 
@@ -99,7 +99,7 @@
  * Block & non-gutenberg content wrapper children
  * - Sets spacing-vertical margin logic
  */
-.site-footer > *, 
+.site-footer > *,
 .site-main > article > *, // apply vertical margins to article level
 .site-main > .not-found > *, // apply vertical margins to article level
 .entry-content > *,
