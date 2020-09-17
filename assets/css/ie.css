@@ -2655,6 +2655,18 @@ h6 {
 	line-height: 1.3;
 }
 
+h1.page-title {
+	font-weight: 300;
+}
+
+h1.entry-title {
+	font-weight: 300;
+}
+
+h2.page-title {
+	font-weight: 300;
+}
+
 .wp-block-image {
 	text-align: center;
 }
@@ -5253,7 +5265,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .post-navigation .post-title {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1em;
-	font-weight: 700;
+	font-weight: 600;
 	line-height: 1.3;
 }
 

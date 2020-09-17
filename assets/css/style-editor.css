@@ -48,6 +48,7 @@
 	--heading--line-height-h2: var(--heading--line-height);
 	--heading--line-height-h1: var(--heading--line-height);
 	--heading--font-weight: normal;
+	--heading--font-weight-page-title: 300;
 	--heading--font-weight-strong: 600;
 	/* Block: Latest posts */
 	--latest-posts--title-font-family: var(--heading--font-family);
@@ -167,7 +168,7 @@
 	--pagination--font-family: var(--global--font-secondary);
 	--pagination--font-size: var(--global--font-size-lg);
 	--pagination--font-weight: normal;
-	--pagination--font-weight-strong: 700;
+	--pagination--font-weight-strong: 600;
 	/* Comments */
 	--comments--border-color: var(--global--color-border);
 	/* Footer */
