@@ -1351,10 +1351,6 @@ hr.wp-block-separator.is-style-wide {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-.widget-area > * {
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
 
 @media only screen and (min-width: 482px) {
 	.site-footer > * {
@@ -1381,10 +1377,6 @@ hr.wp-block-separator.is-style-wide {
 		margin-top: 30px;
 		margin-bottom: 30px;
 	}
-	.widget-area > * {
-		margin-top: 30px;
-		margin-bottom: 30px;
-	}
 }
 
 .site-footer > *:first-child,
@@ -1392,8 +1384,7 @@ hr.wp-block-separator.is-style-wide {
 .site-main > .not-found > *:first-child,
 .entry-content > *:first-child,
 [class*="inner-container"] > *:first-child,
-.wp-block-template-part > *:first-child,
-.widget-area > *:first-child {
+.wp-block-template-part > *:first-child {
 	margin-top: 0;
 }
 
@@ -1402,9 +1393,20 @@ hr.wp-block-separator.is-style-wide {
 .site-main > .not-found > *:last-child,
 .entry-content > *:last-child,
 [class*="inner-container"] > *:last-child,
-.wp-block-template-part > *:last-child,
-.widget-area > *:last-child {
+.wp-block-template-part > *:last-child {
 	margin-bottom: 0;
+}
+
+.widget-area > * {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 482px) {
+	.widget-area > * {
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
 }
 
 /*
