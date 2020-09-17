@@ -1,4 +1,8 @@
 
+.widget-area {
+	font-size: var(--footer--font-size);
+}
+
 @include media(desktop) {
 	.widget-area {
 		display: grid;

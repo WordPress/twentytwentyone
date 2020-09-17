@@ -10,17 +10,18 @@
 	--global--font-code: monospace, monospace;
 	--global--font-ui: var(--font-base, var(--global--font-secondary));
 	/* Font Size */
-	--global--font-size-root: 18px;
+	--global--font-size-root: 20px;
 	--global--font-size-ratio: 1.2;
 	--global--font-size-base: 1em;
-	--global--font-size-xs: 14px;
-	--global--font-size-sm: 16px;
-	--global--font-size-md: 18px;
+	--global--font-size-xs: 16px;
+	--global--font-size-sm: 18px;
+	--global--font-size-md: 20px;
 	--global--font-size-lg: 24px;
-	--global--font-size-xl: 28px;
-	--global--font-size-xxl: 32px;
+	--global--font-size-xl: 32px;
+	--global--font-size-xxl: 40px;
 	--global--font-size-xxxl: 48px;
 	--global--font-size-page-title: 96px;
+	--global--font-size-large-page-title: 144px;
 	--global--letter-spacing: normal;
 	/* Line Height */
 	--global--line-height-base: 1;
@@ -29,12 +30,12 @@
 	/* Headings */
 	--heading--font-family: var(--global--font-primary);
 	--heading--line-height: var(--global--line-height-heading);
-	--heading--font-size-h6: var(--global--font-size-base);
-	--heading--font-size-h5: var(--global--font-size-md);
+	--heading--font-size-h6: var(--global--font-size-xs);
+	--heading--font-size-h5: var(--global--font-size-sm);
 	--heading--font-size-h4: var(--global--font-size-lg);
 	--heading--font-size-h3: var(--global--font-size-xl);
-	--heading--font-size-h2: var(--global--font-size-xxl);
-	--heading--font-size-h1: var(--global--font-size-xxxl);
+	--heading--font-size-h2: var(--global--font-size-xxxl);
+	--heading--font-size-h1: var(--global--font-size-page-title);
 	--heading--letter-spacing-h6: var(--global--letter-spacing);
 	--heading--letter-spacing-h5: var(--global--letter-spacing);
 	--heading--letter-spacing-h4: var(--global--letter-spacing);
@@ -81,10 +82,10 @@
 	/* Elevation */
 	--global--elevation: 1px 1px 3px 0px rgba( 0, 0, 0, 0.2 );
 	/* Other */
-	--global--border-radius-sm: 9px;
-	--global--border-radius-md: 13.5px;
-	--global--border-radius-lg: 18px;
-	--global--border-radius-pill: 180px;
+	--global--border-radius-sm: 10px;
+	--global--border-radius-md: 15px;
+	--global--border-radius-lg: 20px;
+	--global--border-radius-pill: 200px;
 	--global--border-radius-none: 0;
 	/* Forms */
 	--form--font-family: var(--global--font-secondary);
@@ -121,14 +122,14 @@
 	--entry-header--color-focus: var(--global--color-secondary);
 	--entry-header--font-family: var(--heading--font-family);
 	--entry-header--font-size: var(--global--font-size-xxxl);
-	--entry-content--font-family: var(--heading--font-size-h2);
+	--entry-content--font-family: var(--global--font-secondary);
 	--entry-meta--color: var(--global--color-primary);
 	--entry-meta--color-link: currentColor;
 	--entry-meta--color-hover: var(--global--color-primary-hover);
 	--entry-meta--font-family: var(--global--font-primary);
-	--entry-meta--font-size: var(--global--font-size-sm);
+	--entry-meta--font-size: var(--global--font-size-xs);
 	--entry-author-bio--font-family: var(--heading--font-family);
-	--entry-author-bio--font-size: var(--heading--font-size-h3);
+	--entry-author-bio--font-size: var(--heading--font-size-h4);
 	/* Header */
 	--branding--color-text: var(--global--color-primary);
 	--branding--color-link: var(--global--color-primary);
@@ -148,9 +149,9 @@
 	/* Main navigation */
 	--primary-nav--font-family: var(--global--font-secondary);
 	--primary-nav--font-family-mobile: var(--global--font-primary);
-	--primary-nav--font-size: var(--global--font-size-md);
-	--primary-nav--font-size-mobile: var(--global--font-size-xxl);
-	--primary-nav--font-size-sub-menu-mobile: var(--global--font-size-lg);
+	--primary-nav--font-size: var(--global--font-size-sm);
+	--primary-nav--font-size-mobile: var(--global--font-size-sm);
+	--primary-nav--font-size-sub-menu-mobile: var(--global--font-size-sm);
 	--primary-nav--font-style: normal;
 	--primary-nav--font-style-sub-menu-mobile: italic;
 	--primary-nav--font-weight: normal;
@@ -175,7 +176,7 @@
 	--footer--color-link: var(--global--color-primary);
 	--footer--color-link-hover: var(--global--color-primary-hover);
 	--footer--font-family: var(--global--font-primary);
-	--footer--font-size: var(--global--font-size-sm);
+	--footer--font-size: var(--global--font-size-xs);
 	/* Block: Pull quote */
 	--pullquote--font-family: var(--global--font-primary);
 	--pullquote--font-size: var(--heading--font-size-h2);
@@ -1143,8 +1144,8 @@ pre.wp-block-verse {
 	color: var(--global--color-primary);
 }
 
-.is-tiny-text,
-.has-tiny-font-size {
+.is-extra-small-text,
+.has-extra-small-font-size {
 	font-size: var(--global--font-size-xs);
 }
 
@@ -1155,6 +1156,7 @@ pre.wp-block-verse {
 
 .is-regular-text,
 .has-regular-font-size,
+.is-normal-text,
 .has-normal-font-size,
 .has-medium-font-size {
 	font-size: var(--global--font-size-md);
@@ -1168,8 +1170,9 @@ pre.wp-block-verse {
 
 .is-larger-text,
 .has-larger-font-size,
+.is-huge-text,
 .has-huge-font-size {
-	font-size: var(--global--font-size-xl);
+	font-size: var(--global--font-size-xxl);
 	line-height: var(--global--line-height-heading);
 }
 
@@ -1309,8 +1312,8 @@ pre.wp-block-verse {
 	margin-bottom: 0;
 }
 
-/* 
- * Custom gradients 
+/*
+ * Custom gradients
 */
 /* Block Alignments */
 .wp-block {

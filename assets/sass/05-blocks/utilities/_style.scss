@@ -161,8 +161,8 @@
 
 // Gutenberg Font-size options
 :root {
-	.is-tiny-text,
-	.has-tiny-font-size {
+	.is-extra-small-text,
+	.has-extra-small-font-size {
 		font-size: var(--global--font-size-xs);
 	}
 
@@ -173,6 +173,7 @@
 
 	.is-regular-text,
 	.has-regular-font-size,
+	.is-normal-text,
 	.has-normal-font-size,
 	.has-medium-font-size {
 		font-size: var(--global--font-size-base);
@@ -186,8 +187,9 @@
 
 	.is-larger-text,
 	.has-larger-font-size,
+	.is-huge-text,
 	.has-huge-font-size {
-		font-size: var(--global--font-size-xl);
+		font-size: var(--global--font-size-xxl);
 		line-height: var(--global--line-height-heading);
 	}
 }

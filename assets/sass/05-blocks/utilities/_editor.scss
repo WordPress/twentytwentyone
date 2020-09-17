@@ -64,8 +64,8 @@
 }
 
 // Gutenberg Font-size utility classes
-.is-tiny-text,
-.has-tiny-font-size {
+.is-extra-small-text,
+.has-extra-small-font-size {
 	font-size: var(--global--font-size-xs);
 }
 
@@ -76,6 +76,7 @@
 
 .is-regular-text,
 .has-regular-font-size,
+.is-normal-text,
 .has-normal-font-size,
 .has-medium-font-size {
 	font-size: var(--global--font-size-md);
@@ -89,8 +90,9 @@
 
 .is-larger-text,
 .has-larger-font-size,
+.is-huge-text,
 .has-huge-font-size {
-	font-size: var(--global--font-size-xl);
+	font-size: var(--global--font-size-xxl);
 	line-height: var(--global--line-height-heading);
 }
 
@@ -115,14 +117,14 @@
 		margin-top: 0;
 	}
 
-	// Needs to be the second-last child to avoid applying this to the appender. 
+	// Needs to be the second-last child to avoid applying this to the appender.
 	[data-block]:nth-last-child(2) {
 		margin-bottom: 0;
 	}
 }
 
-/* 
- * Custom gradients 
+/*
+ * Custom gradients
 */
 
 
