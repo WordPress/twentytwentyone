@@ -65,12 +65,10 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	/* Headings */
 	/* Block: Latest posts */
 	/* Colors */
-	/* Naming? */
+	/* white 50% opacity used in form fields.*/
 	/* Body text color, site title, footer text color. */
 	/* Headings */
 	/* Mint, default body background */
-	/* Used for borders (separators) */
-	/* white 50% opacity used in form fields.*/
 	/* Used for borders (separators) */
 	/* Spacing */
 	/* Elevation */
@@ -1714,7 +1712,7 @@ blockquote.alignright footer {
 }
 
 input[type="text"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1722,7 +1720,7 @@ input[type="text"] {
 }
 
 input[type="email"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1730,7 +1728,7 @@ input[type="email"] {
 }
 
 input[type="url"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1738,7 +1736,7 @@ input[type="url"] {
 }
 
 input[type="password"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1746,7 +1744,7 @@ input[type="password"] {
 }
 
 input[type="search"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1754,7 +1752,7 @@ input[type="search"] {
 }
 
 input[type="number"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1762,7 +1760,7 @@ input[type="number"] {
 }
 
 input[type="tel"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1770,7 +1768,7 @@ input[type="tel"] {
 }
 
 input[type="range"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1778,7 +1776,7 @@ input[type="range"] {
 }
 
 input[type="date"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1786,7 +1784,7 @@ input[type="date"] {
 }
 
 input[type="month"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1794,7 +1792,7 @@ input[type="month"] {
 }
 
 input[type="week"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1802,7 +1800,7 @@ input[type="week"] {
 }
 
 input[type="time"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1810,7 +1808,7 @@ input[type="time"] {
 }
 
 input[type="datetime"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1818,7 +1816,7 @@ input[type="datetime"] {
 }
 
 input[type="datetime-local"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1826,7 +1824,7 @@ input[type="datetime-local"] {
 }
 
 input[type="color"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1834,7 +1832,7 @@ input[type="color"] {
 }
 
 textarea {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1843,86 +1841,86 @@ textarea {
 
 input[type="text"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="email"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="url"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="password"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="search"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="number"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="tel"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="range"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="date"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="month"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="week"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="time"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="datetime"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="datetime-local"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="color"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 textarea:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 select {
-	border: 3px solid black;
+	border: 3px solid #000000;
 }
 
 textarea {
@@ -2089,7 +2087,7 @@ i {
 	color: #28303D;
 	font-size: 16px;
 	padding: 20px;
-	border-color: black;
+	border-color: #000000;
 }
 
 .wp-block-code pre {
@@ -2149,7 +2147,7 @@ i {
 }
 
 .wp-block-cover {
-	background-color: white;
+	background-color: #FFFFFF;
 	min-height: 450px;
 	margin-top: inherit;
 	margin-bottom: inherit;
@@ -2158,7 +2156,7 @@ i {
 }
 
 .wp-block-cover-image {
-	background-color: white;
+	background-color: #FFFFFF;
 	min-height: 450px;
 	margin-top: inherit;
 	margin-bottom: inherit;
@@ -2236,27 +2234,27 @@ i {
 }
 
 .wp-block-cover:not([class*='background-color']) .wp-block-cover__inner-container {
-	color: black;
+	color: #000000;
 }
 
 .wp-block-cover:not([class*='background-color']) .wp-block-cover-image-text {
-	color: black;
+	color: #000000;
 }
 
 .wp-block-cover:not([class*='background-color']) .wp-block-cover-text {
-	color: black;
+	color: #000000;
 }
 
 .wp-block-cover-image:not([class*='background-color']) .wp-block-cover__inner-container {
-	color: black;
+	color: #000000;
 }
 
 .wp-block-cover-image:not([class*='background-color']) .wp-block-cover-image-text {
-	color: black;
+	color: #000000;
 }
 
 .wp-block-cover-image:not([class*='background-color']) .wp-block-cover-text {
-	color: black;
+	color: #000000;
 }
 
 .wp-block-cover h2 {
@@ -2406,13 +2404,13 @@ i {
 
 .wp-block-gallery .blocks-gallery-image figcaption {
 	margin: 0;
-	color: white;
+	color: #FFFFFF;
 	font: 16px;
 }
 
 .wp-block-gallery .blocks-gallery-item figcaption {
 	margin: 0;
-	color: white;
+	color: #FFFFFF;
 	font: 16px;
 }
 
@@ -3425,7 +3423,7 @@ p.has-text-color a {
 }
 
 .wp-block-search .wp-block-search__input {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -3436,19 +3434,19 @@ p.has-text-color a {
 
 .wp-block-search .wp-block-search__input:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 hr {
 	border-style: none;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #000000;
 	clear: both;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 hr.wp-block-separator {
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #000000;
 	/**
 		 * Block Options
 		 */
@@ -3467,7 +3465,7 @@ hr.wp-block-separator.is-style-dots.has-background:before, hr.wp-block-separator
 }
 
 hr.wp-block-separator.is-style-dots:before {
-	color: black;
+	color: #000000;
 	font-size: 28px;
 	letter-spacing: 16px;
 	padding-left: 16px;
@@ -3693,47 +3691,6 @@ table th {
 
 .has-parallax {
 	background-attachment: fixed;
-}
-
-.has-primary-color[class] {
-	color: #28303D;
-}
-
-.has-secondary-color[class] {
-	color: #39414D;
-}
-
-.has-white-color[class] {
-	color: white;
-}
-
-.has-black-color[class] {
-	color: black;
-}
-
-.has-background:not(.has-background-background-color) a,
-.has-background p, .has-background h1, .has-background h2, .has-background h3, .has-background h4, .has-background h5, .has-background h6 {
-	color: currentColor;
-}
-
-.has-primary-background-color[class] {
-	background-color: #28303D;
-	color: #D1E4DD;
-}
-
-.has-secondary-background-color[class] {
-	background-color: #39414D;
-	color: #D1E4DD;
-}
-
-.has-white-background-color[class] {
-	background-color: white;
-	color: #39414D;
-}
-
-.has-black-background-color[class] {
-	background-color: black;
-	color: #28303D;
 }
 
 :root .is-tiny-text {
@@ -4055,7 +4012,7 @@ nav a {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 16px;
 	line-height: 1.7;
-	border-top: 3px solid black;
+	border-top: 3px solid #000000;
 	padding-top: 30px;
 	margin-top: 60px;
 }
@@ -4328,7 +4285,7 @@ h1.entry-title {
 	margin-top: 30px;
 	padding-top: 20px;
 	padding-bottom: 90px;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #000000;
 }
 
 body:not(.single) .site-main > article:last-of-type .entry-footer {
@@ -4340,7 +4297,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	margin-bottom: 102px;
 	padding-bottom: 0;
 	padding-top: 24px;
-	border-top: 3px solid black;
+	border-top: 3px solid #000000;
 	border-bottom: 1px solid transparent;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -4432,7 +4389,7 @@ h2.page-title {
 }
 
 .page-header {
-	border-bottom: 3px solid black;
+	border-bottom: 3px solid #000000;
 	padding-bottom: 60px;
 }
 
@@ -4509,7 +4466,7 @@ h2.page-title {
 }
 
 .comment-list > li:not(first-child) {
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #000000;
 }
 
 .comment-list .children {
@@ -4518,7 +4475,7 @@ h2.page-title {
 }
 
 .comment-list .children > li {
-	border-top: 1px solid black;
+	border-top: 1px solid #000000;
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
@@ -5310,7 +5267,7 @@ h2.page-title {
 }
 
 .pagination {
-	border-top: 3px solid black;
+	border-top: 3px solid #000000;
 	padding-top: 30px;
 	margin: 30px 25px;
 }
@@ -5450,24 +5407,102 @@ h2.page-title {
 	outline: 0;
 }
 
-/*
-See assets\sass\05-blocks\utilities\_style.scss
-*/
-/* examples 
-.has-blue-color {
-    color: var(--color-blue);
+.has-black-color[class] {
+	color: #000000;
 }
 
-.has-blue-background-color {
-    background-color: var(--color-blue);
+.has-gray-color[class] {
+	color: #39414D;
 }
-*/
+
+.has-dark-gray-color[class] {
+	color: #28303D;
+}
+
+.has-green-color[class] {
+	color: #D1E4DD;
+}
+
+.has-blue-color[class] {
+	color: #D1DFE4;
+}
+
+.has-purple-color[class] {
+	color: #D1D1E4;
+}
+
+.has-red-color[class] {
+	color: #E4D1D1;
+}
+
+.has-orange-color[class] {
+	color: #E4DAD1;
+}
+
+.has-yellow-color[class] {
+	color: #EEEADD;
+}
+
+.has-white-color[class] {
+	color: #FFFFFF;
+}
+
+.has-background:not(.has-background-background-color) a,
+.has-background p, .has-background h1, .has-background h2, .has-background h3, .has-background h4, .has-background h5, .has-background h6 {
+	color: currentColor;
+}
+
+.has-black-background-color[class] {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+.has-gray-background-color[class] {
+	background-color: #39414D;
+	color: #FFFFFF;
+}
+
+.has-dark-gray-background-color[class] {
+	background-color: #28303D;
+	color: #FFFFFF;
+}
+
+.has-green-background-color[class] {
+	background-color: #D1E4DD;
+}
+
+.has-blue-background-color[class] {
+	background-color: #D1DFE4;
+}
+
+.has-purple-background-color[class] {
+	background-color: #D1D1E4;
+}
+
+.has-red-background-color[class] {
+	background-color: #E4D1D1;
+}
+
+.has-orange-background-color[class] {
+	background-color: #E4DAD1;
+}
+
+.has-yellow-background-color[class] {
+	background-color: #EEEADD;
+}
+
+.has-white-background-color[class] {
+	background-color: #FFFFFF;
+}
+
 header * {
 	max-width: unset;
 }
+
 main * {
 	max-width: unset;
 }
+
 footer * {
 	max-width: unset;
 }

@@ -74,19 +74,23 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 	--definition-term--font-family: var(--global--font-primary);
 
 	/* Colors */
-	/* Naming? */
-	--global--color-primary: #28303D; /* Body text color, site title, footer text color. */
-	--global--color-secondary: #39414D; /* Headings */
-
-	--global--color-primary-hover: var( --global--color-primary );
-	--global--color-secondary-hover: var( --global--color-secondary );
-
-	--global--color-background: #D1E4DD; /* Mint, default body background */
-
-	--global--color-black: black; /* Used for borders (separators) */
-	--global--color-white: white;
+	--global--color-black: #000000;
+	--global--color-dark-gray: #28303D;
+	--global--color-gray: #39414D;
+	--global--color-green: #D1E4DD;
+	--global--color-blue: #D1DFE4;
+	--global--color-purple: #D1D1E4;
+	--global--color-red: #E4D1D1;
+	--global--color-orange: #E4DAD1;
+	--global--color-yellow: #EEEADD;
+	--global--color-white: #FFFFFF;
 	--global--color-white-50: rgba(255, 255, 255, 0.5); /* white 50% opacity used in form fields.*/
 
+	--global--color-primary: var(--global--color-dark-gray); /* Body text color, site title, footer text color. */
+	--global--color-secondary: var(--global--color-gray); /* Headings */
+	--global--color-primary-hover: var( --global--color-primary );
+	--global--color-secondary-hover: var( --global--color-secondary );
+	--global--color-background: var(--global--color-green); /* Mint, default body background */
 	--global--color-border: var( --global--color-black ); /* Used for borders (separators) */
 
 	/* Spacing */
