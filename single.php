@@ -34,12 +34,15 @@ while ( have_posts() ) :
 
 	if ( is_singular( 'post' ) ) {
 		// Previous/next post navigation.
+		$twentytwentyone_next = is_rtl() ? twenty_twenty_one_get_icon_svg( 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'arrow_right' );
+		$twentytwentyone_prev = is_rtl() ? twenty_twenty_one_get_icon_svg( 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'arrow_left' );
 		the_post_navigation(
 			array(
-				'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next Post', 'twentytwentyone' ) . ' &rarr;</span> ' .
+				'next_text' => '<span class="meta-nav" aria-hidden="true">' .
+				__( 'Next Post', 'twentytwentyone' ) . ' ' . $twentytwentyone_next . '</span> ' .
 				'<span class="screen-reader-text">' . __( 'Next post:', 'twentytwentyone' ) . '</span> <br/>' .
 				'<span class="post-title">%title</span>',
-				'prev_text' => '<span class="meta-nav" aria-hidden="true">&larr; ' . __( 'Previous Post', 'twentytwentyone' ) . '</span> ' .
+				'prev_text' => '<span class="meta-nav" aria-hidden="true"> ' . $twentytwentyone_prev . ' ' . __( 'Previous Post', 'twentytwentyone' ) . '</span> ' .
 				'<span class="screen-reader-text">' . __( 'Previous post:', 'twentytwentyone' ) . '</span> <br/>' .
 				'<span class="post-title">%title</span>',
 			)

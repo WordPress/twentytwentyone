@@ -356,11 +356,6 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/menu-functions.php';
 
 /**
- * SVG Icons related functions.
- */
-require get_template_directory() . '/inc/icon-functions.php';
-
-/**
  * Custom template tags for the theme.
  */
 require get_template_directory() . '/inc/template-tags.php';

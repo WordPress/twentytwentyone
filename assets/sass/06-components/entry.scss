@@ -122,14 +122,6 @@
 			color: var(--entry-meta--color-link);
 		}
 	}
-
-	.svg-icon {
-		fill: currentColor;
-		position: relative;
-		display: inline-block;
-		vertical-align: middle;
-		margin-right: calc(0.25 * var(--global--spacing-unit));
-	}
 }
 
 .entry-footer {

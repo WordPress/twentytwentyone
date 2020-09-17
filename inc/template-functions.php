@@ -190,3 +190,15 @@ if ( ! function_exists( 'twenty_twenty_one_post_title' ) ) {
 
 	add_filter( 'the_title', 'twenty_twenty_one_post_title' );
 }
+
+/**
+ * Gets the SVG code for a given icon.
+ *
+ * @param string $icon The icon.
+ * @param int    $size The icon size in pixels.
+ *
+ * @return string
+ */
+function twenty_twenty_one_get_icon_svg( $icon, $size = 24 ) {
+	return Twenty_Twenty_One_SVG_Icons::get_svg( 'ui', $icon, $size );
+}
