@@ -4154,6 +4154,18 @@ nav a {
 	color: #39414D;
 }
 
+.single .entry-header {
+	border-bottom: 3px solid black;
+	padding-bottom: 60px;
+	margin-bottom: 90px;
+}
+
+.single .has-post-thumbnail .entry-header {
+	border-bottom: none;
+	padding-bottom: 39px;
+	margin-bottom: 0;
+}
+
 .sticky-post {
 	color: #D1E4DD;
 	background-color: #39414D;
