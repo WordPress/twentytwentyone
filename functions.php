@@ -119,21 +119,21 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 			'editor-font-sizes',
 			array(
 				array(
-					'name'      => __( 'Tiny', 'twentytwentyone' ),
+					'name'      => __( 'Extra small', 'twentytwentyone' ),
 					'shortName' => __( 'XS', 'twentytwentyone' ),
-					'size'      => 14,
-					'slug'      => 'tiny',
+					'size'      => 16,
+					'slug'      => 'extra-small',
 				),
 				array(
 					'name'      => __( 'Small', 'twentytwentyone' ),
 					'shortName' => __( 'S', 'twentytwentyone' ),
-					'size'      => 16,
+					'size'      => 18,
 					'slug'      => 'small',
 				),
 				array(
 					'name'      => __( 'Normal', 'twentytwentyone' ),
 					'shortName' => __( 'M', 'twentytwentyone' ),
-					'size'      => 18,
+					'size'      => 20,
 					'slug'      => 'normal',
 				),
 				array(
@@ -143,9 +143,9 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 					'slug'      => 'large',
 				),
 				array(
-					'name'      => __( 'Huge', 'twentytwentyone' ),
+					'name'      => __( 'Extra large', 'twentytwentyone' ),
 					'shortName' => __( 'XL', 'twentytwentyone' ),
-					'size'      => 28,
+					'size'      => 40,
 					'slug'      => 'huge',
 				),
 			)

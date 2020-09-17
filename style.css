@@ -65,31 +65,36 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--global--font-code: monospace, monospace;
 	--global--font-ui: var(--font-base, var(--global--font-secondary));
 	/* Font Size */
-	--global--font-size-root: 18px;
-	--global--font-size-ratio: 1.2;
-	--global--font-size-base: 1em;
-	--global--font-size-xs: 14px;
-	--global--font-size-sm: 16px;
-	--global--font-size-md: 18px;
-	--global--font-size-lg: 24px;
-	--global--font-size-xl: 28px;
-	--global--font-size-xxl: 32px;
-	--global--font-size-xxxl: 48px;
-	--global--font-size-page-title: 96px;
+	--global--font-size-base: 1.25rem;
+	/* 20px / 16px */
+	--global--font-size-xs: 1rem;
+	/* 16px / 16px */
+	--global--font-size-sm: 1.125rem;
+	/* 18px / 16px */
+	--global--font-size-md: 1.25rem;
+	/* 20px / 16px */
+	--global--font-size-lg: 1.5rem;
+	/* 24px / 16px */
+	--global--font-size-xl: 2rem;
+	/* 40px / 16px */
+	--global--font-size-page-title: 6rem;
+	/* 96px / 16px */
 	--global--letter-spacing: normal;
 	/* Line Height */
-	--global--line-height-base: 1;
+	--global--line-height-base: 1.0;
 	--global--line-height-body: 1.7;
 	--global--line-height-heading: 1.3;
 	/* Headings */
 	--heading--font-family: var(--global--font-primary);
 	--heading--line-height: var(--global--line-height-heading);
-	--heading--font-size-h6: var(--global--font-size-base);
-	--heading--font-size-h5: var(--global--font-size-md);
+	--heading--font-size-h6: var(--global--font-size-xs);
+	--heading--font-size-h5: var(--global--font-size-sm);
 	--heading--font-size-h4: var(--global--font-size-lg);
-	--heading--font-size-h3: var(--global--font-size-xl);
-	--heading--font-size-h2: var(--global--font-size-xxl);
-	--heading--font-size-h1: var(--global--font-size-xxxl);
+	--heading--font-size-h3: 2rem;
+	/* 32px / 16px */
+	--heading--font-size-h2: 3rem;
+	/* 48px / 16px */
+	--heading--font-size-h1: var(--global--font-size-page-title);
 	--heading--letter-spacing-h6: 0.05em;
 	--heading--letter-spacing-h5: 0.05em;
 	--heading--letter-spacing-h4: var(--global--letter-spacing);
@@ -136,12 +141,6 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--global--spacing-vertical: 30px;
 	/* Elevation */
 	--global--elevation: 1px 1px 3px 0px rgba( 0, 0, 0, 0.2 );
-	/* Other */
-	--global--border-radius-sm: 9px;
-	--global--border-radius-md: 13.5px;
-	--global--border-radius-lg: 18px;
-	--global--border-radius-pill: 180px;
-	--global--border-radius-none: 0;
 	/* Forms */
 	--form--font-family: var(--global--font-secondary);
 	--form--font-size: var(--global--font-size-md);
@@ -176,8 +175,8 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--entry-header--color-hover: var(--global--color-primary-hover);
 	--entry-header--color-focus: var(--global--color-secondary);
 	--entry-header--font-family: var(--heading--font-family);
-	--entry-header--font-size: var(--global--font-size-xxxl);
-	--entry-content--font-family: var(--heading--font-size-h2);
+	--entry-header--font-size: var(--global--font-size-page-title);
+	--entry-content--font-family: var(--global--font-secondary);
 	--entry-meta--color: var(--global--color-primary);
 	--entry-meta--color-link: currentColor;
 	--entry-meta--color-hover: var(--global--color-primary-hover);
@@ -205,7 +204,7 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--primary-nav--font-family: var(--global--font-secondary);
 	--primary-nav--font-family-mobile: var(--global--font-primary);
 	--primary-nav--font-size: var(--global--font-size-md);
-	--primary-nav--font-size-mobile: var(--global--font-size-xxl);
+	--primary-nav--font-size-mobile: var(--global--font-size-xl);
 	--primary-nav--font-size-sub-menu-mobile: var(--global--font-size-lg);
 	--primary-nav--font-style: normal;
 	--primary-nav--font-style-sub-menu-mobile: italic;
@@ -254,13 +253,6 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
 	--separator--width: calc(6 * var(--global--spacing-horizontal));
-	--utilities--font-size-xs: var(--global--font-size-xs);
-	--utilities--font-size-sm: var(--global--font-size-sm);
-	--utilities--font-size-md: var(--global--font-size-md);
-	--utilities--font-size-lg: var(--global--font-size-lg);
-	--utilities--font-size-xl: var(--global--font-size-xl);
-	--utilities--font-size-xxl: var(--global--font-size-xxl);
-	--utilities--font-size-xxxl: var(--global--font-size-xxxl);
 }
 
 /* Any helpful mixins we need? Put them here. */
@@ -1081,21 +1073,12 @@ html {
 }
 
 html {
-	font-size: calc(var(--global--font-size-root) / var(--global--font-size-ratio));
-	/* 15px; */
 	font-family: var(--global--font-secondary);
 	line-height: var(--global--line-height-body);
 }
 
-@media only screen and (min-width: 482px) {
-	html {
-		font-size: var(--global--font-size-root);
-	}
-}
-
 body {
 	font-size: var(--global--font-size-base);
-	/* 1em; */
 	font-weight: normal;
 	color: var(--global--color-primary);
 	text-align: left;
@@ -2537,8 +2520,8 @@ table th,
 	color: var(--global--color-primary);
 }
 
-:root .is-tiny-text,
-:root .has-tiny-font-size {
+:root .is-extra-small-text,
+:root .has-extra-small-font-size {
 	font-size: var(--global--font-size-xs);
 }
 
@@ -2549,6 +2532,7 @@ table th,
 
 :root .is-regular-text,
 :root .has-regular-font-size,
+:root .is-normal-font-size,
 :root .has-normal-font-size,
 :root .has-medium-font-size {
 	font-size: var(--global--font-size-base);
@@ -2562,6 +2546,7 @@ table th,
 
 :root .is-larger-text,
 :root .has-larger-font-size,
+:root .is-huge-text,
 :root .has-huge-font-size {
 	font-size: var(--global--font-size-xl);
 	line-height: var(--global--line-height-heading);
@@ -2965,6 +2950,10 @@ nav a {
 	color: var(--entry-header--color-link);
 }
 
+.singular .entry-title {
+	font-size: var(--global--font-size-page-title);
+}
+
 h1.entry-title {
 	font-weight: var(--heading--font-weight-page-title);
 }
@@ -3143,7 +3132,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .author-bio .author-description {
-	font-size: var(--global--font-size-md);
+	font-size: var(--global--font-size-xs);
 }
 
 .author-bio .avatar {
@@ -3176,6 +3165,10 @@ h2.page-title {
 	border-bottom: 3px solid transparent;
 }
 
+.error404 p {
+	font-size: var(--global--font-size-lg);
+}
+
 .search-no-results .page-content {
 	margin-top: calc( 3 * var(--global--spacing-vertical));
 }
@@ -3201,8 +3194,8 @@ h2.page-title {
  */
 .comments-title,
 .comment-reply-title {
-	font-size: var(--heading--font-size-h1);
-	letter-spacing: var(--heading--letter-spacing-h1);
+	font-size: var(--heading--font-size-h2);
+	letter-spacing: var(--heading--letter-spacing-h2);
 }
 
 .comment-reply-title {
@@ -3274,7 +3267,7 @@ h2.page-title {
 .comment-meta .comment-author .fn {
 	font-family: var(--global--font-secondary);
 	font-weight: normal;
-	font-size: var(--global--font-size-xxl);
+	font-size: var(--global--font-size-lg);
 	hyphens: auto;
 	padding-left: 60px;
 	word-wrap: break-word;
@@ -3289,7 +3282,7 @@ h2.page-title {
 
 .comment-meta .comment-metadata {
 	color: var(--global--color-primary);
-	font-size: var(--global--font-size-xs);
+	font-size: var(--global--font-size-sm);
 	padding-left: 60px;
 }
 
@@ -3460,7 +3453,7 @@ h2.page-title {
 .comment-form > p input[type="url"],
 .comment-form > p textarea {
 	display: block;
-	font-size: var(--global--font-size-md);
+	font-size: var(--global--font-size-sm);
 	margin-bottom: calc( .5 * var(--global--spacing-unit));
 	width: 100%;
 	font-weight: 500;
@@ -3998,6 +3991,10 @@ h2.page-title {
 
 .pagination .nav-links > *.prev {
 	margin-right: auto;
+}
+
+.widget-area {
+	font-size: var(--footer--font-size);
 }
 
 @media only screen and (min-width: 822px) {
