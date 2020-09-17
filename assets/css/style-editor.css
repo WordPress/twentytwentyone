@@ -1336,7 +1336,6 @@ pre.wp-block-verse {
 }
 
 html {
-	font-size: var(--global--font-size-root);
 	font-family: var(--global--font-secondary);
 	line-height: var(--global--line-height-body);
 }
