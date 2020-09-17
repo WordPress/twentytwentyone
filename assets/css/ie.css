@@ -4236,14 +4236,6 @@ nav a {
 	color: currentColor;
 }
 
-.entry-meta .svg-icon {
-	fill: currentColor;
-	position: relative;
-	display: inline-block;
-	vertical-align: middle;
-	margin-right: 1px;
-}
-
 .entry-footer {
 	color: #28303D;
 	clear: both;

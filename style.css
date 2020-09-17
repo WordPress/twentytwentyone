@@ -2998,14 +2998,6 @@ nav a {
 	color: var(--entry-meta--color-link);
 }
 
-.entry-meta .svg-icon {
-	fill: currentColor;
-	position: relative;
-	display: inline-block;
-	vertical-align: middle;
-	margin-right: calc(0.25 * var(--global--spacing-unit));
-}
-
 .entry-footer {
 	color: var(--entry-meta--color);
 	clear: both;

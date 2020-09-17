@@ -89,7 +89,7 @@ add_filter(
 		if ( $has_children ) {
 			$item_output = str_replace(
 				'</a>',
-				'</a><span class="wp-block-navigation-link__submenu-icon"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" transform="rotate(90)"><path d="M8 5v14l11-7z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span>',
+				'</a><span class="wp-block-navigation-link__submenu-icon">' . twenty_twenty_one_get_icon_svg( 'plus' ) . '</span>',
 				$item_output
 			);
 		}

@@ -120,7 +120,6 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
   /* Visibility */
   .primary-navigation,
   .site-title + .primary-navigation,
-  .social-navigation,
   .site-branding-container:before,
   .entry .entry-title:before,
   .entry-footer,
@@ -145,7 +144,6 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 
 	.primary-navigation a,
 	.primary-navigation a + svg,
-	.social-navigation a,
 	.site-title a,
 	.site-featured-image a,
 	.site-branding .site-title,
@@ -153,7 +151,6 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	.primary-navigation a:after,
 	.primary-navigation .menu-wrapper > li.menu-item-has-children:after,
 	.primary-navigation li,
-	.social-navigation li,
 	.entry-meta,
 	.entry-title,
 	&#masthead .site-title a {
