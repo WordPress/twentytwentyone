@@ -1690,7 +1690,6 @@ h5, .h5 {
 	font-weight: var(--heading--font-weight-strong);
 	letter-spacing: var(--heading--letter-spacing-h5);
 	line-height: var(--heading--line-height-h5);
-	text-transform: uppercase;
 }
 
 h6, .h6 {
@@ -1698,7 +1697,6 @@ h6, .h6 {
 	font-weight: var(--heading--font-weight-strong);
 	letter-spacing: var(--heading--letter-spacing-h6);
 	line-height: var(--heading--line-height-h6);
-	text-transform: uppercase;
 }
 
 .wp-block-image {

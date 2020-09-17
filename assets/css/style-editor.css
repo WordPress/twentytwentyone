@@ -638,7 +638,6 @@ div[data-type="core/button"] {
 	font-weight: var(--heading--font-weight-strong);
 	letter-spacing: var(--heading--letter-spacing-h5);
 	line-height: var(--global--line-height-body-h5);
-	text-transform: uppercase;
 }
 
 .wp-block-heading h6, h6, .h6 {
@@ -646,7 +645,6 @@ div[data-type="core/button"] {
 	font-weight: var(--heading--font-weight-strong);
 	letter-spacing: var(--heading--letter-spacing-h6);
 	line-height: var(--global--line-height-body-h6);
-	text-transform: uppercase;
 }
 
 .wp-block-heading h1[style*="--wp--typography--line-height"], h1[style*="--wp--typography--line-height"], .h1[style*="--wp--typography--line-height"],
