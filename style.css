@@ -3212,17 +3212,12 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	margin-bottom: var(--global--spacing-vertical);
 }
 
-.comment-list > li:not(first-child) {
-	border-bottom: 1px solid var(--comments--border-color);
-}
-
 .comment-list .children {
 	list-style: none;
 	padding-left: var(--global--spacing-horizontal);
 }
 
 .comment-list .children > li {
-	border-top: 1px solid var(--comments--border-color);
 	margin-top: var(--global--spacing-vertical);
 	margin-bottom: var(--global--spacing-vertical);
 }
@@ -3255,7 +3250,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	font-weight: normal;
 	font-size: var(--global--font-size-xxl);
 	hyphens: auto;
-	padding-left: 60px;
+	padding-left: 85px;
 	word-wrap: break-word;
 	word-break: break-word;
 }
@@ -3269,7 +3264,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .comment-meta .comment-metadata {
 	color: var(--global--color-primary);
 	font-size: var(--global--font-size-xs);
-	padding-left: 60px;
+	padding-left: 85px;
 }
 
 .comment-meta .comment-metadata a {
@@ -3299,23 +3294,6 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	line-height: var(--global--line-height-heading);
 }
 
-.reply a {
-	background-color: var(--button--color-background);
-	border-radius: var(--button--border-radius);
-	border-bottom: none;
-	color: var(--button--color-text);
-	font-weight: var(--button--font-weight);
-	font-family: var(--button--font-family);
-	font-size: var(--button--font-size);
-	line-height: var(--button--line-height);
-	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
-}
-
-.reply a:hover, .reply a:focus, .reply a.has-focus {
-	color: var(--button--color-text-hover);
-	background-color: var(--button--color-background-hover);
-}
-
 .reply {
 	text-align: right;
 }
@@ -3341,6 +3319,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .comment-body {
 	position: relative;
+	margin-bottom: calc( 1.7 * var(--global--spacing-vertical));
 }
 
 .comment-body > * {
@@ -3349,7 +3328,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .comment-body .reply {
-	margin: calc(1.5 * var(--global--spacing-vertical)) 0;
+	margin: 0;
 }
 
 .comment-content a {

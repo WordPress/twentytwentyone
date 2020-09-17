@@ -57,9 +57,6 @@
 		margin-bottom: var(--global--spacing-vertical);
 	}
 
-	> li:not(first-child) {
-		border-bottom: 1px solid var(--comments--border-color);
-	}
 }
 
 .comment-list .children {
@@ -67,7 +64,6 @@
 	padding-left: var(--global--spacing-horizontal);
 
 	> li {
-		border-top: 1px solid var(--comments--border-color);
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
 	}
@@ -100,7 +96,7 @@
 			font-weight: normal;
 			font-size: var(--global--font-size-xxl);
 			hyphens: auto;
-			padding-left: 60px;
+			padding-left: 85px;
 			word-wrap: break-word;
 			word-break: break-word;
 		}
@@ -115,7 +111,7 @@
 	.comment-metadata {
 		color: var(--global--color-primary);
 		font-size: var(--global--font-size-xs);
-		padding-left: 60px;
+		padding-left: 85px;
 
 		a {
 			border-bottom: none;
@@ -144,25 +140,6 @@
 .reply {
 	font-size: var(--global--font-size-sm);
 	line-height: var(--global--line-height-heading);
-
-	a {
-		background-color: var(--button--color-background);
-		border-radius: var(--button--border-radius);
-		border-bottom: none;
-		color: var(--button--color-text);
-		font-weight: var(--button--font-weight);
-		font-family: var(--button--font-family);
-		font-size: var(--button--font-size);
-		line-height: var(--button--line-height);
-		padding: var(--button--padding-vertical) var(--button--padding-horizontal);
-
-		&:hover,
-		&:focus,
-		&.has-focus {
-			color: var(--button--color-text-hover);
-			background-color: var(--button--color-background-hover);
-		}
-	}
 }
 
 .reply {
@@ -188,6 +165,7 @@
 // Comment body
 .comment-body {
 	position: relative;
+	margin-bottom: calc( 1.7 * var(--global--spacing-vertical));
 
 	& > * {
 		margin-top: var(--global--spacing-vertical);
@@ -195,7 +173,7 @@
 	}
 
 	.reply {
-		margin: calc(1.5 * var(--global--spacing-vertical)) 0;
+		margin: 0;
 	}
 }
 
@@ -260,7 +238,7 @@
 		flex-grow: 1;
 	}
 
-	.comment-form-cookies-consent > label, 
+	.comment-form-cookies-consent > label,
 	.comment-notes {
 		font-size: var(--global--font-size-xs);
 	}
