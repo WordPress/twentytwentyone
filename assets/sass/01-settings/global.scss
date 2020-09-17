@@ -46,8 +46,8 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 	--heading--font-size-h2: var(--global--font-size-xxl);
 	--heading--font-size-h1: var(--global--font-size-xxxl);
 
-	--heading--letter-spacing-h6: var(--global--letter-spacing);
-	--heading--letter-spacing-h5: var(--global--letter-spacing);
+	--heading--letter-spacing-h6: 0.05em;
+	--heading--letter-spacing-h5: 0.05em;
 	--heading--letter-spacing-h4: var(--global--letter-spacing);
 	--heading--letter-spacing-h3: var(--global--letter-spacing);
 	--heading--letter-spacing-h2: var(--global--letter-spacing);

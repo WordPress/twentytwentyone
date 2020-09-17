@@ -33,20 +33,25 @@
 
 .wp-block-heading h4, h4, .h4 {
 	font-size: var(--heading--font-size-h4);
+	font-weight: var(--heading--font-weight-strong);
 	letter-spacing: var(--heading--letter-spacing-h4);
 	line-height: var(--heading--line-height-h4);
 }
 
 .wp-block-heading h5, h5, .h5 {
 	font-size: var(--heading--font-size-h5);
+	font-weight: var(--heading--font-weight-strong);
 	letter-spacing: var(--heading--letter-spacing-h5);
 	line-height: var(--global--line-height-body-h5);
+    text-transform: uppercase;
 }
 
 .wp-block-heading h6, h6, .h6 {
 	font-size: var(--heading--font-size-h6);
+	font-weight: var(--heading--font-weight-strong);
 	letter-spacing: var(--heading--letter-spacing-h6);
 	line-height: var(--global--line-height-body-h6);
+    text-transform: uppercase;
 }
 
 .wp-block-heading h1, h1, .h1,
