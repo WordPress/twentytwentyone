@@ -160,28 +160,70 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 		);
 
 		// Editor color palette.
-		$primary   = '#28303D';
-		$secondary = '#39414D';
-		$mint      = '#D1E4DD';
+		$black      = '#000000';
+		$dark_gray  = '#28303D';
+		$gray       = '#39414D';
+		$green      = '#D1E4DD';
+		$blue       = '#D1DFE4';
+		$purple     = '#D1D1E4';
+		$red        = '#E4D1D1';
+		$orange     = '#E4DAD1';
+		$yellow     = '#EEEADD';
+		$white      = '#FFFFFF';
 
 		add_theme_support(
 			'editor-color-palette',
 			array(
 				array(
-					'name'  => __( 'Primary', 'twentytwentyone' ),
-					'slug'  => 'primary',
-					'color' => $primary,
+					'name'  => __( 'Black', 'twentytwentyone' ),
+					'slug'  => 'black',
+					'color' => $black,
 				),
 				array(
-					'name'  => __( 'Secondary', 'twentytwentyone' ),
-					'slug'  => 'secondary',
-					'color' => $secondary,
+					'name'  => __( 'Dark Gray', 'twentytwentyone' ),
+					'slug'  => 'dark-gray',
+					'color' => $dark_gray,
 				),
 				array(
-					'name'  => __( 'Mint', 'twentytwentyone' ),
-					'slug'  => 'mint',
-					'color' => $mint,
+					'name'  => __( 'Gray', 'twentytwentyone' ),
+					'slug'  => 'gray',
+					'color' => $gray,
 				),
+				array(
+					'name'  => __( 'Green', 'twentytwentyone' ),
+					'slug'  => 'green',
+					'color' => $green,
+				),
+				array(
+					'name'  => __( 'Blue', 'twentytwentyone' ),
+					'slug'  => 'blue',
+					'color' => $blue,
+				),
+				array(
+					'name'  => __( 'Purple', 'twentytwentyone' ),
+					'slug'  => 'purple',
+					'color' => $purple,
+				),
+				array(
+					'name'  => __( 'Red', 'twentytwentyone' ),
+					'slug'  => 'red',
+					'color' => $red,
+				),
+				array(
+					'name'  => __( 'Orange', 'twentytwentyone' ),
+					'slug'  => 'orange',
+					'color' => $orange,
+				),
+				array(
+					'name'  => __( 'Yellow', 'twentytwentyone' ),
+					'slug'  => 'yellow',
+					'color' => $yellow,
+				),
+				array(
+					'name'  => __( 'White', 'twentytwentyone' ),
+					'slug'  => 'white',
+					'color' => $white,
+				)
 			)
 		);
 
