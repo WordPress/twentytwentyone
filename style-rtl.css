@@ -90,8 +90,8 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--heading--font-size-h3: var(--global--font-size-xl);
 	--heading--font-size-h2: var(--global--font-size-xxl);
 	--heading--font-size-h1: var(--global--font-size-xxxl);
-	--heading--letter-spacing-h6: var(--global--letter-spacing);
-	--heading--letter-spacing-h5: var(--global--letter-spacing);
+	--heading--letter-spacing-h6: 0.05em;
+	--heading--letter-spacing-h5: 0.05em;
 	--heading--letter-spacing-h4: var(--global--letter-spacing);
 	--heading--letter-spacing-h3: var(--global--letter-spacing);
 	--heading--letter-spacing-h2: var(--global--letter-spacing);
@@ -103,6 +103,7 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--heading--line-height-h2: var(--heading--line-height);
 	--heading--line-height-h1: var(--heading--line-height);
 	--heading--font-weight: normal;
+	--heading--font-weight-page-title: 300;
 	--heading--font-weight-strong: 600;
 	/* Block: Latest posts */
 	--latest-posts--title-font-family: var(--heading--font-family);
@@ -222,7 +223,7 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--pagination--font-family: var(--global--font-secondary);
 	--pagination--font-size: var(--global--font-size-lg);
 	--pagination--font-weight: normal;
-	--pagination--font-weight-strong: 700;
+	--pagination--font-weight-strong: 600;
 	/* Comments */
 	--comments--border-color: var(--global--color-border);
 	/* Footer */
@@ -1679,18 +1680,21 @@ h3, .h3 {
 
 h4, .h4 {
 	font-size: var(--heading--font-size-h4);
+	font-weight: var(--heading--font-weight-strong);
 	letter-spacing: var(--heading--letter-spacing-h4);
 	line-height: var(--heading--line-height-h4);
 }
 
 h5, .h5 {
 	font-size: var(--heading--font-size-h5);
+	font-weight: var(--heading--font-weight-strong);
 	letter-spacing: var(--heading--letter-spacing-h5);
 	line-height: var(--heading--line-height-h5);
 }
 
 h6, .h6 {
 	font-size: var(--heading--font-size-h6);
+	font-weight: var(--heading--font-weight-strong);
 	letter-spacing: var(--heading--letter-spacing-h6);
 	line-height: var(--heading--line-height-h6);
 }
@@ -2928,6 +2932,10 @@ nav a {
 	color: var(--entry-header--color-link);
 }
 
+h1.entry-title {
+	font-weight: var(--heading--font-weight-page-title);
+}
+
 /**
  * Entry Content
  */
@@ -3111,6 +3119,11 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .page-title {
 	font-size: var(--global--font-size-page-title);
+}
+
+h1.page-title,
+h2.page-title {
+	font-weight: var(--heading--font-weight-page-title);
 }
 
 .page-header {
