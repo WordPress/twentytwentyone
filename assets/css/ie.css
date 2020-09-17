@@ -2655,18 +2655,6 @@ h6 {
 	line-height: 1.3;
 }
 
-h1.page-title {
-	font-weight: 300;
-}
-
-h1.entry-title {
-	font-weight: 300;
-}
-
-h2.page-title {
-	font-weight: 300;
-}
-
 .wp-block-image {
 	text-align: center;
 }
@@ -4203,6 +4191,10 @@ nav a {
 	color: currentColor;
 }
 
+h1.entry-title {
+	font-weight: 300;
+}
+
 /**
  * Entry Content
  */
@@ -4421,6 +4413,14 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .page-title {
 	font-size: 96px;
+}
+
+h1.page-title {
+	font-weight: 300;
+}
+
+h2.page-title {
+	font-weight: 300;
 }
 
 .page-header {
