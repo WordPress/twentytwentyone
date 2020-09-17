@@ -12,13 +12,13 @@ $baseline-unit: 10px;
 	--global--font-ui: var(--font-base, var(--global--font-secondary));
 
 	/* Font Size */
-	--global--font-size-base: 1.25rem; /* 20px / 16px */
-	--global--font-size-xs: 1rem; /* 16px / 16px */
-	--global--font-size-sm: 1.125rem; /* 18px / 16px */
-	--global--font-size-md: 1.25rem; /* 20px / 16px */
-	--global--font-size-lg: 1.5rem; /* 24px / 16px */
-	--global--font-size-xl: 2rem; /* 40px / 16px */
-	--global--font-size-page-title: 6rem; /* 96px / 16px */
+	--global--font-size-base: 1.25rem; // 20px / 16px
+	--global--font-size-xs: 1rem; // 16px / 16px
+	--global--font-size-sm: 1.125rem; // 18px / 16px
+	--global--font-size-md: 1.25rem; // 20px / 16px
+	--global--font-size-lg: 1.5rem; // 24px / 16px
+	--global--font-size-xl: 2rem; // 40px / 16px
+	--global--font-size-page-title: 6rem; // 96px / 16px
 	--global--letter-spacing: normal;
 
 	/* Line Height */
@@ -33,8 +33,8 @@ $baseline-unit: 10px;
 	--heading--font-size-h6: var(--global--font-size-xs);
 	--heading--font-size-h5: var(--global--font-size-sm);
 	--heading--font-size-h4: var(--global--font-size-lg);
-	--heading--font-size-h3: 2rem; /* 32px / 16px */
-	--heading--font-size-h2: 3rem; /* 48px / 16px */
+	--heading--font-size-h3: 2rem; // 32px / 16px
+	--heading--font-size-h2: 3rem; // 48px / 16px
 	--heading--font-size-h1: var(--global--font-size-page-title);
 
 	--heading--letter-spacing-h6: 0.05em;
