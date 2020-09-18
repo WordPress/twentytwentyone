@@ -33,15 +33,32 @@
 
 	small {
 		a {
-			border-bottom: none;
+			border-color: transparent;
 			color: currentColor;
 			font-family: var(--global--font-secondary);
 			font-size: var(--global--font-size-xs);
 			font-style: normal;
 			font-weight: normal;
 			letter-spacing: normal;
+
+			&:hover,
+			&:focus {
+				color: var(--global--color-primary-hover);
+			}
+
+			&:hover {
+				border-color: var(--global--color-secondary);
+			}
+
+			&:active {
+				color: currentColor;
+			}
 		}
 	}
+}
+/* Nested comment reply title*/
+.comment .comment-respond .comment-reply-title {
+	font-size: var(--global--font-size-xxl);
 }
 
 /**
@@ -61,15 +78,19 @@
 
 .comment-list .children {
 	list-style: none;
-	padding-left: var(--global--spacing-horizontal);
+	padding-left: 0;
 
 	> li {
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
 	}
 
+}
+
+.comment-list .depth-2,
+.comment-list .depth-3 {
 	@include media(mobile) {
-		padding-left: calc(2 * var(--global--spacing-horizontal));
+		padding-left: calc(4 * var(--global--spacing-horizontal));
 	}
 }
 
@@ -78,13 +99,10 @@
  */
 
 .comment-meta {
-	$avatar-size: var(--global--spacing-vertical);
 
 	.comment-author {
 		line-height: var(--global--line-height-heading);
 		margin-bottom: calc(0.25 * var(--global--spacing-unit));
-		padding-right: calc(2.5 * var(--global--spacing-horizontal));
-		max-width: calc(100% - (3 * var(--global--spacing-horizontal)));
 
 		@include media(mobile) {
 			margin-bottom: 0;
@@ -104,22 +122,30 @@
 		.avatar {
 			border-radius: 50%;
 			position: absolute;
-			top: 5px;
+			top: 13px;
 		}
 	}
 
 	.comment-metadata {
 		color: var(--global--color-primary);
-		font-size: var(--global--font-size-xs);
-		padding-left: 85px;
+		font-size: var(--global--font-size-sm);
+		padding: 8px 0 9px 85px;
+
+		.edit-link {
+			margin-left: var(--global--spacing-horizontal);
+		}
 
 		a {
-			border-bottom: none;
 			color: currentColor;
+			border-color: transparent;
 
 			&:hover,
 			&:focus {
 				color: var(--global--color-primary-hover);
+			}
+
+			&:hover {
+				border-color: var(--global--color-secondary);
 			}
 
 			&:active {
@@ -140,13 +166,6 @@
 .reply {
 	font-size: var(--global--font-size-sm);
 	line-height: var(--global--line-height-heading);
-}
-
-.reply {
-	text-align: right;
-	@include media(mobile) {
-		text-align: left;
-	}
 }
 
 .bypostauthor {

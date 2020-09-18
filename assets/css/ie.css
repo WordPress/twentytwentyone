@@ -4466,13 +4466,34 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .comment-reply-title small a {
-	border-bottom: none;
+	border-color: transparent;
 	color: currentColor;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 14px;
 	font-style: normal;
 	font-weight: normal;
 	letter-spacing: normal;
+}
+
+.comment-reply-title small a:hover {
+	color: #28303D;
+}
+
+.comment-reply-title small a:focus {
+	color: #28303D;
+}
+
+.comment-reply-title small a:hover {
+	border-color: #39414D;
+}
+
+.comment-reply-title small a:active {
+	color: currentColor;
+}
+
+/* Nested comment reply title*/
+.comment .comment-respond .comment-reply-title {
+	font-size: 32px;
 }
 
 /**
@@ -4490,7 +4511,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .comment-list .children {
 	list-style: none;
-	padding-left: 25px;
+	padding-left: 0;
 }
 
 .comment-list .children > li {
@@ -4499,8 +4520,11 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 @media only screen and (min-width: 482px) {
-	.comment-list .children {
-		padding-left: 50px;
+	.comment-list .depth-2 {
+		padding-left: 100px;
+	}
+	.comment-list .depth-3 {
+		padding-left: 100px;
 	}
 }
 
@@ -4510,8 +4534,6 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .comment-meta .comment-author {
 	line-height: 1.3;
 	margin-bottom: 5px;
-	padding-right: 63px;
-	max-width: calc(100% - 75px);
 }
 
 @media only screen and (min-width: 482px) {
@@ -4534,18 +4556,22 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .comment-meta .comment-author .avatar {
 	border-radius: 50%;
 	position: absolute;
-	top: 5px;
+	top: 13px;
 }
 
 .comment-meta .comment-metadata {
 	color: #28303D;
-	font-size: 14px;
-	padding-left: 85px;
+	font-size: 16px;
+	padding: 8px 0 9px 85px;
+}
+
+.comment-meta .comment-metadata .edit-link {
+	margin-left: 25px;
 }
 
 .comment-meta .comment-metadata a {
-	border-bottom: none;
 	color: currentColor;
+	border-color: transparent;
 }
 
 .comment-meta .comment-metadata a:hover {
@@ -4554,6 +4580,10 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .comment-meta .comment-metadata a:focus {
 	color: #28303D;
+}
+
+.comment-meta .comment-metadata a:hover {
+	border-color: #39414D;
 }
 
 .comment-meta .comment-metadata a:active {
@@ -4572,16 +4602,6 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .reply {
 	font-size: 16px;
 	line-height: 1.3;
-}
-
-.reply {
-	text-align: right;
-}
-
-@media only screen and (min-width: 482px) {
-	.reply {
-		text-align: left;
-	}
 }
 
 .bypostauthor {
