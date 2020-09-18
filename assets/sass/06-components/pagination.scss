@@ -50,12 +50,7 @@
 
 // Singular navigation
 .post-navigation {
-
-	margin: var(--global--spacing-vertical) var(--global--spacing-horizontal);
-
-	@include media(desktop) {
-		margin: var(--global--spacing-vertical) calc( 4 * var(--global--spacing-horizontal) );
-	}
+	@extend %responsive-alignwide-width;
 
 	.meta-nav {
 		font-size: var(--global--font-size-lg);
@@ -97,14 +92,10 @@
 
 // Index/archive navigation
 .pagination {
+	@extend %responsive-alignwide-width;
 
 	border-top: 3px solid var(--global--color-border);
 	padding-top: var(--global--spacing-vertical);
-	margin: var(--global--spacing-vertical) var(--global--spacing-horizontal);
-
-	@include media(desktop) {
-		margin: var(--global--spacing-vertical) calc( 4 * var(--global--spacing-horizontal) );
-	}
 
 	.nav-links > * {
 		color: var(--pagination--color-text);

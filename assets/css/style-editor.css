@@ -258,8 +258,8 @@ Example:
  */
 :root {
 	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal));
-	--responsive--aligndefault-width: 100%;
-	--responsive--alignwide-width: 100%;
+	--responsive--aligndefault-width: calc(100% - var(--responsive--spacing-horizontal));
+	--responsive--alignwide-width: calc(100% - var(--responsive--spacing-horizontal));
 	--responsive--alignfull-width: 100%;
 	--responsive--alignright-margin: var(--global--spacing-horizontal);
 	--responsive--alignleft-margin: var(--global--spacing-horizontal);
@@ -272,35 +272,17 @@ Example:
 	}
 }
 
-@media only screen and (min-width: 592px) {
-	:root {
-		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
-		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
-	}
-}
-
-@media only screen and (min-width: 652px) {
-	:root {
-		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
-		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
-	}
-}
-
 @media only screen and (min-width: 822px) {
 	:root {
-		--responsive--aligndefault-width: calc(652px - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(822px - var(--responsive--spacing-horizontal));
-		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
-		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--spacing-horizontal: 200px;
+		--responsive--aligndefault-width: 610px;
+		--responsive--alignwide-width: calc(100vw - var(--responsive--spacing-horizontal));
 	}
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1240px) {
 	:root {
-		--responsive--aligndefault-width: calc(652px - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(822px - var(--responsive--spacing-horizontal));
-		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
-		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignwide-width: 1024px;
 	}
 }
 
@@ -321,7 +303,6 @@ Example:
 
 @media only screen and (min-width: 1024px) {
 	.full-max-width {
-		max-width: calc( var(--responsive--alignfull-width) - 2 * var(--global--spacing-horizontal) / 0.15);
 		width: auto;
 		margin-left: auto;
 		margin-right: auto;

@@ -11,7 +11,7 @@
 			margin-bottom: calc( 0.666 * var(--global--spacing-vertical) );
 
 			&.alignfull {
-				@extend %responsive-alignfull-width-mobile;
+				@extend %responsive-alignfull-width;
 			}
 
 			@include media(mobile) {

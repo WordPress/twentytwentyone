@@ -16,7 +16,7 @@
 		</section><!-- #primary -->
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer alignwide" role="contentinfo">
 
 		<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
 

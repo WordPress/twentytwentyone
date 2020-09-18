@@ -8,7 +8,7 @@
 	@extend %responsive-aligndefault-width;
 }
 
-.archive-max-width .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce) {
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce) {
 	margin-left: 0;
 	margin-right: 0;
 }
@@ -90,7 +90,6 @@
  */
 .alignfull {
 	clear: both;
-	@extend %responsive-alignfull-width-mobile;
 	@extend %responsive-alignfull-width;
 }
 
