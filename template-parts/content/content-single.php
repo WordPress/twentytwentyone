@@ -15,11 +15,6 @@
 
 	<header class="entry-header archive-max-width">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<?php if ( ! is_page() ) { ?>
-		<div class="entry-meta">
-			<?php twenty_twenty_one_entry_meta_header(); ?>
-		</div><!-- .meta-info -->
-		<?php } ?>
 	</header>
 
 	<?php twenty_twenty_one_post_thumbnail(); ?>
