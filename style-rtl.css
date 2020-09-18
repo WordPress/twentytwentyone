@@ -4073,7 +4073,7 @@ h2.page-title {
 	color: var(--global--color-white);
 }
 
-.has-dark-background-gray-color[class] {
+.has-dark-gray-background-color[class] {
 	background-color: var(--global--color-dark-gray);
 	color: var(--global--color-white);
 }
