@@ -3778,126 +3778,6 @@ table th {
 	}
 }
 
-/**
- * Spacing Overrides
- */
-/*
- * Margins
- */
-.margin-top-none {
-	margin-top: 0 !important;
-}
-
-.margin-top-half {
-	margin-top: 15px !important;
-}
-
-.margin-top-default {
-	margin-top: 30px !important;
-}
-
-.margin-right-none {
-	/*rtl:ignore*/
-	margin-right: 0 !important;
-}
-
-.margin-right-half {
-	/*rtl:ignore*/
-	margin-right: 15px !important;
-}
-
-.margin-right-default {
-	/*rtl:ignore*/
-	margin-right: 30px !important;
-}
-
-.margin-bottom-none {
-	margin-bottom: 0 !important;
-}
-
-.margin-bottom-half {
-	margin-bottom: 15px !important;
-}
-
-.margin-bottom-default {
-	margin-bottom: 30px !important;
-}
-
-.margin-left-none {
-	/*rtl:ignore*/
-	margin-left: 0 !important;
-}
-
-.margin-left-half {
-	/*rtl:ignore*/
-	margin-left: 15px !important;
-}
-
-.margin-left-default {
-	/*rtl:ignore*/
-	margin-left: 30px !important;
-}
-
-/*
- * Padding
- */
-.padding-top-none {
-	padding-top: 0 !important;
-}
-
-.padding-top-half {
-	padding-top: 15px !important;
-}
-
-.padding-top-default {
-	padding-top: 30px !important;
-}
-
-.padding-right-none {
-	/*rtl:ignore*/
-	padding-right: 0 !important;
-}
-
-.padding-right-half {
-	/*rtl:ignore*/
-	padding-right: 15px !important;
-}
-
-.padding-right-default {
-	/*rtl:ignore*/
-	padding-right: 30px !important;
-}
-
-.padding-bottom-none {
-	padding-bottom: 0 !important;
-}
-
-.padding-bottom-half {
-	padding-bottom: 15px !important;
-}
-
-.padding-bottom-default {
-	padding-bottom: 30px !important;
-}
-
-.padding-left-none {
-	/*rtl:ignore*/
-	padding-left: 0 !important;
-}
-
-.padding-left-half {
-	/*rtl:ignore*/
-	padding-left: 15px !important;
-}
-
-.padding-left-default {
-	/*rtl:ignore*/
-	padding-left: 30px !important;
-}
-
-/*
- * Custom gradients
-*/
 /* Category 06 contains all "bigger" components which contain elements of the previous two categories like header, footer, page template, single template, comments section, archives, ... */
 .site-header {
 	display: flex;
@@ -4120,7 +4000,7 @@ nav a {
 }
 
 .single .entry-header {
-	border-bottom: 3px solid black;
+	border-bottom: 3px solid #000000;
 	padding-bottom: 60px;
 	margin-bottom: 90px;
 }
