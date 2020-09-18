@@ -4120,7 +4120,7 @@ nav a {
 }
 
 .single .entry-header {
-	border-bottom: 3px solid black;
+	border-bottom: 3px solid #000000;
 	padding-bottom: 60px;
 	margin-bottom: 90px;
 }
