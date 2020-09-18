@@ -72,6 +72,7 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 				'caption',
 				'style',
 				'script',
+				'navigation-widgets',
 			)
 		);
 
