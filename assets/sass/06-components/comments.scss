@@ -114,22 +114,16 @@
 			font-weight: normal;
 			font-size: var(--global--font-size-xxl);
 			hyphens: auto;
-			padding-left: 85px;
 			word-wrap: break-word;
 			word-break: break-word;
 		}
 
-		.avatar {
-			border-radius: 50%;
-			position: absolute;
-			top: 13px;
-		}
 	}
 
 	.comment-metadata {
 		color: var(--global--color-primary);
 		font-size: var(--global--font-size-sm);
-		padding: 8px 0 9px 85px;
+		padding: 8px 0 9px 0;
 
 		.edit-link {
 			margin-left: var(--global--spacing-horizontal);
@@ -161,6 +155,23 @@
 			max-width: inherit;
 		}
 	}
+}
+
+.show-avatars {
+	.avatar {
+		border-radius: 50%;
+		position: absolute;
+		top: 13px;
+	}
+
+	.fn {
+		padding-left: 85px;
+	}
+
+	.comment-metadata {
+		padding: 8px 0 9px 85px;
+	}
+
 }
 
 .reply {

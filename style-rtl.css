@@ -3239,21 +3239,14 @@ h2.page-title {
 	font-weight: normal;
 	font-size: var(--global--font-size-xxl);
 	hyphens: auto;
-	padding-right: 85px;
 	word-wrap: break-word;
 	word-break: break-word;
-}
-
-.comment-meta .comment-author .avatar {
-	border-radius: 50%;
-	position: absolute;
-	top: 13px;
 }
 
 .comment-meta .comment-metadata {
 	color: var(--global--color-primary);
 	font-size: var(--global--font-size-sm);
-	padding: 8px 85px 9px 0;
+	padding: 8px 0 9px 0;
 }
 
 .comment-meta .comment-metadata .edit-link {
@@ -3284,6 +3277,20 @@ h2.page-title {
 	.comment-meta .comment-author {
 		max-width: inherit;
 	}
+}
+
+.show-avatars .avatar {
+	border-radius: 50%;
+	position: absolute;
+	top: 13px;
+}
+
+.show-avatars .fn {
+	padding-right: 85px;
+}
+
+.show-avatars .comment-metadata {
+	padding: 8px 85px 9px 0;
 }
 
 .reply {
@@ -4066,7 +4073,7 @@ h2.page-title {
 	color: var(--global--color-white);
 }
 
-.has-dark-background-gray-color[class] {
+.has-dark-gray-background-color[class] {
 	background-color: var(--global--color-dark-gray);
 	color: var(--global--color-white);
 }

@@ -3264,21 +3264,14 @@ h2.page-title {
 	font-weight: normal;
 	font-size: var(--global--font-size-xxl);
 	hyphens: auto;
-	padding-left: 85px;
 	word-wrap: break-word;
 	word-break: break-word;
-}
-
-.comment-meta .comment-author .avatar {
-	border-radius: 50%;
-	position: absolute;
-	top: 13px;
 }
 
 .comment-meta .comment-metadata {
 	color: var(--global--color-primary);
 	font-size: var(--global--font-size-sm);
-	padding: 8px 0 9px 85px;
+	padding: 8px 0 9px 0;
 }
 
 .comment-meta .comment-metadata .edit-link {
@@ -3309,6 +3302,20 @@ h2.page-title {
 	.comment-meta .comment-author {
 		max-width: inherit;
 	}
+}
+
+.show-avatars .avatar {
+	border-radius: 50%;
+	position: absolute;
+	top: 13px;
+}
+
+.show-avatars .fn {
+	padding-left: 85px;
+}
+
+.show-avatars .comment-metadata {
+	padding: 8px 0 9px 85px;
 }
 
 .reply {
