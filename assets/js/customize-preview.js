@@ -2,9 +2,9 @@
 
     /**
      * Get luminance from a HEX color.
-     * 
+     *
      * @param {string} hex - The hex color.
-     * 
+     *
      * @return {number}
      */
     function twentytwentyoneGetHexLum( hex ) {
@@ -14,9 +14,9 @@
 
     /**
      * Get RGB from HEX.
-     * 
+     *
      * @param {string} hex - The hex color.
-     * 
+     *
      * @return {Object} - Returns an object {r, g, b}
      */
     function twentytwentyoneGetRgbFromHex( hex ) {
@@ -40,7 +40,7 @@
 	api( 'background_color', function( value ) {
 		value.bind( function( to ) {
             var lum = twentytwentyoneGetHexLum( to ),
-                textColor = 127 < lum ? '#222' : '#fff';
+                textColor = 127 < lum ? '#000' : '#fff';
 
             document.documentElement.style.setProperty( '--global--color-primary', textColor );
             document.documentElement.style.setProperty( '--global--color-secondary', textColor );
