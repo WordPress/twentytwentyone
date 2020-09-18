@@ -671,21 +671,6 @@ template {
 	margin-left: auto;
 	margin-right: auto;
 }
-@media only screen and (min-width: 482px){
-	.default-max-width{
-	max-width: 452px;
-	}
-}
-@media only screen and (min-width: 592px){
-	.default-max-width{
-	max-width: 452px;
-	}
-}
-@media only screen and (min-width: 652px){
-	.default-max-width{
-	max-width: 562px;
-	}
-}
 @media only screen and (min-width: 822px){
 	.default-max-width{
 	max-width: 622px;
@@ -700,21 +685,6 @@ hr.wp-block-separator.is-style-wide {
 	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-}
-@media only screen and (min-width: 482px){
-	hr.wp-block-separator.is-style-wide{
-	max-width: 452px;
-	}
-}
-@media only screen and (min-width: 592px){
-	hr.wp-block-separator.is-style-wide{
-	max-width: 452px;
-	}
-}
-@media only screen and (min-width: 652px){
-	hr.wp-block-separator.is-style-wide{
-	max-width: 562px;
-	}
 }
 @media only screen and (min-width: 822px){
 	hr.wp-block-separator.is-style-wide{
@@ -731,21 +701,6 @@ hr.wp-block-separator.is-style-wide {
 	margin-left: auto;
 	margin-right: auto;
 }
-@media only screen and (min-width: 482px){
-	.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce){
-	max-width: 452px;
-	}
-}
-@media only screen and (min-width: 592px){
-	.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce){
-	max-width: 452px;
-	}
-}
-@media only screen and (min-width: 652px){
-	.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce){
-	max-width: 562px;
-	}
-}
 @media only screen and (min-width: 822px){
 	.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce){
 	max-width: 622px;
@@ -760,21 +715,6 @@ hr.wp-block-separator.is-style-wide {
 	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-}
-@media only screen and (min-width: 482px){
-	*[class*="inner-container"] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce){
-	max-width: 452px;
-	}
-}
-@media only screen and (min-width: 592px){
-	*[class*="inner-container"] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce){
-	max-width: 452px;
-	}
-}
-@media only screen and (min-width: 652px){
-	*[class*="inner-container"] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce){
-	max-width: 562px;
-	}
 }
 @media only screen and (min-width: 822px){
 	*[class*="inner-container"] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce){
@@ -791,21 +731,6 @@ hr.wp-block-separator.is-style-wide {
 	margin-left: auto;
 	margin-right: auto;
 }
-@media only screen and (min-width: 482px){
-	.entry-content .wp-audio-shortcode{
-	max-width: 452px;
-	}
-}
-@media only screen and (min-width: 592px){
-	.entry-content .wp-audio-shortcode{
-	max-width: 452px;
-	}
-}
-@media only screen and (min-width: 652px){
-	.entry-content .wp-audio-shortcode{
-	max-width: 562px;
-	}
-}
 @media only screen and (min-width: 822px){
 	.entry-content .wp-audio-shortcode{
 	max-width: 622px;
@@ -820,21 +745,6 @@ hr.wp-block-separator.is-style-wide {
 	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-}
-@media only screen and (min-width: 482px){
-	.post-thumbnail{
-	max-width: 452px;
-	}
-}
-@media only screen and (min-width: 592px){
-	.post-thumbnail{
-	max-width: 452px;
-	}
-}
-@media only screen and (min-width: 652px){
-	.post-thumbnail{
-	max-width: 562px;
-	}
 }
 @media only screen and (min-width: 822px){
 	.post-thumbnail{
@@ -853,24 +763,6 @@ hr.wp-block-separator.is-style-wide {
 	margin-right: auto;
 }
 
-@media only screen and (min-width: 482px){
-	.wide-max-width{
-	max-width: 452px;
-	}
-}
-
-@media only screen and (min-width: 592px){
-	.wide-max-width{
-	max-width: 562px;
-	}
-}
-
-@media only screen and (min-width: 652px){
-	.wide-max-width{
-	max-width: 622px;
-	}
-}
-
 @media only screen and (min-width: 822px){
 	.wide-max-width{
 	max-width: 792px;
@@ -887,24 +779,6 @@ hr.wp-block-separator.is-style-wide {
 	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-@media only screen and (min-width: 482px){
-	.alignwide{
-	max-width: 452px;
-	}
-}
-
-@media only screen and (min-width: 592px){
-	.alignwide{
-	max-width: 562px;
-	}
-}
-
-@media only screen and (min-width: 652px){
-	.alignwide{
-	max-width: 622px;
-	}
 }
 
 @media only screen and (min-width: 822px){
@@ -947,21 +821,21 @@ hr.wp-block-separator.is-style-wide {
 	margin-right: auto;
 }
 
-@media only screen and (min-width: 482px) {
+@media only screen and (min-width: 1024px) {
 	.full-max-width {
-		max-width: 100%;
+		max-width: calc(100% - 200px);
 		width: auto;
 		margin-left: auto;
 		margin-right: auto;
 	}
 	.alignfull {
-		max-width: 100%;
+		max-width: calc(100% - 200px);
 		width: auto;
 		margin-left: auto;
 		margin-right: auto;
 	}
 	.singular .post-thumbnail {
-		max-width: 100%;
+		max-width: calc(100% - 200px);
 		width: auto;
 		margin-left: auto;
 		margin-right: auto;
@@ -973,24 +847,6 @@ hr.wp-block-separator.is-style-wide {
 	margin-right: auto;
 	width: 100%;
 	max-width: 100%;
-}
-
-@media only screen and (min-width: 482px){
-	.alignwide [class*="inner-container"] > .alignwide{
-	width: 452px;
-	}
-}
-
-@media only screen and (min-width: 592px){
-	.alignwide [class*="inner-container"] > .alignwide{
-	width: 562px;
-	}
-}
-
-@media only screen and (min-width: 652px){
-	.alignwide [class*="inner-container"] > .alignwide{
-	width: 622px;
-	}
 }
 
 @media only screen and (min-width: 822px){
@@ -1010,24 +866,6 @@ hr.wp-block-separator.is-style-wide {
 	margin-right: auto;
 	width: 100%;
 	max-width: 100%;
-}
-
-@media only screen and (min-width: 482px){
-	.alignfull [class*="inner-container"] > .alignwide{
-	width: 452px;
-	}
-}
-
-@media only screen and (min-width: 592px){
-	.alignfull [class*="inner-container"] > .alignwide{
-	width: 562px;
-	}
-}
-
-@media only screen and (min-width: 652px){
-	.alignfull [class*="inner-container"] > .alignwide{
-	width: 622px;
-	}
 }
 
 @media only screen and (min-width: 822px){
@@ -1068,23 +906,23 @@ hr.wp-block-separator.is-style-wide {
 @media only screen and (min-width: 482px) {
 	.entry-content > .alignleft {
 		/*rtl:ignore*/
-		margin-left: calc(50vw - 226px);
+		margin-left: calc(50vw - 50%);
 		/*rtl:ignore*/
 		margin-right: 15px;
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignleft{
-		margin-left: calc(50vw - 226px);
+		margin-left: calc(50vw - 50%);
 		}
 	}
 	@media only screen and (min-width: 592px){
 		.entry-content > .alignleft{
-		margin-left: calc(50vw - 226px);
+		margin-left: calc(50vw - 50%);
 		}
 	}
 	@media only screen and (min-width: 652px){
 		.entry-content > .alignleft{
-		margin-left: calc(50vw - 281px);
+		margin-left: calc(50vw - 50%);
 		}
 	}
 	@media only screen and (min-width: 822px){
@@ -1095,21 +933,6 @@ hr.wp-block-separator.is-style-wide {
 	@media only screen and (min-width: 1024px){
 		.entry-content > .alignleft{
 		margin-left: calc(50vw - 311px);
-		}
-	}
-	@media only screen and (min-width: 482px){
-		.entry-content > .alignleft{
-		margin-left: calc(50vw - 226px);
-		}
-	}
-	@media only screen and (min-width: 592px){
-		.entry-content > .alignleft{
-		margin-left: calc(50vw - 226px);
-		}
-	}
-	@media only screen and (min-width: 652px){
-		.entry-content > .alignleft{
-		margin-left: calc(50vw - 281px);
 		}
 	}
 	@media only screen and (min-width: 822px){
@@ -1136,21 +959,21 @@ hr.wp-block-separator.is-style-wide {
 		/*rtl:ignore*/
 		margin-left: 15px;
 		/*rtl:ignore*/
-		margin-right: calc(50vw - 226px);
+		margin-right: calc(50vw - 50%);
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignright{
-		margin-right: calc(50vw - 226px);
+		margin-right: calc(50vw - 50%);
 		}
 	}
 	@media only screen and (min-width: 592px){
 		.entry-content > .alignright{
-		margin-right: calc(50vw - 226px);
+		margin-right: calc(50vw - 50%);
 		}
 	}
 	@media only screen and (min-width: 652px){
 		.entry-content > .alignright{
-		margin-right: calc(50vw - 281px);
+		margin-right: calc(50vw - 50%);
 		}
 	}
 	@media only screen and (min-width: 822px){
@@ -1161,21 +984,6 @@ hr.wp-block-separator.is-style-wide {
 	@media only screen and (min-width: 1024px){
 		.entry-content > .alignright{
 		margin-right: calc(50vw - 311px);
-		}
-	}
-	@media only screen and (min-width: 482px){
-		.entry-content > .alignright{
-		margin-right: calc(50vw - 226px);
-		}
-	}
-	@media only screen and (min-width: 592px){
-		.entry-content > .alignright{
-		margin-right: calc(50vw - 226px);
-		}
-	}
-	@media only screen and (min-width: 652px){
-		.entry-content > .alignright{
-		margin-right: calc(50vw - 281px);
 		}
 	}
 	@media only screen and (min-width: 822px){
@@ -1221,11 +1029,8 @@ hr.wp-block-separator.is-style-wide {
 	margin-right: auto;
 }
 
-@media only screen and (min-width: 482px) {
+@media only screen and (min-width: 822px) {
 	.site-header {
-		padding: 50px 100px;
-	}
-	.site-main {
 		padding: 50px 100px;
 	}
 	.site-footer {
@@ -3108,24 +2913,6 @@ p.has-text-color a {
 	max-width: 100%;
 }
 
-@media only screen and (min-width: 482px){
-	.wp-block-pullquote.alignwide > p{
-	max-width: 452px;
-	}
-}
-
-@media only screen and (min-width: 592px){
-	.wp-block-pullquote.alignwide > p{
-	max-width: 562px;
-	}
-}
-
-@media only screen and (min-width: 652px){
-	.wp-block-pullquote.alignwide > p{
-	max-width: 622px;
-	}
-}
-
 @media only screen and (min-width: 822px){
 	.wp-block-pullquote.alignwide > p{
 	max-width: 792px;
@@ -3140,24 +2927,6 @@ p.has-text-color a {
 
 .wp-block-pullquote.alignwide blockquote {
 	max-width: 100%;
-}
-
-@media only screen and (min-width: 482px){
-	.wp-block-pullquote.alignwide blockquote{
-	max-width: 452px;
-	}
-}
-
-@media only screen and (min-width: 592px){
-	.wp-block-pullquote.alignwide blockquote{
-	max-width: 562px;
-	}
-}
-
-@media only screen and (min-width: 652px){
-	.wp-block-pullquote.alignwide blockquote{
-	max-width: 622px;
-	}
 }
 
 @media only screen and (min-width: 822px){
@@ -3358,24 +3127,6 @@ p.has-text-color a {
 	max-width: 100%;
 }
 
-@media only screen and (min-width: 482px){
-	.wp-block-search{
-	max-width: 452px;
-	}
-}
-
-@media only screen and (min-width: 592px){
-	.wp-block-search{
-	max-width: 452px;
-	}
-}
-
-@media only screen and (min-width: 652px){
-	.wp-block-search{
-	max-width: 562px;
-	}
-}
-
 @media only screen and (min-width: 822px){
 	.wp-block-search{
 	max-width: 622px;
@@ -3544,24 +3295,6 @@ table th {
 	max-width: 100%;
 }
 
-@media only screen and (min-width: 482px){
-	.entry-content > .alignleft{
-	max-width: 452px;
-	}
-}
-
-@media only screen and (min-width: 592px){
-	.entry-content > .alignleft{
-	max-width: 452px;
-	}
-}
-
-@media only screen and (min-width: 652px){
-	.entry-content > .alignleft{
-	max-width: 562px;
-	}
-}
-
 @media only screen and (min-width: 822px){
 	.entry-content > .alignleft{
 	max-width: 622px;
@@ -3600,24 +3333,6 @@ table th {
 
 .entry-content > .alignright {
 	max-width: 100%;
-}
-
-@media only screen and (min-width: 482px){
-	.entry-content > .alignright{
-	max-width: 452px;
-	}
-}
-
-@media only screen and (min-width: 592px){
-	.entry-content > .alignright{
-	max-width: 452px;
-	}
-}
-
-@media only screen and (min-width: 652px){
-	.entry-content > .alignright{
-	max-width: 562px;
-	}
 }
 
 @media only screen and (min-width: 822px){
@@ -4187,21 +3902,6 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .author-bio {
 	font-size: 1rem;
 	max-width: 100%;
-}
-@media only screen and (min-width: 482px){
-	.author-bio{
-	max-width: 452px;
-	}
-}
-@media only screen and (min-width: 592px){
-	.author-bio{
-	max-width: 452px;
-	}
-}
-@media only screen and (min-width: 652px){
-	.author-bio{
-	max-width: 562px;
-	}
 }
 @media only screen and (min-width: 822px){
 	.author-bio{
@@ -5183,24 +4883,6 @@ h2.page-title {
 	display: flex;
 	margin: auto;
 	max-width: 100%;
-}
-
-@media only screen and (min-width: 482px){
-	.search-form{
-	max-width: 452px;
-	}
-}
-
-@media only screen and (min-width: 592px){
-	.search-form{
-	max-width: 452px;
-	}
-}
-
-@media only screen and (min-width: 652px){
-	.search-form{
-	max-width: 562px;
-	}
 }
 
 @media only screen and (min-width: 822px){

@@ -86,15 +86,12 @@ $breakpoint_xxl: 1024px;
 	--responsive--aligndefault-width: 100%;
 	--responsive--alignwide-width: 100%;
 	--responsive--alignfull-width: 100%;
-	--responsive--alignwide-width-multiplier: calc(16 * var(--global--spacing-horizontal));
 	--responsive--alignright-margin: var(--global--spacing-horizontal);
 	--responsive--alignleft-margin: var(--global--spacing-horizontal);
 }
 
 @include media(mobile) {
 	:root {
-		--responsive--aligndefault-width: calc(#{$breakpoint_sm} - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(#{$breakpoint_sm} - var(--responsive--spacing-horizontal));
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
@@ -102,8 +99,6 @@ $breakpoint_xxl: 1024px;
 
 @include media(tablet) {
 	:root {
-		--responsive--aligndefault-width: calc(#{$breakpoint_sm} - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(#{$breakpoint_md} - var(--responsive--spacing-horizontal));
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
@@ -111,8 +106,6 @@ $breakpoint_xxl: 1024px;
 
 @include media(laptop) {
 	:root {
-		--responsive--aligndefault-width: calc(#{$breakpoint_md} - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(#{$breakpoint_lg} - var(--responsive--spacing-horizontal));
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
@@ -158,9 +151,9 @@ $breakpoint_xxl: 1024px;
 	margin-right: auto;
 }
 
-@include media(mobile) {
+@include media(wide) {
 	%responsive-alignfull-width {
-		max-width: var(--responsive--alignfull-width);
+		max-width: calc( var(--responsive--alignfull-width) - 2 * var(--global--spacing-horizontal) / 0.15);
 		width: auto;
 		margin-left: auto;
 		margin-right: auto;

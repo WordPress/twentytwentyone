@@ -17,8 +17,11 @@
 	padding: var(--global--spacing-vertical) var(--global--spacing-horizontal);
 	margin-left: auto;
 	margin-right: auto;
+}
 
-	@include media(mobile) {
+.site-header,
+.site-footer {
+	@include media(desktop) {
 		padding: calc( 2 * var(--global--spacing-vertical) ) calc( var(--global--spacing-horizontal) / 0.15 );
 	}
 }
