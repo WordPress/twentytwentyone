@@ -1,0 +1,121 @@
+name: Continuous integration code quality checks
+
+on:
+    pull_request:
+        branches: [trunk]
+    push:
+        branches: [trunk]
+
+jobs:
+    lint:
+        name: Parallel lint on PHP ${{ matrix.php }}
+        runs-on: ubuntu-latest
+        strategy:
+            fail-fast: false
+            matrix:
+                php: [5.6, 7.0, 7.1, 7.2, 7.3, 7.4]
+
+        steps:
+            # Checkout repository
+            - name: Checkout
+              uses: actions/checkout@v2
+
+            # Setup PHP versions, run checks
+            - name: PHP setup
+              uses: shivammathur/setup-php@v2
+              with:
+              php-version: ${{ matrix.php }}
+
+            - name: Get composer cache directory
+              id: composer-cache
+              run: |
+                echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+            - name: Cache composer dependencies
+              uses: actions/cache@v1
+              with:
+              path: ${{ steps.composer-cache.outputs.dir }}
+              key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+              restore-keys: |
+                ${{ runner.os }}-composer-
+
+            - name: Install composer packages
+              run: composer install --no-progress
+
+            - name: Check for PHP errors
+              run: composer lint
+
+
+    phpcs_check:
+        name: PHPCS check on PHP ${{ matrix.php }}
+        runs-on: ubuntu-latest
+        strategy:
+            fail-fast: false
+            matrix:
+                php: [5.6, 7.0, 7.1, 7.2, 7.3, 7.4]
+
+        steps:
+            # Checkout repository
+            - name: Checkout
+              uses: actions/checkout@v2
+
+            # Setup PHP versions, run checks
+            - name: PHP setup
+              uses: shivammathur/setup-php@v2
+              with:
+                php-version: ${{ matrix.php }}
+
+            - name: Get composer cache directory
+              id: composer-cache
+              run: |
+                echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+            - name: Cache composer dependencies
+              uses: actions/cache@v1
+              with:
+                path: ${{ steps.composer-cache.outputs.dir }}
+                key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+                restore-keys: |
+                  ${{ runner.os }}-composer-
+
+            - name: Install composer packages
+              run: composer install --no-progress
+
+            - name: Check coding standards using PHPCS
+              run: composer standards:check -- --runtime-set testVersion ${{ matrix.php }}-
+
+    phpstan:
+        name: PHPStan check on PHP ${{ matrix.php }}
+        runs-on: ubuntu-latest
+        strategy:
+            fail-fast: false
+            matrix:
+                php: [5.6, 7.0, 7.1, 7.2, 7.3, 7.4]
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+
+            - name: PHP setup
+              uses: shivammathur/setup-php@v2
+              with:
+                php-version: ${{ matrix.php }}
+
+            - name: Get composer cache directory
+              id: composer-cache
+              run: |
+                echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+            - name: Cache composer dependencies
+              uses: actions/cache@v1
+              with:
+                path: ${{ steps.composer-cache.outputs.dir }}
+                key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+                restore-keys: |
+                  ${{ runner.os }}-composer-
+
+            - name: Install composer packages
+              run: composer install --no-progress
+
+            - name: Analyse code using phpstan
+              run: composer analyze
