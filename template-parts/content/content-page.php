@@ -33,9 +33,6 @@
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer default-max-width">
 			<?php
-
-			twenty_twenty_one_posted_by();
-
 			edit_post_link(
 				sprintf(
 					wp_kses(

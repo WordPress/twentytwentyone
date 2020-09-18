@@ -7,9 +7,8 @@
 .editor-post-title__block .editor-post-title__input {
 	color: var(--global--color-secondary);
 	font-family: var(--heading--font-family);
-	font-weight: var(--heading--font-weight);
-	font-size: var(--heading--font-size-h2);
-	letter-spacing: var(--heading--letter-spacing-h2);
+	font-weight: var(--heading--font-weight-page-title);
+	font-size: var(--entry-header--font-size);
 	line-height: var(--heading--line-height);
 }
 
@@ -105,8 +104,6 @@
  * Spacing Overrides
  */
 
- @import "spacing-overrides";
-
 [data-block] {
 	margin-top: var(--global--spacing-vertical);
 	margin-bottom: var(--global--spacing-vertical);
@@ -120,11 +117,6 @@
 		margin-bottom: 0;
 	}
 }
-
-/* 
- * Custom gradients 
-*/
-
 
 /* Block Alignments */
 .wp-block {

@@ -65,16 +65,13 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	/* Headings */
 	/* Block: Latest posts */
 	/* Colors */
-	/* Naming? */
+	/* white 50% opacity used in form fields.*/
 	/* Body text color, site title, footer text color. */
 	/* Headings */
 	/* Mint, default body background */
 	/* Used for borders (separators) */
-	/* white 50% opacity used in form fields.*/
-	/* Used for borders (separators) */
 	/* Spacing */
 	/* Elevation */
-	/* Other */
 	/* Forms */
 	/* Cover block */
 	/* Buttons */
@@ -104,7 +101,7 @@ button {
 	cursor: pointer;
 	font-weight: normal;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1em;
+	font-size: 1.25rem;
 	background-color: #39414D;
 	border-radius: 4px;
 	border-width: 0;
@@ -117,7 +114,7 @@ button {
 	cursor: pointer;
 	font-weight: normal;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1em;
+	font-size: 1.25rem;
 	background-color: #39414D;
 	border-radius: 4px;
 	border-width: 0;
@@ -130,7 +127,7 @@ input[type="submit"] {
 	cursor: pointer;
 	font-weight: normal;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1em;
+	font-size: 1.25rem;
 	background-color: #39414D;
 	border-radius: 4px;
 	border-width: 0;
@@ -143,7 +140,7 @@ input[type="submit"] {
 	cursor: pointer;
 	font-weight: normal;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1em;
+	font-size: 1.25rem;
 	background-color: #39414D;
 	border-radius: 4px;
 	border-width: 0;
@@ -156,7 +153,7 @@ input[type="submit"] {
 	cursor: pointer;
 	font-weight: normal;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1em;
+	font-size: 1.25rem;
 	background-color: #39414D;
 	border-radius: 4px;
 	border-width: 0;
@@ -1331,10 +1328,6 @@ hr.wp-block-separator.is-style-wide {
 	margin-top: 17px;
 	margin-bottom: 17px;
 }
-.widget-area > * {
-	margin-top: 17px;
-	margin-bottom: 17px;
-}
 
 @media only screen and (min-width: 482px) {
 	.site-footer > * {
@@ -1361,10 +1354,6 @@ hr.wp-block-separator.is-style-wide {
 		margin-top: 25px;
 		margin-bottom: 25px;
 	}
-	.widget-area > * {
-		margin-top: 25px;
-		margin-bottom: 25px;
-	}
 }
 
 .site-footer > *:first-child,
@@ -1372,8 +1361,7 @@ hr.wp-block-separator.is-style-wide {
 .site-main > .not-found > *:first-child,
 .entry-content > *:first-child,
 [class*="inner-container"] > *:first-child,
-.wp-block-template-part > *:first-child,
-.widget-area > *:first-child {
+.wp-block-template-part > *:first-child {
 	margin-top: 0;
 }
 
@@ -1382,9 +1370,20 @@ hr.wp-block-separator.is-style-wide {
 .site-main > .not-found > *:last-child,
 .entry-content > *:last-child,
 [class*="inner-container"] > *:last-child,
-.wp-block-template-part > *:last-child,
-.widget-area > *:last-child {
+.wp-block-template-part > *:last-child {
 	margin-bottom: 0;
+}
+
+.widget-area > * {
+	margin-top: 17px;
+	margin-bottom: 17px;
+}
+
+@media only screen and (min-width: 482px) {
+	.widget-area > * {
+		margin-top: 25px;
+		margin-bottom: 25px;
+	}
 }
 
 /*
@@ -1513,21 +1512,12 @@ html {
 }
 
 html {
-	font-size: 15px;
-	/* 15px; */
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	line-height: 1.7;
 }
 
-@media only screen and (min-width: 482px) {
-	html {
-		font-size: 18px;
-	}
-}
-
 body {
-	font-size: 1em;
-	/* 1em; */
+	font-size: 1.25rem;
 	font-weight: normal;
 	color: #28303D;
 	text-align: left;
@@ -1625,20 +1615,20 @@ blockquote {
 }
 
 blockquote p {
-	font-size: 24px;
+	font-size: 1.5rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
 
 blockquote cite {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 	letter-spacing: normal;
 }
 
 blockquote footer {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 	letter-spacing: normal;
 }
 
@@ -1660,39 +1650,39 @@ blockquote.alignleft, blockquote.alignright {
 }
 
 blockquote.alignleft p {
-	font-size: 18px;
+	font-size: 1.125rem;
 	max-width: inherit;
 	width: inherit;
 }
 
 blockquote.alignright p {
-	font-size: 18px;
+	font-size: 1.125rem;
 	max-width: inherit;
 	width: inherit;
 }
 
 blockquote.alignleft cite {
-	font-size: 14px;
+	font-size: 1rem;
 	letter-spacing: normal;
 }
 
 blockquote.alignleft footer {
-	font-size: 14px;
+	font-size: 1rem;
 	letter-spacing: normal;
 }
 
 blockquote.alignright cite {
-	font-size: 14px;
+	font-size: 1rem;
 	letter-spacing: normal;
 }
 
 blockquote.alignright footer {
-	font-size: 14px;
+	font-size: 1rem;
 	letter-spacing: normal;
 }
 
 input[type="text"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1700,7 +1690,7 @@ input[type="text"] {
 }
 
 input[type="email"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1708,7 +1698,7 @@ input[type="email"] {
 }
 
 input[type="url"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1716,7 +1706,7 @@ input[type="url"] {
 }
 
 input[type="password"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1724,7 +1714,7 @@ input[type="password"] {
 }
 
 input[type="search"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1732,7 +1722,7 @@ input[type="search"] {
 }
 
 input[type="number"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1740,7 +1730,7 @@ input[type="number"] {
 }
 
 input[type="tel"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1748,7 +1738,7 @@ input[type="tel"] {
 }
 
 input[type="range"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1756,7 +1746,7 @@ input[type="range"] {
 }
 
 input[type="date"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1764,7 +1754,7 @@ input[type="date"] {
 }
 
 input[type="month"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1772,7 +1762,7 @@ input[type="month"] {
 }
 
 input[type="week"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1780,7 +1770,7 @@ input[type="week"] {
 }
 
 input[type="time"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1788,7 +1778,7 @@ input[type="time"] {
 }
 
 input[type="datetime"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1796,7 +1786,7 @@ input[type="datetime"] {
 }
 
 input[type="datetime-local"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1804,7 +1794,7 @@ input[type="datetime-local"] {
 }
 
 input[type="color"] {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1812,7 +1802,7 @@ input[type="color"] {
 }
 
 textarea {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -1821,86 +1811,86 @@ textarea {
 
 input[type="text"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="email"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="url"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="password"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="search"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="number"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="tel"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="range"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="date"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="month"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="week"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="time"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="datetime"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="datetime-local"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 input[type="color"]:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 textarea:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 select {
-	border: 3px solid black;
+	border: 3px solid #000000;
 }
 
 textarea {
@@ -1930,7 +1920,7 @@ video {
 /* Media captions */
 figcaption {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 	line-height: 1.7;
 	margin-top: 3px;
 	margin-bottom: 5px;
@@ -1938,7 +1928,7 @@ figcaption {
 }
 .wp-caption {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 	line-height: 1.7;
 	margin-top: 3px;
 	margin-bottom: 5px;
@@ -1946,7 +1936,7 @@ figcaption {
 }
 .wp-caption-text {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 	line-height: 1.7;
 	margin-top: 3px;
 	margin-bottom: 5px;
@@ -2004,7 +1994,7 @@ i {
  */
 .wp-block-button {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1em;
+	font-size: 1.25rem;
 	font-weight: normal;
 	line-height: 1;
 }
@@ -2065,9 +2055,9 @@ i {
 
 .wp-block-code {
 	color: #28303D;
-	font-size: 16px;
+	font-size: 1.125rem;
 	padding: 5px;
-	border-color: black;
+	border-color: #000000;
 }
 
 .wp-block-code pre {
@@ -2127,7 +2117,7 @@ i {
 }
 
 .wp-block-cover {
-	background-color: white;
+	background-color: #FFFFFF;
 	min-height: 375px;
 	margin-top: inherit;
 	margin-bottom: inherit;
@@ -2136,7 +2126,7 @@ i {
 }
 
 .wp-block-cover-image {
-	background-color: white;
+	background-color: #FFFFFF;
 	min-height: 375px;
 	margin-top: inherit;
 	margin-bottom: inherit;
@@ -2214,31 +2204,31 @@ i {
 }
 
 .wp-block-cover:not([class*='background-color']) .wp-block-cover__inner-container {
-	color: black;
+	color: #000000;
 }
 
 .wp-block-cover:not([class*='background-color']) .wp-block-cover-image-text {
-	color: black;
+	color: #000000;
 }
 
 .wp-block-cover:not([class*='background-color']) .wp-block-cover-text {
-	color: black;
+	color: #000000;
 }
 
 .wp-block-cover-image:not([class*='background-color']) .wp-block-cover__inner-container {
-	color: black;
+	color: #000000;
 }
 
 .wp-block-cover-image:not([class*='background-color']) .wp-block-cover-image-text {
-	color: black;
+	color: #000000;
 }
 
 .wp-block-cover-image:not([class*='background-color']) .wp-block-cover-text {
-	color: black;
+	color: #000000;
 }
 
 .wp-block-cover h2 {
-	font-size: 32px;
+	font-size: 3rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 	max-width: inherit;
@@ -2247,7 +2237,7 @@ i {
 }
 
 .wp-block-cover-image h2 {
-	font-size: 32px;
+	font-size: 3rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 	max-width: inherit;
@@ -2384,14 +2374,14 @@ i {
 
 .wp-block-gallery .blocks-gallery-image figcaption {
 	margin: 0;
-	color: white;
-	font: 16px;
+	color: #FFFFFF;
+	font: 1.125rem;
 }
 
 .wp-block-gallery .blocks-gallery-item figcaption {
 	margin: 0;
-	color: white;
-	font: 16px;
+	color: #FFFFFF;
+	font: 1.125rem;
 }
 
 .wp-block-gallery .blocks-gallery-image {
@@ -2564,74 +2554,80 @@ h6 strong {
 }
 
 h1 {
-	font-size: 48px;
+	font-size: 6rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
 
 .h1 {
-	font-size: 48px;
+	font-size: 6rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
 
 h2 {
-	font-size: 32px;
+	font-size: 3rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
 
 .h2 {
-	font-size: 32px;
+	font-size: 3rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
 
 h3 {
-	font-size: 28px;
+	font-size: 2rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
 
 .h3 {
-	font-size: 28px;
+	font-size: 2rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
 
 h4 {
-	font-size: 24px;
+	font-size: 1.5rem;
+	font-weight: 600;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
 
 .h4 {
-	font-size: 24px;
+	font-size: 1.5rem;
+	font-weight: 600;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
 
 h5 {
-	font-size: 18px;
-	letter-spacing: normal;
+	font-size: 1.125rem;
+	font-weight: 600;
+	letter-spacing: 0.05em;
 	line-height: 1.3;
 }
 
 .h5 {
-	font-size: 18px;
-	letter-spacing: normal;
+	font-size: 1.125rem;
+	font-weight: 600;
+	letter-spacing: 0.05em;
 	line-height: 1.3;
 }
 
 h6 {
-	font-size: 1em;
-	letter-spacing: normal;
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 0.05em;
 	line-height: 1.3;
 }
 
 .h6 {
-	font-size: 1em;
-	letter-spacing: normal;
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 0.05em;
 	line-height: 1.3;
 }
 
@@ -2641,7 +2637,7 @@ h6 {
 
 .wp-block-image figcaption {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 	line-height: 1.7;
 	margin-top: 3px;
 	margin-bottom: 5px;
@@ -2678,7 +2674,7 @@ img {
 }
 
 .wp-block-latest-comments .wp-block-latest-comments__comment {
-	font-size: 16px;
+	font-size: 1.125rem;
 	line-height: 1.7;
 	/* Vertical margins logic */
 	margin-top: 25px;
@@ -2699,11 +2695,11 @@ img {
 
 .wp-block-latest-comments .wp-block-latest-comments__comment-date {
 	color: #28303D;
-	font-size: 16px;
+	font-size: 1.125rem;
 }
 
 .wp-block-latest-comments .wp-block-latest-comments__comment-excerpt p {
-	font-size: 16px;
+	font-size: 1.125rem;
 	line-height: 1.7;
 	margin: 0;
 }
@@ -2761,14 +2757,14 @@ img {
 
 .wp-block-latest-posts > li > a {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 28px;
+	font-size: 2rem;
 	font-weight: normal;
 	line-height: 1.3;
 }
 
 .wp-block-latest-posts .wp-block-latest-posts__post-date {
 	color: #28303D;
-	font-size: 16px;
+	font-size: 1.125rem;
 	line-height: 1.7;
 }
 
@@ -2779,13 +2775,13 @@ img {
 
 .wp-block-latest-posts .wp-block-latest-posts__post-excerpt {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 16px;
+	font-size: 1.125rem;
 	line-height: 1.7;
 }
 
 .wp-block-latest-posts .wp-block-latest-posts__post-full-content {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 16px;
+	font-size: 1.125rem;
 	line-height: 1.7;
 }
 
@@ -2971,7 +2967,7 @@ dd {
 
 .wp-block-navigation .wp-block-navigation-link .wp-block-navigation-link__label {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 18px;
+	font-size: 1.25rem;
 	font-weight: normal;
 }
 
@@ -3065,7 +3061,7 @@ p.has-text-color a {
 
 .wp-block-pullquote p {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 32px;
+	font-size: 3rem;
 	font-style: italic;
 	letter-spacing: normal;
 	line-height: 1.3;
@@ -3079,21 +3075,21 @@ p.has-text-color a {
 .wp-block-pullquote .wp-block-pullquote__citation {
 	color: currentColor;
 	display: block;
-	font-size: 14px;
+	font-size: 1rem;
 	text-transform: none;
 }
 
 .wp-block-pullquote cite {
 	color: currentColor;
 	display: block;
-	font-size: 14px;
+	font-size: 1rem;
 	text-transform: none;
 }
 
 .wp-block-pullquote footer {
 	color: currentColor;
 	display: block;
-	font-size: 14px;
+	font-size: 1rem;
 	text-transform: none;
 }
 
@@ -3224,24 +3220,24 @@ p.has-text-color a {
 
 .wp-block-quote p {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 18px;
+	font-size: 1.25rem;
 	font-style: normal;
 	line-height: 1.7;
 }
 
 .wp-block-quote .wp-block-quote__citation {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 }
 
 .wp-block-quote cite {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 }
 
 .wp-block-quote footer {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 }
 
 .has-background:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
@@ -3309,45 +3305,45 @@ p.has-text-color a {
 }
 
 .wp-block-quote.is-style-large p {
-	font-size: 24px;
+	font-size: 1.5rem;
 	font-style: normal;
 	line-height: 1.5;
 }
 
 .wp-block-quote.is-large p {
-	font-size: 24px;
+	font-size: 1.5rem;
 	font-style: normal;
 	line-height: 1.5;
 }
 
 .wp-block-quote.is-style-large .wp-block-quote__citation {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 }
 
 .wp-block-quote.is-style-large cite {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 }
 
 .wp-block-quote.is-style-large footer {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 }
 
 .wp-block-quote.is-large .wp-block-quote__citation {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 }
 
 .wp-block-quote.is-large cite {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 }
 
 .wp-block-quote.is-large footer {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 }
 
 .has-background:not(.has-background-background-color) .wp-block-quote,
@@ -3397,7 +3393,7 @@ p.has-text-color a {
 }
 
 .wp-block-search .wp-block-search__input {
-	border: 3px solid black;
+	border: 3px solid #000000;
 	border-radius: 0;
 	color: #28303D;
 	line-height: 1.7;
@@ -3408,19 +3404,19 @@ p.has-text-color a {
 
 .wp-block-search .wp-block-search__input:focus {
 	color: #28303D;
-	border-color: black;
+	border-color: #000000;
 }
 
 hr {
 	border-style: none;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #000000;
 	clear: both;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 hr.wp-block-separator {
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #000000;
 	/**
 		 * Block Options
 		 */
@@ -3439,10 +3435,10 @@ hr.wp-block-separator.is-style-dots.has-background:before, hr.wp-block-separator
 }
 
 hr.wp-block-separator.is-style-dots:before {
-	color: black;
-	font-size: 28px;
-	letter-spacing: 16px;
-	padding-left: 16px;
+	color: #000000;
+	font-size: 2rem;
+	letter-spacing: 1.125rem;
+	padding-left: 1.125rem;
 }
 
 .has-background:not(.has-background-background-color) hr.wp-block-separator,
@@ -3504,12 +3500,12 @@ table th {
 }
 
 .wp-block-verse {
-	font-family: 32px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 .wp-block-video figcaption {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 	margin-top: 3px;
 	margin-bottom: 5px;
 	text-align: center;
@@ -3667,107 +3663,75 @@ table th {
 	background-attachment: fixed;
 }
 
-.has-primary-color[class] {
-	color: #28303D;
+:root .is-extra-small-text {
+	font-size: 1rem;
 }
 
-.has-secondary-color[class] {
-	color: #39414D;
-}
-
-.has-white-color[class] {
-	color: white;
-}
-
-.has-black-color[class] {
-	color: black;
-}
-
-.has-background:not(.has-background-background-color) a,
-.has-background p, .has-background h1, .has-background h2, .has-background h3, .has-background h4, .has-background h5, .has-background h6 {
-	color: currentColor;
-}
-
-.has-primary-background-color[class] {
-	background-color: #28303D;
-	color: #D1E4DD;
-}
-
-.has-secondary-background-color[class] {
-	background-color: #39414D;
-	color: #D1E4DD;
-}
-
-.has-white-background-color[class] {
-	background-color: white;
-	color: #39414D;
-}
-
-.has-black-background-color[class] {
-	background-color: black;
-	color: #28303D;
-}
-
-:root .is-tiny-text {
-	font-size: 14px;
-}
-
-:root .has-tiny-font-size {
-	font-size: 14px;
+:root .has-extra-small-font-size {
+	font-size: 1rem;
 }
 
 :root .is-small-text {
-	font-size: 16px;
+	font-size: 1.125rem;
 }
 
 :root .has-small-font-size {
-	font-size: 16px;
+	font-size: 1.125rem;
 }
 
 :root .is-regular-text {
-	font-size: 1em;
+	font-size: 1.25rem;
 }
 
 :root .has-regular-font-size {
-	font-size: 1em;
+	font-size: 1.25rem;
+}
+
+:root .is-normal-font-size {
+	font-size: 1.25rem;
 }
 
 :root .has-normal-font-size {
-	font-size: 1em;
+	font-size: 1.25rem;
 }
 
 :root .has-medium-font-size {
-	font-size: 1em;
+	font-size: 1.25rem;
 }
 
 :root .is-large-text {
-	font-size: 24px;
+	font-size: 1.5rem;
 	line-height: 1.3;
 }
 
 :root .has-large-font-size {
-	font-size: 24px;
+	font-size: 1.5rem;
 	line-height: 1.3;
 }
 
 :root .is-larger-text {
-	font-size: 28px;
+	font-size: 2rem;
 	line-height: 1.3;
 }
 
 :root .has-larger-font-size {
-	font-size: 28px;
+	font-size: 2rem;
+	line-height: 1.3;
+}
+
+:root .is-huge-text {
+	font-size: 2rem;
 	line-height: 1.3;
 }
 
 :root .has-huge-font-size {
-	font-size: 28px;
+	font-size: 2rem;
 	line-height: 1.3;
 }
 
 .has-drop-cap:not(:focus)::first-letter {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 96px;
+	font-size: 12rem;
 	font-weight: normal;
 	line-height: 0.66;
 	text-transform: uppercase;
@@ -3793,126 +3757,6 @@ table th {
 	}
 }
 
-/**
- * Spacing Overrides
- */
-/*
- * Margins
- */
-.margin-top-none {
-	margin-top: 0 !important;
-}
-
-.margin-top-half {
-	margin-top: 13px !important;
-}
-
-.margin-top-default {
-	margin-top: 25px !important;
-}
-
-.margin-right-none {
-	/*rtl:ignore*/
-	margin-right: 0 !important;
-}
-
-.margin-right-half {
-	/*rtl:ignore*/
-	margin-right: 13px !important;
-}
-
-.margin-right-default {
-	/*rtl:ignore*/
-	margin-right: 25px !important;
-}
-
-.margin-bottom-none {
-	margin-bottom: 0 !important;
-}
-
-.margin-bottom-half {
-	margin-bottom: 13px !important;
-}
-
-.margin-bottom-default {
-	margin-bottom: 25px !important;
-}
-
-.margin-left-none {
-	/*rtl:ignore*/
-	margin-left: 0 !important;
-}
-
-.margin-left-half {
-	/*rtl:ignore*/
-	margin-left: 13px !important;
-}
-
-.margin-left-default {
-	/*rtl:ignore*/
-	margin-left: 25px !important;
-}
-
-/*
- * Padding
- */
-.padding-top-none {
-	padding-top: 0 !important;
-}
-
-.padding-top-half {
-	padding-top: 13px !important;
-}
-
-.padding-top-default {
-	padding-top: 25px !important;
-}
-
-.padding-right-none {
-	/*rtl:ignore*/
-	padding-right: 0 !important;
-}
-
-.padding-right-half {
-	/*rtl:ignore*/
-	padding-right: 13px !important;
-}
-
-.padding-right-default {
-	/*rtl:ignore*/
-	padding-right: 25px !important;
-}
-
-.padding-bottom-none {
-	padding-bottom: 0 !important;
-}
-
-.padding-bottom-half {
-	padding-bottom: 13px !important;
-}
-
-.padding-bottom-default {
-	padding-bottom: 25px !important;
-}
-
-.padding-left-none {
-	/*rtl:ignore*/
-	padding-left: 0 !important;
-}
-
-.padding-left-half {
-	/*rtl:ignore*/
-	padding-left: 13px !important;
-}
-
-.padding-left-default {
-	/*rtl:ignore*/
-	padding-left: 25px !important;
-}
-
-/*
- * Custom gradients
-*/
 /* Category 06 contains all "bigger" components which contain elements of the previous two categories like header, footer, page template, single template, comments section, archives, ... */
 .site-header {
 	display: flex;
@@ -3934,7 +3778,7 @@ table th {
 .site-title {
 	color: #28303D;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 24px;
+	font-size: 1.5rem;
 	letter-spacing: normal;
 	text-transform: uppercase;
 	line-height: 1.3;
@@ -3961,14 +3805,14 @@ table th {
 
 @media only screen and (min-width: 482px) {
 	.site-title {
-		font-size: 24px;
+		font-size: 1.5rem;
 	}
 }
 
 .site-description {
 	color: currentColor;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 16px;
+	font-size: 1.125rem;
 }
 
 a.custom-logo-link,
@@ -4007,15 +3851,15 @@ nav a {
 .site-footer > .site-info {
 	color: #28303D;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 16px;
+	font-size: 1rem;
 	line-height: 1.7;
-	border-top: 3px solid black;
+	border-top: 3px solid #000000;
 	padding-top: 25px;
 }
 
 .site-footer > .site-info .site-name {
 	text-transform: uppercase;
-	font-size: 24px;
+	font-size: 1.5rem;
 }
 
 .site-footer > .site-info .copyright {
@@ -4096,7 +3940,7 @@ nav a {
 
 .site-footer > .footer-navigation .footer-menu .menu-item a {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: normal;
 	color: currentColor;
 }
@@ -4114,11 +3958,23 @@ nav a {
 	color: #39414D;
 }
 
+.single .entry-header {
+	border-bottom: 3px solid #000000;
+	padding-bottom: 50px;
+	margin-bottom: 75px;
+}
+
+.single .has-post-thumbnail .entry-header {
+	border-bottom: none;
+	padding-bottom: 33px;
+	margin-bottom: 0;
+}
+
 .sticky-post {
 	color: #D1E4DD;
 	background-color: #39414D;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 14px;
+	font-size: 1rem;
 	line-height: 1;
 	padding: 1px 2px;
 }
@@ -4129,7 +3985,7 @@ nav a {
 
 .entry-title {
 	color: #28303D;
-	font-size: 48px;
+	font-size: 6rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 	overflow-wrap: break-word;
@@ -4151,14 +4007,22 @@ nav a {
 	color: currentColor;
 }
 
+.singular .entry-title {
+	font-size: 6rem;
+}
+
+h1.entry-title {
+	font-weight: 300;
+}
+
 /**
  * Entry Content
  */
 .entry-content {
-	font-family: 32px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 .entry-summary {
-	font-family: 32px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 .entry-content p {
@@ -4188,7 +4052,7 @@ nav a {
 	color: #28303D;
 	clear: both;
 	float: none;
-	font-size: 16px;
+	font-size: 1rem;
 	display: block;
 }
 
@@ -4240,7 +4104,7 @@ nav a {
 	color: #28303D;
 	clear: both;
 	float: none;
-	font-size: 16px;
+	font-size: 1rem;
 	display: block;
 }
 
@@ -4276,7 +4140,7 @@ nav a {
 	margin-top: 25px;
 	padding-top: 5px;
 	padding-bottom: 75px;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #000000;
 }
 
 body:not(.single) .site-main > article:last-of-type .entry-footer {
@@ -4288,7 +4152,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	margin-bottom: 85px;
 	padding-bottom: 0;
 	padding-top: 20px;
-	border-top: 3px solid black;
+	border-top: 3px solid #000000;
 	border-bottom: 1px solid transparent;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -4321,7 +4185,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
  */
 /* Author description */
 .author-bio {
-	font-size: 14px;
+	font-size: 1rem;
 	max-width: 100%;
 }
 @media only screen and (min-width: 482px){
@@ -4356,11 +4220,11 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .author-bio .author-title {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 28px;
+	font-size: 2rem;
 }
 
 .author-bio .author-description {
-	font-size: 18px;
+	font-size: 1rem;
 }
 
 .author-bio .avatar {
@@ -4368,11 +4232,19 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .page-title {
-	font-size: 96px;
+	font-size: 3rem;
+}
+
+h1.page-title {
+	font-weight: 300;
+}
+
+h2.page-title {
+	font-weight: 300;
 }
 
 .page-header {
-	border-bottom: 3px solid black;
+	border-bottom: 3px solid #000000;
 	padding-bottom: 50px;
 }
 
@@ -4386,6 +4258,10 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .error404 .page-header {
 	border-bottom: 3px solid transparent;
+}
+
+.error404 p {
+	font-size: 1.5rem;
 }
 
 .search-no-results .page-content {
@@ -4412,11 +4288,11 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
  * Comment Title
  */
 .comments-title {
-	font-size: 48px;
+	font-size: 3rem;
 	letter-spacing: normal;
 }
 .comment-reply-title {
-	font-size: 48px;
+	font-size: 3rem;
 	letter-spacing: normal;
 }
 
@@ -4429,7 +4305,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	border-bottom: none;
 	color: currentColor;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 14px;
+	font-size: 1rem;
 	font-style: normal;
 	font-weight: normal;
 	letter-spacing: normal;
@@ -4449,7 +4325,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .comment-list > li:not(first-child) {
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #000000;
 }
 
 .comment-list .children {
@@ -4458,7 +4334,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .comment-list .children > li {
-	border-top: 1px solid black;
+	border-top: 1px solid #000000;
 	margin-top: 25px;
 	margin-bottom: 25px;
 }
@@ -4489,7 +4365,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .comment-meta .comment-author .fn {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-weight: normal;
-	font-size: 32px;
+	font-size: 1.5rem;
 	hyphens: auto;
 	padding-left: 60px;
 	word-wrap: break-word;
@@ -4504,7 +4380,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .comment-meta .comment-metadata {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1.125rem;
 	padding-left: 60px;
 }
 
@@ -4535,7 +4411,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .reply {
-	font-size: 16px;
+	font-size: 1.125rem;
 	line-height: 1.3;
 }
 
@@ -4546,7 +4422,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	color: #D1E4DD;
 	font-weight: normal;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1em;
+	font-size: 1.25rem;
 	line-height: 1;
 	padding: 13px 15px;
 }
@@ -4659,7 +4535,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .comment-form .comment-notes {
-	font-size: 16px;
+	font-size: 1.125rem;
 }
 
 .comment-form .comment-form-url,
@@ -4674,11 +4550,11 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .comment-form .comment-form-cookies-consent > label {
-	font-size: 14px;
+	font-size: 1rem;
 }
 
 .comment-form .comment-notes {
-	font-size: 14px;
+	font-size: 1rem;
 }
 
 .comment-form > p {
@@ -4695,7 +4571,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .comment-form > p label {
 	display: block;
-	font-size: 18px;
+	font-size: 1.125rem;
 	margin-bottom: 3px;
 	width: 100%;
 	font-weight: 500;
@@ -4703,7 +4579,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .comment-form > p input[type="email"] {
 	display: block;
-	font-size: 18px;
+	font-size: 1.125rem;
 	margin-bottom: 3px;
 	width: 100%;
 	font-weight: 500;
@@ -4711,7 +4587,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .comment-form > p input[type="text"] {
 	display: block;
-	font-size: 18px;
+	font-size: 1.125rem;
 	margin-bottom: 3px;
 	width: 100%;
 	font-weight: 500;
@@ -4719,7 +4595,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .comment-form > p input[type="url"] {
 	display: block;
-	font-size: 18px;
+	font-size: 1.125rem;
 	margin-bottom: 3px;
 	width: 100%;
 	font-weight: 500;
@@ -4727,7 +4603,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .comment-form > p textarea {
 	display: block;
-	font-size: 18px;
+	font-size: 1.125rem;
 	margin-bottom: 3px;
 	width: 100%;
 	font-weight: 500;
@@ -4748,7 +4624,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .comment-navigation a {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 18px;
+	font-size: 1.25rem;
 	font-weight: 600;
 }
 
@@ -4772,7 +4648,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .menu-button-container .button {
-	font-size: 18px;
+	font-size: 1.25rem;
 	text-transform: uppercase;
 	background-color: transparent;
 	color: #28303D;
@@ -4780,7 +4656,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .primary-navigation .button {
-	font-size: 18px;
+	font-size: 1.25rem;
 	text-transform: uppercase;
 	background-color: transparent;
 	color: #28303D;
@@ -4856,7 +4732,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	top: 0;
 	right: 0;
 	color: #28303D;
-	font-size: 18px;
+	font-size: 1.25rem;
 	text-transform: uppercase;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -5050,7 +4926,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	color: currentColor;
 	display: inline;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 32px;
+	font-size: 2rem;
 	font-weight: normal;
 }
 
@@ -5058,7 +4934,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	.primary-navigation a {
 		display: block;
 		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-		font-size: 18px;
+		font-size: 1.25rem;
 		font-weight: normal;
 	}
 }
@@ -5102,13 +4978,13 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .primary-navigation .sub-menu .menu-item a {
 	display: inline;
-	font-size: 24px;
+	font-size: 1.5rem;
 	font-style: italic;
 }
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation .sub-menu .menu-item a {
-		font-size: 18px;
+		font-size: 1.25rem;
 		font-style: normal;
 	}
 }
@@ -5202,15 +5078,15 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .post-navigation .meta-nav {
-	font-size: 24px;
+	font-size: 1.5rem;
 	line-height: 1.7;
 	color: #28303D;
 }
 
 .post-navigation .post-title {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1em;
-	font-weight: 700;
+	font-size: 1.25rem;
+	font-weight: 600;
 	line-height: 1.3;
 }
 
@@ -5247,7 +5123,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .pagination {
-	border-top: 3px solid black;
+	border-top: 3px solid #000000;
 	padding-top: 25px;
 	margin: 25px 15px;
 }
@@ -5261,7 +5137,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .pagination .nav-links > * {
 	color: #28303D;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 24px;
+	font-size: 1.5rem;
 	font-weight: normal;
 	margin-left: 3px;
 	margin-right: 3px;
@@ -5289,6 +5165,10 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .pagination .nav-links > *.prev {
 	margin-right: auto;
+}
+
+.widget-area {
+	font-size: 1rem;
 }
 
 @media only screen and (min-width: 822px) {
@@ -5387,24 +5267,102 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	outline: 0;
 }
 
-/*
-See assets\sass\05-blocks\utilities\_style.scss
-*/
-/* examples 
-.has-blue-color {
-    color: var(--color-blue);
+.has-black-color[class] {
+	color: #000000;
 }
 
-.has-blue-background-color {
-    background-color: var(--color-blue);
+.has-gray-color[class] {
+	color: #39414D;
 }
-*/
+
+.has-dark-gray-color[class] {
+	color: #28303D;
+}
+
+.has-green-color[class] {
+	color: #D1E4DD;
+}
+
+.has-blue-color[class] {
+	color: #D1DFE4;
+}
+
+.has-purple-color[class] {
+	color: #D1D1E4;
+}
+
+.has-red-color[class] {
+	color: #E4D1D1;
+}
+
+.has-orange-color[class] {
+	color: #E4DAD1;
+}
+
+.has-yellow-color[class] {
+	color: #EEEADD;
+}
+
+.has-white-color[class] {
+	color: #FFFFFF;
+}
+
+.has-background:not(.has-background-background-color) a,
+.has-background p, .has-background h1, .has-background h2, .has-background h3, .has-background h4, .has-background h5, .has-background h6 {
+	color: currentColor;
+}
+
+.has-black-background-color[class] {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+.has-gray-background-color[class] {
+	background-color: #39414D;
+	color: #FFFFFF;
+}
+
+.has-dark-gray-background-color[class] {
+	background-color: #28303D;
+	color: #FFFFFF;
+}
+
+.has-green-background-color[class] {
+	background-color: #D1E4DD;
+}
+
+.has-blue-background-color[class] {
+	background-color: #D1DFE4;
+}
+
+.has-purple-background-color[class] {
+	background-color: #D1D1E4;
+}
+
+.has-red-background-color[class] {
+	background-color: #E4D1D1;
+}
+
+.has-orange-background-color[class] {
+	background-color: #E4DAD1;
+}
+
+.has-yellow-background-color[class] {
+	background-color: #EEEADD;
+}
+
+.has-white-background-color[class] {
+	background-color: #FFFFFF;
+}
+
 header * {
 	max-width: unset;
 }
+
 main * {
 	max-width: unset;
 }
+
 footer * {
 	max-width: unset;
 }

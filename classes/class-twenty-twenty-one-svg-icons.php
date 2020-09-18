@@ -27,7 +27,7 @@ class Twenty_Twenty_One_SVG_Icons {
 	 * @static
 	 * @access public
 	 *
-	 * @param string $group "ui"
+	 * @param string $group "ui".
 	 * @param string $icon  The icon.
 	 * @param int    $size  The icon-size in pixels.
 	 *
