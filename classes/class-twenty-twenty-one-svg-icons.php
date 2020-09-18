@@ -10,8 +10,8 @@
 /**
  * This class is in charge of displaying SVG icons across the site.
  *
- * Place each <svg> source on its own array key, without adding the
- * both `width` and `height` attributes, since these are added dnamically,
+ * Place each <svg> source on its own array key, without adding either
+ * the `width` or `height` attributes, since these are added dynamically,
  * before rendering the SVG code.
  *
  * All icons are assumed to have equal width and height, hence the option
