@@ -1,14 +1,94 @@
-/*
-See assets\sass\05-blocks\utilities\_style.scss
-*/
+// Gutenberg text color options
 
-/* examples 
-.has-blue-color {
-    color: var(--color-blue);
+.has-text-color {}
+
+.has-black-color[class] {
+	color: var(--global--color-black);
 }
 
-.has-blue-background-color {
-    background-color: var(--color-blue);
+.has-gray-color[class] {
+	color: var(--global--color-gray);
 }
-*/
 
+.has-dark-gray-color[class] {
+	color: var(--global--color-dark-gray);
+}
+
+.has-green-color[class] {
+	color: var(--global--color-green);
+}
+
+.has-blue-color[class] {
+	color: var(--global--color-blue);
+}
+
+.has-purple-color[class] {
+	color: var(--global--color-purple);
+}
+
+.has-red-color[class] {
+	color: var(--global--color-red);
+}
+
+.has-orange-color[class] {
+	color: var(--global--color-orange);
+}
+
+.has-yellow-color[class] {
+	color: var(--global--color-yellow);
+}
+
+.has-white-color[class] {
+	color: var(--global--color-white);
+}
+
+// Gutenberg background-color options
+.has-background {
+	&:not(.has-background-background-color) a,
+	p, h1, h2, h3, h4, h5, h6 {
+		color: currentColor;
+	}
+}
+
+.has-black-background-color[class] {
+	background-color: var(--global--color-black);
+	color: var(--global--color-white);
+}
+
+.has-gray-background-color[class] {
+	background-color: var(--global--color-gray);
+	color: var(--global--color-white);
+}
+
+.has-dark-gray-background-color[class] {
+	background-color: var(--global--color-dark-gray);
+	color: var(--global--color-white);
+}
+
+.has-green-background-color[class] {
+	background-color: var(--global--color-green);
+}
+
+.has-blue-background-color[class] {
+	background-color: var(--global--color-blue);
+}
+
+.has-purple-background-color[class] {
+	background-color: var(--global--color-purple);
+}
+
+.has-red-background-color[class] {
+	background-color: var(--global--color-red);
+}
+
+.has-orange-background-color[class] {
+	background-color: var(--global--color-orange);
+}
+
+.has-yellow-background-color[class] {
+	background-color: var(--global--color-yellow);
+}
+
+.has-white-background-color[class] {
+	background-color: var(--global--color-white);
+}

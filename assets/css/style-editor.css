@@ -35,8 +35,8 @@
 	--heading--font-size-h3: var(--global--font-size-xl);
 	--heading--font-size-h2: var(--global--font-size-xxl);
 	--heading--font-size-h1: var(--global--font-size-xxxl);
-	--heading--letter-spacing-h6: var(--global--letter-spacing);
-	--heading--letter-spacing-h5: var(--global--letter-spacing);
+	--heading--letter-spacing-h6: 0.05em;
+	--heading--letter-spacing-h5: 0.05em;
 	--heading--letter-spacing-h4: var(--global--letter-spacing);
 	--heading--letter-spacing-h3: var(--global--letter-spacing);
 	--heading--letter-spacing-h2: var(--global--letter-spacing);
@@ -48,6 +48,7 @@
 	--heading--line-height-h2: var(--heading--line-height);
 	--heading--line-height-h1: var(--heading--line-height);
 	--heading--font-weight: normal;
+	--heading--font-weight-page-title: 300;
 	--heading--font-weight-strong: 600;
 	/* Block: Latest posts */
 	--latest-posts--title-font-family: var(--heading--font-family);
@@ -57,20 +58,26 @@
 	--list--font-family: var(--global--font-secondary);
 	--definition-term--font-family: var(--global--font-primary);
 	/* Colors */
-	/* Naming? */
-	--global--color-primary: #28303D;
+	--global--color-black: #000000;
+	--global--color-dark-gray: #28303D;
+	--global--color-gray: #39414D;
+	--global--color-green: #D1E4DD;
+	--global--color-blue: #D1DFE4;
+	--global--color-purple: #D1D1E4;
+	--global--color-red: #E4D1D1;
+	--global--color-orange: #E4DAD1;
+	--global--color-yellow: #EEEADD;
+	--global--color-white: #FFFFFF;
+	--global--color-white-50: rgba(255, 255, 255, 0.5);
+	/* white 50% opacity used in form fields.*/
+	--global--color-primary: var(--global--color-dark-gray);
 	/* Body text color, site title, footer text color. */
-	--global--color-secondary: #39414D;
+	--global--color-secondary: var(--global--color-gray);
 	/* Headings */
 	--global--color-primary-hover: var( --global--color-primary );
 	--global--color-secondary-hover: var( --global--color-secondary );
-	--global--color-background: #D1E4DD;
+	--global--color-background: var(--global--color-green);
 	/* Mint, default body background */
-	--global--color-black: black;
-	/* Used for borders (separators) */
-	--global--color-white: white;
-	--global--color-white-50: rgba(255, 255, 255, 0.5);
-	/* white 50% opacity used in form fields.*/
 	--global--color-border: var( --global--color-black );
 	/* Used for borders (separators) */
 	/* Spacing */
@@ -167,7 +174,7 @@
 	--pagination--font-family: var(--global--font-secondary);
 	--pagination--font-size: var(--global--font-size-lg);
 	--pagination--font-weight: normal;
-	--pagination--font-weight-strong: 700;
+	--pagination--font-weight-strong: 600;
 	/* Comments */
 	--comments--border-color: var(--global--color-border);
 	/* Footer */
@@ -627,18 +634,21 @@ div[data-type="core/button"] {
 
 .wp-block-heading h4, h4, .h4 {
 	font-size: var(--heading--font-size-h4);
+	font-weight: var(--heading--font-weight-strong);
 	letter-spacing: var(--heading--letter-spacing-h4);
 	line-height: var(--heading--line-height-h4);
 }
 
 .wp-block-heading h5, h5, .h5 {
 	font-size: var(--heading--font-size-h5);
+	font-weight: var(--heading--font-weight-strong);
 	letter-spacing: var(--heading--letter-spacing-h5);
 	line-height: var(--global--line-height-body-h5);
 }
 
 .wp-block-heading h6, h6, .h6 {
 	font-size: var(--heading--font-size-h6);
+	font-weight: var(--heading--font-weight-strong);
 	letter-spacing: var(--heading--letter-spacing-h6);
 	line-height: var(--global--line-height-body-h6);
 }
@@ -1389,4 +1399,92 @@ body {
 button,
 a {
 	cursor: pointer;
+}
+
+.has-black-color[class] {
+	color: var(--global--color-black);
+}
+
+.has-gray-color[class] {
+	color: var(--global--color-gray);
+}
+
+.has-dark-gray-color[class] {
+	color: var(--global--color-dark-gray);
+}
+
+.has-green-color[class] {
+	color: var(--global--color-green);
+}
+
+.has-blue-color[class] {
+	color: var(--global--color-blue);
+}
+
+.has-purple-color[class] {
+	color: var(--global--color-purple);
+}
+
+.has-red-color[class] {
+	color: var(--global--color-red);
+}
+
+.has-orange-color[class] {
+	color: var(--global--color-orange);
+}
+
+.has-yellow-color[class] {
+	color: var(--global--color-yellow);
+}
+
+.has-white-color[class] {
+	color: var(--global--color-white);
+}
+
+.has-background:not(.has-background-background-color) a,
+.has-background p, .has-background h1, .has-background h2, .has-background h3, .has-background h4, .has-background h5, .has-background h6 {
+	color: currentColor;
+}
+
+.has-black-background-color[class] {
+	background-color: var(--global--color-black);
+	color: var(--global--color-white);
+}
+
+.has-gray-background-color[class] {
+	background-color: var(--global--color-gray);
+	color: var(--global--color-white);
+}
+
+.has-dark-gray-background-color[class] {
+	background-color: var(--global--color-dark-gray);
+	color: var(--global--color-white);
+}
+
+.has-green-background-color[class] {
+	background-color: var(--global--color-green);
+}
+
+.has-blue-background-color[class] {
+	background-color: var(--global--color-blue);
+}
+
+.has-purple-background-color[class] {
+	background-color: var(--global--color-purple);
+}
+
+.has-red-background-color[class] {
+	background-color: var(--global--color-red);
+}
+
+.has-orange-background-color[class] {
+	background-color: var(--global--color-orange);
+}
+
+.has-yellow-background-color[class] {
+	background-color: var(--global--color-yellow);
+}
+
+.has-white-background-color[class] {
+	background-color: var(--global--color-white);
 }
