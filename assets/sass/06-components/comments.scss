@@ -23,8 +23,8 @@
 
 .comments-title,
 .comment-reply-title {
-	font-size: var(--heading--font-size-h1);
-	letter-spacing: var(--heading--letter-spacing-h1);
+	font-size: var(--heading--font-size-h2);
+	letter-spacing: var(--heading--letter-spacing-h2);
 }
 
 .comment-reply-title {
@@ -112,7 +112,7 @@
 		.fn {
 			font-family: var(--global--font-secondary);
 			font-weight: normal;
-			font-size: var(--global--font-size-xxl);
+			font-size: var(--global--font-size-lg);
 			hyphens: auto;
 			word-wrap: break-word;
 			word-break: break-word;
@@ -291,7 +291,7 @@
 	input[type="url"],
 	textarea {
 		display: block;
-		font-size: var(--global--font-size-md);
+		font-size: var(--global--font-size-sm);
 		margin-bottom: calc( .5 * var(--global--spacing-unit) );
 		width: 100%;
 		font-weight: 500;
