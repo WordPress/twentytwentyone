@@ -54,20 +54,26 @@
 	--list--font-family: var(--global--font-secondary);
 	--definition-term--font-family: var(--global--font-primary);
 	/* Colors */
-	/* Naming? */
-	--global--color-primary: #28303D;
+	--global--color-black: #000000;
+	--global--color-dark-gray: #28303D;
+	--global--color-gray: #39414D;
+	--global--color-green: #D1E4DD;
+	--global--color-blue: #D1DFE4;
+	--global--color-purple: #D1D1E4;
+	--global--color-red: #E4D1D1;
+	--global--color-orange: #E4DAD1;
+	--global--color-yellow: #EEEADD;
+	--global--color-white: #FFFFFF;
+	--global--color-white-50: rgba(255, 255, 255, 0.5);
+	/* white 50% opacity used in form fields.*/
+	--global--color-primary: var(--global--color-dark-gray);
 	/* Body text color, site title, footer text color. */
-	--global--color-secondary: #39414D;
+	--global--color-secondary: var(--global--color-gray);
 	/* Headings */
 	--global--color-primary-hover: var( --global--color-primary );
 	--global--color-secondary-hover: var( --global--color-secondary );
-	--global--color-background: #D1E4DD;
+	--global--color-background: var(--global--color-green);
 	/* Mint, default body background */
-	--global--color-black: black;
-	/* Used for borders (separators) */
-	--global--color-white: white;
-	--global--color-white-50: rgba(255, 255, 255, 0.5);
-	/* white 50% opacity used in form fields.*/
 	--global--color-border: var( --global--color-black );
 	/* Used for borders (separators) */
 	/* Spacing */
@@ -1168,120 +1174,6 @@ pre.wp-block-verse {
 /**
  * Spacing Overrides
  */
-/*
- * Margins
- */
-.margin-top-none {
-	margin-top: 0 !important;
-}
-
-.margin-top-half {
-	margin-top: calc(0.5 * var(--global--spacing-vertical)) !important;
-}
-
-.margin-top-default {
-	margin-top: var(--global--spacing-vertical) !important;
-}
-
-.margin-right-none {
-	/*rtl:ignore*/
-	margin-right: 0 !important;
-}
-
-.margin-right-half {
-	/*rtl:ignore*/
-	margin-right: calc(0.5 * var(--global--spacing-vertical)) !important;
-}
-
-.margin-right-default {
-	/*rtl:ignore*/
-	margin-right: var(--global--spacing-vertical) !important;
-}
-
-.margin-bottom-none {
-	margin-bottom: 0 !important;
-}
-
-.margin-bottom-half {
-	margin-bottom: calc(0.5 * var(--global--spacing-vertical)) !important;
-}
-
-.margin-bottom-default {
-	margin-bottom: var(--global--spacing-vertical) !important;
-}
-
-.margin-left-none {
-	/*rtl:ignore*/
-	margin-left: 0 !important;
-}
-
-.margin-left-half {
-	/*rtl:ignore*/
-	margin-left: calc(0.5 * var(--global--spacing-vertical)) !important;
-}
-
-.margin-left-default {
-	/*rtl:ignore*/
-	margin-left: var(--global--spacing-vertical) !important;
-}
-
-/*
- * Padding
- */
-.padding-top-none {
-	padding-top: 0 !important;
-}
-
-.padding-top-half {
-	padding-top: calc(0.5 * var(--global--spacing-vertical)) !important;
-}
-
-.padding-top-default {
-	padding-top: var(--global--spacing-vertical) !important;
-}
-
-.padding-right-none {
-	/*rtl:ignore*/
-	padding-right: 0 !important;
-}
-
-.padding-right-half {
-	/*rtl:ignore*/
-	padding-right: calc(0.5 * var(--global--spacing-vertical)) !important;
-}
-
-.padding-right-default {
-	/*rtl:ignore*/
-	padding-right: var(--global--spacing-vertical) !important;
-}
-
-.padding-bottom-none {
-	padding-bottom: 0 !important;
-}
-
-.padding-bottom-half {
-	padding-bottom: calc(0.5 * var(--global--spacing-vertical)) !important;
-}
-
-.padding-bottom-default {
-	padding-bottom: var(--global--spacing-vertical) !important;
-}
-
-.padding-left-none {
-	/*rtl:ignore*/
-	padding-left: 0 !important;
-}
-
-.padding-left-half {
-	/*rtl:ignore*/
-	padding-left: calc(0.5 * var(--global--spacing-vertical)) !important;
-}
-
-.padding-left-default {
-	/*rtl:ignore*/
-	padding-left: var(--global--spacing-vertical) !important;
-}
-
 [data-block] {
 	margin-top: var(--global--spacing-vertical);
 	margin-bottom: var(--global--spacing-vertical);
@@ -1295,9 +1187,6 @@ pre.wp-block-verse {
 	margin-bottom: 0;
 }
 
-/* 
- * Custom gradients 
-*/
 /* Block Alignments */
 .wp-block {
 	max-width: var(--responsive--aligndefault-width);
@@ -1380,4 +1269,92 @@ body {
 button,
 a {
 	cursor: pointer;
+}
+
+.has-black-color[class] {
+	color: var(--global--color-black);
+}
+
+.has-gray-color[class] {
+	color: var(--global--color-gray);
+}
+
+.has-dark-gray-color[class] {
+	color: var(--global--color-dark-gray);
+}
+
+.has-green-color[class] {
+	color: var(--global--color-green);
+}
+
+.has-blue-color[class] {
+	color: var(--global--color-blue);
+}
+
+.has-purple-color[class] {
+	color: var(--global--color-purple);
+}
+
+.has-red-color[class] {
+	color: var(--global--color-red);
+}
+
+.has-orange-color[class] {
+	color: var(--global--color-orange);
+}
+
+.has-yellow-color[class] {
+	color: var(--global--color-yellow);
+}
+
+.has-white-color[class] {
+	color: var(--global--color-white);
+}
+
+.has-background:not(.has-background-background-color) a,
+.has-background p, .has-background h1, .has-background h2, .has-background h3, .has-background h4, .has-background h5, .has-background h6 {
+	color: currentColor;
+}
+
+.has-black-background-color[class] {
+	background-color: var(--global--color-black);
+	color: var(--global--color-white);
+}
+
+.has-gray-background-color[class] {
+	background-color: var(--global--color-gray);
+	color: var(--global--color-white);
+}
+
+.has-dark-gray-background-color[class] {
+	background-color: var(--global--color-dark-gray);
+	color: var(--global--color-white);
+}
+
+.has-green-background-color[class] {
+	background-color: var(--global--color-green);
+}
+
+.has-blue-background-color[class] {
+	background-color: var(--global--color-blue);
+}
+
+.has-purple-background-color[class] {
+	background-color: var(--global--color-purple);
+}
+
+.has-red-background-color[class] {
+	background-color: var(--global--color-red);
+}
+
+.has-orange-background-color[class] {
+	background-color: var(--global--color-orange);
+}
+
+.has-yellow-background-color[class] {
+	background-color: var(--global--color-yellow);
+}
+
+.has-white-background-color[class] {
+	background-color: var(--global--color-white);
 }

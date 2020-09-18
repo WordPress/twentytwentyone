@@ -64,16 +64,6 @@ if ( ! function_exists( 'twenty_twenty_one_comment_count' ) ) {
 	}
 }
 
-if ( ! function_exists( 'twenty_twenty_one_entry_meta_header' ) ) {
-	/**
-	 * Allow child themes to include meta in the header of the post
-	 * by overwriting this function.
-	 */
-	function twenty_twenty_one_entry_meta_header() {
-		/* Leaving this empty so child themes can optionally add entry-meta to the header */
-	}
-}
-
 if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
