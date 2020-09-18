@@ -14,8 +14,8 @@
 <section class="no-results not-found">
 	<header class="page-header archive-max-width">
 		<?php
-	if ( is_search() ) {
-		?>
+		if ( is_search() ) {
+			?>
 		<h1 class="page-title">
 			<?php
 			printf(
@@ -25,13 +25,13 @@
 			);
 			?>
 		</h1>
-		<?php
-	} else {
-		?>
+			<?php
+		} else {
+			?>
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'twentytwentyone' ); ?></h1>
-		<?php
-	}
-	?>
+			<?php
+		}
+		?>
 	</header><!-- .page-header -->
 
 	<div class="page-content default-max-width">
