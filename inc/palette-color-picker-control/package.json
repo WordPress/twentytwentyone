@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-color": "^2.18.1",
+    "react-dom": "^16.13.1",
+    "reactcss": "^1.2.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@wordpress/browserslist-config": "^2.7.0",
+    "babel-loader": "^8.1.0",
+    "browserslist": "^4.14.3",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development"
+  }
+}
