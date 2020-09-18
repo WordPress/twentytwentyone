@@ -78,7 +78,7 @@ jobs:
               run: composer install --no-progress
 
             - name: Check coding standards using PHPCS
-              run: composer standards:check
+              run: composer standards:check -- --runtime-set testVersion 5.6-
 
     phpstan:
         name: PHPStan check
