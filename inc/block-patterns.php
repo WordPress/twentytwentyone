@@ -12,7 +12,7 @@
 
 /**
  * Register Block Pattern Category.
- */
+
 if ( function_exists( 'register_block_pattern_category' ) ) {
 
 	register_block_pattern_category(
@@ -20,35 +20,12 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
 		array( 'label' => __( 'Twenty Twenty One', 'twentytwentyone' ) )
 	);
 }
+ */
 
 /**
  * Register Block Patterns.
- */
+
 if ( function_exists( 'register_block_pattern' ) ) {
-	register_block_pattern(
-		'twentytwentyone/group-split-background',
-		array(
-			'title'      => __( 'Group with Split Background', 'twentytwentyone' ),
-			'categories' => array( 'twentytwentyone' ),
-			'content'    => "<!-- wp:group {\"align\":\"full\",\"gradient\":\"hard-diagonal\"} -->\n<div class=\"wp-block-group alignfull has-hard-diagonal-gradient-background has-background\"><div class=\"wp-block-group__inner-container\"><!-- wp:spacer -->\n<div style=\"height:100px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:image -->\n<figure class=\"wp-block-image\"><img alt=\"\"/></figure>\n<!-- /wp:image -->\n\n<!-- wp:spacer -->\n<div style=\"height:100px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer --></div></div>\n<!-- /wp:group -->",
-		)
-	);
-	register_block_pattern(
-		'twentytwentyone/group-image-overlap',
-		array(
-			'title'      => __( 'Group with Image Overlap', 'twentytwentyone' ),
-			'categories' => array( 'twentytwentyone' ),
-			'content'    => "<!-- wp:group {\"align\":\"full\",\"className\":\"is-style-overflow\",\"gradient\":\"stripe\"} -->\n<div class=\"wp-block-group alignfull is-style-overflow has-stripe-gradient-background has-background\"><div class=\"wp-block-group__inner-container\"><!-- wp:columns {\"align\":\"wide\"} -->\n<div class=\"wp-block-columns alignwide\"><!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:image -->\n<figure class=\"wp-block-image\"><img alt=\"\"/></figure>\n<!-- /wp:image -->\n\n<!-- wp:image -->\n<figure class=\"wp-block-image\"><img alt=\"\"/></figure>\n<!-- /wp:image --></div>\n<!-- /wp:column -->\n\n<!-- wp:column {\"verticalAlignment\":\"center\"} -->\n<div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:image -->\n<figure class=\"wp-block-image\"><img alt=\"\"/></figure>\n<!-- /wp:image --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns --></div></div>\n<!-- /wp:group -->",
-		)
-	);
-	register_block_pattern(
-		'twentytwentyone/latest-posts-alternating-grid',
-		array(
-			'title'      => __( 'Alternating Grid of Latest Posts', 'twentytwentyone' ),
-			'categories' => array( 'twentytwentyone' ),
-			'content'    => '<!-- wp:latest-posts {"displayPostContent":true,"columns":5,"className":"is-style-tto-alternating-grid"} /-->',
-		)
-	);
 
 	/**
 	 * WIP
@@ -80,5 +57,6 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			',
 		)
 	);
-	*/
+
 }
+ */
