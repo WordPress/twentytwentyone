@@ -8,12 +8,10 @@ on:
 
 jobs:
     lint:
-        name: Parallel lint on PHP ${{ matrix.php }}
+        name: Parallel lint
         runs-on: ubuntu-latest
         strategy:
             fail-fast: false
-            matrix:
-                php: [5.6, 7.0, 7.1, 7.2, 7.3, 7.4]
 
         steps:
             # Checkout repository
@@ -24,7 +22,7 @@ jobs:
             - name: PHP setup
               uses: shivammathur/setup-php@v2
               with:
-                php-version: ${{ matrix.php }}
+                php-version: 7.4
 
             - name: Get composer cache directory
               id: composer-cache
@@ -40,20 +38,18 @@ jobs:
                   ${{ runner.os }}-composer-
 
             - name: Install composer packages
-              run: composer install --no-progress --ignore-platform-req=php
+              run: composer install --no-progress
 
             - name: Check for PHP errors
               run: composer lint
 
 
     phpcs_check:
-        name: PHPCS check on PHP ${{ matrix.php }}
+        name: PHPCS check
         runs-on: ubuntu-latest
         strategy:
             fail-fast: false
-            matrix:
-                php: [5.6, 7.0, 7.1, 7.2, 7.3, 7.4]
-
+            
         steps:
             # Checkout repository
             - name: Checkout
@@ -63,7 +59,7 @@ jobs:
             - name: PHP setup
               uses: shivammathur/setup-php@v2
               with:
-                php-version: ${{ matrix.php }}
+                php-version: 7.4
 
             - name: Get composer cache directory
               id: composer-cache
@@ -79,18 +75,16 @@ jobs:
                   ${{ runner.os }}-composer-
 
             - name: Install composer packages
-              run: composer install --no-progress --ignore-platform-req=php
+              run: composer install --no-progress
 
             - name: Check coding standards using PHPCS
-              run: composer standards:check -- --runtime-set testVersion ${{ matrix.php }}-
+              run: composer standards:check
 
     phpstan:
-        name: PHPStan check on PHP ${{ matrix.php }}
+        name: PHPStan check
         runs-on: ubuntu-latest
         strategy:
             fail-fast: false
-            matrix:
-                php: [7.1, 7.2, 7.3, 7.4]
 
         steps:
             - name: Checkout
@@ -99,7 +93,7 @@ jobs:
             - name: PHP setup
               uses: shivammathur/setup-php@v2
               with:
-                php-version: ${{ matrix.php }}
+                php-version: 7.4
 
             - name: Get composer cache directory
               id: composer-cache
