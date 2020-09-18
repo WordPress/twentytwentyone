@@ -40,7 +40,7 @@ jobs:
                   ${{ runner.os }}-composer-
 
             - name: Install composer packages
-              run: composer install --no-progress
+              run: composer install --no-progress --ignore-platform-req=php
 
             - name: Check for PHP errors
               run: composer lint
@@ -79,7 +79,7 @@ jobs:
                   ${{ runner.os }}-composer-
 
             - name: Install composer packages
-              run: composer install --no-progress
+              run: composer install --no-progress --ignore-platform-req=php
 
             - name: Check coding standards using PHPCS
               run: composer standards:check -- --runtime-set testVersion ${{ matrix.php }}-
@@ -90,7 +90,7 @@ jobs:
         strategy:
             fail-fast: false
             matrix:
-                php: [5.6, 7.0, 7.1, 7.2, 7.3, 7.4]
+                php: [7.1, 7.2, 7.3, 7.4]
 
         steps:
             - name: Checkout
