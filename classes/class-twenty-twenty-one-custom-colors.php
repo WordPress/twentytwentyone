@@ -31,7 +31,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	}
 
 	/**
-	 * Determine the luminance of the given color and then return #FFFFFF or #222222 so that our text is always readable.
+	 * Determine the luminance of the given color and then return #fff or #000 so that our text is always readable.
 	 *
 	 * @access public
 	 *
@@ -40,7 +40,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 * @return string (hex color)
 	 */
 	public function custom_get_readable_color( $background_color ) {
-		return ( 127 < $this->get_relative_luminance_from_hex( $background_color ) ) ? '#222222' : '#FFFFFF';
+		return ( 127 < $this->get_relative_luminance_from_hex( $background_color ) ) ? '#000' : '#fff';
 	}
 
 	/**
