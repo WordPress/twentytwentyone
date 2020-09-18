@@ -72,6 +72,7 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 				'caption',
 				'style',
 				'script',
+				'navigation-widgets',
 			)
 		);
 
@@ -160,16 +161,16 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 		);
 
 		// Editor color palette.
-		$black      = '#000000';
-		$dark_gray  = '#28303D';
-		$gray       = '#39414D';
-		$green      = '#D1E4DD';
-		$blue       = '#D1DFE4';
-		$purple     = '#D1D1E4';
-		$red        = '#E4D1D1';
-		$orange     = '#E4DAD1';
-		$yellow     = '#EEEADD';
-		$white      = '#FFFFFF';
+		$black     = '#000000';
+		$dark_gray = '#28303D';
+		$gray      = '#39414D';
+		$green     = '#D1E4DD';
+		$blue      = '#D1DFE4';
+		$purple    = '#D1D1E4';
+		$red       = '#E4D1D1';
+		$orange    = '#E4DAD1';
+		$yellow    = '#EEEADD';
+		$white     = '#FFFFFF';
 
 		add_theme_support(
 			'editor-color-palette',
@@ -223,7 +224,7 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 					'name'  => __( 'White', 'twentytwentyone' ),
 					'slug'  => 'white',
 					'color' => $white,
-				)
+				),
 			)
 		);
 
