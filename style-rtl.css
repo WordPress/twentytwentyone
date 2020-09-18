@@ -66,19 +66,12 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--global--font-ui: var(--font-base, var(--global--font-secondary));
 	/* Font Size */
 	--global--font-size-base: 1.25rem;
-	/* 20px / 16px */
 	--global--font-size-xs: 1rem;
-	/* 16px / 16px */
 	--global--font-size-sm: 1.125rem;
-	/* 18px / 16px */
 	--global--font-size-md: 1.25rem;
-	/* 20px / 16px */
 	--global--font-size-lg: 1.5rem;
-	/* 24px / 16px */
 	--global--font-size-xl: 2rem;
-	/* 40px / 16px */
 	--global--font-size-page-title: 6rem;
-	/* 96px / 16px */
 	--global--letter-spacing: normal;
 	/* Line Height */
 	--global--line-height-base: 1.0;
@@ -91,9 +84,7 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--heading--font-size-h5: var(--global--font-size-sm);
 	--heading--font-size-h4: var(--global--font-size-lg);
 	--heading--font-size-h3: 2rem;
-	/* 32px / 16px */
 	--heading--font-size-h2: 3rem;
-	/* 48px / 16px */
 	--heading--font-size-h1: var(--global--font-size-page-title);
 	--heading--letter-spacing-h6: 0.05em;
 	--heading--letter-spacing-h5: 0.05em;
@@ -181,7 +172,7 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--entry-meta--color-link: currentColor;
 	--entry-meta--color-hover: var(--global--color-primary-hover);
 	--entry-meta--font-family: var(--global--font-primary);
-	--entry-meta--font-size: var(--global--font-size-sm);
+	--entry-meta--font-size: var(--global--font-size-xs);
 	--entry-author-bio--font-family: var(--heading--font-family);
 	--entry-author-bio--font-size: var(--heading--font-size-h3);
 	/* Header */
@@ -230,7 +221,7 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--footer--color-link: var(--global--color-primary);
 	--footer--color-link-hover: var(--global--color-primary-hover);
 	--footer--font-family: var(--global--font-primary);
-	--footer--font-size: var(--global--font-size-sm);
+	--footer--font-size: var(--global--font-size-xs);
 	/* Block: Pull quote */
 	--pullquote--font-family: var(--global--font-primary);
 	--pullquote--font-size: var(--heading--font-size-h2);
@@ -3115,7 +3106,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .page-title {
-	font-size: var(--global--font-size-page-title);
+	font-size: var(--heading--font-size-h2);
 }
 
 h1.page-title,

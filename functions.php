@@ -143,7 +143,7 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 					'slug'      => 'large',
 				),
 				array(
-					'name'      => __( 'Extra large', 'twentytwentyone' ),
+					'name'      => __( 'Huge', 'twentytwentyone' ),
 					'shortName' => __( 'XL', 'twentytwentyone' ),
 					'size'      => 40,
 					'slug'      => 'huge',

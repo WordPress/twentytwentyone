@@ -172,7 +172,7 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--entry-meta--color-link: currentColor;
 	--entry-meta--color-hover: var(--global--color-primary-hover);
 	--entry-meta--font-family: var(--global--font-primary);
-	--entry-meta--font-size: var(--global--font-size-sm);
+	--entry-meta--font-size: var(--global--font-size-xs);
 	--entry-author-bio--font-family: var(--heading--font-family);
 	--entry-author-bio--font-size: var(--heading--font-size-h3);
 	/* Header */
@@ -221,7 +221,7 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--footer--color-link: var(--global--color-primary);
 	--footer--color-link-hover: var(--global--color-primary-hover);
 	--footer--font-family: var(--global--font-primary);
-	--footer--font-size: var(--global--font-size-sm);
+	--footer--font-size: var(--global--font-size-xs);
 	/* Block: Pull quote */
 	--pullquote--font-family: var(--global--font-primary);
 	--pullquote--font-size: var(--heading--font-size-h2);
@@ -3131,7 +3131,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .page-title {
-	font-size: var(--global--font-size-page-title);
+	font-size: var(--heading--font-size-h2);
 }
 
 h1.page-title,

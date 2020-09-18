@@ -4052,7 +4052,7 @@ nav a {
 .site-footer > .site-info {
 	color: #28303D;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1.125rem;
+	font-size: 1rem;
 	line-height: 1.7;
 	border-top: 3px solid black;
 	padding-top: 30px;
@@ -4143,7 +4143,7 @@ nav a {
 
 .site-footer > .footer-navigation .footer-menu .menu-item a {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1.125rem;
+	font-size: 1rem;
 	font-weight: normal;
 	color: currentColor;
 }
@@ -4243,7 +4243,7 @@ h1.entry-title {
 	color: #28303D;
 	clear: both;
 	float: none;
-	font-size: 1.125rem;
+	font-size: 1rem;
 	display: block;
 }
 
@@ -4295,7 +4295,7 @@ h1.entry-title {
 	color: #28303D;
 	clear: both;
 	float: none;
-	font-size: 1.125rem;
+	font-size: 1rem;
 	display: block;
 }
 
@@ -4423,7 +4423,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .page-title {
-	font-size: 6rem;
+	font-size: 3rem;
 }
 
 h1.page-title {
@@ -5362,7 +5362,7 @@ h2.page-title {
 }
 
 .widget-area {
-	font-size: 1.125rem;
+	font-size: 1rem;
 }
 
 @media only screen and (min-width: 822px) {
