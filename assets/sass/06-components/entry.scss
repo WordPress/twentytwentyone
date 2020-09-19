@@ -23,6 +23,10 @@
 	}
 }
 
+.singular .entry-title {
+	font-size: var(--global--font-size-page-title);
+}
+
 h1.entry-title {
 	font-weight: var(--heading--font-weight-page-title);
 }
@@ -235,7 +239,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	}
 
 	.author-description {
-		font-size: var(--global--font-size-md);
+		font-size: var(--global--font-size-xs);
 	}
 
 	.avatar {

@@ -1,9 +1,14 @@
+html {
+	font-family: var(--global--font-secondary);
+	line-height: var(--global--line-height-body);
+}
+
 body {
 	--wp--typography--line-height: var(--global--line-height-body);
 	color: var(--global--color-primary);
 	background-color: var(--global--color-background);
 	font-family: var(--global--font-secondary);
-	font-size: var(--global--font-size-root);
+	font-size: var(--global--font-size-base);
 	font-weight: normal;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
@@ -11,7 +16,7 @@ body {
 
 // Set font size of title block the same as body.
 .editor-post-title__block {
-	font-size: var(--global--font-size-root);
+	font-size: var(--entry-header--font-size);
 }
 
 // Links styles
@@ -40,7 +45,7 @@ body {
 	// If a custom link color has been assigned,
 	// switch the color of the bottom border too. 
 	.has-link-color & {
-		border-bottom: 1px solid var(--wp--style--color--link);
+		border-bottom: 1px solid var(--wp--style--color--link, --global--color-primary);
 	}
 }
 // Enforce the custom link color even if a custom background color has been set.

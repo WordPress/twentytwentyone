@@ -72,7 +72,6 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	/* Used for borders (separators) */
 	/* Spacing */
 	/* Elevation */
-	/* Other */
 	/* Forms */
 	/* Cover block */
 	/* Buttons */
@@ -102,7 +101,7 @@ button {
 	cursor: pointer;
 	font-weight: normal;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1em;
+	font-size: 1.25rem;
 	background-color: #39414D;
 	border-radius: 4px;
 	border-width: 0;
@@ -115,7 +114,7 @@ button {
 	cursor: pointer;
 	font-weight: normal;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1em;
+	font-size: 1.25rem;
 	background-color: #39414D;
 	border-radius: 4px;
 	border-width: 0;
@@ -128,7 +127,7 @@ input[type="submit"] {
 	cursor: pointer;
 	font-weight: normal;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1em;
+	font-size: 1.25rem;
 	background-color: #39414D;
 	border-radius: 4px;
 	border-width: 0;
@@ -141,7 +140,7 @@ input[type="submit"] {
 	cursor: pointer;
 	font-weight: normal;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1em;
+	font-size: 1.25rem;
 	background-color: #39414D;
 	border-radius: 4px;
 	border-width: 0;
@@ -154,7 +153,7 @@ input[type="submit"] {
 	cursor: pointer;
 	font-weight: normal;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1em;
+	font-size: 1.25rem;
 	background-color: #39414D;
 	border-radius: 4px;
 	border-width: 0;
@@ -1533,21 +1532,12 @@ html {
 }
 
 html {
-	font-size: 15px;
-	/* 15px; */
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	line-height: 1.7;
 }
 
-@media only screen and (min-width: 482px) {
-	html {
-		font-size: 18px;
-	}
-}
-
 body {
-	font-size: 1em;
-	/* 1em; */
+	font-size: 1.25rem;
 	font-weight: normal;
 	color: #28303D;
 	text-align: left;
@@ -1645,20 +1635,20 @@ blockquote {
 }
 
 blockquote p {
-	font-size: 24px;
+	font-size: 1.5rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
 
 blockquote cite {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 	letter-spacing: normal;
 }
 
 blockquote footer {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 	letter-spacing: normal;
 }
 
@@ -1680,34 +1670,34 @@ blockquote.alignleft, blockquote.alignright {
 }
 
 blockquote.alignleft p {
-	font-size: 18px;
+	font-size: 1.125rem;
 	max-width: inherit;
 	width: inherit;
 }
 
 blockquote.alignright p {
-	font-size: 18px;
+	font-size: 1.125rem;
 	max-width: inherit;
 	width: inherit;
 }
 
 blockquote.alignleft cite {
-	font-size: 14px;
+	font-size: 1rem;
 	letter-spacing: normal;
 }
 
 blockquote.alignleft footer {
-	font-size: 14px;
+	font-size: 1rem;
 	letter-spacing: normal;
 }
 
 blockquote.alignright cite {
-	font-size: 14px;
+	font-size: 1rem;
 	letter-spacing: normal;
 }
 
 blockquote.alignright footer {
-	font-size: 14px;
+	font-size: 1rem;
 	letter-spacing: normal;
 }
 
@@ -1950,7 +1940,7 @@ video {
 /* Media captions */
 figcaption {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 	line-height: 1.7;
 	margin-top: 10px;
 	margin-bottom: 20px;
@@ -1958,7 +1948,7 @@ figcaption {
 }
 .wp-caption {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 	line-height: 1.7;
 	margin-top: 10px;
 	margin-bottom: 20px;
@@ -1966,7 +1956,7 @@ figcaption {
 }
 .wp-caption-text {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 	line-height: 1.7;
 	margin-top: 10px;
 	margin-bottom: 20px;
@@ -2024,7 +2014,7 @@ i {
  */
 .wp-block-button {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1em;
+	font-size: 1.25rem;
 	font-weight: normal;
 	line-height: 1;
 }
@@ -2085,7 +2075,7 @@ i {
 
 .wp-block-code {
 	color: #28303D;
-	font-size: 16px;
+	font-size: 1.125rem;
 	padding: 20px;
 	border-color: #000000;
 }
@@ -2258,7 +2248,7 @@ i {
 }
 
 .wp-block-cover h2 {
-	font-size: 32px;
+	font-size: 3rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 	max-width: inherit;
@@ -2267,7 +2257,7 @@ i {
 }
 
 .wp-block-cover-image h2 {
-	font-size: 32px;
+	font-size: 3rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 	max-width: inherit;
@@ -2405,13 +2395,13 @@ i {
 .wp-block-gallery .blocks-gallery-image figcaption {
 	margin: 0;
 	color: #FFFFFF;
-	font: 16px;
+	font: 1.125rem;
 }
 
 .wp-block-gallery .blocks-gallery-item figcaption {
 	margin: 0;
 	color: #FFFFFF;
-	font: 16px;
+	font: 1.125rem;
 }
 
 .wp-block-gallery .blocks-gallery-image {
@@ -2584,78 +2574,78 @@ h6 strong {
 }
 
 h1 {
-	font-size: 48px;
+	font-size: 6rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
 
 .h1 {
-	font-size: 48px;
+	font-size: 6rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
 
 h2 {
-	font-size: 32px;
+	font-size: 3rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
 
 .h2 {
-	font-size: 32px;
+	font-size: 3rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
 
 h3 {
-	font-size: 28px;
+	font-size: 2rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
 
 .h3 {
-	font-size: 28px;
+	font-size: 2rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
 
 h4 {
-	font-size: 24px;
+	font-size: 1.5rem;
 	font-weight: 600;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
 
 .h4 {
-	font-size: 24px;
+	font-size: 1.5rem;
 	font-weight: 600;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
 
 h5 {
-	font-size: 18px;
+	font-size: 1.125rem;
 	font-weight: 600;
 	letter-spacing: 0.05em;
 	line-height: 1.3;
 }
 
 .h5 {
-	font-size: 18px;
+	font-size: 1.125rem;
 	font-weight: 600;
 	letter-spacing: 0.05em;
 	line-height: 1.3;
 }
 
 h6 {
-	font-size: 1em;
+	font-size: 1rem;
 	font-weight: 600;
 	letter-spacing: 0.05em;
 	line-height: 1.3;
 }
 
 .h6 {
-	font-size: 1em;
+	font-size: 1rem;
 	font-weight: 600;
 	letter-spacing: 0.05em;
 	line-height: 1.3;
@@ -2667,7 +2657,7 @@ h6 {
 
 .wp-block-image figcaption {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 	line-height: 1.7;
 	margin-top: 10px;
 	margin-bottom: 20px;
@@ -2704,7 +2694,7 @@ img {
 }
 
 .wp-block-latest-comments .wp-block-latest-comments__comment {
-	font-size: 16px;
+	font-size: 1.125rem;
 	line-height: 1.7;
 	/* Vertical margins logic */
 	margin-top: 30px;
@@ -2725,11 +2715,11 @@ img {
 
 .wp-block-latest-comments .wp-block-latest-comments__comment-date {
 	color: #28303D;
-	font-size: 16px;
+	font-size: 1.125rem;
 }
 
 .wp-block-latest-comments .wp-block-latest-comments__comment-excerpt p {
-	font-size: 16px;
+	font-size: 1.125rem;
 	line-height: 1.7;
 	margin: 0;
 }
@@ -2787,14 +2777,14 @@ img {
 
 .wp-block-latest-posts > li > a {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 28px;
+	font-size: 2rem;
 	font-weight: normal;
 	line-height: 1.3;
 }
 
 .wp-block-latest-posts .wp-block-latest-posts__post-date {
 	color: #28303D;
-	font-size: 16px;
+	font-size: 1.125rem;
 	line-height: 1.7;
 }
 
@@ -2805,13 +2795,13 @@ img {
 
 .wp-block-latest-posts .wp-block-latest-posts__post-excerpt {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 16px;
+	font-size: 1.125rem;
 	line-height: 1.7;
 }
 
 .wp-block-latest-posts .wp-block-latest-posts__post-full-content {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 16px;
+	font-size: 1.125rem;
 	line-height: 1.7;
 }
 
@@ -2997,7 +2987,7 @@ dd {
 
 .wp-block-navigation .wp-block-navigation-link .wp-block-navigation-link__label {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 18px;
+	font-size: 1.25rem;
 	font-weight: normal;
 }
 
@@ -3091,7 +3081,7 @@ p.has-text-color a {
 
 .wp-block-pullquote p {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 32px;
+	font-size: 3rem;
 	font-style: italic;
 	letter-spacing: normal;
 	line-height: 1.3;
@@ -3105,21 +3095,21 @@ p.has-text-color a {
 .wp-block-pullquote .wp-block-pullquote__citation {
 	color: currentColor;
 	display: block;
-	font-size: 14px;
+	font-size: 1rem;
 	text-transform: none;
 }
 
 .wp-block-pullquote cite {
 	color: currentColor;
 	display: block;
-	font-size: 14px;
+	font-size: 1rem;
 	text-transform: none;
 }
 
 .wp-block-pullquote footer {
 	color: currentColor;
 	display: block;
-	font-size: 14px;
+	font-size: 1rem;
 	text-transform: none;
 }
 
@@ -3250,24 +3240,24 @@ p.has-text-color a {
 
 .wp-block-quote p {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 18px;
+	font-size: 1.25rem;
 	font-style: normal;
 	line-height: 1.7;
 }
 
 .wp-block-quote .wp-block-quote__citation {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 }
 
 .wp-block-quote cite {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 }
 
 .wp-block-quote footer {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 }
 
 .has-background:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
@@ -3335,45 +3325,45 @@ p.has-text-color a {
 }
 
 .wp-block-quote.is-style-large p {
-	font-size: 24px;
+	font-size: 1.5rem;
 	font-style: normal;
 	line-height: 1.5;
 }
 
 .wp-block-quote.is-large p {
-	font-size: 24px;
+	font-size: 1.5rem;
 	font-style: normal;
 	line-height: 1.5;
 }
 
 .wp-block-quote.is-style-large .wp-block-quote__citation {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 }
 
 .wp-block-quote.is-style-large cite {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 }
 
 .wp-block-quote.is-style-large footer {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 }
 
 .wp-block-quote.is-large .wp-block-quote__citation {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 }
 
 .wp-block-quote.is-large cite {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 }
 
 .wp-block-quote.is-large footer {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 }
 
 .has-background:not(.has-background-background-color) .wp-block-quote,
@@ -3466,9 +3456,9 @@ hr.wp-block-separator.is-style-dots.has-background:before, hr.wp-block-separator
 
 hr.wp-block-separator.is-style-dots:before {
 	color: #000000;
-	font-size: 28px;
-	letter-spacing: 16px;
-	padding-left: 16px;
+	font-size: 2rem;
+	letter-spacing: 1.125rem;
+	padding-left: 1.125rem;
 }
 
 .has-background:not(.has-background-background-color) hr.wp-block-separator,
@@ -3530,12 +3520,12 @@ table th {
 }
 
 .wp-block-verse {
-	font-family: 32px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 .wp-block-video figcaption {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1rem;
 	margin-top: 10px;
 	margin-bottom: 20px;
 	text-align: center;
@@ -3693,66 +3683,75 @@ table th {
 	background-attachment: fixed;
 }
 
-:root .is-tiny-text {
-	font-size: 14px;
+:root .is-extra-small-text {
+	font-size: 1rem;
 }
 
-:root .has-tiny-font-size {
-	font-size: 14px;
+:root .has-extra-small-font-size {
+	font-size: 1rem;
 }
 
 :root .is-small-text {
-	font-size: 16px;
+	font-size: 1.125rem;
 }
 
 :root .has-small-font-size {
-	font-size: 16px;
+	font-size: 1.125rem;
 }
 
 :root .is-regular-text {
-	font-size: 1em;
+	font-size: 1.25rem;
 }
 
 :root .has-regular-font-size {
-	font-size: 1em;
+	font-size: 1.25rem;
+}
+
+:root .is-normal-font-size {
+	font-size: 1.25rem;
 }
 
 :root .has-normal-font-size {
-	font-size: 1em;
+	font-size: 1.25rem;
 }
 
 :root .has-medium-font-size {
-	font-size: 1em;
+	font-size: 1.25rem;
 }
 
 :root .is-large-text {
-	font-size: 24px;
+	font-size: 1.5rem;
 	line-height: 1.3;
 }
 
 :root .has-large-font-size {
-	font-size: 24px;
+	font-size: 1.5rem;
 	line-height: 1.3;
 }
 
 :root .is-larger-text {
-	font-size: 28px;
+	font-size: 2rem;
 	line-height: 1.3;
 }
 
 :root .has-larger-font-size {
-	font-size: 28px;
+	font-size: 2rem;
+	line-height: 1.3;
+}
+
+:root .is-huge-text {
+	font-size: 2rem;
 	line-height: 1.3;
 }
 
 :root .has-huge-font-size {
-	font-size: 28px;
+	font-size: 2rem;
 	line-height: 1.3;
 }
 
 .has-drop-cap:not(:focus)::first-letter {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 96px;
+	font-size: 12rem;
 	font-weight: normal;
 	line-height: 0.66;
 	text-transform: uppercase;
@@ -3778,126 +3777,6 @@ table th {
 	}
 }
 
-/**
- * Spacing Overrides
- */
-/*
- * Margins
- */
-.margin-top-none {
-	margin-top: 0 !important;
-}
-
-.margin-top-half {
-	margin-top: 15px !important;
-}
-
-.margin-top-default {
-	margin-top: 30px !important;
-}
-
-.margin-right-none {
-	/*rtl:ignore*/
-	margin-right: 0 !important;
-}
-
-.margin-right-half {
-	/*rtl:ignore*/
-	margin-right: 15px !important;
-}
-
-.margin-right-default {
-	/*rtl:ignore*/
-	margin-right: 30px !important;
-}
-
-.margin-bottom-none {
-	margin-bottom: 0 !important;
-}
-
-.margin-bottom-half {
-	margin-bottom: 15px !important;
-}
-
-.margin-bottom-default {
-	margin-bottom: 30px !important;
-}
-
-.margin-left-none {
-	/*rtl:ignore*/
-	margin-left: 0 !important;
-}
-
-.margin-left-half {
-	/*rtl:ignore*/
-	margin-left: 15px !important;
-}
-
-.margin-left-default {
-	/*rtl:ignore*/
-	margin-left: 30px !important;
-}
-
-/*
- * Padding
- */
-.padding-top-none {
-	padding-top: 0 !important;
-}
-
-.padding-top-half {
-	padding-top: 15px !important;
-}
-
-.padding-top-default {
-	padding-top: 30px !important;
-}
-
-.padding-right-none {
-	/*rtl:ignore*/
-	padding-right: 0 !important;
-}
-
-.padding-right-half {
-	/*rtl:ignore*/
-	padding-right: 15px !important;
-}
-
-.padding-right-default {
-	/*rtl:ignore*/
-	padding-right: 30px !important;
-}
-
-.padding-bottom-none {
-	padding-bottom: 0 !important;
-}
-
-.padding-bottom-half {
-	padding-bottom: 15px !important;
-}
-
-.padding-bottom-default {
-	padding-bottom: 30px !important;
-}
-
-.padding-left-none {
-	/*rtl:ignore*/
-	padding-left: 0 !important;
-}
-
-.padding-left-half {
-	/*rtl:ignore*/
-	padding-left: 15px !important;
-}
-
-.padding-left-default {
-	/*rtl:ignore*/
-	padding-left: 30px !important;
-}
-
-/*
- * Custom gradients
-*/
 /* Category 06 contains all "bigger" components which contain elements of the previous two categories like header, footer, page template, single template, comments section, archives, ... */
 .site-header {
 	display: flex;
@@ -3928,7 +3807,7 @@ table th {
 .site-title {
 	color: #28303D;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 24px;
+	font-size: 1.5rem;
 	letter-spacing: normal;
 	text-transform: uppercase;
 	line-height: 1.3;
@@ -3955,14 +3834,14 @@ table th {
 
 @media only screen and (min-width: 482px) {
 	.site-title {
-		font-size: 24px;
+		font-size: 1.5rem;
 	}
 }
 
 .site-description {
 	color: currentColor;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 16px;
+	font-size: 1.125rem;
 }
 
 a.custom-logo-link,
@@ -4010,7 +3889,7 @@ nav a {
 .site-footer > .site-info {
 	color: #28303D;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 16px;
+	font-size: 1rem;
 	line-height: 1.7;
 	border-top: 3px solid #000000;
 	padding-top: 30px;
@@ -4019,7 +3898,7 @@ nav a {
 
 .site-footer > .site-info .site-name {
 	text-transform: uppercase;
-	font-size: 24px;
+	font-size: 1.5rem;
 }
 
 .site-footer > .site-info .copyright {
@@ -4101,7 +3980,7 @@ nav a {
 
 .site-footer > .footer-navigation .footer-menu .menu-item a {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: normal;
 	color: currentColor;
 }
@@ -4120,7 +3999,7 @@ nav a {
 }
 
 .single .entry-header {
-	border-bottom: 3px solid black;
+	border-bottom: 3px solid #000000;
 	padding-bottom: 60px;
 	margin-bottom: 90px;
 }
@@ -4135,7 +4014,7 @@ nav a {
 	color: #D1E4DD;
 	background-color: #39414D;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 14px;
+	font-size: 1rem;
 	line-height: 1;
 	padding: 5px 7px;
 }
@@ -4146,7 +4025,7 @@ nav a {
 
 .entry-title {
 	color: #28303D;
-	font-size: 48px;
+	font-size: 6rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 	overflow-wrap: break-word;
@@ -4168,6 +4047,10 @@ nav a {
 	color: currentColor;
 }
 
+.singular .entry-title {
+	font-size: 6rem;
+}
+
 h1.entry-title {
 	font-weight: 300;
 }
@@ -4176,10 +4059,10 @@ h1.entry-title {
  * Entry Content
  */
 .entry-content {
-	font-family: 32px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 .entry-summary {
-	font-family: 32px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 .entry-content p {
@@ -4209,7 +4092,7 @@ h1.entry-title {
 	color: #28303D;
 	clear: both;
 	float: none;
-	font-size: 16px;
+	font-size: 1rem;
 	display: block;
 }
 
@@ -4261,7 +4144,7 @@ h1.entry-title {
 	color: #28303D;
 	clear: both;
 	float: none;
-	font-size: 16px;
+	font-size: 1rem;
 	display: block;
 }
 
@@ -4342,7 +4225,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
  */
 /* Author description */
 .author-bio {
-	font-size: 14px;
+	font-size: 1rem;
 	max-width: 100%;
 }
 @media only screen and (min-width: 482px){
@@ -4377,11 +4260,11 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .author-bio .author-title {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 28px;
+	font-size: 2rem;
 }
 
 .author-bio .author-description {
-	font-size: 18px;
+	font-size: 1rem;
 }
 
 .author-bio .avatar {
@@ -4389,7 +4272,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .page-title {
-	font-size: 96px;
+	font-size: 3rem;
 }
 
 h1.page-title {
@@ -4417,6 +4300,10 @@ h2.page-title {
 	border-bottom: 3px solid transparent;
 }
 
+.error404 p {
+	font-size: 1.5rem;
+}
+
 .search-no-results .page-content {
 	margin-top: 90px;
 }
@@ -4441,11 +4328,11 @@ h2.page-title {
  * Comment Title
  */
 .comments-title {
-	font-size: 48px;
+	font-size: 3rem;
 	letter-spacing: normal;
 }
 .comment-reply-title {
-	font-size: 48px;
+	font-size: 3rem;
 	letter-spacing: normal;
 }
 
@@ -4458,7 +4345,7 @@ h2.page-title {
 	border-bottom: none;
 	color: currentColor;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 14px;
+	font-size: 1rem;
 	font-style: normal;
 	font-weight: normal;
 	letter-spacing: normal;
@@ -4518,7 +4405,7 @@ h2.page-title {
 .comment-meta .comment-author .fn {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-weight: normal;
-	font-size: 32px;
+	font-size: 1.5rem;
 	hyphens: auto;
 	padding-left: 60px;
 	word-wrap: break-word;
@@ -4533,7 +4420,7 @@ h2.page-title {
 
 .comment-meta .comment-metadata {
 	color: #28303D;
-	font-size: 14px;
+	font-size: 1.125rem;
 	padding-left: 60px;
 }
 
@@ -4564,7 +4451,7 @@ h2.page-title {
 }
 
 .reply {
-	font-size: 16px;
+	font-size: 1.125rem;
 	line-height: 1.3;
 }
 
@@ -4575,7 +4462,7 @@ h2.page-title {
 	color: #D1E4DD;
 	font-weight: normal;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1em;
+	font-size: 1.25rem;
 	line-height: 1;
 	padding: 23px 25px;
 }
@@ -4688,7 +4575,7 @@ h2.page-title {
 }
 
 .comment-form .comment-notes {
-	font-size: 16px;
+	font-size: 1.125rem;
 }
 
 .comment-form .comment-form-url,
@@ -4703,11 +4590,11 @@ h2.page-title {
 }
 
 .comment-form .comment-form-cookies-consent > label {
-	font-size: 14px;
+	font-size: 1rem;
 }
 
 .comment-form .comment-notes {
-	font-size: 14px;
+	font-size: 1rem;
 }
 
 .comment-form > p {
@@ -4724,7 +4611,7 @@ h2.page-title {
 
 .comment-form > p label {
 	display: block;
-	font-size: 18px;
+	font-size: 1.125rem;
 	margin-bottom: 10px;
 	width: 100%;
 	font-weight: 500;
@@ -4732,7 +4619,7 @@ h2.page-title {
 
 .comment-form > p input[type="email"] {
 	display: block;
-	font-size: 18px;
+	font-size: 1.125rem;
 	margin-bottom: 10px;
 	width: 100%;
 	font-weight: 500;
@@ -4740,7 +4627,7 @@ h2.page-title {
 
 .comment-form > p input[type="text"] {
 	display: block;
-	font-size: 18px;
+	font-size: 1.125rem;
 	margin-bottom: 10px;
 	width: 100%;
 	font-weight: 500;
@@ -4748,7 +4635,7 @@ h2.page-title {
 
 .comment-form > p input[type="url"] {
 	display: block;
-	font-size: 18px;
+	font-size: 1.125rem;
 	margin-bottom: 10px;
 	width: 100%;
 	font-weight: 500;
@@ -4756,7 +4643,7 @@ h2.page-title {
 
 .comment-form > p textarea {
 	display: block;
-	font-size: 18px;
+	font-size: 1.125rem;
 	margin-bottom: 10px;
 	width: 100%;
 	font-weight: 500;
@@ -4777,7 +4664,7 @@ h2.page-title {
 
 .comment-navigation a {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 18px;
+	font-size: 1.25rem;
 	font-weight: 600;
 }
 
@@ -4804,7 +4691,7 @@ h2.page-title {
 }
 
 .menu-button-container .button {
-	font-size: 18px;
+	font-size: 1.25rem;
 	text-transform: uppercase;
 	background-color: transparent;
 	color: #28303D;
@@ -4812,7 +4699,7 @@ h2.page-title {
 }
 
 .primary-navigation .button {
-	font-size: 18px;
+	font-size: 1.25rem;
 	text-transform: uppercase;
 	background-color: transparent;
 	color: #28303D;
@@ -4888,7 +4775,7 @@ h2.page-title {
 	top: 0;
 	right: 0;
 	color: #28303D;
-	font-size: 18px;
+	font-size: 1.25rem;
 	text-transform: uppercase;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -5082,7 +4969,7 @@ h2.page-title {
 	color: currentColor;
 	display: inline;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 32px;
+	font-size: 2rem;
 	font-weight: normal;
 }
 
@@ -5090,7 +4977,7 @@ h2.page-title {
 	.primary-navigation a {
 		display: block;
 		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-		font-size: 18px;
+		font-size: 1.25rem;
 		font-weight: normal;
 	}
 }
@@ -5134,13 +5021,13 @@ h2.page-title {
 
 .primary-navigation .sub-menu .menu-item a {
 	display: inline;
-	font-size: 24px;
+	font-size: 1.5rem;
 	font-style: italic;
 }
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation .sub-menu .menu-item a {
-		font-size: 18px;
+		font-size: 1.25rem;
 		font-style: normal;
 	}
 }
@@ -5234,14 +5121,14 @@ h2.page-title {
 }
 
 .post-navigation .meta-nav {
-	font-size: 24px;
+	font-size: 1.5rem;
 	line-height: 1.7;
 	color: #28303D;
 }
 
 .post-navigation .post-title {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1em;
+	font-size: 1.25rem;
 	font-weight: 600;
 	line-height: 1.3;
 }
@@ -5293,7 +5180,7 @@ h2.page-title {
 .pagination .nav-links > * {
 	color: #28303D;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 24px;
+	font-size: 1.5rem;
 	font-weight: normal;
 	margin-left: 13px;
 	margin-right: 13px;
@@ -5321,6 +5208,10 @@ h2.page-title {
 
 .pagination .nav-links > *.prev {
 	margin-right: auto;
+}
+
+.widget-area {
+	font-size: 1rem;
 }
 
 @media only screen and (min-width: 822px) {
