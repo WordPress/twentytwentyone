@@ -8,7 +8,7 @@
 	color: var(--global--color-secondary);
 	font-family: var(--heading--font-family);
 	font-weight: var(--heading--font-weight-page-title);
-	font-size: var(--entry-header--font-size);
+	font-size: var(--global--font-size-page-title);
 	line-height: var(--heading--line-height);
 }
 
@@ -111,7 +111,7 @@
 		margin-top: 0;
 	}
 
-	// Needs to be the second-last child to avoid applying this to the appender. 
+	// Needs to be the second-last child to avoid applying this to the appender.
 	[data-block]:nth-last-child(2) {
 		margin-bottom: 0;
 	}

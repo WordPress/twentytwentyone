@@ -1088,7 +1088,7 @@ pre.wp-block-verse {
 	color: var(--global--color-secondary);
 	font-family: var(--heading--font-family);
 	font-weight: var(--heading--font-weight-page-title);
-	font-size: var(--entry-header--font-size);
+	font-size: var(--global--font-size-page-title);
 	line-height: var(--heading--line-height);
 }
 
