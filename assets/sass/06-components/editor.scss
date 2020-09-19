@@ -45,7 +45,7 @@ body {
 	// If a custom link color has been assigned,
 	// switch the color of the bottom border too. 
 	.has-link-color & {
-		border-bottom: 1px solid var(--wp--style--color--link);
+		border-bottom: 1px solid var(--wp--style--color--link, --global--color-primary);
 	}
 }
 // Enforce the custom link color even if a custom background color has been set.
