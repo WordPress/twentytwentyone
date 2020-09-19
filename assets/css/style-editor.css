@@ -1231,10 +1231,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
-.editor-post-title__block {
-	font-size: var(--entry-header--font-size);
-}
-
 .wp-block a {
 	border-bottom: 1px solid var(--global--color-secondary);
 	color: var(--wp--style--color--link, var(--global--color-primary));

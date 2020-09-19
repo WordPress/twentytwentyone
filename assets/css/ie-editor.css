@@ -1717,10 +1717,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
-.editor-post-title__block {
-	font-size: 3rem;
-}
-
 .wp-block a {
 	border-bottom: 1px solid #39414D;
 	color: #28303D;
