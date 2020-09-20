@@ -172,7 +172,7 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--entry-header--color-hover: var(--global--color-primary-hover);
 	--entry-header--color-focus: var(--global--color-secondary);
 	--entry-header--font-family: var(--heading--font-family);
-	--entry-header--font-size: var(--global--font-size-page-title);
+	--entry-header--font-size: var(--heading--font-size-h2);
 	--entry-content--font-family: var(--global--font-secondary);
 	--entry-meta--color: var(--global--color-primary);
 	--entry-meta--color-link: currentColor;
@@ -2988,7 +2988,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .page-title {
-	font-size: var(--heading--font-size-h2);
+	font-size: var(--global--font-size-page-title);
 }
 
 h1.page-title,

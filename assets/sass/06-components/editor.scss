@@ -14,11 +14,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
-// Set font size of title block the same as body.
-.editor-post-title__block {
-	font-size: var(--entry-header--font-size);
-}
-
 // Links styles
 .wp-block a {
 	border-bottom: 1px solid var(--global--color-secondary);
@@ -43,7 +38,7 @@ body {
 	}
 
 	// If a custom link color has been assigned,
-	// switch the color of the bottom border too. 
+	// switch the color of the bottom border too.
 	.has-link-color & {
 		border-bottom: 1px solid var(--wp--style--color--link, --global--color-primary);
 	}

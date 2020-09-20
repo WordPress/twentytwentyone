@@ -117,7 +117,7 @@
 	--entry-header--color-hover: var(--global--color-primary-hover);
 	--entry-header--color-focus: var(--global--color-secondary);
 	--entry-header--font-family: var(--heading--font-family);
-	--entry-header--font-size: var(--global--font-size-page-title);
+	--entry-header--font-size: var(--heading--font-size-h2);
 	--entry-content--font-family: var(--global--font-secondary);
 	--entry-meta--color: var(--global--color-primary);
 	--entry-meta--color-link: currentColor;
@@ -1088,7 +1088,7 @@ pre.wp-block-verse {
 	color: var(--global--color-secondary);
 	font-family: var(--heading--font-family);
 	font-weight: var(--heading--font-weight-page-title);
-	font-size: var(--entry-header--font-size);
+	font-size: var(--global--font-size-page-title);
 	line-height: var(--heading--line-height);
 }
 
@@ -1229,10 +1229,6 @@ body {
 	font-weight: normal;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-}
-
-.editor-post-title__block {
-	font-size: var(--entry-header--font-size);
 }
 
 .wp-block a {
