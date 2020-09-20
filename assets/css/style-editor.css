@@ -219,7 +219,6 @@ Example:
 	background-color: var(--button--color-background);
 	border-radius: var(--button--border-radius);
 	border: var(--button--border-width) solid var(--button--color-background);
-	outline: 1px solid transparent;
 	text-decoration: none;
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
@@ -454,19 +453,40 @@ figcaption,
 	line-height: var(--button--line-height);
 	background-color: var(--button--color-background);
 	border-radius: var(--button--border-radius);
+	border: var(--button--border-width) solid var(--button--color-background);
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
 
-.wp-block-button__link:hover, .wp-block-button__link:focus, .wp-block-button__link.has-focus {
+.wp-block-button__link:hover {
 	color: var(--button--color-text-hover);
 	background-color: var(--button--color-background-hover);
+}
+
+.wp-block-button__link:focus, .wp-block-button__link.has-focus {
+	outline-offset: -4px;
+	outline: 2px dotted currentColor;
 }
 
 .wp-block-button__link.is-style-outline,
 .is-style-outline .wp-block-button__link {
 	color: var(--button--color-background);
 	background: transparent;
-	border: 2px solid currentcolor;
+	border: var(--button--border-width) solid currentcolor;
+}
+
+.wp-block-button__link.is-style-outline:active, .wp-block-button__link.is-style-outline:hover,
+.is-style-outline .wp-block-button__link:active,
+.is-style-outline .wp-block-button__link:hover {
+	background-color: var(--button--color-background);
+	color: var(--button--color-text);
+	border: var(--button--border-width) solid var(--button--color-background);
+}
+
+.wp-block-button__link.is-style-outline:focus, .wp-block-button__link.is-style-outline.has-focus,
+.is-style-outline .wp-block-button__link:focus,
+.is-style-outline .wp-block-button__link.has-focus {
+	outline-offset: -6px;
+	background: transparent;
 }
 
 .wp-block-button__link.is-style-squared,

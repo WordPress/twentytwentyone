@@ -7,13 +7,18 @@
 	line-height: var(--button--line-height);
 	background-color: var(--button--color-background);
 	border-radius: var(--button--border-radius);
+	border: var(--button--border-width) solid var(--button--color-background);
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 
-	&:hover,
-	&:focus,
-	&.has-focus {
+	&:hover {
 		color: var(--button--color-text-hover);
 		background-color: var(--button--color-background-hover);
+	}
+
+	&:focus,
+	&.has-focus {
+		outline-offset: -4px;
+		outline: 2px dotted currentColor;
 	}
 
 	// Outline Style
@@ -21,7 +26,20 @@
 	.is-style-outline & {
 		color: var(--button--color-background);
 		background: transparent;
-		border: 2px solid currentcolor;
+		border: var(--button--border-width) solid currentcolor;
+
+		&:active,
+		&:hover {
+			background-color: var(--button--color-background);
+			color: var(--button--color-text);
+			border: var(--button--border-width) solid var(--button--color-background);
+		}
+
+		&:focus,
+		&.has-focus {
+			outline-offset: -6px;
+			background: transparent;
+		}
 	}
 
 	// Squared Style
