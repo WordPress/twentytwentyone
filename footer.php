@@ -25,7 +25,7 @@
 				<?php
 				$blog_info = get_bloginfo( 'name' );
 				if ( ! empty( $blog_info ) ) {
-					$aria_current = ( is_front_page() || is_home() ) ? ' aria-current="page"' : '';
+					$aria_current = ( is_front_page() || ( is_front_page() && is_home() ) ) ? ' aria-current="page"' : '';
 					?>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"<?php echo $aria_current; ?>><?php bloginfo( 'name' ); ?></a>
 					<?php
