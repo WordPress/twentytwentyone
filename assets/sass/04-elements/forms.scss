@@ -13,30 +13,101 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea {
+.site textarea {
 	border: var(--form--border-width) solid var(--form--border-color);
 	border-radius: var(--form--border-radius);
 	color: var(--form--color-text);
+	background: var(--global--color-white-50);
 	line-height: var(--global--line-height-body);
 	padding: var(--form--spacing-unit);
 
 	&:focus {
 		color: var(--form--color-text);
-		border-color: var(--form--border-color);
+		outline: 1px solid var(--form--border-color);
+		background: var(--global--color-white);
+	}
+}
+
+//Reset the negative offset from normalize to make the thicker "border" work on focus.
+input[type="search"] {
+	&:focus {
+		outline-offset: 0;
 	}
 }
 
 select {
 	border: var(--form--border-width) solid var(--form--border-color);
+	padding: calc( 0.5 * var(--form--spacing-unit));
+	background: var(--global--color-white-50);
+}
+
+.site select:focus {
+	background: var(--global--color-white);
 }
 
 textarea {
 	width: 100%;
 }
 
-// Vertically align checkbox + label relationship
+/* Only works in chrome.
+While we can target the label, which works for the default comment form,
+users and plugins will not always use a label.
+
+input[type=checkbox] {
+	width: 25px;
+	height: 25px;
+	outline-offset: -1px;
+	background: var(--global--color-white-50);
+	outline: var(--form--border-width) solid var(--form--border-color);
+
+	&:focus {
+		outline: 4px solid var(--form--border-color);
+		background: var(--global--color-white);
+	}
+}
+
+input[type=radio] {
+	width: 25px;
+	height: 25px;
+}
+
+input[type=radio]::before {
+	content: "";
+	display: block;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border: var(--form--border-width) solid var(--form--border-color);
+	background: var(--global--color-white-50);
+}
+
+input[type=radio]:focus::before {
+	content: "";
+	display: block;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border: 4px solid var(--form--border-color);
+	background: var(--global--color-white);
+}
+*/
+
+ // Vertically align checkbox + label relationship
 input[type=checkbox] + label {
 	display: inline;
-	margin-left: 0.5em;
-	line-height: 1em;
+	margin-left: 10px;
+	font-weight: normal;
+	font-size: var(--global--font-size-xs);
+}
+
+label {
+	font-size: var(--form--font-size);
+	font-weight: var( --form--label-weight);
+	margin-bottom: 10px;
 }

@@ -11,7 +11,8 @@
 	font-size: var(--button--font-size);
 	background-color: var(--button--color-background);
 	border-radius: var(--button--border-radius);
-	border-width: 0;
+	border: var(--button--border-width) solid var(--button--color-background);
+	outline: 1px solid transparent;
 	text-decoration: none;
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 
@@ -20,11 +21,21 @@
 		background-color: var(--button--color-background-active);
 	}
 
-	&:hover,
-	&:focus,
-	&.has-focus {
+	&:disabled {
+		background-color: var(--global--color-white-50);
+		border-color: var(--global--color-white-50);
+		color: var(--button--color-text-active);
+	}
+
+	&:hover {
 		color: var(--button--color-text-hover);
 		background-color: var(--button--color-background-hover);
+	}
+
+	&:focus,
+	&.has-focus {
+		outline-offset: -4px;
+		outline: 2px dotted currentColor;
 	}
 }
 

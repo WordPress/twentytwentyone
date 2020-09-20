@@ -140,10 +140,11 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--global--elevation: 1px 1px 3px 0px rgba( 0, 0, 0, 0.2 );
 	/* Forms */
 	--form--font-family: var(--global--font-secondary);
-	--form--font-size: var(--global--font-size-md);
+	--form--font-size: var(--global--font-size-sm);
 	--form--line-height: var(--global--line-height-body);
+	--form--label-weight: 500;
 	--form--color-text: var(--global--color-primary);
-	--form--border-color: var(--global--color-border);
+	--form--border-color: var(--global--color-gray);
 	--form--border-width: 3px;
 	--form--border-radius: 0;
 	--form--spacing-unit: calc(0.5 * var(--global--spacing-unit));
@@ -153,19 +154,19 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--cover--color-background: var(--global--color-black);
 	/* Buttons */
 	--button--color-text: var(--global--color-background);
-	--button--color-text-hover: var(--button--color-text);
-	--button--color-text-active: var(--button--color-text);
-	--button--color-background: var(--global--color-secondary);
-	--button--color-background-hover: var(--global--color-secondary-hover);
-	--button--color-background-active: var(--global--color-primary);
-	--button--font-family: var(--global--font-ui);
+	--button--color-text-hover: var(--global--color-gray);
+	--button--color-text-active: var(--global--color-gray);
+	--button--color-background: var(--global--color-gray);
+	--button--color-background-hover: var(--global--color-background);
+	--button--color-background-active: var(--global--color-background);
+	--button--font-family: var(--global--font-primary);
 	--button--font-size: var(--global--font-size-base);
-	--button--font-weight: normal;
-	--button--line-height: 1;
-	--button--border-width: 2px;
-	--button--border-radius: 4px;
-	--button--padding-vertical: calc(var(--global--spacing-horizontal) - var(--button--border-width));
-	--button--padding-horizontal: var(--global--spacing-horizontal);
+	--button--font-weight: 500;
+	--button--line-height: 1.5;
+	--button--border-width: 3px;
+	--button--border-radius: 0;
+	--button--padding-vertical: 15px;
+	--button--padding-horizontal: calc( 2 * var(--button--padding-vertical));
 	/* entry */
 	--entry-header--color: var(--global--color-primary);
 	--entry-header--color-link: currentColor;
@@ -263,9 +264,10 @@ Example:
 	word-wrap: break-word;
 }
 */
-button,
-.button,
+.site button,
+.site .button,
 input[type="submit"],
+input[type="reset"],
 .wp-block-button__link, .wp-block-file .wp-block-file__button {
 	line-height: var(--button--line-height);
 	color: var(--button--color-text);
@@ -275,17 +277,20 @@ input[type="submit"],
 	font-size: var(--button--font-size);
 	background-color: var(--button--color-background);
 	border-radius: var(--button--border-radius);
-	border-width: 0;
+	border: var(--button--border-width) solid var(--button--color-background);
+	outline: 1px solid transparent;
 	text-decoration: none;
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
 
-button:before,
-.button:before,
+.site button:before,
+.site .button:before,
 input[type="submit"]:before,
-.wp-block-button__link:before, .wp-block-file .wp-block-file__button:before, button:after,
-.button:after,
+input[type="reset"]:before,
+.wp-block-button__link:before, .wp-block-file .wp-block-file__button:before, .site button:after,
+.site .button:after,
 input[type="submit"]:after,
+input[type="reset"]:after,
 .wp-block-button__link:after, .wp-block-file .wp-block-file__button:after {
 	content: '';
 	display: block;
@@ -293,40 +298,61 @@ input[type="submit"]:after,
 	width: 0;
 }
 
-button:before,
-.button:before,
+.site button:before,
+.site .button:before,
 input[type="submit"]:before,
+input[type="reset"]:before,
 .wp-block-button__link:before, .wp-block-file .wp-block-file__button:before {
 	margin-bottom: -calc(.5em * var(--button--line-height) + -.38);
 }
 
-button:after,
-.button:after,
+.site button:after,
+.site .button:after,
 input[type="submit"]:after,
+input[type="reset"]:after,
 .wp-block-button__link:after, .wp-block-file .wp-block-file__button:after {
 	margin-top: -calc(.5em * var(--button--line-height) + -.39);
 }
 
-button:active,
-.button:active,
+.site button:active,
+.site .button:active,
 input:active[type="submit"],
+input:active[type="reset"],
 .wp-block-button__link:active, .wp-block-file .wp-block-file__button:active {
 	color: var(--button--color-text-active);
 	background-color: var(--button--color-background-active);
 }
 
-button:hover,
-.button:hover,
+.site button:disabled,
+.site .button:disabled,
+input:disabled[type="submit"],
+input:disabled[type="reset"],
+.wp-block-button__link:disabled, .wp-block-file .wp-block-file__button:disabled {
+	background-color: var(--global--color-white-50);
+	border-color: var(--global--color-white-50);
+	color: var(--button--color-text-active);
+}
+
+.site button:hover,
+.site .button:hover,
 input:hover[type="submit"],
-.wp-block-button__link:hover, .wp-block-file .wp-block-file__button:hover, button:focus,
-.button:focus,
-input:focus[type="submit"],
-.wp-block-button__link:focus, .wp-block-file .wp-block-file__button:focus, button.has-focus,
-.has-focus.button,
-input.has-focus[type="submit"],
-.has-focus.wp-block-button__link, .wp-block-file .has-focus.wp-block-file__button {
+input:hover[type="reset"],
+.wp-block-button__link:hover, .wp-block-file .wp-block-file__button:hover {
 	color: var(--button--color-text-hover);
 	background-color: var(--button--color-background-hover);
+}
+
+.site button:focus,
+.site .button:focus,
+input:focus[type="submit"],
+input:focus[type="reset"],
+.wp-block-button__link:focus, .wp-block-file .wp-block-file__button:focus, .site button.has-focus,
+.site .has-focus.button,
+input.has-focus[type="submit"],
+input.has-focus[type="reset"],
+.has-focus.wp-block-button__link, .wp-block-file .has-focus.wp-block-file__button {
+	outline-offset: -4px;
+	outline: 2px dotted currentColor;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -1227,10 +1253,11 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea {
+.site textarea {
 	border: var(--form--border-width) solid var(--form--border-color);
 	border-radius: var(--form--border-radius);
 	color: var(--form--color-text);
+	background: var(--global--color-white-50);
 	line-height: var(--global--line-height-body);
 	padding: var(--form--spacing-unit);
 }
@@ -1250,23 +1277,89 @@ input[type="time"]:focus,
 input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
-textarea:focus {
+.site textarea:focus {
 	color: var(--form--color-text);
-	border-color: var(--form--border-color);
+	outline: 1px solid var(--form--border-color);
+	background: var(--global--color-white);
+}
+
+input[type="search"]:focus {
+	outline-offset: 0;
 }
 
 select {
 	border: var(--form--border-width) solid var(--form--border-color);
+	padding: calc( 0.5 * var(--form--spacing-unit));
+	background: var(--global--color-white-50);
+}
+
+.site select:focus {
+	background: var(--global--color-white);
 }
 
 textarea {
 	width: 100%;
 }
 
+/* Only works in chrome.
+While we can target the label, which works for the default comment form,
+users and plugins will not always use a label.
+
+input[type=checkbox] {
+	width: 25px;
+	height: 25px;
+	outline-offset: -1px;
+	background: var(--global--color-white-50);
+	outline: var(--form--border-width) solid var(--form--border-color);
+
+	&:focus {
+		outline: 4px solid var(--form--border-color);
+		background: var(--global--color-white);
+	}
+}
+
+input[type=radio] {
+	width: 25px;
+	height: 25px;
+}
+
+input[type=radio]::before {
+	content: "";
+	display: block;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border: var(--form--border-width) solid var(--form--border-color);
+	background: var(--global--color-white-50);
+}
+
+input[type=radio]:focus::before {
+	content: "";
+	display: block;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border: 4px solid var(--form--border-color);
+	background: var(--global--color-white);
+}
+*/
 input[type=checkbox] + label {
 	display: inline;
-	margin-left: 0.5em;
-	line-height: 1em;
+	margin-left: 10px;
+	font-weight: normal;
+	font-size: var(--global--font-size-xs);
+}
+
+label {
+	font-size: var(--form--font-size);
+	font-weight: var(--form--label-weight);
+	margin-bottom: 10px;
 }
 
 img {
@@ -1351,8 +1444,13 @@ i {
 	line-height: var(--button--line-height);
 }
 
-.wp-block-button.is-style-outline {
-	border: none;
+.wp-block-button a.wp-block-button__link {
+	border-bottom: var(--button--border-width) solid var(--button--color-background);
+}
+
+.wp-block-button a.wp-block-button__link:focus {
+	outline-offset: -4px;
+	outline: 2px dotted currentColor;
 }
 
 .wp-block-button.is-style-outline.wp-block-button__link,
@@ -1363,16 +1461,19 @@ i {
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
 
-.wp-block-button.is-style-outline.wp-block-button__link:active,
-.wp-block-button.is-style-outline .wp-block-button__link:active {
-	color: var(--button--color-background);
+.wp-block-button.is-style-outline.wp-block-button__link:active, .wp-block-button.is-style-outline.wp-block-button__link:hover,
+.wp-block-button.is-style-outline .wp-block-button__link:active,
+.wp-block-button.is-style-outline .wp-block-button__link:hover {
+	background-color: var(--button--color-background);
+	color: var(--button--color-text);
+	border: var(--button--border-width) solid var(--button--color-background);
 }
 
-.wp-block-button.is-style-outline.wp-block-button__link:hover, .wp-block-button.is-style-outline.wp-block-button__link:focus, .wp-block-button.is-style-outline.wp-block-button__link.has-focus,
-.wp-block-button.is-style-outline .wp-block-button__link:hover,
+.wp-block-button.is-style-outline.wp-block-button__link:focus, .wp-block-button.is-style-outline.wp-block-button__link.has-focus,
 .wp-block-button.is-style-outline .wp-block-button__link:focus,
 .wp-block-button.is-style-outline .wp-block-button__link.has-focus {
-	color: var(--button--color-background-hover);
+	outline-offset: -6px;
+	background: transparent;
 }
 
 .wp-block-button.is-style-squared .wp-block-button__link {
@@ -3280,6 +3381,7 @@ h2.page-title {
 
 .comment-form .comment-form-cookies-consent > label,
 .comment-form .comment-notes {
+	font-weight: normal;
 	font-size: var(--global--font-size-xs);
 }
 
@@ -3855,18 +3957,23 @@ h2.page-title {
 
 .search-form {
 	display: flex;
+	flex-wrap: wrap;
 	margin: auto;
 	max-width: var(--responsive--aligndefault-width);
 }
 
 .search-form > label {
-	display: flex;
-	margin-right: var(--global--spacing-horizontal);
 	width: 100%;
 }
 
-.search-form > label .search-field {
-	width: 100%;
+.search-form .search-field {
+	flex-grow: 1;
+	max-width: inherit;
+	margin-right: calc( .66 * var(--global--spacing-horizontal));
+}
+
+.search-form .search-submit {
+	margin-left: 10px;
 }
 
 /* Category 07 is for any utility classes that are not assigned to a specific component. */

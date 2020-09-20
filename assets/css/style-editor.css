@@ -85,10 +85,11 @@
 	--global--elevation: 1px 1px 3px 0px rgba( 0, 0, 0, 0.2 );
 	/* Forms */
 	--form--font-family: var(--global--font-secondary);
-	--form--font-size: var(--global--font-size-md);
+	--form--font-size: var(--global--font-size-sm);
 	--form--line-height: var(--global--line-height-body);
+	--form--label-weight: 500;
 	--form--color-text: var(--global--color-primary);
-	--form--border-color: var(--global--color-border);
+	--form--border-color: var(--global--color-gray);
 	--form--border-width: 3px;
 	--form--border-radius: 0;
 	--form--spacing-unit: calc(0.5 * var(--global--spacing-unit));
@@ -98,19 +99,19 @@
 	--cover--color-background: var(--global--color-black);
 	/* Buttons */
 	--button--color-text: var(--global--color-background);
-	--button--color-text-hover: var(--button--color-text);
-	--button--color-text-active: var(--button--color-text);
-	--button--color-background: var(--global--color-secondary);
-	--button--color-background-hover: var(--global--color-secondary-hover);
-	--button--color-background-active: var(--global--color-primary);
-	--button--font-family: var(--global--font-ui);
+	--button--color-text-hover: var(--global--color-gray);
+	--button--color-text-active: var(--global--color-gray);
+	--button--color-background: var(--global--color-gray);
+	--button--color-background-hover: var(--global--color-background);
+	--button--color-background-active: var(--global--color-background);
+	--button--font-family: var(--global--font-primary);
 	--button--font-size: var(--global--font-size-base);
-	--button--font-weight: normal;
-	--button--line-height: 1;
-	--button--border-width: 2px;
-	--button--border-radius: 4px;
-	--button--padding-vertical: calc(var(--global--spacing-horizontal) - var(--button--border-width));
-	--button--padding-horizontal: var(--global--spacing-horizontal);
+	--button--font-weight: 500;
+	--button--line-height: 1.5;
+	--button--border-width: 3px;
+	--button--border-radius: 0;
+	--button--padding-vertical: 15px;
+	--button--padding-horizontal: calc( 2 * var(--button--padding-vertical));
 	/* entry */
 	--entry-header--color: var(--global--color-primary);
 	--entry-header--color-link: currentColor;
@@ -217,7 +218,8 @@ Example:
 	font-size: var(--button--font-size);
 	background-color: var(--button--color-background);
 	border-radius: var(--button--border-radius);
-	border-width: 0;
+	border: var(--button--border-width) solid var(--button--color-background);
+	outline: 1px solid transparent;
 	text-decoration: none;
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
@@ -242,9 +244,20 @@ Example:
 	background-color: var(--button--color-background-active);
 }
 
-.wp-block-search .wp-block-search__button:hover, .wp-block-search .wp-block-search__button:focus, .wp-block-search .has-focus.wp-block-search__button {
+.wp-block-search .wp-block-search__button:disabled {
+	background-color: var(--global--color-white-50);
+	border-color: var(--global--color-white-50);
+	color: var(--button--color-text-active);
+}
+
+.wp-block-search .wp-block-search__button:hover {
 	color: var(--button--color-text-hover);
 	background-color: var(--button--color-background-hover);
+}
+
+.wp-block-search .wp-block-search__button:focus, .wp-block-search .has-focus.wp-block-search__button {
+	outline-offset: -4px;
+	outline: 2px dotted currentColor;
 }
 
 /**

@@ -1,9 +1,10 @@
 /**
  * Button
  */
-button,
-.button,
+.site button,
+.site .button,
 input[type="submit"],
+input[type="reset"],
 .wp-block-button__link {
 	// Extend button style
 	@extend %button-style;
@@ -19,9 +20,18 @@ input[type="submit"],
 	font-weight: var(--button--font-weight);
 	line-height: var(--button--line-height);
 
+	// Override the link style in the reset file.
+	a.wp-block-button__link {
+		border-bottom: var(--button--border-width) solid var(--button--color-background);
+	}
+
+	a.wp-block-button__link:focus {
+		outline-offset: -4px;
+		outline: 2px dotted currentColor;
+	}
+
 	// Outline Style
 	&.is-style-outline {
-		border: none;
 
 		&.wp-block-button__link,
 		.wp-block-button__link {
@@ -30,14 +40,17 @@ input[type="submit"],
 			border: var(--button--border-width) solid currentcolor;
 			padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 
-			&:active {
-				color: var(--button--color-background);
+			&:active,
+			&:hover {
+				background-color: var(--button--color-background);
+				color: var(--button--color-text);
+				border: var(--button--border-width) solid var(--button--color-background);
 			}
 
-			&:hover,
 			&:focus,
 			&.has-focus {
-				color: var(--button--color-background-hover);
+				outline-offset: -6px;
+				background: transparent;
 			}
 		}
 	}
