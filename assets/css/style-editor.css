@@ -251,7 +251,7 @@ Example:
 
 .wp-block-search .wp-block-search__button:hover {
 	color: var(--button--color-text-hover);
-	background-color: var(--button--color-background-hover);
+	background: transparent;
 }
 
 .wp-block-search .wp-block-search__button:focus, .wp-block-search .has-focus.wp-block-search__button {

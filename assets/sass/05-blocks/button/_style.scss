@@ -27,7 +27,8 @@ input[type="reset"],
 
 	a.wp-block-button__link:focus {
 		outline-offset: -4px;
-		outline: 2px dotted currentColor;
+		outline: 2px dotted var(--button--color-text);
+		color: var(--button--color-text);
 	}
 
 	// Outline Style
@@ -49,8 +50,10 @@ input[type="reset"],
 
 			&:focus,
 			&.has-focus {
-				outline-offset: -6px;
+				outline-offset: -7px;
 				background: transparent;
+				outline: 2px dotted var(--button--color-background);
+				color: var(--button--color-background);
 			}
 		}
 	}

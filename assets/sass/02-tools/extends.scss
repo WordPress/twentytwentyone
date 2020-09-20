@@ -28,7 +28,7 @@
 
 	&:hover {
 		color: var(--button--color-text-hover);
-		background-color: var(--button--color-background-hover);
+		background: transparent;
 	}
 
 	&:focus,

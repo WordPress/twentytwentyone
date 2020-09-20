@@ -82,7 +82,7 @@ Example:
 
 .wp-block-search .wp-block-search__button:hover {
 	color: #39414D;
-	background-color: #D1E4DD;
+	background: transparent;
 }
 
 .wp-block-search .wp-block-search__button:focus, .wp-block-search .has-focus.wp-block-search__button {

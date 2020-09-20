@@ -305,32 +305,32 @@ input:disabled[type="reset"] {
 
 .site button:hover {
 	color: #39414D;
-	background-color: #D1E4DD;
+	background: transparent;
 }
 
 .site .button:hover {
 	color: #39414D;
-	background-color: #D1E4DD;
+	background: transparent;
 }
 
 input:hover[type="submit"] {
 	color: #39414D;
-	background-color: #D1E4DD;
+	background: transparent;
 }
 
 input:hover[type="reset"] {
 	color: #39414D;
-	background-color: #D1E4DD;
+	background: transparent;
 }
 
 .wp-block-button__link:hover {
 	color: #39414D;
-	background-color: #D1E4DD;
+	background: transparent;
 }
 
 .wp-block-file .wp-block-file__button:hover {
 	color: #39414D;
-	background-color: #D1E4DD;
+	background: transparent;
 }
 
 .site button:focus,
@@ -2154,7 +2154,8 @@ i {
 
 .wp-block-button a.wp-block-button__link:focus {
 	outline-offset: -4px;
-	outline: 2px dotted currentColor;
+	outline: 2px dotted #D1E4DD;
+	color: #D1E4DD;
 }
 
 .wp-block-button.is-style-outline.wp-block-button__link {
@@ -2195,11 +2196,32 @@ i {
 	border: 3px solid #39414D;
 }
 
-.wp-block-button.is-style-outline.wp-block-button__link:focus, .wp-block-button.is-style-outline.wp-block-button__link.has-focus,
-.wp-block-button.is-style-outline .wp-block-button__link:focus,
-.wp-block-button.is-style-outline .wp-block-button__link.has-focus {
-	outline-offset: -6px;
+.wp-block-button.is-style-outline.wp-block-button__link:focus {
+	outline-offset: -7px;
 	background: transparent;
+	outline: 2px dotted #39414D;
+	color: #39414D;
+}
+
+.wp-block-button.is-style-outline.wp-block-button__link.has-focus {
+	outline-offset: -7px;
+	background: transparent;
+	outline: 2px dotted #39414D;
+	color: #39414D;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:focus {
+	outline-offset: -7px;
+	background: transparent;
+	outline: 2px dotted #39414D;
+	color: #39414D;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link.has-focus {
+	outline-offset: -7px;
+	background: transparent;
+	outline: 2px dotted #39414D;
+	color: #39414D;
 }
 
 .wp-block-button.is-style-squared .wp-block-button__link {
