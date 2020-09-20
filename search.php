@@ -29,7 +29,12 @@ if ( have_posts() ) {
 		<?php
 		printf(
 			/* translators: %d: the number of search results. */
-			esc_html__( 'We found %d results for your search.', 'twentytwentyone' ),
+			_n(
+				'We found %d result for your search.',
+				'We found %d results for your search.',
+				(int) $wp_query->found_posts,
+				'twentytwentyone'
+			),
 			(int) $wp_query->found_posts
 		);
 		?>
