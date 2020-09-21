@@ -2222,7 +2222,6 @@ p.has-text-color a {
 }
 
 .wp-block-search {
-	display: flex;
 	max-width: var(--responsive--aligndefault-width);
 }
 
