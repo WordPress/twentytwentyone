@@ -14,7 +14,7 @@ get_header();
 if ( have_posts() ) {
 
 	?>
-	<header class="page-header archive-max-width">
+	<header class="page-header alignwide">
 		<h2 class="page-title"><?php esc_html_e( 'Blog', 'twentytwentyone' ); ?></h2>
 	</header><!-- .page-header -->
 	<?php

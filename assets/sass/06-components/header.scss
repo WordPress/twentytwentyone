@@ -2,13 +2,12 @@
 // Site header
 
 .site-header {
+	@extend %responsive-alignwide-width;
 	display: flex;
-	margin-left: var(--global--spacing-horizontal);
-	margin-right: var(--global--spacing-horizontal);
+	padding-top: var(--global--spacing-vertical);
 
-	@include media(desktop) {
-		margin-left: calc(4 * var(--global--spacing-horizontal));
-		margin-right: calc(4 * var(--global--spacing-horizontal));
+	@include media(laptop) {
+		padding-top: calc( 2.4 * var(--global--spacing-vertical)); // 60px
 	}
 }
 

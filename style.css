@@ -678,28 +678,16 @@ template {
  * Root Media Query Variables
  */
 :root {
-	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal));
-	--responsive--aligndefault-width: 100%;
-	--responsive--alignwide-width: 100%;
+	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal) * 0.6 );
+	--responsive--aligndefault-width: calc(100vw - var(--responsive--spacing-horizontal));
+	--responsive--alignwide-width: calc(100vw - var(--responsive--spacing-horizontal));
 	--responsive--alignfull-width: 100%;
-	--responsive--alignwide-width-multiplier: calc(16 * var(--global--spacing-horizontal));
 	--responsive--alignright-margin: var(--global--spacing-horizontal);
 	--responsive--alignleft-margin: var(--global--spacing-horizontal);
 }
 
 @media only screen and (min-width: 482px) {
 	:root {
-		--responsive--aligndefault-width: calc(482px - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(482px - var(--responsive--spacing-horizontal));
-		--responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
-		--responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
-	}
-}
-
-@media only screen and (min-width: 592px) {
-	:root {
-		--responsive--aligndefault-width: calc(482px - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(592px - var(--responsive--spacing-horizontal));
 		--responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
@@ -707,28 +695,8 @@ template {
 
 @media only screen and (min-width: 652px) {
 	:root {
-		--responsive--aligndefault-width: calc(592px - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(652px - var(--responsive--spacing-horizontal));
-		--responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
-		--responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
-	}
-}
-
-@media only screen and (min-width: 822px) {
-	:root {
-		--responsive--aligndefault-width: calc(652px - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(822px - var(--responsive--spacing-horizontal));
-		--responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
-		--responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
-	}
-}
-
-@media only screen and (min-width: 1024px) {
-	:root {
-		--responsive--aligndefault-width: calc(652px - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(822px - var(--responsive--spacing-horizontal));
-		--responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
-		--responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--aligndefault-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), 610px);
+		--responsive--alignwide-width: calc(100vw - 8 * var(--global--spacing-horizontal));
 	}
 }
 
@@ -742,13 +710,13 @@ template {
 	margin-right: auto;
 }
 
-.wide-max-width, .alignwide {
+.wide-max-width, .alignwide, .site-header, .site-footer {
 	max-width: var(--responsive--alignwide-width);
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.full-max-width, .wp-block-group .wp-block-group__inner-container > *.alignfull, .alignfull {
+.full-max-width, .wp-block-group .wp-block-group__inner-container > *.alignfull, .alignfull, .singular .post-thumbnail {
 	max-width: calc(100% + (2 * var(--global--spacing-horizontal)));
 	width: calc(100% + (2 * var(--global--spacing-horizontal)));
 	margin-left: calc(-1 * var(--global--spacing-horizontal));
@@ -756,7 +724,7 @@ template {
 }
 
 @media only screen and (min-width: 482px) {
-	.full-max-width, .alignfull {
+	.full-max-width, .alignfull, .singular .post-thumbnail {
 		max-width: var(--responsive--alignfull-width);
 		width: auto;
 		margin-left: auto;
@@ -769,24 +737,6 @@ template {
 	margin-right: auto;
 	width: var(--responsive--alignwide-width);
 	max-width: var(--responsive--alignfull-width);
-}
-
-.archive-max-width, .entry-header .post-thumbnail,
-.singular .post-thumbnail {
-	margin-left: auto;
-	margin-right: auto;
-	width: calc(var(--responsive--alignfull-width) - calc(2 * var(--responsive--spacing-horizontal)));
-	max-width: var(--responsive--alignfull-width);
-}
-
-@media only screen and (min-width: 822px) {
-	.archive-max-width, .entry-header .post-thumbnail,
-	.singular .post-thumbnail {
-		margin-left: auto;
-		margin-right: auto;
-		width: calc(var(--responsive--alignfull-width) - calc(4 * var(--responsive--spacing-horizontal)));
-		max-width: var(--responsive--alignfull-width);
-	}
 }
 
 .entry-content > .alignleft {
@@ -839,20 +789,10 @@ template {
 .site-header,
 .site-main,
 .site-footer {
-	padding: var(--global--spacing-unit) var(--global--spacing-horizontal);
+	padding-top: var(--global--spacing-vertical);
+	padding-bottom: var(--global--spacing-vertical);
 	margin-left: auto;
 	margin-right: auto;
-}
-
-@media only screen and (min-width: 482px) {
-	.site-header,
-	.site-main,
-	.site-footer {
-		padding-top: var(--global--spacing-vertical);
-		padding-right: 0;
-		padding-bottom: var(--global--spacing-vertical);
-		padding-left: 0;
-	}
 }
 
 .site-header {
@@ -2409,11 +2349,6 @@ table th,
 /**
  * These selectors set the default max width for content appearing inside a post or page.
  */
-.archive-max-width .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce) {
-	margin-left: 0;
-	margin-right: 0;
-}
-
 /**
  * .alignleft
  */
@@ -2554,14 +2489,12 @@ table th,
 /* Category 06 contains all "bigger" components which contain elements of the previous two categories like header, footer, page template, single template, comments section, archives, ... */
 .site-header {
 	display: flex;
-	margin-left: var(--global--spacing-horizontal);
-	margin-right: var(--global--spacing-horizontal);
+	padding-top: var(--global--spacing-vertical);
 }
 
-@media only screen and (min-width: 822px) {
+@media only screen and (min-width: 652px) {
 	.site-header {
-		margin-left: calc(4 * var(--global--spacing-horizontal));
-		margin-right: calc(4 * var(--global--spacing-horizontal));
+		padding-top: calc( 2.4 * var(--global--spacing-vertical));
 	}
 }
 
@@ -2647,13 +2580,6 @@ nav a {
 	overflow: hidden;
 	padding-bottom: calc(1.7 * var(--global--spacing-vertical));
 	margin-top: calc(6 * var(--global--spacing-vertical));
-}
-
-@media only screen and (min-width: 822px) {
-	.site-footer {
-		margin-left: calc(4 * var(--global--spacing-horizontal));
-		margin-right: calc(4 * var(--global--spacing-horizontal));
-	}
 }
 
 .site-footer > .site-info {
@@ -2972,12 +2898,8 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	text-align: center;
 }
 
-.post-thumbnail .wp-post-image {
+.post-thumbnail .post-thumbnail-inner {
 	display: block;
-	width: auto;
-	max-width: 100%;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 /**
@@ -3008,6 +2930,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .page-title {
 	font-size: var(--global--font-size-page-title);
+	word-break: break-all;
 }
 
 h1.page-title,
