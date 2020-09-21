@@ -7,7 +7,7 @@
 	/* Font Family */
 	--global--font-primary: var(--font-headings, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
 	--global--font-secondary: var(--font-base, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
-	--global--font-code: monospace, monospace;
+	--global--font-code: monospace;
 	--global--font-ui: var(--font-base, var(--global--font-secondary));
 	/* Font Size */
 	--global--font-size-base: 1.25rem;
@@ -19,7 +19,7 @@
 	--global--font-size-page-title: 6rem;
 	--global--letter-spacing: normal;
 	/* Line Height */
-	--global--line-height-base: 1.0;
+	--global--line-height-base: 1;
 	--global--line-height-body: 1.7;
 	--global--line-height-heading: 1.3;
 	/* Headings */
@@ -54,27 +54,27 @@
 	--list--font-family: var(--global--font-secondary);
 	--definition-term--font-family: var(--global--font-primary);
 	/* Colors */
-	--global--color-black: #000000;
-	--global--color-dark-gray: #28303D;
-	--global--color-gray: #39414D;
-	--global--color-green: #D1E4DD;
-	--global--color-blue: #D1DFE4;
-	--global--color-purple: #D1D1E4;
-	--global--color-red: #E4D1D1;
-	--global--color-orange: #E4DAD1;
-	--global--color-yellow: #EEEADD;
-	--global--color-white: #FFFFFF;
+	--global--color-black: #000;
+	--global--color-dark-gray: #28303d;
+	--global--color-gray: #39414d;
+	--global--color-green: #d1e4dd;
+	--global--color-blue: #d1dfe4;
+	--global--color-purple: #d1d1e4;
+	--global--color-red: #e4d1d1;
+	--global--color-orange: #e4dad1;
+	--global--color-yellow: #eeeadd;
+	--global--color-white: #fff;
 	--global--color-white-50: rgba(255, 255, 255, 0.5);
 	/* white 50% opacity used in form fields.*/
 	--global--color-primary: var(--global--color-dark-gray);
 	/* Body text color, site title, footer text color. */
 	--global--color-secondary: var(--global--color-gray);
 	/* Headings */
-	--global--color-primary-hover: var( --global--color-primary );
-	--global--color-secondary-hover: var( --global--color-secondary );
+	--global--color-primary-hover: var(--global--color-primary);
+	--global--color-secondary-hover: var(--global--color-secondary);
 	--global--color-background: var(--global--color-green);
 	/* Mint, default body background */
-	--global--color-border: var( --global--color-black );
+	--global--color-border: var(--global--color-black);
 	/* Used for borders (separators) */
 	/* Spacing */
 	--global--spacing-unit: 20px;
@@ -82,7 +82,7 @@
 	--global--spacing-horizontal: 25px;
 	--global--spacing-vertical: 30px;
 	/* Elevation */
-	--global--elevation: 1px 1px 3px 0px rgba( 0, 0, 0, 0.2 );
+	--global--elevation: 1px 1px 3px 0 rgba(0, 0, 0, 0.2);
 	/* Forms */
 	--form--font-family: var(--global--font-secondary);
 	--form--font-size: var(--global--font-size-md);
@@ -93,7 +93,7 @@
 	--form--border-radius: 0;
 	--form--spacing-unit: calc(0.5 * var(--global--spacing-unit));
 	/* Cover block */
-	--cover--height: calc( 15 * var(--global--spacing-vertical) );
+	--cover--height: calc(15 * var(--global--spacing-vertical));
 	--cover--color-foreground: var(--global--color-white);
 	--cover--color-background: var(--global--color-black);
 	/* Buttons */
@@ -156,7 +156,7 @@
 	--primary-nav--color-link: var(--global--color-primary);
 	--primary-nav--color-link-hover: var(--global--color-primary-hover);
 	--primary-nav--color-text: var(--global--color-primary);
-	--primary-nav--padding: calc(0.66 * var(--global--spacing-unit) );
+	--primary-nav--padding: calc(0.66 * var(--global--spacing-unit));
 	--primary-nav--justify-content: center;
 	/* Pagination */
 	--pagination--color-text: var(--global--color-primary);
@@ -214,7 +214,7 @@
 }
 
 .wp-block-search .wp-block-search__button:before, .wp-block-search .wp-block-search__button:after {
-	content: '';
+	content: "";
 	display: block;
 	height: 0;
 	width: 0;
@@ -261,8 +261,8 @@
 	:root {
 		--responsive--aligndefault-width: calc(482px - var(--responsive--spacing-horizontal));
 		--responsive--alignwide-width: calc(482px - var(--responsive--spacing-horizontal));
-		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
-		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
 }
 
@@ -270,8 +270,8 @@
 	:root {
 		--responsive--aligndefault-width: calc(482px - var(--responsive--spacing-horizontal));
 		--responsive--alignwide-width: calc(592px - var(--responsive--spacing-horizontal));
-		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
-		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
 }
 
@@ -279,8 +279,8 @@
 	:root {
 		--responsive--aligndefault-width: calc(592px - var(--responsive--spacing-horizontal));
 		--responsive--alignwide-width: calc(652px - var(--responsive--spacing-horizontal));
-		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
-		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
 }
 
@@ -288,8 +288,8 @@
 	:root {
 		--responsive--aligndefault-width: calc(652px - var(--responsive--spacing-horizontal));
 		--responsive--alignwide-width: calc(822px - var(--responsive--spacing-horizontal));
-		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
-		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
 }
 
@@ -297,8 +297,8 @@
 	:root {
 		--responsive--aligndefault-width: calc(652px - var(--responsive--spacing-horizontal));
 		--responsive--alignwide-width: calc(822px - var(--responsive--spacing-horizontal));
-		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
-		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
 }
 
@@ -444,7 +444,7 @@ figcaption,
 .is-style-outline .wp-block-button__link {
 	color: var(--button--color-background);
 	background: transparent;
-	border: 2px solid currentcolor;
+	border: 2px solid currentColor;
 }
 
 .wp-block-button__link.is-style-squared,
@@ -497,14 +497,14 @@ div[data-type="core/button"] {
 	color: var(--wp--style--color--link, var(--global--color-primary));
 }
 
-.wp-block-cover:not([class*='background-color']) .wp-block-cover__inner-container,
-.wp-block-cover:not([class*='background-color']) .wp-block-cover-image-text,
-.wp-block-cover:not([class*='background-color']) .wp-block-cover-text,
-.wp-block-cover:not([class*='background-color']) .block-editor-block-list__block,
-.wp-block-cover-image:not([class*='background-color']) .wp-block-cover__inner-container,
-.wp-block-cover-image:not([class*='background-color']) .wp-block-cover-image-text,
-.wp-block-cover-image:not([class*='background-color']) .wp-block-cover-text,
-.wp-block-cover-image:not([class*='background-color']) .block-editor-block-list__block {
+.wp-block-cover:not([class*="background-color"]) .wp-block-cover__inner-container,
+.wp-block-cover:not([class*="background-color"]) .wp-block-cover-image-text,
+.wp-block-cover:not([class*="background-color"]) .wp-block-cover-text,
+.wp-block-cover:not([class*="background-color"]) .block-editor-block-list__block,
+.wp-block-cover-image:not([class*="background-color"]) .wp-block-cover__inner-container,
+.wp-block-cover-image:not([class*="background-color"]) .wp-block-cover-image-text,
+.wp-block-cover-image:not([class*="background-color"]) .wp-block-cover-text,
+.wp-block-cover-image:not([class*="background-color"]) .block-editor-block-list__block {
 	color: var(--cover--color-background);
 }
 
@@ -568,72 +568,120 @@ div[data-type="core/button"] {
 	width: 100%;
 }
 
-.wp-block-heading h1, h1, .h1,
-.wp-block-heading h2, h2, .h2,
-.wp-block-heading h3, h3, .h3,
-.wp-block-heading h4, h4, .h4,
-.wp-block-heading h5, h5, .h5,
-.wp-block-heading h6, h6, .h6 {
+.wp-block-heading h1,
+h1,
+.h1,
+.wp-block-heading h2,
+h2,
+.h2,
+.wp-block-heading h3,
+h3,
+.h3,
+.wp-block-heading h4,
+h4,
+.h4,
+.wp-block-heading h5,
+h5,
+.h5,
+.wp-block-heading h6,
+h6,
+.h6 {
 	clear: both;
 	font-family: var(--heading--font-family);
 	font-weight: var(--heading--font-weight);
 }
 
-.wp-block-heading h1 strong, h1 strong, .h1 strong,
-.wp-block-heading h2 strong, h2 strong, .h2 strong,
-.wp-block-heading h3 strong, h3 strong, .h3 strong,
-.wp-block-heading h4 strong, h4 strong, .h4 strong,
-.wp-block-heading h5 strong, h5 strong, .h5 strong,
-.wp-block-heading h6 strong, h6 strong, .h6 strong {
+.wp-block-heading h1 strong,
+h1 strong,
+.h1 strong,
+.wp-block-heading h2 strong,
+h2 strong,
+.h2 strong,
+.wp-block-heading h3 strong,
+h3 strong,
+.h3 strong,
+.wp-block-heading h4 strong,
+h4 strong,
+.h4 strong,
+.wp-block-heading h5 strong,
+h5 strong,
+.h5 strong,
+.wp-block-heading h6 strong,
+h6 strong,
+.h6 strong {
 	font-weight: var(--heading--font-weight-strong);
 }
 
-.wp-block-heading h1, h1, .h1 {
+.wp-block-heading h1[style*="--wp--typography--line-height"],
+h1[style*="--wp--typography--line-height"],
+.h1[style*="--wp--typography--line-height"],
+.wp-block-heading h2[style*="--wp--typography--line-height"],
+h2[style*="--wp--typography--line-height"],
+.h2[style*="--wp--typography--line-height"],
+.wp-block-heading h3[style*="--wp--typography--line-height"],
+h3[style*="--wp--typography--line-height"],
+.h3[style*="--wp--typography--line-height"],
+.wp-block-heading h4[style*="--wp--typography--line-height"],
+h4[style*="--wp--typography--line-height"],
+.h4[style*="--wp--typography--line-height"],
+.wp-block-heading h5[style*="--wp--typography--line-height"],
+h5[style*="--wp--typography--line-height"],
+.h5[style*="--wp--typography--line-height"],
+.wp-block-heading h6[style*="--wp--typography--line-height"],
+h6[style*="--wp--typography--line-height"],
+.h6[style*="--wp--typography--line-height"] {
+	line-height: var(--wp--typography--line-height, --global--line-height-body);
+}
+
+.wp-block-heading h1,
+h1,
+.h1 {
 	font-size: var(--heading--font-size-h1);
 	letter-spacing: var(--heading--letter-spacing-h1);
 	line-height: var(--heading--line-height-h1);
 }
 
-.wp-block-heading h2, h2, .h2 {
+.wp-block-heading h2,
+h2,
+.h2 {
 	font-size: var(--heading--font-size-h2);
 	letter-spacing: var(--heading--letter-spacing-h2);
 	line-height: var(--heading--line-height-h2);
 }
 
-.wp-block-heading h3, h3, .h3 {
+.wp-block-heading h3,
+h3,
+.h3 {
 	font-size: var(--heading--font-size-h3);
 	letter-spacing: var(--heading--letter-spacing-h3);
 	line-height: var(--heading--line-height-h3);
 }
 
-.wp-block-heading h4, h4, .h4 {
+.wp-block-heading h4,
+h4,
+.h4 {
 	font-size: var(--heading--font-size-h4);
 	font-weight: var(--heading--font-weight-strong);
 	letter-spacing: var(--heading--letter-spacing-h4);
 	line-height: var(--heading--line-height-h4);
 }
 
-.wp-block-heading h5, h5, .h5 {
+.wp-block-heading h5,
+h5,
+.h5 {
 	font-size: var(--heading--font-size-h5);
 	font-weight: var(--heading--font-weight-strong);
 	letter-spacing: var(--heading--letter-spacing-h5);
 	line-height: var(--heading--line-height-h5);
 }
 
-.wp-block-heading h6, h6, .h6 {
+.wp-block-heading h6,
+h6,
+.h6 {
 	font-size: var(--heading--font-size-h6);
 	font-weight: var(--heading--font-weight-strong);
 	letter-spacing: var(--heading--letter-spacing-h6);
 	line-height: var(--heading--line-height-h6);
-}
-
-.wp-block-heading h1[style*="--wp--typography--line-height"], h1[style*="--wp--typography--line-height"], .h1[style*="--wp--typography--line-height"],
-.wp-block-heading h2[style*="--wp--typography--line-height"], h2[style*="--wp--typography--line-height"], .h2[style*="--wp--typography--line-height"],
-.wp-block-heading h3[style*="--wp--typography--line-height"], h3[style*="--wp--typography--line-height"], .h3[style*="--wp--typography--line-height"],
-.wp-block-heading h4[style*="--wp--typography--line-height"], h4[style*="--wp--typography--line-height"], .h4[style*="--wp--typography--line-height"],
-.wp-block-heading h5[style*="--wp--typography--line-height"], h5[style*="--wp--typography--line-height"], .h5[style*="--wp--typography--line-height"],
-.wp-block-heading h6[style*="--wp--typography--line-height"], h6[style*="--wp--typography--line-height"], .h6[style*="--wp--typography--line-height"] {
-	line-height: var(--wp--typography--line-height, --global--line-height-body);
 }
 
 /* Center image block by default in the editor */
@@ -787,7 +835,7 @@ ul,
 ol {
 	font-family: var(--list--font-family);
 	margin: var(--global--spacing-vertical) 0;
-	padding-left: calc( 2 * var(--global--spacing-horizontal));
+	padding-left: calc(2 * var(--global--spacing-horizontal));
 }
 
 ul.aligncenter,
@@ -827,7 +875,7 @@ p.has-background {
 }
 
 .wp-block-pullquote {
-	padding: calc( 2 * var(--global--spacing-unit)) 0;
+	padding: calc(2 * var(--global--spacing-unit)) 0;
 	margin-left: 0;
 	margin-right: 0;
 	text-align: left;
@@ -865,7 +913,7 @@ p.has-background {
 .wp-block-pullquote.is-style-solid-color {
 	background-color: var(--pullquote--color-foreground);
 	color: var(--pullquote--color-background);
-	padding: calc( 2 * var(--global--spacing-unit));
+	padding: calc(2 * var(--global--spacing-unit));
 }
 
 .wp-block-pullquote.is-style-solid-color.alignleft blockquote,
@@ -888,7 +936,7 @@ p.has-background {
 }
 
 .wp-block[data-align="full"] .wp-block-pullquote:not(.is-style-solid-color) blockquote {
-	padding: 0 calc( 2 * var(--global--spacing-unit));
+	padding: 0 calc(2 * var(--global--spacing-unit));
 }
 
 .wp-block-quote {
@@ -967,7 +1015,7 @@ p.has-background {
 	font-size: var(--form--font-size);
 	line-height: var(--form--line-height);
 	max-width: inherit;
-	margin-right: calc( .66 * var(--global--spacing-horizontal));
+	margin-right: calc(.66 * var(--global--spacing-horizontal));
 	padding: var(--form--spacing-unit);
 }
 
@@ -1037,7 +1085,7 @@ table td,
 table th,
 .wp-block-table td,
 .wp-block-table th {
-	padding: calc( 0.5 * var(--global--spacing-unit));
+	padding: calc(0.5 * var(--global--spacing-unit));
 }
 
 pre.wp-block-verse {
@@ -1070,13 +1118,14 @@ pre.wp-block-verse {
 }
 
 .has-background:not(.has-background-background-color) a,
-.has-background p, .has-background h1, .has-background h2, .has-background h3, .has-background h4, .has-background h5, .has-background h6 {
+.has-background p,
+.has-background h1,
+.has-background h2,
+.has-background h3,
+.has-background h4,
+.has-background h5,
+.has-background h6 {
 	color: currentColor;
-}
-
-.has-primary-background-color[class] {
-	background-color: var(--global--color-primary);
-	color: var(--global--color-background);
 }
 
 .has-primary-background-color[class] {
@@ -1272,7 +1321,13 @@ a {
 }
 
 .has-background:not(.has-background-background-color) a,
-.has-background p, .has-background h1, .has-background h2, .has-background h3, .has-background h4, .has-background h5, .has-background h6 {
+.has-background p,
+.has-background h1,
+.has-background h2,
+.has-background h3,
+.has-background h4,
+.has-background h5,
+.has-background h6 {
 	color: currentColor;
 }
 

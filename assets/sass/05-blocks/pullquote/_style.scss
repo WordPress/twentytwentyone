@@ -1,5 +1,5 @@
 .wp-block-pullquote {
-	padding: calc( 2 * var(--global--spacing-unit) ) 0;
+	padding: calc(2 * var(--global--spacing-unit)) 0;
 	text-align: left;
 	// Theme?
 	border-top-color: var(--pullquote--border-color);
@@ -37,9 +37,9 @@
 		background: none;
 	}
 
-    &.is-style-large {
-        border-left-color: var(--quote--border-color);
-        border-left-style: solid;
+	&.is-style-large {
+		border-left-color: var(--quote--border-color);
+		border-left-style: solid;
 		border-left-width: var(--quote--border-width);
 		font-style: normal;
 	}
@@ -49,16 +49,17 @@
 		max-width: var(--responsive--alignwide-width);
 
 	}
+
 	&.alignfull:not(.is-style-solid-color) > p,
 	&.alignfull:not(.is-style-solid-color) blockquote {
-		padding: 0 calc( 2 * var(--global--spacing-unit) );
+		padding: 0 calc(2 * var(--global--spacing-unit));
 	}
 
 	&.is-style-solid-color {
 
 		background-color: var(--pullquote--color-foreground);
 		color: var(--pullquote--color-background);
-		padding: calc( 2 * var(--global--spacing-unit) );
+		padding: calc(2 * var(--global--spacing-unit));
 
 		blockquote {
 			max-width: inherit;

@@ -8,14 +8,15 @@
 	position: absolute;
 	top: 0;
 	width: 100%;
+
 	#primary-open-menu {
 		margin-left: auto;
 		padding: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit))) calc(var(--button--padding-horizontal) - (0.25 * var(--global--spacing-unit)));
-		margin-top: calc(0.60 * var(--global--spacing-unit));
+		margin-top: calc(0.6 * var(--global--spacing-unit));
 		margin-right: calc(0.25 * var(--global--spacing-unit));
 	}
 
-	@include media(mobile-only){
+	@include media(mobile-only) {
 		display: flex;
 	}
 }
@@ -58,6 +59,7 @@
 // Open and close buttons.
 .menu-button-container,
 .primary-navigation {
+
 	.button {
 		font-size: var(--primary-nav--font-size);
 		text-transform: var(--branding--title--text-transform);
@@ -69,6 +71,7 @@
 			display: flex;
 			z-index: 499;
 		}
+
 		&.close {
 			display: none;
 		}
@@ -91,8 +94,8 @@
 		.hide-visually {
 			position: absolute !important;
 			clip: rect(1px, 1px, 1px, 1px);
-			padding:0 !important;
-			border:0 !important;
+			padding: 0 !important;
+			border: 0 !important;
 			height: 1px !important;
 			width: 1px !important;
 			overflow: hidden;
@@ -100,13 +103,15 @@
 	}
 
 	.primary-navigation-open & {
+
 		#primary-open-menu {
 			display: none;
 		}
+
 		#primary-close-menu {
 			display: flex;
 			padding: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit))) calc(var(--button--padding-horizontal) - (0.25 * var(--global--spacing-unit)));
-			margin-top: calc(0.60 * var(--global--spacing-unit));
+			margin-top: calc(0.6 * var(--global--spacing-unit));
 			margin-right: calc(0.25 * var(--global--spacing-unit));
 			margin-left: auto;
 		}
@@ -145,6 +150,7 @@
 
 	// Mobile menu open
 	.primary-navigation-open & {
+
 		> .menu-wrapper {
 			visibility: visible;
 			opacity: 1;
@@ -198,7 +204,7 @@
 		.admin-bar & {
 			top: initial;
 
-			& > .menu-wrapper {
+			> .menu-wrapper {
 				top: initial;
 			}
 		}
@@ -207,6 +213,7 @@
 
 // Keep the menu pinned to the top when the menu is open.
 @include media(mobile-only) {
+
 	.lock-scrolling .site {
 		position: fixed;
 		max-width: 100%;

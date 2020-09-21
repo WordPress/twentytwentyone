@@ -94,47 +94,52 @@ $break-medium: 782px; // Copied from Gutenberg to be used with the primary navig
 }
 
 @include media(mobile) {
+
 	:root {
 		--responsive--aligndefault-width: calc(#{$breakpoint_sm} - var(--responsive--spacing-horizontal));
 		--responsive--alignwide-width: calc(#{$breakpoint_sm} - var(--responsive--spacing-horizontal));
-		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
-		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
 }
 
 @include media(tablet) {
+
 	:root {
 		--responsive--aligndefault-width: calc(#{$breakpoint_sm} - var(--responsive--spacing-horizontal));
 		--responsive--alignwide-width: calc(#{$breakpoint_md} - var(--responsive--spacing-horizontal));
-		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
-		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
 }
 
 @include media(laptop) {
+
 	:root {
 		--responsive--aligndefault-width: calc(#{$breakpoint_md} - var(--responsive--spacing-horizontal));
 		--responsive--alignwide-width: calc(#{$breakpoint_lg} - var(--responsive--spacing-horizontal));
-		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
-		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
 }
 
 @include media(desktop) {
+
 	:root {
 		--responsive--aligndefault-width: calc(#{$breakpoint_lg} - var(--responsive--spacing-horizontal));
 		--responsive--alignwide-width: calc(#{$breakpoint_xl} - var(--responsive--spacing-horizontal));
-		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
-		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
 }
 
 @include media(wide) {
+
 	:root {
 		--responsive--aligndefault-width: calc(#{$breakpoint_lg} - var(--responsive--spacing-horizontal));
 		--responsive--alignwide-width: calc(#{$breakpoint_xl} - var(--responsive--spacing-horizontal));
-		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
-		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
 }
 
@@ -166,8 +171,8 @@ $break-medium: 782px; // Copied from Gutenberg to be used with the primary navig
 		width: auto;
 		margin-left: auto;
 		margin-right: auto;
- 	}
- }
+	}
+}
 
 %responsive-alignwide-width-nested {
 	margin-left: auto;
@@ -193,34 +198,41 @@ $break-medium: 782px; // Copied from Gutenberg to be used with the primary navig
 }
 
 
-
 %responsive-alignleft-mobile {
+
 	/*rtl:ignore*/
 	margin-left: 0;
+
 	/*rtl:ignore*/
 	margin-right: var(--responsive--spacing-horizontal);
 }
 
 @include media(mobile) {
 	%responsive-alignleft {
+
 		/*rtl:ignore*/
 		margin-left: var(--responsive--alignleft-margin);
+
 		/*rtl:ignore*/
 		margin-right: var(--global--spacing-horizontal);
 	}
 }
 
 %responsive-alignright-mobile {
+
 	/*rtl:ignore*/
 	margin-left: var(--responsive--spacing-horizontal);
+
 	/*rtl:ignore*/
 	margin-right: 0;
 }
 
 @include media(mobile) {
 	%responsive-alignright {
+
 		/*rtl:ignore*/
 		margin-left: var(--global--spacing-horizontal);
+
 		/*rtl:ignore*/
 		margin-right: var(--responsive--alignright-margin);
 	}

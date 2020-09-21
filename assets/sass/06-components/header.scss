@@ -26,6 +26,7 @@
 
 	@include media(mobile) {
 		margin-right: initial;
+
 		/* TODO: Make room for the menu if the title is very long.*/
 	}
 }
@@ -40,7 +41,7 @@
 	letter-spacing: normal;
 	text-transform: var(--branding--title--text-transform);
 	line-height: var(--global--line-height-heading);
-	margin-bottom: calc( var(--global--spacing-vertical) / 2 );
+	margin-bottom: calc(var(--global--spacing-vertical) / 2);
 
 	a {
 		border-bottom: none;
@@ -87,7 +88,7 @@ nav a {
 
 .site-logo {
 
-	margin: calc( var(--global--spacing-vertical) / 2 ) var(--global--spacing-horizontal);
+	margin: calc(var(--global--spacing-vertical) / 2) var(--global--spacing-horizontal);
 
 	.custom-logo {
 		max-width: var(--branding--logo--max-width-mobile);
