@@ -3,7 +3,7 @@
 	margin: var(--global--spacing-vertical) 0;
 	padding-left: var(--global--spacing-horizontal);
 
-	& > * {
+	> * {
 		margin-top: var(--global--spacing-unit);
 		margin-bottom: var(--global--spacing-unit);
 
@@ -46,7 +46,7 @@
 		padding-left: 0;
 		padding-right: var(--global--spacing-horizontal);
 	}
-	
+
 	&.has-text-align-center {
 		border: none;
 	}
@@ -62,7 +62,7 @@
 			padding-left: 0;
 			padding-right: var(--global--spacing-horizontal);
 		}
-		
+
 		&.has-text-align-center {
 			padding: 0 var(--global--spacing-horizontal);
 		}

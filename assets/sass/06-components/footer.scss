@@ -41,7 +41,7 @@
 		.imprint {
 			display: initial;
 		}
-		
+
 		.copyright {
 			margin-top: initial;
 			margin-left: auto;
@@ -77,7 +77,7 @@
 		text-align: left;
 	}
 
-	& > div {
+	> div {
 		display: inline;
 	}
 
@@ -87,7 +87,7 @@
 		margin: 0;
 		padding-left: 0;
 
-		& > li {
+		> li {
 			display: inline-block;
 
 			&:first-of-type > a {

@@ -3,7 +3,7 @@
  */
 .comments-area {
 
-	& > * {
+	> * {
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
 
@@ -189,7 +189,7 @@
 .comment-body {
 	position: relative;
 
-	& > * {
+	> * {
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
 	}

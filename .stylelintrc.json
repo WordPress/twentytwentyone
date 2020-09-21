@@ -5,7 +5,6 @@
 	"rules": {
 		"selector-class-pattern": null,
 		"no-duplicate-selectors": null,
-		"scss/selector-no-redundant-nesting-selector": null,
 		"font-weight-notation": null,
 		"selector-attribute-quotes": null,
 		"selector-pseudo-class-no-unknown": null,

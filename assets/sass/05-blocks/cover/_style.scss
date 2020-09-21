@@ -56,7 +56,7 @@
 
 		width: calc(100% - calc( 2 * var(--global--spacing-vertical)));
 
-		& > * {
+		> * {
 			margin-top: calc( 0.666 * var(--global--spacing-vertical) );
 			margin-bottom: calc( 0.666 * var(--global--spacing-vertical) );
 

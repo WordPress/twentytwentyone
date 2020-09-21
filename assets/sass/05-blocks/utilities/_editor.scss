@@ -141,7 +141,7 @@
 	.wp-block {
 		&[data-align="full"],
 		&.alignfull {
-			&>[data-block] {
+			>[data-block] {
 				margin-top: 0;
 				margin-bottom: 0;
 			}
