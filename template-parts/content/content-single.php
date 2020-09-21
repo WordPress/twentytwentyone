@@ -13,7 +13,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="entry-header alignwide">
+	<header class="entry-header <?php 
+		if ( is_page_template( 'templates/template-narrow-title.php' ) ) { 
+			echo esc_attr( 'default-max-width' ); } 
+		else { 
+			echo esc_attr( 'alignwide' );
+		} 
+	?>">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header>
 
