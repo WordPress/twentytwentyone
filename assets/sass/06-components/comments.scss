@@ -3,7 +3,7 @@
  */
 .comments-area {
 
-	& > * {
+	> * {
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
 
@@ -32,6 +32,7 @@
 	justify-content: space-between;
 
 	small {
+
 		a {
 			border-color: transparent;
 			color: currentColor;
@@ -197,7 +198,7 @@
 	position: relative;
 	margin-bottom: calc( 1.7 * var(--global--spacing-vertical));
 
-	& > * {
+	> * {
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
 	}
@@ -232,6 +233,7 @@
 
 	&:last-child {
 		margin-bottom: 0;
+
 		&.comment-form {
 			margin-bottom: var(--global--spacing-vertical);
 		}
@@ -240,6 +242,7 @@
 
 .comment-author {
 	padding-top: 3px;
+
 	.url {
 		border-bottom: none;
 		color: currentColor;
@@ -249,6 +252,7 @@
 .comment-form {
 	display: flex;
 	flex-wrap: wrap;
+
 	> * {
 		flex-basis: 100%;
 	}
@@ -292,7 +296,7 @@
 	textarea {
 		display: block;
 		font-size: var(--global--font-size-sm);
-		margin-bottom: calc( .5 * var(--global--spacing-unit) );
+		margin-bottom: calc(.5 * var(--global--spacing-unit));
 		width: 100%;
 		font-weight: 500;
 	}
@@ -304,7 +308,7 @@
 	@include media(mobile) {
 
 		&.comment-form-author {
-			margin-right: calc( 1.5 * var(--global--spacing-horizontal) );
+			margin-right: calc(1.5 * var(--global--spacing-horizontal));
 		}
 
 		&.comment-notes,
@@ -316,6 +320,7 @@
 
 // Comment navigation
 .comment-navigation {
+
 	a {
 		font-family: var(--global--font-primary);
 		font-size: var(--global--font-size-md);

@@ -38,17 +38,21 @@ h6 {
  * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
  */
 
-/**
- * Apply border-box across the entire page.
- */
 html {
+
+	/* Apply border-box across the entire page. */
 	box-sizing: border-box;
+
+	// HTML resets
+	font-family: var(--global--font-secondary);
+	line-height: var(--global--line-height-body);
 }
 
 /**
  * Relax the definition a bit, to allow components to override it manually.
  */
 * {
+
 	&,
 	&::before,
 	&::after {
@@ -56,15 +60,9 @@ html {
 	}
 }
 
-// HTML resets
-html {
-	font-family: var(--global--font-secondary);
-	line-height: var(--global--line-height-body);
-}
-
 // body resets
 body {
-	font-size: var(--global--font-size-base); 
+	font-size: var(--global--font-size-base);
 	font-weight: normal;
 	color: var(--global--color-primary);
 	text-align: left;
@@ -74,10 +72,10 @@ body {
 // Links styles
 a {
 	border-bottom: 1px solid var(--global--color-secondary);
-	color: var( --wp--style--color--link, var(--global--color-primary) );
+	color: var(--wp--style--color--link, var(--global--color-primary));
 	text-decoration: none;
 	transition: border-color 0.1s ease-out;
-	
+
 	&:hover,
 	&:focus {
 		border-bottom-color: transparent;
@@ -92,13 +90,13 @@ a {
 	}
 
 	&:active {
-		color: var( --wp--style--color--link, var(--global--color-primary) );
+		color: var(--wp--style--color--link, var(--global--color-primary));
 	}
 
 	// If a custom link color has been assigned,
-	// switch the color of the bottom border too. 
+	// switch the color of the bottom border too.
 	.has-link-color & {
-		border-bottom: 1px solid var( --wp--style--color--link, var(--global--color-primary) );
+		border-bottom: 1px solid var(--wp--style--color--link, var(--global--color-primary));
 	}
 }
 // Enforce the custom link color even if a custom background color has been set.
@@ -107,7 +105,7 @@ a {
 	// Target both current level and nested block.
 	.has-link-color a,
 	&.has-link-color a {
-		color: var( --wp--style--color--link, var(--global--color-primary) );
+		color: var(--wp--style--color--link, var(--global--color-primary));
 	}
 }
 
@@ -120,5 +118,5 @@ a {
 
 button,
 a {
-  cursor: pointer;
+	cursor: pointer;
 }

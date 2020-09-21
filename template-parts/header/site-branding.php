@@ -16,7 +16,7 @@
 	}
 	$blog_info = get_bloginfo( 'name' );
 	if ( ! empty( $blog_info ) ) {
-		if ( is_front_page() && is_home() ) {
+		if ( is_front_page() || ( is_front_page() && is_home() ) ) {
 			?>
 			<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 			<?php

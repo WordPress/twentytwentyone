@@ -4,11 +4,12 @@
 $baseline-unit: 10px;
 
 :root {
+
 	/* Font Family */
 	--global--font-primary: var(--font-headings, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
 	--global--font-secondary: var(--font-base, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
 
-	--global--font-code: monospace, monospace;
+	--global--font-code: monospace;
 	--global--font-ui: var(--font-base, var(--global--font-secondary));
 
 	/* Font Size */
@@ -22,7 +23,7 @@ $baseline-unit: 10px;
 	--global--letter-spacing: normal;
 
 	/* Line Height */
-	--global--line-height-base: 1.0;
+	--global--line-height-base: 1;
 	--global--line-height-body: 1.7;
 	--global--line-height-heading: 1.3;
 
@@ -65,24 +66,24 @@ $baseline-unit: 10px;
 	--definition-term--font-family: var(--global--font-primary);
 
 	/* Colors */
-	--global--color-black: #000000;
-	--global--color-dark-gray: #28303D;
-	--global--color-gray: #39414D;
-	--global--color-green: #D1E4DD;
-	--global--color-blue: #D1DFE4;
-	--global--color-purple: #D1D1E4;
-	--global--color-red: #E4D1D1;
-	--global--color-orange: #E4DAD1;
-	--global--color-yellow: #EEEADD;
-	--global--color-white: #FFFFFF;
+	--global--color-black: #000;
+	--global--color-dark-gray: #28303d;
+	--global--color-gray: #39414d;
+	--global--color-green: #d1e4dd;
+	--global--color-blue: #d1dfe4;
+	--global--color-purple: #d1d1e4;
+	--global--color-red: #e4d1d1;
+	--global--color-orange: #e4dad1;
+	--global--color-yellow: #eeeadd;
+	--global--color-white: #fff;
 	--global--color-white-50: rgba(255, 255, 255, 0.5); /* white 50% opacity used in form fields.*/
 
 	--global--color-primary: var(--global--color-dark-gray); /* Body text color, site title, footer text color. */
 	--global--color-secondary: var(--global--color-gray); /* Headings */
-	--global--color-primary-hover: var( --global--color-primary );
-	--global--color-secondary-hover: var( --global--color-secondary );
+	--global--color-primary-hover: var(--global--color-primary);
+	--global--color-secondary-hover: var(--global--color-secondary);
 	--global--color-background: var(--global--color-green); /* Mint, default body background */
-	--global--color-border: var( --global--color-black ); /* Used for borders (separators) */
+	--global--color-border: var(--global--color-black); /* Used for borders (separators) */
 
 	/* Spacing */
 	--global--spacing-unit: #{2 * $baseline-unit}; // 20px
@@ -91,7 +92,7 @@ $baseline-unit: 10px;
 	--global--spacing-vertical: #{3 * $baseline-unit}; // 30px.
 
 	/* Elevation */
-	--global--elevation: 1px 1px 3px 0px rgba( 0, 0, 0, 0.2 );
+	--global--elevation: 1px 1px 3px 0 rgba(0, 0, 0, 0.2);
 
 	/* Forms */
 	--form--font-family: var(--global--font-secondary);
@@ -104,7 +105,7 @@ $baseline-unit: 10px;
 	--form--spacing-unit: calc(0.5 * var(--global--spacing-unit));
 
 	/* Cover block */
-	--cover--height: calc( 15 * var(--global--spacing-vertical) );
+	--cover--height: calc(15 * var(--global--spacing-vertical));
 	--cover--color-foreground: var(--global--color-white);
 	--cover--color-background: var(--global--color-black);
 
@@ -134,7 +135,7 @@ $baseline-unit: 10px;
 	--entry-header--color-hover: var(--global--color-primary-hover);
 	--entry-header--color-focus: var(--global--color-secondary);
 	--entry-header--font-family: var(--heading--font-family);
-	--entry-header--font-size: var(--global--font-size-page-title);
+	--entry-header--font-size: var(--heading--font-size-h2);
 	--entry-content--font-family: var(--global--font-secondary);
 	--entry-meta--color: var(--global--color-primary);
 	--entry-meta--color-link: currentColor;
@@ -175,7 +176,7 @@ $baseline-unit: 10px;
 	--primary-nav--color-link: var(--global--color-primary);
 	--primary-nav--color-link-hover: var(--global--color-primary-hover);
 	--primary-nav--color-text: var(--global--color-primary);
-	--primary-nav--padding: calc(0.66 * var(--global--spacing-unit) );
+	--primary-nav--padding: calc(0.66 * var(--global--spacing-unit));
 	--primary-nav--justify-content: center;
 
 	/* Pagination */

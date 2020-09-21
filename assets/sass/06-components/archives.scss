@@ -1,5 +1,5 @@
 .page-title {
-	font-size: var(--heading--font-size-h2);
+	font-size: var(--global--font-size-page-title);
 }
 
 h1.page-title,
@@ -9,5 +9,5 @@ h2.page-title {
 
 .page-header {
 	border-bottom: 3px solid var(--global--color-border);
-	padding-bottom: calc( 2* var(--global--spacing-vertical));
+	padding-bottom: calc(2 * var(--global--spacing-vertical));
 }
