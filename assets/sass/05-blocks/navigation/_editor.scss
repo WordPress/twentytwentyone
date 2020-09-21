@@ -31,7 +31,8 @@
 
 			> a {
 
-				&:hover, &:focus {
+				&:hover,
+				&:focus {
 					color: var(--primary-nav--color-link-hover);
 				}
 			}

@@ -23,7 +23,8 @@ Example:
 
 	@if editor == $view {
 
-		:root, body {
+		:root,
+		body {
 			@content;
 		}
 	}
