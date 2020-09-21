@@ -13,7 +13,7 @@
 		font-size: var(--form--font-size);
 		line-height: var(--form--line-height);
 		max-width: inherit;
-		margin-right: calc( .66 * var(--global--spacing-horizontal) );
+		margin-right: calc(.66 * var(--global--spacing-horizontal));
 		padding: var(--form--spacing-unit);
 
 		&:focus {

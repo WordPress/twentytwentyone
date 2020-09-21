@@ -288,7 +288,7 @@
 	textarea {
 		display: block;
 		font-size: var(--global--font-size-sm);
-		margin-bottom: calc( .5 * var(--global--spacing-unit) );
+		margin-bottom: calc(.5 * var(--global--spacing-unit));
 		width: 100%;
 		font-weight: 500;
 	}
@@ -300,7 +300,7 @@
 	@include media(mobile) {
 
 		&.comment-form-author {
-			margin-right: calc( 1.5 * var(--global--spacing-horizontal) );
+			margin-right: calc(1.5 * var(--global--spacing-horizontal));
 		}
 
 		&.comment-notes,

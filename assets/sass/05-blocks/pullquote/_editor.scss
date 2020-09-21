@@ -1,5 +1,5 @@
 .wp-block-pullquote {
-	padding: calc( 2 * var(--global--spacing-unit) ) 0;
+	padding: calc(2 * var(--global--spacing-unit)) 0;
 	margin-left: 0;
 	margin-right: 0;
 	text-align: left;
@@ -39,7 +39,7 @@
 
 		background-color: var(--pullquote--color-foreground);
 		color: var(--pullquote--color-background);
-		padding: calc( 2 * var(--global--spacing-unit) );
+		padding: calc(2 * var(--global--spacing-unit));
 
 		&.alignleft blockquote,
 		&.alignright blockquote {
@@ -68,7 +68,7 @@
 	.wp-block-pullquote:not(.is-style-solid-color) {
 
 		blockquote {
-			padding: 0 calc( 2 * var(--global--spacing-unit));
+			padding: 0 calc(2 * var(--global--spacing-unit));
 		}
 	}
 }

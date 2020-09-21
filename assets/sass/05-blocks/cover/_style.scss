@@ -18,7 +18,7 @@
 		}
 
 		.has-link-color a {
-			color: var( --wp--style--color--link, var(--global--color-primary) );
+			color: var(--wp--style--color--link, var(--global--color-primary));
 		}
 	}
 
@@ -56,11 +56,11 @@
 
 	.wp-block-cover__inner-container {
 
-		width: calc(100% - calc( 2 * var(--global--spacing-vertical)));
+		width: calc(100% - calc(2 * var(--global--spacing-vertical)));
 
 		> * {
-			margin-top: calc( 0.666 * var(--global--spacing-vertical) );
-			margin-bottom: calc( 0.666 * var(--global--spacing-vertical) );
+			margin-top: calc(0.666 * var(--global--spacing-vertical));
+			margin-bottom: calc(0.666 * var(--global--spacing-vertical));
 
 			@include media(mobile) {
 				margin-top: var(--global--spacing-vertical);
