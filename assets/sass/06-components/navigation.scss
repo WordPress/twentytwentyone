@@ -16,7 +16,7 @@
 		margin-right: calc(0.25 * var(--global--spacing-unit));
 	}
 
-	@include media(mobile-only){
+	@include media(mobile-only) {
 		display: flex;
 	}
 

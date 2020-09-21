@@ -77,7 +77,7 @@
 		}
 	}
 
-	&:not(.has-background){
+	&:not(.has-background) {
 
 		.wp-block-navigation__container {
 
@@ -87,14 +87,14 @@
 		}
 	}
 
-	&:not(.has-background){
+	&:not(.has-background) {
 
 		.wp-block-navigation__container {
 			background: var(--global--color-background);
 		}
 	}
 
-	&:not(.has-text-color){
+	&:not(.has-text-color) {
 
 		.wp-block-navigation-link {
 

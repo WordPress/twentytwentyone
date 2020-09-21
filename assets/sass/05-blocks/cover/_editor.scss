@@ -22,7 +22,7 @@
 	}
 
 	// Default & custom background-color
-	&:not([class*="background-color"]){
+	&:not([class*="background-color"]) {
 
 		.wp-block-cover__inner-container,
 		.wp-block-cover-image-text,
