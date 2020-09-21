@@ -60,7 +60,7 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	/* Page breaks */
 
 	a {
-		page-break-inside: avoid
+		page-break-inside: avoid;
 	}
 
 	blockquote {
@@ -74,7 +74,7 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	h5,
 	h6 {
 		page-break-after: avoid;
-		page-break-inside: avoid
+		page-break-inside: avoid;
 	}
 
 	img {
