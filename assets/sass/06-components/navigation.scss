@@ -11,7 +11,7 @@
 	#primary-open-menu {
 		margin-left: auto;
 		padding: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit))) calc(var(--button--padding-horizontal) - (0.25 * var(--global--spacing-unit)));
-		margin-top: calc(0.60 * var(--global--spacing-unit));
+		margin-top: calc(0.6 * var(--global--spacing-unit));
 		margin-right: calc(0.25 * var(--global--spacing-unit));
 	}
 
@@ -75,7 +75,7 @@
 		#primary-close-menu {
 			display: flex;
 			padding: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit))) calc(var(--button--padding-horizontal) - (0.25 * var(--global--spacing-unit)));
-			margin-top: calc(0.60 * var(--global--spacing-unit));
+			margin-top: calc(0.6 * var(--global--spacing-unit));
 			margin-right: calc(0.25 * var(--global--spacing-unit));
 			margin-left: auto;
 		}
@@ -91,7 +91,7 @@
 	text-transform: var(--branding--title--text-transform);
 	margin-top: 0;
 	margin-bottom: 0;
-	padding: 0 calc(0.50 * var(--global--spacing-horizontal));
+	padding: 0 calc(0.5 * var(--global--spacing-horizontal));
 	background-color: var(--global--color-background);
 
 	@include media(mobile-only) {

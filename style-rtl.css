@@ -74,7 +74,7 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--global--font-size-page-title: 6rem;
 	--global--letter-spacing: normal;
 	/* Line Height */
-	--global--line-height-base: 1.0;
+	--global--line-height-base: 1;
 	--global--line-height-body: 1.7;
 	--global--line-height-heading: 1.3;
 	/* Headings */
@@ -3325,7 +3325,7 @@ h2.page-title {
 .menu-button-container #primary-open-menu {
 	margin-right: auto;
 	padding: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit))) calc(var(--button--padding-horizontal) - (0.25 * var(--global--spacing-unit)));
-	margin-top: calc(0.60 * var(--global--spacing-unit));
+	margin-top: calc(0.6 * var(--global--spacing-unit));
 	margin-left: calc(0.25 * var(--global--spacing-unit));
 }
 
@@ -3392,7 +3392,7 @@ h2.page-title {
 .primary-navigation #primary-close-menu {
 	display: flex;
 	padding: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit))) calc(var(--button--padding-horizontal) - (0.25 * var(--global--spacing-unit)));
-	margin-top: calc(0.60 * var(--global--spacing-unit));
+	margin-top: calc(0.6 * var(--global--spacing-unit));
 	margin-left: calc(0.25 * var(--global--spacing-unit));
 	margin-right: auto;
 }
@@ -3406,7 +3406,7 @@ h2.page-title {
 	text-transform: var(--branding--title--text-transform);
 	margin-top: 0;
 	margin-bottom: 0;
-	padding: 0 calc(0.50 * var(--global--spacing-horizontal));
+	padding: 0 calc(0.5 * var(--global--spacing-horizontal));
 	background-color: var(--global--color-background);
 }
 
