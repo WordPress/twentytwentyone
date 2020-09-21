@@ -771,7 +771,8 @@ template {
 	max-width: var(--responsive--alignfull-width);
 }
 
-.archive-max-width, .singular .post-thumbnail {
+.archive-max-width, .entry-header .post-thumbnail,
+.singular .post-thumbnail {
 	margin-left: auto;
 	margin-right: auto;
 	width: calc(var(--responsive--alignfull-width) - calc(2 * var(--responsive--spacing-horizontal)));
@@ -779,7 +780,8 @@ template {
 }
 
 @media only screen and (min-width: 822px) {
-	.archive-max-width, .singular .post-thumbnail {
+	.archive-max-width, .entry-header .post-thumbnail,
+	.singular .post-thumbnail {
 		margin-left: auto;
 		margin-right: auto;
 		width: calc(var(--responsive--alignfull-width) - calc(4 * var(--responsive--spacing-horizontal)));
@@ -2971,12 +2973,11 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .post-thumbnail .wp-post-image {
+	display: block;
 	width: auto;
 	max-width: 100%;
-}
-
-.post-thumbnail .post-thumbnail-inner {
-	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /**
