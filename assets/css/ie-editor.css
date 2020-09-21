@@ -1116,7 +1116,7 @@ dt {
 }
 
 .wp-block-navigation .has-child .wp-block-navigation__container {
-	box-shadow: 1px 1px 3px 0px rgba( 0, 0, 0, 0.2 );
+	box-shadow: 1px 1px 3px 0 rgba( 0, 0, 0, 0.2 );
 }
 
 .wp-block-navigation:not(.has-text-color) .wp-block-navigation-link > a:hover {

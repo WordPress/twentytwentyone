@@ -137,7 +137,7 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--global--spacing-horizontal: 25px;
 	--global--spacing-vertical: 30px;
 	/* Elevation */
-	--global--elevation: 1px 1px 3px 0px rgba( 0, 0, 0, 0.2 );
+	--global--elevation: 1px 1px 3px 0 rgba( 0, 0, 0, 0.2 );
 	/* Forms */
 	--form--font-family: var(--global--font-secondary);
 	--form--font-size: var(--global--font-size-md);

@@ -3027,7 +3027,7 @@ dd {
 
 .wp-block-navigation > .wp-block-navigation__container > .has-child > .wp-block-navigation__container {
 	background: #d1e4dd;
-	box-shadow: 1px 1px 3px 0px rgba( 0, 0, 0, 0.2 );
+	box-shadow: 1px 1px 3px 0 rgba( 0, 0, 0, 0.2 );
 	margin: 0;
 	padding: 0;
 	position: absolute;
@@ -4917,7 +4917,7 @@ h2.page-title {
 	.primary-navigation > .menu-wrapper > li > .sub-menu {
 		margin: 0;
 		background: #d1e4dd;
-		box-shadow: 1px 1px 3px 0px rgba( 0, 0, 0, 0.2 );
+		box-shadow: 1px 1px 3px 0 rgba( 0, 0, 0, 0.2 );
 		left: 0;
 		top: calc(100% - 7px);
 		min-width: max-content;

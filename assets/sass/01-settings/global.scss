@@ -91,7 +91,7 @@ $baseline-unit: 10px;
 	--global--spacing-vertical: #{3 * $baseline-unit}; // 30px.
 
 	/* Elevation */
-	--global--elevation: 1px 1px 3px 0px rgba( 0, 0, 0, 0.2 );
+	--global--elevation: 1px 1px 3px 0 rgba( 0, 0, 0, 0.2 );
 
 	/* Forms */
 	--form--font-family: var(--global--font-secondary);
