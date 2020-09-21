@@ -28,8 +28,9 @@ input[type="color"],
 	}
 }
 
-//Reset the negative offset from normalize to make the thicker "border" work on focus.
+// Reset the negative offset from normalize to make the thicker "border" work on focus.
 input[type="search"] {
+
 	&:focus {
 		outline-offset: 0;
 	}
@@ -37,12 +38,12 @@ input[type="search"] {
 
 select {
 	border: var(--form--border-width) solid var(--form--border-color);
-	padding: calc( 0.5 * var(--form--spacing-unit));
+	padding: calc(0.5 * var(--form--spacing-unit));
 	background: var(--global--color-white-50);
-}
 
-.site select:focus {
-	background: var(--global--color-white);
+	&:focus {
+		background: var(--global--color-white);
+	}
 }
 
 textarea {
@@ -54,9 +55,10 @@ https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
 https://codepen.io/aaroniker/pen/ZEYoxEY by Aaron Iker.
 License: MIT.
 */
-@supports(-webkit-appearance: none) or (-moz-appearance: none) {
-	input[type=checkbox],
-	input[type=radio] {
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+
+	input[type="checkbox"],
+	input[type="radio"] {
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		position: relative;
@@ -67,14 +69,15 @@ License: MIT.
 		outline-offset: 0;
 	}
 
-	input[type=checkbox] {
+	input[type="checkbox"] {
+
 		&:focus {
 			outline: 1px solid var(--form--border-color);
 			background: var(--global--color-white);
 		}
 
 		&:after {
-			content: '';
+			content: "";
 			opacity: 0;
 			display: block;
 			left: 5px;
@@ -98,7 +101,7 @@ License: MIT.
 		}
 	}
 
-	input[type=radio] {
+	input[type="radio"] {
 		border-radius: 50%;
 
 		&:focus {
@@ -108,7 +111,7 @@ License: MIT.
 		}
 
 		&:after {
-			content: '';
+			content: "";
 			opacity: 0;
 			display: block;
 			left: 3px;
@@ -129,18 +132,16 @@ License: MIT.
 				opacity: 1;
 			}
 
-			// Focus style for checked radio buttons
+			// Focus style for checked radio buttons.
 			&:focus {
 				box-shadow: 0 0 0 2px var(--form--border-color);
 			}
 		}
-
 	}
-
 }
 
- // Vertically align checkbox + label relationship
-input[type=checkbox] + label {
+// Vertically align checkbox + label relationship
+input[type="checkbox"] + label {
 	display: inline;
 	margin-left: 10px;
 	font-weight: normal;
@@ -149,6 +150,6 @@ input[type=checkbox] + label {
 
 label {
 	font-size: var(--form--font-size);
-	font-weight: var( --form--label-weight);
+	font-weight: var(--form--label-weight);
 	margin-bottom: 10px;
 }

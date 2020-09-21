@@ -43,7 +43,8 @@
                 textColor = 127 < lum ? '#000' : '#fff';
 
             document.documentElement.style.setProperty( '--global--color-primary', textColor );
-            document.documentElement.style.setProperty( '--global--color-secondary', textColor );
+			document.documentElement.style.setProperty( '--global--color-secondary', textColor );
+			document.documentElement.style.setProperty( '--button--color-background', textColor );
         } );
 	} );
 }( wp.customize, _ ) );

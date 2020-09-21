@@ -3,7 +3,7 @@
  */
 .comments-area {
 
-	& > * {
+	> * {
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
 
@@ -32,6 +32,7 @@
 	justify-content: space-between;
 
 	small {
+
 		a {
 			border-bottom: none;
 			color: currentColor;
@@ -144,6 +145,7 @@
 .reply {
 	font-size: var(--global--font-size-sm);
 	line-height: var(--global--line-height-heading);
+	text-align: right;
 
 	a {
 		background-color: var(--button--color-background);
@@ -163,10 +165,7 @@
 			background-color: var(--button--color-background-hover);
 		}
 	}
-}
 
-.reply {
-	text-align: right;
 	@include media(mobile) {
 		text-align: left;
 	}
@@ -189,7 +188,7 @@
 .comment-body {
 	position: relative;
 
-	& > * {
+	> * {
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
 	}
@@ -224,6 +223,7 @@
 
 	&:last-child {
 		margin-bottom: 0;
+
 		&.comment-form {
 			margin-bottom: var(--global--spacing-vertical);
 		}
@@ -232,6 +232,7 @@
 
 .comment-author {
 	padding-top: 3px;
+
 	.url {
 		border-bottom: none;
 		color: currentColor;
@@ -241,6 +242,7 @@
 .comment-form {
 	display: flex;
 	flex-wrap: wrap;
+
 	> * {
 		flex-basis: 100%;
 	}
@@ -262,8 +264,8 @@
 
 	.comment-form-cookies-consent > label,
 	.comment-notes {
-		font-weight: normal;
 		font-size: var(--global--font-size-xs);
+		font-weight: normal;
 	}
 }
 
@@ -285,7 +287,7 @@
 	textarea {
 		display: block;
 		font-size: var(--global--font-size-sm);
-		margin-bottom: calc( .5 * var(--global--spacing-unit) );
+		margin-bottom: calc(.5 * var(--global--spacing-unit));
 		width: 100%;
 		font-weight: 500;
 	}
@@ -297,7 +299,7 @@
 	@include media(mobile) {
 
 		&.comment-form-author {
-			margin-right: calc( 1.5 * var(--global--spacing-horizontal) );
+			margin-right: calc(1.5 * var(--global--spacing-horizontal));
 		}
 
 		&.comment-notes,
@@ -309,6 +311,7 @@
 
 // Comment navigation
 .comment-navigation {
+
 	a {
 		font-family: var(--global--font-primary);
 		font-size: var(--global--font-size-md);

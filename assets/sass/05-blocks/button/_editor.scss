@@ -26,7 +26,7 @@
 	.is-style-outline & {
 		color: var(--button--color-background);
 		background: transparent;
-		border: var(--button--border-width) solid currentcolor;
+		border: var(--button--border-width) solid currentColor;
 
 		&:active,
 		&:hover {

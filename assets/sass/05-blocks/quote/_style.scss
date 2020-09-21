@@ -3,7 +3,7 @@
 	margin: var(--global--spacing-vertical) 0;
 	padding-left: var(--global--spacing-horizontal);
 
-	& > * {
+	> * {
 		margin-top: var(--global--spacing-unit);
 		margin-bottom: var(--global--spacing-unit);
 
@@ -46,13 +46,14 @@
 		padding-left: 0;
 		padding-right: var(--global--spacing-horizontal);
 	}
-	
+
 	&.has-text-align-center {
 		border: none;
 	}
 
 	&.is-style-large,
 	&.is-large {
+
 		/* Resetting margins to match _block-container.scss */
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
@@ -62,7 +63,7 @@
 			padding-left: 0;
 			padding-right: var(--global--spacing-horizontal);
 		}
-		
+
 		&.has-text-align-center {
 			padding: 0 var(--global--spacing-horizontal);
 		}
