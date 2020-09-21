@@ -84,17 +84,7 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	/* Block: Pull quote */
 }
 
-/* Any helpful mixins we need? Put them here. */
-/*
-Example:
-@mixin typography {
-	color: var(--color-charcoal);
-	font-family: var(--font-family);
-	font-size: var(--font-size-global);
-	line-height: var(--line-height-global);
-	word-wrap: break-word;
-}
-*/
+/* Copied from Gutenberg to use with the primary navigation menu */
 button {
 	line-height: 1;
 	color: #d1e4dd;
@@ -2972,83 +2962,173 @@ dd {
 	}
 }
 
-.wp-block-navigation .wp-block-navigation-link {
-	padding: 0;
-}
-
-.wp-block-navigation .wp-block-navigation-link .wp-block-navigation-link__content {
-	padding: 13px;
-}
-
-.wp-block-navigation .wp-block-navigation-link .wp-block-navigation-link__label {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1.25rem;
-	font-weight: normal;
-}
-
-.wp-block-navigation .wp-block-navigation-link__submenu-icon {
-	padding: 0;
-}
-
-.wp-block-navigation > .wp-block-navigation__container .has-child .wp-block-navigation-link {
-	display: inherit;
-}
-
-.wp-block-navigation > .wp-block-navigation__container .has-child .wp-block-navigation__container {
-	border: none;
-	left: 0;
-	margin-left: 13px;
-	min-width: max-content;
-	opacity: 0;
-	padding: 0;
-	position: inherit;
-	top: inherit;
-}
-
-.wp-block-navigation > .wp-block-navigation__container .has-child .wp-block-navigation__container .wp-block-navigation-link .wp-block-navigation-link__content {
-	display: inline-block;
-	padding: 7px 13px;
-}
-
-.wp-block-navigation > .wp-block-navigation__container .has-child .wp-block-navigation__container .wp-block-navigation-link__submenu-icon {
-	display: none;
-}
-
-.wp-block-navigation > .wp-block-navigation__container .has-child:hover .wp-block-navigation__container, .wp-block-navigation > .wp-block-navigation__container .has-child:focus-within .wp-block-navigation__container {
-	display: block;
-	opacity: 1;
-	visibility: visible;
-}
-
-.wp-block-navigation > .wp-block-navigation__container > .has-child > .wp-block-navigation__container {
-	background: #d1e4dd;
-	box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.2);
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	top: 100%;
-}
-
-.wp-block-navigation:not(.has-background) .wp-block-navigation__container {
-	background: #d1e4dd;
+/* Navigation block style CSS
+This style needs to be in the theme for backwards compatibility
+for WordPress versions earlier than 5.6.
+https://github.com/WordPress/gutenberg/blob/master/packages/block-library/src/navigation/style.scss
+*/
+.wp-block-navigation:not(.has-background) .wp-block-navigation__container .wp-block-navigation-link:not(.has-text-color) {
+	color: #28303D;
 }
 
 .wp-block-navigation:not(.has-background) .wp-block-navigation__container .wp-block-navigation__container {
-	background: #d1e4dd;
+	background-color: #D1E4DD;
 }
 
-.wp-block-navigation:not(.has-text-color) .wp-block-navigation-link > a:hover {
-	color: #28303d;
+.items-justified-left > ul {
+	justify-content: flex-start;
 }
 
-.wp-block-navigation:not(.has-text-color) .wp-block-navigation-link > a:focus {
-	color: #28303d;
+.items-justified-center > ul {
+	justify-content: center;
 }
 
-.wp-block-navigation:not(.has-text-color) .wp-block-navigation-link__content {
-	color: currentColor;
+.items-justified-right > ul {
+	justify-content: flex-end;
 }
 
+.wp-block-navigation ul,
+.wp-block-navigation ul li {
+	list-style: none;
+}
+
+/*
+https://github.com/WordPress/gutenberg/blob/master/packages/block-library/src/navigation/theme.scss
+*/
+.wp-block-navigation-link.wp-block-navigation-link {
+	margin: 0;
+}
+
+/* Navigation link block style CSS
+https://github.com/WordPress/gutenberg/blob/master/packages/block-library/src/navigation-link/style.scss
+*/
+.wp-block-navigation-link {
+	display: flex;
+	align-items: center;
+	position: relative;
+	margin: 0;
+}
+
+.wp-block-navigation-link .wp-block-navigation__container:empty {
+	display: none;
+}
+
+.wp-block-navigation__container {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.is-vertical .wp-block-navigation__container {
+	display: block;
+}
+
+.has-child > .wp-block-navigation-link__content {
+	padding-right: 0.5em;
+}
+
+.has-child .wp-block-navigation__container {
+	background-color: inherit;
+	color: inherit;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: fit-content;
+	z-index: 2;
+	opacity: 0;
+	transition: opacity 0.1s linear;
+	visibility: hidden;
+}
+
+.has-child .wp-block-navigation__container > .wp-block-navigation-link > .wp-block-navigation-link__content {
+	flex-grow: 1;
+}
+
+.has-child .wp-block-navigation__container > .wp-block-navigation-link > .wp-block-navigation-link__submenu-icon {
+	padding-right: 0.5em;
+}
+
+@media (min-width: 782px) {
+	.has-child .wp-block-navigation__container {
+		left: 1.5em;
+	}
+	.has-child .wp-block-navigation__container .wp-block-navigation__container {
+		left: 100%;
+		top: -1px;
+	}
+	.has-child .wp-block-navigation__container .wp-block-navigation__container::before {
+		content: "";
+		position: absolute;
+		right: 100%;
+		height: 100%;
+		display: block;
+		width: 0.5em;
+		background: transparent;
+	}
+	.has-child .wp-block-navigation__container .wp-block-navigation-link__submenu-icon svg {
+		transform: rotate(0);
+	}
+}
+
+.has-child:hover {
+	cursor: pointer;
+}
+
+.has-child:hover > .wp-block-navigation__container {
+	visibility: visible;
+	opacity: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.has-child:focus-within {
+	cursor: pointer;
+}
+
+.has-child:focus-within > .wp-block-navigation__container {
+	visibility: visible;
+	opacity: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.wp-block-navigation-link__content {
+	color: inherit;
+	text-decoration: none;
+	padding: 0.5em 1em;
+}
+
+.wp-block-navigation-link__content + .wp-block-navigation-link__content {
+	padding-top: 0;
+}
+
+.has-text-color .wp-block-navigation-link__content {
+	color: inherit;
+}
+
+.wp-block-navigation-link__label {
+	word-break: normal;
+	overflow-wrap: break-word;
+}
+
+.wp-block-navigation-link__submenu-icon {
+	height: inherit;
+	padding: 0.375em 1em 0.375em 0;
+}
+
+.wp-block-navigation-link__submenu-icon svg {
+	fill: currentColor;
+}
+
+@media (min-width: 782px) {
+	.wp-block-navigation-link__submenu-icon svg {
+		transform: rotate(90deg);
+	}
+}
+
+/* End of block code copied form Gutenberg */
 p {
 	line-height: --global--line-height-body;
 }
@@ -3775,6 +3855,7 @@ table th {
 /* Category 06 contains all "bigger" components which contain elements of the previous two categories like header, footer, page template, single template, comments section, archives, ... */
 .site-header {
 	display: flex;
+	align-items: flex-start;
 	margin-left: 25px;
 	margin-right: 25px;
 }
@@ -3783,6 +3864,13 @@ table th {
 	.site-header {
 		margin-left: 100px;
 		margin-right: 100px;
+	}
+}
+
+@media only screen and (max-width: 481px) {
+	.site-header {
+		padding: 30px 25px;
+		margin: 0;
 	}
 }
 
@@ -4682,8 +4770,40 @@ h2.page-title {
 	}
 }
 
+.primary-navigation {
+	color: #28303D;
+	font-size: 1.125rem;
+	text-transform: uppercase;
+}
+
+.primary-navigation .has-child .wp-block-navigation__container {
+	font-size: 1rem;
+}
+
+.primary-navigation.wp-block-navigation:not(.has-background) .wp-block-navigation__container {
+	background-color: #D1E4DD;
+}
+
+.primary-navigation.wp-block-navigation .wp-block-navigation-link:not(.has-text-color) {
+	color: #28303D;
+}
+
+.primary-navigation .has-child .wp-block-navigation__container {
+	border: none;
+}
+
+@media (min-width: 782px) {
+	.primary-navigation .has-child .wp-block-navigation__container {
+		left: 0;
+	}
+	.primary-navigation .has-child .wp-block-navigation__container .wp-block-navigation__container {
+		left: 100%;
+		top: -1px;
+	}
+}
+
 .menu-button-container .button {
-	font-size: 1.25rem;
+	font-size: 1.125rem;
 	text-transform: uppercase;
 	background-color: transparent;
 	color: #28303d;
@@ -4691,7 +4811,7 @@ h2.page-title {
 }
 
 .primary-navigation .button {
-	font-size: 1.25rem;
+	font-size: 1.125rem;
 	text-transform: uppercase;
 	background-color: transparent;
 	color: #28303d;
@@ -4766,13 +4886,6 @@ h2.page-title {
 	position: absolute;
 	top: 0;
 	right: 0;
-	color: #28303d;
-	font-size: 1.25rem;
-	text-transform: uppercase;
-	margin-top: 0;
-	margin-bottom: 0;
-	padding: 0 13px;
-	background-color: #d1e4dd;
 }
 
 @media only screen and (max-width: 481px) {
@@ -4802,14 +4915,12 @@ h2.page-title {
 .admin-bar.primary-navigation-open .primary-navigation,
 .admin-bar.primary-navigation-open .primary-navigation > .menu-wrapper,
 .admin-bar.primary-navigation-open.lock-scrolling .primary-navigation > .button {
-	top: 9px;
+	top: 0;
 }
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation {
 		position: relative;
-		display: flex;
-		justify-content: center;
 		margin-left: auto;
 	}
 	.primary-navigation > .menu-wrapper {
@@ -4824,221 +4935,12 @@ h2.page-title {
 	.primary-navigation #toggle-menu {
 		display: none;
 	}
-	.primary-navigation > .menu-wrapper > li > ul {
-		display: none;
-	}
 	.admin-bar .primary-navigation {
 		top: initial;
 	}
 	.admin-bar .primary-navigation > .menu-wrapper {
 		top: initial;
 	}
-}
-
-.primary-navigation > .menu-wrapper {
-	visibility: hidden;
-	opacity: 0;
-	position: relative;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	padding: 80px 20px 25px;
-	background-color: #d1e4dd;
-	overflow-x: hidden;
-	overflow-y: scroll;
-	transition: all .15s ease-in-out;
-	transform: translateY(30px);
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	list-style: none;
-	margin: 0;
-	max-width: none;
-	padding-left: 0;
-	/* Sub-menus Flyout */
-}
-
-@media only screen and (max-width: 481px) {
-	.primary-navigation > .menu-wrapper {
-		z-index: 499;
-	}
-}
-
-.primary-navigation > .menu-wrapper ul {
-	padding-left: 0;
-}
-
-.primary-navigation > .menu-wrapper li {
-	display: block;
-	position: relative;
-	width: 100%;
-	z-index: 1;
-}
-
-.primary-navigation > .menu-wrapper li:hover, .primary-navigation > .menu-wrapper li:focus-within {
-	cursor: pointer;
-	z-index: 99999;
-}
-
-@media only screen and (min-width: 482px) {
-	.primary-navigation > .menu-wrapper li {
-		display: inherit;
-		width: inherit;
-		/* Submenu display */
-	}
-	.primary-navigation > .menu-wrapper li:hover > ul,
-	.primary-navigation > .menu-wrapper li:focus-within > ul,
-	.primary-navigation > .menu-wrapper li ul:hover,
-	.primary-navigation > .menu-wrapper li ul:focus {
-		visibility: visible;
-		opacity: 1;
-		display: block;
-	}
-}
-
-.primary-navigation > .menu-wrapper > li > .sub-menu {
-	position: relative;
-}
-
-@media only screen and (min-width: 482px) {
-	.primary-navigation > .menu-wrapper > li > .sub-menu {
-		margin: 0;
-		background: #d1e4dd;
-		box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.2);
-		left: 0;
-		top: calc(100% - 7px);
-		min-width: max-content;
-		opacity: 0;
-		position: absolute;
-		transition: all 0.5s ease;
-		visibility: hidden;
-	}
-}
-
-.primary-navigation > .menu-wrapper > li > .sub-menu .sub-menu {
-	width: 100%;
-}
-
-.primary-navigation .primary-menu > .menu-item:hover > a {
-	color: #28303d;
-}
-
-.primary-navigation .menu-wrapper > .menu-item {
-	padding: 7px 0;
-}
-
-@media only screen and (min-width: 482px) {
-	.primary-navigation .menu-wrapper > .menu-item {
-		display: flex;
-		align-items: center;
-		padding: 13px;
-	}
-}
-
-.primary-navigation .menu-item > a {
-	color: #28303d;
-}
-
-.primary-navigation .menu-item > a:hover {
-	color: #28303d;
-	border-color: #39414d;
-}
-
-.primary-navigation .menu-item > a:focus {
-	color: #39414d;
-}
-
-.primary-navigation .menu-item > a:active {
-	color: #28303d;
-}
-
-.primary-navigation a {
-	color: currentColor;
-	display: inline;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 2rem;
-	font-weight: normal;
-}
-
-@media only screen and (min-width: 482px) {
-	.primary-navigation a {
-		display: block;
-		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-		font-size: 1.25rem;
-		font-weight: normal;
-	}
-}
-
-.primary-navigation a + svg {
-	fill: currentColor;
-}
-
-.primary-navigation a:hover, .primary-navigation a:link, .primary-navigation a:visited {
-	color: currentColor;
-}
-
-.primary-navigation .sub-menu {
-	list-style: none;
-	margin-left: 13px;
-}
-
-@media only screen and (min-width: 482px) {
-	.primary-navigation .sub-menu {
-		padding: 7px 13px;
-	}
-	.primary-navigation .sub-menu > .menu-item > .sub-menu {
-		padding: 0;
-	}
-	.primary-navigation .sub-menu > .menu-item.menu-item-has-children {
-		padding: 7px 13px 0 0;
-	}
-}
-
-.primary-navigation .sub-menu .menu-item {
-	padding-top: 7px;
-	padding-bottom: 7px;
-}
-
-@media only screen and (min-width: 482px) {
-	.primary-navigation .sub-menu .menu-item {
-		padding-top: 7px;
-		padding-bottom: 7px;
-	}
-}
-
-.primary-navigation .sub-menu .menu-item a {
-	display: inline;
-	font-size: 1.5rem;
-	font-style: italic;
-}
-
-@media only screen and (min-width: 482px) {
-	.primary-navigation .sub-menu .menu-item a {
-		font-size: 1.25rem;
-		font-style: normal;
-	}
-}
-
-.primary-navigation .menu-item-has-children > .svg-icon {
-	display: none;
-}
-
-@media only screen and (min-width: 482px) {
-	.primary-navigation .menu-item-has-children > .svg-icon {
-		display: inline-block;
-		height: 100%;
-	}
-}
-
-.primary-navigation .hide-visually {
-	position: absolute !important;
-	clip: rect(1px, 1px, 1px, 1px);
-	padding: 0 !important;
-	border: 0 !important;
-	height: 1px !important;
-	width: 1px !important;
-	overflow: hidden;
 }
 
 @media only screen and (max-width: 481px) {
