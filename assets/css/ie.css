@@ -3559,6 +3559,11 @@ nav a {
 	margin-bottom: 90px;
 }
 
+.post-template-template-narrow-title .entry-header {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
 .single .has-post-thumbnail .entry-header {
 	border-bottom: none;
 	padding-bottom: 39px;
