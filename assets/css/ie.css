@@ -840,29 +840,26 @@ hr.wp-block-separator.is-style-wide {
 .entry-header .post-thumbnail {
 	margin-left: auto;
 	margin-right: auto;
-	width: calc(100% - 60px);
+	width: calc(100vw - 30px);
 	max-width: 100%;
+}
+
+@media only screen and (min-width: 652px){
+	.entry-header .post-thumbnail{
+	width: calc(100vw - 200px);
+	}
 }
 
 .singular .post-thumbnail {
 	margin-left: auto;
 	margin-right: auto;
-	width: calc(100% - 60px);
+	width: calc(100vw - 30px);
 	max-width: 100%;
 }
 
-@media only screen and (min-width: 822px) {
-	.entry-header .post-thumbnail {
-		margin-left: auto;
-		margin-right: auto;
-		width: calc(100% - 120px);
-		max-width: 100%;
-	}
-	.singular .post-thumbnail {
-		margin-left: auto;
-		margin-right: auto;
-		width: calc(100% - 120px);
-		max-width: 100%;
+@media only screen and (min-width: 652px){
+	.singular .post-thumbnail{
+	width: calc(100vw - 200px);
 	}
 }
 

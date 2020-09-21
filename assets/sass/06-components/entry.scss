@@ -202,7 +202,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 	.entry-header &,
 	.singular & {
-		@extend %responsive-alignfull-width-nested;
+		@extend %responsive-alignwide-width-nested;
 	}
 
 	.wp-post-image {
