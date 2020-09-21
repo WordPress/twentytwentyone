@@ -3496,7 +3496,7 @@ h2.page-title {
 .primary-navigation > .menu-wrapper {
 	visibility: hidden;
 	opacity: 0;
-	position: fixed;
+	position: relative;
 	top: 0;
 	right: 0;
 	bottom: 0;
