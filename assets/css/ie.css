@@ -1426,10 +1426,6 @@ hr.wp-block-separator.is-style-wide {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-.author-bio > * {
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
 .widget > * {
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -1439,7 +1435,6 @@ hr.wp-block-separator.is-style-wide {
 .post-thumbnail > *:first-child,
 .page-content > *:first-child,
 .comment-content > *:first-child,
-.author-bio > *:first-child,
 .widget > *:first-child {
 	margin-top: 0;
 }
@@ -1448,7 +1443,6 @@ hr.wp-block-separator.is-style-wide {
 .post-thumbnail > *:last-child,
 .page-content > *:last-child,
 .comment-content > *:last-child,
-.author-bio > *:last-child,
 .widget > *:last-child {
 	margin-bottom: 0;
 }
@@ -4223,7 +4217,6 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 /**
  * Author
  */
-/* Author description */
 .author-bio {
 	font-size: 1rem;
 	max-width: 100%;
@@ -4258,17 +4251,26 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	margin-top: 60px;
 }
 
-.author-bio .author-title {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 2rem;
+.author-bio.show-avatars {
+	display: grid;
+	grid-template-columns: 85px auto;
+	grid-gap: 25px;
 }
 
-.author-bio .author-description {
-	font-size: 1rem;
-}
-
-.author-bio .avatar {
+.author-bio.show-avatars .avatar {
 	border-radius: 50%;
+}
+
+.author-bio .author-bio-content .author-title {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: 1.5rem;
+	display: inline;
+}
+
+.author-bio .author-bio-content .author-description {
+	font-size: 1rem;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 .page-title {

@@ -52,10 +52,6 @@ h1.entry-title {
 		}
 	}
 
-	a {
-
-	}
-
 	// Overwrite iframe embeds that have inline styles.
 	> iframe[style] {
 
@@ -65,11 +61,6 @@ h1.entry-title {
 		@include media(mobile) {
 			max-width: var(--global--spacing-vertical) !important;
 		}
-	}
-
-	// Page links
-	.page-links a {
-
 	}
 
 	// Classic editor audio embeds.
@@ -222,10 +213,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
  * Author
  */
 
-/* Author description */
-
-.author-bio {
-
+ .author-bio {
 	font-size: var(--global--font-size-xs);
 	max-width: var(--responsive--aligndefault-width);
 
@@ -233,16 +221,28 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 		margin-top: calc(2 * var(--global--spacing-vertical));
 	}
 
-	.author-title {
-		font-family: var(--entry-author-bio--font-family);
-		font-size: var(--entry-author-bio--font-size);
+	//Avatars are optional and can be turned off.
+	&.show-avatars {
+		display: grid;
+		grid-template-columns: 85px auto;
+		grid-gap: var(--global--spacing-horizontal);
+
+		.avatar {
+			border-radius: 50%;
+		}
 	}
 
-	.author-description {
-		font-size: var(--global--font-size-xs);
-	}
+	.author-bio-content {
+		.author-title {
+			font-family: var(--entry-author-bio--font-family);
+			font-size: var(--entry-author-bio--font-size);
+			display: inline;
+		}
 
-	.avatar {
-		border-radius: 50%;
+		.author-description {
+			font-size: var(--global--font-size-xs);
+			margin-top: calc(0.5 * var(--global--spacing-vertical));
+			margin-bottom: calc(0.5 * var(--global--spacing-vertical));
+		}
 	}
 }

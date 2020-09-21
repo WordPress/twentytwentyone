@@ -180,7 +180,7 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--entry-meta--font-family: var(--global--font-primary);
 	--entry-meta--font-size: var(--global--font-size-xs);
 	--entry-author-bio--font-family: var(--heading--font-family);
-	--entry-author-bio--font-size: var(--heading--font-size-h3);
+	--entry-author-bio--font-size: var(--heading--font-size-h4);
 	/* Header */
 	--branding--color-text: var(--global--color-primary);
 	--branding--color-link: var(--global--color-primary);
@@ -970,7 +970,6 @@ template {
 .post-thumbnail > *,
 .page-content > *,
 .comment-content > *,
-.author-bio > *,
 .widget > * {
 	margin-top: var(--global--spacing-unit);
 	margin-bottom: var(--global--spacing-unit);
@@ -980,7 +979,6 @@ template {
 .post-thumbnail > *:first-child,
 .page-content > *:first-child,
 .comment-content > *:first-child,
-.author-bio > *:first-child,
 .widget > *:first-child {
 	margin-top: 0;
 }
@@ -989,7 +987,6 @@ template {
 .post-thumbnail > *:last-child,
 .page-content > *:last-child,
 .comment-content > *:last-child,
-.author-bio > *:last-child,
 .widget > *:last-child {
 	margin-bottom: 0;
 }
@@ -2964,7 +2961,6 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 /**
  * Author
  */
-/* Author description */
 .author-bio {
 	font-size: var(--global--font-size-xs);
 	max-width: var(--responsive--aligndefault-width);
@@ -2974,17 +2970,26 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	margin-top: calc(2 * var(--global--spacing-vertical));
 }
 
-.author-bio .author-title {
+.author-bio.show-avatars {
+	display: grid;
+	grid-template-columns: 85px auto;
+	grid-gap: var(--global--spacing-horizontal);
+}
+
+.author-bio.show-avatars .avatar {
+	border-radius: 50%;
+}
+
+.author-bio .author-bio-content .author-title {
 	font-family: var(--entry-author-bio--font-family);
 	font-size: var(--entry-author-bio--font-size);
+	display: inline;
 }
 
-.author-bio .author-description {
+.author-bio .author-bio-content .author-description {
 	font-size: var(--global--font-size-xs);
-}
-
-.author-bio .avatar {
-	border-radius: 50%;
+	margin-top: calc(0.5 * var(--global--spacing-vertical));
+	margin-bottom: calc(0.5 * var(--global--spacing-vertical));
 }
 
 .page-title {
