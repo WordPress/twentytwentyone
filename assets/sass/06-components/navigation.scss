@@ -8,6 +8,7 @@
 	position: absolute;
 	top: 0;
 	width: 100%;
+
 	#primary-open-menu {
 		margin-left: auto;
 		padding: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit))) calc(var(--button--padding-horizontal) - (0.25 * var(--global--spacing-unit)));
@@ -26,6 +27,7 @@
 
 .menu-button-container,
 .primary-navigation {
+
 	.button {
 		font-size: var(--primary-nav--font-size);
 		text-transform: var(--branding--title--text-transform);
@@ -37,6 +39,7 @@
 			display: flex;
 			z-index: 499;
 		}
+
 		&.close {
 			display: none;
 		}
@@ -69,9 +72,11 @@
 	}
 
 	.primary-navigation-open & {
+
 		#primary-open-menu {
 			display: none;
 		}
+
 		#primary-close-menu {
 			display: flex;
 			padding: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit))) calc(var(--button--padding-horizontal) - (0.25 * var(--global--spacing-unit)));
@@ -122,6 +127,7 @@
 
 	// Mobile menu open
 	.primary-navigation-open & {
+
 		> .menu-wrapper {
 			visibility: visible;
 			opacity: 1;
@@ -383,6 +389,7 @@
 
 // Keep the menu pinned to the top when the menu is open.
 @include media(mobile-only) {
+
 	.lock-scrolling .site {
 		position: fixed;
 		max-width: 100%;

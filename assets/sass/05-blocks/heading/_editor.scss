@@ -58,6 +58,7 @@
 .wp-block-heading h4, h4, .h4,
 .wp-block-heading h5, h5, .h5,
 .wp-block-heading h6, h6, .h6 {
+
 	&[style*="--wp--typography--line-height"] {
 		line-height: var(--wp--typography--line-height, --global--line-height-body);
 	}

@@ -15,12 +15,14 @@ Example:
 @mixin add_variables( $view: frontend ) {
 
 	@if frontend == $view {
+
 		:root {
 			@content;
 		}
 	}
 
 	@if editor == $view {
+
 		:root, body {
 			@content;
 		}

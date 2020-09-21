@@ -1,9 +1,11 @@
 .wp-block-search {
 	display: flex;
 	max-width: var(--responsive--aligndefault-width);
+
 	.wp-block-search__label {
 		font-weight: normal;
 	}
+
 	.wp-block-search__input {
 		border: var(--form--border-width) solid var(--form--border-color);
 		border-radius: var(--form--border-radius);

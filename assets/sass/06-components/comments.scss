@@ -32,6 +32,7 @@
 	justify-content: space-between;
 
 	small {
+
 		a {
 			border-bottom: none;
 			color: currentColor;
@@ -224,6 +225,7 @@
 
 	&:last-child {
 		margin-bottom: 0;
+
 		&.comment-form {
 			margin-bottom: var(--global--spacing-vertical);
 		}
@@ -232,6 +234,7 @@
 
 .comment-author {
 	padding-top: 3px;
+
 	.url {
 		border-bottom: none;
 		color: currentColor;
@@ -241,6 +244,7 @@
 .comment-form {
 	display: flex;
 	flex-wrap: wrap;
+
 	> * {
 		flex-basis: 100%;
 	}
@@ -308,6 +312,7 @@
 
 // Comment navigation
 .comment-navigation {
+
 	a {
 		font-family: var(--global--font-primary);
 		font-size: var(--global--font-size-md);

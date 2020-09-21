@@ -15,6 +15,7 @@
 		a {
 			color: currentColor;
 		}
+
 		.has-link-color a {
 			color: var( --wp--style--color--link, var(--global--color-primary) );
 		}
@@ -22,6 +23,7 @@
 
 	// Default & custom background-color
 	&:not([class*="background-color"]){
+
 		.wp-block-cover__inner-container,
 		.wp-block-cover-image-text,
 		.wp-block-cover-text,

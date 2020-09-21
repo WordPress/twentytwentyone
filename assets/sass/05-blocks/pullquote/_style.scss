@@ -49,6 +49,7 @@
 		max-width: var(--responsive--alignwide-width);
 
 	}
+
 	&.alignfull:not(.is-style-solid-color) > p,
 	&.alignfull:not(.is-style-solid-color) blockquote {
 		padding: 0 calc( 2 * var(--global--spacing-unit) );

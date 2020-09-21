@@ -9,7 +9,6 @@
 		"selector-type-no-unknown": null,
 		"declaration-property-unit-whitelist": null,
 		"max-line-length": null,
-		"rule-empty-line-before": null,
 		"at-rule-empty-line-before": null,
 		"comment-empty-line-before": null,
 		"selector-list-comma-newline-after": null,
