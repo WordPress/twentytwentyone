@@ -4688,12 +4688,12 @@ h2.page-title {
 }
 
 .post-navigation {
-	margin: 30px 25px;
+	margin: 30px auto;
 }
 
 @media only screen and (min-width: 822px) {
 	.post-navigation {
-		margin: 30px 100px;
+		margin: 30px auto;
 	}
 }
 

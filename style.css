@@ -3687,12 +3687,12 @@ h2.page-title {
 }
 
 .post-navigation {
-	margin: var(--global--spacing-vertical) var(--global--spacing-horizontal);
+	margin: var(--global--spacing-vertical) auto;
 }
 
 @media only screen and (min-width: 822px) {
 	.post-navigation {
-		margin: var(--global--spacing-vertical) calc(4 * var(--global--spacing-horizontal));
+		margin: var(--global--spacing-vertical) auto;
 	}
 }
 

@@ -51,10 +51,10 @@
 // Singular navigation
 .post-navigation {
 
-	margin: var(--global--spacing-vertical) var(--global--spacing-horizontal);
+	margin: var(--global--spacing-vertical) auto;
 
 	@include media(desktop) {
-		margin: var(--global--spacing-vertical) calc(4 * var(--global--spacing-horizontal));
+		margin: var(--global--spacing-vertical) auto;
 	}
 
 	@extend %responsive-alignwide-width;
