@@ -29,7 +29,6 @@
 		"number-leading-zero": null,
 		"no-eol-whitespace": null,
 		"declaration-block-semicolon-newline-after": null,
-		"string-quotes": null,
 		"value-keyword-case": null,
 		"declaration-block-trailing-semicolon": null,
 		"declaration-colon-space-after": null,
