@@ -8,3 +8,4 @@ assets/images
 LICENSE
 composer.lock
 *.txt
+*.css
