@@ -13,7 +13,6 @@
 		"block-no-empty": null,
 		"selector-type-no-unknown": null,
 		"declaration-property-unit-whitelist": null,
-		"font-family-no-duplicate-names": null,
 		"max-line-length": null,
 		"no-empty-source": null,
 		"no-missing-end-of-source-newline": null,
