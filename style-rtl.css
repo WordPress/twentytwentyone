@@ -70,8 +70,8 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--global--font-size-sm: 1.125rem;
 	--global--font-size-md: 1.25rem;
 	--global--font-size-lg: 1.5rem;
-	--global--font-size-xl: 2rem;
-	--global--font-size-page-title: 6rem;
+	--global--font-size-xl: 2.25rem;
+	--global--font-size-page-title: 4rem;
 	--global--letter-spacing: normal;
 	/* Line Height */
 	--global--line-height-base: 1;
@@ -83,8 +83,8 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--heading--font-size-h6: var(--global--font-size-xs);
 	--heading--font-size-h5: var(--global--font-size-sm);
 	--heading--font-size-h4: var(--global--font-size-lg);
-	--heading--font-size-h3: 2rem;
-	--heading--font-size-h2: 3rem;
+	--heading--font-size-h3: 1.875rem;
+	--heading--font-size-h2: 2.25rem;
 	--heading--font-size-h1: var(--global--font-size-page-title);
 	--heading--letter-spacing-h6: 0.05em;
 	--heading--letter-spacing-h5: 0.05em;
@@ -250,6 +250,15 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
 	--separator--width: calc(6 * var(--global--spacing-horizontal));
+}
+
+@media only screen and (min-width: 652px) {
+	:root {
+		--global--font-size-xl: 2.5rem;
+		--global--font-size-page-title: 6rem;
+		--heading--font-size-h3: 2rem;
+		--heading--font-size-h2: 3rem;
+	}
 }
 
 /* Any helpful mixins we need? Put them here. */
