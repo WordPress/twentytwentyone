@@ -1,7 +1,8 @@
 .wp-block-columns {
 
 	.wp-block-column {
-		& > * {
+
+		> * {
 			margin-top: calc(0.66 * var(--global--spacing-vertical));
 			margin-bottom: calc(0.66 * var(--global--spacing-vertical));
 
@@ -32,6 +33,7 @@
 		}
 
 		@include media(laptop) {
+
 			/* Resetting margins to match _block-container.scss */
 			margin-bottom: 0;
 		}

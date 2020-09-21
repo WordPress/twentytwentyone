@@ -17,11 +17,14 @@
  * .alignleft
  */
 .alignleft {
+
 	/*rtl:ignore*/
 	text-align: left;
+
 	/*rtl:ignore*/
 	float: left;
 	margin-top: 0;
+
 	/*rtl:ignore*/
 	margin-right: var(--global--spacing-horizontal);
 	margin-bottom: var(--global--spacing-vertical);
@@ -51,10 +54,12 @@
  * .alignright
  */
 .alignright {
+
 	/*rtl:ignore*/
 	float: right;
 	margin-top: 0;
 	margin-bottom: var(--global--spacing-vertical);
+
 	/*rtl:ignore*/
 	margin-left: var(--global--spacing-horizontal);
 }
@@ -114,6 +119,7 @@
 
 // Gutenberg Font-size options
 :root {
+
 	.is-extra-small-text,
 	.has-extra-small-font-size {
 		font-size: var(--global--font-size-xs);
