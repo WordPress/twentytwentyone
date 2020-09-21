@@ -56,18 +56,10 @@
 @import "03-generic/clearings";
 
 /* Category 04 can contain any default HTML element. Do not add classes here, just give the elements some basic styles. */
-@import "04-elements/body";
 @import "04-elements/blockquote";
-@import "04-elements/buttons";
 @import "04-elements/forms";
-@import "04-elements/headings";
-@import "04-elements/hr";
-@import "04-elements/links";
-@import "04-elements/lists";
 @import "04-elements/media";
 @import "04-elements/misc";
-@import "04-elements/paragraph";
-@import "04-elements/tables";
 
 /* Category 05 is all about adjusting the default block styles to the given layout. I only added three blocks as examples. */
 @import "05-blocks/blocks";
@@ -75,7 +67,6 @@
 /* Category 06 contains all "bigger" components which contain elements of the previous two categories like header, footer, page template, single template, comments section, archives, ... */
 @import "06-components/header";
 @import "06-components/footer";
-@import "06-components/page";
 @import "06-components/single";
 @import "06-components/posts-and-pages";
 @import "06-components/entry";
@@ -90,5 +81,4 @@
 /* Category 07 is for any utility classes that are not assigned to a specific component. */
 @import "07-utilities/a11y";
 @import "07-utilities/color-palette";
-@import "07-utilities/editor-font-sizes";
 @import "07-utilities/measure";
