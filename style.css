@@ -703,7 +703,7 @@ template {
 
 @media only screen and (min-width: 1240px) {
 	:root {
-		--responsive--alignwide-width: 1024px;
+		--responsive--alignwide-width: min(calc( 100vw - var(--responsive--spacing-horizontal)), 1240px);
 	}
 }
 
@@ -2345,11 +2345,6 @@ table th,
 /**
  * These selectors set the default max width for content appearing inside a post or page.
  */
-.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce) {
-	margin-left: 0;
-	margin-right: 0;
-}
-
 /**
  * .alignleft
  */

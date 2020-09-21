@@ -132,7 +132,7 @@ Example:
 
 @media only screen and (min-width: 1240px) {
 	.wide-max-width {
-	max-width: 1024px;
+	max-width: min(calc(100vw - 30px), 1240px);
 	}
 }
 
@@ -1567,7 +1567,7 @@ pre.wp-block-verse {
 
 @media only screen and (min-width: 1240px) {
 	.wp-block[data-align="wide"] {
-	max-width: 1024px;
+	max-width: min(calc(100vw - 30px), 1240px);
 	}
 }
 
@@ -1589,7 +1589,7 @@ pre.wp-block-verse {
 
 @media only screen and (min-width: 1240px) {
 	.wp-block.alignwide {
-	max-width: 1024px;
+	max-width: min(calc(100vw - 30px), 1240px);
 	}
 }
 

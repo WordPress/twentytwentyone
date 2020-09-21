@@ -97,7 +97,6 @@ $breakpoint_xxxl: 1240px;
 }
 
 @include media(mobile) {
-
 	:root {
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
@@ -105,7 +104,6 @@ $breakpoint_xxxl: 1240px;
 }
 
 @include media(desktop) {
-
 	:root {
 		--responsive--spacing-horizontal: 200px;
 		--responsive--aligndefault-width: #{$default_width};
@@ -115,7 +113,7 @@ $breakpoint_xxxl: 1240px;
 
 @include media(extrawide) {
 	:root {
-		--responsive--alignwide-width: #{$breakpoint_xxl};
+		--responsive--alignwide-width: min(calc( 100vw - var(--responsive--spacing-horizontal)), #{$breakpoint_xxxl});
 	}
 }
 

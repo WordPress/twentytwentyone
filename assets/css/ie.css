@@ -771,7 +771,7 @@ hr.wp-block-separator.is-style-wide {
 
 @media only screen and (min-width: 1240px){
 	.wide-max-width{
-	max-width: 1024px;
+	max-width: min(calc(100vw - 30px), 1240px);
 	}
 }
 
@@ -795,7 +795,7 @@ hr.wp-block-separator.is-style-wide {
 
 @media only screen and (min-width: 1240px){
 	.alignwide{
-	max-width: 1024px;
+	max-width: min(calc(100vw - 30px), 1240px);
 	}
 }
 
@@ -819,7 +819,7 @@ hr.wp-block-separator.is-style-wide {
 
 @media only screen and (min-width: 1240px){
 	.post-navigation{
-	max-width: 1024px;
+	max-width: min(calc(100vw - 30px), 1240px);
 	}
 }
 
@@ -843,7 +843,7 @@ hr.wp-block-separator.is-style-wide {
 
 @media only screen and (min-width: 1240px){
 	.pagination{
-	max-width: 1024px;
+	max-width: min(calc(100vw - 30px), 1240px);
 	}
 }
 
@@ -876,7 +876,7 @@ hr.wp-block-separator.is-style-wide {
 
 @media only screen and (min-width: 1240px){
 	.alignwide [class*="inner-container"] > .alignwide{
-	width: 1024px;
+	width: min(calc(100vw - 30px), 1240px);
 	}
 }
 
@@ -901,7 +901,7 @@ hr.wp-block-separator.is-style-wide {
 
 @media only screen and (min-width: 1240px){
 	.alignfull [class*="inner-container"] > .alignwide{
-	width: 1024px;
+	width: min(calc(100vw - 30px), 1240px);
 	}
 }
 
@@ -2908,7 +2908,7 @@ p.has-text-color a {
 
 @media only screen and (min-width: 1240px){
 	.wp-block-pullquote.alignwide > p{
-	max-width: 1024px;
+	max-width: min(calc(100vw - 30px), 1240px);
 	}
 }
 
@@ -2930,7 +2930,7 @@ p.has-text-color a {
 
 @media only screen and (min-width: 1240px){
 	.wp-block-pullquote.alignwide blockquote{
-	max-width: 1024px;
+	max-width: min(calc(100vw - 30px), 1240px);
 	}
 }
 
@@ -3271,11 +3271,6 @@ table th {
 /**
  * These selectors set the default max width for content appearing inside a post or page.
  */
-.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce) {
-	margin-left: 0;
-	margin-right: 0;
-}
-
 /**
  * .alignleft
  */
