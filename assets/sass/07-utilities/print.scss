@@ -101,7 +101,7 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		page-break-inside: avoid;
 	}
 
-	a[href^=http]:after {
+	a[href^="http"]:after {
 		content: " < " attr(href) "> ";
 	}
 

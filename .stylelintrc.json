@@ -6,7 +6,6 @@
 		"selector-class-pattern": null,
 		"no-duplicate-selectors": null,
 		"font-weight-notation": null,
-		"selector-attribute-quotes": null,
 		"selector-pseudo-class-no-unknown": null,
 		"function-calc-no-unspaced-operator": null,
 		"block-no-empty": null,

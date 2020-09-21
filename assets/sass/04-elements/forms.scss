@@ -35,7 +35,7 @@ textarea {
 }
 
 // Vertically align checkbox + label relationship
-input[type=checkbox] + label {
+input[type="checkbox"] + label {
 	display: inline;
 	margin-left: 0.5em;
 	line-height: 1em;

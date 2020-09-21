@@ -1255,7 +1255,7 @@ textarea {
 	width: 100%;
 }
 
-input[type=checkbox] + label {
+input[type="checkbox"] + label {
 	display: inline;
 	margin-right: 0.5em;
 	line-height: 1em;
