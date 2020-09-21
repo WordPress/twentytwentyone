@@ -10,7 +10,6 @@
 		"declaration-property-unit-whitelist": null,
 		"max-line-length": null,
 		"at-rule-empty-line-before": null,
-		"comment-empty-line-before": null,
 		"selector-list-comma-newline-after": null,
 		"function-parentheses-space-inside": null,
 		"block-opening-brace-space-before": null,

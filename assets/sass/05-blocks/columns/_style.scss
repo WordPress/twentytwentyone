@@ -33,6 +33,7 @@
 		}
 
 		@include media(laptop) {
+
 			/* Resetting margins to match _block-container.scss */
 			margin-bottom: 0;
 		}

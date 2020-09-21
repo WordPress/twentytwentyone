@@ -53,6 +53,7 @@
 
 	&.is-style-large,
 	&.is-large {
+
 		/* Resetting margins to match _block-container.scss */
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);

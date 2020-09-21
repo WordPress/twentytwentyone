@@ -15,6 +15,7 @@
 	&.is-style-large {
 		border-left: var(--quote--border-width) solid var(--quote--border-color);
 		padding-left: var(--global--spacing-horizontal);
+
 		/* Resetting margins to match _block-container.scss */
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
