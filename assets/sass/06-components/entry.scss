@@ -52,10 +52,6 @@ h1.entry-title {
 		}
 	}
 
-	a {
-
-	}
-
 	// Overwrite iframe embeds that have inline styles.
 	> iframe[style] {
 
@@ -65,11 +61,6 @@ h1.entry-title {
 		@include media(mobile) {
 			max-width: var(--global--spacing-vertical) !important;
 		}
-	}
-
-	// Page links
-	.page-links a {
-
 	}
 
 	// Classic editor audio embeds.
