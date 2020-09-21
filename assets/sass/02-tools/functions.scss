@@ -15,21 +15,21 @@
 // ----
 
 @function pow($x, $y) {
-  $ret: 1;
+	$ret: 1;
 
-  @if $y > 0 {
-    @for $i from 1 through $y {
-        $ret: $ret * $x;
-    }
-  }
+	@if $y > 0 {
+		@for $i from 1 through $y {
+			$ret: $ret * $x;
+		}
+	}
 
-  @else {
-    @for $i from $y to 0 {
-        $ret: $ret / $x;
-    }
-  }
+	@else {
+		@for $i from $y to 0 {
+			$ret: $ret / $x;
+		}
+	}
 
-  @return $ret;
+	@return $ret;
 }
 
 // Map deep get
@@ -42,10 +42,10 @@
 // Example:
 // $m-breakpoint: map-deep-get($__prefix-default-config, "layouts", "M");
 @function map-deep-get($map, $keys...) {
-    @each $key in $keys {
-        $map: map-get($map, $key);
-    }
-    @return $map;
+	@each $key in $keys {
+		$map: map-get($map, $key);
+	}
+	@return $map;
 }
 
 // ep set function to set a value in nested maps

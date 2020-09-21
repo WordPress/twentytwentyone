@@ -26,7 +26,6 @@
 		"selector-combinator-space-after": null,
 		"selector-combinator-space-before": null,
 		"selector-pseudo-element-colon-notation": null,
-		"indentation": null,
 		"number-leading-zero": null,
 		"no-eol-whitespace": null,
 		"declaration-block-semicolon-newline-after": null,
