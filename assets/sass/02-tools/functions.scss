@@ -21,9 +21,7 @@
 		@for $i from 1 through $y {
 			$ret: $ret * $x;
 		}
-	}
-
-	@else {
+	} @else {
 		@for $i from $y to 0 {
 			$ret: $ret / $x;
 		}
