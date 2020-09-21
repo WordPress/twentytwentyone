@@ -3787,9 +3787,16 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .post-thumbnail .wp-post-image {
 	display: block;
 	width: auto;
+	min-width: calc(100vw - 30px);
 	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+@media only screen and (min-width: 652px){
+	.post-thumbnail .wp-post-image{
+	min-width: min(calc(100vw - 200px), 610px);
+	}
 }
 
 /**
