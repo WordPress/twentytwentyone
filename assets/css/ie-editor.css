@@ -103,69 +103,25 @@ Example:
  * Extends
  */
 .default-max-width {
-	max-width: 100%;
+	max-width: calc(100vw - 30px);
 	margin-left: auto;
 	margin-right: auto;
 }
-@media only screen and (min-width: 482px) {
-	.default-max-width {
-	max-width: 432px;
-	}
-}
-@media only screen and (min-width: 592px) {
-	.default-max-width {
-	max-width: 432px;
-	}
-}
 @media only screen and (min-width: 652px) {
 	.default-max-width {
-	max-width: 542px;
-	}
-}
-@media only screen and (min-width: 822px) {
-	.default-max-width {
-	max-width: 602px;
-	}
-}
-@media only screen and (min-width: 1024px) {
-	.default-max-width {
-	max-width: 602px;
+	max-width: 610px;
 	}
 }
 
 .wide-max-width {
-	max-width: 100%;
+	max-width: calc(100vw - 30px);
 	margin-left: auto;
 	margin-right: auto;
 }
 
-@media only screen and (min-width: 482px) {
-	.wide-max-width {
-	max-width: 432px;
-	}
-}
-
-@media only screen and (min-width: 592px) {
-	.wide-max-width {
-	max-width: 542px;
-	}
-}
-
-@media only screen and (min-width: 652px) {
-	.wide-max-width {
-	max-width: 602px;
-	}
-}
-
 @media only screen and (min-width: 822px) {
 	.wide-max-width {
-	max-width: 772px;
-	}
-}
-
-@media only screen and (min-width: 1024px) {
-	.wide-max-width {
-	max-width: 772px;
+	max-width: calc(100vw - 200px);
 	}
 }
 
@@ -1298,36 +1254,12 @@ p.has-background {
 
 .wp-block-search {
 	display: flex;
-	max-width: 100%;
-}
-
-@media only screen and (min-width: 482px) {
-	.wp-block-search {
-	max-width: 432px;
-	}
-}
-
-@media only screen and (min-width: 592px) {
-	.wp-block-search {
-	max-width: 432px;
-	}
+	max-width: calc(100vw - 30px);
 }
 
 @media only screen and (min-width: 652px) {
 	.wp-block-search {
-	max-width: 542px;
-	}
-}
-
-@media only screen and (min-width: 822px) {
-	.wp-block-search {
-	max-width: 602px;
-	}
-}
-
-@media only screen and (min-width: 1024px) {
-	.wp-block-search {
-	max-width: 602px;
+	max-width: 610px;
 	}
 }
 
@@ -1588,99 +1520,31 @@ pre.wp-block-verse {
 
 /* Block Alignments */
 .wp-block {
-	max-width: 100%;
-}
-@media only screen and (min-width: 482px) {
-	.wp-block {
-	max-width: 432px;
-	}
-}
-@media only screen and (min-width: 592px) {
-	.wp-block {
-	max-width: 432px;
-	}
+	max-width: calc(100vw - 30px);
 }
 @media only screen and (min-width: 652px) {
 	.wp-block {
-	max-width: 542px;
-	}
-}
-@media only screen and (min-width: 822px) {
-	.wp-block {
-	max-width: 602px;
-	}
-}
-@media only screen and (min-width: 1024px) {
-	.wp-block {
-	max-width: 602px;
+	max-width: 610px;
 	}
 }
 
 .wp-block[data-align="wide"] {
-	max-width: 100%;
-}
-
-@media only screen and (min-width: 482px) {
-	.wp-block[data-align="wide"] {
-	max-width: 432px;
-	}
-}
-
-@media only screen and (min-width: 592px) {
-	.wp-block[data-align="wide"] {
-	max-width: 542px;
-	}
-}
-
-@media only screen and (min-width: 652px) {
-	.wp-block[data-align="wide"] {
-	max-width: 602px;
-	}
+	max-width: calc(100vw - 30px);
 }
 
 @media only screen and (min-width: 822px) {
 	.wp-block[data-align="wide"] {
-	max-width: 772px;
-	}
-}
-
-@media only screen and (min-width: 1024px) {
-	.wp-block[data-align="wide"] {
-	max-width: 772px;
+	max-width: calc(100vw - 200px);
 	}
 }
 
 .wp-block.alignwide {
-	max-width: 100%;
-}
-
-@media only screen and (min-width: 482px) {
-	.wp-block.alignwide {
-	max-width: 432px;
-	}
-}
-
-@media only screen and (min-width: 592px) {
-	.wp-block.alignwide {
-	max-width: 542px;
-	}
-}
-
-@media only screen and (min-width: 652px) {
-	.wp-block.alignwide {
-	max-width: 602px;
-	}
+	max-width: calc(100vw - 30px);
 }
 
 @media only screen and (min-width: 822px) {
 	.wp-block.alignwide {
-	max-width: 772px;
-	}
-}
-
-@media only screen and (min-width: 1024px) {
-	.wp-block.alignwide {
-	max-width: 772px;
+	max-width: calc(100vw - 200px);
 	}
 }
 

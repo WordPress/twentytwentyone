@@ -12,7 +12,7 @@
 ?>
 
 <section class="no-results not-found">
-	<header class="page-header archive-max-width">
+	<header class="page-header -width">
 		<?php
 		if ( is_search() ) {
 			?>
