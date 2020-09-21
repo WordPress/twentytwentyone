@@ -673,7 +673,7 @@ template {
 }
 @media only screen and (min-width: 652px){
 	.default-max-width{
-	max-width: 610px;
+	max-width: min(calc(100vw - 200px), 610px);
 	}
 }
 hr.wp-block-separator.is-style-wide {
@@ -683,7 +683,7 @@ hr.wp-block-separator.is-style-wide {
 }
 @media only screen and (min-width: 652px){
 	hr.wp-block-separator.is-style-wide{
-	max-width: 610px;
+	max-width: min(calc(100vw - 200px), 610px);
 	}
 }
 .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce) {
@@ -693,7 +693,7 @@ hr.wp-block-separator.is-style-wide {
 }
 @media only screen and (min-width: 652px){
 	.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce){
-	max-width: 610px;
+	max-width: min(calc(100vw - 200px), 610px);
 	}
 }
 *[class*="inner-container"] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce) {
@@ -703,7 +703,7 @@ hr.wp-block-separator.is-style-wide {
 }
 @media only screen and (min-width: 652px){
 	*[class*="inner-container"] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce){
-	max-width: 610px;
+	max-width: min(calc(100vw - 200px), 610px);
 	}
 }
 .entry-content .wp-audio-shortcode {
@@ -713,7 +713,7 @@ hr.wp-block-separator.is-style-wide {
 }
 @media only screen and (min-width: 652px){
 	.entry-content .wp-audio-shortcode{
-	max-width: 610px;
+	max-width: min(calc(100vw - 200px), 610px);
 	}
 }
 .post-thumbnail {
@@ -723,7 +723,7 @@ hr.wp-block-separator.is-style-wide {
 }
 @media only screen and (min-width: 652px){
 	.post-thumbnail{
-	max-width: 610px;
+	max-width: min(calc(100vw - 200px), 610px);
 	}
 }
 
@@ -733,7 +733,7 @@ hr.wp-block-separator.is-style-wide {
 	margin-right: auto;
 }
 
-@media only screen and (min-width: 822px){
+@media only screen and (min-width: 652px){
 	.wide-max-width{
 	max-width: calc(100vw - 200px);
 	}
@@ -745,7 +745,7 @@ hr.wp-block-separator.is-style-wide {
 	margin-right: auto;
 }
 
-@media only screen and (min-width: 822px){
+@media only screen and (min-width: 652px){
 	.alignwide{
 	max-width: calc(100vw - 200px);
 	}
@@ -757,7 +757,7 @@ hr.wp-block-separator.is-style-wide {
 	margin-right: auto;
 }
 
-@media only screen and (min-width: 822px){
+@media only screen and (min-width: 652px){
 	.site-header{
 	max-width: calc(100vw - 200px);
 	}
@@ -769,7 +769,7 @@ hr.wp-block-separator.is-style-wide {
 	margin-right: auto;
 }
 
-@media only screen and (min-width: 822px){
+@media only screen and (min-width: 652px){
 	.site-footer{
 	max-width: calc(100vw - 200px);
 	}
@@ -831,7 +831,7 @@ hr.wp-block-separator.is-style-wide {
 	max-width: 100%;
 }
 
-@media only screen and (min-width: 822px){
+@media only screen and (min-width: 652px){
 	.alignwide [class*="inner-container"] > .alignwide{
 	width: calc(100vw - 200px);
 	}
@@ -844,7 +844,7 @@ hr.wp-block-separator.is-style-wide {
 	max-width: 100%;
 }
 
-@media only screen and (min-width: 822px){
+@media only screen and (min-width: 652px){
 	.alignfull [class*="inner-container"] > .alignwide{
 	width: calc(100vw - 200px);
 	}
@@ -869,29 +869,9 @@ hr.wp-block-separator.is-style-wide {
 		margin-left: 15px;
 		}
 	}
-	@media only screen and (min-width: 592px){
-		.entry-content > .alignleft{
-		margin-left: 15px;
-		}
-	}
 	@media only screen and (min-width: 652px){
 		.entry-content > .alignleft{
-		margin-left: calc(50vw - 305px);
-		}
-	}
-	@media only screen and (min-width: 822px){
-		.entry-content > .alignleft{
 		margin-left: 15px;
-		}
-	}
-	@media only screen and (min-width: 1024px){
-		.entry-content > .alignleft{
-		margin-left: 15px;
-		}
-	}
-	@media only screen and (min-width: 652px){
-		.entry-content > .alignleft{
-		margin-left: calc(50vw - 305px);
 		}
 	}
 }
@@ -915,29 +895,9 @@ hr.wp-block-separator.is-style-wide {
 		margin-right: 15px;
 		}
 	}
-	@media only screen and (min-width: 592px){
-		.entry-content > .alignright{
-		margin-right: 15px;
-		}
-	}
 	@media only screen and (min-width: 652px){
 		.entry-content > .alignright{
-		margin-right: calc(50vw - 305px);
-		}
-	}
-	@media only screen and (min-width: 822px){
-		.entry-content > .alignright{
 		margin-right: 15px;
-		}
-	}
-	@media only screen and (min-width: 1024px){
-		.entry-content > .alignright{
-		margin-right: 15px;
-		}
-	}
-	@media only screen and (min-width: 652px){
-		.entry-content > .alignright{
-		margin-right: calc(50vw - 305px);
 		}
 	}
 }
@@ -2857,7 +2817,7 @@ p.has-text-color a {
 	max-width: calc(100vw - 30px);
 }
 
-@media only screen and (min-width: 822px){
+@media only screen and (min-width: 652px){
 	.wp-block-pullquote.alignwide > p{
 	max-width: calc(100vw - 200px);
 	}
@@ -2867,7 +2827,7 @@ p.has-text-color a {
 	max-width: calc(100vw - 30px);
 }
 
-@media only screen and (min-width: 822px){
+@media only screen and (min-width: 652px){
 	.wp-block-pullquote.alignwide blockquote{
 	max-width: calc(100vw - 200px);
 	}
@@ -3061,7 +3021,7 @@ p.has-text-color a {
 
 @media only screen and (min-width: 652px){
 	.wp-block-search{
-	max-width: 610px;
+	max-width: min(calc(100vw - 200px), 610px);
 	}
 }
 
@@ -3218,7 +3178,7 @@ table th {
 
 @media only screen and (min-width: 652px){
 	.entry-content > .alignleft{
-	max-width: 610px;
+	max-width: min(calc(100vw - 200px), 610px);
 	}
 }
 
@@ -3252,7 +3212,7 @@ table th {
 
 @media only screen and (min-width: 652px){
 	.entry-content > .alignright{
-	max-width: 610px;
+	max-width: min(calc(100vw - 200px), 610px);
 	}
 }
 
@@ -3387,7 +3347,7 @@ table th {
 	padding-top: 30px;
 }
 
-@media only screen and (min-width: 822px) {
+@media only screen and (min-width: 652px) {
 	.site-header {
 		padding-top: 72px;
 	}
@@ -3825,7 +3785,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 @media only screen and (min-width: 652px){
 	.author-bio{
-	max-width: 610px;
+	max-width: min(calc(100vw - 200px), 610px);
 	}
 }
 
@@ -4799,7 +4759,7 @@ h2.page-title {
 
 @media only screen and (min-width: 652px){
 	.search-form{
-	max-width: 610px;
+	max-width: min(calc(100vw - 200px), 610px);
 	}
 }
 

@@ -109,7 +109,7 @@ Example:
 }
 @media only screen and (min-width: 652px) {
 	.default-max-width {
-	max-width: 610px;
+	max-width: min(calc(100vw - 200px), 610px);
 	}
 }
 
@@ -119,7 +119,7 @@ Example:
 	margin-right: auto;
 }
 
-@media only screen and (min-width: 822px) {
+@media only screen and (min-width: 652px) {
 	.wide-max-width {
 	max-width: calc(100vw - 200px);
 	}
@@ -1259,7 +1259,7 @@ p.has-background {
 
 @media only screen and (min-width: 652px) {
 	.wp-block-search {
-	max-width: 610px;
+	max-width: min(calc(100vw - 200px), 610px);
 	}
 }
 
@@ -1524,7 +1524,7 @@ pre.wp-block-verse {
 }
 @media only screen and (min-width: 652px) {
 	.wp-block {
-	max-width: 610px;
+	max-width: min(calc(100vw - 200px), 610px);
 	}
 }
 
@@ -1532,7 +1532,7 @@ pre.wp-block-verse {
 	max-width: calc(100vw - 30px);
 }
 
-@media only screen and (min-width: 822px) {
+@media only screen and (min-width: 652px) {
 	.wp-block[data-align="wide"] {
 	max-width: calc(100vw - 200px);
 	}
@@ -1542,7 +1542,7 @@ pre.wp-block-verse {
 	max-width: calc(100vw - 30px);
 }
 
-@media only screen and (min-width: 822px) {
+@media only screen and (min-width: 652px) {
 	.wp-block.alignwide {
 	max-width: calc(100vw - 200px);
 	}
