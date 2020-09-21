@@ -12,7 +12,9 @@
 
 /**
  * Register Block Pattern Category.
-
+ *
+ * WIP
+ *
 if ( function_exists( 'register_block_pattern_category' ) ) {
 
 	register_block_pattern_category(
@@ -24,7 +26,9 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
 
 /**
  * Register Block Patterns.
-
+ *
+ * WIP
+ *
 if ( function_exists( 'register_block_pattern' ) ) {
 
 	register_block_pattern(
