@@ -14,6 +14,8 @@ $breakpoint_lg: 652px;
 $breakpoint_xl: 822px;
 $breakpoint_xxl: 1024px;
 
+$break-medium: 782px; // Copied from Gutenberg to be used with the primary navigation menu.
+
 // Responsive breakpoints mixin
 @mixin media( $res ) {
 
