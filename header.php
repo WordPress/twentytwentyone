@@ -52,6 +52,7 @@
 							'menu_class'     => 'menu-wrapper wp-block-navigation__container',
 							'menu_id'        => 'primary-navigation',
 							'container'      => 'false',
+							'depth'          => 2,
 							'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 						)
 					);
