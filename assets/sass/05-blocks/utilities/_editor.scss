@@ -30,15 +30,17 @@
 
 // Gutenberg background-color options
 .has-background {
+
 	&:not(.has-background-background-color) a,
-	p, h1, h2, h3, h4, h5, h6 {
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 		color: currentColor;
 	}
-}
-
-.has-primary-background-color[class] {
-	background-color: var(--global--color-primary);
-	color: var(--global--color-background);
 }
 
 .has-primary-background-color[class] {
@@ -137,11 +139,14 @@
 }
 
 // Selects the post editor and not the site editor
-.block-editor-block-list__layout:not(.edit-site-block-editor__block-list){
+.block-editor-block-list__layout:not(.edit-site-block-editor__block-list) {
+
 	.wp-block {
+
 		&[data-align="full"],
 		&.alignfull {
-			&>[data-block] {
+
+			>[data-block] {
 				margin-top: 0;
 				margin-bottom: 0;
 			}
