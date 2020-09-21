@@ -23,7 +23,7 @@
 		}
 	}
 
-	& > li > * {
+	> li > * {
 		margin-top: calc(0.5 * var(--global--spacing-vertical));
 		margin-bottom: calc(0.5 * var(--global--spacing-vertical));
 
@@ -37,7 +37,7 @@
 	}
 
 	// Post title
-	& > li > a {
+	> li > a {
 		font-family: var(--latest-posts--title-font-family);
 		font-size: var(--latest-posts--title-font-size);
 		font-weight: var(--heading--font-weight);
@@ -66,11 +66,12 @@
 }
 
 @include media(tablet) {
+
 	.wp-block-latest-posts.is-style-tto-alternating-grid {
 
 		// Necessary so that the block boundaries are respected.
 		overflow: hidden;
-		
+
 		> li {
 			width: calc(50% - (0.5 * var(--global--spacing-horizontal)));
 			max-width: calc(50% - (0.5 * var(--global--spacing-horizontal)));

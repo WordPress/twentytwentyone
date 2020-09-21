@@ -15,13 +15,16 @@ Example:
 @mixin add_variables( $view: frontend ) {
 
 	@if frontend == $view {
+
 		:root {
 			@content;
 		}
 	}
 
 	@if editor == $view {
-		:root, body {
+
+		:root,
+		body {
 			@content;
 		}
 	}
@@ -37,7 +40,7 @@ Example:
 
 	&:before,
 	&:after {
-		content: '';
+		content: "";
 		display: block;
 		height: 0;
 		width: 0;
