@@ -8,11 +8,12 @@
 	position: absolute;
 	top: 0;
 	width: 100%;
+
 	#primary-open-menu {
 		margin-left: auto;
 	}
 
-	@include media(mobile-only){
+	@include media(mobile-only) {
 		display: flex;
 	}
 
@@ -23,6 +24,7 @@
 
 .menu-button-container,
 .primary-navigation {
+
 	.button {
 		font-size: var(--primary-nav--font-size);
 		text-transform: var(--branding--title--text-transform);
@@ -34,6 +36,7 @@
 			display: flex;
 			z-index: 499;
 		}
+
 		&.close {
 			display: none;
 		}
@@ -57,8 +60,8 @@
 		.hide-visually {
 			position: absolute !important;
 			clip: rect(1px, 1px, 1px, 1px);
-			padding:0 !important;
-			border:0 !important;
+			padding: 0 !important;
+			border: 0 !important;
 			height: 1px !important;
 			width: 1px !important;
 			overflow: hidden;
@@ -66,13 +69,15 @@
 	}
 
 	.primary-navigation-open & {
+
 		#primary-open-menu {
 			display: none;
 		}
+
 		#primary-close-menu {
 			display: flex;
 			padding: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit))) calc(var(--button--padding-horizontal) - (0.25 * var(--global--spacing-unit)));
-			margin-top: calc(0.60 * var(--global--spacing-unit));
+			margin-top: calc(0.6 * var(--global--spacing-unit));
 			margin-right: calc(0.25 * var(--global--spacing-unit));
 			margin-left: auto;
 		}
@@ -88,37 +93,16 @@
 	text-transform: var(--branding--title--text-transform);
 	margin-top: 0;
 	margin-bottom: 0;
-	padding: 0 calc(0.50 * var(--global--spacing-horizontal));
+	padding: 0 calc(0.5 * var(--global--spacing-horizontal));
 	background-color: var(--global--color-background);
 
 	@include media(mobile-only) {
 		width: 100%;
 	}
 
-	// Mobile menu closed
-	& > .menu-wrapper {
-		background-color: var(--global--color-background);
-		bottom: 0;
-		left: 0;
-		opacity: 0;
-		overflow-x: hidden;
-		overflow-y: scroll;
-		padding: calc(4* var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
-		position: fixed;
-		right: 0;
-		top: 0;
-		transition: all .15s ease-in-out;
-		transform: translateY(var(--global--spacing-vertical));
-		visibility: hidden;
-
-		@include media(mobile-only) {
-			z-index: 499;
-		}
-	}
-
-
 	// Mobile menu open
 	.primary-navigation-open & {
+
 		> .menu-wrapper {
 			display: flex;
 			visibility: visible;
@@ -156,7 +140,7 @@
 		margin-left: auto;
 
 		// Mobile menu on desktop
-		& > .menu-wrapper {
+		> .menu-wrapper {
 			visibility: visible;
 			opacity: 1;
 			position: relative;
@@ -172,7 +156,7 @@
 		}
 
 		// Hide sub-sub-menus
-		& > .menu-wrapper > li > ul {
+		> .menu-wrapper > li > ul {
 			display: none;
 		}
 
@@ -180,21 +164,41 @@
 		.admin-bar & {
 			top: initial;
 
-			& > .menu-wrapper {
+			> .menu-wrapper {
 				top: initial;
 			}
 		}
 	}
 
 	// Menu list wrapper
-	& > .menu-wrapper {
+	> .menu-wrapper {
+		// Mobile menu closed
+		visibility: hidden;
+		opacity: 0;
+		position: relative;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		padding: calc(4 * var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
+		background-color: var(--global--color-background);
+		overflow-x: hidden;
+		overflow-y: scroll;
+		transition: all .15s ease-in-out;
+		transform: translateY(var(--global--spacing-vertical));
+
+		@include media(mobile-only) {
+			z-index: 499;
+		}
+
+
+		display: flex;
 		justify-content: var(--primary-nav--justify-content);
 		flex-wrap: wrap;
 		list-style: none;
 		margin: 0;
 		max-width: none;
 		padding-left: 0;
-		position: relative;
 
 		ul {
 			padding-left: 0;
@@ -219,8 +223,8 @@
 				/* Submenu display */
 				&:hover > ul,
 				&:focus-within > ul,
-				& ul:hover,
-				& ul:focus {
+				ul:hover,
+				ul:focus {
 					visibility: visible;
 					opacity: 1;
 					display: block;
@@ -229,7 +233,7 @@
 		}
 
 		/* Sub-menus Flyout */
-		& > li > .sub-menu {
+		> li > .sub-menu {
 
 			position: relative;
 
@@ -301,7 +305,7 @@
 			font-weight: var(--primary-nav--font-weight);
 		}
 
-		& + svg {
+		+ svg {
 			fill: currentColor;
 		}
 
@@ -355,8 +359,8 @@
 	.menu-item-has-children {
 
 		> .svg-icon {
- 			display: none;
- 		}
+			display: none;
+		}
 
 		@include media(mobile) {
 
@@ -370,8 +374,8 @@
 	.hide-visually {
 		position: absolute !important;
 		clip: rect(1px, 1px, 1px, 1px);
-		padding:0 !important;
-		border:0 !important;
+		padding: 0 !important;
+		border: 0 !important;
 		height: 1px !important;
 		width: 1px !important;
 		overflow: hidden;
@@ -380,6 +384,7 @@
 
 // Keep the menu pinned to the top when the menu is open.
 @include media(mobile-only) {
+
 	.lock-scrolling .site {
 		position: fixed;
 		max-width: 100%;

@@ -7,8 +7,8 @@
 		padding-right: var(--global--spacing-horizontal);
 
 		> * {
-			margin-top: calc( 0.666 * var(--global--spacing-vertical) );
-			margin-bottom: calc( 0.666 * var(--global--spacing-vertical) );
+			margin-top: calc(0.666 * var(--global--spacing-vertical));
+			margin-bottom: calc(0.666 * var(--global--spacing-vertical));
 
 			&.alignfull {
 				@extend %responsive-alignfull-width;
@@ -30,7 +30,7 @@
 	}
 
 	&.has-background {
-		padding: calc( 0.666 * var(--global--spacing-vertical) );
+		padding: calc(0.666 * var(--global--spacing-vertical));
 
 		@include media(mobile) {
 			padding: var(--global--spacing-vertical);

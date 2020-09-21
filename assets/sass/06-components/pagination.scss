@@ -61,7 +61,7 @@
 	.post-title {
 		font-family: var(--global--font-primary);
 		font-size: var(--global--font-size-base);
-		font-weight: var( --pagination--font-weight-strong);
+		font-weight: var(--pagination--font-weight-strong);
 		line-height: var(--heading--line-height);
 		@include media(desktop) {
 			margin: 0 var(--global--spacing-horizontal);

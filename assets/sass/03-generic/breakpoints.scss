@@ -97,6 +97,7 @@ $breakpoint_xxxl: 1240px;
 }
 
 @include media(mobile) {
+
 	:root {
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
@@ -104,6 +105,7 @@ $breakpoint_xxxl: 1240px;
 }
 
 @include media(desktop) {
+
 	:root {
 		--responsive--spacing-horizontal: 200px;
 		--responsive--aligndefault-width: #{$default_width};
@@ -164,34 +166,41 @@ $breakpoint_xxxl: 1240px;
 }
 
 
-
 %responsive-alignleft-mobile {
+
 	/*rtl:ignore*/
 	margin-left: 0;
+
 	/*rtl:ignore*/
 	margin-right: var(--responsive--spacing-horizontal);
 }
 
 @include media(mobile) {
 	%responsive-alignleft {
+
 		/*rtl:ignore*/
 		margin-left: var(--responsive--alignleft-margin);
+
 		/*rtl:ignore*/
 		margin-right: var(--global--spacing-horizontal);
 	}
 }
 
 %responsive-alignright-mobile {
+
 	/*rtl:ignore*/
 	margin-left: var(--responsive--spacing-horizontal);
+
 	/*rtl:ignore*/
 	margin-right: 0;
 }
 
 @include media(mobile) {
 	%responsive-alignright {
+
 		/*rtl:ignore*/
 		margin-left: var(--global--spacing-horizontal);
+
 		/*rtl:ignore*/
 		margin-right: var(--responsive--alignright-margin);
 	}

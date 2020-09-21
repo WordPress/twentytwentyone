@@ -84,10 +84,11 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 240, // TODO: Is this the correct logo size?
-				'width'       => 240,
-				'flex-width'  => false,
-				'flex-height' => false,
+				'height'               => 240,
+				'width'                => 240,
+				'flex-width'           => false,
+				'flex-height'          => false,
+				'unlink-homepage-logo' => true,
 			)
 		);
 
