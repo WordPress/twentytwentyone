@@ -27,7 +27,7 @@ input[type="submit"],
 		.wp-block-button__link {
 			color: var(--button--color-background);
 			background: transparent;
-			border: var(--button--border-width) solid currentcolor;
+			border: var(--button--border-width) solid currentColor;
 			padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 
 			&:active {

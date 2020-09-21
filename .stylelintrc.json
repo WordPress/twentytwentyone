@@ -10,7 +10,6 @@
 		"at-rule-empty-line-before": null,
 		"selector-pseudo-element-colon-notation": null,
 		"number-leading-zero": null,
-		"value-keyword-case": null,
 		"no-descending-specificity": null
 	}
 }
