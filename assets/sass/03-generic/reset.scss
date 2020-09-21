@@ -38,11 +38,14 @@ h6 {
  * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
  */
 
-/**
- * Apply border-box across the entire page.
- */
 html {
+
+	/* Apply border-box across the entire page. */
 	box-sizing: border-box;
+
+	// HTML resets
+	font-family: var(--global--font-secondary);
+	line-height: var(--global--line-height-body);
 }
 
 /**
@@ -55,12 +58,6 @@ html {
 	&::after {
 		box-sizing: inherit;
 	}
-}
-
-// HTML resets
-html {
-	font-family: var(--global--font-secondary);
-	line-height: var(--global--line-height-body);
 }
 
 // body resets

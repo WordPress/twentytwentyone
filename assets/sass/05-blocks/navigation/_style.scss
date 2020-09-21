@@ -60,9 +60,6 @@
 				}
 			}
 		}
-	}
-
-	> .wp-block-navigation__container {
 
 		> .has-child {
 
@@ -80,17 +77,11 @@
 	&:not(.has-background) {
 
 		.wp-block-navigation__container {
+			background: var(--global--color-background);
 
 			.wp-block-navigation__container {
 				background: var(--global--color-background);
 			}
-		}
-	}
-
-	&:not(.has-background) {
-
-		.wp-block-navigation__container {
-			background: var(--global--color-background);
 		}
 	}
 
