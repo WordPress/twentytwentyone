@@ -710,7 +710,7 @@ template {
 	margin-left: auto;
 }
 
-.wide-max-width, .alignwide, .site-header, .site-footer {
+.wide-max-width, .alignwide, .site-header, .site-footer, .post-navigation, .pagination {
 	max-width: var(--responsive--alignwide-width);
 	margin-right: auto;
 	margin-left: auto;
@@ -3727,12 +3727,12 @@ h2.page-title {
 .pagination {
 	border-top: 3px solid var(--global--color-border);
 	padding-top: var(--global--spacing-vertical);
-	margin: var(--global--spacing-vertical) var(--global--spacing-horizontal);
+	margin: var(--global--spacing-vertical) auto;
 }
 
 @media only screen and (min-width: 822px) {
 	.pagination {
-		margin: var(--global--spacing-vertical) calc(4 * var(--global--spacing-horizontal));
+		margin: var(--global--spacing-vertical) auto;
 	}
 }
 

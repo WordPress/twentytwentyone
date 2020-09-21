@@ -57,6 +57,8 @@
 		margin: var(--global--spacing-vertical) calc(4 * var(--global--spacing-horizontal));
 	}
 
+	@extend %responsive-alignwide-width;
+
 	.meta-nav {
 		font-size: var(--global--font-size-lg);
 		line-height: var(--global--line-height-body);
@@ -100,11 +102,13 @@
 
 	border-top: 3px solid var(--global--color-border);
 	padding-top: var(--global--spacing-vertical);
-	margin: var(--global--spacing-vertical) var(--global--spacing-horizontal);
+	margin: var(--global--spacing-vertical) auto;
 
 	@include media(desktop) {
-		margin: var(--global--spacing-vertical) calc(4 * var(--global--spacing-horizontal));
+		margin: var(--global--spacing-vertical) auto;
 	}
+
+	@extend %responsive-alignwide-width;
 
 	.nav-links > * {
 		color: var(--pagination--color-text);
