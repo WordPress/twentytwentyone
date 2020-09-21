@@ -696,7 +696,7 @@ template {
 @media only screen and (min-width: 652px) {
 	:root {
 		--responsive--aligndefault-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), 610px);
-		--responsive--alignwide-width: calc(100vw - 8 * var(--global--spacing-horizontal));
+		--responsive--alignwide-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), 1240px);
 	}
 }
 
