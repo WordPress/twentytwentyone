@@ -10,16 +10,21 @@
 // Search widget styles
 .search-form {
 	display: flex;
+	flex-wrap: wrap;
 	margin: auto;
 	max-width: var(--responsive--aligndefault-width);
 
 	> label {
-		display: flex;
-		margin-right: var(--global--spacing-horizontal);
 		width: 100%;
+	}
 
-		.search-field {
-			width: 100%;
-		}
+	.search-field {
+		flex-grow: 1;
+		max-width: inherit;
+		margin-right: calc(0.66 * var(--global--spacing-horizontal));
+	}
+
+	.search-submit {
+		margin-left: 10px;
 	}
 }
