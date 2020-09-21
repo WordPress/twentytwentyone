@@ -716,7 +716,7 @@ template {
 	margin-right: auto;
 }
 
-.full-max-width, .wp-block-group .wp-block-group__inner-container > *.alignfull, .alignfull, .singular .post-thumbnail {
+.full-max-width, .wp-block-group .wp-block-group__inner-container > *.alignfull, .alignfull {
 	max-width: calc(100% + (2 * var(--global--spacing-horizontal)));
 	width: calc(100% + (2 * var(--global--spacing-horizontal)));
 	margin-left: calc(-1 * var(--global--spacing-horizontal));
@@ -724,7 +724,7 @@ template {
 }
 
 @media only screen and (min-width: 482px) {
-	.full-max-width, .alignfull, .singular .post-thumbnail {
+	.full-max-width, .alignfull {
 		max-width: var(--responsive--alignfull-width);
 		width: auto;
 		margin-left: auto;
@@ -732,7 +732,8 @@ template {
 	}
 }
 
-.alignwide [class*="inner-container"] > .alignwide, .alignfull [class*="inner-container"] > .alignwide {
+.alignwide [class*="inner-container"] > .alignwide, .alignfull [class*="inner-container"] > .alignwide, .entry-header .post-thumbnail,
+.singular .post-thumbnail {
 	margin-left: auto;
 	margin-right: auto;
 	width: var(--responsive--alignwide-width);
@@ -2898,8 +2899,13 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	text-align: center;
 }
 
-.post-thumbnail .post-thumbnail-inner {
+.post-thumbnail .wp-post-image {
 	display: block;
+	width: auto;
+	min-width: var(--responsive--aligndefault-width);
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /**
