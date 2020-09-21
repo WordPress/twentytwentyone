@@ -6,9 +6,11 @@ https://github.com/WordPress/gutenberg/blob/master/packages/block-library/src/na
 
 // Default background and font color
 .wp-block-navigation:not(.has-background) .wp-block-navigation__container {
+
 	.wp-block-navigation-link:not(.has-text-color) {
 		color: var(--primary-nav--color-link);
 	}
+
 	.wp-block-navigation__container {
 		background-color: var(--global--color-background);
 	}
@@ -28,6 +30,7 @@ https://github.com/WordPress/gutenberg/blob/master/packages/block-library/src/na
 }
 
 .wp-block-navigation {
+
 	ul,
 	ul li {
 		list-style: none;
@@ -75,11 +78,12 @@ https://github.com/WordPress/gutenberg/blob/master/packages/block-library/src/na
 
 // Styles for submenu flyout
 .has-child {
+
 	> .wp-block-navigation-link__content {
 		padding-right: 0.5em;
 	}
+
 	.wp-block-navigation__container {
-		//border: $border-width solid rgba(0, 0, 0, 0.15);
 		background-color: inherit;
 		color: inherit;
 		position: absolute;
@@ -92,9 +96,11 @@ https://github.com/WordPress/gutenberg/blob/master/packages/block-library/src/na
 		visibility: hidden;
 
 		> .wp-block-navigation-link {
+
 			> .wp-block-navigation-link__content {
 				flex-grow: 1;
 			}
+
 			> .wp-block-navigation-link__submenu-icon {
 				padding-right: 0.5em;
 			}
@@ -160,6 +166,7 @@ https://github.com/WordPress/gutenberg/blob/master/packages/block-library/src/na
 	+ .wp-block-navigation-link__content {
 		padding-top: 0;
 	}
+
 	.has-text-color & {
 		color: inherit;
 	}
@@ -183,4 +190,5 @@ https://github.com/WordPress/gutenberg/blob/master/packages/block-library/src/na
 
 	}
 }
+
 /* End of block code copied form Gutenberg */

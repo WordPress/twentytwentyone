@@ -36,6 +36,7 @@
 	&.wp-block-navigation:not(.has-background) .wp-block-navigation__container {
 		background-color: var(--global--color-background);
 	}
+
 	&.wp-block-navigation .wp-block-navigation-link:not(.has-text-color) {
 		color: var(--primary-nav--color-link);
 	}
@@ -48,6 +49,7 @@
 		& .has-child .wp-block-navigation__container {
 			left: 0;
 		}
+
 		// Restore level 3 sub menus.
 		& .has-child .wp-block-navigation__container .wp-block-navigation__container {
 			left: 100%;
@@ -136,7 +138,7 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
-		padding: calc(4* var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
+		padding: calc(4 * var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
 		background-color: var(--global--color-background);
 		overflow-x: hidden;
 		overflow-y: scroll;
@@ -157,6 +159,25 @@
 			transform: translateY(0);
 		}
 
+		.menu-wrapper,
+		.has-child {
+			display: block;
+		}
+
+		// Keep sub menus open by overriding the block CSS.
+		.has-child .wp-block-navigation__container {
+			display: block;
+			position: relative;
+			opacity: 1;
+			visibility: visible;
+			margin: calc(var(--global--spacing-vertical) / 2) 0;
+			background-color: inherit;
+			color: inherit;
+			left: var(--global--spacing-unit);
+			top: initial;
+			width: 100%;
+		}
+
 	}
 
 	// Adjust button postion when scrolling is locked
@@ -174,9 +195,13 @@
 	}
 
 	.admin-bar.primary-navigation-open &,
-	.admin-bar.primary-navigation-open & > .menu-wrapper,
 	.admin-bar.primary-navigation-open.lock-scrolling & > .button {
 		top: 0;
+	}
+
+	// Make room for the site title.
+	.admin-bar.primary-navigation-open & > .menu-wrapper {
+		top: calc(2 * var(--global--spacing-vertical));
 	}
 
 	@include media(mobile) {

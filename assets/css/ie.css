@@ -2968,11 +2968,11 @@ for WordPress versions earlier than 5.6.
 https://github.com/WordPress/gutenberg/blob/master/packages/block-library/src/navigation/style.scss
 */
 .wp-block-navigation:not(.has-background) .wp-block-navigation__container .wp-block-navigation-link:not(.has-text-color) {
-	color: #28303D;
+	color: #28303d;
 }
 
 .wp-block-navigation:not(.has-background) .wp-block-navigation__container .wp-block-navigation__container {
-	background-color: #D1E4DD;
+	background-color: #d1e4dd;
 }
 
 .items-justified-left > ul {
@@ -4771,7 +4771,7 @@ h2.page-title {
 }
 
 .primary-navigation {
-	color: #28303D;
+	color: #28303d;
 	font-size: 1.125rem;
 	text-transform: uppercase;
 }
@@ -4781,11 +4781,11 @@ h2.page-title {
 }
 
 .primary-navigation.wp-block-navigation:not(.has-background) .wp-block-navigation__container {
-	background-color: #D1E4DD;
+	background-color: #d1e4dd;
 }
 
 .primary-navigation.wp-block-navigation .wp-block-navigation-link:not(.has-text-color) {
-	color: #28303D;
+	color: #28303d;
 }
 
 .primary-navigation .has-child .wp-block-navigation__container {
@@ -4894,10 +4894,50 @@ h2.page-title {
 	}
 }
 
+.primary-navigation > .menu-wrapper {
+	visibility: hidden;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 80px 20px 25px;
+	background-color: #d1e4dd;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	transition: all .15s ease-in-out;
+	transform: translateY(30px);
+}
+
+@media only screen and (max-width: 481px) {
+	.primary-navigation > .menu-wrapper {
+		z-index: 499;
+	}
+}
+
 .primary-navigation-open .primary-navigation > .menu-wrapper {
 	visibility: visible;
 	opacity: 1;
 	transform: translateY(0);
+}
+
+.primary-navigation-open .primary-navigation .menu-wrapper,
+.primary-navigation-open .primary-navigation .has-child {
+	display: block;
+}
+
+.primary-navigation-open .primary-navigation .has-child .wp-block-navigation__container {
+	display: block;
+	position: relative;
+	opacity: 1;
+	visibility: visible;
+	margin: 15px 0;
+	background-color: inherit;
+	color: inherit;
+	left: 20px;
+	top: initial;
+	width: 100%;
 }
 
 .lock-scrolling .primary-navigation > .button {
@@ -4913,9 +4953,12 @@ h2.page-title {
 }
 
 .admin-bar.primary-navigation-open .primary-navigation,
-.admin-bar.primary-navigation-open .primary-navigation > .menu-wrapper,
 .admin-bar.primary-navigation-open.lock-scrolling .primary-navigation > .button {
 	top: 0;
+}
+
+.admin-bar.primary-navigation-open .primary-navigation > .menu-wrapper {
+	top: 60px;
 }
 
 @media only screen and (min-width: 482px) {
