@@ -735,7 +735,7 @@ hr.wp-block-separator.is-style-wide {
 
 @media only screen and (min-width: 652px){
 	.wide-max-width{
-	max-width: calc(100vw - 200px);
+	max-width: min(calc(100vw - 200px), 1240px);
 	}
 }
 
@@ -747,7 +747,7 @@ hr.wp-block-separator.is-style-wide {
 
 @media only screen and (min-width: 652px){
 	.alignwide{
-	max-width: calc(100vw - 200px);
+	max-width: min(calc(100vw - 200px), 1240px);
 	}
 }
 
@@ -759,7 +759,7 @@ hr.wp-block-separator.is-style-wide {
 
 @media only screen and (min-width: 652px){
 	.site-header{
-	max-width: calc(100vw - 200px);
+	max-width: min(calc(100vw - 200px), 1240px);
 	}
 }
 
@@ -771,7 +771,7 @@ hr.wp-block-separator.is-style-wide {
 
 @media only screen and (min-width: 652px){
 	.site-footer{
-	max-width: calc(100vw - 200px);
+	max-width: min(calc(100vw - 200px), 1240px);
 	}
 }
 
@@ -820,7 +820,7 @@ hr.wp-block-separator.is-style-wide {
 
 @media only screen and (min-width: 652px){
 	.alignwide [class*="inner-container"] > .alignwide{
-	width: calc(100vw - 200px);
+	width: min(calc(100vw - 200px), 1240px);
 	}
 }
 
@@ -833,7 +833,7 @@ hr.wp-block-separator.is-style-wide {
 
 @media only screen and (min-width: 652px){
 	.alignfull [class*="inner-container"] > .alignwide{
-	width: calc(100vw - 200px);
+	width: min(calc(100vw - 200px), 1240px);
 	}
 }
 
@@ -2832,7 +2832,7 @@ p.has-text-color a {
 
 @media only screen and (min-width: 652px){
 	.wp-block-pullquote.alignwide > p{
-	max-width: calc(100vw - 200px);
+	max-width: min(calc(100vw - 200px), 1240px);
 	}
 }
 
@@ -2842,7 +2842,7 @@ p.has-text-color a {
 
 @media only screen and (min-width: 652px){
 	.wp-block-pullquote.alignwide blockquote{
-	max-width: calc(100vw - 200px);
+	max-width: min(calc(100vw - 200px), 1240px);
 	}
 }
 
