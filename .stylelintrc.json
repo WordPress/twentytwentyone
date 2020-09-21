@@ -39,8 +39,6 @@
 		"scss/at-if-closing-brace-space-after": null,
 		"scss/at-if-closing-brace-newline-after": null,
 		"length-zero-no-unit": null,
-		"color-hex-length": null,
-		"color-hex-case": null,
 		"no-descending-specificity": null
 	}
 }

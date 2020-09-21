@@ -54,16 +54,16 @@
 	--list--font-family: var(--global--font-secondary);
 	--definition-term--font-family: var(--global--font-primary);
 	/* Colors */
-	--global--color-black: #000000;
-	--global--color-dark-gray: #28303D;
-	--global--color-gray: #39414D;
-	--global--color-green: #D1E4DD;
-	--global--color-blue: #D1DFE4;
-	--global--color-purple: #D1D1E4;
-	--global--color-red: #E4D1D1;
-	--global--color-orange: #E4DAD1;
-	--global--color-yellow: #EEEADD;
-	--global--color-white: #FFFFFF;
+	--global--color-black: #000;
+	--global--color-dark-gray: #28303d;
+	--global--color-gray: #39414d;
+	--global--color-green: #d1e4dd;
+	--global--color-blue: #d1dfe4;
+	--global--color-purple: #d1d1e4;
+	--global--color-red: #e4d1d1;
+	--global--color-orange: #e4dad1;
+	--global--color-yellow: #eeeadd;
+	--global--color-white: #fff;
 	--global--color-white-50: rgba(255, 255, 255, 0.5);
 	/* white 50% opacity used in form fields.*/
 	--global--color-primary: var(--global--color-dark-gray);
