@@ -30,11 +30,13 @@ if ( have_posts() ) {
 		$search_results_found = number_format_i18n( (int) $wp_query->found_posts );
 		printf(
 			/* translators: %d: the number of search results. */
-			_n(
-				'We found %d result for your search.',
-				'We found %d results for your search.',
-				$search_results_found,
-				'twentytwentyone'
+			esc_attr(
+				_n(
+					'We found %d result for your search.',
+					'We found %d results for your search.',
+					$search_results_found,
+					'twentytwentyone'
+				)
 			),
 			$search_results_found
 		);
