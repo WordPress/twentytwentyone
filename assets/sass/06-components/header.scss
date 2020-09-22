@@ -4,10 +4,17 @@
 .site-header {
 	@extend %responsive-alignwide-width;
 	display: flex;
-	padding-top: var(--global--spacing-vertical);
+	align-items: flex-start;
+	margin-left: var(--global--spacing-horizontal);
+	margin-right: var(--global--spacing-horizontal);
 
 	@include media(laptop) {
 		padding-top: calc( 2.4 * var(--global--spacing-vertical)); // 60px
+	}
+
+	@include media(mobile-only) {
+		padding: var(--global--spacing-vertical) var(--global--spacing-horizontal);
+		margin: 0;
 	}
 }
 

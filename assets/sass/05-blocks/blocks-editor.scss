@@ -16,7 +16,7 @@
 @import "legacy/editor"; // "Blocks" from the legacy WP editor, ie: galleries, .button class, etc.
 @import "list/editor";
 @import "media-text/editor";
-@import "navigation/editor";
+//@import "navigation/editor"; //Temp removed until it can be tested.
 @import "paragraph/editor";
 @import "pullquote/editor";
 @import "quote/editor";
