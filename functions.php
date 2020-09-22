@@ -84,10 +84,11 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 240, // TODO: Is this the correct logo size?
-				'width'       => 240,
-				'flex-width'  => false,
-				'flex-height' => false,
+				'height'               => 240,
+				'width'                => 240,
+				'flex-width'           => false,
+				'flex-height'          => false,
+				'unlink-homepage-logo' => true,
 			)
 		);
 
@@ -120,21 +121,21 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 			'editor-font-sizes',
 			array(
 				array(
-					'name'      => __( 'Tiny', 'twentytwentyone' ),
+					'name'      => __( 'Extra small', 'twentytwentyone' ),
 					'shortName' => __( 'XS', 'twentytwentyone' ),
-					'size'      => 14,
-					'slug'      => 'tiny',
+					'size'      => 16,
+					'slug'      => 'extra-small',
 				),
 				array(
 					'name'      => __( 'Small', 'twentytwentyone' ),
 					'shortName' => __( 'S', 'twentytwentyone' ),
-					'size'      => 16,
+					'size'      => 18,
 					'slug'      => 'small',
 				),
 				array(
 					'name'      => __( 'Normal', 'twentytwentyone' ),
 					'shortName' => __( 'M', 'twentytwentyone' ),
-					'size'      => 18,
+					'size'      => 20,
 					'slug'      => 'normal',
 				),
 				array(
@@ -146,7 +147,7 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 				array(
 					'name'      => __( 'Huge', 'twentytwentyone' ),
 					'shortName' => __( 'XL', 'twentytwentyone' ),
-					'size'      => 28,
+					'size'      => 40,
 					'slug'      => 'huge',
 				),
 			)

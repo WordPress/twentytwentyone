@@ -5,6 +5,7 @@
 	margin-top: 0 !important;
 
 	@include media(mobile-only) {
+
 		&[style] {
 			height: var(--global--spacing-unit) !important;
 		}
