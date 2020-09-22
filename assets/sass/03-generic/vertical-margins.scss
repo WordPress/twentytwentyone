@@ -14,16 +14,10 @@
 .site-header,
 .site-main,
 .site-footer {
-	padding: var(--global--spacing-unit) var(--global--spacing-horizontal);
+	padding-top: var(--global--spacing-vertical);
+	padding-bottom: var(--global--spacing-vertical);
 	margin-left: auto;
 	margin-right: auto;
-
-	@include media(mobile) {
-		padding-top: var(--global--spacing-vertical);
-		padding-right: 0;
-		padding-bottom: var(--global--spacing-vertical);
-		padding-left: 0;
-	}
 }
 
 .site-header {
@@ -40,7 +34,6 @@
  * - Add double vertical margins here for clearer heirarchy
  */
 .site-main > * {
-
 	margin-top: calc(3 * var(--global--spacing-vertical));
 	margin-bottom: calc(3 * var(--global--spacing-vertical));
 
@@ -73,10 +66,6 @@
 .full-max-width {
 	@extend %responsive-alignfull-width-mobile;
 	@extend %responsive-alignfull-width;
-}
-
-.archive-max-width {
-	@extend %responsive-alignfull-width-nested;
 }
 
 /*
@@ -142,7 +131,6 @@
 .post-thumbnail > *,
 .page-content > *,
 .comment-content > *,
-.author-bio > *,
 .widget > * {
 	margin-top: var(--global--spacing-unit);
 	margin-bottom: var(--global--spacing-unit);

@@ -1,14 +1,9 @@
 // Footer
 .site-footer {
 	overflow: hidden;
-	//padding: var(--global--spacing-vertical) var(--global--spacing-horizontal);
 	padding-bottom: calc(1.7 * var(--global--spacing-vertical));
 	margin-top: calc(6 * var(--global--spacing-vertical));
-
-	@include media(desktop) {
-		margin-left: calc(4 * var(--global--spacing-horizontal));
-		margin-right: calc(4 * var(--global--spacing-horizontal));
-	}
+	@extend %responsive-alignwide-width;
 }
 
 // Footer Branding
