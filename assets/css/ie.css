@@ -3855,6 +3855,7 @@ table th {
 /* Category 06 contains all "bigger" components which contain elements of the previous two categories like header, footer, page template, single template, comments section, archives, ... */
 .site-header {
 	display: flex;
+	padding-top: 30px;
 	align-items: flex-start;
 	margin-left: 25px;
 	margin-right: 25px;

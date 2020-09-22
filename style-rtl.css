@@ -2624,6 +2624,7 @@ table th,
 /* Category 06 contains all "bigger" components which contain elements of the previous two categories like header, footer, page template, single template, comments section, archives, ... */
 .site-header {
 	display: flex;
+	padding-top: var(--global--spacing-vertical);
 	align-items: flex-start;
 	margin-right: var(--global--spacing-horizontal);
 	margin-left: var(--global--spacing-horizontal);
