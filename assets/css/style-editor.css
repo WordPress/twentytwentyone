@@ -125,7 +125,7 @@
 	--entry-meta--font-family: var(--global--font-primary);
 	--entry-meta--font-size: var(--global--font-size-xs);
 	--entry-author-bio--font-family: var(--heading--font-family);
-	--entry-author-bio--font-size: var(--heading--font-size-h3);
+	--entry-author-bio--font-size: var(--heading--font-size-h4);
 	/* Header */
 	--branding--color-text: var(--global--color-primary);
 	--branding--color-link: var(--global--color-primary);
