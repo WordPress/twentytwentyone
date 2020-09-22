@@ -14,7 +14,7 @@ get_header();
 if ( have_posts() ) {
 	?>
 
-	<header class="page-header archive-max-width">
+	<header class="page-header alignwide">
 		<?php
 			the_archive_title( '<h1 class="page-title">', '</h1>' );
 		?>
