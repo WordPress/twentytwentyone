@@ -3,35 +3,27 @@
 // Vertical Rhythm Multiplier
 $baseline-unit: 10px;
 
-// Typescale Multipliers
-$typescale-root: 18px; // Set 16px/1em default on html
-$typescale-base: 1em; // Set 1em default on body == $typescale-root;
-$typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-root;
-
 :root {
+
 	/* Font Family */
 	--global--font-primary: var(--font-headings, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
 	--global--font-secondary: var(--font-base, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
 
-	--global--font-code: monospace, monospace;
+	--global--font-code: monospace;
 	--global--font-ui: var(--font-base, var(--global--font-secondary));
 
 	/* Font Size */
-	--global--font-size-root: #{$typescale-root};
-	--global--font-size-ratio: #{$typescale-ratio};
-	--global--font-size-base: #{$typescale-base};
-	--global--font-size-xs: 14px;
-	--global--font-size-sm: 16px;
-	--global--font-size-md: 18px;
-	--global--font-size-lg: 24px;
-	--global--font-size-xl: 28px;
-	--global--font-size-xxl: 32px;
-	--global--font-size-xxxl: 48px;
-	--global--font-size-page-title: 96px;
+	--global--font-size-base: 1.25rem; // 20px / 16px
+	--global--font-size-xs: 1rem; // 16px / 16px
+	--global--font-size-sm: 1.125rem; // 18px / 16px
+	--global--font-size-md: 1.25rem; // 20px / 16px
+	--global--font-size-lg: 1.5rem; // 24px / 16px
+	--global--font-size-xl: 2rem; // 40px / 16px
+	--global--font-size-page-title: 6rem; // 96px / 16px
 	--global--letter-spacing: normal;
 
 	/* Line Height */
-	--global--line-height-base: #{$typescale-base / ( $typescale-base * 0 + 1 )};
+	--global--line-height-base: 1;
 	--global--line-height-body: 1.7;
 	--global--line-height-heading: 1.3;
 
@@ -39,12 +31,12 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 	--heading--font-family: var(--global--font-primary);
 	--heading--line-height: var(--global--line-height-heading);
 
-	--heading--font-size-h6: var(--global--font-size-base);
-	--heading--font-size-h5: var(--global--font-size-md);
+	--heading--font-size-h6: var(--global--font-size-xs);
+	--heading--font-size-h5: var(--global--font-size-sm);
 	--heading--font-size-h4: var(--global--font-size-lg);
-	--heading--font-size-h3: var(--global--font-size-xl);
-	--heading--font-size-h2: var(--global--font-size-xxl);
-	--heading--font-size-h1: var(--global--font-size-xxxl);
+	--heading--font-size-h3: 2rem; // 32px / 16px
+	--heading--font-size-h2: 3rem; // 48px / 16px
+	--heading--font-size-h1: var(--global--font-size-page-title);
 
 	--heading--letter-spacing-h6: 0.05em;
 	--heading--letter-spacing-h5: 0.05em;
@@ -74,24 +66,24 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 	--definition-term--font-family: var(--global--font-primary);
 
 	/* Colors */
-	--global--color-black: #000000;
-	--global--color-dark-gray: #28303D;
-	--global--color-gray: #39414D;
-	--global--color-green: #D1E4DD;
-	--global--color-blue: #D1DFE4;
-	--global--color-purple: #D1D1E4;
-	--global--color-red: #E4D1D1;
-	--global--color-orange: #E4DAD1;
-	--global--color-yellow: #EEEADD;
-	--global--color-white: #FFFFFF;
+	--global--color-black: #000;
+	--global--color-dark-gray: #28303d;
+	--global--color-gray: #39414d;
+	--global--color-green: #d1e4dd;
+	--global--color-blue: #d1dfe4;
+	--global--color-purple: #d1d1e4;
+	--global--color-red: #e4d1d1;
+	--global--color-orange: #e4dad1;
+	--global--color-yellow: #eeeadd;
+	--global--color-white: #fff;
 	--global--color-white-50: rgba(255, 255, 255, 0.5); /* white 50% opacity used in form fields.*/
 
 	--global--color-primary: var(--global--color-dark-gray); /* Body text color, site title, footer text color. */
 	--global--color-secondary: var(--global--color-gray); /* Headings */
-	--global--color-primary-hover: var( --global--color-primary );
-	--global--color-secondary-hover: var( --global--color-secondary );
+	--global--color-primary-hover: var(--global--color-primary);
+	--global--color-secondary-hover: var(--global--color-secondary);
 	--global--color-background: var(--global--color-green); /* Mint, default body background */
-	--global--color-border: var( --global--color-black ); /* Used for borders (separators) */
+	--global--color-border: var(--global--color-black); /* Used for borders (separators) */
 
 	/* Spacing */
 	--global--spacing-unit: #{2 * $baseline-unit}; // 20px
@@ -100,14 +92,7 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 	--global--spacing-vertical: #{3 * $baseline-unit}; // 30px.
 
 	/* Elevation */
-	--global--elevation: 1px 1px 3px 0px rgba( 0, 0, 0, 0.2 );
-
-	/* Other */
-	--global--border-radius-sm: #{0.5 * $typescale-root};
-	--global--border-radius-md: #{0.75 * $typescale-root};
-	--global--border-radius-lg: #{$typescale-root};
-	--global--border-radius-pill: #{10 * $typescale-root};
-	--global--border-radius-none: 0;
+	--global--elevation: 1px 1px 3px 0 rgba(0, 0, 0, 0.2);
 
 	/* Forms */
 	--form--font-family: var(--global--font-secondary);
@@ -120,7 +105,7 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 	--form--spacing-unit: calc(0.5 * var(--global--spacing-unit));
 
 	/* Cover block */
-	--cover--height: calc( 15 * var(--global--spacing-vertical) );
+	--cover--height: calc(15 * var(--global--spacing-vertical));
 	--cover--color-foreground: var(--global--color-white);
 	--cover--color-background: var(--global--color-black);
 
@@ -150,15 +135,15 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 	--entry-header--color-hover: var(--global--color-primary-hover);
 	--entry-header--color-focus: var(--global--color-secondary);
 	--entry-header--font-family: var(--heading--font-family);
-	--entry-header--font-size: var(--global--font-size-xxxl);
-	--entry-content--font-family: var(--heading--font-size-h2);
+	--entry-header--font-size: var(--heading--font-size-h2);
+	--entry-content--font-family: var(--global--font-secondary);
 	--entry-meta--color: var(--global--color-primary);
 	--entry-meta--color-link: currentColor;
 	--entry-meta--color-hover: var(--global--color-primary-hover);
 	--entry-meta--font-family: var(--global--font-primary);
-	--entry-meta--font-size: var(--global--font-size-sm);
+	--entry-meta--font-size: var(--global--font-size-xs);
 	--entry-author-bio--font-family: var(--heading--font-family);
-	--entry-author-bio--font-size: var(--heading--font-size-h3);
+	--entry-author-bio--font-size: var(--heading--font-size-h4);
 
 	/* Header */
 	--branding--color-text: var(--global--color-primary);
@@ -182,7 +167,7 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 	--primary-nav--font-family: var(--global--font-secondary);
 	--primary-nav--font-family-mobile: var(--global--font-primary);
 	--primary-nav--font-size: var(--global--font-size-md);
-	--primary-nav--font-size-mobile: var(--global--font-size-xxl);
+	--primary-nav--font-size-mobile: var(--global--font-size-xl);
 	--primary-nav--font-size-sub-menu-mobile: var(--global--font-size-lg);
 	--primary-nav--font-style: normal;
 	--primary-nav--font-style-sub-menu-mobile: italic;
@@ -191,7 +176,7 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 	--primary-nav--color-link: var(--global--color-primary);
 	--primary-nav--color-link-hover: var(--global--color-primary-hover);
 	--primary-nav--color-text: var(--global--color-primary);
-	--primary-nav--padding: calc(0.66 * var(--global--spacing-unit) );
+	--primary-nav--padding: calc(0.66 * var(--global--spacing-unit));
 	--primary-nav--justify-content: center;
 
 	/* Pagination */
@@ -211,7 +196,7 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 	--footer--color-link: var(--global--color-primary);
 	--footer--color-link-hover: var(--global--color-primary-hover);
 	--footer--font-family: var(--global--font-primary);
-	--footer--font-size: var(--global--font-size-sm);
+	--footer--font-size: var(--global--font-size-xs);
 
 	/* Block: Pull quote */
 	--pullquote--font-family: var(--global--font-primary);
@@ -237,13 +222,4 @@ $typescale-ratio: 1.2; // Run ratio math on 1em == $typescale-base * $typescale-
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
 	--separator--width: calc(6 * var(--global--spacing-horizontal));
-
-	--utilities--font-size-xs: var(--global--font-size-xs);
-	--utilities--font-size-sm: var(--global--font-size-sm);
-	--utilities--font-size-md: var(--global--font-size-md);
-	--utilities--font-size-lg: var(--global--font-size-lg);
-	--utilities--font-size-xl: var(--global--font-size-xl);
-	--utilities--font-size-xxl: var(--global--font-size-xxl);
-	--utilities--font-size-xxxl: var(--global--font-size-xxxl);
-
 }

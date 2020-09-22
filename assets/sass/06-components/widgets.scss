@@ -1,9 +1,9 @@
-
-@include media(desktop) {
-	.widget-area {
+.widget-area {
+	font-size: var(--footer--font-size);
+	@include media(desktop) {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		column-gap: calc( 2 * var(--global--spacing-horizontal) );
+		column-gap: calc(2 * var(--global--spacing-horizontal));
 	}
 }
 
@@ -17,6 +17,7 @@
 		display: flex;
 		margin-right: var(--global--spacing-horizontal);
 		width: 100%;
+
 		.search-field {
 			width: 100%;
 		}

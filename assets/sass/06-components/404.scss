@@ -9,3 +9,7 @@
 .error404 .page-header {
 	border-bottom: 3px solid transparent;
 }
+
+.error404 p {
+	font-size: var(--global--font-size-lg);
+}

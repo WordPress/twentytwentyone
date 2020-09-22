@@ -25,7 +25,10 @@
 		"postcss-custom-media": "^7.0.8",
 		"postcss-focus-within": "^3.0.0",
 		"postcss-nested": "^4.2.1",
-		"rtlcss": "^2.4.0"
+		"rtlcss": "^2.4.0",
+		"stylelint": "^13.7.1",
+		"stylelint-config-recommended-scss": "^4.2.0",
+		"stylelint-config-wordpress": "^17.0.0"
 	},
 	"rtlcssConfig": {
 		"options": {
@@ -49,10 +52,11 @@
 		"build:style-editor": "node-sass assets/sass/style-editor.scss assets/css/style-editor.css --output-style expanded --indent-type tab --indent-width 1",
 		"build:rtl": "rtlcss style.css style-rtl.css",
 		"build:print": "node-sass assets/sass/07-utilities/print.scss assets/css/print.css --output-style expanded --indent-type tab --indent-width 1",
-		"build": "run-p \"build:*\" && npm run ie",
-		"ie": "postcss style.css -o assets/css/ie.css",
-		"ie-editor": "postcss assets/css/style-editor.css -o assets/css/ie-editor.css",
+		"build:ie": "postcss style.css -o assets/css/ie.css",
+		"build:ie-editor": "postcss assets/css/style-editor.css -o assets/css/ie-editor.css",
+		"build": "run-s \"build:*\"",
 		"watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial",
-		"test": "node-sass assets/sass/width.scss newcss/width.css --output-style expanded --indent-type tab --indent-width 1"
+		"lint:scss": "stylelint assets/sass/*.scss",
+		"lint:css": "stylelint **/*.css"
 	}
 }
