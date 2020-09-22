@@ -143,7 +143,7 @@ $baseline-unit: 10px;
 	--entry-meta--font-family: var(--global--font-primary);
 	--entry-meta--font-size: var(--global--font-size-xs);
 	--entry-author-bio--font-family: var(--heading--font-family);
-	--entry-author-bio--font-size: var(--heading--font-size-h3);
+	--entry-author-bio--font-size: var(--heading--font-size-h4);
 
 	/* Header */
 	--branding--color-text: var(--global--color-primary);
@@ -224,7 +224,7 @@ $baseline-unit: 10px;
 	--separator--width: calc(6 * var(--global--spacing-horizontal));
 }
 
-@media only screen and (min-width: 652px) {
+@media only screen and (min-width: 652px) { // Not using the mixin because it's compiled after this file
 	:root {
 		--global--font-size-xl: 2.5rem; // 40px / 16px
 		--global--font-size-page-title: 6rem; // 96px / 16px

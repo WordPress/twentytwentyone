@@ -180,7 +180,7 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--entry-meta--font-family: var(--global--font-primary);
 	--entry-meta--font-size: var(--global--font-size-xs);
 	--entry-author-bio--font-family: var(--heading--font-family);
-	--entry-author-bio--font-size: var(--heading--font-size-h3);
+	--entry-author-bio--font-size: var(--heading--font-size-h4);
 	/* Header */
 	--branding--color-text: var(--global--color-primary);
 	--branding--color-link: var(--global--color-primary);
@@ -705,7 +705,7 @@ template {
 @media only screen and (min-width: 652px) {
 	:root {
 		--responsive--aligndefault-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), 610px);
-		--responsive--alignwide-width: calc(100vw - 8 * var(--global--spacing-horizontal));
+		--responsive--alignwide-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), 1240px);
 	}
 }
 
@@ -719,13 +719,13 @@ template {
 	margin-right: auto;
 }
 
-.wide-max-width, .alignwide, .site-header, .site-footer {
+.wide-max-width, .alignwide, .site-header, .site-footer, .post-navigation, .pagination {
 	max-width: var(--responsive--alignwide-width);
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.full-max-width, .wp-block-group .wp-block-group__inner-container > *.alignfull, .alignfull, .singular .post-thumbnail {
+.full-max-width, .wp-block-group .wp-block-group__inner-container > *.alignfull, .alignfull {
 	max-width: calc(100% + (2 * var(--global--spacing-horizontal)));
 	width: calc(100% + (2 * var(--global--spacing-horizontal)));
 	margin-left: calc(-1 * var(--global--spacing-horizontal));
@@ -733,7 +733,7 @@ template {
 }
 
 @media only screen and (min-width: 482px) {
-	.full-max-width, .alignfull, .singular .post-thumbnail {
+	.full-max-width, .alignfull {
 		max-width: var(--responsive--alignfull-width);
 		width: auto;
 		margin-left: auto;
@@ -741,7 +741,8 @@ template {
 	}
 }
 
-.alignwide [class*="inner-container"] > .alignwide, .alignfull [class*="inner-container"] > .alignwide {
+.alignwide [class*="inner-container"] > .alignwide, .alignfull [class*="inner-container"] > .alignwide, .entry-header .post-thumbnail,
+.singular .post-thumbnail {
 	margin-left: auto;
 	margin-right: auto;
 	width: var(--responsive--alignwide-width);
@@ -921,7 +922,6 @@ template {
 .post-thumbnail > *,
 .page-content > *,
 .comment-content > *,
-.author-bio > *,
 .widget > * {
 	margin-top: var(--global--spacing-unit);
 	margin-bottom: var(--global--spacing-unit);
@@ -931,7 +931,6 @@ template {
 .post-thumbnail > *:first-child,
 .page-content > *:first-child,
 .comment-content > *:first-child,
-.author-bio > *:first-child,
 .widget > *:first-child {
 	margin-top: 0;
 }
@@ -940,7 +939,6 @@ template {
 .post-thumbnail > *:last-child,
 .page-content > *:last-child,
 .comment-content > *:last-child,
-.author-bio > *:last-child,
 .widget > *:last-child {
 	margin-bottom: 0;
 }
@@ -2907,15 +2905,20 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	text-align: center;
 }
 
-.post-thumbnail .post-thumbnail-inner {
+.post-thumbnail .wp-post-image {
 	display: block;
+	width: auto;
+	min-width: var(--responsive--aligndefault-width);
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /**
  * Author
  */
-/* Author description */
 .author-bio {
+	position: relative;
 	font-size: var(--global--font-size-xs);
 	max-width: var(--responsive--aligndefault-width);
 }
@@ -2924,17 +2927,28 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	margin-top: calc(2 * var(--global--spacing-vertical));
 }
 
-.author-bio .author-title {
+.author-bio.show-avatars .avatar {
+	display: inline-block;
+	vertical-align: top;
+	border-radius: 50%;
+}
+
+.author-bio.show-avatars .author-bio-content {
+	display: inline-block;
+	padding-left: var(--global--spacing-horizontal);
+	max-width: calc(var(--responsive--aligndefault-width) - 90px);
+}
+
+.author-bio .author-bio-content .author-title {
 	font-family: var(--entry-author-bio--font-family);
 	font-size: var(--entry-author-bio--font-size);
+	display: inline;
 }
 
-.author-bio .author-description {
+.author-bio .author-bio-content .author-description {
 	font-size: var(--global--font-size-xs);
-}
-
-.author-bio .avatar {
-	border-radius: 50%;
+	margin-top: calc(0.5 * var(--global--spacing-vertical));
+	margin-bottom: calc(0.5 * var(--global--spacing-vertical));
 }
 
 .page-title {
@@ -2988,6 +3002,20 @@ h2.page-title {
 	margin-bottom: 0;
 }
 
+.comments-area.show-avatars .avatar {
+	border-radius: 50%;
+	position: absolute;
+	top: 10px;
+}
+
+.comments-area.show-avatars .fn {
+	padding-left: 85px;
+}
+
+.comments-area.show-avatars .comment-metadata {
+	padding: 8px 0 9px 85px;
+}
+
 /**
  * Comment Title
  */
@@ -3003,13 +3031,30 @@ h2.page-title {
 }
 
 .comment-reply-title small a {
-	border-bottom: none;
+	border-color: transparent;
 	color: currentColor;
 	font-family: var(--global--font-secondary);
 	font-size: var(--global--font-size-xs);
 	font-style: normal;
 	font-weight: normal;
 	letter-spacing: normal;
+}
+
+.comment-reply-title small a:hover, .comment-reply-title small a:focus {
+	color: var(--global--color-primary-hover);
+}
+
+.comment-reply-title small a:hover {
+	border-color: var(--global--color-secondary);
+}
+
+.comment-reply-title small a:active {
+	color: currentColor;
+}
+
+/* Nested comment reply title*/
+.comment .comment-respond .comment-reply-title {
+	font-size: var(--global--font-size-lg);
 }
 
 /**
@@ -3025,24 +3070,20 @@ h2.page-title {
 	margin-bottom: var(--global--spacing-vertical);
 }
 
-.comment-list > li:not(first-child) {
-	border-bottom: 1px solid var(--comments--border-color);
-}
-
 .comment-list .children {
 	list-style: none;
-	padding-left: var(--global--spacing-horizontal);
+	padding-left: 0;
 }
 
 .comment-list .children > li {
-	border-top: 1px solid var(--comments--border-color);
 	margin-top: var(--global--spacing-vertical);
 	margin-bottom: var(--global--spacing-vertical);
 }
 
 @media only screen and (min-width: 482px) {
-	.comment-list .children {
-		padding-left: calc(2 * var(--global--spacing-horizontal));
+	.comment-list .depth-2,
+	.comment-list .depth-3 {
+		padding-left: calc(4 * var(--global--spacing-horizontal));
 	}
 }
 
@@ -3052,8 +3093,6 @@ h2.page-title {
 .comment-meta .comment-author {
 	line-height: var(--global--line-height-heading);
 	margin-bottom: calc(0.25 * var(--global--spacing-unit));
-	padding-right: calc(2.5 * var(--global--spacing-horizontal));
-	max-width: calc(100% - (3 * var(--global--spacing-horizontal)));
 }
 
 @media only screen and (min-width: 482px) {
@@ -3068,30 +3107,31 @@ h2.page-title {
 	font-weight: normal;
 	font-size: var(--global--font-size-lg);
 	hyphens: auto;
-	padding-left: 60px;
 	word-wrap: break-word;
 	word-break: break-word;
-}
-
-.comment-meta .comment-author .avatar {
-	border-radius: 50%;
-	position: absolute;
-	top: 5px;
 }
 
 .comment-meta .comment-metadata {
 	color: var(--global--color-primary);
 	font-size: var(--global--font-size-sm);
-	padding-left: 60px;
+	padding: 8px 0 9px 0;
+}
+
+.comment-meta .comment-metadata .edit-link {
+	margin-left: var(--global--spacing-horizontal);
 }
 
 .comment-meta .comment-metadata a {
-	border-bottom: none;
 	color: currentColor;
+	border-color: transparent;
 }
 
 .comment-meta .comment-metadata a:hover, .comment-meta .comment-metadata a:focus {
 	color: var(--global--color-primary-hover);
+}
+
+.comment-meta .comment-metadata a:hover {
+	border-color: var(--global--color-secondary);
 }
 
 .comment-meta .comment-metadata a:active {
@@ -3110,30 +3150,6 @@ h2.page-title {
 .reply {
 	font-size: var(--global--font-size-sm);
 	line-height: var(--global--line-height-heading);
-	text-align: right;
-}
-
-.reply a {
-	background-color: var(--button--color-background);
-	border-radius: var(--button--border-radius);
-	border-bottom: none;
-	color: var(--button--color-text);
-	font-weight: var(--button--font-weight);
-	font-family: var(--button--font-family);
-	font-size: var(--button--font-size);
-	line-height: var(--button--line-height);
-	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
-}
-
-.reply a:hover, .reply a:focus, .reply a.has-focus {
-	color: var(--button--color-text-hover);
-	background-color: var(--button--color-background-hover);
-}
-
-@media only screen and (min-width: 482px) {
-	.reply {
-		text-align: left;
-	}
 }
 
 .bypostauthor {
@@ -3151,6 +3167,7 @@ h2.page-title {
 
 .comment-body {
 	position: relative;
+	margin-bottom: calc(1.7 * var(--global--spacing-vertical));
 }
 
 .comment-body > * {
@@ -3159,7 +3176,7 @@ h2.page-title {
 }
 
 .comment-body .reply {
-	margin: calc(1.5 * var(--global--spacing-vertical)) 0;
+	margin: 0;
 }
 
 .comment-content a {
@@ -3690,12 +3707,12 @@ h2.page-title {
 }
 
 .post-navigation {
-	margin: var(--global--spacing-vertical) var(--global--spacing-horizontal);
+	margin: var(--global--spacing-vertical) auto;
 }
 
 @media only screen and (min-width: 822px) {
 	.post-navigation {
-		margin: var(--global--spacing-vertical) calc(4 * var(--global--spacing-horizontal));
+		margin: var(--global--spacing-vertical) auto;
 	}
 }
 
@@ -3743,12 +3760,12 @@ h2.page-title {
 .pagination {
 	border-top: 3px solid var(--global--color-border);
 	padding-top: var(--global--spacing-vertical);
-	margin: var(--global--spacing-vertical) var(--global--spacing-horizontal);
+	margin: var(--global--spacing-vertical) auto;
 }
 
 @media only screen and (min-width: 822px) {
 	.pagination {
-		margin: var(--global--spacing-vertical) calc(4 * var(--global--spacing-horizontal));
+		margin: var(--global--spacing-vertical) auto;
 	}
 }
 
