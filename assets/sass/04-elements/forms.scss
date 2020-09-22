@@ -26,6 +26,11 @@ input[type="color"],
 		outline: 1px solid var(--form--border-color);
 		background: var(--global--color-white);
 	}
+
+	&:disabled {
+		opacity: 0.7;
+	}
+
 }
 
 // Reset the negative offset from normalize to make the thicker "border" work on focus.
@@ -67,6 +72,10 @@ License: MIT.
 		background: var(--global--color-white-50);
 		border: var(--form--border-width) solid var(--form--border-color);
 		outline-offset: 0;
+
+		&:disabled {
+			opacity: 0.7;
+		}
 	}
 
 	input[type="checkbox"] {

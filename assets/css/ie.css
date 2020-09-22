@@ -1693,6 +1693,25 @@ input[type="color"]:focus {
 	background: #fff;
 }
 
+input[type="text"]:disabled,
+input[type="email"]:disabled,
+input[type="url"]:disabled,
+input[type="password"]:disabled,
+input[type="search"]:disabled,
+input[type="number"]:disabled,
+input[type="tel"]:disabled,
+input[type="range"]:disabled,
+input[type="date"]:disabled,
+input[type="month"]:disabled,
+input[type="week"]:disabled,
+input[type="time"]:disabled,
+input[type="datetime"]:disabled,
+input[type="datetime-local"]:disabled,
+input[type="color"]:disabled,
+.site textarea:disabled {
+	opacity: 0.7;
+}
+
 input[type="search"]:focus {
 	outline-offset: 0;
 }
@@ -1736,6 +1755,10 @@ License: MIT.
 		background: rgba(255, 255, 255, 0.5);
 		border: 3px solid #39414d;
 		outline-offset: 0;
+	}
+	input[type="checkbox"]:disabled,
+	input[type="radio"]:disabled {
+		opacity: 0.7;
 	}
 	input[type="checkbox"]:focus {
 		outline: 1px solid #39414d;
