@@ -1303,17 +1303,19 @@ License: MIT.
 	}
 }
 
-input[type="checkbox"] + label {
-	display: inline;
-	margin-right: 10px;
-	font-weight: normal;
-	font-size: var(--global--font-size-xs);
-}
-
 label {
 	font-size: var(--form--font-size);
 	font-weight: var(--form--label-weight);
 	margin-bottom: 10px;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+	display: inline-block;
+	padding-right: 10px;
+	font-weight: normal;
+	font-size: var(--global--font-size-xs);
+	vertical-align: top;
 }
 
 img {

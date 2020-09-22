@@ -1795,17 +1795,26 @@ License: MIT.
 	}
 }
 
-input[type="checkbox"] + label {
-	display: inline;
-	margin-left: 10px;
-	font-weight: normal;
-	font-size: 1rem;
-}
-
 label {
 	font-size: 1.125rem;
 	font-weight: 500;
 	margin-bottom: 10px;
+}
+
+input[type="checkbox"] + label {
+	display: inline-block;
+	padding-left: 10px;
+	font-weight: normal;
+	font-size: 1rem;
+	vertical-align: top;
+}
+
+input[type="radio"] + label {
+	display: inline-block;
+	padding-left: 10px;
+	font-weight: normal;
+	font-size: 1rem;
+	vertical-align: top;
 }
 
 img {
