@@ -32,10 +32,10 @@ if ( have_posts() ) {
 			_n(
 				'We found %d result for your search.',
 				'We found %d results for your search.',
-				(int) $wp_query->found_posts,
+				number_format_i18n( (int) $wp_query->found_posts ),
 				'twentytwentyone'
 			),
-			(int) $wp_query->found_posts
+			number_format_i18n( (int) $wp_query->found_posts )
 		);
 		?>
 	</div>
