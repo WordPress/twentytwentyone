@@ -219,7 +219,8 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
  * Author
  */
 
- .author-bio {
+.author-bio {
+	position: relative;
 	font-size: var(--global--font-size-xs);
 	max-width: var(--responsive--aligndefault-width);
 
@@ -227,18 +228,24 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 		margin-top: calc(2 * var(--global--spacing-vertical));
 	}
 
-	//Avatars are optional and can be turned off.
+	// Avatars are optional and can be turned off.
 	&.show-avatars {
-		display: grid;
-		grid-template-columns: 85px auto;
-		grid-gap: var(--global--spacing-horizontal);
 
 		.avatar {
+			display: inline-block;
+			vertical-align: top;
 			border-radius: 50%;
+		}
+
+		.author-bio-content {
+			display: inline-block;
+			padding-left: var(--global--spacing-horizontal);
+			max-width: calc(var(--responsive--aligndefault-width) - 90px);
 		}
 	}
 
 	.author-bio-content {
+
 		.author-title {
 			font-family: var(--entry-author-bio--font-family);
 			font-size: var(--entry-author-bio--font-size);

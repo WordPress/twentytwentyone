@@ -2896,6 +2896,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
  * Author
  */
 .author-bio {
+	position: relative;
 	font-size: var(--global--font-size-xs);
 	max-width: var(--responsive--aligndefault-width);
 }
@@ -2904,14 +2905,16 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	margin-top: calc(2 * var(--global--spacing-vertical));
 }
 
-.author-bio.show-avatars {
-	display: grid;
-	grid-template-columns: 85px auto;
-	grid-gap: var(--global--spacing-horizontal);
+.author-bio.show-avatars .avatar {
+	display: inline-block;
+	vertical-align: top;
+	border-radius: 50%;
 }
 
-.author-bio.show-avatars .avatar {
-	border-radius: 50%;
+.author-bio.show-avatars .author-bio-content {
+	display: inline-block;
+	padding-right: var(--global--spacing-horizontal);
+	max-width: calc(var(--responsive--aligndefault-width) - 90px);
 }
 
 .author-bio .author-bio-content .author-title {
@@ -2977,6 +2980,20 @@ h2.page-title {
 	margin-bottom: 0;
 }
 
+.comments-area.show-avatars .avatar {
+	border-radius: 50%;
+	position: absolute;
+	top: 10px;
+}
+
+.comments-area.show-avatars .fn {
+	padding-right: 85px;
+}
+
+.comments-area.show-avatars .comment-metadata {
+	padding: 8px 85px 9px 0;
+}
+
 /**
  * Comment Title
  */
@@ -3015,7 +3032,7 @@ h2.page-title {
 
 /* Nested comment reply title*/
 .comment .comment-respond .comment-reply-title {
-	font-size: var(--global--font-size-xxl);
+	font-size: var(--global--font-size-lg);
 }
 
 /**
@@ -3108,20 +3125,6 @@ h2.page-title {
 	}
 }
 
-.show-avatars .avatar {
-	border-radius: 50%;
-	position: absolute;
-	top: 13px;
-}
-
-.show-avatars .fn {
-	padding-right: 85px;
-}
-
-.show-avatars .comment-metadata {
-	padding: 8px 85px 9px 0;
-}
-
 .reply {
 	font-size: var(--global--font-size-sm);
 	line-height: var(--global--line-height-heading);
@@ -3142,7 +3145,7 @@ h2.page-title {
 
 .comment-body {
 	position: relative;
-	margin-bottom: calc( 1.7 * var(--global--spacing-vertical));
+	margin-bottom: calc(1.7 * var(--global--spacing-vertical));
 }
 
 .comment-body > * {

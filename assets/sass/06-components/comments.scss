@@ -15,6 +15,24 @@
 			margin-bottom: 0;
 		}
 	}
+
+	&.show-avatars {
+
+		.avatar {
+			border-radius: 50%;
+			position: absolute;
+			top: 10px;
+		}
+
+		.fn {
+			padding-left: 85px;
+		}
+
+		.comment-metadata {
+			padding: 8px 0 9px 85px;
+		}
+
+	}
 }
 
 /**
@@ -57,15 +75,15 @@
 		}
 	}
 }
+
 /* Nested comment reply title*/
 .comment .comment-respond .comment-reply-title {
-	font-size: var(--global--font-size-xxl);
+	font-size: var(--global--font-size-lg);
 }
 
 /**
  * Comment Lists
  */
-
 .comment-list {
 	padding-left: 0;
 	list-style: none;
@@ -98,7 +116,6 @@
 /**
  * Comment Meta
  */
-
 .comment-meta {
 
 	.comment-author {
@@ -158,23 +175,6 @@
 	}
 }
 
-.show-avatars {
-	.avatar {
-		border-radius: 50%;
-		position: absolute;
-		top: 13px;
-	}
-
-	.fn {
-		padding-left: 85px;
-	}
-
-	.comment-metadata {
-		padding: 8px 0 9px 85px;
-	}
-
-}
-
 .reply {
 	font-size: var(--global--font-size-sm);
 	line-height: var(--global--line-height-heading);
@@ -196,7 +196,7 @@
 // Comment body
 .comment-body {
 	position: relative;
-	margin-bottom: calc( 1.7 * var(--global--spacing-vertical));
+	margin-bottom: calc(1.7 * var(--global--spacing-vertical));
 
 	> * {
 		margin-top: var(--global--spacing-vertical);
