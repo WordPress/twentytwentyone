@@ -200,13 +200,18 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	@extend %responsive-aligndefault-width;
 	text-align: center;
 
+	.entry-header &,
 	.singular & {
-		@extend %responsive-alignfull-width-mobile;
-		@extend %responsive-alignfull-width;
+		@extend %responsive-alignwide-width-nested;
 	}
 
-	.post-thumbnail-inner {
+	.wp-post-image {
 		display: block;
+		width: auto;
+		min-width: var(--responsive--aligndefault-width);
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 

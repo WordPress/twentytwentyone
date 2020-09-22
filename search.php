@@ -13,7 +13,7 @@ get_header();
 
 if ( have_posts() ) {
 	?>
-	<header class="page-header archive-max-width">
+	<header class="page-header alignwide">
 		<h1 class="page-title">
 			<?php
 			printf(
