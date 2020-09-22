@@ -30,7 +30,7 @@
 		<?php get_template_part( 'template-parts/header/site-branding' ); ?>
 
 			<?php if ( has_nav_menu( 'primary' ) ) { ?>
-				<nav id="site-navigation" class="primary-navigation wp-block-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary', 'twentytwentyone' ); ?>">
+				<nav id="site-navigation" class="primary-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary', 'twentytwentyone' ); ?>">
 					<div class="menu-button-container">
 						<button id="primary-open-menu" class="button open" aria-haspopup="true" aria-controls="primary-navigation">
 							<span class="dropdown-icon open"><?php esc_html_e( 'Menu', 'twentytwentyone' ); ?>
@@ -48,11 +48,10 @@
 					<?php
 					wp_nav_menu(
 						array(
-							'theme_location' => 'primary',
-							'menu_class'     => 'menu-wrapper wp-block-navigation__container',
-							'menu_id'        => 'primary-navigation',
-							'container'      => 'false',
-							'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+							'theme_location'  => 'primary',
+							'menu_class'      => 'menu-wrapper',
+							'container_class' => 'primary-menu-container',
+							'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 						)
 					);
 					?>

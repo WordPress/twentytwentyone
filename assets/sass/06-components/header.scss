@@ -4,10 +4,10 @@
 .site-header {
 	@extend %responsive-alignwide-width;
 	display: flex;
-	padding-top: var(--global--spacing-vertical);
+	align-items: flex-start;
 
 	@include media(laptop) {
-		padding-top: calc( 2.4 * var(--global--spacing-vertical)); // 60px
+		padding-top: calc(2.4 * var(--global--spacing-vertical)); // 60px
 	}
 }
 
