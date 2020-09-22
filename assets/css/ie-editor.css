@@ -107,7 +107,12 @@ Example:
 	margin-left: auto;
 	margin-right: auto;
 }
-@media only screen and (min-width: 652px) {
+@media only screen and (min-width: 482px) {
+	.default-max-width {
+	max-width: min(calc(100vw - 100px), 610px);
+	}
+}
+@media only screen and (min-width: 822px) {
 	.default-max-width {
 	max-width: min(calc(100vw - 200px), 610px);
 	}
@@ -119,7 +124,13 @@ Example:
 	margin-right: auto;
 }
 
-@media only screen and (min-width: 652px) {
+@media only screen and (min-width: 482px) {
+	.wide-max-width {
+	max-width: calc(100vw - 100px);
+	}
+}
+
+@media only screen and (min-width: 822px) {
 	.wide-max-width {
 	max-width: min(calc(100vw - 200px), 1240px);
 	}
@@ -1257,7 +1268,13 @@ p.has-background {
 	max-width: calc(100vw - 30px);
 }
 
-@media only screen and (min-width: 652px) {
+@media only screen and (min-width: 482px) {
+	.wp-block-search {
+	max-width: min(calc(100vw - 100px), 610px);
+	}
+}
+
+@media only screen and (min-width: 822px) {
 	.wp-block-search {
 	max-width: min(calc(100vw - 200px), 610px);
 	}
@@ -1522,7 +1539,12 @@ pre.wp-block-verse {
 .wp-block {
 	max-width: calc(100vw - 30px);
 }
-@media only screen and (min-width: 652px) {
+@media only screen and (min-width: 482px) {
+	.wp-block {
+	max-width: min(calc(100vw - 100px), 610px);
+	}
+}
+@media only screen and (min-width: 822px) {
 	.wp-block {
 	max-width: min(calc(100vw - 200px), 610px);
 	}
@@ -1532,7 +1554,13 @@ pre.wp-block-verse {
 	max-width: calc(100vw - 30px);
 }
 
-@media only screen and (min-width: 652px) {
+@media only screen and (min-width: 482px) {
+	.wp-block[data-align="wide"] {
+	max-width: calc(100vw - 100px);
+	}
+}
+
+@media only screen and (min-width: 822px) {
 	.wp-block[data-align="wide"] {
 	max-width: min(calc(100vw - 200px), 1240px);
 	}
@@ -1542,7 +1570,13 @@ pre.wp-block-verse {
 	max-width: calc(100vw - 30px);
 }
 
-@media only screen and (min-width: 652px) {
+@media only screen and (min-width: 482px) {
+	.wp-block.alignwide {
+	max-width: calc(100vw - 100px);
+	}
+}
+
+@media only screen and (min-width: 822px) {
 	.wp-block.alignwide {
 	max-width: min(calc(100vw - 200px), 1240px);
 	}
