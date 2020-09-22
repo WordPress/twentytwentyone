@@ -283,6 +283,10 @@ figcaption {
 	padding: 15px 30px;
 }
 
+.wp-block-button__link:visited {
+	color: #d1e4dd;
+}
+
 .wp-block-button__link:hover {
 	color: #39414d;
 	background-color: #d1e4dd;
@@ -303,6 +307,14 @@ figcaption {
 	color: #39414d;
 	background: transparent;
 	border: 3px solid currentColor;
+}
+
+.wp-block-button__link.is-style-outline:visited {
+	color: #39414d;
+}
+
+.is-style-outline .wp-block-button__link:visited {
+	color: #39414d;
 }
 
 .wp-block-button__link.is-style-outline:active {

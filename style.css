@@ -1416,12 +1416,25 @@ i {
 	color: var(--button--color-text);
 }
 
+.wp-block-button .wp-block-button__link:visited {
+	color: var(--button--color-text);
+}
+
+.wp-block-button .wp-block-button__link:visited:hover {
+	color: var(--button--color-text-hover);
+}
+
 .wp-block-button.is-style-outline.wp-block-button__link,
 .wp-block-button.is-style-outline .wp-block-button__link {
 	color: var(--button--color-background);
 	background: transparent;
 	border: var(--button--border-width) solid currentColor;
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
+}
+
+.wp-block-button.is-style-outline.wp-block-button__link:visited,
+.wp-block-button.is-style-outline .wp-block-button__link:visited {
+	color: var(--button--color-background);
 }
 
 .wp-block-button.is-style-outline.wp-block-button__link:active, .wp-block-button.is-style-outline.wp-block-button__link:hover,

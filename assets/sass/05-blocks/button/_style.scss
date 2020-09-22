@@ -31,6 +31,14 @@ input[type="reset"],
 		color: var(--button--color-text);
 	}
 
+	.wp-block-button__link:visited {
+		color: var(--button--color-text);
+
+		&:hover {
+			color: var(--button--color-text-hover);
+		}
+	}
+
 	// Outline Style.
 	&.is-style-outline {
 
@@ -40,6 +48,10 @@ input[type="reset"],
 			background: transparent;
 			border: var(--button--border-width) solid currentColor;
 			padding: var(--button--padding-vertical) var(--button--padding-horizontal);
+
+			&:visited {
+				color: var(--button--color-background);
+			}
 
 			&:active,
 			&:hover {

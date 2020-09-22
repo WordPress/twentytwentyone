@@ -426,6 +426,10 @@ figcaption,
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
 
+.wp-block-button__link:visited {
+	color: var(--button--color-text);
+}
+
 .wp-block-button__link:hover {
 	color: var(--button--color-text-hover);
 	background-color: var(--button--color-background-hover);
@@ -441,6 +445,11 @@ figcaption,
 	color: var(--button--color-background);
 	background: transparent;
 	border: var(--button--border-width) solid currentColor;
+}
+
+.wp-block-button__link.is-style-outline:visited,
+.is-style-outline .wp-block-button__link:visited {
+	color: var(--button--color-background);
 }
 
 .wp-block-button__link.is-style-outline:active, .wp-block-button__link.is-style-outline:hover,

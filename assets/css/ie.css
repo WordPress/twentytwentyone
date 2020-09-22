@@ -1914,6 +1914,14 @@ i {
 	color: #d1e4dd;
 }
 
+.wp-block-button .wp-block-button__link:visited {
+	color: #d1e4dd;
+}
+
+.wp-block-button .wp-block-button__link:visited:hover {
+	color: #39414d;
+}
+
 .wp-block-button.is-style-outline.wp-block-button__link {
 	color: #39414d;
 	background: transparent;
@@ -1926,6 +1934,14 @@ i {
 	background: transparent;
 	border: 3px solid currentColor;
 	padding: 15px 30px;
+}
+
+.wp-block-button.is-style-outline.wp-block-button__link:visited {
+	color: #39414d;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:visited {
+	color: #39414d;
 }
 
 .wp-block-button.is-style-outline.wp-block-button__link:active {
