@@ -27,15 +27,16 @@ if ( have_posts() ) {
 
 	<div class="search-result-count default-max-width">
 		<?php
+		$search_results_found = number_format_i18n( (int) $wp_query->found_posts );
 		printf(
 			/* translators: %d: the number of search results. */
 			_n(
 				'We found %d result for your search.',
 				'We found %d results for your search.',
-				number_format_i18n( (int) $wp_query->found_posts ),
+				$search_results_found,
 				'twentytwentyone'
 			),
-			number_format_i18n( (int) $wp_query->found_posts )
+			$search_results_found
 		);
 		?>
 	</div>
