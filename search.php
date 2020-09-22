@@ -30,7 +30,7 @@ if ( have_posts() ) {
 		printf(
 			/* translators: %d: the number of search results. */
 			esc_html__( 'We found %d results for your search.', 'twentytwentyone' ),
-			(int) $wp_query->found_posts
+			number_format_i18n( $wp_query->found_posts )
 		);
 		?>
 	</div>
