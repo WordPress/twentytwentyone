@@ -775,6 +775,30 @@ hr.wp-block-separator.is-style-wide {
 	}
 }
 
+.post-navigation {
+	max-width: calc(100vw - 30px);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media only screen and (min-width: 652px){
+	.post-navigation{
+	max-width: min(calc(100vw - 200px), 1240px);
+	}
+}
+
+.pagination {
+	max-width: calc(100vw - 30px);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media only screen and (min-width: 652px){
+	.pagination{
+	max-width: min(calc(100vw - 200px), 1240px);
+	}
+}
+
 .full-max-width {
 	max-width: calc(100% + 50px);
 	width: calc(100% + 50px);
@@ -846,7 +870,7 @@ hr.wp-block-separator.is-style-wide {
 
 @media only screen and (min-width: 652px){
 	.entry-header .post-thumbnail{
-	width: calc(100vw - 200px);
+	width: min(calc(100vw - 200px), 1240px);
 	}
 }
 
@@ -859,7 +883,7 @@ hr.wp-block-separator.is-style-wide {
 
 @media only screen and (min-width: 652px){
 	.singular .post-thumbnail{
-	width: calc(100vw - 200px);
+	width: min(calc(100vw - 200px), 1240px);
 	}
 }
 
@@ -4664,12 +4688,12 @@ h2.page-title {
 }
 
 .post-navigation {
-	margin: 30px 25px;
+	margin: 30px auto;
 }
 
 @media only screen and (min-width: 822px) {
 	.post-navigation {
-		margin: 30px 100px;
+		margin: 30px auto;
 	}
 }
 
@@ -4721,12 +4745,12 @@ h2.page-title {
 .pagination {
 	border-top: 3px solid #000;
 	padding-top: 30px;
-	margin: 30px 25px;
+	margin: 30px auto;
 }
 
 @media only screen and (min-width: 822px) {
 	.pagination {
-		margin: 30px 100px;
+		margin: 30px auto;
 	}
 }
 
