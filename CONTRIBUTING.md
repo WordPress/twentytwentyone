@@ -12,13 +12,13 @@ Twenty Twenty One should have all issues reported on GitHub at https://github.co
 
 ## Testing a Pull Request
 
-If you're using Git locally, you can test a pull request by pulling down the associated branch, creating a zip file of the contents, and uploading to your site. This repository includes all compiled files, so it should install just like any other uploaded theme. 
+If you're using Git locally, you can test a pull request by pulling down the associated branch, creating a zip file of the contents, and uploading to your site. This repository includes all compiled files, so it should install just like any other uploaded theme.
 
 If you're not already using Git, you may benefit from installing the [GitHub desktop application](https://desktop.github.com). This will allow you to [download the repository in  one click](https://help.github.com/desktop/guides/contributing-to-projects/cloning-a-repository-from-github-to-github-desktop/), keep it in sync, and easily [switch between different pull requests](https://help.github.com/desktop/guides/contributing-to-projects/accessing-a-pull-request-locally/). Once a pull request is selected in the application, create a zip file of the whole repository, and upload it to your site to test.
 
 ## Submitting Fixes
 
-To submit a fix, please [fork the repository](https://help.github.com/articles/fork-a-repo/) and submit a [pull request](https://help.github.com/articles/creating-a-pull-request/). In your pull request's description, please explain your update and reference the associated issue you're fixing. 
+To submit a fix, please [fork the repository](https://help.github.com/articles/fork-a-repo/) and submit a [pull request](https://help.github.com/articles/creating-a-pull-request/). In your pull request's description, please explain your update and reference the associated issue you're fixing.
 
 ## Best Practices
 
@@ -80,5 +80,13 @@ With Twenty Twenty One you can use [PHP Code Sniffer](https://github.com/WordPre
 1. Type `./vendor/bin/phpcs` into the command line and press [return], to check all files.
 Type `./vendor/bin/phpcs` filename.php into the command line and press [return], to check a single file.
 
+### WordPress Local Environment
 
+To ease development, a user can utilize `wp-env` for local testing. This is dependent on docker being installed and available on the local computer.
 
+#### Installation
+
+1. Ensure that you run `npm i` to install all needed components.
+2. Start the environment with `npm run env:start`
+3. Open a browser with `npm run env:open` or browse to https://localhost:8888.
+4. If a reset is needed, run `npm run env:clean` to reset all settings.
