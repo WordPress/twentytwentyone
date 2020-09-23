@@ -5,13 +5,14 @@
 	@extend %responsive-alignwide-width;
 	display: flex;
 	align-items: flex-start;
+	flex-wrap: wrap;
 
 	@include media(mobile) {
-		padding-top: calc( var(--global--spacing-vertical) / 0.75); // 40px
+		padding-top: calc(var(--global--spacing-vertical) / 0.75); // 40px
 	}
 
 	@include media(desktop) {
-		padding-top: calc( 2.4 * var(--global--spacing-vertical)); // 60px
+		padding-top: calc(2.4 * var(--global--spacing-vertical)); // 60px
 	}
 }
 

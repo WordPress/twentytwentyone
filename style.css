@@ -200,15 +200,19 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	/* Main navigation */
 	--primary-nav--font-family: var(--global--font-secondary);
 	--primary-nav--font-family-mobile: var(--global--font-primary);
-	--primary-nav--font-size: var(--global--font-size-md);
+	--primary-nav--font-size: var(--global--font-size-sm);
+	--primary-nav--font-size-sub-menu: var(--global--font-size-xs);
 	--primary-nav--font-size-mobile: var(--global--font-size-md);
 	--primary-nav--font-size-sub-menu-mobile: var(--global--font-size-sm);
+	--primary-nav--font-size-button: var(--global--font-size-xs);
 	--primary-nav--font-style: normal;
 	--primary-nav--font-style-sub-menu-mobile: normal;
 	--primary-nav--font-weight: normal;
+	--primary-nav--font-weight-button: 500;
 	--primary-nav--line-height: var(--global--line-height-body);
 	--primary-nav--color-link: var(--global--color-primary);
 	--primary-nav--color-link-hover: var(--global--color-primary-hover);
+	--primary-nav--color-link-border: var(--global--color-primary);
 	--primary-nav--color-text: var(--global--color-primary);
 	--primary-nav--padding: calc(0.66 * var(--global--spacing-unit));
 	--primary-nav--justify-content: center;
@@ -2490,11 +2494,12 @@ table th,
 .site-header {
 	display: flex;
 	align-items: flex-start;
+	flex-wrap: wrap;
 }
 
 @media only screen and (min-width: 482px) {
 	.site-header {
-		padding-top: calc( var(--global--spacing-vertical) / 0.75);
+		padding-top: calc(var(--global--spacing-vertical) / 0.75);
 	}
 }
 
@@ -3314,11 +3319,12 @@ h2.page-title {
 }
 
 .admin-bar:not(.primary-navigation-open) .menu-button-container {
-	top: var(--global--spacing-vertical);
+	top: calc(1.4 * var(--global--spacing-vertical));
 }
 
 .menu-button-container .button {
-	font-size: var(--primary-nav--font-size);
+	font-size: var(--primary-nav--font-size-button);
+	font-weight: var(--primary-nav--font-weight-button);
 	text-transform: var(--branding--title--text-transform);
 	background-color: transparent;
 	color: var(--primary-nav--color-link);
@@ -3373,6 +3379,7 @@ h2.page-title {
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
 	text-transform: var(--branding--title--text-transform);
+	line-height: 1.15;
 	margin-top: 0;
 	margin-bottom: 0;
 }
@@ -3455,24 +3462,22 @@ h2.page-title {
 
 .primary-navigation > div > .menu-wrapper {
 	display: flex;
-	justify-content: var(--primary-nav--justify-content);
+	justify-content: flex-start;
 	flex-wrap: wrap;
 	list-style: none;
 	margin: 0;
 	max-width: none;
 	padding-left: 0;
 	position: relative;
-	/* Sub-menus Flyout */
 }
 
 @media only screen and (max-width: 481px) {
 	.primary-navigation > div > .menu-wrapper {
 		margin: calc(2 * var(--global--spacing-vertical)) 0 0 0;
 	}
-}
-
-.primary-navigation > div > .menu-wrapper ul {
-	padding-left: 0;
+	.primary-navigation > div > .menu-wrapper ul {
+		padding-left: 0;
+	}
 }
 
 .primary-navigation > div > .menu-wrapper li {
@@ -3511,7 +3516,7 @@ h2.page-title {
 	.primary-navigation > div > .menu-wrapper > li > .sub-menu {
 		margin: 0;
 		background: var(--global--color-background);
-		left: 0;
+		left: -15px;
 		top: calc(100% - (0.5 * var(--primary-nav--padding)));
 		min-width: max-content;
 		opacity: 0;
@@ -3537,7 +3542,7 @@ h2.page-title {
 	.primary-navigation .primary-menu-container > ul > .menu-item {
 		display: flex;
 		align-items: center;
-		padding: var(--primary-nav--padding);
+		padding: calc(0.7 * var(--primary-nav--padding)) calc(3 * var(--primary-nav--padding)) var(--primary-nav--padding) 0;
 	}
 }
 
@@ -3558,11 +3563,25 @@ h2.page-title {
 }
 
 .primary-navigation a + svg {
-	fill: currentColor;
+	fill: var(--primary-nav--color-text);
 }
 
 .primary-navigation a:hover, .primary-navigation a:link, .primary-navigation a:visited {
-	color: currentColor;
+	color: var(--primary-nav--color-link-hover);
+}
+
+.primary-navigation a:hover {
+	border-bottom: 1px dashed var(--primary-nav--color-link-border);
+}
+
+.primary-navigation .current-menu-item > a:first-child,
+.primary-navigation .current_page_item > a:first-child {
+	border-bottom: 1px solid var(--primary-nav--color-link-border);
+}
+
+.primary-navigation .current-menu-item > a:first-child:hover,
+.primary-navigation .current_page_item > a:first-child:hover {
+	border-bottom: 1px dashed var(--primary-nav--color-link-border);
 }
 
 .primary-navigation .sub-menu {
@@ -3572,25 +3591,23 @@ h2.page-title {
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation .sub-menu {
-		padding: calc(0.5 * var(--primary-nav--padding)) var(--primary-nav--padding);
+		padding: var(--primary-nav--padding);
 	}
 	.primary-navigation .sub-menu > .menu-item > .sub-menu {
-		padding: 0;
+		padding: var(--primary-nav--padding) 0 0 0;
 	}
 	.primary-navigation .sub-menu > .menu-item.menu-item-has-children {
-		padding: calc(0.5 * var(--primary-nav--padding)) var(--primary-nav--padding) 0 0;
+		padding: var(--primary-nav--padding) 0 0 0;
 	}
 }
 
 .primary-navigation .sub-menu .menu-item {
-	padding-top: calc(0.5 * var(--primary-nav--padding));
-	padding-bottom: calc(0.5 * var(--primary-nav--padding));
+	padding: calc(0.5 * var(--primary-nav--padding)) var(--primary-nav--padding);
 }
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation .sub-menu .menu-item {
-		padding-top: calc(0.5 * var(--primary-nav--padding));
-		padding-bottom: calc(0.5 * var(--primary-nav--padding));
+		padding: var(--primary-nav--padding) 0;
 	}
 }
 
@@ -3602,7 +3619,7 @@ h2.page-title {
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation .sub-menu .menu-item a {
-		font-size: var(--primary-nav--font-size);
+		font-size: var(--primary-nav--font-size-sub-menu);
 		font-style: var(--primary-nav--font-style);
 	}
 }

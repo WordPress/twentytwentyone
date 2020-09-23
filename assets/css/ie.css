@@ -2807,7 +2807,7 @@ dd {
 
 .wp-block-navigation .wp-block-navigation-link .wp-block-navigation-link__label {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1.25rem;
+	font-size: 1.125rem;
 	font-weight: normal;
 }
 
@@ -3506,6 +3506,7 @@ table th {
 .site-header {
 	display: flex;
 	align-items: flex-start;
+	flex-wrap: wrap;
 }
 
 @media only screen and (min-width: 482px) {
@@ -4442,11 +4443,12 @@ h2.page-title {
 }
 
 .admin-bar:not(.primary-navigation-open) .menu-button-container {
-	top: 30px;
+	top: 42px;
 }
 
 .menu-button-container .button {
-	font-size: 1.25rem;
+	font-size: 1rem;
+	font-weight: 500;
 	text-transform: uppercase;
 	background-color: transparent;
 	color: #28303d;
@@ -4499,8 +4501,9 @@ h2.page-title {
 	top: 0;
 	right: 0;
 	color: #28303d;
-	font-size: 1.25rem;
+	font-size: 1.125rem;
 	text-transform: uppercase;
+	line-height: 1.15;
 	margin-top: 0;
 	margin-bottom: 0;
 }
@@ -4583,24 +4586,22 @@ h2.page-title {
 
 .primary-navigation > div > .menu-wrapper {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 	list-style: none;
 	margin: 0;
 	max-width: none;
 	padding-left: 0;
 	position: relative;
-	/* Sub-menus Flyout */
 }
 
 @media only screen and (max-width: 481px) {
 	.primary-navigation > div > .menu-wrapper {
 		margin: 60px 0 0 0;
 	}
-}
-
-.primary-navigation > div > .menu-wrapper ul {
-	padding-left: 0;
+	.primary-navigation > div > .menu-wrapper ul {
+		padding-left: 0;
+	}
 }
 
 .primary-navigation > div > .menu-wrapper li {
@@ -4639,7 +4640,7 @@ h2.page-title {
 	.primary-navigation > div > .menu-wrapper > li > .sub-menu {
 		margin: 0;
 		background: #d1e4dd;
-		left: 0;
+		left: -15px;
 		top: calc(100% - 7px);
 		min-width: max-content;
 		opacity: 0;
@@ -4665,7 +4666,7 @@ h2.page-title {
 	.primary-navigation .primary-menu-container > ul > .menu-item {
 		display: flex;
 		align-items: center;
-		padding: 13px;
+		padding: 9px 40px 13px 0;
 	}
 }
 
@@ -4680,17 +4681,45 @@ h2.page-title {
 	.primary-navigation a {
 		display: block;
 		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-		font-size: 1.25rem;
+		font-size: 1.125rem;
 		font-weight: normal;
 	}
 }
 
 .primary-navigation a + svg {
-	fill: currentColor;
+	fill: #28303d;
 }
 
-.primary-navigation a:hover, .primary-navigation a:link, .primary-navigation a:visited {
-	color: currentColor;
+.primary-navigation a:hover {
+	color: #28303d;
+}
+
+.primary-navigation a:link {
+	color: #28303d;
+}
+
+.primary-navigation a:visited {
+	color: #28303d;
+}
+
+.primary-navigation a:hover {
+	border-bottom: 1px dashed #28303d;
+}
+
+.primary-navigation .current-menu-item > a:first-child {
+	border-bottom: 1px solid #28303d;
+}
+
+.primary-navigation .current_page_item > a:first-child {
+	border-bottom: 1px solid #28303d;
+}
+
+.primary-navigation .current-menu-item > a:first-child:hover {
+	border-bottom: 1px dashed #28303d;
+}
+
+.primary-navigation .current_page_item > a:first-child:hover {
+	border-bottom: 1px dashed #28303d;
 }
 
 .primary-navigation .sub-menu {
@@ -4700,25 +4729,23 @@ h2.page-title {
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation .sub-menu {
-		padding: 7px 13px;
+		padding: 13px;
 	}
 	.primary-navigation .sub-menu > .menu-item > .sub-menu {
-		padding: 0;
+		padding: 13px 0 0 0;
 	}
 	.primary-navigation .sub-menu > .menu-item.menu-item-has-children {
-		padding: 7px 13px 0 0;
+		padding: 13px 0 0 0;
 	}
 }
 
 .primary-navigation .sub-menu .menu-item {
-	padding-top: 7px;
-	padding-bottom: 7px;
+	padding: 7px 13px;
 }
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation .sub-menu .menu-item {
-		padding-top: 7px;
-		padding-bottom: 7px;
+		padding: 13px 0;
 	}
 }
 
@@ -4730,7 +4757,7 @@ h2.page-title {
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation .sub-menu .menu-item a {
-		font-size: 1.25rem;
+		font-size: 1rem;
 		font-style: normal;
 	}
 }

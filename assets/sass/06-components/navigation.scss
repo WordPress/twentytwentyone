@@ -23,11 +23,12 @@
 	}
 
 	.admin-bar:not(.primary-navigation-open) & {
-		top: var(--global--spacing-vertical);
+		top: calc(1.4 * var(--global--spacing-vertical));
 	}
 
 	.button {
-		font-size: var(--primary-nav--font-size);
+		font-size: var(--primary-nav--font-size-button);
+		font-weight: var(--primary-nav--font-weight-button);
 		text-transform: var(--branding--title--text-transform);
 		background-color: transparent;
 		color: var(--primary-nav--color-link);
@@ -79,7 +80,6 @@
 			display: flex;
 		}
 	}
-
 }
 
 .primary-navigation {
@@ -89,6 +89,7 @@
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
 	text-transform: var(--branding--title--text-transform);
+	line-height: 1.15;
 	margin-top: 0;
 	margin-bottom: 0;
 
@@ -182,7 +183,7 @@
 	// Menu list wrapper
 	> div > .menu-wrapper {
 		display: flex;
-		justify-content: var(--primary-nav--justify-content);
+		justify-content: flex-start;
 		flex-wrap: wrap;
 		list-style: none;
 		margin: 0;
@@ -192,10 +193,10 @@
 
 		@include media(mobile-only) {
 			margin: calc(2 * var(--global--spacing-vertical)) 0 0 0;
-		}
 
-		ul {
-			padding-left: 0;
+			ul {
+				padding-left: 0;
+			}
 		}
 
 		li {
@@ -226,7 +227,7 @@
 			}
 		}
 
-		/* Sub-menus Flyout */
+		// Sub-menus Flyout
 		> li > .sub-menu {
 
 			position: relative;
@@ -234,7 +235,7 @@
 			@include media(mobile) {
 				margin: 0;
 				background: var(--global--color-background);
-				left: 0;
+				left: -15px;
 				top: calc(100% - (0.5 * var(--primary-nav--padding)));
 				min-width: max-content;
 				opacity: 0;
@@ -253,7 +254,6 @@
 	.primary-menu > .menu-item:hover > a {
 		color: var(--primary-nav--color-link-hover);
 	}
-
 	// Top-level Menu Item
 	.primary-menu-container > ul > .menu-item {
 		padding: calc(0.5 * var(--primary-nav--padding)) 0;
@@ -261,7 +261,8 @@
 		@include media(mobile) {
 			display: flex;
 			align-items: center;
-			padding: var(--primary-nav--padding);
+			// Sets the left padding to 0 to better align with the site title when wrapped.
+			padding: calc(0.7 * var(--primary-nav--padding)) calc(3 * var(--primary-nav--padding)) var(--primary-nav--padding) 0;
 		}
 	}
 
@@ -280,13 +281,26 @@
 		}
 
 		+ svg {
-			fill: currentColor;
+			fill: var(--primary-nav--color-text);
 		}
 
 		&:hover,
 		&:link,
 		&:visited {
-			color: currentColor;
+			color: var(--primary-nav--color-link-hover);
+		}
+
+		&:hover {
+			border-bottom: 1px dashed var(--primary-nav--color-link-border);
+		}
+	}
+
+	.current-menu-item > a:first-child,
+	.current_page_item > a:first-child {
+		border-bottom: 1px solid var(--primary-nav--color-link-border);
+
+		&:hover {
+			border-bottom: 1px dashed var(--primary-nav--color-link-border);
 		}
 	}
 
@@ -295,25 +309,24 @@
 		list-style: none;
 		margin-left: var(--primary-nav--padding);
 
+		// Sub menu items om wide screens.
 		@include media(mobile) {
-			padding: calc(0.5 * var(--primary-nav--padding)) var(--primary-nav--padding);
+			padding: var(--primary-nav--padding);
 
 			> .menu-item > .sub-menu {
-				padding: 0;
+				padding: var(--primary-nav--padding) 0 0 0;
 			}
 
 			> .menu-item.menu-item-has-children {
-				padding: calc(0.5 * var(--primary-nav--padding)) var(--primary-nav--padding) 0 0;
+				padding: var(--primary-nav--padding) 0 0 0;
 			}
 		}
 
 		.menu-item {
-			padding-top: calc(0.5 * var(--primary-nav--padding));
-			padding-bottom: calc(0.5 * var(--primary-nav--padding));
+			padding: calc(0.5 * var(--primary-nav--padding)) var(--primary-nav--padding);
 
 			@include media(mobile) {
-				padding-top: calc(0.5 * var(--primary-nav--padding));
-				padding-bottom: calc(0.5 * var(--primary-nav--padding));
+				padding: var(--primary-nav--padding) 0;
 			}
 
 			a {
@@ -322,7 +335,7 @@
 				font-style: var(--primary-nav--font-style-sub-menu-mobile);
 
 				@include media(mobile) {
-					font-size: var(--primary-nav--font-size);
+					font-size: var(--primary-nav--font-size-sub-menu);
 					font-style: var(--primary-nav--font-style);
 				}
 			}

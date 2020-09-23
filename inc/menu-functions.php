@@ -26,7 +26,7 @@ function twenty_twenty_one_add_dropdown_icons( $output, $item, $depth, $args ) {
 
 	if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
 		// Add SVG icon to parent items.
-		$output .= twenty_twenty_one_get_icon_svg( 'plus' );
+		$output .= twenty_twenty_one_get_icon_svg( 'plus', 18 );
 	}
 
 	return $output;
