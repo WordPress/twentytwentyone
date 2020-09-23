@@ -7,11 +7,11 @@
 	padding-top: var(--global--spacing-vertical);
 
 	@include media(mobile) {
-		padding-top: calc( var(--global--spacing-vertical) / 0.75); // 40px
+		padding-top: calc(var(--global--spacing-vertical) / 0.75); // 40px
 	}
 
 	@include media(desktop) {
-		padding-top: calc( 2.4 * var(--global--spacing-vertical)); // 60px
+		padding-top: calc(2.4 * var(--global--spacing-vertical)); // 60px
 	}
 }
 
@@ -77,7 +77,6 @@ nav a {
 }
 
 .site-title > a {
-	text-underline-width: .125em;
 	text-decoration-color: var(--global--color-secondary);
 }
 

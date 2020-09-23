@@ -20,9 +20,6 @@
 		display: flex;
 	}
 
-	//.admin-bar:not(.primary-navigation-open) & {
-	//	top: 46px;
-	//}
 }
 
 .menu-button-container,
@@ -234,7 +231,7 @@
 			}
 		}
 
-		/* Sub-menus Flyout */
+		// Sub-menus Flyout
 		> li > .sub-menu {
 
 			position: relative;

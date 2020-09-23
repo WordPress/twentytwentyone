@@ -202,9 +202,7 @@ $breakpoint_xxl: 1024px;
 }
 
 
-/**
- * Output
- */
+// Output
 .default-max-width {
 	@extend %responsive-aligndefault-width;
 }
