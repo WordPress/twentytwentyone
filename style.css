@@ -215,7 +215,7 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--primary-nav--color-link-border: var(--global--color-primary);
 	--primary-nav--color-text: var(--global--color-primary);
 	--primary-nav--padding: calc(0.66 * var(--global--spacing-unit));
-	--primary-nav--justify-content: center;
+	--primary-nav--justify-content: right;
 	/* Pagination */
 	--pagination--color-text: var(--global--color-primary);
 	--pagination--color-link: var(--global--color-primary);
@@ -3514,13 +3514,13 @@ h2.page-title {
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation > div > .menu-wrapper > li > .sub-menu {
-		margin: 0;
 		background: var(--global--color-background);
-		left: -15px;
-		top: calc(100% - (0.5 * var(--primary-nav--padding)));
+		left: 0;
+		margin: 0;
 		min-width: max-content;
 		opacity: 0;
 		position: absolute;
+		top: calc(100% - (0.5 * var(--primary-nav--padding)));
 		transition: all 0.5s ease;
 		visibility: hidden;
 	}
@@ -3535,14 +3535,15 @@ h2.page-title {
 }
 
 .primary-navigation .primary-menu-container > ul > .menu-item {
-	padding: calc(0.5 * var(--primary-nav--padding)) 0;
+	padding: var(--primary-nav--padding);
 }
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation .primary-menu-container > ul > .menu-item {
 		display: flex;
 		align-items: center;
-		padding: calc(0.7 * var(--primary-nav--padding)) calc(3 * var(--primary-nav--padding)) var(--primary-nav--padding) 0;
+		margin-left: calc( -1 * var(--primary-nav--padding));
+		margin-right: var(--primary-nav--padding);
 	}
 }
 
@@ -3592,22 +3593,6 @@ h2.page-title {
 @media only screen and (min-width: 482px) {
 	.primary-navigation .sub-menu {
 		padding: var(--primary-nav--padding);
-	}
-	.primary-navigation .sub-menu > .menu-item > .sub-menu {
-		padding: var(--primary-nav--padding) 0 0 0;
-	}
-	.primary-navigation .sub-menu > .menu-item.menu-item-has-children {
-		padding: var(--primary-nav--padding) 0 0 0;
-	}
-}
-
-.primary-navigation .sub-menu .menu-item {
-	padding: calc(0.5 * var(--primary-nav--padding)) var(--primary-nav--padding);
-}
-
-@media only screen and (min-width: 482px) {
-	.primary-navigation .sub-menu .menu-item {
-		padding: var(--primary-nav--padding) 0;
 	}
 }
 
