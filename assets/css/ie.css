@@ -4630,6 +4630,9 @@ h2.page-title {
 		opacity: 1;
 		display: block;
 	}
+	.primary-navigation > div > .menu-wrapper li:last-child {
+		margin-right: 0;
+	}
 }
 
 .primary-navigation > div > .menu-wrapper > li > .sub-menu {
@@ -4730,8 +4733,15 @@ h2.page-title {
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation .sub-menu {
-		padding: 13px;
+		padding: 0 13px;
 	}
+	.primary-navigation .sub-menu > .menu-item > .sub-menu {
+		padding: 0;
+	}
+}
+
+.primary-navigation .sub-menu .menu-item {
+	padding: 13px 0 0;
 }
 
 .primary-navigation .sub-menu .menu-item a {

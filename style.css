@@ -3506,6 +3506,9 @@ h2.page-title {
 		opacity: 1;
 		display: block;
 	}
+	.primary-navigation > div > .menu-wrapper li:last-child {
+		margin-right: 0;
+	}
 }
 
 .primary-navigation > div > .menu-wrapper > li > .sub-menu {
@@ -3592,8 +3595,15 @@ h2.page-title {
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation .sub-menu {
-		padding: var(--primary-nav--padding);
+		padding: 0 var(--primary-nav--padding);
 	}
+	.primary-navigation .sub-menu > .menu-item > .sub-menu {
+		padding: 0;
+	}
+}
+
+.primary-navigation .sub-menu .menu-item {
+	padding: var(--primary-nav--padding) 0 0;
 }
 
 .primary-navigation .sub-menu .menu-item a {

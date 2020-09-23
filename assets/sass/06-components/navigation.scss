@@ -224,6 +224,9 @@
 					opacity: 1;
 					display: block;
 				}
+				&:last-child(){
+					margin-right: 0;
+				}
 			}
 		}
 
@@ -311,19 +314,16 @@
 
 		// Sub menu items om wide screens.
 		@include media(mobile) {
-			padding: var(--primary-nav--padding);
+			padding: 0 var(--primary-nav--padding);
 
+			// For nested sub-menus, don't duplicate the padding
 			> .menu-item > .sub-menu {
-				// padding: var(--primary-nav--padding) 0 0 0;
+				padding: 0;
 			}
 		}
 
 		.menu-item {
-			// padding: calc(0.5 * var(--primary-nav--padding)) var(--primary-nav--padding);
-
-			@include media(mobile) {
-				// padding: var(--primary-nav--padding) 0;
-			}
+			padding: var(--primary-nav--padding) 0 0;
 
 			a {
 				display: inline;
