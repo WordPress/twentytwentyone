@@ -3533,7 +3533,7 @@ h2.page-title {
 	.primary-navigation .primary-menu-container > ul > .menu-item {
 		display: flex;
 		align-items: center;
-		margin-right: calc( -1 * var(--primary-nav--padding));
+		margin-right: calc(-1 * var(--primary-nav--padding));
 		margin-left: var(--primary-nav--padding);
 	}
 }

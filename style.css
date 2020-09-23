@@ -3546,7 +3546,7 @@ h2.page-title {
 	.primary-navigation .primary-menu-container > ul > .menu-item {
 		display: flex;
 		align-items: center;
-		margin-left: calc( -1 * var(--primary-nav--padding));
+		margin-left: calc(-1 * var(--primary-nav--padding));
 		margin-right: var(--primary-nav--padding);
 	}
 }
