@@ -23,5 +23,5 @@ jobs:
     - name: stylelint
       uses: actions-hub/stylelint@master
       env:
-				GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-				PATTERN: "*.scss"
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PATTERN: "*.scss"
