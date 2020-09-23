@@ -6,8 +6,12 @@
 	display: flex;
 	align-items: flex-start;
 
-	@include media(laptop) {
-		padding-top: calc(2.4 * var(--global--spacing-vertical)); // 60px
+	@include media(mobile) {
+		padding-top: calc( var(--global--spacing-vertical) / 0.75); // 40px
+	}
+
+	@include media(desktop) {
+		padding-top: calc( 2.4 * var(--global--spacing-vertical)); // 60px
 	}
 }
 

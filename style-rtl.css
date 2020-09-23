@@ -688,12 +688,14 @@ template {
 
 @media only screen and (min-width: 482px) {
 	:root {
+		--responsive--aligndefault-width: min(calc(100vw - 4 * var(--global--spacing-horizontal)), 610px);
+		--responsive--alignwide-width: calc(100vw - 4 * var(--global--spacing-horizontal));
 		--responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
 }
 
-@media only screen and (min-width: 652px) {
+@media only screen and (min-width: 822px) {
 	:root {
 		--responsive--aligndefault-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), 610px);
 		--responsive--alignwide-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), 1240px);
@@ -2477,7 +2479,13 @@ table th,
 	align-items: flex-start;
 }
 
-@media only screen and (min-width: 652px) {
+@media only screen and (min-width: 482px) {
+	.site-header {
+		padding-top: calc( var(--global--spacing-vertical) / 0.75);
+	}
+}
+
+@media only screen and (min-width: 822px) {
 	.site-header {
 		padding-top: calc(2.4 * var(--global--spacing-vertical));
 	}
