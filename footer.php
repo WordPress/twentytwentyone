@@ -30,7 +30,7 @@
 					<?php
 				}
 				?>
-			</div>
+			</div><!-- .site-name -->
 			<div class="copyright">
 				<?php
 				/* translators: 1: Copyright date format, see https://www.php.net/date, 2: Site name */
@@ -51,7 +51,7 @@
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentytwentyone' ) ); ?>"  class="imprint">
 				<?php /* translators: %s: WordPress. */ printf( esc_html__( 'Proudly powered by %s.', 'twentytwentyone' ), 'WordPress' ); ?>
 				</a>
-			</div>
+			</div><!-- .copyright -->
 
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
