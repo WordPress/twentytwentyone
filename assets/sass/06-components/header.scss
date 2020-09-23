@@ -24,6 +24,7 @@
 
 	@include media(mobile) {
 		margin-right: initial;
+		margin-bottom: var(--global--spacing-vertical); // Add a margin in case the menu wraps below the site branding.
 
 		/* TODO: Make room for the menu if the title is very long.*/
 	}

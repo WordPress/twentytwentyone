@@ -2505,6 +2505,7 @@ table th,
 @media only screen and (min-width: 482px) {
 	.site-branding {
 		margin-left: initial;
+		margin-bottom: var(--global--spacing-vertical);
 		/* TODO: Make room for the menu if the title is very long.*/
 	}
 }
