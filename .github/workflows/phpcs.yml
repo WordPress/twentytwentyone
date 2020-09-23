@@ -1,4 +1,4 @@
-name: Code Quality - PHPCS 
+name: Code Quality - PHPCS
 
 on:
   push:
