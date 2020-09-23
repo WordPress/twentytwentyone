@@ -4,7 +4,8 @@
 .site-header {
 	@extend %responsive-alignwide-width;
 	display: flex;
-	padding-top: var(--global--spacing-vertical);
+	align-items: flex-start;
+	flex-wrap: wrap;
 
 	@include media(mobile) {
 		padding-top: calc(var(--global--spacing-vertical) / 0.75); // 40px

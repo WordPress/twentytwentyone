@@ -145,15 +145,19 @@
 	/* Main navigation */
 	--primary-nav--font-family: var(--global--font-secondary);
 	--primary-nav--font-family-mobile: var(--global--font-primary);
-	--primary-nav--font-size: var(--global--font-size-md);
-	--primary-nav--font-size-mobile: var(--global--font-size-xl);
-	--primary-nav--font-size-sub-menu-mobile: var(--global--font-size-lg);
+	--primary-nav--font-size: var(--global--font-size-sm);
+	--primary-nav--font-size-sub-menu: var(--global--font-size-xs);
+	--primary-nav--font-size-mobile: var(--global--font-size-md);
+	--primary-nav--font-size-sub-menu-mobile: var(--global--font-size-sm);
+	--primary-nav--font-size-button: var(--global--font-size-xs);
 	--primary-nav--font-style: normal;
-	--primary-nav--font-style-sub-menu-mobile: italic;
+	--primary-nav--font-style-sub-menu-mobile: normal;
 	--primary-nav--font-weight: normal;
+	--primary-nav--font-weight-button: 500;
 	--primary-nav--line-height: var(--global--line-height-body);
 	--primary-nav--color-link: var(--global--color-primary);
 	--primary-nav--color-link-hover: var(--global--color-primary-hover);
+	--primary-nav--color-link-border: var(--global--color-primary);
 	--primary-nav--color-text: var(--global--color-primary);
 	--primary-nav--padding: calc(0.66 * var(--global--spacing-unit));
 	--primary-nav--justify-content: center;
