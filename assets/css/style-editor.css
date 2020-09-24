@@ -15,8 +15,8 @@
 	--global--font-size-sm: 1.125rem;
 	--global--font-size-md: 1.25rem;
 	--global--font-size-lg: 1.5rem;
-	--global--font-size-xl: 2rem;
-	--global--font-size-page-title: 6rem;
+	--global--font-size-xl: 2.25rem;
+	--global--font-size-page-title: 4rem;
 	--global--letter-spacing: normal;
 	/* Line Height */
 	--global--line-height-base: 1;
@@ -28,8 +28,8 @@
 	--heading--font-size-h6: var(--global--font-size-xs);
 	--heading--font-size-h5: var(--global--font-size-sm);
 	--heading--font-size-h4: var(--global--font-size-lg);
-	--heading--font-size-h3: 2rem;
-	--heading--font-size-h2: 3rem;
+	--heading--font-size-h3: 1.875rem;
+	--heading--font-size-h2: 2.25rem;
 	--heading--font-size-h1: var(--global--font-size-page-title);
 	--heading--letter-spacing-h6: 0.05em;
 	--heading--letter-spacing-h5: 0.05em;
@@ -147,15 +147,19 @@
 	/* Main navigation */
 	--primary-nav--font-family: var(--global--font-secondary);
 	--primary-nav--font-family-mobile: var(--global--font-primary);
-	--primary-nav--font-size: var(--global--font-size-md);
-	--primary-nav--font-size-mobile: var(--global--font-size-xl);
-	--primary-nav--font-size-sub-menu-mobile: var(--global--font-size-lg);
+	--primary-nav--font-size: var(--global--font-size-sm);
+	--primary-nav--font-size-sub-menu: var(--global--font-size-xs);
+	--primary-nav--font-size-mobile: var(--global--font-size-md);
+	--primary-nav--font-size-sub-menu-mobile: var(--global--font-size-sm);
+	--primary-nav--font-size-button: var(--global--font-size-xs);
 	--primary-nav--font-style: normal;
-	--primary-nav--font-style-sub-menu-mobile: italic;
+	--primary-nav--font-style-sub-menu-mobile: normal;
 	--primary-nav--font-weight: normal;
+	--primary-nav--font-weight-button: 500;
 	--primary-nav--line-height: var(--global--line-height-body);
 	--primary-nav--color-link: var(--global--color-primary);
 	--primary-nav--color-link-hover: var(--global--color-primary-hover);
+	--primary-nav--color-link-border: var(--global--color-primary);
 	--primary-nav--color-text: var(--global--color-primary);
 	--primary-nav--padding: calc(0.66 * var(--global--spacing-unit));
 	--primary-nav--justify-content: center;
@@ -197,6 +201,15 @@
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
 	--separator--width: calc(6 * var(--global--spacing-horizontal));
+}
+
+@media only screen and (min-width: 652px) {
+	:root {
+		--global--font-size-xl: 2.5rem;
+		--global--font-size-page-title: 6rem;
+		--heading--font-size-h3: 2rem;
+		--heading--font-size-h2: 3rem;
+	}
 }
 
 /* Any helpful mixins we need? Put them here. */
@@ -270,7 +283,7 @@ Example:
  * Root Media Query Variables
  */
 :root {
-	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal) * 0.6 );
+	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal) * 0.6);
 	--responsive--aligndefault-width: calc(100vw - var(--responsive--spacing-horizontal));
 	--responsive--alignwide-width: calc(100vw - var(--responsive--spacing-horizontal));
 	--responsive--alignfull-width: 100%;
@@ -280,12 +293,14 @@ Example:
 
 @media only screen and (min-width: 482px) {
 	:root {
+		--responsive--aligndefault-width: min(calc(100vw - 4 * var(--global--spacing-horizontal)), 610px);
+		--responsive--alignwide-width: calc(100vw - 4 * var(--global--spacing-horizontal));
 		--responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
 }
 
-@media only screen and (min-width: 652px) {
+@media only screen and (min-width: 822px) {
 	:root {
 		--responsive--aligndefault-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), 610px);
 		--responsive--alignwide-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), 1240px);
