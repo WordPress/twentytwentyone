@@ -82,7 +82,7 @@ $breakpoint_xxl: 1024px;
  * Root Media Query Variables
  */
 :root {
-	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal) * 0.6 );
+	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal) * 0.6);
 	--responsive--aligndefault-width: calc(100vw - var(--responsive--spacing-horizontal));
 	--responsive--alignwide-width: calc(100vw - var(--responsive--spacing-horizontal));
 	--responsive--alignfull-width: 100%;
