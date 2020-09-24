@@ -19,8 +19,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/image',
 			array(
-				'name'         => 'twentytwentyone-image-frame',
-				'label'        => __( 'Image Frame', 'twentytwentyone' ),
+				'name'  => 'twentytwentyone-image-frame',
+				'label' => __( 'Image Frame', 'twentytwentyone' ),
 			)
 		);
 	}
