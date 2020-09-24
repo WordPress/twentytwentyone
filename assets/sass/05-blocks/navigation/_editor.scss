@@ -1,10 +1,12 @@
 .wp-block-navigation {
+
 	.wp-block-navigation__container {
 		background: var(--global--color-background);
 		padding: 0;
 	}
 
 	.wp-block-navigation-link {
+
 		.wp-block-navigation-link__content {
 			padding: var(--primary-nav--padding);
 		}
@@ -17,15 +19,20 @@
 	}
 
 	.has-child {
+
 		.wp-block-navigation__container {
 			box-shadow: var(--global--elevation);
 		}
 	}
-	
-	&:not(.has-text-color){
+
+	&:not(.has-text-color) {
+
 		.wp-block-navigation-link {
+
 			> a {
-				&:hover, &:focus {
+
+				&:hover,
+				&:focus {
 					color: var(--primary-nav--color-link-hover);
 				}
 			}

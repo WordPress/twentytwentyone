@@ -17,6 +17,8 @@
 		<?php get_template_part( 'template-parts/header/entry-header' ); ?>
 	</header>
 
+	<?php twenty_twenty_one_post_thumbnail(); ?>
+
 	<div class="entry-content">
 		<?php
 		the_content();

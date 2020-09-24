@@ -13,7 +13,7 @@ get_header();
 
 if ( have_posts() ) {
 	?>
-	<header class="page-header archive-max-width">
+	<header class="page-header alignwide">
 		<h1 class="page-title">
 			<?php
 			printf(
@@ -28,8 +28,15 @@ if ( have_posts() ) {
 	<div class="search-result-count default-max-width">
 		<?php
 		printf(
-			/* translators: %d: the number of search results. */
-			esc_html__( 'We found %d results for your search.', 'twentytwentyone' ),
+			esc_html(
+				/* translators: %d: the number of search results. */
+				_n(
+					'We found %d result for your search.',
+					'We found %d results for your search.',
+					(int) $wp_query->found_posts,
+					'twentytwentyone'
+				)
+			),
 			(int) $wp_query->found_posts
 		);
 		?>
