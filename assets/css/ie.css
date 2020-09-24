@@ -1963,6 +1963,7 @@ i {
 	margin-bottom: inherit;
 	/* default & custom background-color */
 	/* Treating H2 separately to account for legacy /core styles */
+	/* Block Styles */
 }
 
 .wp-block-cover-image {
@@ -1972,6 +1973,7 @@ i {
 	margin-bottom: inherit;
 	/* default & custom background-color */
 	/* Treating H2 separately to account for legacy /core styles */
+	/* Block Styles */
 }
 
 .wp-block-cover .wp-block-cover__inner-container {
@@ -2195,6 +2197,14 @@ i {
 	justify-content: center;
 }
 
+.wp-block-cover.is-style-twentytwentyone-border {
+	border: 3px solid #000;
+}
+
+.wp-block-cover-image.is-style-twentytwentyone-border {
+	border: 3px solid #000;
+}
+
 .wp-block-file a.wp-block-file__button:active {
 	color: #d1e4dd;
 	opacity: inherit;
@@ -2248,6 +2258,10 @@ i {
 	max-width: 50%;
 }
 
+.wp-block-group {
+	/* Block Styles */
+}
+
 .wp-block-group .wp-block-group__inner-container {
 	margin-left: auto;
 	margin-right: auto;
@@ -2283,6 +2297,10 @@ i {
 	.wp-block-group.has-background {
 		padding: 30px;
 	}
+}
+
+.wp-block-group.is-style-twentytwentyone-border {
+	border: 3px solid #000;
 }
 
 h1 {
@@ -2855,6 +2873,10 @@ dd {
 		padding-top: 30px;
 		padding-bottom: 30px;
 	}
+}
+
+.wp-block-media-text.is-style-twentytwentyone-border {
+	border: 3px solid #000;
 }
 
 .wp-block-navigation .wp-block-navigation-link {

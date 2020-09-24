@@ -94,4 +94,11 @@
 	&.has-right-content {
 		justify-content: center;
 	}
+
+	/* Block Styles */
+	&.is-style-twentytwentyone-border {
+		border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+	}
 }
+
+

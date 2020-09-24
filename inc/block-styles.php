@@ -23,6 +23,38 @@ if ( function_exists( 'register_block_style' ) ) {
 				'label' => __( 'Image Frame', 'twentytwentyone' ),
 			)
 		);
+
+		register_block_style(
+			'core/image',
+			array(
+				'name'  => 'twentytwentyone-border',
+				'label' => __( 'Thick Border', 'twentytwentyone' ),
+			)
+		);
+
+		register_block_style(
+			'core/cover',
+			array(
+				'name'  => 'twentytwentyone-border',
+				'label' => __( 'Thick Border', 'twentytwentyone' ),
+			)
+		);
+
+		register_block_style(
+			'core/group',
+			array(
+				'name'  => 'twentytwentyone-border',
+				'label' => __( 'Thick Border', 'twentytwentyone' ),
+			)
+		);
+
+		register_block_style(
+			'core/media-text',
+			array(
+				'name'  => 'twentytwentyone-border',
+				'label' => __( 'Thick Border', 'twentytwentyone' ),
+			)
+		);
 	}
 	add_action( 'init', 'twenty_twenty_one_register_block_styles' );
 }

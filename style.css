@@ -1400,6 +1400,7 @@ i {
 	margin-bottom: inherit;
 	/* default & custom background-color */
 	/* Treating H2 separately to account for legacy /core styles */
+	/* Block Styles */
 }
 
 .wp-block-cover .wp-block-cover__inner-container,
@@ -1516,6 +1517,11 @@ i {
 	justify-content: center;
 }
 
+.wp-block-cover.is-style-twentytwentyone-border,
+.wp-block-cover-image.is-style-twentytwentyone-border {
+	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+}
+
 .wp-block-file a.wp-block-file__button:active,
 .wp-block-file a.wp-block-file__button:focus,
 .wp-block-file a.wp-block-file__button:hover,
@@ -1547,6 +1553,10 @@ i {
 
 .wp-block-gallery.alignleft, .wp-block-gallery.alignright {
 	max-width: 50%;
+}
+
+.wp-block-group {
+	/* Block Styles */
 }
 
 .wp-block-group .wp-block-group__inner-container {
@@ -1584,6 +1594,10 @@ i {
 	.wp-block-group.has-background {
 		padding: var(--global--spacing-vertical);
 	}
+}
+
+.wp-block-group.is-style-twentytwentyone-border {
+	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
 }
 
 h1,
@@ -1983,6 +1997,10 @@ dd {
 		padding-top: var(--global--spacing-vertical);
 		padding-bottom: var(--global--spacing-vertical);
 	}
+}
+
+.wp-block-media-text.is-style-twentytwentyone-border {
+	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
 }
 
 .wp-block-navigation .wp-block-navigation-link {
