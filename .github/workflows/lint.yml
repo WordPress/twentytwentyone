@@ -84,5 +84,8 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v2
 
+            - name: Install dependencies
+              uses: php-actions/composer@v2
+
             - name: Analyse code using phpstan
               uses: dingo-d/phpstan-wp-action@v1
