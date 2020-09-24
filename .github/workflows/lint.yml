@@ -10,8 +10,6 @@ jobs:
     lint:
         name: Parallel lint
         runs-on: ubuntu-latest
-        strategy:
-            fail-fast: false
 
         steps:
             # Checkout repository
@@ -47,8 +45,6 @@ jobs:
     phpcs_check:
         name: PHPCS check
         runs-on: ubuntu-latest
-        strategy:
-            fail-fast: false
             
         steps:
             # Checkout repository
@@ -83,33 +79,10 @@ jobs:
     phpstan:
         name: PHPStan check
         runs-on: ubuntu-latest
-        strategy:
-            fail-fast: false
 
         steps:
             - name: Checkout
               uses: actions/checkout@v2
 
-            - name: PHP setup
-              uses: shivammathur/setup-php@v2
-              with:
-                php-version: 7.4
-
-            - name: Get composer cache directory
-              id: composer-cache
-              run: |
-                echo "::set-output name=dir::$(composer config cache-files-dir)"
-
-            - name: Cache composer dependencies
-              uses: actions/cache@v1
-              with:
-                path: ${{ steps.composer-cache.outputs.dir }}
-                key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
-                restore-keys: |
-                  ${{ runner.os }}-composer-
-
-            - name: Install composer packages
-              run: composer install --no-progress
-
             - name: Analyse code using phpstan
-              run: composer analyze
+              uses: dingo-d/phpstan-wp-action@v1
