@@ -22,9 +22,9 @@
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			} else {
-			?>
+				?>
 				<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-			<?php
+				<?php
 			}
 		} else {
 			?>
