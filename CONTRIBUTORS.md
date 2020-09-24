@@ -2,4 +2,14 @@
 
 | GitHub Username | WordPress.org Username|
 | --------------- | --------------------- |
-| @example | @example |
+| @carolinan | @poena |
+| @melchoyce | melchoyce |
+| @luminuu | @luminuu |
+| @pattonwebz | @williampatton |
+| @aristath | @aristath |
+| @jffng | @jffng |
+| @kjellr | @kjellr |
+| @jeffikus | @jeffikus |
+| @audrasjb | @audrasjb |
+| @fabiankaegy | @fabiankaegy |
+
