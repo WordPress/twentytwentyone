@@ -3,7 +3,7 @@
 | GitHub Username | WordPress.org Username|
 | --------------- | --------------------- |
 | @carolinan | @poena |
-| @melchoyce | melchoyce |
+| @melchoyce | @melchoyce |
 | @luminuu | @luminuu |
 | @pattonwebz | @williampatton |
 | @aristath | @aristath |
@@ -12,4 +12,3 @@
 | @jeffikus | @jeffikus |
 | @audrasjb | @audrasjb |
 | @fabiankaegy | @fabiankaegy |
-
