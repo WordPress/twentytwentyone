@@ -281,6 +281,31 @@ figcaption {
 	padding: 0;
 }
 
+/*
+ * text-underline-offset doesn't work in Chrome at all 👎
+ * But looks nice in Safari/Firefox, so let's keep it and
+ * maybe Chrome will support it soon.
+ */
+a {
+	color: #000;
+	text-underline-offset: 3px;
+	transition: all .15s ease-in-out;
+}
+
+a:hover {
+	text-decoration-style: dotted;
+}
+
+/*
+ * The reason for the !important style here is the global focus styles created
+ * by the `.site *:focus {` rules in the 03-generic/reset.scss file.
+ */
+a:focus {
+	outline: none !important;
+	border: 1px solid #000;
+	border-radius: 5px;
+}
+
 .wp-block-button__link {
 	color: #d1e4dd;
 	font-weight: normal;

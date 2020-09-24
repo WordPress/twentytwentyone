@@ -1016,14 +1016,8 @@ body {
 }
 
 a {
-	border-bottom: 1px solid var(--global--color-secondary);
 	color: var(--wp--style--color--link, var(--global--color-primary));
-	text-decoration: none;
 	transition: border-color 0.1s ease-out;
-}
-
-a:hover, a:focus {
-	border-bottom-color: transparent;
 }
 
 a:hover {
@@ -1260,6 +1254,31 @@ cite,
 em,
 i {
 	font-style: italic;
+}
+
+/*
+ * text-underline-offset doesn't work in Chrome at all 👎
+ * But looks nice in Safari/Firefox, so let's keep it and
+ * maybe Chrome will support it soon.
+ */
+a {
+	color: var(--global--color-black);
+	text-underline-offset: 3px;
+	transition: all .15s ease-in-out;
+}
+
+a:hover {
+	text-decoration-style: dotted;
+}
+
+/*
+ * The reason for the !important style here is the global focus styles created
+ * by the `.site *:focus {` rules in the 03-generic/reset.scss file.
+ */
+a:focus {
+	outline: none !important;
+	border: 1px solid var(--global--color-black);
+	border-radius: 5px;
 }
 
 /* Category 05 is all about adjusting the default block styles to the given layout. I only added three blocks as examples. */
