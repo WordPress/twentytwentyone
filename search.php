@@ -40,7 +40,7 @@ if ( have_posts() ) {
 			(int) $wp_query->found_posts
 		);
 		?>
-	</div>
+	</div><!-- .search-result-count -->
 	<?php
 	// Start the Loop.
 	while ( have_posts() ) {
