@@ -29,7 +29,7 @@
 
 	$description = get_bloginfo( 'description', 'display' );
 	if ( $description || is_customize_preview() ) {
-		printf( '<p class="site-description">%s</p>', $description );
+		printf( '<p class="site-description">%s</p>', $description ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 	?>
 </div><!-- .site-branding -->
