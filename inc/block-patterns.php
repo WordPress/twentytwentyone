@@ -12,9 +12,7 @@
 
 /**
  * Register Block Pattern Category.
- *
- * WIP
- *
+ */
 if ( function_exists( 'register_block_pattern_category' ) ) {
 
 	register_block_pattern_category(
@@ -22,23 +20,19 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
 		array( 'label' => __( 'Twenty Twenty One', 'twentytwentyone' ) )
 	);
 }
- */
 
 /**
  * Register Block Patterns.
- *
- * WIP
- *
+ */
 if ( function_exists( 'register_block_pattern' ) ) {
 
 	register_block_pattern(
-		'',
+		'twentytwentyone/two-images-showcase',
 		array(
-			'title'      => __( '', 'twentytwentyone' ),
+			'title'      => __( 'Two Images Showcase', 'twentytwentyone' ),
 			'categories' => array( 'twentytwentyone' ),
-			'content'    => '',
+			'content'    => '<!-- wp:media-text {"mediaId":1747,"mediaLink":"' . get_template_directory_uri() . '/assets/images/la_mousme.jpg","mediaType":"image"} --><div class="wp-block-media-text alignwide is-stacked-on-mobile"><figure class="wp-block-media-text__media"><img src="' . get_template_directory_uri() . '/assets/images/la_mousme.jpg" alt="" size-full"/></figure><div class="wp-block-media-text__content"><!-- wp:image {"align":"center","width":400,"height":512,"sizeSlug":"large","className":"is-style-twentytwentyone-image-frame"} --><figure class="wp-block-image aligncenter size-large is-resized is-style-twentytwentyone-image-frame"><img src="' . get_template_directory_uri() . '/assets/images/the_berceuse_woman-rocking_a_cradle.jpg" alt="" width="400" height="512"/></figure><!-- /wp:image --></div></div><!-- /wp:media-text -->',
 		)
 	);
 
 }
- */
