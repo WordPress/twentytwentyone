@@ -17,9 +17,15 @@
 	$blog_info = get_bloginfo( 'name' );
 	if ( ! empty( $blog_info ) ) {
 		if ( is_front_page() || ( is_front_page() && is_home() ) ) {
+			if ( is_paged() ) {
+				?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<?php
+			} else {
 			?>
-			<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+				<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 			<?php
+			}
 		} else {
 			?>
 			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
