@@ -109,7 +109,7 @@
 		padding: calc(4 * var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
 		background-color: var(--global--color-background);
 		overflow-x: hidden;
-		overflow-y: scroll;
+		overflow-y: auto;
 		transition: all .15s ease-in-out;
 		transform: translateY(var(--global--spacing-vertical));
 
