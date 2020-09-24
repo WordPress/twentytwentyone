@@ -2,7 +2,7 @@
 
 Howdy, it’s really great you want to contribute to the new default theme for the WordPress 5.6 release! Before you dive in, here are a few pointers on how to contribute.
 
-To make it easyer to get started with contributing Twenty Twenty One includes [`@wordpress/env`](https://npmjs.com/package/@wordpress/env), which is a project developed by the Gutenberg Project to allow for easy lightweight preconfigured local environments. All you need to to ti get started is run `npm run wp-env start` in the `twentytwentyone` folder.
+To make it easier to get started with contributing Twenty Twenty One includes [`@wordpress/env`](https://npmjs.com/package/@wordpress/env), which is a project developed by the Gutenberg Project to allow for easy lightweight preconfigured local environments. All you need to get started is to run `npm run wp-env start` in the `twentytwentyone` folder.
 
 ## How it works
 
@@ -81,6 +81,5 @@ With Twenty Twenty One you can use [PHP Code Sniffer](https://github.com/WordPre
 ### Usage instructions
 1. Type `./vendor/bin/phpcs` into the command line and press [return], to check all files.
 Type `./vendor/bin/phpcs` filename.php into the command line and press [return], to check a single file.
-
 
 
