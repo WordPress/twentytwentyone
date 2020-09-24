@@ -31,22 +31,25 @@ class Twenty_Twenty_One_SVG_Icons {
 	 * @param string $icon  The icon.
 	 * @param int    $size  The icon-size in pixels.
 	 *
-	 * @return string|null
+	 * @return string
 	 */
 	public static function get_svg( $group, $icon, $size ) {
-		if ( 'ui' === $group ) {
-			$arr = self::$ui_icons;
-		} else {
-			$arr = array();
+		if ( 'ui' !== $group ) {
+			return '';
 		}
+		$svg = '';
+		$arr = self::$ui_icons;
 		if ( array_key_exists( $icon, $arr ) ) {
 			$repl = sprintf( '<svg class="svg-icon" width="%d" height="%d" aria-hidden="true" role="img" focusable="false" ', $size, $size );
-			$svg  = preg_replace( '/^<svg /', $repl, trim( $arr[ $icon ] ) ); // Add extra attributes to SVG code.
-			$svg  = preg_replace( "/([\n\t]+)/", ' ', $svg ); // Remove newlines & tabs.
-			$svg  = preg_replace( '/>\s*</', '><', $svg ); // Remove white space between SVG tags.
-			return $svg;
+
+			$svg = preg_replace( '/^<svg /', $repl, trim( $arr[ $icon ] ) ); // Add extra attributes to SVG code.
+			// @phpstan-ignore-next-line.
+			$svg = preg_replace( "/([\n\t]+)/", ' ', $svg ); // Remove newlines & tabs.
+			// @phpstan-ignore-next-line.
+			$svg = preg_replace( '/>\s*</', '><', $svg ); // Remove white space between SVG tags.
 		}
-		return null;
+		// @phpstan-ignore-next-line.
+		return $svg;
 	}
 
 	/**

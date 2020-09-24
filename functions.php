@@ -357,9 +357,6 @@ function twenty_twenty_one_skip_link_focus_fix() {
 add_action( 'wp_print_footer_scripts', 'twenty_twenty_one_skip_link_focus_fix' );
 
 
-// Custom CSS.
-require get_template_directory() . '/inc/custom-css.php';
-
 // Non-latin language handling.
 require get_template_directory() . '/classes/class-twenty-twenty-one-non-latin-languages.php';
 
