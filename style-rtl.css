@@ -1693,6 +1693,12 @@ img {
 	vertical-align: middle;
 }
 
+/* Block Styles */
+.wp-block-image.is-style-twentytwentyone-image-frame img {
+	padding: var(--global--spacing-unit);
+	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+}
+
 .wp-block-latest-comments {
 	margin-right: 0;
 }
