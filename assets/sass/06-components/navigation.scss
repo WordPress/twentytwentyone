@@ -1,3 +1,4 @@
+
 // Navigation
 
 // Mobile menu toggles
@@ -9,10 +10,11 @@
 	top: 0;
 	width: 100%;
 
-	#primary-open-menu {
+	#primary-open-menu,
+	#primary-close-menu {
 		margin-left: auto;
 		padding: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit))) calc(var(--button--padding-horizontal) - (0.25 * var(--global--spacing-unit)));
-		margin-top: calc(0.6 * var(--global--spacing-unit));
+		margin-top: calc(0.25 * var(--global--spacing-unit));
 		margin-right: calc(0.25 * var(--global--spacing-unit));
 	}
 
@@ -20,13 +22,13 @@
 		display: flex;
 	}
 
-}
-
-.menu-button-container,
-.primary-navigation {
+	.admin-bar:not(.primary-navigation-open) & {
+		top: calc(1.4 * var(--global--spacing-vertical));
+	}
 
 	.button {
-		font-size: var(--primary-nav--font-size);
+		font-size: var(--primary-nav--font-size-button);
+		font-weight: var(--primary-nav--font-weight-button);
 		text-transform: var(--branding--title--text-transform);
 		background-color: transparent;
 		color: var(--primary-nav--color-link);
@@ -49,7 +51,6 @@
 				margin-left: calc(0.25 * var(--global--spacing-unit));
 			}
 
-
 			// Menu icon is off-center vertically to prevent blurry pixels.
 			&.open .svg-icon {
 				position: relative;
@@ -68,6 +69,7 @@
 		}
 	}
 
+	// When the menu is open, hide the close button and show the hide button.
 	.primary-navigation-open & {
 
 		#primary-open-menu {
@@ -76,10 +78,6 @@
 
 		#primary-close-menu {
 			display: flex;
-			padding: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit))) calc(var(--button--padding-horizontal) - (0.25 * var(--global--spacing-unit)));
-			margin-top: calc(0.6 * var(--global--spacing-unit));
-			margin-right: calc(0.25 * var(--global--spacing-unit));
-			margin-left: auto;
 		}
 	}
 }
@@ -91,19 +89,39 @@
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
 	text-transform: var(--branding--title--text-transform);
+	line-height: 1.15;
 	margin-top: 0;
 	margin-bottom: 0;
-	padding: 0 calc(0.5 * var(--global--spacing-horizontal));
-	background-color: var(--global--color-background);
 
 	@include media(mobile-only) {
 		width: 100%;
 	}
 
+	// Mobile menu closed
+	> .primary-menu-container {
+		visibility: hidden;
+		opacity: 0;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		padding: calc(4 * var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
+		background-color: var(--global--color-background);
+		overflow-x: hidden;
+		overflow-y: scroll;
+		transition: all .15s ease-in-out;
+		transform: translateY(var(--global--spacing-vertical));
+
+		@include media(mobile-only) {
+			z-index: 499;
+		}
+	}
+
 	// Mobile menu open
 	.primary-navigation-open & {
 
-		> .menu-wrapper {
+		> .primary-menu-container {
 			visibility: visible;
 			opacity: 1;
 			transform: translateY(0);
@@ -120,26 +138,19 @@
 
 	// Adjust positions when logged-in
 	.admin-bar &,
-	.admin-bar & > .menu-wrapper,
+	.admin-bar & > .primary-menu-container,
 	.admin-bar.lock-scrolling & > .button {
 		top: 46px;
-	}
-
-	.admin-bar.primary-navigation-open &,
-	.admin-bar.primary-navigation-open & > .menu-wrapper,
-	.admin-bar.primary-navigation-open.lock-scrolling & > .button {
-		top: 9px;
 	}
 
 	@include media(mobile) {
 		position: relative;
 		display: flex;
 		justify-content: var(--primary-nav--justify-content);
-		//margin-top: calc( var(--global--spacing-vertical) * 1.5 );
 		margin-left: auto;
 
-		// Mobile menu on desktop
-		> .menu-wrapper {
+		// Hide Mobile menu on desktop
+		> .primary-menu-container {
 			visibility: visible;
 			opacity: 1;
 			position: relative;
@@ -155,7 +166,7 @@
 		}
 
 		// Hide sub-sub-menus
-		> .menu-wrapper > li > ul {
+		> .primary-menu-container > ul > li > ul {
 			display: none;
 		}
 
@@ -163,44 +174,29 @@
 		.admin-bar & {
 			top: initial;
 
-			> .menu-wrapper {
+			> .primary-menu-container {
 				top: initial;
 			}
 		}
 	}
 
 	// Menu list wrapper
-	> .menu-wrapper {
-		// Mobile menu closed
-		visibility: hidden;
-		opacity: 0;
-		position: relative;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		padding: calc(4 * var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
-		background-color: var(--global--color-background);
-		overflow-x: hidden;
-		overflow-y: scroll;
-		transition: all .15s ease-in-out;
-		transform: translateY(var(--global--spacing-vertical));
-
-		@include media(mobile-only) {
-			z-index: 499;
-		}
-
-
+	> div > .menu-wrapper {
 		display: flex;
-		justify-content: var(--primary-nav--justify-content);
+		justify-content: flex-start;
 		flex-wrap: wrap;
 		list-style: none;
 		margin: 0;
 		max-width: none;
 		padding-left: 0;
+		position: relative;
 
-		ul {
-			padding-left: 0;
+		@include media(mobile-only) {
+			margin: calc(2 * var(--global--spacing-vertical)) 0 0 0;
+
+			ul {
+				padding-left: 0;
+			}
 		}
 
 		li {
@@ -219,7 +215,7 @@
 				display: inherit;
 				width: inherit;
 
-				/* Submenu display */
+				/* Submenu display in the responsive menu */
 				&:hover > ul,
 				&:focus-within > ul,
 				ul:hover,
@@ -239,8 +235,7 @@
 			@include media(mobile) {
 				margin: 0;
 				background: var(--global--color-background);
-				box-shadow: var(--global--elevation);
-				left: 0;
+				left: -15px;
 				top: calc(100% - (0.5 * var(--primary-nav--padding)));
 				min-width: max-content;
 				opacity: 0;
@@ -259,39 +254,20 @@
 	.primary-menu > .menu-item:hover > a {
 		color: var(--primary-nav--color-link-hover);
 	}
-
 	// Top-level Menu Item
-	.menu-wrapper > .menu-item {
+	.primary-menu-container > ul > .menu-item {
 		padding: calc(0.5 * var(--primary-nav--padding)) 0;
 
 		@include media(mobile) {
 			display: flex;
 			align-items: center;
-			padding: var(--primary-nav--padding);
-		}
-	}
-
-	// Menu Item Link Colors
-	.menu-item > a {
-		color: var(--primary-nav--color-link);
-
-		&:hover {
-			color: var(--primary-nav--color-link-hover);
-			border-color: var(--global--color-secondary);
-		}
-
-		&:focus {
-			color: var(--global--color-secondary);
-		}
-
-		&:active {
-			color: var(--primary-nav--color-link);
+			// Sets the left padding to 0 to better align with the site title when wrapped.
+			padding: calc(0.7 * var(--primary-nav--padding)) calc(3 * var(--primary-nav--padding)) var(--primary-nav--padding) 0;
 		}
 	}
 
 	// Menu Item Link
 	a {
-		color: currentColor;
 		display: inline;
 		font-family: var(--primary-nav--font-family-mobile);
 		font-size: var(--primary-nav--font-size-mobile);
@@ -305,13 +281,26 @@
 		}
 
 		+ svg {
-			fill: currentColor;
+			fill: var(--primary-nav--color-text);
 		}
 
 		&:hover,
 		&:link,
 		&:visited {
-			color: currentColor;
+			color: var(--primary-nav--color-link-hover);
+		}
+
+		&:hover {
+			border-bottom: 1px dashed var(--primary-nav--color-link-border);
+		}
+	}
+
+	.current-menu-item > a:first-child,
+	.current_page_item > a:first-child {
+		border-bottom: 1px solid var(--primary-nav--color-link-border);
+
+		&:hover {
+			border-bottom: 1px dashed var(--primary-nav--color-link-border);
 		}
 	}
 
@@ -320,25 +309,24 @@
 		list-style: none;
 		margin-left: var(--primary-nav--padding);
 
+		// Sub menu items om wide screens.
 		@include media(mobile) {
-			padding: calc(0.5 * var(--primary-nav--padding)) var(--primary-nav--padding);
+			padding: var(--primary-nav--padding);
 
 			> .menu-item > .sub-menu {
-				padding: 0;
+				padding: var(--primary-nav--padding) 0 0 0;
 			}
 
 			> .menu-item.menu-item-has-children {
-				padding: calc(0.5 * var(--primary-nav--padding)) var(--primary-nav--padding) 0 0;
+				padding: var(--primary-nav--padding) 0 0 0;
 			}
 		}
 
 		.menu-item {
-			padding-top: calc(0.5 * var(--primary-nav--padding));
-			padding-bottom: calc(0.5 * var(--primary-nav--padding));
+			padding: calc(0.5 * var(--primary-nav--padding)) var(--primary-nav--padding);
 
 			@include media(mobile) {
-				padding-top: calc(0.5 * var(--primary-nav--padding));
-				padding-bottom: calc(0.5 * var(--primary-nav--padding));
+				padding: var(--primary-nav--padding) 0;
 			}
 
 			a {
@@ -347,7 +335,7 @@
 				font-style: var(--primary-nav--font-style-sub-menu-mobile);
 
 				@include media(mobile) {
-					font-size: var(--primary-nav--font-size);
+					font-size: var(--primary-nav--font-size-sub-menu);
 					font-style: var(--primary-nav--font-style);
 				}
 			}
@@ -367,7 +355,12 @@
 				display: inline-block;
 				height: 100%;
 			}
+
+			.sub-menu .svg-icon {
+				display: none;
+			}
 		}
+
 	}
 
 	.hide-visually {

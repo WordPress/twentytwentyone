@@ -28,7 +28,6 @@
 	/* Block: Pull quote */
 }
 
-/* Mixins */
 /* Button extends */
 .wp-block-search .wp-block-search__button {
 	line-height: 1;
@@ -416,7 +415,7 @@ div[data-type="core/button"] {
 }
 
 .wp-block-cover h2 {
-	font-size: 3rem;
+	font-size: 2.25rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 	padding: 0;
@@ -424,13 +423,25 @@ div[data-type="core/button"] {
 	text-align: inherit;
 }
 
-.wp-block-cover-image h2 {
+@media only screen and (min-width: 652px) {
+	.wp-block-cover h2 {
 	font-size: 3rem;
+	}
+}
+
+.wp-block-cover-image h2 {
+	font-size: 2.25rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 	padding: 0;
 	max-width: inherit;
 	text-align: inherit;
+}
+
+@media only screen and (min-width: 652px) {
+	.wp-block-cover-image h2 {
+	font-size: 3rem;
+	}
 }
 
 .wp-block-cover h2.has-text-align-left,
@@ -746,57 +757,111 @@ h6[style*="--wp--typography--line-height"] {
 }
 
 .wp-block-heading h1 {
-	font-size: 6rem;
+	font-size: 4rem;
 	letter-spacing: normal;
 	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px) {
+	.wp-block-heading h1 {
+	font-size: 6rem;
+	}
 }
 
 h1 {
-	font-size: 6rem;
+	font-size: 4rem;
 	letter-spacing: normal;
 	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px) {
+	h1 {
+	font-size: 6rem;
+	}
 }
 
 .h1 {
-	font-size: 6rem;
+	font-size: 4rem;
 	letter-spacing: normal;
 	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px) {
+	.h1 {
+	font-size: 6rem;
+	}
 }
 
 .wp-block-heading h2 {
-	font-size: 3rem;
+	font-size: 2.25rem;
 	letter-spacing: normal;
 	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px) {
+	.wp-block-heading h2 {
+	font-size: 3rem;
+	}
 }
 
 h2 {
-	font-size: 3rem;
+	font-size: 2.25rem;
 	letter-spacing: normal;
 	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px) {
+	h2 {
+	font-size: 3rem;
+	}
 }
 
 .h2 {
-	font-size: 3rem;
+	font-size: 2.25rem;
 	letter-spacing: normal;
 	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px) {
+	.h2 {
+	font-size: 3rem;
+	}
 }
 
 .wp-block-heading h3 {
-	font-size: 2rem;
+	font-size: 1.875rem;
 	letter-spacing: normal;
 	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px) {
+	.wp-block-heading h3 {
+	font-size: 2rem;
+	}
 }
 
 h3 {
-	font-size: 2rem;
+	font-size: 1.875rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
 
-.h3 {
+@media only screen and (min-width: 652px) {
+	h3 {
 	font-size: 2rem;
+	}
+}
+
+.h3 {
+	font-size: 1.875rem;
 	letter-spacing: normal;
 	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px) {
+	.h3 {
+	font-size: 2rem;
+	}
 }
 
 .wp-block-heading h4 {
@@ -915,9 +980,15 @@ h6 {
 
 .wp-block-latest-posts > li > a {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 2rem;
+	font-size: 1.875rem;
 	font-weight: normal;
 	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px) {
+	.wp-block-latest-posts > li > a {
+	font-size: 2rem;
+	}
 }
 
 .wp-block-latest-posts .wp-block-latest-posts__post-date {
@@ -1065,7 +1136,7 @@ dt {
 
 .wp-block-navigation .wp-block-navigation-link .wp-block-navigation-link__label {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1.25rem;
+	font-size: 1.125rem;
 	font-weight: normal;
 }
 
@@ -1107,11 +1178,17 @@ p.has-background {
 
 .wp-block-pullquote p {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 3rem;
+	font-size: 2.25rem;
 	font-style: italic;
 	letter-spacing: normal;
 	line-height: 1.3;
 	margin: 0;
+}
+
+@media only screen and (min-width: 652px) {
+	.wp-block-pullquote p {
+	font-size: 3rem;
+	}
 }
 
 .wp-block-pullquote a {
@@ -1395,8 +1472,13 @@ pre.wp-block-verse {
 	color: #39414d;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-weight: 300;
-	font-size: 6rem;
+	font-size: 4rem;
 	line-height: 1.3;
+}
+@media only screen and (min-width: 652px) {
+	.editor-post-title__block .editor-post-title__input {
+	font-size: 6rem;
+	}
 }
 
 .wp-block.block-editor-default-block-appender > textarea {
@@ -1486,24 +1568,48 @@ pre.wp-block-verse {
 }
 
 .is-larger-text {
-	font-size: 2rem;
+	font-size: 2.25rem;
 	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px) {
+	.is-larger-text {
+	font-size: 2.5rem;
+	}
 }
 
 .has-larger-font-size {
-	font-size: 2rem;
+	font-size: 2.25rem;
 	line-height: 1.3;
 }
 
+@media only screen and (min-width: 652px) {
+	.has-larger-font-size {
+	font-size: 2.5rem;
+	}
+}
+
 .has-huge-font-size {
-	font-size: 2rem;
+	font-size: 2.25rem;
 	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px) {
+	.has-huge-font-size {
+	font-size: 2.5rem;
+	}
 }
 
 .has-drop-cap:not(:focus)::first-letter {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 12rem;
+	font-size: 8rem;
 	font-weight: normal;
+}
+
+@media only screen and (min-width: 652px) {
+	.has-drop-cap:not(:focus)::first-letter {
+	font-size: 12rem;
+	}
 }
 
 /**

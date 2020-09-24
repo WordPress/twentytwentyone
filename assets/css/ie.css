@@ -12,7 +12,7 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: twentytwentyone
-Tags: one-column, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Tags: one-column, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready
 
 Twenty Twenty One WordPress Theme, (C) 2020 WordPress.org
 Twenty Twenty One is distributed under the terms of the GNU GPL.
@@ -34,7 +34,6 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
  * Vertical-margins.....Vertical spacing for the main components.
  * Reset................Reset specific elements to make them easier to style in other contexts.
  * Clearings............Clearnings for the main components.
- *
  *
  * ELEMENTS
  * Blockquote...........Default blockquote.
@@ -86,7 +85,6 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
  * Entry................Entry, author biography.
  * Widget...............Widget styles.
  * Editor...............Editor styles.
-
  *
  * UTILITIES
  * A11y.................Screen reader text, prefers reduced motion etc.
@@ -122,7 +120,6 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	/* Block: Pull quote */
 }
 
-/* Mixins */
 /* Button extends */
 button {
 	line-height: 1;
@@ -2082,7 +2079,7 @@ i {
 }
 
 .wp-block-cover h2 {
-	font-size: 3rem;
+	font-size: 2.25rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 	max-width: inherit;
@@ -2090,13 +2087,25 @@ i {
 	padding: 0;
 }
 
-.wp-block-cover-image h2 {
+@media only screen and (min-width: 652px){
+	.wp-block-cover h2{
 	font-size: 3rem;
+	}
+}
+
+.wp-block-cover-image h2 {
+	font-size: 2.25rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 	max-width: inherit;
 	text-align: inherit;
 	padding: 0;
+}
+
+@media only screen and (min-width: 652px){
+	.wp-block-cover-image h2{
+	font-size: 3rem;
+	}
 }
 
 .wp-block-cover h2.has-text-align-left,
@@ -2408,39 +2417,75 @@ h6 strong {
 }
 
 h1 {
-	font-size: 6rem;
+	font-size: 4rem;
 	letter-spacing: normal;
 	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px){
+	h1{
+	font-size: 6rem;
+	}
 }
 
 .h1 {
-	font-size: 6rem;
+	font-size: 4rem;
 	letter-spacing: normal;
 	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px){
+	.h1{
+	font-size: 6rem;
+	}
 }
 
 h2 {
-	font-size: 3rem;
+	font-size: 2.25rem;
 	letter-spacing: normal;
 	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px){
+	h2{
+	font-size: 3rem;
+	}
 }
 
 .h2 {
-	font-size: 3rem;
+	font-size: 2.25rem;
 	letter-spacing: normal;
 	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px){
+	.h2{
+	font-size: 3rem;
+	}
 }
 
 h3 {
-	font-size: 2rem;
+	font-size: 1.875rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
 
-.h3 {
+@media only screen and (min-width: 652px){
+	h3{
 	font-size: 2rem;
+	}
+}
+
+.h3 {
+	font-size: 1.875rem;
 	letter-spacing: normal;
 	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px){
+	.h3{
+	font-size: 2rem;
+	}
 }
 
 h4 {
@@ -2611,9 +2656,15 @@ img {
 
 .wp-block-latest-posts > li > a {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 2rem;
+	font-size: 1.875rem;
 	font-weight: normal;
 	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px){
+	.wp-block-latest-posts > li > a{
+	font-size: 2rem;
+	}
 }
 
 .wp-block-latest-posts .wp-block-latest-posts__post-date {
@@ -2821,7 +2872,7 @@ dd {
 
 .wp-block-navigation .wp-block-navigation-link .wp-block-navigation-link__label {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1.25rem;
+	font-size: 1.125rem;
 	font-weight: normal;
 }
 
@@ -2915,11 +2966,17 @@ p.has-text-color a {
 
 .wp-block-pullquote p {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 3rem;
+	font-size: 2.25rem;
 	font-style: italic;
 	letter-spacing: normal;
 	line-height: 1.3;
 	margin: 0;
+}
+
+@media only screen and (min-width: 652px){
+	.wp-block-pullquote p{
+	font-size: 3rem;
+	}
 }
 
 .wp-block-pullquote a {
@@ -3236,9 +3293,15 @@ hr.wp-block-separator.is-style-dots.has-background:before, hr.wp-block-separator
 
 hr.wp-block-separator.is-style-dots:before {
 	color: #000;
-	font-size: 2rem;
+	font-size: 2.25rem;
 	letter-spacing: 1.125rem;
 	padding-left: 1.125rem;
+}
+
+@media only screen and (min-width: 652px){
+	hr.wp-block-separator.is-style-dots:before{
+	font-size: 2.5rem;
+	}
 }
 
 .has-background:not(.has-background-background-color) hr.wp-block-separator,
@@ -3469,34 +3532,64 @@ table th {
 }
 
 :root .is-larger-text {
-	font-size: 2rem;
+	font-size: 2.5rem;
 	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px){
+	:root .is-larger-text{
+	font-size: 2.5rem;
+	}
 }
 
 :root .has-larger-font-size {
-	font-size: 2rem;
+	font-size: 2.5rem;
 	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px){
+	:root .has-larger-font-size{
+	font-size: 2.5rem;
+	}
 }
 
 :root .is-huge-text {
-	font-size: 2rem;
+	font-size: 2.5rem;
 	line-height: 1.3;
 }
 
+@media only screen and (min-width: 652px){
+	:root .is-huge-text{
+	font-size: 2.5rem;
+	}
+}
+
 :root .has-huge-font-size {
-	font-size: 2rem;
+	font-size: 2.5rem;
 	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px){
+	:root .has-huge-font-size{
+	font-size: 2.5rem;
+	}
 }
 
 .has-drop-cap:not(:focus)::first-letter {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 12rem;
+	font-size: 8rem;
 	font-weight: normal;
 	line-height: 0.66;
 	text-transform: uppercase;
 	font-style: normal;
 	float: left;
 	margin: 0.1em 0.1em 0 0;
+}
+
+@media only screen and (min-width: 652px){
+	.has-drop-cap:not(:focus)::first-letter{
+	font-size: 12rem;
+	}
 }
 
 .has-drop-cap:not(:focus)::after {
@@ -3519,7 +3612,8 @@ table th {
 /* Category 06 contains all "bigger" components which contain elements of the previous two categories like header, footer, page template, single template, comments section, archives, ... */
 .site-header {
 	display: flex;
-	padding-top: 30px;
+	align-items: flex-start;
+	flex-wrap: wrap;
 }
 
 @media only screen and (min-width: 482px) {
@@ -3702,10 +3796,16 @@ nav a {
 
 .entry-title {
 	color: #28303d;
-	font-size: 3rem;
+	font-size: 2.25rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 	overflow-wrap: break-word;
+}
+
+@media only screen and (min-width: 652px){
+	.entry-title{
+	font-size: 3rem;
+	}
 }
 
 .entry-title a {
@@ -3725,7 +3825,13 @@ nav a {
 }
 
 .singular .entry-title {
+	font-size: 4rem;
+}
+
+@media only screen and (min-width: 652px){
+	.singular .entry-title{
 	font-size: 6rem;
+	}
 }
 
 h1.entry-title {
@@ -3974,8 +4080,14 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .page-title {
-	font-size: 6rem;
+	font-size: 4rem;
 	word-break: break-all;
+}
+
+@media only screen and (min-width: 652px){
+	.page-title{
+	font-size: 6rem;
+	}
 }
 
 h1.page-title {
@@ -4045,12 +4157,22 @@ h2.page-title {
  * Comment Title
  */
 .comments-title {
-	font-size: 3rem;
+	font-size: 2.25rem;
 	letter-spacing: normal;
 }
-.comment-reply-title {
+@media only screen and (min-width: 652px){
+	.comments-title{
 	font-size: 3rem;
+	}
+}
+.comment-reply-title {
+	font-size: 2.25rem;
 	letter-spacing: normal;
+}
+@media only screen and (min-width: 652px){
+	.comment-reply-title{
+	font-size: 3rem;
+	}
 }
 
 .comment-reply-title {
@@ -4379,7 +4501,14 @@ h2.page-title {
 .menu-button-container #primary-open-menu {
 	margin-left: auto;
 	padding: 18px 20px;
-	margin-top: 12px;
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+.menu-button-container #primary-close-menu {
+	margin-left: auto;
+	padding: 18px 20px;
+	margin-top: 5px;
 	margin-right: 5px;
 }
 
@@ -4389,35 +4518,29 @@ h2.page-title {
 	}
 }
 
+.admin-bar:not(.primary-navigation-open) .menu-button-container {
+	top: 42px;
+}
+
 .menu-button-container .button {
-	font-size: 1.25rem;
+	font-size: 1rem;
+	font-weight: 500;
 	text-transform: uppercase;
 	background-color: transparent;
 	color: #28303d;
 	z-index: 500;
 }
 
-.primary-navigation .button {
-	font-size: 1.25rem;
-	text-transform: uppercase;
-	background-color: transparent;
-	color: #28303d;
-	z-index: 500;
-}
-
-.menu-button-container .button.open,
-.primary-navigation .button.open {
+.menu-button-container .button.open {
 	display: flex;
 	z-index: 499;
 }
 
-.menu-button-container .button.close,
-.primary-navigation .button.close {
+.menu-button-container .button.close {
 	display: none;
 }
 
-.menu-button-container .button .dropdown-icon,
-.primary-navigation .button .dropdown-icon {
+.menu-button-container .button .dropdown-icon {
 	display: flex;
 	align-items: center;
 }
@@ -4426,18 +4549,12 @@ h2.page-title {
 	margin-left: 5px;
 }
 
-.primary-navigation .button .dropdown-icon .svg-icon {
-	margin-left: 5px;
-}
-
-.menu-button-container .button .dropdown-icon.open .svg-icon,
-.primary-navigation .button .dropdown-icon.open .svg-icon {
+.menu-button-container .button .dropdown-icon.open .svg-icon {
 	position: relative;
 	top: -1px;
 }
 
-.menu-button-container .button .hide-visually,
-.primary-navigation .button .hide-visually {
+.menu-button-container .button .hide-visually {
 	position: absolute !important;
 	clip: rect(1px, 1px, 1px, 1px);
 	padding: 0 !important;
@@ -4447,26 +4564,12 @@ h2.page-title {
 	overflow: hidden;
 }
 
-.primary-navigation-open .menu-button-container #primary-open-menu, .primary-navigation-open
-.primary-navigation #primary-open-menu {
+.primary-navigation-open .menu-button-container #primary-open-menu {
 	display: none;
 }
 
 .primary-navigation-open .menu-button-container #primary-close-menu {
 	display: flex;
-	padding: 18px 20px;
-	margin-top: 12px;
-	margin-right: 5px;
-	margin-left: auto;
-}
-
-.primary-navigation-open
-.primary-navigation #primary-close-menu {
-	display: flex;
-	padding: 18px 20px;
-	margin-top: 12px;
-	margin-right: 5px;
-	margin-left: auto;
 }
 
 .primary-navigation {
@@ -4474,12 +4577,11 @@ h2.page-title {
 	top: 0;
 	right: 0;
 	color: #28303d;
-	font-size: 1.25rem;
+	font-size: 1.125rem;
 	text-transform: uppercase;
+	line-height: 1.15;
 	margin-top: 0;
 	margin-bottom: 0;
-	padding: 0 13px;
-	background-color: #d1e4dd;
 }
 
 @media only screen and (max-width: 481px) {
@@ -4488,7 +4590,29 @@ h2.page-title {
 	}
 }
 
-.primary-navigation-open .primary-navigation > .menu-wrapper {
+.primary-navigation > .primary-menu-container {
+	visibility: hidden;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 80px 20px 25px;
+	background-color: #d1e4dd;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	transition: all .15s ease-in-out;
+	transform: translateY(30px);
+}
+
+@media only screen and (max-width: 481px) {
+	.primary-navigation > .primary-menu-container {
+		z-index: 499;
+	}
+}
+
+.primary-navigation-open .primary-navigation > .primary-menu-container {
 	visibility: visible;
 	opacity: 1;
 	transform: translateY(0);
@@ -4501,15 +4625,9 @@ h2.page-title {
 }
 
 .admin-bar .primary-navigation,
-.admin-bar .primary-navigation > .menu-wrapper,
+.admin-bar .primary-navigation > .primary-menu-container,
 .admin-bar.lock-scrolling .primary-navigation > .button {
 	top: 46px;
-}
-
-.admin-bar.primary-navigation-open .primary-navigation,
-.admin-bar.primary-navigation-open .primary-navigation > .menu-wrapper,
-.admin-bar.primary-navigation-open.lock-scrolling .primary-navigation > .button {
-	top: 9px;
 }
 
 @media only screen and (min-width: 482px) {
@@ -4519,7 +4637,7 @@ h2.page-title {
 		justify-content: center;
 		margin-left: auto;
 	}
-	.primary-navigation > .menu-wrapper {
+	.primary-navigation > .primary-menu-container {
 		visibility: visible;
 		opacity: 1;
 		position: relative;
@@ -4531,88 +4649,74 @@ h2.page-title {
 	.primary-navigation #toggle-menu {
 		display: none;
 	}
-	.primary-navigation > .menu-wrapper > li > ul {
+	.primary-navigation > .primary-menu-container > ul > li > ul {
 		display: none;
 	}
 	.admin-bar .primary-navigation {
 		top: initial;
 	}
-	.admin-bar .primary-navigation > .menu-wrapper {
+	.admin-bar .primary-navigation > .primary-menu-container {
 		top: initial;
 	}
 }
 
-.primary-navigation > .menu-wrapper {
-	visibility: hidden;
-	opacity: 0;
-	position: relative;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	padding: 80px 20px 25px;
-	background-color: #d1e4dd;
-	overflow-x: hidden;
-	overflow-y: scroll;
-	transition: all .15s ease-in-out;
-	transform: translateY(30px);
+.primary-navigation > div > .menu-wrapper {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 	list-style: none;
 	margin: 0;
 	max-width: none;
 	padding-left: 0;
+	position: relative;
 }
 
 @media only screen and (max-width: 481px) {
-	.primary-navigation > .menu-wrapper {
-		z-index: 499;
+	.primary-navigation > div > .menu-wrapper {
+		margin: 60px 0 0 0;
+	}
+	.primary-navigation > div > .menu-wrapper ul {
+		padding-left: 0;
 	}
 }
 
-.primary-navigation > .menu-wrapper ul {
-	padding-left: 0;
-}
-
-.primary-navigation > .menu-wrapper li {
+.primary-navigation > div > .menu-wrapper li {
 	display: block;
 	position: relative;
 	width: 100%;
 	z-index: 1;
 }
 
-.primary-navigation > .menu-wrapper li:hover, .primary-navigation > .menu-wrapper li:focus-within {
+.primary-navigation > div > .menu-wrapper li:hover, .primary-navigation > div > .menu-wrapper li:focus-within {
 	cursor: pointer;
 	z-index: 99999;
 }
 
 @media only screen and (min-width: 482px) {
-	.primary-navigation > .menu-wrapper li {
+	.primary-navigation > div > .menu-wrapper li {
 		display: inherit;
 		width: inherit;
-		/* Submenu display */
+		/* Submenu display in the responsive menu */
 	}
-	.primary-navigation > .menu-wrapper li:hover > ul,
-	.primary-navigation > .menu-wrapper li:focus-within > ul,
-	.primary-navigation > .menu-wrapper li ul:hover,
-	.primary-navigation > .menu-wrapper li ul:focus {
+	.primary-navigation > div > .menu-wrapper li:hover > ul,
+	.primary-navigation > div > .menu-wrapper li:focus-within > ul,
+	.primary-navigation > div > .menu-wrapper li ul:hover,
+	.primary-navigation > div > .menu-wrapper li ul:focus {
 		visibility: visible;
 		opacity: 1;
 		display: block;
 	}
 }
 
-.primary-navigation > .menu-wrapper > li > .sub-menu {
+.primary-navigation > div > .menu-wrapper > li > .sub-menu {
 	position: relative;
 }
 
 @media only screen and (min-width: 482px) {
-	.primary-navigation > .menu-wrapper > li > .sub-menu {
+	.primary-navigation > div > .menu-wrapper > li > .sub-menu {
 		margin: 0;
 		background: #d1e4dd;
-		box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.2);
-		left: 0;
+		left: -15px;
 		top: calc(100% - 7px);
 		min-width: max-content;
 		opacity: 0;
@@ -4622,7 +4726,7 @@ h2.page-title {
 	}
 }
 
-.primary-navigation > .menu-wrapper > li > .sub-menu .sub-menu {
+.primary-navigation > div > .menu-wrapper > li > .sub-menu .sub-menu {
 	width: 100%;
 }
 
@@ -4630,40 +4734,22 @@ h2.page-title {
 	color: #28303d;
 }
 
-.primary-navigation .menu-wrapper > .menu-item {
+.primary-navigation .primary-menu-container > ul > .menu-item {
 	padding: 7px 0;
 }
 
 @media only screen and (min-width: 482px) {
-	.primary-navigation .menu-wrapper > .menu-item {
+	.primary-navigation .primary-menu-container > ul > .menu-item {
 		display: flex;
 		align-items: center;
-		padding: 13px;
+		padding: 9px 40px 13px 0;
 	}
 }
 
-.primary-navigation .menu-item > a {
-	color: #28303d;
-}
-
-.primary-navigation .menu-item > a:hover {
-	color: #28303d;
-	border-color: #39414d;
-}
-
-.primary-navigation .menu-item > a:focus {
-	color: #39414d;
-}
-
-.primary-navigation .menu-item > a:active {
-	color: #28303d;
-}
-
 .primary-navigation a {
-	color: currentColor;
 	display: inline;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 2rem;
+	font-size: 1.25rem;
 	font-weight: normal;
 }
 
@@ -4671,17 +4757,45 @@ h2.page-title {
 	.primary-navigation a {
 		display: block;
 		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-		font-size: 1.25rem;
+		font-size: 1.125rem;
 		font-weight: normal;
 	}
 }
 
 .primary-navigation a + svg {
-	fill: currentColor;
+	fill: #28303d;
 }
 
-.primary-navigation a:hover, .primary-navigation a:link, .primary-navigation a:visited {
-	color: currentColor;
+.primary-navigation a:hover {
+	color: #28303d;
+}
+
+.primary-navigation a:link {
+	color: #28303d;
+}
+
+.primary-navigation a:visited {
+	color: #28303d;
+}
+
+.primary-navigation a:hover {
+	border-bottom: 1px dashed #28303d;
+}
+
+.primary-navigation .current-menu-item > a:first-child {
+	border-bottom: 1px solid #28303d;
+}
+
+.primary-navigation .current_page_item > a:first-child {
+	border-bottom: 1px solid #28303d;
+}
+
+.primary-navigation .current-menu-item > a:first-child:hover {
+	border-bottom: 1px dashed #28303d;
+}
+
+.primary-navigation .current_page_item > a:first-child:hover {
+	border-bottom: 1px dashed #28303d;
 }
 
 .primary-navigation .sub-menu {
@@ -4691,37 +4805,35 @@ h2.page-title {
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation .sub-menu {
-		padding: 7px 13px;
+		padding: 13px;
 	}
 	.primary-navigation .sub-menu > .menu-item > .sub-menu {
-		padding: 0;
+		padding: 13px 0 0 0;
 	}
 	.primary-navigation .sub-menu > .menu-item.menu-item-has-children {
-		padding: 7px 13px 0 0;
+		padding: 13px 0 0 0;
 	}
 }
 
 .primary-navigation .sub-menu .menu-item {
-	padding-top: 7px;
-	padding-bottom: 7px;
+	padding: 7px 13px;
 }
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation .sub-menu .menu-item {
-		padding-top: 7px;
-		padding-bottom: 7px;
+		padding: 13px 0;
 	}
 }
 
 .primary-navigation .sub-menu .menu-item a {
 	display: inline;
-	font-size: 1.5rem;
-	font-style: italic;
+	font-size: 1.125rem;
+	font-style: normal;
 }
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation .sub-menu .menu-item a {
-		font-size: 1.25rem;
+		font-size: 1rem;
 		font-style: normal;
 	}
 }
@@ -4734,6 +4846,9 @@ h2.page-title {
 	.primary-navigation .menu-item-has-children > .svg-icon {
 		display: inline-block;
 		height: 100%;
+	}
+	.primary-navigation .menu-item-has-children .sub-menu .svg-icon {
+		display: none;
 	}
 }
 
