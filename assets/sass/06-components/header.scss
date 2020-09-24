@@ -4,8 +4,7 @@
 .site-header {
 	@extend %responsive-alignwide-width;
 	display: flex;
-	align-items: flex-start;
-	flex-wrap: wrap;
+	padding-top: var(--global--spacing-vertical);
 
 	@include media(mobile) {
 		padding-top: calc(var(--global--spacing-vertical) / 0.75); // 40px
@@ -78,7 +77,6 @@ nav a {
 }
 
 .site-title > a {
-	text-underline-width: .125em;
 	text-decoration-color: var(--global--color-secondary);
 }
 

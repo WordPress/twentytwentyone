@@ -12,26 +12,32 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: twentytwentyone
-Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Tags: one-column, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
 
 Twenty Twenty One WordPress Theme, (C) 2020 WordPress.org
 Twenty Twenty One is distributed under the terms of the GNU GPL.
 */
-/* Example files how to organize CSS with the ITCSS methodology with WP specific adjustments */
-/* Basics see: https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/ */
 /**
  * SETTINGS
+ * File-header..........The file header for the themes style.css file.
  * Fonts................Any font files, if the project needs specific fonts.
  * Global...............Project-specific, globally available variables.
  *
  * TOOLS
+ * Extends..............Global extends.
+ * Functions............Global functions.
  * Mixins...............Global mixins.
  *
  * GENERIC
  * Normalize.css........Normalise browser defaults.
- * Box-sizing...........More manageable box-model.
+ * Breakpoints..........Mixins and variables for responsive styles
+ * Vertical-margins.....Vertical spacing for the main components.
+ * Reset................Reset specific elements to make them easier to style in other contexts.
+ * Clearings............Clearnings for the main components.
+ *
  *
  * ELEMENTS
+ * Blockquote...........Default blockquote.
  * Forms................Element-level form styling.
  * Headings.............H1–H6
  * Links................Default links.
@@ -39,25 +45,57 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
  * Media................Images, Figure, Figcaption, Embed, iFrame, Objects, Video.
  *
  * BLOCKS
+ * Audio................Specific styles for the audio block.
+ * Button...............Specific styles for the button block.
+ * Code.................Specific styles for the code block.
+ * Collumns.............Specific styles for the collumns block.
  * Cover................Specific styles for the cover block.
+ * File.................Specific styles for the file block.
+ * Gallery..............Specific styles for the gallery block.
  * Group................Specific styles for the group block.
+ * Heading..............Specific styles for the heading block.
+ * Image................Specific styles for the image block.
+ * Latest comments......Specific styles for the latest comments block.
+ * Latest posts.........Specific styles for the latest posts block.
+ * Legacy...............Specific styles for the legacy gallery.
+ * List.................Specific styles for the list block.
+ * Meda text............Specific styles for the media and text block.
+ * Navigation...........Specific styles for the navigation block.
+ * Paragraph............Specific styles for the paragraph block.
  * Pullquote............Specific styles for the pullquote block.
+ * Quote................Specific styles for the quote block.
+ * Search...............Specific styles for the search block.
+ * Separator............Specific styles for the separator block.
+ * Spacer...............Specific styles for the spacer block.
+ * Table................Specific styles for the table block.
+ * Verse................Specific styles for the verse block.
+ * Video................Specific styles for the video block.
+ * Utilities............Block alignments.
  *
  * COMPONENTS
  * Header...............Header styles.
  * Footer...............Footer styles.
  * Comments.............Comment styles.
- * Blog archive.........Blog archive styles.
+ * Archives.............Archive styles.
+ * 404..................404 styles.
+ * Search...............Search styles.
+ * Navigation...........Navigation styles.
+ * Pagination...........Pagination styles.
+ * Single...............Single page and post styles.
+ * Posts and pages......Misc, sticky post styles.
+ * Entry................Entry, author biography.
+ * Widget...............Widget styles.
+ * Editor...............Editor styles.
+
  *
  * UTILITIES
  * A11y.................Screen reader text, prefers reduced motion etc.
  * Color Palette........Classes for the color palette colors.
  * Editor Font Sizes....Editor Font Sizes.
- *
+ * Measure..............The width of a line of text, in characters.
  */
 /* Categories 01 to 03 are the basics. */
-/* Do we need to serve a font? Add the @font-face styles here. */
-/* Add all variables here. */
+/* Variables */
 :root {
 	/* Font Family */
 	--global--font-primary: var(--font-headings, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
@@ -70,8 +108,8 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--global--font-size-sm: 1.125rem;
 	--global--font-size-md: 1.25rem;
 	--global--font-size-lg: 1.5rem;
-	--global--font-size-xl: 2.25rem;
-	--global--font-size-page-title: 4rem;
+	--global--font-size-xl: 2rem;
+	--global--font-size-page-title: 6rem;
 	--global--letter-spacing: normal;
 	/* Line Height */
 	--global--line-height-base: 1;
@@ -83,8 +121,8 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--heading--font-size-h6: var(--global--font-size-xs);
 	--heading--font-size-h5: var(--global--font-size-sm);
 	--heading--font-size-h4: var(--global--font-size-lg);
-	--heading--font-size-h3: 1.875rem;
-	--heading--font-size-h2: 2.25rem;
+	--heading--font-size-h3: 2rem;
+	--heading--font-size-h2: 3rem;
 	--heading--font-size-h1: var(--global--font-size-page-title);
 	--heading--letter-spacing-h6: 0.05em;
 	--heading--letter-spacing-h5: 0.05em;
@@ -200,19 +238,15 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	/* Main navigation */
 	--primary-nav--font-family: var(--global--font-secondary);
 	--primary-nav--font-family-mobile: var(--global--font-primary);
-	--primary-nav--font-size: var(--global--font-size-sm);
-	--primary-nav--font-size-sub-menu: var(--global--font-size-xs);
-	--primary-nav--font-size-mobile: var(--global--font-size-md);
-	--primary-nav--font-size-sub-menu-mobile: var(--global--font-size-sm);
-	--primary-nav--font-size-button: var(--global--font-size-xs);
+	--primary-nav--font-size: var(--global--font-size-md);
+	--primary-nav--font-size-mobile: var(--global--font-size-xl);
+	--primary-nav--font-size-sub-menu-mobile: var(--global--font-size-lg);
 	--primary-nav--font-style: normal;
-	--primary-nav--font-style-sub-menu-mobile: normal;
+	--primary-nav--font-style-sub-menu-mobile: italic;
 	--primary-nav--font-weight: normal;
-	--primary-nav--font-weight-button: 500;
 	--primary-nav--line-height: var(--global--line-height-body);
 	--primary-nav--color-link: var(--global--color-primary);
 	--primary-nav--color-link-hover: var(--global--color-primary-hover);
-	--primary-nav--color-link-border: var(--global--color-primary);
 	--primary-nav--color-text: var(--global--color-primary);
 	--primary-nav--padding: calc(0.66 * var(--global--spacing-unit));
 	--primary-nav--justify-content: center;
@@ -256,26 +290,8 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--separator--width: calc(6 * var(--global--spacing-horizontal));
 }
 
-@media only screen and (min-width: 652px) {
-	:root {
-		--global--font-size-xl: 2.5rem;
-		--global--font-size-page-title: 6rem;
-		--heading--font-size-h3: 2rem;
-		--heading--font-size-h2: 3rem;
-	}
-}
-
-/* Any helpful mixins we need? Put them here. */
-/*
-Example:
-@mixin typography {
-	color: var(--color-charcoal);
-	font-family: var(--font-family);
-	font-size: var(--font-size-global);
-	line-height: var(--line-height-global);
-	word-wrap: break-word;
-}
-*/
+/* Mixins */
+/* Button extends */
 button,
 .button,
 input[type="submit"],
@@ -691,7 +707,7 @@ template {
  * Root Media Query Variables
  */
 :root {
-	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal) * 0.6);
+	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal) * 0.6 );
 	--responsive--aligndefault-width: calc(100vw - var(--responsive--spacing-horizontal));
 	--responsive--alignwide-width: calc(100vw - var(--responsive--spacing-horizontal));
 	--responsive--alignfull-width: 100%;
@@ -787,9 +803,6 @@ template {
 	}
 }
 
-/**
- * Output
- */
 /**
  * Site Structure
  *
@@ -1073,18 +1086,6 @@ a:active {
 button,
 a {
 	cursor: pointer;
-}
-
-html {
-	box-sizing: border-box;
-}
-
-/**
- * Inherit box-sizing to make it easier to change the property
- * for components that leverage other behavior.
- */
-*, *::before, *::after {
-	box-sizing: inherit;
 }
 
 .clear:before,
@@ -2502,8 +2503,7 @@ table th,
 /* Category 06 contains all "bigger" components which contain elements of the previous two categories like header, footer, page template, single template, comments section, archives, ... */
 .site-header {
 	display: flex;
-	align-items: flex-start;
-	flex-wrap: wrap;
+	padding-top: var(--global--spacing-vertical);
 }
 
 @media only screen and (min-width: 482px) {
@@ -2574,7 +2574,6 @@ nav a {
 }
 
 .site-title > a {
-	text-underline-width: .125em;
 	text-decoration-color: var(--global--color-secondary);
 }
 
@@ -2650,64 +2649,6 @@ nav a {
 
 .site-footer > .site-info a:hover, .site-footer > .site-info a:focus {
 	color: var(--footer--color-link);
-}
-
-.site-footer > .footer-navigation {
-	display: inline;
-}
-
-@media only screen and (min-width: 822px) {
-	.site-footer > .footer-navigation {
-		margin-top: var(--global--spacing-unit);
-		margin-bottom: var(--global--spacing-unit);
-		text-align: left;
-	}
-}
-
-.site-footer > .footer-navigation > div {
-	display: inline;
-}
-
-.site-footer > .footer-navigation .footer-menu {
-	color: var(--footer--color-text);
-	margin: 0;
-	padding-left: 0;
-}
-
-.site-footer > .footer-navigation .footer-menu > li {
-	display: inline-block;
-}
-
-.site-footer > .footer-navigation .footer-menu > li:first-of-type > a {
-	padding-left: 0;
-}
-
-.site-footer > .footer-navigation .footer-menu > li:last-of-type {
-	padding-right: 0;
-}
-
-.site-footer > .footer-navigation .footer-menu .menu-item {
-	padding: var(--primary-nav--padding) var(--primary-nav--padding) var(--primary-nav--padding) 0;
-}
-
-.site-footer > .footer-navigation .footer-menu .menu-item a {
-	font-family: var(--primary-nav--font-family);
-	font-size: var(--footer--font-size);
-	font-weight: var(--primary-nav--font-weight);
-	color: currentColor;
-}
-
-.site-footer > .footer-navigation .footer-menu .menu-item a:link, .site-footer > .footer-navigation .footer-menu .menu-item a:visited, .site-footer > .footer-navigation .footer-menu .menu-item a:active {
-	color: currentColor;
-}
-
-.site-footer > .footer-navigation .footer-menu .menu-item a:hover {
-	color: var(--footer--color-link-hover);
-	border-color: var(--global--color-secondary);
-}
-
-.site-footer > .footer-navigation .footer-menu .menu-item a:focus {
-	color: var(--global--color-secondary);
 }
 
 .single .entry-header {
@@ -3313,11 +3254,10 @@ h2.page-title {
 	width: 100%;
 }
 
-.menu-button-container #primary-open-menu,
-.menu-button-container #primary-close-menu {
+.menu-button-container #primary-open-menu {
 	margin-left: auto;
 	padding: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit))) calc(var(--button--padding-horizontal) - (0.25 * var(--global--spacing-unit)));
-	margin-top: calc(0.25 * var(--global--spacing-unit));
+	margin-top: calc(0.6 * var(--global--spacing-unit));
 	margin-right: calc(0.25 * var(--global--spacing-unit));
 }
 
@@ -3327,43 +3267,45 @@ h2.page-title {
 	}
 }
 
-.admin-bar:not(.primary-navigation-open) .menu-button-container {
-	top: calc(1.4 * var(--global--spacing-vertical));
-}
-
-.menu-button-container .button {
-	font-size: var(--primary-nav--font-size-button);
-	font-weight: var(--primary-nav--font-weight-button);
+.menu-button-container .button,
+.primary-navigation .button {
+	font-size: var(--primary-nav--font-size);
 	text-transform: var(--branding--title--text-transform);
 	background-color: transparent;
 	color: var(--primary-nav--color-link);
 	z-index: 500;
 }
 
-.menu-button-container .button.open {
+.menu-button-container .button.open,
+.primary-navigation .button.open {
 	display: flex;
 	z-index: 499;
 }
 
-.menu-button-container .button.close {
+.menu-button-container .button.close,
+.primary-navigation .button.close {
 	display: none;
 }
 
-.menu-button-container .button .dropdown-icon {
+.menu-button-container .button .dropdown-icon,
+.primary-navigation .button .dropdown-icon {
 	display: flex;
 	align-items: center;
 }
 
-.menu-button-container .button .dropdown-icon .svg-icon {
+.menu-button-container .button .dropdown-icon .svg-icon,
+.primary-navigation .button .dropdown-icon .svg-icon {
 	margin-left: calc(0.25 * var(--global--spacing-unit));
 }
 
-.menu-button-container .button .dropdown-icon.open .svg-icon {
+.menu-button-container .button .dropdown-icon.open .svg-icon,
+.primary-navigation .button .dropdown-icon.open .svg-icon {
 	position: relative;
 	top: -1px;
 }
 
-.menu-button-container .button .hide-visually {
+.menu-button-container .button .hide-visually,
+.primary-navigation .button .hide-visually {
 	position: absolute !important;
 	clip: rect(1px, 1px, 1px, 1px);
 	padding: 0 !important;
@@ -3373,12 +3315,18 @@ h2.page-title {
 	overflow: hidden;
 }
 
-.primary-navigation-open .menu-button-container #primary-open-menu {
+.primary-navigation-open .menu-button-container #primary-open-menu, .primary-navigation-open
+.primary-navigation #primary-open-menu {
 	display: none;
 }
 
-.primary-navigation-open .menu-button-container #primary-close-menu {
+.primary-navigation-open .menu-button-container #primary-close-menu, .primary-navigation-open
+.primary-navigation #primary-close-menu {
 	display: flex;
+	padding: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit))) calc(var(--button--padding-horizontal) - (0.25 * var(--global--spacing-unit)));
+	margin-top: calc(0.6 * var(--global--spacing-unit));
+	margin-right: calc(0.25 * var(--global--spacing-unit));
+	margin-left: auto;
 }
 
 .primary-navigation {
@@ -3388,9 +3336,10 @@ h2.page-title {
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
 	text-transform: var(--branding--title--text-transform);
-	line-height: 1.15;
 	margin-top: 0;
 	margin-bottom: 0;
+	padding: 0 calc(0.5 * var(--global--spacing-horizontal));
+	background-color: var(--global--color-background);
 }
 
 @media only screen and (max-width: 481px) {
@@ -3399,29 +3348,7 @@ h2.page-title {
 	}
 }
 
-.primary-navigation > .primary-menu-container {
-	visibility: hidden;
-	opacity: 0;
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	padding: calc(4 * var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
-	background-color: var(--global--color-background);
-	overflow-x: hidden;
-	overflow-y: scroll;
-	transition: all .15s ease-in-out;
-	transform: translateY(var(--global--spacing-vertical));
-}
-
-@media only screen and (max-width: 481px) {
-	.primary-navigation > .primary-menu-container {
-		z-index: 499;
-	}
-}
-
-.primary-navigation-open .primary-navigation > .primary-menu-container {
+.primary-navigation-open .primary-navigation > .menu-wrapper {
 	visibility: visible;
 	opacity: 1;
 	transform: translateY(0);
@@ -3434,9 +3361,15 @@ h2.page-title {
 }
 
 .admin-bar .primary-navigation,
-.admin-bar .primary-navigation > .primary-menu-container,
+.admin-bar .primary-navigation > .menu-wrapper,
 .admin-bar.lock-scrolling .primary-navigation > .button {
 	top: 46px;
+}
+
+.admin-bar.primary-navigation-open .primary-navigation,
+.admin-bar.primary-navigation-open .primary-navigation > .menu-wrapper,
+.admin-bar.primary-navigation-open.lock-scrolling .primary-navigation > .button {
+	top: 9px;
 }
 
 @media only screen and (min-width: 482px) {
@@ -3446,7 +3379,7 @@ h2.page-title {
 		justify-content: var(--primary-nav--justify-content);
 		margin-left: auto;
 	}
-	.primary-navigation > .primary-menu-container {
+	.primary-navigation > .menu-wrapper {
 		visibility: visible;
 		opacity: 1;
 		position: relative;
@@ -3458,74 +3391,88 @@ h2.page-title {
 	.primary-navigation #toggle-menu {
 		display: none;
 	}
-	.primary-navigation > .primary-menu-container > ul > li > ul {
+	.primary-navigation > .menu-wrapper > li > ul {
 		display: none;
 	}
 	.admin-bar .primary-navigation {
 		top: initial;
 	}
-	.admin-bar .primary-navigation > .primary-menu-container {
+	.admin-bar .primary-navigation > .menu-wrapper {
 		top: initial;
 	}
 }
 
-.primary-navigation > div > .menu-wrapper {
+.primary-navigation > .menu-wrapper {
+	visibility: hidden;
+	opacity: 0;
+	position: relative;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: calc(4 * var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
+	background-color: var(--global--color-background);
+	overflow-x: hidden;
+	overflow-y: scroll;
+	transition: all .15s ease-in-out;
+	transform: translateY(var(--global--spacing-vertical));
 	display: flex;
-	justify-content: flex-start;
+	justify-content: var(--primary-nav--justify-content);
 	flex-wrap: wrap;
 	list-style: none;
 	margin: 0;
 	max-width: none;
 	padding-left: 0;
-	position: relative;
 }
 
 @media only screen and (max-width: 481px) {
-	.primary-navigation > div > .menu-wrapper {
-		margin: calc(2 * var(--global--spacing-vertical)) 0 0 0;
-	}
-	.primary-navigation > div > .menu-wrapper ul {
-		padding-left: 0;
+	.primary-navigation > .menu-wrapper {
+		z-index: 499;
 	}
 }
 
-.primary-navigation > div > .menu-wrapper li {
+.primary-navigation > .menu-wrapper ul {
+	padding-left: 0;
+}
+
+.primary-navigation > .menu-wrapper li {
 	display: block;
 	position: relative;
 	width: 100%;
 	z-index: 1;
 }
 
-.primary-navigation > div > .menu-wrapper li:hover, .primary-navigation > div > .menu-wrapper li:focus-within {
+.primary-navigation > .menu-wrapper li:hover, .primary-navigation > .menu-wrapper li:focus-within {
 	cursor: pointer;
 	z-index: 99999;
 }
 
 @media only screen and (min-width: 482px) {
-	.primary-navigation > div > .menu-wrapper li {
+	.primary-navigation > .menu-wrapper li {
 		display: inherit;
 		width: inherit;
-		/* Submenu display in the responsive menu */
+		/* Submenu display */
 	}
-	.primary-navigation > div > .menu-wrapper li:hover > ul,
-	.primary-navigation > div > .menu-wrapper li:focus-within > ul,
-	.primary-navigation > div > .menu-wrapper li ul:hover,
-	.primary-navigation > div > .menu-wrapper li ul:focus {
+	.primary-navigation > .menu-wrapper li:hover > ul,
+	.primary-navigation > .menu-wrapper li:focus-within > ul,
+	.primary-navigation > .menu-wrapper li ul:hover,
+	.primary-navigation > .menu-wrapper li ul:focus {
 		visibility: visible;
 		opacity: 1;
 		display: block;
 	}
 }
 
-.primary-navigation > div > .menu-wrapper > li > .sub-menu {
+.primary-navigation > .menu-wrapper > li > .sub-menu {
 	position: relative;
 }
 
 @media only screen and (min-width: 482px) {
-	.primary-navigation > div > .menu-wrapper > li > .sub-menu {
+	.primary-navigation > .menu-wrapper > li > .sub-menu {
 		margin: 0;
 		background: var(--global--color-background);
-		left: -15px;
+		box-shadow: var(--global--elevation);
+		left: 0;
 		top: calc(100% - (0.5 * var(--primary-nav--padding)));
 		min-width: max-content;
 		opacity: 0;
@@ -3535,7 +3482,7 @@ h2.page-title {
 	}
 }
 
-.primary-navigation > div > .menu-wrapper > li > .sub-menu .sub-menu {
+.primary-navigation > .menu-wrapper > li > .sub-menu .sub-menu {
 	width: 100%;
 }
 
@@ -3543,19 +3490,37 @@ h2.page-title {
 	color: var(--primary-nav--color-link-hover);
 }
 
-.primary-navigation .primary-menu-container > ul > .menu-item {
+.primary-navigation .menu-wrapper > .menu-item {
 	padding: calc(0.5 * var(--primary-nav--padding)) 0;
 }
 
 @media only screen and (min-width: 482px) {
-	.primary-navigation .primary-menu-container > ul > .menu-item {
+	.primary-navigation .menu-wrapper > .menu-item {
 		display: flex;
 		align-items: center;
-		padding: calc(0.7 * var(--primary-nav--padding)) calc(3 * var(--primary-nav--padding)) var(--primary-nav--padding) 0;
+		padding: var(--primary-nav--padding);
 	}
 }
 
+.primary-navigation .menu-item > a {
+	color: var(--primary-nav--color-link);
+}
+
+.primary-navigation .menu-item > a:hover {
+	color: var(--primary-nav--color-link-hover);
+	border-color: var(--global--color-secondary);
+}
+
+.primary-navigation .menu-item > a:focus {
+	color: var(--global--color-secondary);
+}
+
+.primary-navigation .menu-item > a:active {
+	color: var(--primary-nav--color-link);
+}
+
 .primary-navigation a {
+	color: currentColor;
 	display: inline;
 	font-family: var(--primary-nav--font-family-mobile);
 	font-size: var(--primary-nav--font-size-mobile);
@@ -3572,25 +3537,11 @@ h2.page-title {
 }
 
 .primary-navigation a + svg {
-	fill: var(--primary-nav--color-text);
+	fill: currentColor;
 }
 
 .primary-navigation a:hover, .primary-navigation a:link, .primary-navigation a:visited {
-	color: var(--primary-nav--color-link-hover);
-}
-
-.primary-navigation a:hover {
-	border-bottom: 1px dashed var(--primary-nav--color-link-border);
-}
-
-.primary-navigation .current-menu-item > a:first-child,
-.primary-navigation .current_page_item > a:first-child {
-	border-bottom: 1px solid var(--primary-nav--color-link-border);
-}
-
-.primary-navigation .current-menu-item > a:first-child:hover,
-.primary-navigation .current_page_item > a:first-child:hover {
-	border-bottom: 1px dashed var(--primary-nav--color-link-border);
+	color: currentColor;
 }
 
 .primary-navigation .sub-menu {
@@ -3600,23 +3551,25 @@ h2.page-title {
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation .sub-menu {
-		padding: var(--primary-nav--padding);
+		padding: calc(0.5 * var(--primary-nav--padding)) var(--primary-nav--padding);
 	}
 	.primary-navigation .sub-menu > .menu-item > .sub-menu {
-		padding: var(--primary-nav--padding) 0 0 0;
+		padding: 0;
 	}
 	.primary-navigation .sub-menu > .menu-item.menu-item-has-children {
-		padding: var(--primary-nav--padding) 0 0 0;
+		padding: calc(0.5 * var(--primary-nav--padding)) var(--primary-nav--padding) 0 0;
 	}
 }
 
 .primary-navigation .sub-menu .menu-item {
-	padding: calc(0.5 * var(--primary-nav--padding)) var(--primary-nav--padding);
+	padding-top: calc(0.5 * var(--primary-nav--padding));
+	padding-bottom: calc(0.5 * var(--primary-nav--padding));
 }
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation .sub-menu .menu-item {
-		padding: var(--primary-nav--padding) 0;
+		padding-top: calc(0.5 * var(--primary-nav--padding));
+		padding-bottom: calc(0.5 * var(--primary-nav--padding));
 	}
 }
 
@@ -3628,7 +3581,7 @@ h2.page-title {
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation .sub-menu .menu-item a {
-		font-size: var(--primary-nav--font-size-sub-menu);
+		font-size: var(--primary-nav--font-size);
 		font-style: var(--primary-nav--font-style);
 	}
 }
@@ -3641,9 +3594,6 @@ h2.page-title {
 	.primary-navigation .menu-item-has-children > .svg-icon {
 		display: inline-block;
 		height: 100%;
-	}
-	.primary-navigation .menu-item-has-children .sub-menu .svg-icon {
-		display: none;
 	}
 }
 

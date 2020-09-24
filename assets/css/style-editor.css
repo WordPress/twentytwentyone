@@ -1,8 +1,7 @@
 /**
  * These styles should be loaded by the Block Editor only
  */
-/* Do we need to serve a font? Add the @font-face styles here. */
-/* Add all variables here. */
+/* Variables */
 :root {
 	/* Font Family */
 	--global--font-primary: var(--font-headings, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
@@ -15,8 +14,8 @@
 	--global--font-size-sm: 1.125rem;
 	--global--font-size-md: 1.25rem;
 	--global--font-size-lg: 1.5rem;
-	--global--font-size-xl: 2.25rem;
-	--global--font-size-page-title: 4rem;
+	--global--font-size-xl: 2rem;
+	--global--font-size-page-title: 6rem;
 	--global--letter-spacing: normal;
 	/* Line Height */
 	--global--line-height-base: 1;
@@ -28,8 +27,8 @@
 	--heading--font-size-h6: var(--global--font-size-xs);
 	--heading--font-size-h5: var(--global--font-size-sm);
 	--heading--font-size-h4: var(--global--font-size-lg);
-	--heading--font-size-h3: 1.875rem;
-	--heading--font-size-h2: 2.25rem;
+	--heading--font-size-h3: 2rem;
+	--heading--font-size-h2: 3rem;
 	--heading--font-size-h1: var(--global--font-size-page-title);
 	--heading--letter-spacing-h6: 0.05em;
 	--heading--letter-spacing-h5: 0.05em;
@@ -145,19 +144,15 @@
 	/* Main navigation */
 	--primary-nav--font-family: var(--global--font-secondary);
 	--primary-nav--font-family-mobile: var(--global--font-primary);
-	--primary-nav--font-size: var(--global--font-size-sm);
-	--primary-nav--font-size-sub-menu: var(--global--font-size-xs);
-	--primary-nav--font-size-mobile: var(--global--font-size-md);
-	--primary-nav--font-size-sub-menu-mobile: var(--global--font-size-sm);
-	--primary-nav--font-size-button: var(--global--font-size-xs);
+	--primary-nav--font-size: var(--global--font-size-md);
+	--primary-nav--font-size-mobile: var(--global--font-size-xl);
+	--primary-nav--font-size-sub-menu-mobile: var(--global--font-size-lg);
 	--primary-nav--font-style: normal;
-	--primary-nav--font-style-sub-menu-mobile: normal;
+	--primary-nav--font-style-sub-menu-mobile: italic;
 	--primary-nav--font-weight: normal;
-	--primary-nav--font-weight-button: 500;
 	--primary-nav--line-height: var(--global--line-height-body);
 	--primary-nav--color-link: var(--global--color-primary);
 	--primary-nav--color-link-hover: var(--global--color-primary-hover);
-	--primary-nav--color-link-border: var(--global--color-primary);
 	--primary-nav--color-text: var(--global--color-primary);
 	--primary-nav--padding: calc(0.66 * var(--global--spacing-unit));
 	--primary-nav--justify-content: center;
@@ -201,26 +196,8 @@
 	--separator--width: calc(6 * var(--global--spacing-horizontal));
 }
 
-@media only screen and (min-width: 652px) {
-	:root {
-		--global--font-size-xl: 2.5rem;
-		--global--font-size-page-title: 6rem;
-		--heading--font-size-h3: 2rem;
-		--heading--font-size-h2: 3rem;
-	}
-}
-
-/* Any helpful mixins we need? Put them here. */
-/*
-Example:
-@mixin typography {
-	color: var(--color-charcoal);
-	font-family: var(--font-family);
-	font-size: var(--font-size-global);
-	line-height: var(--line-height-global);
-	word-wrap: break-word;
-}
-*/
+/* Mixins */
+/* Button extends */
 .wp-block-search .wp-block-search__button {
 	line-height: var(--button--line-height);
 	color: var(--button--color-text);
@@ -270,7 +247,7 @@ Example:
  * Root Media Query Variables
  */
 :root {
-	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal) * 0.6);
+	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal) * 0.6 );
 	--responsive--aligndefault-width: calc(100vw - var(--responsive--spacing-horizontal));
 	--responsive--alignwide-width: calc(100vw - var(--responsive--spacing-horizontal));
 	--responsive--alignfull-width: 100%;
@@ -318,9 +295,6 @@ Example:
 	}
 }
 
-/**
- * Output
- */
 blockquote {
 	margin: 0;
 	padding: 0;
