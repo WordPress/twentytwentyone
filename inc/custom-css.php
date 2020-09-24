@@ -26,7 +26,7 @@ function twenty_twenty_one_generate_css( $selector, $style, $value, $prefix = ''
 	* Bail early if we have no $selector elements or properties and $value.
 	*/
 	if ( ! $value || ! $selector ) {
-		return;
+		return '';
 	}
 
 	$return = sprintf( '%s { %s: %s; }', $selector, $style, $prefix . $value . $suffix );
