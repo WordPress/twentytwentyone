@@ -6,6 +6,14 @@ Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+Twenty Twenty One bundles the following third-party resources:
+
+Van Gogh Images
+License: Public Domain
+Source: https://www.nga.gov/collection/art-object-page.46626.html
+        https://www.metmuseum.org/art/collection/search/437984
+Used as example images in block patterns.
+
 == Description ==
 
 == Installation ==
