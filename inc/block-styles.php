@@ -20,7 +20,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			'core/image',
 			array(
 				'name'  => 'twentytwentyone-image-frame',
-				'label' => __( 'Image Frame', 'twentytwentyone' ),
+				'label' => __( 'Bordered Frame', 'twentytwentyone' ),
 			)
 		);
 
@@ -28,7 +28,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			'core/image',
 			array(
 				'name'  => 'twentytwentyone-border',
-				'label' => __( 'Thick Border', 'twentytwentyone' ),
+				'label' => __( 'Bordered', 'twentytwentyone' ),
 			)
 		);
 
@@ -36,7 +36,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			'core/cover',
 			array(
 				'name'  => 'twentytwentyone-border',
-				'label' => __( 'Thick Border', 'twentytwentyone' ),
+				'label' => __( 'Bordered', 'twentytwentyone' ),
 			)
 		);
 
@@ -44,7 +44,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			'core/group',
 			array(
 				'name'  => 'twentytwentyone-border',
-				'label' => __( 'Thick Border', 'twentytwentyone' ),
+				'label' => __( 'Bordered', 'twentytwentyone' ),
 			)
 		);
 
@@ -52,7 +52,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			'core/media-text',
 			array(
 				'name'  => 'twentytwentyone-border',
-				'label' => __( 'Thick Border', 'twentytwentyone' ),
+				'label' => __( 'Bordered', 'twentytwentyone' ),
 			)
 		);
 	}
