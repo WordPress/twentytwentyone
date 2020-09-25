@@ -6,14 +6,6 @@ Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Twenty Twenty One bundles the following third-party resources:
-
-Van Gogh Images
-License: Public Domain
-Source: https://www.nga.gov/collection/art-object-page.46626.html
-        https://www.metmuseum.org/art/collection/search/437984
-Used as example images in block patterns.
-
 == Description ==
 
 == Installation ==
@@ -71,3 +63,5 @@ Images
 Irises, Vincent van Gogh, 1890. Public domain. https://www.metmuseum.org/art/collection/search/436528
 Girl in white, Vincent van Gogh, 1890. Public domain. https://www.nga.gov/collection/art-object-page.46505.html
 The smoker, Vincent van Gogh, 1888. Public domain. https://collection.barnesfoundation.org/objects/5177/The-Smoker-(Le-Fumeur)/
+La Mousmé, Vincent van Gogh, 1888. Public domain. https://www.nga.gov/collection/art-object-page.46626.html
+La Berceuse (Woman Rocking a Cradle), Vincent van Gogh, 1889. Public domain. https://www.metmuseum.org/art/collection/search/437984
