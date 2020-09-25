@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: Twenty Twenty One
+Theme Name: Twenty Twenty-One
 Theme URI: https://wordpress.org/themes/twentytwentyone/
 Author: the WordPress team
 Author URI: https://wordpress.org/
@@ -4832,23 +4832,17 @@ h2.page-title {
 }
 
 .primary-navigation a:hover {
-	border-bottom: 1px dashed #28303d;
+	text-decoration: underline dashed;
 }
 
-.primary-navigation .current-menu-item > a:first-child {
-	border-bottom: 1px solid #28303d;
-}
-
+.primary-navigation .current-menu-item > a:first-child,
 .primary-navigation .current_page_item > a:first-child {
-	border-bottom: 1px solid #28303d;
+	text-decoration: underline solid;
 }
 
-.primary-navigation .current-menu-item > a:first-child:hover {
-	border-bottom: 1px dashed #28303d;
-}
-
+.primary-navigation .current-menu-item > a:first-child:hover,
 .primary-navigation .current_page_item > a:first-child:hover {
-	border-bottom: 1px dashed #28303d;
+	text-decoration: underline dashed;
 }
 
 .primary-navigation .sub-menu {
@@ -4866,17 +4860,18 @@ h2.page-title {
 }
 
 .primary-navigation .sub-menu .menu-item {
-	padding: 13px 0 0;
+	margin: 26px 0;
 }
 
-.primary-navigation .sub-menu .menu-item a {
+.primary-navigation .sub-menu .menu-item > a {
 	display: inline;
 	font-size: 1.125rem;
 	font-style: normal;
+	padding: 13px 0;
 }
 
 @media only screen and (min-width: 482px) {
-	.primary-navigation .sub-menu .menu-item a {
+	.primary-navigation .sub-menu .menu-item > a {
 		font-size: 1rem;
 		font-style: normal;
 	}

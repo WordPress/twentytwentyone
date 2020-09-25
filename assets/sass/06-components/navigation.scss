@@ -295,16 +295,16 @@
 		}
 
 		&:hover {
-			border-bottom: 1px dashed var(--primary-nav--color-link-border);
+			text-decoration: underline dashed; // This will be redundant when #110 is addressed
 		}
 	}
 
 	.current-menu-item > a:first-child,
 	.current_page_item > a:first-child {
-		border-bottom: 1px solid var(--primary-nav--color-link-border);
+		text-decoration: underline solid;
 
 		&:hover {
-			border-bottom: 1px dashed var(--primary-nav--color-link-border);
+			text-decoration: underline dashed;
 		}
 	}
 
@@ -324,12 +324,13 @@
 		}
 
 		.menu-item {
-			padding: var(--primary-nav--padding) 0 0;
+			margin: calc( 2 * var(--primary-nav--padding)) 0;
 
-			a {
+			> a {
 				display: inline;
 				font-size: var(--primary-nav--font-size-sub-menu-mobile);
 				font-style: var(--primary-nav--font-style-sub-menu-mobile);
+				padding: var(--primary-nav--padding) 0;
 
 				@include media(mobile) {
 					font-size: var(--primary-nav--font-size-sub-menu);
