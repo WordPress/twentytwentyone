@@ -23,6 +23,14 @@ if ( function_exists( 'register_block_style' ) ) {
 				'label' => __( 'Image Frame', 'twentytwentyone' ),
 			)
 		);
+
+		register_block_style(
+			'core/latest-posts',
+			array(
+				'name'  => 'twentytwentyone-latest-posts-dividers',
+				'label' => __( 'Dividers', 'twentytwentyone' ),
+			)
+		);
 	}
 	add_action( 'init', 'twenty_twenty_one_register_block_styles' );
 }
