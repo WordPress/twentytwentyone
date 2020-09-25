@@ -28,17 +28,19 @@ if ( have_posts() ) {
 	<div class="search-result-count default-max-width">
 		<?php
 		printf(
-			/* translators: %d: the number of search results. */
-			_n(
-				'We found %d result for your search.',
-				'We found %d results for your search.',
-				(int) $wp_query->found_posts,
-				'twentytwentyone'
+			esc_html(
+				/* translators: %d: the number of search results. */
+				_n(
+					'We found %d result for your search.',
+					'We found %d results for your search.',
+					(int) $wp_query->found_posts,
+					'twentytwentyone'
+				)
 			),
 			(int) $wp_query->found_posts
 		);
 		?>
-	</div>
+	</div><!-- .search-result-count -->
 	<?php
 	// Start the Loop.
 	while ( have_posts() ) {

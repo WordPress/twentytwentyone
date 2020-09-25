@@ -1,14 +1,14 @@
-# Contributing to Twenty Twenty One
+# Contributing to Twenty Twenty-One
 
 Howdy, it’s really great you want to contribute to the new default theme for the WordPress 5.6 release! Before you dive in, here are a few pointers on how to contribute.
 
 ## How it works
 
-For early development, Twenty Twenty One will remain on GitHub. Once it reaches a usable and stable state, the theme will be moved into WordPress Core and all development will happen in SVN and Trac. Until then, follow this document for guidance.
+For early development, Twenty Twenty-One will remain on GitHub. Once it reaches a usable and stable state, the theme will be moved into WordPress Core and all development will happen in SVN and Trac. Until then, follow this document for guidance.
 
 ## Reporting an issue
 
-Twenty Twenty One should have all issues reported on GitHub at https://github.com/WordPress/twentytwentyone/. We are not using Trac for issue reporting until the theme is moved into WordPress Core.
+Twenty Twenty-One should have all issues reported on GitHub at https://github.com/WordPress/twentytwentyone/. We are not using Trac for issue reporting until the theme is moved into WordPress Core.
 
 ## Testing a Pull Request
 
@@ -53,7 +53,7 @@ When you add a pull request, please also add in the description your WordPress.o
 
 ## Compling SCSS
 
-Twenty Twenty One relies on [Sass](https://sass-lang.com/guide) which allows us to more easily share code between multiple stylesheets (`style.css`, `style-editor.css`, etc.).
+Twenty Twenty-One relies on [Sass](https://sass-lang.com/guide) which allows us to more easily share code between multiple stylesheets (`style.css`, `style-editor.css`, etc.).
 To compile Sass files (`.scss`) use the built-in `npm` build tool. The build tool will make sure that your compiled CSS code stays in sync and has the correct formatting.
 
 ### Installation instructions
@@ -70,7 +70,7 @@ To compile Sass files (`.scss`) use the built-in `npm` build tool. The build too
 
 ## Testing PHP files with PHPCS
 
-With Twenty Twenty One you can use [PHP Code Sniffer](https://github.com/WordPress/WordPress-Coding-Standards) to test that your PHP files follow WordPress coding and theme review standards.
+With Twenty Twenty-One you can use [PHP Code Sniffer](https://github.com/WordPress/WordPress-Coding-Standards) to test that your PHP files follow WordPress coding and theme review standards.
 
 ### Installation instructions
 1. Using a command line interface, go to the “twentytwentyone” directory `cd /my-computer/local-wordpress-install/wp-content/themes/twentytwentyone`.

@@ -1,4 +1,4 @@
-# Twenty Twenty One
+# Twenty Twenty-One
 Contributors: wordpressdotorg
 Requires at least: 5.3
 Tested up to: 5.5
@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 ## Installation
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
-2. Type in Twenty Twenty One in the search form and press the 'Enter' key on your keyboard.
+2. Type in Twenty Twenty-One in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
 4. Go to INSERT ABOUT PAGE for a guide on how to customize this theme.
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
@@ -20,8 +20,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Copyright
 
-Twenty Twenty One WordPress Theme, 2020 WordPress.org
-Twenty Twenty One is distributed under the terms of the GNU GPL.
+Twenty Twenty-One WordPress Theme, 2020 WordPress.org
+Twenty Twenty-One is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -34,9 +34,9 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 
-Twenty Twenty One is derived from Seedlet, (C) 2020 Automattic, Inc.
+Twenty Twenty-One is derived from Seedlet, (C) 2020 Automattic, Inc.
 
-Twenty Twenty One is also based on:
+Twenty Twenty-One is also based on:
 
 Twenty Nineteen. 2018-2020 WordPress.org
 Twenty Nineteen is distributed under the terms of the GNU GPL v2 or later.
