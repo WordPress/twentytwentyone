@@ -1342,7 +1342,6 @@ p.has-background {
 }
 
 .wp-block-search {
-	display: flex;
 	max-width: calc(100vw - 30px);
 }
 
