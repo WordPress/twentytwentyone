@@ -2,6 +2,8 @@
 
 Howdy, it’s really great you want to contribute to the new default theme for the WordPress 5.6 release! Before you dive in, here are a few pointers on how to contribute.
 
+To make it easier to get started with contributing Twenty Twenty One includes [`@wordpress/env`](https://npmjs.com/package/@wordpress/env), which is a project developed by the Gutenberg Project to allow for easy lightweight preconfigured local environments. All you need to get started is to run `npm run wp-env start` in the `twentytwentyone` folder.
+
 ## How it works
 
 For early development, Twenty Twenty-One will remain on GitHub. Once it reaches a usable and stable state, the theme will be moved into WordPress Core and all development will happen in SVN and Trac. Until then, follow this document for guidance.
@@ -12,13 +14,13 @@ Twenty Twenty-One should have all issues reported on GitHub at https://github.co
 
 ## Testing a Pull Request
 
-If you're using Git locally, you can test a pull request by pulling down the associated branch, creating a zip file of the contents, and uploading to your site. This repository includes all compiled files, so it should install just like any other uploaded theme. 
+If you're using Git locally, you can test a pull request by pulling down the associated branch, creating a zip file of the contents, and uploading to your site. This repository includes all compiled files, so it should install just like any other uploaded theme.
 
 If you're not already using Git, you may benefit from installing the [GitHub desktop application](https://desktop.github.com). This will allow you to [download the repository in  one click](https://help.github.com/desktop/guides/contributing-to-projects/cloning-a-repository-from-github-to-github-desktop/), keep it in sync, and easily [switch between different pull requests](https://help.github.com/desktop/guides/contributing-to-projects/accessing-a-pull-request-locally/). Once a pull request is selected in the application, create a zip file of the whole repository, and upload it to your site to test.
 
 ## Submitting Fixes
 
-To submit a fix, please [fork the repository](https://help.github.com/articles/fork-a-repo/) and submit a [pull request](https://help.github.com/articles/creating-a-pull-request/). In your pull request's description, please explain your update and reference the associated issue you're fixing. 
+To submit a fix, please [fork the repository](https://help.github.com/articles/fork-a-repo/) and submit a [pull request](https://help.github.com/articles/creating-a-pull-request/). In your pull request's description, please explain your update and reference the associated issue you're fixing.
 
 ## Best Practices
 
@@ -79,6 +81,5 @@ With Twenty Twenty-One you can use [PHP Code Sniffer](https://github.com/WordPre
 ### Usage instructions
 1. Type `./vendor/bin/phpcs` into the command line and press [return], to check all files.
 Type `./vendor/bin/phpcs` filename.php into the command line and press [return], to check a single file.
-
 
 
