@@ -1522,7 +1522,7 @@ blockquote.alignright footer {
 }
 
 input[type="text"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1530,7 +1530,7 @@ input[type="text"] {
 }
 
 input[type="email"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1538,7 +1538,7 @@ input[type="email"] {
 }
 
 input[type="url"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1546,7 +1546,7 @@ input[type="url"] {
 }
 
 input[type="password"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1554,7 +1554,7 @@ input[type="password"] {
 }
 
 input[type="search"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1562,7 +1562,7 @@ input[type="search"] {
 }
 
 input[type="number"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1570,7 +1570,7 @@ input[type="number"] {
 }
 
 input[type="tel"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1578,7 +1578,7 @@ input[type="tel"] {
 }
 
 input[type="range"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1586,7 +1586,7 @@ input[type="range"] {
 }
 
 input[type="date"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1594,7 +1594,7 @@ input[type="date"] {
 }
 
 input[type="month"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1602,7 +1602,7 @@ input[type="month"] {
 }
 
 input[type="week"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1610,7 +1610,7 @@ input[type="week"] {
 }
 
 input[type="time"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1618,7 +1618,7 @@ input[type="time"] {
 }
 
 input[type="datetime"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1626,7 +1626,7 @@ input[type="datetime"] {
 }
 
 input[type="datetime-local"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1634,7 +1634,7 @@ input[type="datetime-local"] {
 }
 
 input[type="color"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1642,7 +1642,7 @@ input[type="color"] {
 }
 
 textarea {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1651,86 +1651,86 @@ textarea {
 
 input[type="text"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="email"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="url"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="password"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="search"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="number"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="tel"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="range"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="date"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="month"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="week"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="time"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="datetime"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="datetime-local"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="color"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 textarea:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 select {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 }
 
 textarea {
@@ -1897,7 +1897,7 @@ i {
 	color: #28303d;
 	font-size: 1.125rem;
 	padding: 20px;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 .wp-block-code pre {
@@ -2560,7 +2560,7 @@ img {
 /* Block Styles */
 .wp-block-image.is-style-twentytwentyone-image-frame img {
 	padding: 20px;
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 }
 
 .wp-block-latest-comments {
@@ -2707,20 +2707,20 @@ img {
 }
 
 .wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers {
-	border-top: 3px solid #000;
-	border-bottom: 3px solid #000;
+	border-top: 3px solid #28303d;
+	border-bottom: 3px solid #28303d;
 }
 
 .wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers:not(.is-grid) > li {
 	padding-bottom: 30px;
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid #28303d;
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
 
 .wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers > li {
 	padding-bottom: 30px;
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid #28303d;
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
@@ -2732,8 +2732,8 @@ img {
 }
 
 .wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid {
-	box-shadow: inset 0 -1px 0 0 #000;
-	border-bottom: 2px solid #000;
+	box-shadow: inset 0 -1px 0 0 #28303d;
+	border-bottom: 2px solid #28303d;
 }
 
 .wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid li {
@@ -2765,7 +2765,7 @@ img {
 }
 
 .wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders li {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	padding: 30px 25px;
 }
 
@@ -3298,7 +3298,7 @@ p.has-text-color a {
 }
 
 .wp-block-search .wp-block-search__input {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -3309,19 +3309,19 @@ p.has-text-color a {
 
 .wp-block-search .wp-block-search__input:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 hr {
 	border-style: none;
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid #28303d;
 	clear: both;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 hr.wp-block-separator {
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid #28303d;
 	/**
 		 * Block Options
 		 */
@@ -3340,7 +3340,7 @@ hr.wp-block-separator.is-style-dots.has-background:before, hr.wp-block-separator
 }
 
 hr.wp-block-separator.is-style-dots:before {
-	color: #000;
+	color: #28303d;
 	font-size: 2.25rem;
 	letter-spacing: 1.125rem;
 	padding-left: 1.125rem;
@@ -3769,7 +3769,7 @@ nav a {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1rem;
 	line-height: 1.7;
-	border-top: 3px solid #000;
+	border-top: 3px solid #28303d;
 	padding-top: 30px;
 	margin-top: 60px;
 }
@@ -3877,7 +3877,7 @@ nav a {
 }
 
 .single .entry-header {
-	border-bottom: 3px solid #000;
+	border-bottom: 3px solid #28303d;
 	padding-bottom: 60px;
 	margin-bottom: 90px;
 }
@@ -4070,7 +4070,7 @@ h1.entry-title {
 	margin-top: 30px;
 	padding-top: 20px;
 	padding-bottom: 90px;
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid #28303d;
 }
 
 body:not(.single) .site-main > article:last-of-type .entry-footer {
@@ -4082,7 +4082,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	margin-bottom: 102px;
 	padding-bottom: 0;
 	padding-top: 24px;
-	border-top: 3px solid #000;
+	border-top: 3px solid #28303d;
 	border-bottom: 1px solid transparent;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -4206,7 +4206,7 @@ h2.page-title {
 }
 
 .page-header {
-	border-bottom: 3px solid #000;
+	border-bottom: 3px solid #28303d;
 	padding-bottom: 60px;
 }
 
@@ -5082,7 +5082,7 @@ h2.page-title {
 }
 
 .pagination {
-	border-top: 3px solid #000;
+	border-top: 3px solid #28303d;
 	padding-top: 30px;
 	margin: 30px auto;
 }

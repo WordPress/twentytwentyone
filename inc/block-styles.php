@@ -24,6 +24,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			)
 		);
 
+		/* Latest Posts: Dividers */
 		register_block_style(
 			'core/latest-posts',
 			array(
@@ -32,6 +33,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			)
 		);
 
+		/* Latest Posts: Borders */
 		register_block_style(
 			'core/latest-posts',
 			array(
