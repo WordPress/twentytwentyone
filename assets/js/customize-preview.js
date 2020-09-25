@@ -25,7 +25,7 @@
 
 		// Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF").
 		hex = hex.replace( shorthandRegex, function( m, r, g, b ) {
-		return `${r}${r}${g}${g}${b}${b}`;
+			return `${r}${r}${g}${g}${b}${b}`;
 		} );
 
 		result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec( hex );
@@ -43,13 +43,13 @@
 		var lum = twentytwentyoneGetHexLum( to ),
 			textColor = 127 < lum ? '#000' : '#fff';
 
-			document.documentElement.style.setProperty( '--global--color-primary', textColor );
-			document.documentElement.style.setProperty( '--global--color-secondary', textColor );
-			document.documentElement.style.setProperty( '--global--color-background', to);
+		document.documentElement.style.setProperty( '--global--color-primary', textColor );
+		document.documentElement.style.setProperty( '--global--color-secondary', textColor );
+		document.documentElement.style.setProperty( '--global--color-background', to);
 
-			document.documentElement.style.setProperty( '--button--color-background', textColor );
-			document.documentElement.style.setProperty( '--button--color-text', to );
-			document.documentElement.style.setProperty( '--button--color-text-hover', textColor);
+		document.documentElement.style.setProperty( '--button--color-background', textColor );
+		document.documentElement.style.setProperty( '--button--color-text', to );
+		document.documentElement.style.setProperty( '--button--color-text-hover', textColor);
 		} );
 	} );
 }( wp.customize, _ ) );
