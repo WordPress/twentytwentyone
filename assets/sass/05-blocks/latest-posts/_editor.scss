@@ -3,8 +3,8 @@
 
 	// Vertical margins logic
 	&:not(.is-grid) > li {
-		margin-top: var(--global--spacing-vertical);
-		margin-bottom: var(--global--spacing-vertical);
+		margin-top: calc(1.666 * var(--global--spacing-vertical));
+		margin-bottom: calc(1.666 * var(--global--spacing-vertical));
 
 		&:first-child {
 			margin-top: 0;
@@ -24,8 +24,8 @@
 	}
 
 	> li > * {
-		margin-top: calc(0.5 * var(--global--spacing-vertical));
-		margin-bottom: calc(0.5 * var(--global--spacing-vertical));
+		margin-top: calc(0.333 * var(--global--spacing-vertical));
+		margin-bottom: calc(0.333 * var(--global--spacing-vertical));
 
 		&:first-child {
 			margin-top: 0;
@@ -38,10 +38,19 @@
 
 	// Post title
 	> li > a {
+		display: inline-block;
 		font-family: var(--latest-posts--title-font-family);
 		font-size: var(--latest-posts--title-font-size);
 		font-weight: var(--heading--font-weight);
 		line-height: var(--global--line-height-heading);
+		margin-bottom: calc(0.333 * var(--global--spacing-vertical));
+	}
+
+	// Post author
+	.wp-block-latest-posts__post-author {
+		color: var(--global--color-primary);
+		font-size: var(--global--font-size-md);
+		line-height: var(--global--line-height-body);
 	}
 
 	// Post date
@@ -62,6 +71,7 @@
 		font-family: var(--latest-posts--description-font-family);
 		font-size: var(--latest-posts--description-font-size);
 		line-height: var(--global--line-height-body);
+		margin-top: calc(0.666 * var(--global--spacing-vertical));
 	}
 }
 

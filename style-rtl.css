@@ -1792,9 +1792,15 @@ img {
 	line-height: var(--global--line-height-heading);
 }
 
+.wp-block-latest-posts .wp-block-latest-posts__post-author {
+	color: var(--global--color-primary);
+	font-size: var(--global--font-size-md);
+	line-height: var(--global--line-height-body);
+}
+
 .wp-block-latest-posts .wp-block-latest-posts__post-date {
 	color: var(--global--color-primary);
-	font-size: var(--global--font-size-sm);
+	font-size: var(--global--font-size-xs);
 	line-height: var(--global--line-height-body);
 }
 

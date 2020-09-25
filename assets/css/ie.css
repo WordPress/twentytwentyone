@@ -2662,9 +2662,15 @@ img {
 	}
 }
 
+.wp-block-latest-posts .wp-block-latest-posts__post-author {
+	color: #28303d;
+	font-size: 1.25rem;
+	line-height: 1.7;
+}
+
 .wp-block-latest-posts .wp-block-latest-posts__post-date {
 	color: #28303d;
-	font-size: 1.125rem;
+	font-size: 1rem;
 	line-height: 1.7;
 }
 

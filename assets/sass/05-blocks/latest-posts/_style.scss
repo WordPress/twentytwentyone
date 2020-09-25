@@ -61,10 +61,17 @@
 		line-height: var(--global--line-height-heading);
 	}
 
+	// Post author
+	.wp-block-latest-posts__post-author {
+		color: var(--global--color-primary);
+		font-size: var(--global--font-size-md);
+		line-height: var(--global--line-height-body);
+	}
+
 	// Post date
 	.wp-block-latest-posts__post-date {
 		color: var(--global--color-primary);
-		font-size: var(--global--font-size-sm);
+		font-size: var(--global--font-size-xs);
 		line-height: var(--global--line-height-body);
 
 		.entry-content [class*="inner-container"] &,
