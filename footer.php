@@ -22,17 +22,26 @@
 
 		<div class="site-info">
 			<div class="site-name">
-				<?php
-				$blog_info = get_bloginfo( 'name' );
-				if ( ! empty( $blog_info ) ) :
-					if ( is_front_page() || ( is_front_page() && is_home() ) ) :
-						?>
-						<?php bloginfo( 'name' ); ?>
+				<?php if ( has_custom_logo() ) : ?>
+					<?php if ( is_front_page() ) : ?>
+						<?php the_custom_logo(); ?>
 					<?php else : ?>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"<?php echo $aria_current; ?>><?php bloginfo( 'name' ); ?></a>
-					<?php endif;
-				endif;
-				?>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php the_custom_logo(); ?></a>
+					<?php endif; ?>
+					<?php
+					else :
+						$blog_info = get_bloginfo( 'name' );
+						if ( ! empty( $blog_info ) ) :
+							if ( is_front_page() ) : 
+								?>
+								<?php bloginfo( 'name' ); ?>
+							<?php else : ?>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+								<?php
+								endif;
+							endif;
+						endif;
+					?>
 			</div><!-- .site-name -->
 			<div class="copyright">
 				<?php
