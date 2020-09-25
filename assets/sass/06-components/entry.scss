@@ -47,13 +47,10 @@ h1.entry-title {
 	}
 
 	.more-link {
+
 		&:hover {
 			text-decoration: none;
 		}
-	}
-
-	a {
-
 	}
 
 	// Overwrite iframe embeds that have inline styles.
@@ -65,11 +62,6 @@ h1.entry-title {
 		@include media(mobile) {
 			max-width: var(--global--spacing-vertical) !important;
 		}
-	}
-
-	// Page links
-	.page-links a {
-
 	}
 
 	// Classic editor audio embeds.
@@ -94,7 +86,7 @@ h1.entry-title {
 		display: inline-block;
 		margin-right: var(--global--spacing-unit);
 
-		& > *,
+		> *,
 		span .fn {
 			display: inline-block;
 			vertical-align: middle;
@@ -141,7 +133,7 @@ h1.entry-title {
 	display: block;
 
 	> span {
-		margin-right: calc( 0.5 * var(--global--spacing-unit));
+		margin-right: calc(0.5 * var(--global--spacing-unit));
 
 		.published + .updated {
 			display: none; // Hide updated date?
@@ -170,7 +162,7 @@ h1.entry-title {
 .site-main > article > .entry-footer {
 	margin-top: var(--global--spacing-vertical);
 	padding-top: var(--global--spacing-unit);
-	padding-bottom: calc( 3 * var(--global--spacing-vertical));
+	padding-bottom: calc(3 * var(--global--spacing-vertical));
 	border-bottom: var(--separator--height) solid var(--separator--border-color);
 }
 
@@ -179,15 +171,15 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .single .site-main > article > .entry-footer {
-	margin-top: calc( 3.4 * var(--global--spacing-vertical) );
-	margin-bottom: calc( 3.4 * var(--global--spacing-vertical) );
+	margin-top: calc(3.4 * var(--global--spacing-vertical));
+	margin-bottom: calc(3.4 * var(--global--spacing-vertical));
 	padding-bottom: 0;
-	padding-top: calc( 0.8 * var(--global--spacing-vertical) );
+	padding-top: calc(0.8 * var(--global--spacing-vertical));
 	border-top: 3px solid var(--separator--border-color);
 	border-bottom: var(--separator--height) solid transparent;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	column-gap: calc( 2 * var(--global--spacing-horizontal));
+	column-gap: calc(2 * var(--global--spacing-horizontal));
 }
 
 .single .site-main > article > .entry-footer > span {
@@ -208,13 +200,18 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	@extend %responsive-aligndefault-width;
 	text-align: center;
 
+	.entry-header &,
 	.singular & {
-		@extend %responsive-alignfull-width-mobile;
-		@extend %responsive-alignfull-width;
+		@extend %responsive-alignwide-width-nested;
 	}
 
-	.post-thumbnail-inner {
+	.wp-post-image {
 		display: block;
+		width: auto;
+		min-width: var(--responsive--aligndefault-width);
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
@@ -222,10 +219,8 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
  * Author
  */
 
-/* Author description */
-
 .author-bio {
-
+	position: relative;
 	font-size: var(--global--font-size-xs);
 	max-width: var(--responsive--aligndefault-width);
 
@@ -233,16 +228,34 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 		margin-top: calc(2 * var(--global--spacing-vertical));
 	}
 
-	.author-title {
-		font-family: var(--entry-author-bio--font-family);
-		font-size: var(--entry-author-bio--font-size);
+	// Avatars are optional and can be turned off.
+	&.show-avatars {
+
+		.avatar {
+			display: inline-block;
+			vertical-align: top;
+			border-radius: 50%;
+		}
+
+		.author-bio-content {
+			display: inline-block;
+			padding-left: var(--global--spacing-horizontal);
+			max-width: calc(var(--responsive--aligndefault-width) - 90px);
+		}
 	}
 
-	.author-description {
-		font-size: var(--global--font-size-xs);
-	}
+	.author-bio-content {
 
-	.avatar {
-		border-radius: 50%;
+		.author-title {
+			font-family: var(--entry-author-bio--font-family);
+			font-size: var(--entry-author-bio--font-size);
+			display: inline;
+		}
+
+		.author-description {
+			font-size: var(--global--font-size-xs);
+			margin-top: calc(0.5 * var(--global--spacing-vertical));
+			margin-bottom: calc(0.5 * var(--global--spacing-vertical));
+		}
 	}
 }

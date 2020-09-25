@@ -29,7 +29,7 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Twenty Twenty One, use a find and replace
+		 * If you're building a theme based on Twenty Twenty-One, use a find and replace
 		 * to change 'twentytwentyone' to the name of your theme in all the template files.
 		 */
 		load_theme_textdomain( 'twentytwentyone', get_template_directory() . '/languages' );
@@ -84,10 +84,11 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 240, // TODO: Is this the correct logo size?
-				'width'       => 240,
-				'flex-width'  => false,
-				'flex-height' => false,
+				'height'               => 240,
+				'width'                => 240,
+				'flex-width'           => false,
+				'flex-height'          => false,
+				'unlink-homepage-logo' => true,
 			)
 		);
 
@@ -356,9 +357,6 @@ function twenty_twenty_one_skip_link_focus_fix() {
 add_action( 'wp_print_footer_scripts', 'twenty_twenty_one_skip_link_focus_fix' );
 
 
-// Custom CSS.
-require get_template_directory() . '/inc/custom-css.php';
-
 // Non-latin language handling.
 require get_template_directory() . '/classes/class-twenty-twenty-one-non-latin-languages.php';
 
@@ -421,7 +419,7 @@ require get_template_directory() . '/inc/block-styles.php';
 /**
  * Enqueue scripts for the customizer preview.
  *
- * @since Twenty Twenty One 1.0
+ * @since Twenty Twenty-One 1.0
  *
  * @return void
  */

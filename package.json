@@ -14,6 +14,7 @@
 	"homepage": "https://github.com/wordpress/twentytwentyone",
 	"devDependencies": {
 		"@wordpress/browserslist-config": "^2.2.2",
+		"@wordpress/env": "^2.0.1",
 		"autoprefixer": "^9.5.1",
 		"chokidar-cli": "^2.1.0",
 		"minimist": "^1.2.2",
@@ -25,7 +26,10 @@
 		"postcss-custom-media": "^7.0.8",
 		"postcss-focus-within": "^3.0.0",
 		"postcss-nested": "^4.2.1",
-		"rtlcss": "^2.4.0"
+		"rtlcss": "^2.4.0",
+		"stylelint": "^13.7.1",
+		"stylelint-config-recommended-scss": "^4.2.0",
+		"stylelint-config-wordpress": "^17.0.0"
 	},
 	"rtlcssConfig": {
 		"options": {
@@ -52,6 +56,9 @@
 		"build:ie": "postcss style.css -o assets/css/ie.css",
 		"build:ie-editor": "postcss assets/css/style-editor.css -o assets/css/ie-editor.css",
 		"build": "run-s \"build:*\"",
-		"watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial"
+		"watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial",
+		"lint:scss": "stylelint assets/sass/*.scss",
+		"lint:css": "stylelint **/*.css",
+		"wp-env": "wp-env"
 	}
 }

@@ -33,10 +33,10 @@
 					<?php endif;
 				endif;
 				?>
-			</div>
+			</div><!-- .site-name -->
 			<div class="copyright">
 				<?php
-				/* translators: 1: Copyright date format, see https://www.php.net/date, 2: Site name */
+				/* translators: 1: Copyright date format, see https://www.php.net/manual/datetime.format.php, 2: Site name */
 				printf(
 					/* Translators: %1$s: Copyright date. %2$s: Site name. */
 					esc_html__( '&copy; %1$s %2$s', 'twentytwentyone' ),
@@ -54,7 +54,7 @@
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentytwentyone' ) ); ?>"  class="imprint">
 				<?php /* translators: %s: WordPress. */ printf( esc_html__( 'Proudly powered by %s.', 'twentytwentyone' ), 'WordPress' ); ?>
 				</a>
-			</div>
+			</div><!-- .copyright -->
 
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

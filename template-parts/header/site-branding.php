@@ -16,7 +16,7 @@
 	}
 	$blog_info = get_bloginfo( 'name' );
 	if ( ! empty( $blog_info ) ) {
-		if ( is_front_page() && is_home() ) {
+		if ( is_front_page() || ( is_front_page() && is_home() ) ) {
 			?>
 			<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 			<?php
@@ -29,7 +29,7 @@
 
 	$description = get_bloginfo( 'description', 'display' );
 	if ( $description || is_customize_preview() ) {
-		echo '<p class="site-description">' , esc_html( $description ) , '</p>';
+		printf( '<p class="site-description">%s</p>', $description ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 	?>
 </div><!-- .site-branding -->

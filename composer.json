@@ -1,9 +1,37 @@
 {
-  "require-dev": {
-    "composer/installers": "~1.0",
-    "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2",
-    "wp-coding-standards/wpcs": "^2.3",
-    "wptrt/wpthemereview": "*",
-    "szepeviktor/phpstan-wordpress": "^0.6.0"
-  }
+    "name": "wordpress/twentytwentyone",
+    "type": "package",
+    "description": "Twenty Twenty-One is designed with flexibility at its core.",
+    "keywords": [
+        "WordPress",
+        "Themes"
+    ],
+    "homepage": "https://github.com/WordPress/twentytwentyone",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Contributors",
+            "homepage": "https://github.com/WordPress/twentytwentyone/graphs/contributors"
+        }
+    ],
+    "require": {
+        "php": ">=5.6"
+    },
+    "require-dev": {
+        "composer/installers": "~1.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+        "php-parallel-lint/php-parallel-lint": "^1.2",
+        "szepeviktor/phpstan-wordpress": "^0.6.0",
+        "wptrt/wpthemereview": "^0.2.1"
+    },
+    "scripts": {
+        "standards:check": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
+        "standards:fix": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf",
+        "lint": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor .",
+        "analyze": "@php ./vendor/bin/phpstan analyze"
+    },
+    "support": {
+        "issues": "https://github.com/WordPress/twentytwentyone/issues",
+        "source": "https://github.com/WordPress/twentytwentyone"
+    }
 }
