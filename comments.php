@@ -22,7 +22,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area default-max-width <?php echo get_option( 'show_avatars' ) ? esc_attr( 'show-avatars' ) : ''; ?>">
+<div id="comments" class="comments-area default-max-width <?php echo get_option( 'show_avatars' ) ? 'show-avatars' : ''; ?>">
 
 	<?php
 	// You can start editing here -- including this comment!
