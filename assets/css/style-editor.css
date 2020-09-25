@@ -797,6 +797,10 @@ h6,
 	padding-right: var(--global--spacing-vertical);
 }
 
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid li:last-child {
+	padding-bottom: var(--global--spacing-vertical);
+}
+
 @media screen and (min-width: 600px) {
 	.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid.columns-2 li {
 		width: calc((100% / 2));

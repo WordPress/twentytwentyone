@@ -1080,6 +1080,10 @@ h6 {
 	padding-right: 30px;
 }
 
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid li:last-child {
+	padding-bottom: 30px;
+}
+
 @media screen and (min-width: 600px) {
 	.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid.columns-2 li {
 		width: 50%;
