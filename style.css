@@ -145,6 +145,7 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--form--color-text: var(--global--color-dark-gray);
 	--form--color-ranged: var(--global--color-secondary);
 	--form--label-weight: normal;
+	--form--label-weight-strong: 500;
 	--form--border-color: var(--global--color-secondary);
 	--form--border-width: 3px;
 	--form--border-radius: 0;
@@ -1271,7 +1272,7 @@ textarea {
 label {
 	font-size: var(--form--font-size);
 	font-weight: var(--form--label-weight);
-	margin-bottom: 10px;
+	margin-bottom: calc(var(--global--spacing-vertical) / 3);
 }
 
 /**
@@ -2475,12 +2476,13 @@ p.has-text-color a {
 }
 
 .wp-block-search {
-	display: flex;
 	max-width: var(--responsive--aligndefault-width);
 }
 
 .wp-block-search .wp-block-search__label {
-	font-weight: normal;
+	font-size: var(--form--font-size);
+	font-weight: var(--form--label-weight-strong);
+	margin-bottom: calc(var(--global--spacing-vertical) / 3);
 }
 
 .wp-block-search .wp-block-search__input {
@@ -2496,6 +2498,10 @@ p.has-text-color a {
 .wp-block-search .wp-block-search__input:focus {
 	color: var(--form--color-text);
 	border-color: var(--form--border-color);
+}
+
+.wp-block-search__button {
+	box-shadow: none;
 }
 
 hr {
@@ -3515,7 +3521,7 @@ h2.page-title {
 	font-size: var(--global--font-size-sm);
 	margin-bottom: calc(.5 * var(--global--spacing-unit));
 	width: 100%;
-	font-weight: 500;
+	font-weight: var(--form--label-weight-strong);
 }
 
 .comment-form > p.comment-form-cookies-consent {
@@ -4059,6 +4065,7 @@ h2.page-title {
 
 .search-form > label {
 	width: 100%;
+	font-weight: var(--form--label-weight-strong);
 }
 
 .search-form .search-field {

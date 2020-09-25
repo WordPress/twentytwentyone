@@ -58,7 +58,7 @@ textarea {
 label {
 	font-size: var(--form--font-size);
 	font-weight: var(--form--label-weight);
-	margin-bottom: 10px;
+	margin-bottom: calc(var(--global--spacing-vertical) / 3);
 }
 
 /**

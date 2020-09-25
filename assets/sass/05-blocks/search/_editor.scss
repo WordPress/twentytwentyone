@@ -1,9 +1,10 @@
 .wp-block-search {
-	display: flex;
 	max-width: var(--responsive--aligndefault-width);
 
 	.wp-block-search__label {
-		font-weight: normal;
+		font-size: var(--form--font-size);
+		font-weight: var(--form--label-weight-strong);
+		margin-bottom: calc(var(--global--spacing-vertical) / 3);
 	}
 
 	.wp-block-search__input {
@@ -23,5 +24,6 @@
 
 	.wp-block-search__button {
 		@extend %button-style;
+		box-shadow: none;
 	}
 }

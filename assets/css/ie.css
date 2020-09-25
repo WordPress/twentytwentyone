@@ -3509,7 +3509,6 @@ p.has-text-color a {
 }
 
 .wp-block-search {
-	display: flex;
 	max-width: calc(100vw - 30px);
 }
 
@@ -3526,7 +3525,9 @@ p.has-text-color a {
 }
 
 .wp-block-search .wp-block-search__label {
-	font-weight: normal;
+	font-size: 1.125rem;
+	font-weight: 500;
+	margin-bottom: 10px;
 }
 
 .wp-block-search .wp-block-search__input {
@@ -3542,6 +3543,10 @@ p.has-text-color a {
 .wp-block-search .wp-block-search__input:focus {
 	color: #28303d;
 	border-color: #39414d;
+}
+
+.wp-block-search__button {
+	box-shadow: none;
 }
 
 hr {
@@ -5393,6 +5398,7 @@ h2.page-title {
 
 .search-form > label {
 	width: 100%;
+	font-weight: 500;
 }
 
 .search-form .search-field {
