@@ -95,7 +95,7 @@ Example:
 	word-wrap: break-word;
 }
 */
-.site button {
+.site button:not(.customize-partial-edit-shortcut-button) {
 	line-height: 1.5;
 	color: #d1e4dd;
 	cursor: pointer;
@@ -174,11 +174,11 @@ input[type="reset"] {
 	padding: 15px 30px;
 }
 
-.site button:before,
+.site button:not(.customize-partial-edit-shortcut-button):before,
 .site .button:before,
 input[type="submit"]:before,
 input[type="reset"]:before,
-.wp-block-button__link:before, .wp-block-file .wp-block-file__button:before, .site button:after,
+.wp-block-button__link:before, .wp-block-file .wp-block-file__button:before, .site button:not(.customize-partial-edit-shortcut-button):after,
 .site .button:after,
 input[type="submit"]:after,
 input[type="reset"]:after,
@@ -189,7 +189,7 @@ input[type="reset"]:after,
 	width: 0;
 }
 
-.site button:before {
+.site button:not(.customize-partial-edit-shortcut-button):before {
 	margin-bottom: -calc(1em + 0);
 }
 
@@ -213,7 +213,7 @@ input[type="reset"]:before {
 	margin-bottom: -calc(1em + 0);
 }
 
-.site button:after {
+.site button:not(.customize-partial-edit-shortcut-button):after {
 	margin-top: -calc(1em + 0);
 }
 
@@ -237,7 +237,7 @@ input[type="reset"]:after {
 	margin-top: -calc(1em + 0);
 }
 
-.site button:active {
+.site button:active:not(.customize-partial-edit-shortcut-button) {
 	color: #39414d;
 	background-color: #d1e4dd;
 }
@@ -267,7 +267,7 @@ input:active[type="reset"] {
 	background-color: #d1e4dd;
 }
 
-.site button:disabled {
+.site button:disabled:not(.customize-partial-edit-shortcut-button) {
 	background-color: rgba(255, 255, 255, 0.5);
 	border-color: rgba(255, 255, 255, 0.5);
 	color: #39414d;
@@ -303,7 +303,7 @@ input:disabled[type="reset"] {
 	color: #39414d;
 }
 
-.site button:hover {
+.site button:hover:not(.customize-partial-edit-shortcut-button) {
 	color: #39414d;
 	background: transparent;
 }
@@ -333,11 +333,11 @@ input:hover[type="reset"] {
 	background: transparent;
 }
 
-.site button:focus,
+.site button:focus:not(.customize-partial-edit-shortcut-button),
 .site .button:focus,
 input:focus[type="submit"],
 input:focus[type="reset"],
-.wp-block-button__link:focus, .wp-block-file .wp-block-file__button:focus, .site button.has-focus,
+.wp-block-button__link:focus, .wp-block-file .wp-block-file__button:focus, .site button.has-focus:not(.customize-partial-edit-shortcut-button),
 .site .has-focus.button,
 input.has-focus[type="submit"],
 input.has-focus[type="reset"],
@@ -1616,15 +1616,6 @@ input[type="tel"] {
 	padding: 10px;
 }
 
-input[type="range"] {
-	border: 3px solid #39414d;
-	border-radius: 0;
-	color: #28303d;
-	background: rgba(255, 255, 255, 0.5);
-	line-height: 1.7;
-	padding: 10px;
-}
-
 input[type="date"] {
 	border: 3px solid #39414d;
 	border-radius: 0;
@@ -1739,12 +1730,6 @@ input[type="tel"]:focus {
 	background: #fff;
 }
 
-input[type="range"]:focus {
-	color: #28303d;
-	outline: 1px solid #39414d;
-	background: #fff;
-}
-
 input[type="date"]:focus {
 	color: #28303d;
 	outline: 1px solid #39414d;
@@ -1800,7 +1785,6 @@ input[type="password"]:disabled,
 input[type="search"]:disabled,
 input[type="number"]:disabled,
 input[type="tel"]:disabled,
-input[type="range"]:disabled,
 input[type="date"]:disabled,
 input[type="month"]:disabled,
 input[type="week"]:disabled,
@@ -1816,18 +1800,28 @@ input[type="search"]:focus {
 	outline-offset: 0;
 }
 
+input[type="date"] {
+	background: #fff;
+}
+
+input[type="color"] {
+	background: #fff;
+}
+
 select {
 	border: 3px solid #39414d;
 	padding: 5px;
-	background: rgba(255, 255, 255, 0.5);
-}
-
-select:focus {
-	background: #fff;
+	color: #28303d;
 }
 
 textarea {
 	width: 100%;
+}
+
+label {
+	font-size: 1.125rem;
+	font-weight: normal;
+	margin-bottom: 10px;
 }
 
 /**
@@ -1918,16 +1912,9 @@ License: MIT.
 	}
 }
 
-label {
-	font-size: 1.125rem;
-	font-weight: 500;
-	margin-bottom: 10px;
-}
-
 input[type="checkbox"] + label {
 	display: inline-block;
 	padding-left: 10px;
-	font-weight: normal;
 	font-size: 1rem;
 	vertical-align: top;
 }
@@ -1935,9 +1922,74 @@ input[type="checkbox"] + label {
 input[type="radio"] + label {
 	display: inline-block;
 	padding-left: 10px;
-	font-weight: normal;
 	font-size: 1rem;
 	vertical-align: top;
+}
+
+/**
+ * https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+*/
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+	input[type="range"] {
+		-webkit-appearance: none;
+		/* Hides the slider so that custom slider can be made */
+		width: 100%;
+		/* Specific width is required for Firefox. */
+		height: 6px;
+		background: #39414d;
+		border-radius: 6px;
+		outline-offset: 10px;
+	}
+	input[type="range"]:disabled {
+		opacity: 0.7;
+	}
+	input[type="range"]::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		border: 3px solid #39414d;
+		height: 25px;
+		width: 25px;
+		border-radius: 50%;
+		background: #d1e4dd;
+		cursor: pointer;
+	}
+	input[type="range"]::-moz-range-thumb {
+		border: 3px solid #39414d;
+		height: 25px;
+		width: 25px;
+		border-radius: 50%;
+		background: #d1e4dd;
+		cursor: pointer;
+	}
+}
+
+input[type="range"]::-ms-track {
+	width: 100%;
+	height: 6px;
+	border-radius: 6px;
+	border-width: 19px 0;
+	border-color: #d1e4dd;
+	background: transparent;
+	color: transparent;
+	cursor: pointer;
+}
+
+input[type="range"]::-ms-fill-upper {
+	background: #39414d;
+	border-radius: 6px;
+}
+
+input[type="range"]::-ms-fill-lower {
+	background: #39414d;
+	border-radius: 6px;
+}
+
+input[type="range"]::-ms-thumb {
+	border: 3px solid #39414d;
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	background: #d1e4dd;
+	cursor: pointer;
 }
 
 img {
@@ -4789,14 +4841,14 @@ h2.page-title {
 
 .menu-button-container #primary-open-menu {
 	margin-left: auto;
-	padding: 18px 20px;
+	padding: 10px 25px;
 	margin-top: 5px;
 	margin-right: 5px;
 }
 
 .menu-button-container #primary-close-menu {
 	margin-left: auto;
-	padding: 18px 20px;
+	padding: 10px 25px;
 	margin-top: 5px;
 	margin-right: 5px;
 }

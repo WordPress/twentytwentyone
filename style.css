@@ -142,10 +142,10 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--form--font-family: var(--global--font-secondary);
 	--form--font-size: var(--global--font-size-sm);
 	--form--line-height: var(--global--line-height-body);
-	--form--color-text: var(--global--color-primary);
-	--form--label-weight: 500;
 	--form--color-text: var(--global--color-dark-gray);
-	--form--border-color: var(--global--color-gray);
+	--form--color-ranged: var(--global--color-secondary);
+	--form--label-weight: normal;
+	--form--border-color: var(--global--color-secondary);
 	--form--border-width: 3px;
 	--form--border-radius: 0;
 	--form--spacing-unit: calc(0.5 * var(--global--spacing-unit));
@@ -155,9 +155,9 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--cover--color-background: var(--global--color-black);
 	/* Buttons */
 	--button--color-text: var(--global--color-background);
-	--button--color-text-hover: var(--global--color-gray);
-	--button--color-text-active: var(--global--color-gray);
-	--button--color-background: var(--global--color-gray);
+	--button--color-text-hover: var(--global--color-secondary);
+	--button--color-text-active: var(--global--color-secondary);
+	--button--color-background: var(--global--color-secondary);
 	--button--color-background-hover: var(--global--color-background);
 	--button--color-background-active: var(--global--color-background);
 	--button--font-family: var(--global--font-primary);
@@ -278,7 +278,7 @@ Example:
 	word-wrap: break-word;
 }
 */
-.site button,
+.site button:not(.customize-partial-edit-shortcut-button),
 .site .button,
 input[type="submit"],
 input[type="reset"],
@@ -296,11 +296,11 @@ input[type="reset"],
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
 
-.site button:before,
+.site button:not(.customize-partial-edit-shortcut-button):before,
 .site .button:before,
 input[type="submit"]:before,
 input[type="reset"]:before,
-.wp-block-button__link:before, .wp-block-file .wp-block-file__button:before, .site button:after,
+.wp-block-button__link:before, .wp-block-file .wp-block-file__button:before, .site button:not(.customize-partial-edit-shortcut-button):after,
 .site .button:after,
 input[type="submit"]:after,
 input[type="reset"]:after,
@@ -311,7 +311,7 @@ input[type="reset"]:after,
 	width: 0;
 }
 
-.site button:before,
+.site button:not(.customize-partial-edit-shortcut-button):before,
 .site .button:before,
 input[type="submit"]:before,
 input[type="reset"]:before,
@@ -319,7 +319,7 @@ input[type="reset"]:before,
 	margin-bottom: -calc(.5em * var(--button--line-height) + -.38);
 }
 
-.site button:after,
+.site button:not(.customize-partial-edit-shortcut-button):after,
 .site .button:after,
 input[type="submit"]:after,
 input[type="reset"]:after,
@@ -327,7 +327,7 @@ input[type="reset"]:after,
 	margin-top: -calc(.5em * var(--button--line-height) + -.39);
 }
 
-.site button:active,
+.site button:active:not(.customize-partial-edit-shortcut-button),
 .site .button:active,
 input:active[type="submit"],
 input:active[type="reset"],
@@ -336,7 +336,7 @@ input:active[type="reset"],
 	background-color: var(--button--color-background-active);
 }
 
-.site button:disabled,
+.site button:disabled:not(.customize-partial-edit-shortcut-button),
 .site .button:disabled,
 input:disabled[type="submit"],
 input:disabled[type="reset"],
@@ -346,7 +346,7 @@ input:disabled[type="reset"],
 	color: var(--button--color-text-active);
 }
 
-.site button:hover,
+.site button:hover:not(.customize-partial-edit-shortcut-button),
 .site .button:hover,
 input:hover[type="submit"],
 input:hover[type="reset"],
@@ -355,11 +355,11 @@ input:hover[type="reset"],
 	background: transparent;
 }
 
-.site button:focus,
+.site button:focus:not(.customize-partial-edit-shortcut-button),
 .site .button:focus,
 input:focus[type="submit"],
 input:focus[type="reset"],
-.wp-block-button__link:focus, .wp-block-file .wp-block-file__button:focus, .site button.has-focus,
+.wp-block-button__link:focus, .wp-block-file .wp-block-file__button:focus, .site button.has-focus:not(.customize-partial-edit-shortcut-button),
 .site .has-focus.button,
 input.has-focus[type="submit"],
 input.has-focus[type="reset"],
@@ -1195,7 +1195,6 @@ input[type="password"],
 input[type="search"],
 input[type="number"],
 input[type="tel"],
-input[type="range"],
 input[type="date"],
 input[type="month"],
 input[type="week"],
@@ -1219,7 +1218,6 @@ input[type="password"]:focus,
 input[type="search"]:focus,
 input[type="number"]:focus,
 input[type="tel"]:focus,
-input[type="range"]:focus,
 input[type="date"]:focus,
 input[type="month"]:focus,
 input[type="week"]:focus,
@@ -1240,7 +1238,6 @@ input[type="password"]:disabled,
 input[type="search"]:disabled,
 input[type="number"]:disabled,
 input[type="tel"]:disabled,
-input[type="range"]:disabled,
 input[type="date"]:disabled,
 input[type="month"]:disabled,
 input[type="week"]:disabled,
@@ -1256,18 +1253,25 @@ input[type="search"]:focus {
 	outline-offset: 0;
 }
 
+input[type="date"],
+input[type="color"] {
+	background: var(--global--color-white);
+}
+
 select {
 	border: var(--form--border-width) solid var(--form--border-color);
 	padding: calc(0.5 * var(--form--spacing-unit));
-	background: var(--global--color-white-50);
-}
-
-select:focus {
-	background: var(--global--color-white);
+	color: var(--form--color-text);
 }
 
 textarea {
 	width: 100%;
+}
+
+label {
+	font-size: var(--form--font-size);
+	font-weight: var(--form--label-weight);
+	margin-bottom: 10px;
 }
 
 /**
@@ -1349,19 +1353,78 @@ License: MIT.
 	}
 }
 
-label {
-	font-size: var(--form--font-size);
-	font-weight: var(--form--label-weight);
-	margin-bottom: 10px;
-}
-
 input[type="checkbox"] + label,
 input[type="radio"] + label {
 	display: inline-block;
 	padding-left: 10px;
-	font-weight: normal;
 	font-size: var(--global--font-size-xs);
 	vertical-align: top;
+}
+
+/**
+ * https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+*/
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+	input[type="range"] {
+		-webkit-appearance: none;
+		/* Hides the slider so that custom slider can be made */
+		width: 100%;
+		/* Specific width is required for Firefox. */
+		height: 6px;
+		background: var(--form--color-ranged);
+		border-radius: 6px;
+		outline-offset: 10px;
+	}
+	input[type="range"]:disabled {
+		opacity: 0.7;
+	}
+	input[type="range"]::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		border: 3px solid var(--form--color-ranged);
+		height: 25px;
+		width: 25px;
+		border-radius: 50%;
+		background: var(--global--color-background);
+		cursor: pointer;
+	}
+	input[type="range"]::-moz-range-thumb {
+		border: 3px solid var(--form--color-ranged);
+		height: 25px;
+		width: 25px;
+		border-radius: 50%;
+		background: var(--global--color-background);
+		cursor: pointer;
+	}
+}
+
+input[type="range"]::-ms-track {
+	width: 100%;
+	height: 6px;
+	border-radius: 6px;
+	border-width: 19px 0;
+	border-color: var(--global--color-background);
+	background: transparent;
+	color: transparent;
+	cursor: pointer;
+}
+
+input[type="range"]::-ms-fill-upper {
+	background: var(--form--color-ranged);
+	border-radius: 6px;
+}
+
+input[type="range"]::-ms-fill-lower {
+	background: var(--form--color-ranged);
+	border-radius: 6px;
+}
+
+input[type="range"]::-ms-thumb {
+	border: 3px solid var(--form--color-ranged);
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	background: var(--global--color-background);
+	cursor: pointer;
 }
 
 img {

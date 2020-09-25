@@ -87,10 +87,10 @@
 	--form--font-family: var(--global--font-secondary);
 	--form--font-size: var(--global--font-size-sm);
 	--form--line-height: var(--global--line-height-body);
-	--form--color-text: var(--global--color-primary);
-	--form--label-weight: 500;
 	--form--color-text: var(--global--color-dark-gray);
-	--form--border-color: var(--global--color-gray);
+	--form--color-ranged: var(--global--color-secondary);
+	--form--label-weight: normal;
+	--form--border-color: var(--global--color-secondary);
 	--form--border-width: 3px;
 	--form--border-radius: 0;
 	--form--spacing-unit: calc(0.5 * var(--global--spacing-unit));
@@ -100,9 +100,9 @@
 	--cover--color-background: var(--global--color-black);
 	/* Buttons */
 	--button--color-text: var(--global--color-background);
-	--button--color-text-hover: var(--global--color-gray);
-	--button--color-text-active: var(--global--color-gray);
-	--button--color-background: var(--global--color-gray);
+	--button--color-text-hover: var(--global--color-secondary);
+	--button--color-text-active: var(--global--color-secondary);
+	--button--color-background: var(--global--color-secondary);
 	--button--color-background-hover: var(--global--color-background);
 	--button--color-background-active: var(--global--color-background);
 	--button--font-family: var(--global--font-primary);
