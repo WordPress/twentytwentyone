@@ -17,7 +17,7 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
 
 	register_block_pattern_category(
 		'twentytwentyone',
-		array( 'label' => __( 'Twenty Twenty One', 'twentytwentyone' ) )
+		array( 'label' => __( 'Twenty Twenty-One', 'twentytwentyone' ) )
 	);
 }
 
