@@ -74,12 +74,6 @@ Example:
 	background-color: #d1e4dd;
 }
 
-.wp-block-search .wp-block-search__button:disabled {
-	background-color: rgba(255, 255, 255, 0.5);
-	border-color: rgba(255, 255, 255, 0.5);
-	color: #39414d;
-}
-
 .wp-block-search .wp-block-search__button:hover {
 	color: #39414d;
 	background: transparent;
@@ -88,6 +82,12 @@ Example:
 .wp-block-search .wp-block-search__button:focus, .wp-block-search .has-focus.wp-block-search__button {
 	outline-offset: -4px;
 	outline: 2px dotted currentColor;
+}
+
+.wp-block-search .wp-block-search__button:disabled {
+	background-color: rgba(255, 255, 255, 0.5);
+	border-color: rgba(255, 255, 255, 0.5);
+	color: #39414d;
 }
 
 /**
@@ -362,6 +362,10 @@ figcaption {
 .wp-block-button__link.is-style-squared,
 .is-style-squared .wp-block-button__link {
 	border-radius: 0;
+}
+
+.is-selected.is-style-outline .wp-block-button__link:hover {
+	color: #39414d;
 }
 
 div[data-type="core/button"] {

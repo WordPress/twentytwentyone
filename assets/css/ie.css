@@ -267,42 +267,6 @@ input:active[type="reset"] {
 	background-color: #d1e4dd;
 }
 
-.site button:disabled:not(.customize-partial-edit-shortcut-button) {
-	background-color: rgba(255, 255, 255, 0.5);
-	border-color: rgba(255, 255, 255, 0.5);
-	color: #39414d;
-}
-
-.site .button:disabled {
-	background-color: rgba(255, 255, 255, 0.5);
-	border-color: rgba(255, 255, 255, 0.5);
-	color: #39414d;
-}
-
-input:disabled[type="submit"] {
-	background-color: rgba(255, 255, 255, 0.5);
-	border-color: rgba(255, 255, 255, 0.5);
-	color: #39414d;
-}
-
-input:disabled[type="reset"] {
-	background-color: rgba(255, 255, 255, 0.5);
-	border-color: rgba(255, 255, 255, 0.5);
-	color: #39414d;
-}
-
-.wp-block-button__link:disabled {
-	background-color: rgba(255, 255, 255, 0.5);
-	border-color: rgba(255, 255, 255, 0.5);
-	color: #39414d;
-}
-
-.wp-block-file .wp-block-file__button:disabled {
-	background-color: rgba(255, 255, 255, 0.5);
-	border-color: rgba(255, 255, 255, 0.5);
-	color: #39414d;
-}
-
 .site button:hover:not(.customize-partial-edit-shortcut-button) {
 	color: #39414d;
 	background: transparent;
@@ -344,6 +308,42 @@ input.has-focus[type="reset"],
 .has-focus.wp-block-button__link, .wp-block-file .has-focus.wp-block-file__button {
 	outline-offset: -4px;
 	outline: 2px dotted currentColor;
+}
+
+.site button:disabled:not(.customize-partial-edit-shortcut-button) {
+	background-color: rgba(255, 255, 255, 0.5);
+	border-color: rgba(255, 255, 255, 0.5);
+	color: #39414d;
+}
+
+.site .button:disabled {
+	background-color: rgba(255, 255, 255, 0.5);
+	border-color: rgba(255, 255, 255, 0.5);
+	color: #39414d;
+}
+
+input:disabled[type="submit"] {
+	background-color: rgba(255, 255, 255, 0.5);
+	border-color: rgba(255, 255, 255, 0.5);
+	color: #39414d;
+}
+
+input:disabled[type="reset"] {
+	background-color: rgba(255, 255, 255, 0.5);
+	border-color: rgba(255, 255, 255, 0.5);
+	color: #39414d;
+}
+
+.wp-block-button__link:disabled {
+	background-color: rgba(255, 255, 255, 0.5);
+	border-color: rgba(255, 255, 255, 0.5);
+	color: #39414d;
+}
+
+.wp-block-file .wp-block-file__button:disabled {
+	background-color: rgba(255, 255, 255, 0.5);
+	border-color: rgba(255, 255, 255, 0.5);
+	color: #39414d;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */

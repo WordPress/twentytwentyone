@@ -20,12 +20,6 @@
 		background-color: var(--button--color-background-active);
 	}
 
-	&:disabled {
-		background-color: var(--global--color-white-50);
-		border-color: var(--global--color-white-50);
-		color: var(--button--color-text-active);
-	}
-
 	&:hover {
 		color: var(--button--color-text-hover);
 		background: transparent;
@@ -36,5 +30,12 @@
 		outline-offset: -4px;
 		outline: 2px dotted currentColor;
 	}
+
+	&:disabled {
+		background-color: var(--global--color-white-50);
+		border-color: var(--global--color-white-50);
+		color: var(--button--color-text-active);
+	}
+
 }
 

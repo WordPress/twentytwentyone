@@ -57,6 +57,10 @@
 	}
 }
 
+.is-selected.is-style-outline .wp-block-button__link:hover {
+	color: var(--button--color-background);
+}
+
 div[data-type="core/button"] {
 	display: block;
 }

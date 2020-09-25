@@ -258,12 +258,6 @@ Example:
 	background-color: var(--button--color-background-active);
 }
 
-.wp-block-search .wp-block-search__button:disabled {
-	background-color: var(--global--color-white-50);
-	border-color: var(--global--color-white-50);
-	color: var(--button--color-text-active);
-}
-
 .wp-block-search .wp-block-search__button:hover {
 	color: var(--button--color-text-hover);
 	background: transparent;
@@ -272,6 +266,12 @@ Example:
 .wp-block-search .wp-block-search__button:focus, .wp-block-search .has-focus.wp-block-search__button {
 	outline-offset: -4px;
 	outline: 2px dotted currentColor;
+}
+
+.wp-block-search .wp-block-search__button:disabled {
+	background-color: var(--global--color-white-50);
+	border-color: var(--global--color-white-50);
+	color: var(--button--color-text-active);
 }
 
 /**
@@ -486,6 +486,10 @@ figcaption,
 .wp-block-button__link.is-style-squared,
 .is-style-squared .wp-block-button__link {
 	border-radius: 0;
+}
+
+.is-selected.is-style-outline .wp-block-button__link:hover {
+	color: var(--button--color-background);
 }
 
 div[data-type="core/button"] {
