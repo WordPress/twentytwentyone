@@ -31,6 +31,14 @@ if ( function_exists( 'register_block_style' ) ) {
 				'label' => __( 'Dividers', 'twentytwentyone' ),
 			)
 		);
+
+		register_block_style(
+			'core/latest-posts',
+			array(
+				'name'  => 'twentytwentyone-latest-posts-borders',
+				'label' => __( 'Borders', 'twentytwentyone' ),
+			)
+		);
 	}
 	add_action( 'init', 'twenty_twenty_one_register_block_styles' );
 }

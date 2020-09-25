@@ -2739,7 +2739,7 @@ img {
 .wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid li {
 	margin: 0;
 	padding-top: 30px;
-	padding-right: 30px;
+	padding-right: 25px;
 }
 
 .wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid li:last-child {
@@ -2762,6 +2762,20 @@ img {
 	.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid.columns-6 li {
 		width: 17%;
 	}
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders li {
+	border: 3px solid #000;
+	padding: 30px 25px;
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders li:last-child {
+	padding-bottom: 30px;
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders:not(.is-grid) li {
+	margin-top: 25px;
+	margin-bottom: 25px;
 }
 
 .gallery-item {

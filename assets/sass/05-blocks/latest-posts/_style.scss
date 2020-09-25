@@ -129,7 +129,7 @@
 			li {
 				margin: 0;
 				padding-top: var(--global--spacing-vertical);
-				padding-right: var(--global--spacing-vertical);
+				padding-right: var(--global--spacing-horizontal);
 
 				&:last-child {
 					padding-bottom: var(--global--spacing-vertical);
@@ -145,6 +145,23 @@
 					}
 				}
 			}
+		}
+	}
+
+	&.is-style-twentytwentyone-latest-posts-borders {
+
+		li {
+			border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+			padding: var(--global--spacing-vertical) var(--global--spacing-horizontal);
+
+			&:last-child {
+				padding-bottom: var(--global--spacing-vertical);
+			}
+		}
+
+		&:not(.is-grid) li {
+			margin-top: var(--global--spacing-horizontal);
+			margin-bottom: var(--global--spacing-horizontal);
 		}
 	}
 }
