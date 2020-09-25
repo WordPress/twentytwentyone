@@ -523,6 +523,11 @@ div[data-type="core/button"] {
 
 .wp-block-group.is-style-twentytwentyone-border {
 	border: 3px solid #000;
+	padding: 30px;
+}
+
+.wp-block-group .wp-block-group__inner-container *:last-child {
+	margin-bottom: 0;
 }
 
 .wp-block-group .wp-block-group.has-background > .block-editor-block-list__layout > [data-align="full"] {

@@ -7,6 +7,11 @@
 	// Block Styles
 	&.is-style-twentytwentyone-border {
 		border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+		padding: var(--global--spacing-vertical);
+	}
+
+	.wp-block-group__inner-container *:last-child {
+		margin-bottom: 0;
 	}
 }
 

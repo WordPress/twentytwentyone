@@ -1555,15 +1555,9 @@ i {
 	max-width: 50%;
 }
 
-.wp-block-group {
-	/* Block Styles */
-}
-
 .wp-block-group .wp-block-group__inner-container {
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: var(--global--spacing-horizontal);
-	padding-right: var(--global--spacing-horizontal);
 }
 
 .wp-block-group .wp-block-group__inner-container > * {
@@ -1598,6 +1592,7 @@ i {
 
 .wp-block-group.is-style-twentytwentyone-border {
 	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+	padding: var(--global--spacing-vertical);
 }
 
 h1,
