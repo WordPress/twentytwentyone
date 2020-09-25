@@ -59,9 +59,11 @@ https://github.com/WordPress/gutenberg/tree/master/packages/icons
 
 This theme bundles the following third-party resources:
 
-input[type='checkbox'] and input[type='radio'],
+input[type='checkbox'], input[type='radio'], input[type='ranged'],
 https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
-https://codepen.io/aaroniker/pen/ZEYoxEY by Aaron Iker.
+https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+https://codepen.io/aaroniker/pen/ZEYoxEY Copyright (c) 2020 Aaron Iker
+https://codepen.io/chriscoyier/pen/FtnAa Copyright (c) 2020 Chris Coyier
 License: MIT.
 
 Images
