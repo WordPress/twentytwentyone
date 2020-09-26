@@ -14,3 +14,8 @@
 | @fabiankaegy | @fabiankaegy |
 | @mukeshpanchal27 | @mukesh27 |
 | @dingo-d | @dingo_d |
+| @kellylawrence | @kellylawrence |
+| @acosmin | @acosmin |
+| @whyisjake | @whyisjake |
+| @metodiew | @metodiew |
+
