@@ -2903,6 +2903,10 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	text-align: left;
 }
 
+.single .site-main > article > .entry-footer .tags-links {
+	grid-column-start: 2;
+}
+
 /**
  * Post Thumbnails
  */
