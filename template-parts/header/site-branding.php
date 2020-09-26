@@ -7,6 +7,11 @@
  * @since 1.0.0
  */
 
+// If there is neither a title, tagline or logo, we don't want to print the empty site branding tag.
+if ( get_theme_mod( 'display_title_and_tagline', true ) === false && ! has_custom_logo() ) {
+	return;
+}
+
 ?>
 <div class="site-branding">
 
@@ -15,8 +20,8 @@
 		<?php
 	}
 	$blog_info = get_bloginfo( 'name' );
-	if ( ! empty( $blog_info ) ) {
-		if ( is_front_page() || ( is_front_page() && is_home() ) ) {
+	if ( ! empty( $blog_info ) && get_theme_mod( 'display_title_and_tagline', true ) === true ) {
+		if ( is_front_page() ) {
 			?>
 			<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 			<?php
@@ -28,8 +33,8 @@
 	}
 
 	$description = get_bloginfo( 'description', 'display' );
-	if ( $description || is_customize_preview() ) {
-		echo '<p class="site-description">' , esc_html( $description ) , '</p>';
+	if ( $description && get_theme_mod( 'display_title_and_tagline', true ) === true ) {
+		printf( '<p class="site-description">%s</p>', $description ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 	?>
 </div><!-- .site-branding -->
