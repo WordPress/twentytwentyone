@@ -66,6 +66,10 @@ class Twenty_Twenty_One_Custom_Colors {
 			$theme_css .= '--global--color-secondary: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
 		}
 
+		if ( 40 >= $this->get_relative_luminance_from_hex( get_theme_mod( 'background_color', 'D1E4DD' ) ) ) {
+			$theme_css .= '--global--color-border: #ffffff80';
+		}
+
 		$theme_css .= '}';
 
 		return $theme_css;
