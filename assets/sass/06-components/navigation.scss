@@ -234,7 +234,7 @@
 
 			@include media(mobile) {
 				margin: 0;
-				background: var(--global--color-background);
+				background: transparent;
 				left: -15px;
 				top: calc(100% - (0.5 * var(--primary-nav--padding)));
 				min-width: max-content;

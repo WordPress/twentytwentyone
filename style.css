@@ -3533,7 +3533,7 @@ h2.page-title {
 @media only screen and (min-width: 482px) {
 	.primary-navigation > div > .menu-wrapper > li > .sub-menu {
 		margin: 0;
-		background: var(--global--color-background);
+		background: transparent;
 		left: -15px;
 		top: calc(100% - (0.5 * var(--primary-nav--padding)));
 		min-width: max-content;
