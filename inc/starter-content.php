@@ -1,6 +1,6 @@
 <?php
 /**
- * Twenty Twenty One Starter Content
+ * Twenty Twenty-One Starter Content
  *
  * @link https://make.wordpress.org/core/2016/11/30/starter-content-for-themes-in-4-7/
  *

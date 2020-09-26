@@ -31,8 +31,20 @@
 	<file>.</file>
 
 	<!-- Include the WordPress ruleset. -->
-	<rule ref="WordPress" />
+	<rule ref="WordPress">
+		<exclude name="WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_style" />
+		<exclude name="WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_pattern" />
+		<exclude name="WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_pattern_category" />
+	</rule>
 	<rule ref="WPThemeReview" />
+
+	<rule ref="WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound">
+		<exclude-pattern>inc/customizer.php</exclude-pattern>
+	</rule>
+
+	<rule ref="WPThemeReview.Templates.ReservedFileNamePrefix.ReservedTemplatePrefixFound">
+		<exclude-pattern>template-parts/post/author-bio.php</exclude-pattern>
+	</rule>
 
 	<!-- Verify that the text_domain is set to the desired text-domain.
 		 Multiple valid text domains can be provided as a comma-delimited list. -->

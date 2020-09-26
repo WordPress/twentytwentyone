@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: Twenty Twenty One
+Theme Name: Twenty Twenty-One
 Theme URI: https://wordpress.org/themes/twentytwentyone/
 Author: the WordPress team
 Author URI: https://wordpress.org/
@@ -2568,6 +2568,12 @@ img {
 	vertical-align: middle;
 }
 
+/* Block Styles */
+.wp-block-image.is-style-twentytwentyone-image-frame img {
+	padding: 20px;
+	border: 3px solid #000;
+}
+
 .wp-block-latest-comments {
 	margin-left: 0;
 }
@@ -3229,7 +3235,6 @@ p.has-text-color a {
 }
 
 .wp-block-search {
-	display: flex;
 	max-width: calc(100vw - 30px);
 }
 

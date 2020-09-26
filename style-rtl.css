@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: Twenty Twenty One
+Theme Name: Twenty Twenty-One
 Theme URI: https://wordpress.org/themes/twentytwentyone/
 Author: the WordPress team
 Author URI: https://wordpress.org/
@@ -1704,6 +1704,12 @@ img {
 	vertical-align: middle;
 }
 
+/* Block Styles */
+.wp-block-image.is-style-twentytwentyone-image-frame img {
+	padding: var(--global--spacing-unit);
+	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+}
+
 .wp-block-latest-comments {
 	margin-right: 0;
 }
@@ -2246,7 +2252,6 @@ p.has-text-color a {
 }
 
 .wp-block-search {
-	display: flex;
 	max-width: var(--responsive--aligndefault-width);
 }
 

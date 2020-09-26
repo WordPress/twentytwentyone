@@ -671,6 +671,12 @@ h6,
 	margin: 0 auto;
 }
 
+/* Block Styles */
+.wp-block-image.is-style-twentytwentyone-image-frame img {
+	padding: var(--global--spacing-unit);
+	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+}
+
 .wp-block-latest-comments {
 	margin-left: 0;
 }
@@ -1005,7 +1011,6 @@ p.has-background {
 }
 
 .wp-block-search {
-	display: flex;
 	max-width: var(--responsive--aligndefault-width);
 }
 
