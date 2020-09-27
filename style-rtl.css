@@ -1858,6 +1858,7 @@ img {
 
 .gallery-item a {
 	display: block;
+	border-bottom: transparent;
 }
 
 .gallery-columns-2 .gallery-item {
