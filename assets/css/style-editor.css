@@ -826,6 +826,7 @@ h6,
 
 .wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders li:last-child {
 	padding-bottom: var(--global--spacing-vertical);
+	margin-bottom: var(--global--spacing-vertical);
 }
 
 .wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders:not(.is-grid) li {

@@ -1109,6 +1109,7 @@ h6 {
 
 .wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders li:last-child {
 	padding-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 .wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders:not(.is-grid) li {
