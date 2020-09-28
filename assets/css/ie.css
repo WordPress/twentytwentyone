@@ -1381,22 +1381,12 @@ a:active {
 	color: #28303d;
 }
 
-.has-link-color a {
-	border-bottom: 1px solid #28303d;
-}
-
 .has-background:not(.has-background-background-color) .has-link-color a {
 	color: #28303d;
 }
 
 .has-background:not(.has-background-background-color).has-link-color a {
 	color: #28303d;
-}
-
-.site *:focus {
-	outline-width: 1px;
-	outline-style: dotted;
-	outline-color: #39414d;
 }
 
 button,
@@ -1817,23 +1807,17 @@ i {
  * maybe Chrome will support it soon.
  */
 a {
-	color: #000;
+	color: #28303d;
 	text-underline-offset: 3px;
-	transition: all .15s ease-in-out;
 }
 
 a:hover {
 	text-decoration-style: dotted;
 }
 
-/*
- * The reason for the !important style here is the global focus styles created
- * by the `.site *:focus {` rules in the 03-generic/reset.scss file.
- */
-a:focus {
-	outline: none !important;
-	border: 1px solid #000;
-	border-radius: 5px;
+.site a:focus {
+	outline: 2px solid #28303d;
+	text-decoration: none;
 }
 
 /* Category 05 is all about adjusting the default block styles to the given layout. I only added three blocks as examples. */

@@ -423,23 +423,17 @@ figcaption,
  * maybe Chrome will support it soon.
  */
 a {
-	color: var(--global--color-black);
+	color: var(--wp--style--color--link, var(--global--color-primary));
 	text-underline-offset: 3px;
-	transition: all .15s ease-in-out;
 }
 
 a:hover {
 	text-decoration-style: dotted;
 }
 
-/*
- * The reason for the !important style here is the global focus styles created
- * by the `.site *:focus {` rules in the 03-generic/reset.scss file.
- */
-a:focus {
-	outline: none !important;
-	border: 1px solid var(--global--color-black);
-	border-radius: 5px;
+.site a:focus {
+	outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
+	text-decoration: none;
 }
 
 .wp-block-button__link {
@@ -1295,29 +1289,16 @@ body {
 }
 
 .wp-block a {
-	border-bottom: 1px solid var(--global--color-secondary);
 	color: var(--wp--style--color--link, var(--global--color-primary));
-	text-decoration: none;
-}
-
-.wp-block a:hover, .wp-block a:focus {
-	border-bottom-color: transparent;
 }
 
 .wp-block a:hover {
-	color: var(--global--color-primary-hover);
+	text-decoration-style: dotted;
 }
 
 .wp-block a:focus {
-	color: var(--global--color-secondary);
-}
-
-.wp-block a:active {
-	color: var(--wp--style--color--link, var(--global--color-primary));
-}
-
-.has-link-color .wp-block a {
-	border-bottom: 1px solid var(--wp--style--color--link, --global--color-primary);
+	outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
+	text-decoration: none;
 }
 
 .has-background:not(.has-background-background-color) .has-link-color a,

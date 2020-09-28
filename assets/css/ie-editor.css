@@ -288,23 +288,17 @@ figcaption {
  * maybe Chrome will support it soon.
  */
 a {
-	color: #000;
+	color: #28303d;
 	text-underline-offset: 3px;
-	transition: all .15s ease-in-out;
 }
 
 a:hover {
 	text-decoration-style: dotted;
 }
 
-/*
- * The reason for the !important style here is the global focus styles created
- * by the `.site *:focus {` rules in the 03-generic/reset.scss file.
- */
-a:focus {
-	outline: none !important;
-	border: 1px solid #000;
-	border-radius: 5px;
+.site a:focus {
+	outline: 2px solid #28303d;
+	text-decoration: none;
 }
 
 .wp-block-button__link {
@@ -1755,29 +1749,16 @@ body {
 }
 
 .wp-block a {
-	border-bottom: 1px solid #39414d;
 	color: #28303d;
-	text-decoration: none;
-}
-
-.wp-block a:hover, .wp-block a:focus {
-	border-bottom-color: transparent;
 }
 
 .wp-block a:hover {
-	color: #28303d;
+	text-decoration-style: dotted;
 }
 
 .wp-block a:focus {
-	color: #39414d;
-}
-
-.wp-block a:active {
-	color: #28303d;
-}
-
-.has-link-color .wp-block a {
-	border-bottom: 1px solid --global--color-primary;
+	outline: 2px solid #28303d;
+	text-decoration: none;
 }
 
 .has-background:not(.has-background-background-color) .has-link-color a {
