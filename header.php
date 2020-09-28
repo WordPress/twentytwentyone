@@ -37,14 +37,14 @@
 								<?php echo twenty_twenty_one_get_icon_svg( 'menu' ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
 							</span>
 							<span class="hide-visually expanded-text"><?php esc_html_e( 'expanded', 'twentytwentyone' ); ?></span>
-						</button>
+						</button><!-- #primary-open-menu -->
 						<button id="primary-close-menu" class="button close" aria-haspopup="true" aria-controls="primary-navigation" aria-expanded="true">
 							<span class="dropdown-icon close"><?php esc_html_e( 'Close', 'twentytwentyone' ); ?>
 								<?php echo twenty_twenty_one_get_icon_svg( 'close' ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
 							</span>
 							<span class="hide-visually collapsed-text"><?php esc_html_e( 'collapsed', 'twentytwentyone' ); ?></span>
-						</button>
-					</div>
+						</button><!-- #primary-close-menu -->
+					</div><!-- .menu-button-container -->
 					<?php
 					wp_nav_menu(
 						array(

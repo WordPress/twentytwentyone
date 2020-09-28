@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: Twenty Twenty One
+Theme Name: Twenty Twenty-One
 Theme URI: https://wordpress.org/themes/twentytwentyone/
 Author: the WordPress team
 Author URI: https://wordpress.org/
@@ -14,8 +14,8 @@ License URI: LICENSE
 Text Domain: twentytwentyone
 Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
 
-Twenty Twenty One WordPress Theme, (C) 2020 WordPress.org
-Twenty Twenty One is distributed under the terms of the GNU GPL.
+Twenty Twenty-One WordPress Theme, (C) 2020 WordPress.org
+Twenty Twenty-One is distributed under the terms of the GNU GPL.
 */
 /* Example files how to organize CSS with the ITCSS methodology with WP specific adjustments */
 /* Basics see: https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/ */
@@ -70,8 +70,8 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--global--font-size-sm: 1.125rem;
 	--global--font-size-md: 1.25rem;
 	--global--font-size-lg: 1.5rem;
-	--global--font-size-xl: 2rem;
-	--global--font-size-page-title: 6rem;
+	--global--font-size-xl: 2.25rem;
+	--global--font-size-page-title: 4rem;
 	--global--letter-spacing: normal;
 	/* Line Height */
 	--global--line-height-base: 1;
@@ -83,8 +83,8 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--heading--font-size-h6: var(--global--font-size-xs);
 	--heading--font-size-h5: var(--global--font-size-sm);
 	--heading--font-size-h4: var(--global--font-size-lg);
-	--heading--font-size-h3: 2rem;
-	--heading--font-size-h2: 3rem;
+	--heading--font-size-h3: 1.875rem;
+	--heading--font-size-h2: 2.25rem;
 	--heading--font-size-h1: var(--global--font-size-page-title);
 	--heading--letter-spacing-h6: 0.05em;
 	--heading--letter-spacing-h5: 0.05em;
@@ -254,6 +254,15 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
 	--separator--width: calc(6 * var(--global--spacing-horizontal));
+}
+
+@media only screen and (min-width: 652px) {
+	:root {
+		--global--font-size-xl: 2.5rem;
+		--global--font-size-page-title: 6rem;
+		--heading--font-size-h3: 2rem;
+		--heading--font-size-h2: 3rem;
+	}
 }
 
 /* Any helpful mixins we need? Put them here. */
@@ -682,7 +691,7 @@ template {
  * Root Media Query Variables
  */
 :root {
-	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal) * 0.6 );
+	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal) * 0.6);
 	--responsive--aligndefault-width: calc(100vw - var(--responsive--spacing-horizontal));
 	--responsive--alignwide-width: calc(100vw - var(--responsive--spacing-horizontal));
 	--responsive--alignfull-width: 100%;
@@ -1703,6 +1712,12 @@ img {
 	vertical-align: middle;
 }
 
+/* Block Styles */
+.wp-block-image.is-style-twentytwentyone-image-frame img {
+	padding: var(--global--spacing-unit);
+	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+}
+
 .wp-block-latest-comments {
 	margin-right: 0;
 }
@@ -2245,7 +2260,6 @@ p.has-text-color a {
 }
 
 .wp-block-search {
-	display: flex;
 	max-width: var(--responsive--aligndefault-width);
 }
 
@@ -2906,6 +2920,10 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .single .site-main > article > .entry-footer .tags-links {
 	justify-self: end;
 	text-align: left;
+}
+
+.single .site-main > article > .entry-footer .tags-links {
+	grid-column-start: 2;
 }
 
 /**

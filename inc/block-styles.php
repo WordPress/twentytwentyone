@@ -17,11 +17,10 @@ if ( function_exists( 'register_block_style' ) ) {
 	 */
 	function twenty_twenty_one_register_block_styles() {
 		register_block_style(
-			'core/latest-posts',
+			'core/image',
 			array(
-				'name'         => 'twenty-twenty-one-alternating-grid',
-				'label'        => __( 'Alternating Grid', 'twentytwentyone' ),
-				'style_handle' => 'twenty-twenty-one-alternating-grid',
+				'name'  => 'twentytwentyone-image-frame',
+				'label' => __( 'Image Frame', 'twentytwentyone' ),
 			)
 		);
 	}

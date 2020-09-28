@@ -22,7 +22,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area default-max-width <?php echo get_option( 'show_avatars' ) ? esc_attr( 'show-avatars' ) : ''; ?>">
+<div id="comments" class="comments-area default-max-width <?php echo get_option( 'show_avatars' ) ? 'show-avatars' : ''; ?>">
 
 	<?php
 	// You can start editing here -- including this comment!
@@ -35,10 +35,9 @@ if ( post_password_required() ) {
 				esc_html_e( '1 Reply', 'twentytwentyone' );
 			} else {
 				printf(
-					/* Translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s Reply', '%1$s Replies', $twenty_twenty_one_comment_count, 'comments title', 'twentytwentyone' ) ),
-					esc_html( number_format_i18n( $twenty_twenty_one_comment_count ) ),
-					'<span>' . get_the_title() . '</span>' // phpcs:ignore WordPress.Security.EscapeOutput
+					/* Translators: %s: comment count number. */
+					esc_html( _nx( '%s Reply', '%s Replies', $twenty_twenty_one_comment_count, 'comments title', 'twentytwentyone' ) ),
+					esc_html( number_format_i18n( $twenty_twenty_one_comment_count ) )
 				);
 			}
 			?>

@@ -192,6 +192,11 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	text-align: right;
 }
 
+// Place tag links in last grid column space
+.single .site-main > article > .entry-footer .tags-links {
+	grid-column-start: 2;
+}
+
 /**
  * Post Thumbnails
  */
