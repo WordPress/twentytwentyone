@@ -41,11 +41,7 @@
 		value.bind( function( to ) {
 			var lum = twentytwentyoneGetHexLum( to ),
 				textColor = 127 < lum ? '#000' : '#fff';
-				borderColor = 127 < lum ? '#000' : '#fff';
-
-			if ( lum <= 40 ) {
-				borderColor = '#ffffff80';
-			}
+				borderColor = 127 < lum ? '#00000080' : '#ffffff80';
 
 			document.documentElement.style.setProperty( '--global--color-primary', textColor );
 			document.documentElement.style.setProperty( '--global--color-secondary', textColor );

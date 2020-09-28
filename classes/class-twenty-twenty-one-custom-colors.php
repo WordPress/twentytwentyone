@@ -66,11 +66,9 @@ class Twenty_Twenty_One_Custom_Colors {
 			$theme_css .= '--global--color-secondary: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
 		}
 
-		if ( $this->get_relative_luminance_from_hex( get_theme_mod( 'background_color', 'D1E4DD' ) ) <= 40 ) {
-			$theme_css .= '--global--color-border: #ffffff80';
-		} else {
-			$theme_css .= '--global--color-border: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
-		}
+		$theme_css .= ( 127 < $this->get_relative_luminance_from_hex( get_theme_mod( 'background_color', 'D1E4DD' ) ) )
+			? '--global--color-border: #00000080'
+			: '--global--color-border: #ffffff80';
 
 		$theme_css .= '}';
 
