@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * These styles should be loaded by the Block Editor only
  */
@@ -74,7 +75,7 @@
 	--global--color-secondary-hover: var(--global--color-secondary);
 	--global--color-background: var(--global--color-green);
 	/* Mint, default body background */
-	--global--color-border: var(--global--color-black);
+	--global--color-border: var(--global--color-dark-gray);
 	/* Used for borders (separators) */
 	/* Spacing */
 	--global--spacing-unit: 20px;

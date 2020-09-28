@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * These styles should be loaded by the Block Editor only
  */
@@ -107,13 +108,13 @@ Example:
 	margin-left: auto;
 	margin-right: auto;
 }
-@media only screen and (min-width: 482px) {
-	.default-max-width {
+@media only screen and (min-width: 482px){
+	.default-max-width{
 	max-width: min(calc(100vw - 100px), 610px);
 	}
 }
-@media only screen and (min-width: 822px) {
-	.default-max-width {
+@media only screen and (min-width: 822px){
+	.default-max-width{
 	max-width: min(calc(100vw - 200px), 610px);
 	}
 }
@@ -124,14 +125,14 @@ Example:
 	margin-right: auto;
 }
 
-@media only screen and (min-width: 482px) {
-	.wide-max-width {
+@media only screen and (min-width: 482px){
+	.wide-max-width{
 	max-width: calc(100vw - 100px);
 	}
 }
 
-@media only screen and (min-width: 822px) {
-	.wide-max-width {
+@media only screen and (min-width: 822px){
+	.wide-max-width{
 	max-width: min(calc(100vw - 200px), 1240px);
 	}
 }
@@ -462,8 +463,8 @@ div[data-type="core/button"] {
 	text-align: inherit;
 }
 
-@media only screen and (min-width: 652px) {
-	.wp-block-cover h2 {
+@media only screen and (min-width: 652px){
+	.wp-block-cover h2{
 	font-size: 3rem;
 	}
 }
@@ -477,8 +478,8 @@ div[data-type="core/button"] {
 	text-align: inherit;
 }
 
-@media only screen and (min-width: 652px) {
-	.wp-block-cover-image h2 {
+@media only screen and (min-width: 652px){
+	.wp-block-cover-image h2{
 	font-size: 3rem;
 	}
 }
@@ -801,8 +802,8 @@ h6[style*="--wp--typography--line-height"] {
 	line-height: 1.3;
 }
 
-@media only screen and (min-width: 652px) {
-	.wp-block-heading h1 {
+@media only screen and (min-width: 652px){
+	.wp-block-heading h1{
 	font-size: 6rem;
 	}
 }
@@ -813,8 +814,8 @@ h1 {
 	line-height: 1.3;
 }
 
-@media only screen and (min-width: 652px) {
-	h1 {
+@media only screen and (min-width: 652px){
+	h1{
 	font-size: 6rem;
 	}
 }
@@ -825,8 +826,8 @@ h1 {
 	line-height: 1.3;
 }
 
-@media only screen and (min-width: 652px) {
-	.h1 {
+@media only screen and (min-width: 652px){
+	.h1{
 	font-size: 6rem;
 	}
 }
@@ -837,8 +838,8 @@ h1 {
 	line-height: 1.3;
 }
 
-@media only screen and (min-width: 652px) {
-	.wp-block-heading h2 {
+@media only screen and (min-width: 652px){
+	.wp-block-heading h2{
 	font-size: 3rem;
 	}
 }
@@ -849,8 +850,8 @@ h2 {
 	line-height: 1.3;
 }
 
-@media only screen and (min-width: 652px) {
-	h2 {
+@media only screen and (min-width: 652px){
+	h2{
 	font-size: 3rem;
 	}
 }
@@ -861,8 +862,8 @@ h2 {
 	line-height: 1.3;
 }
 
-@media only screen and (min-width: 652px) {
-	.h2 {
+@media only screen and (min-width: 652px){
+	.h2{
 	font-size: 3rem;
 	}
 }
@@ -873,8 +874,8 @@ h2 {
 	line-height: 1.3;
 }
 
-@media only screen and (min-width: 652px) {
-	.wp-block-heading h3 {
+@media only screen and (min-width: 652px){
+	.wp-block-heading h3{
 	font-size: 2rem;
 	}
 }
@@ -885,8 +886,8 @@ h3 {
 	line-height: 1.3;
 }
 
-@media only screen and (min-width: 652px) {
-	h3 {
+@media only screen and (min-width: 652px){
+	h3{
 	font-size: 2rem;
 	}
 }
@@ -897,8 +898,8 @@ h3 {
 	line-height: 1.3;
 }
 
-@media only screen and (min-width: 652px) {
-	.h3 {
+@media only screen and (min-width: 652px){
+	.h3{
 	font-size: 2rem;
 	}
 }
@@ -978,7 +979,7 @@ h6 {
 /* Block Styles */
 .wp-block-image.is-style-twentytwentyone-image-frame img {
 	padding: 20px;
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 }
 
 .wp-block-latest-comments {
@@ -1030,8 +1031,8 @@ h6 {
 	line-height: 1.3;
 }
 
-@media only screen and (min-width: 652px) {
-	.wp-block-latest-posts > li > a {
+@media only screen and (min-width: 652px){
+	.wp-block-latest-posts > li > a{
 	font-size: 2rem;
 	}
 }
@@ -1230,8 +1231,8 @@ p.has-background {
 	margin: 0;
 }
 
-@media only screen and (min-width: 652px) {
-	.wp-block-pullquote p {
+@media only screen and (min-width: 652px){
+	.wp-block-pullquote p{
 	font-size: 3rem;
 	}
 }
@@ -1376,14 +1377,14 @@ p.has-background {
 	max-width: calc(100vw - 30px);
 }
 
-@media only screen and (min-width: 482px) {
-	.wp-block-search {
+@media only screen and (min-width: 482px){
+	.wp-block-search{
 	max-width: min(calc(100vw - 100px), 610px);
 	}
 }
 
-@media only screen and (min-width: 822px) {
-	.wp-block-search {
+@media only screen and (min-width: 822px){
+	.wp-block-search{
 	max-width: min(calc(100vw - 200px), 610px);
 	}
 }
@@ -1393,7 +1394,7 @@ p.has-background {
 }
 
 .wp-block-search .wp-block-search__input {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1.25rem;
@@ -1404,33 +1405,33 @@ p.has-background {
 }
 
 .wp-block-search .wp-block-search__input:focus {
-	border-color: #000;
+	border-color: #28303d;
 }
 
 .wp-block-separator {
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid #28303d;
 	clear: both;
 }
 
 hr {
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid #28303d;
 	clear: both;
 }
 
 .wp-block-separator[style*="text-align:right"] {
-	border-right-color: #000;
+	border-right-color: #28303d;
 }
 
 .wp-block-separator[style*="text-align: right"] {
-	border-right-color: #000;
+	border-right-color: #28303d;
 }
 
 hr[style*="text-align:right"] {
-	border-right-color: #000;
+	border-right-color: #28303d;
 }
 
 hr[style*="text-align: right"] {
-	border-right-color: #000;
+	border-right-color: #28303d;
 }
 
 .wp-block-separator.is-style-wide {
@@ -1459,11 +1460,11 @@ hr.is-style-dots.has-text-color:before {
 }
 
 .wp-block-separator.is-style-dots:before {
-	color: #000;
+	color: #28303d;
 }
 
 hr.is-style-dots:before {
-	color: #000;
+	color: #28303d;
 }
 
 .has-background:not(.has-background-background-color) .wp-block-separator,
@@ -1519,8 +1520,8 @@ pre.wp-block-verse {
 	font-size: 4rem;
 	line-height: 1.3;
 }
-@media only screen and (min-width: 652px) {
-	.editor-post-title__block .editor-post-title__input {
+@media only screen and (min-width: 652px){
+	.editor-post-title__block .editor-post-title__input{
 	font-size: 6rem;
 	}
 }
@@ -1616,8 +1617,8 @@ pre.wp-block-verse {
 	line-height: 1.3;
 }
 
-@media only screen and (min-width: 652px) {
-	.is-larger-text {
+@media only screen and (min-width: 652px){
+	.is-larger-text{
 	font-size: 2.5rem;
 	}
 }
@@ -1627,8 +1628,8 @@ pre.wp-block-verse {
 	line-height: 1.3;
 }
 
-@media only screen and (min-width: 652px) {
-	.has-larger-font-size {
+@media only screen and (min-width: 652px){
+	.has-larger-font-size{
 	font-size: 2.5rem;
 	}
 }
@@ -1638,8 +1639,8 @@ pre.wp-block-verse {
 	line-height: 1.3;
 }
 
-@media only screen and (min-width: 652px) {
-	.has-huge-font-size {
+@media only screen and (min-width: 652px){
+	.has-huge-font-size{
 	font-size: 2.5rem;
 	}
 }
@@ -1650,8 +1651,8 @@ pre.wp-block-verse {
 	font-weight: normal;
 }
 
-@media only screen and (min-width: 652px) {
-	.has-drop-cap:not(:focus)::first-letter {
+@media only screen and (min-width: 652px){
+	.has-drop-cap:not(:focus)::first-letter{
 	font-size: 12rem;
 	}
 }
@@ -1676,13 +1677,13 @@ pre.wp-block-verse {
 .wp-block {
 	max-width: calc(100vw - 30px);
 }
-@media only screen and (min-width: 482px) {
-	.wp-block {
+@media only screen and (min-width: 482px){
+	.wp-block{
 	max-width: min(calc(100vw - 100px), 610px);
 	}
 }
-@media only screen and (min-width: 822px) {
-	.wp-block {
+@media only screen and (min-width: 822px){
+	.wp-block{
 	max-width: min(calc(100vw - 200px), 610px);
 	}
 }
@@ -1691,14 +1692,14 @@ pre.wp-block-verse {
 	max-width: calc(100vw - 30px);
 }
 
-@media only screen and (min-width: 482px) {
-	.wp-block[data-align="wide"] {
+@media only screen and (min-width: 482px){
+	.wp-block[data-align="wide"]{
 	max-width: calc(100vw - 100px);
 	}
 }
 
-@media only screen and (min-width: 822px) {
-	.wp-block[data-align="wide"] {
+@media only screen and (min-width: 822px){
+	.wp-block[data-align="wide"]{
 	max-width: min(calc(100vw - 200px), 1240px);
 	}
 }
@@ -1707,14 +1708,14 @@ pre.wp-block-verse {
 	max-width: calc(100vw - 30px);
 }
 
-@media only screen and (min-width: 482px) {
-	.wp-block.alignwide {
+@media only screen and (min-width: 482px){
+	.wp-block.alignwide{
 	max-width: calc(100vw - 100px);
 	}
 }
 
-@media only screen and (min-width: 822px) {
-	.wp-block.alignwide {
+@media only screen and (min-width: 822px){
+	.wp-block.alignwide{
 	max-width: min(calc(100vw - 200px), 1240px);
 	}
 }
