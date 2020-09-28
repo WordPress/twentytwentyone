@@ -1364,33 +1364,7 @@ body {
 	background-color: #d1e4dd;
 }
 
-a {
-	color: #28303d;
-	transition: border-color 0.1s ease-out;
-}
-
-a:hover {
-	color: #28303d;
-}
-
-a:focus {
-	color: #39414d;
-}
-
-a:active {
-	color: #28303d;
-}
-
-.has-background:not(.has-background-background-color) .has-link-color a {
-	color: #28303d;
-}
-
-.has-background:not(.has-background-background-color).has-link-color a {
-	color: #28303d;
-}
-
-button,
-a {
+button {
 	cursor: pointer;
 }
 
@@ -1807,6 +1781,7 @@ i {
  * maybe Chrome will support it soon.
  */
 a {
+	cursor: pointer;
 	color: #28303d;
 	text-underline-offset: 3px;
 }
@@ -1818,6 +1793,14 @@ a:hover {
 .site a:focus {
 	outline: 2px solid #28303d;
 	text-decoration: none;
+}
+
+.has-background:not(.has-background-background-color) .has-link-color a {
+	color: #28303d;
+}
+
+.has-background:not(.has-background-background-color).has-link-color a {
+	color: #28303d;
 }
 
 /* Category 05 is all about adjusting the default block styles to the given layout. I only added three blocks as examples. */

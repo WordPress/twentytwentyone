@@ -423,6 +423,7 @@ figcaption,
  * maybe Chrome will support it soon.
  */
 a {
+	cursor: pointer;
 	color: var(--wp--style--color--link, var(--global--color-primary));
 	text-underline-offset: 3px;
 }
@@ -434,6 +435,11 @@ a:hover {
 .site a:focus {
 	outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
 	text-decoration: none;
+}
+
+.has-background:not(.has-background-background-color) .has-link-color a,
+.has-background:not(.has-background-background-color).has-link-color a {
+	color: var(--wp--style--color--link, var(--global--color-primary));
 }
 
 .wp-block-button__link {

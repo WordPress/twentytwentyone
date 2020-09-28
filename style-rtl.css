@@ -1024,30 +1024,7 @@ body {
 	background-color: var(--global--color-background);
 }
 
-a {
-	color: var(--wp--style--color--link, var(--global--color-primary));
-	transition: border-color 0.1s ease-out;
-}
-
-a:hover {
-	color: var(--global--color-primary-hover);
-}
-
-a:focus {
-	color: var(--global--color-secondary);
-}
-
-a:active {
-	color: var(--wp--style--color--link, var(--global--color-primary));
-}
-
-.has-background:not(.has-background-background-color) .has-link-color a,
-.has-background:not(.has-background-background-color).has-link-color a {
-	color: var(--wp--style--color--link, var(--global--color-primary));
-}
-
-button,
-a {
+button {
 	cursor: pointer;
 }
 
@@ -1261,6 +1238,7 @@ i {
  * maybe Chrome will support it soon.
  */
 a {
+	cursor: pointer;
 	color: var(--wp--style--color--link, var(--global--color-primary));
 	text-underline-offset: 3px;
 }
@@ -1272,6 +1250,11 @@ a:hover {
 .site a:focus {
 	outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
 	text-decoration: none;
+}
+
+.has-background:not(.has-background-background-color) .has-link-color a,
+.has-background:not(.has-background-background-color).has-link-color a {
+	color: var(--wp--style--color--link, var(--global--color-primary));
 }
 
 /* Category 05 is all about adjusting the default block styles to the given layout. I only added three blocks as examples. */

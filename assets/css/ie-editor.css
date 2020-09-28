@@ -288,6 +288,7 @@ figcaption {
  * maybe Chrome will support it soon.
  */
 a {
+	cursor: pointer;
 	color: #28303d;
 	text-underline-offset: 3px;
 }
@@ -299,6 +300,14 @@ a:hover {
 .site a:focus {
 	outline: 2px solid #28303d;
 	text-decoration: none;
+}
+
+.has-background:not(.has-background-background-color) .has-link-color a {
+	color: #28303d;
+}
+
+.has-background:not(.has-background-background-color).has-link-color a {
+	color: #28303d;
 }
 
 .wp-block-button__link {
