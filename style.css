@@ -1272,8 +1272,13 @@ input[type="color"] {
 
 select {
 	border: var(--form--border-width) solid var(--form--border-color);
-	padding: calc(0.5 * var(--form--spacing-unit));
 	color: var(--form--color-text);
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	padding: var(--form--spacing-unit) calc(3 * var(--form--spacing-unit)) var(--form--spacing-unit) var(--form--spacing-unit);
+	background: var(--global--color-white) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2328303d'><polygon points='0,0 10,0 5,5'/></svg>") no-repeat;
+	background-position: right var(--form--spacing-unit) top 60%;
 }
 
 textarea {
@@ -1573,6 +1578,12 @@ i {
 	border-radius: 0;
 }
 
+.is-style-outline .wp-block-button__link[style*="radius"]:focus,
+.wp-block-button a.wp-block-button__link[style*="radius"]:focus {
+	outline-offset: 2px;
+	outline: 2px dotted var(--button--color-background);
+}
+
 .wp-block-code {
 	color: var(--global--color-primary);
 	font-size: var(--global--font-size-sm);
@@ -1770,7 +1781,6 @@ i {
 
 .wp-block-file .wp-block-file__button {
 	display: inline-block;
-	padding: calc(0.5 * var(--button--padding-vertical)) calc(0.5 * var(--button--padding-horizontal));
 }
 
 .wp-block-gallery {

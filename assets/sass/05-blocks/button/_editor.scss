@@ -61,6 +61,11 @@
 	color: var(--button--color-background);
 }
 
+.is-style-outline .wp-block-button__link[style*="radius"],
+.wp-block-button__link[style*="radius"] {
+	outline-offset: 2px;
+}
+
 div[data-type="core/button"] {
 	display: block;
 }

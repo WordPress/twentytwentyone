@@ -75,3 +75,9 @@ input[type="reset"],
 		border-radius: 0;
 	}
 }
+
+.is-style-outline .wp-block-button__link[style*="radius"]:focus,
+.wp-block-button a.wp-block-button__link[style*="radius"]:focus {
+	outline-offset: 2px;
+	outline: 2px dotted var(--button--color-background);
+}

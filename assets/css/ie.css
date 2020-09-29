@@ -1821,8 +1821,13 @@ input[type="color"] {
 
 select {
 	border: 3px solid #39414d;
-	padding: 5px;
 	color: #28303d;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	padding: 10px 30px 10px 10px;
+	background: #fff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2328303d'><polygon points='0,0 10,0 5,5'/></svg>") no-repeat;
+	background-position: right 10px top 60%;
 }
 
 textarea {
@@ -2195,6 +2200,16 @@ i {
 	border-radius: 0;
 }
 
+.is-style-outline .wp-block-button__link[style*="radius"]:focus {
+	outline-offset: 2px;
+	outline: 2px dotted #39414d;
+}
+
+.wp-block-button a.wp-block-button__link[style*="radius"]:focus {
+	outline-offset: 2px;
+	outline: 2px dotted #39414d;
+}
+
 .wp-block-code {
 	color: #28303d;
 	font-size: 1.125rem;
@@ -2519,7 +2534,6 @@ i {
 
 .wp-block-file .wp-block-file__button {
 	display: inline-block;
-	padding: 8px 15px;
 }
 
 .wp-block-gallery {
