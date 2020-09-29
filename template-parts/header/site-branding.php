@@ -22,9 +22,15 @@ if ( get_theme_mod( 'display_title_and_tagline', true ) === false && ! has_custo
 	$blog_info = get_bloginfo( 'name' );
 	if ( ! empty( $blog_info ) && get_theme_mod( 'display_title_and_tagline', true ) === true ) {
 		if ( is_front_page() ) {
-			?>
-			<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-			<?php
+			if ( is_paged() ) {
+				?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<?php
+			} else {
+				?>
+				<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+				<?php
+			}
 		} else {
 			?>
 			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>

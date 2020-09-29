@@ -12,26 +12,31 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: twentytwentyone
-Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Tags: one-column, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready
 
-Twenty Twenty One WordPress Theme, (C) 2020 WordPress.org
-Twenty Twenty One is distributed under the terms of the GNU GPL.
+Twenty Twenty-One WordPress Theme, (C) 2020 WordPress.org
+Twenty Twenty-One is distributed under the terms of the GNU GPL.
 */
-/* Example files how to organize CSS with the ITCSS methodology with WP specific adjustments */
-/* Basics see: https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/ */
 /**
  * SETTINGS
+ * File-header..........The file header for the themes style.css file.
  * Fonts................Any font files, if the project needs specific fonts.
  * Global...............Project-specific, globally available variables.
  *
  * TOOLS
+ * Extends..............Global extends.
+ * Functions............Global functions.
  * Mixins...............Global mixins.
  *
  * GENERIC
  * Normalize.css........Normalise browser defaults.
- * Box-sizing...........More manageable box-model.
+ * Breakpoints..........Mixins and variables for responsive styles
+ * Vertical-margins.....Vertical spacing for the main components.
+ * Reset................Reset specific elements to make them easier to style in other contexts.
+ * Clearings............Clearnings for the main components.
  *
  * ELEMENTS
+ * Blockquote...........Default blockquote.
  * Forms................Element-level form styling.
  * Headings.............H1–H6
  * Links................Default links.
@@ -39,25 +44,56 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
  * Media................Images, Figure, Figcaption, Embed, iFrame, Objects, Video.
  *
  * BLOCKS
+ * Audio................Specific styles for the audio block.
+ * Button...............Specific styles for the button block.
+ * Code.................Specific styles for the code block.
+ * Collumns.............Specific styles for the collumns block.
  * Cover................Specific styles for the cover block.
+ * File.................Specific styles for the file block.
+ * Gallery..............Specific styles for the gallery block.
  * Group................Specific styles for the group block.
+ * Heading..............Specific styles for the heading block.
+ * Image................Specific styles for the image block.
+ * Latest comments......Specific styles for the latest comments block.
+ * Latest posts.........Specific styles for the latest posts block.
+ * Legacy...............Specific styles for the legacy gallery.
+ * List.................Specific styles for the list block.
+ * Meda text............Specific styles for the media and text block.
+ * Navigation...........Specific styles for the navigation block.
+ * Paragraph............Specific styles for the paragraph block.
  * Pullquote............Specific styles for the pullquote block.
+ * Quote................Specific styles for the quote block.
+ * Search...............Specific styles for the search block.
+ * Separator............Specific styles for the separator block.
+ * Spacer...............Specific styles for the spacer block.
+ * Table................Specific styles for the table block.
+ * Verse................Specific styles for the verse block.
+ * Video................Specific styles for the video block.
+ * Utilities............Block alignments.
  *
  * COMPONENTS
  * Header...............Header styles.
  * Footer...............Footer styles.
  * Comments.............Comment styles.
- * Blog archive.........Blog archive styles.
+ * Archives.............Archive styles.
+ * 404..................404 styles.
+ * Search...............Search styles.
+ * Navigation...........Navigation styles.
+ * Pagination...........Pagination styles.
+ * Single...............Single page and post styles.
+ * Posts and pages......Misc, sticky post styles.
+ * Entry................Entry, author biography.
+ * Widget...............Widget styles.
+ * Editor...............Editor styles.
  *
  * UTILITIES
  * A11y.................Screen reader text, prefers reduced motion etc.
  * Color Palette........Classes for the color palette colors.
  * Editor Font Sizes....Editor Font Sizes.
- *
+ * Measure..............The width of a line of text, in characters.
  */
 /* Categories 01 to 03 are the basics. */
-/* Do we need to serve a font? Add the @font-face styles here. */
-/* Add all variables here. */
+/* Variables */
 :root {
 	/* Font Family */
 	/* Font Size */
@@ -84,17 +120,7 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	/* Block: Pull quote */
 }
 
-/* Any helpful mixins we need? Put them here. */
-/*
-Example:
-@mixin typography {
-	color: var(--color-charcoal);
-	font-family: var(--font-family);
-	font-size: var(--font-size-global);
-	line-height: var(--line-height-global);
-	word-wrap: break-word;
-}
-*/
+/* Button extends */
 button {
 	line-height: 1;
 	color: #d1e4dd;
@@ -1040,9 +1066,6 @@ hr.wp-block-separator.is-style-wide {
 }
 
 /**
- * Output
- */
-/**
  * Site Structure
  *
  * - Set vertical margins and responsive widths on
@@ -1410,18 +1433,6 @@ a {
 	cursor: pointer;
 }
 
-html {
-	box-sizing: border-box;
-}
-
-/**
- * Inherit box-sizing to make it easier to change the property
- * for components that leverage other behavior.
- */
-*, *::before, *::after {
-	box-sizing: inherit;
-}
-
 .clear:before,
 .clear:after,
 .entry-content:before,
@@ -1522,7 +1533,7 @@ blockquote.alignright footer {
 }
 
 input[type="text"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1530,7 +1541,7 @@ input[type="text"] {
 }
 
 input[type="email"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1538,7 +1549,7 @@ input[type="email"] {
 }
 
 input[type="url"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1546,7 +1557,7 @@ input[type="url"] {
 }
 
 input[type="password"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1554,7 +1565,7 @@ input[type="password"] {
 }
 
 input[type="search"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1562,7 +1573,7 @@ input[type="search"] {
 }
 
 input[type="number"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1570,7 +1581,7 @@ input[type="number"] {
 }
 
 input[type="tel"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1578,7 +1589,7 @@ input[type="tel"] {
 }
 
 input[type="range"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1586,7 +1597,7 @@ input[type="range"] {
 }
 
 input[type="date"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1594,7 +1605,7 @@ input[type="date"] {
 }
 
 input[type="month"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1602,7 +1613,7 @@ input[type="month"] {
 }
 
 input[type="week"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1610,7 +1621,7 @@ input[type="week"] {
 }
 
 input[type="time"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1618,7 +1629,7 @@ input[type="time"] {
 }
 
 input[type="datetime"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1626,7 +1637,7 @@ input[type="datetime"] {
 }
 
 input[type="datetime-local"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1634,7 +1645,7 @@ input[type="datetime-local"] {
 }
 
 input[type="color"] {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1642,7 +1653,7 @@ input[type="color"] {
 }
 
 textarea {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -1651,86 +1662,86 @@ textarea {
 
 input[type="text"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="email"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="url"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="password"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="search"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="number"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="tel"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="range"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="date"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="month"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="week"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="time"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="datetime"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="datetime-local"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 input[type="color"]:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 textarea:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 select {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 }
 
 textarea {
@@ -1897,7 +1908,7 @@ i {
 	color: #28303d;
 	font-size: 1.125rem;
 	padding: 20px;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 .wp-block-code pre {
@@ -1963,6 +1974,7 @@ i {
 	margin-bottom: inherit;
 	/* default & custom background-color */
 	/* Treating H2 separately to account for legacy /core styles */
+	/* Block Styles */
 }
 
 .wp-block-cover-image {
@@ -1972,6 +1984,7 @@ i {
 	margin-bottom: inherit;
 	/* default & custom background-color */
 	/* Treating H2 separately to account for legacy /core styles */
+	/* Block Styles */
 }
 
 .wp-block-cover .wp-block-cover__inner-container {
@@ -2195,6 +2208,14 @@ i {
 	justify-content: center;
 }
 
+.wp-block-cover.is-style-twentytwentyone-border {
+	border: 3px solid #28303d;
+}
+
+.wp-block-cover-image.is-style-twentytwentyone-border {
+	border: 3px solid #28303d;
+}
+
 .wp-block-file a.wp-block-file__button:active {
 	color: #d1e4dd;
 	opacity: inherit;
@@ -2251,8 +2272,6 @@ i {
 .wp-block-group .wp-block-group__inner-container {
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 25px;
-	padding-right: 25px;
 }
 
 .wp-block-group .wp-block-group__inner-container > * {
@@ -2283,6 +2302,11 @@ i {
 	.wp-block-group.has-background {
 		padding: 30px;
 	}
+}
+
+.wp-block-group.is-style-twentytwentyone-border {
+	border: 3px solid #28303d;
+	padding: 30px;
 }
 
 h1 {
@@ -2557,10 +2581,16 @@ img {
 	vertical-align: middle;
 }
 
-/* Block Styles */
+.wp-block-image.is-style-twentytwentyone-border img {
+	border: 3px solid #28303d;
+}
+
+.wp-block-image.is-style-twentytwentyone-image-frame img {
+	border: 3px solid #28303d;
+}
+
 .wp-block-image.is-style-twentytwentyone-image-frame img {
 	padding: 20px;
-	border: 3px solid #000;
 }
 
 .wp-block-latest-comments {
@@ -2603,8 +2633,8 @@ img {
 }
 
 .wp-block-latest-posts:not(.is-grid) > li {
-	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 .wp-block-latest-posts:not(.is-grid) > li:first-child {
@@ -2637,8 +2667,8 @@ img {
 }
 
 .wp-block-latest-posts > li > * {
-	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .wp-block-latest-posts > li > *:first-child {
@@ -2650,10 +2680,12 @@ img {
 }
 
 .wp-block-latest-posts > li > a {
+	display: inline-block;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1.875rem;
 	font-weight: normal;
 	line-height: 1.3;
+	margin-bottom: 10px;
 }
 
 @media only screen and (min-width: 652px){
@@ -2662,14 +2694,20 @@ img {
 	}
 }
 
-.wp-block-latest-posts .wp-block-latest-posts__post-date {
+.wp-block-latest-posts .wp-block-latest-posts__post-author {
 	color: #28303d;
-	font-size: 1.125rem;
+	font-size: 1.25rem;
 	line-height: 1.7;
 }
 
-.entry-content [class*="inner-container"] .wp-block-latest-posts .wp-block-latest-posts__post-date,
-.entry-content .has-background .wp-block-latest-posts .wp-block-latest-posts__post-date {
+.wp-block-latest-posts .wp-block-latest-posts__post-date {
+	color: #28303d;
+	font-size: 1rem;
+	line-height: 1.7;
+}
+
+[class*="inner-container"] .wp-block-latest-posts .wp-block-latest-posts__post-date,
+.has-background .wp-block-latest-posts .wp-block-latest-posts__post-date {
 	color: currentColor;
 }
 
@@ -2677,12 +2715,14 @@ img {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1.125rem;
 	line-height: 1.7;
+	margin-top: 20px;
 }
 
 .wp-block-latest-posts .wp-block-latest-posts__post-full-content {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1.125rem;
 	line-height: 1.7;
+	margin-top: 20px;
 }
 
 .wp-block-latest-posts.alignfull {
@@ -2696,32 +2736,76 @@ img {
 	padding-right: 0;
 }
 
-@media only screen and (min-width: 592px) {
-	.wp-block-latest-posts.is-style-tto-alternating-grid {
-		overflow: hidden;
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers {
+	border-top: 3px solid #28303d;
+	border-bottom: 3px solid #28303d;
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers:not(.is-grid) > li {
+	padding-bottom: 30px;
+	border-bottom: 1px solid #28303d;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers > li {
+	padding-bottom: 30px;
+	border-bottom: 1px solid #28303d;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers:not(.is-grid) > li:last-child,
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers > li:last-child {
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid {
+	box-shadow: inset 0 -1px 0 0 #28303d;
+	border-bottom: 2px solid #28303d;
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid li {
+	margin: 0;
+	padding-top: 30px;
+	padding-right: 25px;
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid li:last-child {
+	padding-bottom: 30px;
+}
+
+@media screen and (min-width: 600px) {
+	.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid.columns-2 li {
+		width: 50%;
 	}
-	.wp-block-latest-posts.is-style-tto-alternating-grid > li {
-		width: calc(50% - 13px);
-		max-width: calc(50% - 13px);
-		text-align: right;
+	.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid.columns-3 li {
+		width: 33%;
 	}
-	.wp-block-latest-posts.is-style-tto-alternating-grid > li:nth-child(2n + 1) {
-		float: right;
-		text-align: left;
+	.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid.columns-4 li {
+		width: 25%;
 	}
-	.wp-block-latest-posts.is-style-tto-alternating-grid.is-grid {
-		display: inherit;
+	.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid.columns-5 li {
+		width: 20%;
 	}
-	.wp-block-latest-posts.is-style-tto-alternating-grid.is-grid > li {
-		margin-top: 30px;
-		margin-right: 0;
+	.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid.columns-6 li {
+		width: 17%;
 	}
-	.wp-block-latest-posts.is-style-tto-alternating-grid.is-grid > li:first-child {
-		margin-top: 0;
-	}
-	.wp-block-latest-posts.is-style-tto-alternating-grid.is-grid > li:last-child {
-		margin-bottom: 0;
-	}
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders li {
+	border: 3px solid #28303d;
+	padding: 30px 25px;
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders li:last-child {
+	padding-bottom: 30px;
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders:not(.is-grid) li {
+	margin-top: 25px;
+	margin-bottom: 25px;
 }
 
 .gallery-item {
@@ -2855,6 +2939,10 @@ dd {
 		padding-top: 30px;
 		padding-bottom: 30px;
 	}
+}
+
+.wp-block-media-text.is-style-twentytwentyone-border {
+	border: 3px solid #28303d;
 }
 
 .wp-block-navigation .wp-block-navigation-link {
@@ -3244,7 +3332,7 @@ p.has-text-color a {
 }
 
 .wp-block-search .wp-block-search__input {
-	border: 3px solid #000;
+	border: 3px solid #28303d;
 	border-radius: 0;
 	color: #28303d;
 	line-height: 1.7;
@@ -3255,19 +3343,19 @@ p.has-text-color a {
 
 .wp-block-search .wp-block-search__input:focus {
 	color: #28303d;
-	border-color: #000;
+	border-color: #28303d;
 }
 
 hr {
 	border-style: none;
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid #28303d;
 	clear: both;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 hr.wp-block-separator {
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid #28303d;
 	/**
 		 * Block Options
 		 */
@@ -3286,7 +3374,7 @@ hr.wp-block-separator.is-style-dots.has-background:before, hr.wp-block-separator
 }
 
 hr.wp-block-separator.is-style-dots:before {
-	color: #000;
+	color: #28303d;
 	font-size: 2.25rem;
 	letter-spacing: 1.125rem;
 	padding-left: 1.125rem;
@@ -3682,7 +3770,6 @@ nav a {
 }
 
 .site-title > a {
-	text-underline-width: .125em;
 	text-decoration-color: #39414d;
 }
 
@@ -3715,7 +3802,7 @@ nav a {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1rem;
 	line-height: 1.7;
-	border-top: 3px solid #000;
+	border-top: 3px solid #28303d;
 	padding-top: 30px;
 	margin-top: 60px;
 }
@@ -3764,66 +3851,8 @@ nav a {
 	color: #28303d;
 }
 
-.site-footer > .footer-navigation {
-	display: inline;
-}
-
-@media only screen and (min-width: 822px) {
-	.site-footer > .footer-navigation {
-		margin-top: 20px;
-		margin-bottom: 20px;
-		text-align: left;
-	}
-}
-
-.site-footer > .footer-navigation > div {
-	display: inline;
-}
-
-.site-footer > .footer-navigation .footer-menu {
-	color: #28303d;
-	margin: 0;
-	padding-left: 0;
-}
-
-.site-footer > .footer-navigation .footer-menu > li {
-	display: inline-block;
-}
-
-.site-footer > .footer-navigation .footer-menu > li:first-of-type > a {
-	padding-left: 0;
-}
-
-.site-footer > .footer-navigation .footer-menu > li:last-of-type {
-	padding-right: 0;
-}
-
-.site-footer > .footer-navigation .footer-menu .menu-item {
-	padding: 13px 13px 13px 0;
-}
-
-.site-footer > .footer-navigation .footer-menu .menu-item a {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1rem;
-	font-weight: normal;
-	color: currentColor;
-}
-
-.site-footer > .footer-navigation .footer-menu .menu-item a:link, .site-footer > .footer-navigation .footer-menu .menu-item a:visited, .site-footer > .footer-navigation .footer-menu .menu-item a:active {
-	color: currentColor;
-}
-
-.site-footer > .footer-navigation .footer-menu .menu-item a:hover {
-	color: #28303d;
-	border-color: #39414d;
-}
-
-.site-footer > .footer-navigation .footer-menu .menu-item a:focus {
-	color: #39414d;
-}
-
 .single .entry-header {
-	border-bottom: 3px solid #000;
+	border-bottom: 3px solid #28303d;
 	padding-bottom: 60px;
 	margin-bottom: 90px;
 }
@@ -4016,7 +4045,7 @@ h1.entry-title {
 	margin-top: 30px;
 	padding-top: 20px;
 	padding-bottom: 90px;
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid #28303d;
 }
 
 body:not(.single) .site-main > article:last-of-type .entry-footer {
@@ -4028,7 +4057,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	margin-bottom: 102px;
 	padding-bottom: 0;
 	padding-top: 24px;
-	border-top: 3px solid #000;
+	border-top: 3px solid #28303d;
 	border-bottom: 1px solid transparent;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -4043,6 +4072,10 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .single .site-main > article > .entry-footer .tags-links {
 	justify-self: end;
 	text-align: right;
+}
+
+.single .site-main > article > .entry-footer .tags-links {
+	grid-column-start: 2;
 }
 
 /**
@@ -4152,7 +4185,7 @@ h2.page-title {
 }
 
 .page-header {
-	border-bottom: 3px solid #000;
+	border-bottom: 3px solid #28303d;
 	padding-bottom: 60px;
 }
 
@@ -5028,7 +5061,7 @@ h2.page-title {
 }
 
 .pagination {
-	border-top: 3px solid #000;
+	border-top: 3px solid #28303d;
 	padding-top: 30px;
 	margin: 30px auto;
 }

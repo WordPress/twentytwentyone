@@ -53,4 +53,9 @@
 			text-align: right;
 		}
 	}
+
+	// Block Styles
+	&.is-style-twentytwentyone-border {
+		border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+	}
 }

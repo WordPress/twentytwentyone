@@ -12,26 +12,31 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: twentytwentyone
-Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Tags: one-column, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready
 
-Twenty Twenty One WordPress Theme, (C) 2020 WordPress.org
-Twenty Twenty One is distributed under the terms of the GNU GPL.
+Twenty Twenty-One WordPress Theme, (C) 2020 WordPress.org
+Twenty Twenty-One is distributed under the terms of the GNU GPL.
 */
-/* Example files how to organize CSS with the ITCSS methodology with WP specific adjustments */
-/* Basics see: https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/ */
 /**
  * SETTINGS
+ * File-header..........The file header for the themes style.css file.
  * Fonts................Any font files, if the project needs specific fonts.
  * Global...............Project-specific, globally available variables.
  *
  * TOOLS
+ * Extends..............Global extends.
+ * Functions............Global functions.
  * Mixins...............Global mixins.
  *
  * GENERIC
  * Normalize.css........Normalise browser defaults.
- * Box-sizing...........More manageable box-model.
+ * Breakpoints..........Mixins and variables for responsive styles
+ * Vertical-margins.....Vertical spacing for the main components.
+ * Reset................Reset specific elements to make them easier to style in other contexts.
+ * Clearings............Clearnings for the main components.
  *
  * ELEMENTS
+ * Blockquote...........Default blockquote.
  * Forms................Element-level form styling.
  * Headings.............H1–H6
  * Links................Default links.
@@ -39,25 +44,56 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
  * Media................Images, Figure, Figcaption, Embed, iFrame, Objects, Video.
  *
  * BLOCKS
+ * Audio................Specific styles for the audio block.
+ * Button...............Specific styles for the button block.
+ * Code.................Specific styles for the code block.
+ * Collumns.............Specific styles for the collumns block.
  * Cover................Specific styles for the cover block.
+ * File.................Specific styles for the file block.
+ * Gallery..............Specific styles for the gallery block.
  * Group................Specific styles for the group block.
+ * Heading..............Specific styles for the heading block.
+ * Image................Specific styles for the image block.
+ * Latest comments......Specific styles for the latest comments block.
+ * Latest posts.........Specific styles for the latest posts block.
+ * Legacy...............Specific styles for the legacy gallery.
+ * List.................Specific styles for the list block.
+ * Meda text............Specific styles for the media and text block.
+ * Navigation...........Specific styles for the navigation block.
+ * Paragraph............Specific styles for the paragraph block.
  * Pullquote............Specific styles for the pullquote block.
+ * Quote................Specific styles for the quote block.
+ * Search...............Specific styles for the search block.
+ * Separator............Specific styles for the separator block.
+ * Spacer...............Specific styles for the spacer block.
+ * Table................Specific styles for the table block.
+ * Verse................Specific styles for the verse block.
+ * Video................Specific styles for the video block.
+ * Utilities............Block alignments.
  *
  * COMPONENTS
  * Header...............Header styles.
  * Footer...............Footer styles.
  * Comments.............Comment styles.
- * Blog archive.........Blog archive styles.
+ * Archives.............Archive styles.
+ * 404..................404 styles.
+ * Search...............Search styles.
+ * Navigation...........Navigation styles.
+ * Pagination...........Pagination styles.
+ * Single...............Single page and post styles.
+ * Posts and pages......Misc, sticky post styles.
+ * Entry................Entry, author biography.
+ * Widget...............Widget styles.
+ * Editor...............Editor styles.
  *
  * UTILITIES
  * A11y.................Screen reader text, prefers reduced motion etc.
  * Color Palette........Classes for the color palette colors.
  * Editor Font Sizes....Editor Font Sizes.
- *
+ * Measure..............The width of a line of text, in characters.
  */
 /* Categories 01 to 03 are the basics. */
-/* Do we need to serve a font? Add the @font-face styles here. */
-/* Add all variables here. */
+/* Variables */
 :root {
 	/* Font Family */
 	--global--font-primary: var(--font-headings, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
@@ -129,7 +165,7 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	--global--color-secondary-hover: var(--global--color-secondary);
 	--global--color-background: var(--global--color-green);
 	/* Mint, default body background */
-	--global--color-border: var(--global--color-black);
+	--global--color-border: var(--global--color-dark-gray);
 	/* Used for borders (separators) */
 	/* Spacing */
 	--global--spacing-unit: 20px;
@@ -265,17 +301,7 @@ Twenty Twenty One is distributed under the terms of the GNU GPL.
 	}
 }
 
-/* Any helpful mixins we need? Put them here. */
-/*
-Example:
-@mixin typography {
-	color: var(--color-charcoal);
-	font-family: var(--font-family);
-	font-size: var(--font-size-global);
-	line-height: var(--line-height-global);
-	word-wrap: break-word;
-}
-*/
+/* Button extends */
 button,
 .button,
 input[type="submit"],
@@ -788,9 +814,6 @@ template {
 }
 
 /**
- * Output
- */
-/**
  * Site Structure
  *
  * - Set vertical margins and responsive widths on
@@ -1073,18 +1096,6 @@ a:active {
 button,
 a {
 	cursor: pointer;
-}
-
-html {
-	box-sizing: border-box;
-}
-
-/**
- * Inherit box-sizing to make it easier to change the property
- * for components that leverage other behavior.
- */
-*, *::before, *::after {
-	box-sizing: inherit;
 }
 
 .clear:before,
@@ -1400,6 +1411,7 @@ i {
 	margin-bottom: inherit;
 	/* default & custom background-color */
 	/* Treating H2 separately to account for legacy /core styles */
+	/* Block Styles */
 }
 
 .wp-block-cover .wp-block-cover__inner-container,
@@ -1516,6 +1528,11 @@ i {
 	justify-content: center;
 }
 
+.wp-block-cover.is-style-twentytwentyone-border,
+.wp-block-cover-image.is-style-twentytwentyone-border {
+	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+}
+
 .wp-block-file a.wp-block-file__button:active,
 .wp-block-file a.wp-block-file__button:focus,
 .wp-block-file a.wp-block-file__button:hover,
@@ -1552,8 +1569,6 @@ i {
 .wp-block-group .wp-block-group__inner-container {
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: var(--global--spacing-horizontal);
-	padding-right: var(--global--spacing-horizontal);
 }
 
 .wp-block-group .wp-block-group__inner-container > * {
@@ -1584,6 +1599,11 @@ i {
 	.wp-block-group.has-background {
 		padding: var(--global--spacing-vertical);
 	}
+}
+
+.wp-block-group.is-style-twentytwentyone-border {
+	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+	padding: var(--global--spacing-vertical);
 }
 
 h1,
@@ -1701,10 +1721,13 @@ img {
 	vertical-align: middle;
 }
 
-/* Block Styles */
+.wp-block-image.is-style-twentytwentyone-border img,
+.wp-block-image.is-style-twentytwentyone-image-frame img {
+	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+}
+
 .wp-block-image.is-style-twentytwentyone-image-frame img {
 	padding: var(--global--spacing-unit);
-	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
 }
 
 .wp-block-latest-comments {
@@ -1747,8 +1770,8 @@ img {
 }
 
 .wp-block-latest-posts:not(.is-grid) > li {
-	margin-top: var(--global--spacing-vertical);
-	margin-bottom: var(--global--spacing-vertical);
+	margin-top: calc(1.666 * var(--global--spacing-vertical));
+	margin-bottom: calc(1.666 * var(--global--spacing-vertical));
 }
 
 .wp-block-latest-posts:not(.is-grid) > li:first-child {
@@ -1781,8 +1804,8 @@ img {
 }
 
 .wp-block-latest-posts > li > * {
-	margin-top: calc(0.5 * var(--global--spacing-vertical));
-	margin-bottom: calc(0.5 * var(--global--spacing-vertical));
+	margin-top: calc(0.333 * var(--global--spacing-vertical));
+	margin-bottom: calc(0.333 * var(--global--spacing-vertical));
 }
 
 .wp-block-latest-posts > li > *:first-child {
@@ -1794,20 +1817,28 @@ img {
 }
 
 .wp-block-latest-posts > li > a {
+	display: inline-block;
 	font-family: var(--latest-posts--title-font-family);
 	font-size: var(--latest-posts--title-font-size);
 	font-weight: var(--heading--font-weight);
 	line-height: var(--global--line-height-heading);
+	margin-bottom: calc(0.333 * var(--global--spacing-vertical));
+}
+
+.wp-block-latest-posts .wp-block-latest-posts__post-author {
+	color: var(--global--color-primary);
+	font-size: var(--global--font-size-md);
+	line-height: var(--global--line-height-body);
 }
 
 .wp-block-latest-posts .wp-block-latest-posts__post-date {
 	color: var(--global--color-primary);
-	font-size: var(--global--font-size-sm);
+	font-size: var(--global--font-size-xs);
 	line-height: var(--global--line-height-body);
 }
 
-.entry-content [class*="inner-container"] .wp-block-latest-posts .wp-block-latest-posts__post-date,
-.entry-content .has-background .wp-block-latest-posts .wp-block-latest-posts__post-date {
+[class*="inner-container"] .wp-block-latest-posts .wp-block-latest-posts__post-date,
+.has-background .wp-block-latest-posts .wp-block-latest-posts__post-date {
 	color: currentColor;
 }
 
@@ -1816,6 +1847,7 @@ img {
 	font-family: var(--latest-posts--description-font-family);
 	font-size: var(--latest-posts--description-font-size);
 	line-height: var(--global--line-height-body);
+	margin-top: calc(0.666 * var(--global--spacing-vertical));
 }
 
 .wp-block-latest-posts.alignfull {
@@ -1829,32 +1861,70 @@ img {
 	padding-right: 0;
 }
 
-@media only screen and (min-width: 592px) {
-	.wp-block-latest-posts.is-style-tto-alternating-grid {
-		overflow: hidden;
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers {
+	border-top: calc(3 * var(--separator--height)) solid var(--global--color-border);
+	border-bottom: calc(3 * var(--separator--height)) solid var(--global--color-border);
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers:not(.is-grid) > li,
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers > li {
+	padding-bottom: var(--global--spacing-vertical);
+	border-bottom: var(--separator--height) solid var(--global--color-border);
+	margin-top: var(--global--spacing-vertical);
+	margin-bottom: var(--global--spacing-vertical);
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers:not(.is-grid) > li:last-child,
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers > li:last-child {
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid {
+	box-shadow: inset 0 -1px 0 0 var(--global--color-border);
+	border-bottom: calc(2 * var(--separator--height)) solid var(--global--color-border);
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid li {
+	margin: 0;
+	padding-top: var(--global--spacing-vertical);
+	padding-right: var(--global--spacing-horizontal);
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid li:last-child {
+	padding-bottom: var(--global--spacing-vertical);
+}
+
+@media screen and (min-width: 600px) {
+	.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid.columns-2 li {
+		width: calc((100% / 2));
 	}
-	.wp-block-latest-posts.is-style-tto-alternating-grid > li {
-		width: calc(50% - (0.5 * var(--global--spacing-horizontal)));
-		max-width: calc(50% - (0.5 * var(--global--spacing-horizontal)));
-		text-align: right;
+	.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid.columns-3 li {
+		width: calc((100% / 3));
 	}
-	.wp-block-latest-posts.is-style-tto-alternating-grid > li:nth-child(2n + 1) {
-		float: right;
-		text-align: left;
+	.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid.columns-4 li {
+		width: calc((100% / 4));
 	}
-	.wp-block-latest-posts.is-style-tto-alternating-grid.is-grid {
-		display: inherit;
+	.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid.columns-5 li {
+		width: calc((100% / 5));
 	}
-	.wp-block-latest-posts.is-style-tto-alternating-grid.is-grid > li {
-		margin-top: var(--global--spacing-vertical);
-		margin-right: 0;
+	.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid.columns-6 li {
+		width: calc((100% / 6));
 	}
-	.wp-block-latest-posts.is-style-tto-alternating-grid.is-grid > li:first-child {
-		margin-top: 0;
-	}
-	.wp-block-latest-posts.is-style-tto-alternating-grid.is-grid > li:last-child {
-		margin-bottom: 0;
-	}
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders li {
+	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+	padding: var(--global--spacing-vertical) var(--global--spacing-horizontal);
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders li:last-child {
+	padding-bottom: var(--global--spacing-vertical);
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders:not(.is-grid) li {
+	margin-top: var(--global--spacing-horizontal);
+	margin-bottom: var(--global--spacing-horizontal);
 }
 
 .gallery-item {
@@ -1983,6 +2053,10 @@ dd {
 		padding-top: var(--global--spacing-vertical);
 		padding-bottom: var(--global--spacing-vertical);
 	}
+}
+
+.wp-block-media-text.is-style-twentytwentyone-border {
+	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
 }
 
 .wp-block-navigation .wp-block-navigation-link {
@@ -2579,7 +2653,6 @@ nav a {
 }
 
 .site-title > a {
-	text-underline-width: .125em;
 	text-decoration-color: var(--global--color-secondary);
 }
 
@@ -2655,64 +2728,6 @@ nav a {
 
 .site-footer > .site-info a:hover, .site-footer > .site-info a:focus {
 	color: var(--footer--color-link);
-}
-
-.site-footer > .footer-navigation {
-	display: inline;
-}
-
-@media only screen and (min-width: 822px) {
-	.site-footer > .footer-navigation {
-		margin-top: var(--global--spacing-unit);
-		margin-bottom: var(--global--spacing-unit);
-		text-align: left;
-	}
-}
-
-.site-footer > .footer-navigation > div {
-	display: inline;
-}
-
-.site-footer > .footer-navigation .footer-menu {
-	color: var(--footer--color-text);
-	margin: 0;
-	padding-left: 0;
-}
-
-.site-footer > .footer-navigation .footer-menu > li {
-	display: inline-block;
-}
-
-.site-footer > .footer-navigation .footer-menu > li:first-of-type > a {
-	padding-left: 0;
-}
-
-.site-footer > .footer-navigation .footer-menu > li:last-of-type {
-	padding-right: 0;
-}
-
-.site-footer > .footer-navigation .footer-menu .menu-item {
-	padding: var(--primary-nav--padding) var(--primary-nav--padding) var(--primary-nav--padding) 0;
-}
-
-.site-footer > .footer-navigation .footer-menu .menu-item a {
-	font-family: var(--primary-nav--font-family);
-	font-size: var(--footer--font-size);
-	font-weight: var(--primary-nav--font-weight);
-	color: currentColor;
-}
-
-.site-footer > .footer-navigation .footer-menu .menu-item a:link, .site-footer > .footer-navigation .footer-menu .menu-item a:visited, .site-footer > .footer-navigation .footer-menu .menu-item a:active {
-	color: currentColor;
-}
-
-.site-footer > .footer-navigation .footer-menu .menu-item a:hover {
-	color: var(--footer--color-link-hover);
-	border-color: var(--global--color-secondary);
-}
-
-.site-footer > .footer-navigation .footer-menu .menu-item a:focus {
-	color: var(--global--color-secondary);
 }
 
 .single .entry-header {
@@ -2914,6 +2929,10 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .single .site-main > article > .entry-footer .tags-links {
 	justify-self: end;
 	text-align: right;
+}
+
+.single .site-main > article > .entry-footer .tags-links {
+	grid-column-start: 2;
 }
 
 /**
