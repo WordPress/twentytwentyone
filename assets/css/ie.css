@@ -5264,6 +5264,10 @@ footer * {
 	max-width: unset;
 }
 
+main img {
+	max-width: 100%;
+}
+
 html,
 body,
 div,
