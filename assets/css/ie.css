@@ -3949,10 +3949,6 @@ h1.entry-title {
 	}
 }
 
-.entry-attachment {
-	text-align: center;
-}
-
 .entry-meta {
 	color: #28303d;
 	clear: both;
@@ -4069,7 +4065,8 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .single .site-main > article > .entry-footer .cat-links,
-.single .site-main > article > .entry-footer .tags-links {
+.single .site-main > article > .entry-footer .tags-links,
+.single .site-main > article > .entry-footer .full-size-link {
 	justify-self: end;
 	text-align: right;
 }
