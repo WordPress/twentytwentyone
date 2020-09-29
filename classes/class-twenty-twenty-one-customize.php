@@ -17,6 +17,8 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 		 * Register customizer options.
 		 *
 		 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+		 *
+		 * @return void
 		 */
 		public static function register( $wp_customize ) {
 
@@ -198,4 +200,3 @@ if ( ! function_exists( 'twenty_twenty_one_customize_partial_site_logo' ) ) {
 		the_custom_logo();
 	}
 }
-
