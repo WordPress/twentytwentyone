@@ -55,6 +55,24 @@ if ( function_exists( 'register_block_style' ) ) {
 				'label' => __( 'Bordered', 'twentytwentyone' ),
 			)
 		);
+
+		/* Latest Posts: Dividers */
+		register_block_style(
+			'core/latest-posts',
+			array(
+				'name'  => 'twentytwentyone-latest-posts-dividers',
+				'label' => __( 'Dividers', 'twentytwentyone' ),
+			)
+		);
+
+		/* Latest Posts: Borders */
+		register_block_style(
+			'core/latest-posts',
+			array(
+				'name'  => 'twentytwentyone-latest-posts-borders',
+				'label' => __( 'Borders', 'twentytwentyone' ),
+			)
+		);
 	}
 	add_action( 'init', 'twenty_twenty_one_register_block_styles' );
 }
