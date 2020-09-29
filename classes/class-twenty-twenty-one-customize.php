@@ -143,7 +143,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 		 * @param bool $checked Whether or not a box is checked.
 		 * @return bool
 		 */
-		public static function sanitize_checkbox( $checked ) {
+		public static function sanitize_checkbox( $checked = null ) {
 			return ( ( isset( $checked ) && true === $checked ) ? true : false );
 		}
 
