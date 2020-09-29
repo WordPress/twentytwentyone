@@ -1974,6 +1974,7 @@ i {
 	margin-bottom: inherit;
 	/* default & custom background-color */
 	/* Treating H2 separately to account for legacy /core styles */
+	/* Block Styles */
 }
 
 .wp-block-cover-image {
@@ -1983,6 +1984,7 @@ i {
 	margin-bottom: inherit;
 	/* default & custom background-color */
 	/* Treating H2 separately to account for legacy /core styles */
+	/* Block Styles */
 }
 
 .wp-block-cover .wp-block-cover__inner-container {
@@ -2206,6 +2208,14 @@ i {
 	justify-content: center;
 }
 
+.wp-block-cover.is-style-twentytwentyone-border {
+	border: 3px solid #28303d;
+}
+
+.wp-block-cover-image.is-style-twentytwentyone-border {
+	border: 3px solid #28303d;
+}
+
 .wp-block-file a.wp-block-file__button:active {
 	color: #d1e4dd;
 	opacity: inherit;
@@ -2262,8 +2272,6 @@ i {
 .wp-block-group .wp-block-group__inner-container {
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 25px;
-	padding-right: 25px;
 }
 
 .wp-block-group .wp-block-group__inner-container > * {
@@ -2294,6 +2302,11 @@ i {
 	.wp-block-group.has-background {
 		padding: 30px;
 	}
+}
+
+.wp-block-group.is-style-twentytwentyone-border {
+	border: 3px solid #28303d;
+	padding: 30px;
 }
 
 h1 {
@@ -2568,10 +2581,16 @@ img {
 	vertical-align: middle;
 }
 
-/* Block Styles */
+.wp-block-image.is-style-twentytwentyone-border img {
+	border: 3px solid #28303d;
+}
+
+.wp-block-image.is-style-twentytwentyone-image-frame img {
+	border: 3px solid #28303d;
+}
+
 .wp-block-image.is-style-twentytwentyone-image-frame img {
 	padding: 20px;
-	border: 3px solid #28303d;
 }
 
 .wp-block-latest-comments {
@@ -2920,6 +2939,10 @@ dd {
 		padding-top: 30px;
 		padding-bottom: 30px;
 	}
+}
+
+.wp-block-media-text.is-style-twentytwentyone-border {
+	border: 3px solid #28303d;
 }
 
 .wp-block-navigation .wp-block-navigation-link {
