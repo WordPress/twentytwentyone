@@ -334,7 +334,9 @@ function twenty_twenty_one_scripts() {
 	}
 
 	// Main navigation scripts.
-	wp_enqueue_script( 'twenty-twenty-one-primary-navigation-script', get_template_directory_uri() . '/assets/js/primary-navigation.js', array(), wp_get_theme()->get( 'Version' ), true );
+	if ( has_nav_menu( 'primary' ) ) {
+		wp_enqueue_script( 'twenty-twenty-one-primary-navigation-script', get_template_directory_uri() . '/assets/js/primary-navigation.js', array(), wp_get_theme()->get( 'Version' ), true );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'twenty_twenty_one_scripts' );
 
