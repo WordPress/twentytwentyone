@@ -1,8 +1,7 @@
 /**
  * These styles should be loaded by the Block Editor only
  */
-/* Do we need to serve a font? Add the @font-face styles here. */
-/* Add all variables here. */
+/* Variables */
 :root {
 	/* Font Family */
 	--global--font-primary: var(--font-headings, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
@@ -210,17 +209,7 @@
 	}
 }
 
-/* Any helpful mixins we need? Put them here. */
-/*
-Example:
-@mixin typography {
-	color: var(--color-charcoal);
-	font-family: var(--font-family);
-	font-size: var(--font-size-global);
-	line-height: var(--line-height-global);
-	word-wrap: break-word;
-}
-*/
+/* Button extends */
 .wp-block-search .wp-block-search__button {
 	line-height: var(--button--line-height);
 	color: var(--button--color-text);
@@ -318,9 +307,6 @@ Example:
 	}
 }
 
-/**
- * Output
- */
 blockquote {
 	margin: 0;
 	padding: 0;

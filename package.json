@@ -58,7 +58,6 @@
 		"build": "run-s \"build:*\"",
 		"watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial",
 		"lint:scss": "stylelint assets/sass/*.scss",
-		"lint:css": "stylelint **/*.css",
 		"wp-env": "wp-env"
 	}
 }
