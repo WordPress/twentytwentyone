@@ -3857,7 +3857,19 @@ nav a {
 	margin-bottom: 90px;
 }
 
+.page .entry-header {
+	border-bottom: 3px solid #28303d;
+	padding-bottom: 60px;
+	margin-bottom: 90px;
+}
+
 .single .has-post-thumbnail .entry-header {
+	border-bottom: none;
+	padding-bottom: 39px;
+	margin-bottom: 0;
+}
+
+.page .has-post-thumbnail .entry-header {
 	border-bottom: none;
 	padding-bottom: 39px;
 	margin-bottom: 0;
