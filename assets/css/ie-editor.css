@@ -305,6 +305,21 @@ figcaption {
 	padding: 0;
 }
 
+select {
+	border: 3px solid #39414d;
+	border-radius: 0;
+	color: #28303d;
+	font-size: 1.125rem;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	padding: 10px 30px 10px 10px;
+	/* stylelint-disable */
+	background: #fff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2328303d'><polygon points='0,0 10,0 5,5'/></svg>") no-repeat;
+	/* stylelint-enable */
+	background-position: right 10px top 60%;
+}
+
 .wp-block-button__link {
 	color: #d1e4dd;
 	font-weight: 500;
