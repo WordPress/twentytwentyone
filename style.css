@@ -2755,6 +2755,10 @@ nav a {
 	display: none;
 }
 
+.no-results.not-found > *:first-child {
+	margin-bottom: calc(3 * var(--global--spacing-vertical));
+}
+
 .entry-title {
 	color: var(--entry-header--color);
 	font-size: var(--entry-header--font-size);

@@ -3876,6 +3876,10 @@ nav a {
 	display: none;
 }
 
+.no-results.not-found > *:first-child {
+	margin-bottom: 90px;
+}
+
 .entry-title {
 	color: #28303d;
 	font-size: 2.25rem;
