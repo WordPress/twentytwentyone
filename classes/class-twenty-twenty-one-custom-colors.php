@@ -77,9 +77,11 @@ class Twenty_Twenty_One_Custom_Colors {
 	 * Customizer & frontend custom color variables.
 	 *
 	 * @access public
+	 *
+	 * @return void
 	 */
 	public function custom_color_variables() {
-		if ( 'D1E4DD' !== get_theme_mod( 'background_color', 'D1E4DD' ) ) {
+		if ( 'd1e4dd' !== strtolower( get_theme_mod( 'background_color', 'D1E4DD' ) ) ) {
 			wp_add_inline_style( 'twenty-twenty-one-style', $this->generate_custom_color_variables() );
 		}
 	}
@@ -88,9 +90,16 @@ class Twenty_Twenty_One_Custom_Colors {
 	 * Editor custom color variables.
 	 *
 	 * @access public
+	 *
+	 * @return void
 	 */
 	public function editor_custom_color_variables() {
-		wp_enqueue_style( 'twenty-twenty-one-custom-color-overrides', get_template_directory_uri() . '/assets/css/custom-color-overrides.css', array(), wp_get_theme()->get( 'Version' ) );
+		wp_enqueue_style(
+			'twenty-twenty-one-custom-color-overrides',
+			get_theme_file_uri( 'assets/css/custom-color-overrides.css' ),
+			array(),
+			(string) filemtime( get_theme_file_path( 'assets/css/custom-color-overrides.css' ) )
+		);
 		if ( 'D1E4DD' !== get_theme_mod( 'background_color', 'D1E4DD' ) ) {
 			wp_add_inline_style( 'twenty-twenty-one-custom-color-overrides', $this->generate_custom_color_variables( 'editor' ) );
 		}
@@ -124,7 +133,7 @@ class Twenty_Twenty_One_Custom_Colors {
 
 		// Calculate the luminance.
 		$lum = ( 0.2126 * $red ) + ( 0.7152 * $green ) + ( 0.0722 * $blue );
-		return round( $lum );
+		return (int) round( $lum );
 	}
 }
 

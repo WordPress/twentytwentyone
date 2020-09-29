@@ -21,7 +21,8 @@ if ( ! class_exists( 'Twenty_Twenty_One_Non_Latin_Languages' ) ) {
 		 * Return CSS for non-latin language, if available, or null
 		 *
 		 * @param string $type Whether to return CSS for the "front-end", "block-editor" or "classic-editor".
-		 * @return void
+		 *
+		 * @return string
 		 */
 		public static function get_non_latin_css( $type = 'front-end' ) {
 
@@ -95,7 +96,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Non_Latin_Languages' ) ) {
 
 			// Return if the selected language has no fallback fonts.
 			if ( empty( $font_family[ $locale ] ) ) {
-				return;
+				return '';
 			}
 
 			// Define elements to apply fallback fonts to.
@@ -110,12 +111,23 @@ if ( ! class_exists( 'Twenty_Twenty_One_Non_Latin_Languages' ) ) {
 
 			// Return if the specified type doesn't exist.
 			if ( empty( $elements[ $type ] ) ) {
-				return;
+				return '';
+			}
+
+			// Include file if function doesn't exist.
+			if ( ! function_exists( 'twenty_twenty_one_generate_css' ) ) {
+				require_once get_theme_file_path( 'inc/custom-css.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 			}
 
 			// Return the specified styles.
-			return twenty_twenty_one_generate_css( implode( ',', $elements[ $type ] ), 'font-family', implode( ',', $font_family[ $locale ] ), null, null, false );
-
+			return twenty_twenty_one_generate_css( // @phpstan-ignore-line.
+				implode( ',', $elements[ $type ] ),
+				'font-family',
+				implode( ',', $font_family[ $locale ] ),
+				null,
+				null,
+				false
+			);
 		}
 	}
 }
