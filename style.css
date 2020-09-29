@@ -1265,9 +1265,14 @@ input[type="search"]:focus {
 	outline-offset: 0;
 }
 
-input[type="date"],
+input[type="date"] {
+	background: var(--global--color-white);
+}
+
 input[type="color"] {
 	background: var(--global--color-white);
+	padding: calc(var(--form--spacing-unit) / 2);
+	height: calc(4 * var(--form--spacing-unit));
 }
 
 select {
@@ -1277,7 +1282,9 @@ select {
 	-webkit-appearance: none;
 	appearance: none;
 	padding: var(--form--spacing-unit) calc(3 * var(--form--spacing-unit)) var(--form--spacing-unit) var(--form--spacing-unit);
+	/* stylelint-disable */
 	background: var(--global--color-white) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2328303d'><polygon points='0,0 10,0 5,5'/></svg>") no-repeat;
+	/* stylelint-enable */
 	background-position: right var(--form--spacing-unit) top 60%;
 }
 
