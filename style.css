@@ -2588,7 +2588,6 @@ nav a {
 }
 
 .site-footer {
-	overflow: hidden;
 	padding-bottom: calc(1.7 * var(--global--spacing-vertical));
 	margin-top: calc(6 * var(--global--spacing-vertical));
 }
