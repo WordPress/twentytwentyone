@@ -2715,13 +2715,13 @@ nav a {
 	color: var(--footer--color-link);
 }
 
-.single .entry-header {
+.singular .entry-header {
 	border-bottom: 3px solid var(--global--color-border);
 	padding-bottom: calc(2 * var(--global--spacing-vertical));
 	margin-bottom: calc(3 * var(--global--spacing-vertical));
 }
 
-.single .has-post-thumbnail .entry-header {
+.singular .has-post-thumbnail .entry-header {
 	border-bottom: none;
 	padding-bottom: calc(1.3 * var(--global--spacing-vertical));
 	margin-bottom: 0;
