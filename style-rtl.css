@@ -3362,11 +3362,11 @@ h2.page-title {
 	display: none;
 }
 
-.menu-button-container .button[aria-expanded*=true] .dropdown-icon.open {
+.menu-button-container .button[aria-expanded*="true"] .dropdown-icon.open {
 	display: none;
 }
 
-.menu-button-container .button[aria-expanded*=true] .dropdown-icon.close {
+.menu-button-container .button[aria-expanded*="true"] .dropdown-icon.close {
 	display: flex;
 }
 
