@@ -1387,49 +1387,7 @@ body {
 	background-color: #d1e4dd;
 }
 
-a {
-	border-bottom: 1px solid #39414d;
-	color: #28303d;
-	text-decoration: none;
-	transition: border-color 0.1s ease-out;
-}
-
-a:hover, a:focus {
-	border-bottom-color: transparent;
-}
-
-a:hover {
-	color: #28303d;
-}
-
-a:focus {
-	color: #39414d;
-}
-
-a:active {
-	color: #28303d;
-}
-
-.has-link-color a {
-	border-bottom: 1px solid #28303d;
-}
-
-.has-background:not(.has-background-background-color) .has-link-color a {
-	color: #28303d;
-}
-
-.has-background:not(.has-background-background-color).has-link-color a {
-	color: #28303d;
-}
-
-.site *:focus {
-	outline-width: 1px;
-	outline-style: dotted;
-	outline-color: #39414d;
-}
-
-button,
-a {
+button {
 	cursor: pointer;
 }
 
@@ -1826,6 +1784,34 @@ cite,
 em,
 i {
 	font-style: italic;
+}
+
+/*
+ * text-underline-offset doesn't work in Chrome at all 👎
+ * But looks nice in Safari/Firefox, so let's keep it and
+ * maybe Chrome will support it soon.
+ */
+a {
+	cursor: pointer;
+	color: #28303d;
+	text-underline-offset: 3px;
+}
+
+a:hover {
+	text-decoration-style: dotted;
+}
+
+.site a:focus {
+	outline: 2px solid #28303d;
+	text-decoration: none;
+}
+
+.has-background:not(.has-background-background-color) .has-link-color a {
+	color: #28303d;
+}
+
+.has-background:not(.has-background-background-color).has-link-color a {
+	color: #28303d;
 }
 
 /* Category 05 is all about adjusting the default block styles to the given layout. I only added three blocks as examples. */
@@ -2591,6 +2577,10 @@ img {
 
 .wp-block-image.is-style-twentytwentyone-image-frame img {
 	padding: 20px;
+<<<<<<< HEAD
+	border: 3px solid #28303d;
+=======
+>>>>>>> trunk
 }
 
 .wp-block-latest-comments {
@@ -3785,14 +3775,13 @@ nav a {
 
 @media only screen and (min-width: 482px) {
 	.site-logo .custom-logo {
-		max-width: 120px;
-		max-height: 120px;
+		max-width: 300px;
+		max-height: 100px;
 		height: auto;
 	}
 }
 
 .site-footer {
-	overflow: hidden;
 	padding-bottom: 51px;
 	margin-top: 180px;
 }
@@ -4193,20 +4182,9 @@ h2.page-title {
 	padding-bottom: 60px;
 }
 
-.error-404 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 60vh;
-	flex-direction: column;
-}
-
-.error404 .page-header {
-	border-bottom: 3px solid transparent;
-}
-
-.error404 p {
+.error404 main p {
 	font-size: 1.5rem;
+	margin-bottom: 50px;
 }
 
 .search-no-results .page-content {

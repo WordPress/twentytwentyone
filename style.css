@@ -229,8 +229,8 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--branding--description--font-family: var(--global--font-secondary);
 	--branding--description--font-size: var(--global--font-size-sm);
 	--branding--description--font-family: var(--global--font-secondary);
-	--branding--logo--max-width: 120px;
-	--branding--logo--max-height: 120px;
+	--branding--logo--max-width: 300px;
+	--branding--logo--max-height: 100px;
 	--branding--logo--max-width-mobile: 96px;
 	--branding--logo--max-height-mobile: 96px;
 	/* Main navigation */
@@ -1055,46 +1055,7 @@ body {
 	background-color: var(--global--color-background);
 }
 
-a {
-	border-bottom: 1px solid var(--global--color-secondary);
-	color: var(--wp--style--color--link, var(--global--color-primary));
-	text-decoration: none;
-	transition: border-color 0.1s ease-out;
-}
-
-a:hover, a:focus {
-	border-bottom-color: transparent;
-}
-
-a:hover {
-	color: var(--global--color-primary-hover);
-}
-
-a:focus {
-	color: var(--global--color-secondary);
-}
-
-a:active {
-	color: var(--wp--style--color--link, var(--global--color-primary));
-}
-
-.has-link-color a {
-	border-bottom: 1px solid var(--wp--style--color--link, var(--global--color-primary));
-}
-
-.has-background:not(.has-background-background-color) .has-link-color a,
-.has-background:not(.has-background-background-color).has-link-color a {
-	color: var(--wp--style--color--link, var(--global--color-primary));
-}
-
-.site *:focus {
-	outline-width: 1px;
-	outline-style: dotted;
-	outline-color: var(--global--color-secondary);
-}
-
-button,
-a {
+button {
 	cursor: pointer;
 }
 
@@ -1288,6 +1249,31 @@ cite,
 em,
 i {
 	font-style: italic;
+}
+
+/*
+ * text-underline-offset doesn't work in Chrome at all 👎
+ * But looks nice in Safari/Firefox, so let's keep it and
+ * maybe Chrome will support it soon.
+ */
+a {
+	cursor: pointer;
+	color: var(--wp--style--color--link, var(--global--color-primary));
+	text-underline-offset: 3px;
+}
+
+a:hover {
+	text-decoration-style: dotted;
+}
+
+.site a:focus {
+	outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
+	text-decoration: none;
+}
+
+.has-background:not(.has-background-background-color) .has-link-color a,
+.has-background:not(.has-background-background-color).has-link-color a {
+	color: var(--wp--style--color--link, var(--global--color-primary));
 }
 
 /* Category 05 is all about adjusting the default block styles to the given layout. I only added three blocks as examples. */
@@ -2675,7 +2661,6 @@ nav a {
 }
 
 .site-footer {
-	overflow: hidden;
 	padding-bottom: calc(1.7 * var(--global--spacing-vertical));
 	margin-top: calc(6 * var(--global--spacing-vertical));
 }
@@ -3007,20 +2992,9 @@ h2.page-title {
 	padding-bottom: calc(2 * var(--global--spacing-vertical));
 }
 
-.error-404 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 60vh;
-	flex-direction: column;
-}
-
-.error404 .page-header {
-	border-bottom: 3px solid transparent;
-}
-
-.error404 p {
+.error404 main p {
 	font-size: var(--global--font-size-lg);
+	margin-bottom: calc(var(--global--spacing-vertical) * 1.6666666667);
 }
 
 .search-no-results .page-content {

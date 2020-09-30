@@ -19,4 +19,10 @@
 | @whyisjake | @whyisjake |
 | @metodiew | @metodiew |
 | @ryelle | @ryelle |
-
+| @nielslange | @nielslange |
+| @littlebigthing | @littlebigthing |
+| @maheshwaghmare | @mahesh901122 |
+| @zebulanstanphill | @zebulan |
+| @kishanjasani | @kishanjasani |
+| @lukecav | @lukecavanagh |
+| @scruffian | @scruffian |

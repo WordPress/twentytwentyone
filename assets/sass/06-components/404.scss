@@ -1,15 +1,4 @@
-.error-404 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 60vh;
-	flex-direction: column;
-}
-
-.error404 .page-header {
-	border-bottom: 3px solid transparent;
-}
-
-.error404 p {
+.error404 main p {
 	font-size: var(--global--font-size-lg);
+	margin-bottom: calc(var(--global--spacing-vertical) * 1.6666666667);
 }
