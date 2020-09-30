@@ -1055,46 +1055,7 @@ body {
 	background-color: var(--global--color-background);
 }
 
-a {
-	border-bottom: 1px solid var(--global--color-secondary);
-	color: var(--wp--style--color--link, var(--global--color-primary));
-	text-decoration: none;
-	transition: border-color 0.1s ease-out;
-}
-
-a:hover, a:focus {
-	border-bottom-color: transparent;
-}
-
-a:hover {
-	color: var(--global--color-primary-hover);
-}
-
-a:focus {
-	color: var(--global--color-secondary);
-}
-
-a:active {
-	color: var(--wp--style--color--link, var(--global--color-primary));
-}
-
-.has-link-color a {
-	border-bottom: 1px solid var(--wp--style--color--link, var(--global--color-primary));
-}
-
-.has-background:not(.has-background-background-color) .has-link-color a,
-.has-background:not(.has-background-background-color).has-link-color a {
-	color: var(--wp--style--color--link, var(--global--color-primary));
-}
-
-.site *:focus {
-	outline-width: 1px;
-	outline-style: dotted;
-	outline-color: var(--global--color-secondary);
-}
-
-button,
-a {
+button {
 	cursor: pointer;
 }
 
@@ -1288,6 +1249,31 @@ cite,
 em,
 i {
 	font-style: italic;
+}
+
+/*
+ * text-underline-offset doesn't work in Chrome at all 👎
+ * But looks nice in Safari/Firefox, so let's keep it and
+ * maybe Chrome will support it soon.
+ */
+a {
+	cursor: pointer;
+	color: var(--wp--style--color--link, var(--global--color-primary));
+	text-underline-offset: 3px;
+}
+
+a:hover {
+	text-decoration-style: dotted;
+}
+
+.site a:focus {
+	outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
+	text-decoration: none;
+}
+
+.has-background:not(.has-background-background-color) .has-link-color a,
+.has-background:not(.has-background-background-color).has-link-color a {
+	color: var(--wp--style--color--link, var(--global--color-primary));
 }
 
 /* Category 05 is all about adjusting the default block styles to the given layout. I only added three blocks as examples. */
@@ -2675,7 +2661,6 @@ nav a {
 }
 
 .site-footer {
-	overflow: hidden;
 	padding-bottom: calc(1.7 * var(--global--spacing-vertical));
 	margin-top: calc(6 * var(--global--spacing-vertical));
 }
