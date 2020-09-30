@@ -55,7 +55,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 			$wp_customize->selective_refresh->add_partial(
 				'retina_logo',
 				array(
-					'selector'        => 'custom-logo',
+					'selector'        => '.custom-logo',
 					'render_callback' => 'twenty_twenty_one_customize_partial_site_logo',
 				)
 			);
