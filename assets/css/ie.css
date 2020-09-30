@@ -3785,8 +3785,8 @@ nav a {
 
 @media only screen and (min-width: 482px) {
 	.site-logo .custom-logo {
-		max-width: 120px;
-		max-height: 120px;
+		max-width: 300px;
+		max-height: 100px;
 		height: auto;
 	}
 }
