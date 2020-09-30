@@ -3739,6 +3739,7 @@ table th {
 	.site-branding {
 		margin-right: initial;
 		margin-bottom: 30px;
+		margin-top: 4px;
 		/* TODO: Make room for the menu if the title is very long.*/
 	}
 }
@@ -4804,7 +4805,7 @@ h2.page-title {
 		min-width: max-content;
 		opacity: 0;
 		position: absolute;
-		top: calc(100% - 7px);
+		top: calc(100% - 13px);
 		transition: all 0.5s ease;
 		visibility: hidden;
 	}
@@ -4819,7 +4820,7 @@ h2.page-title {
 }
 
 .primary-navigation .primary-menu-container > ul > .menu-item {
-	padding: 13px;
+	padding: 0 13px;
 }
 
 @media only screen and (min-width: 482px) {
@@ -4836,6 +4837,7 @@ h2.page-title {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1.25rem;
 	font-weight: normal;
+	padding: 13px 0;
 }
 
 @media only screen and (min-width: 482px) {
@@ -4864,7 +4866,11 @@ h2.page-title {
 }
 
 .primary-navigation a:hover {
-	text-decoration: underline dashed;
+	text-decoration: underline dotted;
+}
+
+.primary-navigation a:focus {
+	z-index: 99999;
 }
 
 .primary-navigation .current-menu-item > a:first-child,
@@ -4874,7 +4880,7 @@ h2.page-title {
 
 .primary-navigation .current-menu-item > a:first-child:hover,
 .primary-navigation .current_page_item > a:first-child:hover {
-	text-decoration: underline dashed;
+	text-decoration: underline dotted;
 }
 
 .primary-navigation .sub-menu {
@@ -4899,7 +4905,6 @@ h2.page-title {
 	display: inline;
 	font-size: 1.125rem;
 	font-style: normal;
-	padding: 13px 0;
 }
 
 @media only screen and (min-width: 482px) {

@@ -239,7 +239,7 @@
 				min-width: max-content;
 				opacity: 0;
 				position: absolute;
-				top: calc(100% - (0.5 * var(--primary-nav--padding)));
+				top: calc(100% - var(--primary-nav--padding));
 				transition: all 0.5s ease;
 				visibility: hidden;
 			}
@@ -256,7 +256,7 @@
 	}
 	// Top-level Menu Item
 	.primary-menu-container > ul > .menu-item {
-		padding: var(--primary-nav--padding);
+		padding: 0 var(--primary-nav--padding);
 
 		@include media(mobile) {
 			display: flex;
@@ -272,6 +272,7 @@
 		font-family: var(--primary-nav--font-family-mobile);
 		font-size: var(--primary-nav--font-size-mobile);
 		font-weight: var(--primary-nav--font-weight);
+		padding: var(--primary-nav--padding) 0;
 
 		@include media(mobile) {
 			display: block;
@@ -291,7 +292,11 @@
 		}
 
 		&:hover {
-			text-decoration: underline dashed; // This will be redundant when #110 is addressed
+			text-decoration: underline dotted;
+		}
+
+		&:focus {
+			z-index: 99999; // Ensure focus styles appear above absolute positioned elements
 		}
 	}
 
@@ -300,7 +305,7 @@
 		text-decoration: underline solid;
 
 		&:hover {
-			text-decoration: underline dashed;
+			text-decoration: underline dotted;
 		}
 	}
 
@@ -320,13 +325,12 @@
 		}
 
 		.menu-item {
-			margin: calc( 2 * var(--primary-nav--padding)) 0;
+			margin: calc(2 * var(--primary-nav--padding)) 0;
 
 			> a {
 				display: inline;
 				font-size: var(--primary-nav--font-size-sub-menu-mobile);
 				font-style: var(--primary-nav--font-style-sub-menu-mobile);
-				padding: var(--primary-nav--padding) 0;
 
 				@include media(mobile) {
 					font-size: var(--primary-nav--font-size-sub-menu);

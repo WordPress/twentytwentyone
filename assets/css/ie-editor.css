@@ -1745,8 +1745,8 @@ pre.wp-block-verse {
 	font-weight: 300;
 }
 
-@media only screen and (min-width: 652px) {
-	.is-gigantic-text {
+@media only screen and (min-width: 652px){
+	.is-gigantic-text{
 	font-size: 6rem;
 	}
 }
@@ -1757,8 +1757,8 @@ pre.wp-block-verse {
 	font-weight: 300;
 }
 
-@media only screen and (min-width: 652px) {
-	.has-gigantic-font-size {
+@media only screen and (min-width: 652px){
+	.has-gigantic-font-size{
 	font-size: 6rem;
 	}
 }
