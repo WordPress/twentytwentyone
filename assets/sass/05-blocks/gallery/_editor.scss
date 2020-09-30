@@ -3,4 +3,50 @@
 	figcaption {
 		margin-bottom: 0;
 	}
+
+	// Block Styles
+	&.is-style-twentytwentyone-overlapping-gallery {
+
+		.blocks-gallery-grid {
+			display: grid;
+			grid-template-rows: repeat(#{ 8 }, 1fr);
+			grid-template-columns: repeat(#{ 7 }, 1fr);
+		}
+		
+		.blocks-gallery-item {
+			margin: 0;
+			width: 100%;
+			justify-self: start;
+
+			figure {
+				align-items: flex-start;
+			}
+
+			// Hide the caption. Not ideal, but it works.
+			figcaption {
+				display: none;
+			}
+
+			&:nth-child(1) {
+				grid-column-start: 1;
+				grid-column-end: span 3;
+				grid-row-start: 1;
+				grid-row-end: span 4;
+			}
+
+			&:nth-child(2) {
+				grid-column-start: 5;
+				grid-column-end: span 7;
+				grid-row-start: 3;
+				grid-row-end: span 4;
+			}
+
+			&:nth-child(3) {
+				grid-column-start: 1;
+				grid-column-end: span 5;
+				grid-row-start: 6;
+				grid-row-end: 9;
+			}
+		}
+	}
 }
