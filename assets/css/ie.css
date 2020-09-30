@@ -4193,20 +4193,9 @@ h2.page-title {
 	padding-bottom: 60px;
 }
 
-.error-404 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 60vh;
-	flex-direction: column;
-}
-
-.error404 .page-header {
-	border-bottom: 3px solid transparent;
-}
-
-.error404 p {
+.error404 main p {
 	font-size: 1.5rem;
+	margin-bottom: 50px;
 }
 
 .search-no-results .page-content {
