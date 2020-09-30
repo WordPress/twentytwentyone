@@ -33,6 +33,8 @@
 	<!-- Include the WordPress ruleset. -->
 	<rule ref="WordPress">
 		<exclude name="WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_style" />
+		<exclude name="WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_pattern" />
+		<exclude name="WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_pattern_category" />
 	</rule>
 	<rule ref="WPThemeReview" />
 

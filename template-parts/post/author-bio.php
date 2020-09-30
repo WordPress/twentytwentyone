@@ -8,7 +8,7 @@
  */
 
 ?>
-<div class="author-bio <?php echo get_option( 'show_avatars' ) ? esc_attr( 'show-avatars' ) : ''; ?>">
+<div class="author-bio <?php echo get_option( 'show_avatars' ) ? 'show-avatars' : ''; ?>">
 	<?php echo get_avatar( get_the_author_meta( 'ID' ), '85' ); ?>
 	<div class="author-bio-content">
 		<h2 class="author-title"><?php printf( /* translators: 1: Author name */ esc_html__( 'By %s', 'twentytwentyone' ), get_the_author() ); ?></h2>

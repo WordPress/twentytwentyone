@@ -17,11 +17,60 @@ if ( function_exists( 'register_block_style' ) ) {
 	 */
 	function twenty_twenty_one_register_block_styles() {
 		register_block_style(
+			'core/image',
+			array(
+				'name'  => 'twentytwentyone-image-frame',
+				'label' => __( 'Bordered Frame', 'twentytwentyone' ),
+			)
+		);
+
+		register_block_style(
+			'core/image',
+			array(
+				'name'  => 'twentytwentyone-border',
+				'label' => __( 'Bordered', 'twentytwentyone' ),
+			)
+		);
+
+		register_block_style(
+			'core/cover',
+			array(
+				'name'  => 'twentytwentyone-border',
+				'label' => __( 'Bordered', 'twentytwentyone' ),
+			)
+		);
+
+		register_block_style(
+			'core/group',
+			array(
+				'name'  => 'twentytwentyone-border',
+				'label' => __( 'Bordered', 'twentytwentyone' ),
+			)
+		);
+
+		register_block_style(
+			'core/media-text',
+			array(
+				'name'  => 'twentytwentyone-border',
+				'label' => __( 'Bordered', 'twentytwentyone' ),
+			)
+		);
+
+		/* Latest Posts: Dividers */
+		register_block_style(
 			'core/latest-posts',
 			array(
-				'name'         => 'twenty-twenty-one-alternating-grid',
-				'label'        => __( 'Alternating Grid', 'twentytwentyone' ),
-				'style_handle' => 'twenty-twenty-one-alternating-grid',
+				'name'  => 'twentytwentyone-latest-posts-dividers',
+				'label' => __( 'Dividers', 'twentytwentyone' ),
+			)
+		);
+
+		/* Latest Posts: Borders */
+		register_block_style(
+			'core/latest-posts',
+			array(
+				'name'  => 'twentytwentyone-latest-posts-borders',
+				'label' => __( 'Borders', 'twentytwentyone' ),
 			)
 		);
 	}

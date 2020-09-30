@@ -116,7 +116,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Non_Latin_Languages' ) ) {
 
 			// Include file if function doesn't exist.
 			if ( ! function_exists( 'twenty_twenty_one_generate_css' ) ) {
-				require_once get_theme_file_path( 'inc/custom-css.php' );
+				require_once get_theme_file_path( 'inc/custom-css.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 			}
 
 			// Return the specified styles.

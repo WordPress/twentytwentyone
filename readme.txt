@@ -63,3 +63,5 @@ Images
 Irises, Vincent van Gogh, 1890. Public domain. https://www.metmuseum.org/art/collection/search/436528
 Girl in white, Vincent van Gogh, 1890. Public domain. https://www.nga.gov/collection/art-object-page.46505.html
 The smoker, Vincent van Gogh, 1888. Public domain. https://collection.barnesfoundation.org/objects/5177/The-Smoker-(Le-Fumeur)/
+La Mousmé, Vincent van Gogh, 1888. Public domain. https://www.nga.gov/collection/art-object-page.46626.html
+La Berceuse (Woman Rocking a Cradle), Vincent van Gogh, 1889. Public domain. https://www.metmuseum.org/art/collection/search/437984

@@ -1,4 +1,4 @@
-/* Add all variables here. */
+/* Variables */
 
 // Vertical Rhythm Multiplier
 $baseline-unit: 10px;
@@ -83,7 +83,7 @@ $baseline-unit: 10px;
 	--global--color-primary-hover: var(--global--color-primary);
 	--global--color-secondary-hover: var(--global--color-secondary);
 	--global--color-background: var(--global--color-green); /* Mint, default body background */
-	--global--color-border: var(--global--color-black); /* Used for borders (separators) */
+	--global--color-border: var(--global--color-dark-gray); /* Used for borders (separators) */
 
 	/* Spacing */
 	--global--spacing-unit: #{2 * $baseline-unit}; // 20px
