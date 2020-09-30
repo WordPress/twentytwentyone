@@ -10,8 +10,7 @@
 	top: 0;
 	width: 100%;
 
-	#primary-open-menu,
-	#primary-close-menu {
+	#primary-mobile-menu {
 		margin-left: auto;
 		padding: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit))) calc(var(--button--padding-horizontal) - (0.25 * var(--global--spacing-unit)));
 		margin-top: calc(0.25 * var(--global--spacing-unit));
@@ -27,6 +26,7 @@
 	}
 
 	.button {
+		display: flex;
 		font-size: var(--primary-nav--font-size-button);
 		font-weight: var(--primary-nav--font-weight-button);
 		text-transform: var(--branding--title--text-transform);
@@ -34,12 +34,11 @@
 		color: var(--primary-nav--color-link);
 		z-index: 500;
 
-		&.open {
+		.expanded-text {
 			display: flex;
-			z-index: 499;
 		}
 
-		&.close {
+		.collapsed-text {
 			display: none;
 		}
 
@@ -55,6 +54,28 @@
 			&.open .svg-icon {
 				position: relative;
 				top: -1px;
+			}
+
+			&.close {
+				display: none;
+			}
+		}
+
+		&.expanded {
+			.expanded-text {
+				display: none;
+			}
+			.collapsed-text {
+				display: flex;
+			}
+
+			.dropdown-icon {
+				&.open {
+					display: none;
+				}
+				&.close {
+					display: flex;
+				}
 			}
 		}
 
@@ -72,11 +93,7 @@
 	// When the menu is open, hide the close button and show the hide button.
 	.primary-navigation-open & {
 
-		#primary-open-menu {
-			display: none;
-		}
-
-		#primary-close-menu {
+		#primary-mobile-menu {
 			display: flex;
 		}
 	}

@@ -4577,14 +4577,7 @@ h2.page-title {
 	width: 100%;
 }
 
-.menu-button-container #primary-open-menu {
-	margin-left: auto;
-	padding: 18px 20px;
-	margin-top: 5px;
-	margin-right: 5px;
-}
-
-.menu-button-container #primary-close-menu {
+.menu-button-container #primary-mobile-menu {
 	margin-left: auto;
 	padding: 18px 20px;
 	margin-top: 5px;
@@ -4602,6 +4595,7 @@ h2.page-title {
 }
 
 .menu-button-container .button {
+	display: flex;
 	font-size: 1rem;
 	font-weight: 500;
 	text-transform: uppercase;
@@ -4610,12 +4604,11 @@ h2.page-title {
 	z-index: 500;
 }
 
-.menu-button-container .button.open {
+.menu-button-container .button .expanded-text {
 	display: flex;
-	z-index: 499;
 }
 
-.menu-button-container .button.close {
+.menu-button-container .button .collapsed-text {
 	display: none;
 }
 
@@ -4633,6 +4626,26 @@ h2.page-title {
 	top: -1px;
 }
 
+.menu-button-container .button .dropdown-icon.close {
+	display: none;
+}
+
+.menu-button-container .button.expanded .expanded-text {
+	display: none;
+}
+
+.menu-button-container .button.expanded .collapsed-text {
+	display: flex;
+}
+
+.menu-button-container .button.expanded .dropdown-icon.open {
+	display: none;
+}
+
+.menu-button-container .button.expanded .dropdown-icon.close {
+	display: flex;
+}
+
 .menu-button-container .button .hide-visually {
 	position: absolute !important;
 	clip: rect(1px, 1px, 1px, 1px);
@@ -4643,11 +4656,7 @@ h2.page-title {
 	overflow: hidden;
 }
 
-.primary-navigation-open .menu-button-container #primary-open-menu {
-	display: none;
-}
-
-.primary-navigation-open .menu-button-container #primary-close-menu {
+.primary-navigation-open .menu-button-container #primary-mobile-menu {
 	display: flex;
 }
 
