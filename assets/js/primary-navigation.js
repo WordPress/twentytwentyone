@@ -47,7 +47,8 @@
 			if ( escKey ) {
 				event.preventDefault();
 				wrapper.classList.remove( `${ id }-navigation-open`, 'lock-scrolling' );
-				openButton.focus();
+				mobileButton.classList.remove( 'expanded' );
+				mobileButton.focus();
 			}
 
 			if ( ! shiftKey && tabKey && lastEl === activeEl ) {
