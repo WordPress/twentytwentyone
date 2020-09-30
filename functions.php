@@ -81,11 +81,20 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 		 *
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
+		$logo_width  = 300;
+		$logo_height = 100;
+
+		// If the retina setting is active, double the recommended width and height.
+		if ( get_theme_mod( 'retina_logo', false ) ) {
+			$logo_width  = floor( $logo_width * 2 );
+			$logo_height = floor( $logo_height * 2 );
+		}
+
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'               => 240,
-				'width'                => 240,
+				'height'               => $logo_height,
+				'width'                => $logo_width,
 				'flex-width'           => false,
 				'flex-height'          => false,
 				'unlink-homepage-logo' => true,
@@ -404,7 +413,7 @@ require get_template_directory() . '/inc/template-tags.php';
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/classes/class-twenty-twenty-one-customize.php';
 
 /**
  * Block Patterns.

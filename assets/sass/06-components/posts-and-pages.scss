@@ -14,3 +14,7 @@
 .updated:not(.published) {
 	display: none;
 }
+
+.no-results.not-found > *:first-child {
+	margin-bottom: calc(3 * var(--global--spacing-vertical));
+}

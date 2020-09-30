@@ -1,16 +1,3 @@
-/* Any helpful mixins we need? Put them here. */
-
-/*
-Example:
-@mixin typography {
-	color: var(--color-charcoal);
-	font-family: var(--font-family);
-	font-size: var(--font-size-global);
-	line-height: var(--line-height-global);
-	word-wrap: break-word;
-}
-*/
-
 // Responsive breakpoints mixin
 @mixin add_variables( $view: frontend ) {
 

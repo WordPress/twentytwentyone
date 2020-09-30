@@ -49,6 +49,7 @@
 
 			document.documentElement.style.setProperty( '--global--color-primary', textColor );
 			document.documentElement.style.setProperty( '--global--color-secondary', textColor );
+      document.documentElement.style.setProperty( '--global--color-background', to );
 			document.documentElement.style.setProperty( '--global--color-border', borderColor );
 
 		} );
