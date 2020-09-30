@@ -159,6 +159,12 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 					'size'      => 40,
 					'slug'      => 'huge',
 				),
+				array(
+					'name'      => __( 'Gigantic', 'twentytwentyone' ),
+					'shortName' => __( 'XXL', 'twentytwentyone' ),
+					'size'      => 96,
+					'slug'      => 'gigantic',
+				),
 			)
 		);
 
