@@ -16,6 +16,8 @@ if ( function_exists( 'register_block_style' ) ) {
 	 * @return void
 	 */
 	function twenty_twenty_one_register_block_styles() {
+
+		/* Image: Bordered Frame */
 		register_block_style(
 			'core/image',
 			array(
@@ -24,6 +26,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			)
 		);
 
+		/* Image: Bordered */
 		register_block_style(
 			'core/image',
 			array(
@@ -32,6 +35,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			)
 		);
 
+		/* Cover: Bordered */
 		register_block_style(
 			'core/cover',
 			array(
@@ -39,7 +43,8 @@ if ( function_exists( 'register_block_style' ) ) {
 				'label' => __( 'Bordered', 'twentytwentyone' ),
 			)
 		);
-
+ 
+		/* Group: Bordered */
 		register_block_style(
 			'core/group',
 			array(
@@ -48,6 +53,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			)
 		);
 
+		/* Media & Text: Bordered */
 		register_block_style(
 			'core/media-text',
 			array(
@@ -71,6 +77,15 @@ if ( function_exists( 'register_block_style' ) ) {
 			array(
 				'name'  => 'twentytwentyone-latest-posts-borders',
 				'label' => __( 'Borders', 'twentytwentyone' ),
+			)
+		);
+
+		/* Gallery: Overlapping Gallery */
+		register_block_style(
+			'core/gallery',
+			array(
+				'name'  => 'twentytwentyone-overlapping-gallery',
+				'label' => __( 'Overlapping Gallery', 'twentytwentyone' ),
 			)
 		);
 	}
