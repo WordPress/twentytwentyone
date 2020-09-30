@@ -10,8 +10,7 @@
 	top: 0;
 	width: 100%;
 
-	#primary-open-menu,
-	#primary-close-menu {
+	#primary-mobile-menu {
 		margin-left: auto;
 		padding: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit))) calc(var(--button--padding-horizontal) - (0.25 * var(--global--spacing-unit)));
 		margin-top: calc(0.25 * var(--global--spacing-unit));
@@ -27,21 +26,13 @@
 	}
 
 	.button {
+		display: flex;
 		font-size: var(--primary-nav--font-size-button);
 		font-weight: var(--primary-nav--font-weight-button);
 		text-transform: var(--branding--title--text-transform);
 		background-color: transparent;
 		color: var(--primary-nav--color-link);
 		z-index: 500;
-
-		&.open {
-			display: flex;
-			z-index: 499;
-		}
-
-		&.close {
-			display: none;
-		}
 
 		.dropdown-icon {
 			display: flex;
@@ -56,27 +47,32 @@
 				position: relative;
 				top: -1px;
 			}
+
+			&.close {
+				display: none;
+			}
 		}
 
-		.hide-visually {
-			position: absolute !important;
-			clip: rect(1px, 1px, 1px, 1px);
-			padding: 0 !important;
-			border: 0 !important;
-			height: 1px !important;
-			width: 1px !important;
-			overflow: hidden;
+		&[aria-expanded*="true"] {
+
+			.dropdown-icon {
+
+				&.open {
+					display: none;
+				}
+
+				&.close {
+					display: flex;
+				}
+			}
 		}
+
 	}
 
 	// When the menu is open, hide the close button and show the hide button.
 	.primary-navigation-open & {
 
-		#primary-open-menu {
-			display: none;
-		}
-
-		#primary-close-menu {
+		#primary-mobile-menu {
 			display: flex;
 		}
 	}
@@ -363,15 +359,6 @@
 
 	}
 
-	.hide-visually {
-		position: absolute !important;
-		clip: rect(1px, 1px, 1px, 1px);
-		padding: 0 !important;
-		border: 0 !important;
-		height: 1px !important;
-		width: 1px !important;
-		overflow: hidden;
-	}
 }
 
 // Keep the menu pinned to the top when the menu is open.
