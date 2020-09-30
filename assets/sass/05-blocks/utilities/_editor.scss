@@ -94,6 +94,12 @@
 	line-height: var(--global--line-height-heading);
 }
 
+.is-gigantic-text,
+.has-gigantic-font-size {
+	font-size: var(--global--font-size-xxl);
+	line-height: var(--global--line-height-heading);
+}
+
 // Drop cap
 .has-drop-cap:not(:focus)::first-letter {
 	font-family: var(--heading--font-family);

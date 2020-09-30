@@ -1687,6 +1687,28 @@ pre.wp-block-verse {
 	}
 }
 
+.is-gigantic-text {
+	font-size: 4rem;
+	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px) {
+	.is-gigantic-text {
+	font-size: 6rem;
+	}
+}
+
+.has-gigantic-font-size {
+	font-size: 4rem;
+	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px) {
+	.has-gigantic-font-size {
+	font-size: 6rem;
+	}
+}
+
 .has-drop-cap:not(:focus)::first-letter {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 8rem;

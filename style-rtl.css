@@ -107,7 +107,8 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--global--font-size-md: 1.25rem;
 	--global--font-size-lg: 1.5rem;
 	--global--font-size-xl: 2.25rem;
-	--global--font-size-page-title: 4rem;
+	--global--font-size-xxl: 4rem;
+	--global--font-size-page-title: var(--global--font-size-xxl);
 	--global--letter-spacing: normal;
 	/* Line Height */
 	--global--line-height-base: 1;
@@ -295,7 +296,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 @media only screen and (min-width: 652px) {
 	:root {
 		--global--font-size-xl: 2.5rem;
-		--global--font-size-page-title: 6rem;
+		--global--font-size-xxl: 6rem;
 		--heading--font-size-h3: 2rem;
 		--heading--font-size-h2: 3rem;
 	}
@@ -2534,6 +2535,12 @@ table th,
 :root .is-huge-text,
 :root .has-huge-font-size {
 	font-size: var(--global--font-size-xl);
+	line-height: var(--global--line-height-heading);
+}
+
+:root .is-gigantic-text,
+:root .has-gigantic-font-size {
+	font-size: var(--global--font-size-xxl);
 	line-height: var(--global--line-height-heading);
 }
 
