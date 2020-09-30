@@ -110,10 +110,10 @@ a {
 }
 
 // Focus styles
-.site *:focus {
-	outline-width: 1px;
-	outline-style: dotted;
+*:focus {
 	outline-color: var(--global--color-secondary);
+	outline-style: dotted;
+	outline-width: 1px;
 }
 
 button,

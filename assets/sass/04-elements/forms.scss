@@ -14,6 +14,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
+	background-color: var(--global--color-white-50);
 	border: var(--form--border-width) solid var(--form--border-color);
 	border-radius: var(--form--border-radius);
 	color: var(--form--color-text);
@@ -21,8 +22,9 @@ textarea {
 	padding: var(--form--spacing-unit);
 
 	&:focus {
-		color: var(--form--color-text);
+		background-color: var(--global--color-white);
 		border-color: var(--form--border-color);
+		color: var(--form--color-text);
 	}
 }
 

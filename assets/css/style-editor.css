@@ -97,11 +97,11 @@
 	--cover--color-background: var(--global--color-black);
 	/* Buttons */
 	--button--color-text: var(--global--color-background);
-	--button--color-text-hover: var(--button--color-text);
+	--button--color-text-hover: var(--global--color-secondary);
 	--button--color-text-active: var(--button--color-text);
-	--button--color-background: var(--global--color-secondary);
-	--button--color-background-hover: var(--global--color-secondary-hover);
-	--button--color-background-active: var(--global--color-primary);
+	--button--color-background: var(--button--color-text-hover);
+	--button--color-background-hover: var(--global--color-background);
+	--button--color-background-active: var(--button--color-background);
 	--button--font-family: var(--global--font-ui);
 	--button--font-size: var(--global--font-size-base);
 	--button--font-weight: normal;
@@ -212,14 +212,14 @@
 /* Button extends */
 .wp-block-search .wp-block-search__button {
 	line-height: var(--button--line-height);
+	background-color: var(--button--color-background);
+	border-radius: var(--button--border-radius);
+	border-width: 0;
 	color: var(--button--color-text);
 	cursor: pointer;
 	font-weight: var(--button--font-weight);
 	font-family: var(--button--font-family);
 	font-size: var(--button--font-size);
-	background-color: var(--button--color-background);
-	border-radius: var(--button--border-radius);
-	border-width: 0;
 	text-decoration: none;
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
@@ -240,13 +240,28 @@
 }
 
 .wp-block-search .wp-block-search__button:active {
-	color: var(--button--color-text-active);
 	background-color: var(--button--color-background-active);
+	color: var(--button--color-text-active);
 }
 
-.wp-block-search .wp-block-search__button:hover, .wp-block-search .wp-block-search__button:focus, .wp-block-search .has-focus.wp-block-search__button {
-	color: var(--button--color-text-hover);
+.wp-block-search .wp-block-search__button:hover {
 	background-color: var(--button--color-background-hover);
+	border-color: var(--button--color-background);
+	border-style: solid;
+	border-width: var(--button--border-width);
+	color: var(--button--color-text-hover);
+	padding: calc(var(--button--padding-vertical) - var(--button--border-width)) calc(var(--button--padding-horizontal) - var(--button--border-width));
+}
+
+.wp-block-search .wp-block-search__button:focus, .wp-block-search .has-focus.wp-block-search__button {
+	background-color: var(--button--color-background);
+	border-color: var(--button--color-background);
+	border-style: solid;
+	border-width: var(--button--border-width);
+	color: var(--button--color-text);
+	outline-color: var(--button--color-text);
+	outline-offset: calc(var(--button--border-width) * -2.5);
+	padding: calc(var(--button--padding-vertical) - var(--button--border-width)) calc(var(--button--padding-horizontal) - var(--button--border-width));
 }
 
 /**

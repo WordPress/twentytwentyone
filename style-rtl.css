@@ -189,11 +189,11 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--cover--color-background: var(--global--color-black);
 	/* Buttons */
 	--button--color-text: var(--global--color-background);
-	--button--color-text-hover: var(--button--color-text);
+	--button--color-text-hover: var(--global--color-secondary);
 	--button--color-text-active: var(--button--color-text);
-	--button--color-background: var(--global--color-secondary);
-	--button--color-background-hover: var(--global--color-secondary-hover);
-	--button--color-background-active: var(--global--color-primary);
+	--button--color-background: var(--button--color-text-hover);
+	--button--color-background-hover: var(--global--color-background);
+	--button--color-background-active: var(--button--color-background);
 	--button--font-family: var(--global--font-ui);
 	--button--font-size: var(--global--font-size-base);
 	--button--font-weight: normal;
@@ -307,14 +307,14 @@ button,
 input[type="submit"],
 .wp-block-button__link, .wp-block-file .wp-block-file__button {
 	line-height: var(--button--line-height);
+	background-color: var(--button--color-background);
+	border-radius: var(--button--border-radius);
+	border-width: 0;
 	color: var(--button--color-text);
 	cursor: pointer;
 	font-weight: var(--button--font-weight);
 	font-family: var(--button--font-family);
 	font-size: var(--button--font-size);
-	background-color: var(--button--color-background);
-	border-radius: var(--button--border-radius);
-	border-width: 0;
 	text-decoration: none;
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
@@ -350,22 +350,37 @@ button:active,
 .button:active,
 input:active[type="submit"],
 .wp-block-button__link:active, .wp-block-file .wp-block-file__button:active {
-	color: var(--button--color-text-active);
 	background-color: var(--button--color-background-active);
+	color: var(--button--color-text-active);
 }
 
 button:hover,
 .button:hover,
 input:hover[type="submit"],
-.wp-block-button__link:hover, .wp-block-file .wp-block-file__button:hover, button:focus,
+.wp-block-button__link:hover, .wp-block-file .wp-block-file__button:hover {
+	background-color: var(--button--color-background-hover);
+	border-color: var(--button--color-background);
+	border-style: solid;
+	border-width: var(--button--border-width);
+	color: var(--button--color-text-hover);
+	padding: calc(var(--button--padding-vertical) - var(--button--border-width)) calc(var(--button--padding-horizontal) - var(--button--border-width));
+}
+
+button:focus,
 .button:focus,
 input:focus[type="submit"],
 .wp-block-button__link:focus, .wp-block-file .wp-block-file__button:focus, button.has-focus,
 .has-focus.button,
 input.has-focus[type="submit"],
 .has-focus.wp-block-button__link, .wp-block-file .has-focus.wp-block-file__button {
-	color: var(--button--color-text-hover);
-	background-color: var(--button--color-background-hover);
+	background-color: var(--button--color-background);
+	border-color: var(--button--color-background);
+	border-style: solid;
+	border-width: var(--button--border-width);
+	color: var(--button--color-text);
+	outline-color: var(--button--color-text);
+	outline-offset: calc(var(--button--border-width) * -2.5);
+	padding: calc(var(--button--padding-vertical) - var(--button--border-width)) calc(var(--button--padding-horizontal) - var(--button--border-width));
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -1079,10 +1094,10 @@ a:active {
 	color: var(--wp--style--color--link, var(--global--color-primary));
 }
 
-.site *:focus {
-	outline-width: 1px;
-	outline-style: dotted;
+*:focus {
 	outline-color: var(--global--color-secondary);
+	outline-style: dotted;
+	outline-width: 1px;
 }
 
 button,
@@ -1181,6 +1196,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
+	background-color: var(--global--color-white-50);
 	border: var(--form--border-width) solid var(--form--border-color);
 	border-radius: var(--form--border-radius);
 	color: var(--form--color-text);
@@ -1204,8 +1220,9 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-	color: var(--form--color-text);
+	background-color: var(--global--color-white);
 	border-color: var(--form--border-color);
+	color: var(--form--color-text);
 }
 
 select {
@@ -1310,8 +1327,8 @@ i {
 
 .wp-block-button.is-style-outline.wp-block-button__link,
 .wp-block-button.is-style-outline .wp-block-button__link {
-	color: var(--button--color-background);
 	background: transparent;
+	color: var(--button--color-background);
 	border: var(--button--border-width) solid currentColor;
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
@@ -1321,11 +1338,18 @@ i {
 	color: var(--button--color-background);
 }
 
-.wp-block-button.is-style-outline.wp-block-button__link:hover, .wp-block-button.is-style-outline.wp-block-button__link:focus, .wp-block-button.is-style-outline.wp-block-button__link.has-focus,
-.wp-block-button.is-style-outline .wp-block-button__link:hover,
+.wp-block-button.is-style-outline.wp-block-button__link:hover,
+.wp-block-button.is-style-outline .wp-block-button__link:hover {
+	background: var(--button--color-background);
+	color: var(--button--color-background-hover);
+}
+
+.wp-block-button.is-style-outline.wp-block-button__link:focus, .wp-block-button.is-style-outline.wp-block-button__link.has-focus,
 .wp-block-button.is-style-outline .wp-block-button__link:focus,
 .wp-block-button.is-style-outline .wp-block-button__link.has-focus {
-	color: var(--button--color-background-hover);
+	background: transparent;
+	color: var(--button--color-background);
+	outline-color: var(--button--color-background);
 }
 
 .wp-block-button.is-style-squared .wp-block-button__link {

@@ -25,8 +25,8 @@ input[type="submit"],
 
 		&.wp-block-button__link,
 		.wp-block-button__link {
-			color: var(--button--color-background);
 			background: transparent;
+			color: var(--button--color-background);
 			border: var(--button--border-width) solid currentColor;
 			padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 
@@ -34,10 +34,16 @@ input[type="submit"],
 				color: var(--button--color-background);
 			}
 
-			&:hover,
+			&:hover {
+				background: var(--button--color-background);
+				color: var(--button--color-background-hover);
+			}
+
 			&:focus,
 			&.has-focus {
-				color: var(--button--color-background-hover);
+				background: transparent;
+				color: var(--button--color-background);
+				outline-color: var(--button--color-background);
 			}
 		}
 	}
