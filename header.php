@@ -30,7 +30,7 @@
 		<?php get_template_part( 'template-parts/header/site-branding' ); ?>
 
 			<?php if ( has_nav_menu( 'primary' ) ) { ?>
-				<nav id="site-navigation" class="primary-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary', 'twentytwentyone' ); ?>">
+				<nav id="site-navigation" class="primary-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary', 'twentytwentyone' ); ?>" aria-expanded="false">
 					<div class="menu-button-container">
 						<button id="primary-mobile-menu" class="button" aria-haspopup="true" aria-controls="primary-navigation">
 							<span class="dropdown-icon open"><?php esc_html_e( 'Menu', 'twentytwentyone' ); ?>
@@ -39,8 +39,6 @@
 							<span class="dropdown-icon close"><?php esc_html_e( 'Close', 'twentytwentyone' ); ?>
 								<?php echo twenty_twenty_one_get_icon_svg( 'close' ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
 							</span>
-							<span class="hide-visually expanded-text"><?php esc_html_e( 'expanded', 'twentytwentyone' ); ?></span>
-							<span class="hide-visually collapsed-text"><?php esc_html_e( 'collapsed', 'twentytwentyone' ); ?></span>
 						</button><!-- #primary-mobile-menu -->
 					</div><!-- .menu-button-container -->
 					<?php

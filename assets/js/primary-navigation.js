@@ -6,6 +6,29 @@
 ( function() {
 
 	/**
+	 * Toggle an attribute's value
+	 * 
+	 * @param {Element} element
+	 * @param {Attribute} attribute
+	 * @param {String} trueVal
+	 * @param {String} falseVal
+	 * @since 1.0.0
+	 */
+	var toggleAttribute = function ( element, attribute, trueVal, falseVal ) {
+		if ( undefined === trueVal ) {
+			trueVal = true;
+		}
+		if ( undefined === falseVal ) {
+			falseVal = false;
+		}
+		if ( trueVal !== element.getAttribute( attribute ) ) {
+			element.setAttribute( attribute, trueVal );
+		} else {
+			element.setAttribute( attribute, falseVal );
+		}
+	}
+
+	/**
 	 * Menu Toggle Behaviors
 	 *
 	 * @param {Element} element
@@ -18,7 +41,7 @@
 			mobileButton.onclick = function() {
 				wrapper.classList.toggle( `${ id }-navigation-open` );
 				wrapper.classList.toggle( 'lock-scrolling' );
-				mobileButton.classList.toggle( 'expanded' );
+				toggleAttribute( mobileButton, 'aria-expanded', 'true', 'false' );
 				mobileButton.focus();
 			}
 		}
@@ -47,7 +70,7 @@
 			if ( escKey ) {
 				event.preventDefault();
 				wrapper.classList.remove( `${ id }-navigation-open`, 'lock-scrolling' );
-				mobileButton.classList.remove( 'expanded' );
+				toggleAttribute( mobileButton, 'aria-expanded', 'true', 'false' );
 				mobileButton.focus();
 			}
 

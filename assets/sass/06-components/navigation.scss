@@ -34,14 +34,6 @@
 		color: var(--primary-nav--color-link);
 		z-index: 500;
 
-		.expanded-text {
-			display: flex;
-		}
-
-		.collapsed-text {
-			display: none;
-		}
-
 		.dropdown-icon {
 			display: flex;
 			align-items: center;
@@ -61,15 +53,7 @@
 			}
 		}
 
-		&.expanded {
-
-			.expanded-text {
-				display: none;
-			}
-
-			.collapsed-text {
-				display: flex;
-			}
+		&[aria-expanded*=true] {
 
 			.dropdown-icon {
 
@@ -83,15 +67,6 @@
 			}
 		}
 
-		.hide-visually {
-			position: absolute !important;
-			clip: rect(1px, 1px, 1px, 1px);
-			padding: 0 !important;
-			border: 0 !important;
-			height: 1px !important;
-			width: 1px !important;
-			overflow: hidden;
-		}
 	}
 
 	// When the menu is open, hide the close button and show the hide button.
@@ -384,15 +359,6 @@
 
 	}
 
-	.hide-visually {
-		position: absolute !important;
-		clip: rect(1px, 1px, 1px, 1px);
-		padding: 0 !important;
-		border: 0 !important;
-		height: 1px !important;
-		width: 1px !important;
-		overflow: hidden;
-	}
 }
 
 // Keep the menu pinned to the top when the menu is open.
