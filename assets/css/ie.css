@@ -1387,49 +1387,7 @@ body {
 	background-color: #d1e4dd;
 }
 
-a {
-	border-bottom: 1px solid #39414d;
-	color: #28303d;
-	text-decoration: none;
-	transition: border-color 0.1s ease-out;
-}
-
-a:hover, a:focus {
-	border-bottom-color: transparent;
-}
-
-a:hover {
-	color: #28303d;
-}
-
-a:focus {
-	color: #39414d;
-}
-
-a:active {
-	color: #28303d;
-}
-
-.has-link-color a {
-	border-bottom: 1px solid #28303d;
-}
-
-.has-background:not(.has-background-background-color) .has-link-color a {
-	color: #28303d;
-}
-
-.has-background:not(.has-background-background-color).has-link-color a {
-	color: #28303d;
-}
-
-.site *:focus {
-	outline-width: 1px;
-	outline-style: dotted;
-	outline-color: #39414d;
-}
-
-button,
-a {
+button {
 	cursor: pointer;
 }
 
@@ -1760,6 +1718,11 @@ img {
 	max-width: 100%;
 }
 
+/* Classic editor images */
+.entry-content img {
+	max-width: 100%;
+}
+
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
@@ -1826,6 +1789,38 @@ cite,
 em,
 i {
 	font-style: italic;
+}
+
+pre {
+	white-space: pre-wrap;
+}
+
+/*
+ * text-underline-offset doesn't work in Chrome at all 👎
+ * But looks nice in Safari/Firefox, so let's keep it and
+ * maybe Chrome will support it soon.
+ */
+a {
+	cursor: pointer;
+	color: #28303d;
+	text-underline-offset: 3px;
+}
+
+a:hover {
+	text-decoration-style: dotted;
+}
+
+.site a:focus {
+	outline: 2px solid #28303d;
+	text-decoration: none;
+}
+
+.has-background:not(.has-background-background-color) .has-link-color a {
+	color: #28303d;
+}
+
+.has-background:not(.has-background-background-color).has-link-color a {
+	color: #28303d;
 }
 
 /* Category 05 is all about adjusting the default block styles to the given layout. I only added three blocks as examples. */
@@ -3657,6 +3652,30 @@ table th {
 	}
 }
 
+:root .is-gigantic-text {
+	font-size: 6rem;
+	line-height: 1.3;
+	font-weight: 300;
+}
+
+@media only screen and (min-width: 652px){
+	:root .is-gigantic-text{
+	font-size: 6rem;
+	}
+}
+
+:root .has-gigantic-font-size {
+	font-size: 6rem;
+	line-height: 1.3;
+	font-weight: 300;
+}
+
+@media only screen and (min-width: 652px){
+	:root .has-gigantic-font-size{
+	font-size: 6rem;
+	}
+}
+
 .has-drop-cap:not(:focus)::first-letter {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 8rem;
@@ -3786,14 +3805,13 @@ nav a {
 
 @media only screen and (min-width: 482px) {
 	.site-logo .custom-logo {
-		max-width: 120px;
-		max-height: 120px;
+		max-width: 300px;
+		max-height: 100px;
 		height: auto;
 	}
 }
 
 .site-footer {
-	overflow: hidden;
 	padding-bottom: 51px;
 	margin-top: 180px;
 }
@@ -3852,13 +3870,13 @@ nav a {
 	color: #28303d;
 }
 
-.single .entry-header {
+.singular .entry-header {
 	border-bottom: 3px solid #28303d;
 	padding-bottom: 60px;
 	margin-bottom: 90px;
 }
 
-.single .has-post-thumbnail .entry-header {
+.singular .has-post-thumbnail .entry-header {
 	border-bottom: none;
 	padding-bottom: 39px;
 	margin-bottom: 0;
@@ -4194,20 +4212,9 @@ h2.page-title {
 	padding-bottom: 60px;
 }
 
-.error-404 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 60vh;
-	flex-direction: column;
-}
-
-.error404 .page-header {
-	border-bottom: 3px solid transparent;
-}
-
-.error404 p {
+.error404 main p {
 	font-size: 1.5rem;
+	margin-bottom: 50px;
 }
 
 .search-no-results .page-content {
@@ -4589,14 +4596,7 @@ h2.page-title {
 	width: 100%;
 }
 
-.menu-button-container #primary-open-menu {
-	margin-left: auto;
-	padding: 18px 20px;
-	margin-top: 5px;
-	margin-right: 5px;
-}
-
-.menu-button-container #primary-close-menu {
+.menu-button-container #primary-mobile-menu {
 	margin-left: auto;
 	padding: 18px 20px;
 	margin-top: 5px;
@@ -4614,21 +4614,13 @@ h2.page-title {
 }
 
 .menu-button-container .button {
+	display: flex;
 	font-size: 1rem;
 	font-weight: 500;
 	text-transform: uppercase;
 	background-color: transparent;
 	color: #28303d;
 	z-index: 500;
-}
-
-.menu-button-container .button.open {
-	display: flex;
-	z-index: 499;
-}
-
-.menu-button-container .button.close {
-	display: none;
 }
 
 .menu-button-container .button .dropdown-icon {
@@ -4645,21 +4637,19 @@ h2.page-title {
 	top: -1px;
 }
 
-.menu-button-container .button .hide-visually {
-	position: absolute !important;
-	clip: rect(1px, 1px, 1px, 1px);
-	padding: 0 !important;
-	border: 0 !important;
-	height: 1px !important;
-	width: 1px !important;
-	overflow: hidden;
-}
-
-.primary-navigation-open .menu-button-container #primary-open-menu {
+.menu-button-container .button .dropdown-icon.close {
 	display: none;
 }
 
-.primary-navigation-open .menu-button-container #primary-close-menu {
+.menu-button-container .button[aria-expanded*="true"] .dropdown-icon.open {
+	display: none;
+}
+
+.menu-button-container .button[aria-expanded*="true"] .dropdown-icon.close {
+	display: flex;
+}
+
+.primary-navigation-open .menu-button-container #primary-mobile-menu {
 	display: flex;
 }
 
@@ -4931,16 +4921,6 @@ h2.page-title {
 	.primary-navigation .menu-item-has-children .sub-menu .svg-icon {
 		display: none;
 	}
-}
-
-.primary-navigation .hide-visually {
-	position: absolute !important;
-	clip: rect(1px, 1px, 1px, 1px);
-	padding: 0 !important;
-	border: 0 !important;
-	height: 1px !important;
-	width: 1px !important;
-	overflow: hidden;
 }
 
 @media only screen and (max-width: 481px) {

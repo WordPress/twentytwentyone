@@ -4,12 +4,19 @@
 */
 
 // Post title style
-.editor-post-title__block .editor-post-title__input {
-	color: var(--global--color-secondary);
-	font-family: var(--heading--font-family);
-	font-weight: var(--heading--font-weight-page-title);
-	font-size: var(--global--font-size-page-title);
-	line-height: var(--heading--line-height);
+.wp-block.editor-post-title__block {
+	border-bottom: 3px solid var(--global--color-border);
+	padding-bottom: calc(2 * var(--global--spacing-vertical));
+	margin-bottom: calc(3 * var(--global--spacing-vertical));
+	max-width: var(--responsive--alignwide-width);
+
+	.editor-post-title__input {
+		color: var(--global--color-secondary);
+		font-family: var(--heading--font-family);
+		font-weight: var(--heading--font-weight-page-title);
+		font-size: var(--global--font-size-page-title);
+		line-height: var(--heading--line-height);
+	}
 }
 
 // Editor UI font styles
@@ -92,6 +99,15 @@
 .has-huge-font-size {
 	font-size: var(--global--font-size-xl);
 	line-height: var(--global--line-height-heading);
+}
+
+.is-gigantic-text,
+.has-gigantic-font-size {
+	font-size: var(--global--font-size-xxl);
+	line-height: var(--global--line-height-heading);
+
+	// This size is meant to mimic the page titles, so the font weight is reduced to match.
+	font-weight: var(--heading--font-weight-page-title);
 }
 
 // Drop cap

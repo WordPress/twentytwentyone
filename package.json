@@ -57,7 +57,7 @@
 		"build:ie-editor": "postcss assets/css/style-editor.css -o assets/css/ie-editor.css",
 		"build": "run-s \"build:*\"",
 		"watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial",
-		"lint:scss": "stylelint assets/sass/*.scss",
+		"lint:scss": "stylelint **/*.scss",
 		"wp-env": "wp-env"
 	}
 }

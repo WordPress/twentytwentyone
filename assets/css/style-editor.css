@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * These styles should be loaded by the Block Editor only
  */
@@ -15,7 +16,8 @@
 	--global--font-size-md: 1.25rem;
 	--global--font-size-lg: 1.5rem;
 	--global--font-size-xl: 2.25rem;
-	--global--font-size-page-title: 4rem;
+	--global--font-size-xxl: 4rem;
+	--global--font-size-page-title: var(--global--font-size-xxl);
 	--global--letter-spacing: normal;
 	/* Line Height */
 	--global--line-height-base: 1;
@@ -137,8 +139,8 @@
 	--branding--description--font-family: var(--global--font-secondary);
 	--branding--description--font-size: var(--global--font-size-sm);
 	--branding--description--font-family: var(--global--font-secondary);
-	--branding--logo--max-width: 120px;
-	--branding--logo--max-height: 120px;
+	--branding--logo--max-width: 300px;
+	--branding--logo--max-height: 100px;
 	--branding--logo--max-width-mobile: 96px;
 	--branding--logo--max-height-mobile: 96px;
 	/* Main navigation */
@@ -203,7 +205,7 @@
 @media only screen and (min-width: 652px) {
 	:root {
 		--global--font-size-xl: 2.5rem;
-		--global--font-size-page-title: 6rem;
+		--global--font-size-xxl: 6rem;
 		--heading--font-size-h3: 2rem;
 		--heading--font-size-h2: 3rem;
 	}
@@ -361,6 +363,11 @@ img {
 	max-width: 100%;
 }
 
+/* Classic editor images */
+.entry-content img {
+	max-width: 100%;
+}
+
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
@@ -400,6 +407,31 @@ figcaption,
 	margin-bottom: 0;
 	margin-top: 0;
 	padding: 0;
+}
+
+/*
+ * text-underline-offset doesn't work in Chrome at all 👎
+ * But looks nice in Safari/Firefox, so let's keep it and
+ * maybe Chrome will support it soon.
+ */
+a {
+	cursor: pointer;
+	color: var(--wp--style--color--link, var(--global--color-primary));
+	text-underline-offset: 3px;
+}
+
+a:hover {
+	text-decoration-style: dotted;
+}
+
+.site a:focus {
+	outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
+	text-decoration: none;
+}
+
+.has-background:not(.has-background-background-color) .has-link-color a,
+.has-background:not(.has-background-background-color).has-link-color a {
+	color: var(--wp--style--color--link, var(--global--color-primary));
 }
 
 .wp-block-button__link {
@@ -1176,7 +1208,14 @@ pre.wp-block-verse {
 * Editor Post Title
 * - Needs a special styles
 */
-.editor-post-title__block .editor-post-title__input {
+.wp-block.editor-post-title__block {
+	border-bottom: 3px solid var(--global--color-border);
+	padding-bottom: calc(2 * var(--global--spacing-vertical));
+	margin-bottom: calc(3 * var(--global--spacing-vertical));
+	max-width: var(--responsive--alignwide-width);
+}
+
+.wp-block.editor-post-title__block .editor-post-title__input {
 	color: var(--global--color-secondary);
 	font-family: var(--heading--font-family);
 	font-weight: var(--heading--font-weight-page-title);
@@ -1258,6 +1297,13 @@ pre.wp-block-verse {
 	line-height: var(--global--line-height-heading);
 }
 
+.is-gigantic-text,
+.has-gigantic-font-size {
+	font-size: var(--global--font-size-xxl);
+	line-height: var(--global--line-height-heading);
+	font-weight: var(--heading--font-weight-page-title);
+}
+
 .has-drop-cap:not(:focus)::first-letter {
 	font-family: var(--heading--font-family);
 	font-size: calc(2 * var(--heading--font-size-h1));
@@ -1325,29 +1371,16 @@ body {
 }
 
 .wp-block a {
-	border-bottom: 1px solid var(--global--color-secondary);
 	color: var(--wp--style--color--link, var(--global--color-primary));
-	text-decoration: none;
-}
-
-.wp-block a:hover, .wp-block a:focus {
-	border-bottom-color: transparent;
 }
 
 .wp-block a:hover {
-	color: var(--global--color-primary-hover);
+	text-decoration-style: dotted;
 }
 
 .wp-block a:focus {
-	color: var(--global--color-secondary);
-}
-
-.wp-block a:active {
-	color: var(--wp--style--color--link, var(--global--color-primary));
-}
-
-.has-link-color .wp-block a {
-	border-bottom: 1px solid var(--wp--style--color--link, --global--color-primary);
+	outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
+	text-decoration: none;
 }
 
 .has-background:not(.has-background-background-color) .has-link-color a,

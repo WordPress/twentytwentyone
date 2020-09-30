@@ -6,26 +6,43 @@
 ( function() {
 
 	/**
+	 * Toggle an attribute's value
+	 * 
+	 * @param {Element} element
+	 * @param {Attribute} attribute
+	 * @param {String} trueVal
+	 * @param {String} falseVal
+	 * @since 1.0.0
+	 */
+	var toggleAttribute = function ( element, attribute, trueVal, falseVal ) {
+		if ( undefined === trueVal ) {
+			trueVal = true;
+		}
+		if ( undefined === falseVal ) {
+			falseVal = false;
+		}
+		if ( trueVal !== element.getAttribute( attribute ) ) {
+			element.setAttribute( attribute, trueVal );
+		} else {
+			element.setAttribute( attribute, falseVal );
+		}
+	}
+
+	/**
 	 * Menu Toggle Behaviors
 	 *
 	 * @param {Element} element
 	 */
 	var navMenu = function ( id ){
-		var wrapper         = document.body; // this is the element to which a CSS class is added when a mobile nav menu is open
-		var openButton    	= document.getElementById( `${ id }-open-menu` );
-		var closeButton    	= document.getElementById( `${ id }-close-menu` );
+		var wrapper      = document.body; // this is the element to which a CSS class is added when a mobile nav menu is open
+		var mobileButton = document.getElementById( `${ id }-mobile-menu` );
 
-		if ( openButton && closeButton ){
-			openButton.onclick = function() {
-				wrapper.classList.add( `${ id }-navigation-open` );
-				wrapper.classList.add( 'lock-scrolling' );
-				closeButton.focus();
-			}
-
-			closeButton.onclick = function() {
-				wrapper.classList.remove( `${ id }-navigation-open` );
-				wrapper.classList.remove( 'lock-scrolling' );
-				openButton.focus();
+		if ( mobileButton ){
+			mobileButton.onclick = function() {
+				wrapper.classList.toggle( `${ id }-navigation-open` );
+				wrapper.classList.toggle( 'lock-scrolling' );
+				toggleAttribute( mobileButton, 'aria-expanded', 'true', 'false' );
+				mobileButton.focus();
 			}
 		}
 
@@ -53,7 +70,8 @@
 			if ( escKey ) {
 				event.preventDefault();
 				wrapper.classList.remove( `${ id }-navigation-open`, 'lock-scrolling' );
-				openButton.focus();
+				toggleAttribute( mobileButton, 'aria-expanded', 'true', 'false' );
+				mobileButton.focus();
 			}
 
 			if ( ! shiftKey && tabKey && lastEl === activeEl ) {

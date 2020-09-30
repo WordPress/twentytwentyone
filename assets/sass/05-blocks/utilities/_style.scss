@@ -146,6 +146,15 @@
 		font-size: var(--global--font-size-xl);
 		line-height: var(--global--line-height-heading);
 	}
+
+	.is-gigantic-text,
+	.has-gigantic-font-size {
+		font-size: var(--global--font-size-xxl);
+		line-height: var(--global--line-height-heading);
+
+		// This size is meant to mimic the page titles, so the font weight is reduced to match.
+		font-weight: var(--heading--font-weight-page-title);
+	}
 }
 
 // Drop caps
