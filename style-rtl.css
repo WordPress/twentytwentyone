@@ -1217,6 +1217,11 @@ img {
 	max-width: 100%;
 }
 
+/* Classic editor images */
+.entry-content img {
+	max-width: 100%;
+}
+
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
@@ -3969,10 +3974,6 @@ header *,
 main *,
 footer * {
 	max-width: var(--global--spacing-measure);
-}
-
-main img {
-	max-width: 100%;
 }
 
 html,
