@@ -1252,6 +1252,10 @@ i {
 	font-style: italic;
 }
 
+pre {
+	white-space: pre-wrap;
+}
+
 /*
  * text-underline-offset doesn't work in Chrome at all 👎
  * But looks nice in Safari/Firefox, so let's keep it and
