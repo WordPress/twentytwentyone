@@ -62,17 +62,21 @@
 		}
 
 		&.expanded {
+
 			.expanded-text {
 				display: none;
 			}
+
 			.collapsed-text {
 				display: flex;
 			}
 
 			.dropdown-icon {
+
 				&.open {
 					display: none;
 				}
+				
 				&.close {
 					display: flex;
 				}

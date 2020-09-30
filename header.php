@@ -32,7 +32,6 @@
 			<?php if ( has_nav_menu( 'primary' ) ) { ?>
 				<nav id="site-navigation" class="primary-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary', 'twentytwentyone' ); ?>">
 					<div class="menu-button-container">
-					
 						<button id="primary-mobile-menu" class="button" aria-haspopup="true" aria-controls="primary-navigation">
 							<span class="dropdown-icon open"><?php esc_html_e( 'Menu', 'twentytwentyone' ); ?>
 								<?php echo twenty_twenty_one_get_icon_svg( 'menu' ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
@@ -43,7 +42,6 @@
 							<span class="hide-visually expanded-text"><?php esc_html_e( 'expanded', 'twentytwentyone' ); ?></span>
 							<span class="hide-visually collapsed-text"><?php esc_html_e( 'collapsed', 'twentytwentyone' ); ?></span>
 						</button><!-- #primary-mobile-menu -->
-						
 					</div><!-- .menu-button-container -->
 					<?php
 					wp_nav_menu(
