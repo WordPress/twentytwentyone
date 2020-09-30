@@ -1264,7 +1264,14 @@ pre.wp-block-verse {
 * Editor Post Title
 * - Needs a special styles
 */
-.editor-post-title__block .editor-post-title__input {
+.wp-block.editor-post-title__block {
+	border-bottom: 3px solid var(--global--color-border);
+	padding-bottom: calc(2 * var(--global--spacing-vertical));
+	margin-bottom: calc(3 * var(--global--spacing-vertical));
+	max-width: var(--responsive--alignwide-width);
+}
+
+.wp-block.editor-post-title__block .editor-post-title__input {
 	color: var(--global--color-secondary);
 	font-family: var(--heading--font-family);
 	font-weight: var(--heading--font-weight-page-title);

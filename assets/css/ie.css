@@ -2886,10 +2886,6 @@ img {
 
 .wp-block-image.is-style-twentytwentyone-image-frame img {
 	padding: 20px;
-<<<<<<< HEAD
-	border: 3px solid #28303d;
-=======
->>>>>>> trunk
 }
 
 .wp-block-latest-comments {
@@ -4155,13 +4151,13 @@ nav a {
 	color: #28303d;
 }
 
-.single .entry-header {
+.singular .entry-header {
 	border-bottom: 3px solid #28303d;
 	padding-bottom: 60px;
 	margin-bottom: 90px;
 }
 
-.single .has-post-thumbnail .entry-header {
+.singular .has-post-thumbnail .entry-header {
 	border-bottom: none;
 	padding-bottom: 39px;
 	margin-bottom: 0;
@@ -4883,14 +4879,7 @@ h2.page-title {
 	width: 100%;
 }
 
-.menu-button-container #primary-open-menu {
-	margin-left: auto;
-	padding: 10px 25px;
-	margin-top: 5px;
-	margin-right: 5px;
-}
-
-.menu-button-container #primary-close-menu {
+.menu-button-container #primary-mobile-menu {
 	margin-left: auto;
 	padding: 10px 25px;
 	margin-top: 5px;
@@ -4908,21 +4897,13 @@ h2.page-title {
 }
 
 .menu-button-container .button {
+	display: flex;
 	font-size: 1rem;
 	font-weight: 500;
 	text-transform: uppercase;
 	background-color: transparent;
 	color: #28303d;
 	z-index: 500;
-}
-
-.menu-button-container .button.open {
-	display: flex;
-	z-index: 499;
-}
-
-.menu-button-container .button.close {
-	display: none;
 }
 
 .menu-button-container .button .dropdown-icon {
@@ -4939,21 +4920,19 @@ h2.page-title {
 	top: -1px;
 }
 
-.menu-button-container .button .hide-visually {
-	position: absolute !important;
-	clip: rect(1px, 1px, 1px, 1px);
-	padding: 0 !important;
-	border: 0 !important;
-	height: 1px !important;
-	width: 1px !important;
-	overflow: hidden;
-}
-
-.primary-navigation-open .menu-button-container #primary-open-menu {
+.menu-button-container .button .dropdown-icon.close {
 	display: none;
 }
 
-.primary-navigation-open .menu-button-container #primary-close-menu {
+.menu-button-container .button[aria-expanded*="true"] .dropdown-icon.open {
+	display: none;
+}
+
+.menu-button-container .button[aria-expanded*="true"] .dropdown-icon.close {
+	display: flex;
+}
+
+.primary-navigation-open .menu-button-container #primary-mobile-menu {
 	display: flex;
 }
 
@@ -5235,16 +5214,6 @@ h2.page-title {
 	.primary-navigation .menu-item-has-children .sub-menu .svg-icon {
 		display: none;
 	}
-}
-
-.primary-navigation .hide-visually {
-	position: absolute !important;
-	clip: rect(1px, 1px, 1px, 1px);
-	padding: 0 !important;
-	border: 0 !important;
-	height: 1px !important;
-	width: 1px !important;
-	overflow: hidden;
 }
 
 @media only screen and (max-width: 481px) {
