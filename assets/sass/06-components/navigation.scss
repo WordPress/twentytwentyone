@@ -197,6 +197,7 @@
 
 		li {
 			display: block;
+			margin: var(--primary-nav--padding) 0;
 			position: relative;
 			width: 100%;
 			z-index: 1;
@@ -209,6 +210,7 @@
 
 			@include media(mobile) {
 				display: inherit;
+				margin: 0;
 				width: inherit;
 
 				/* Submenu display in the responsive menu */
@@ -256,13 +258,12 @@
 	}
 	// Top-level Menu Item
 	.primary-menu-container > ul > .menu-item {
-		padding: 0 var(--primary-nav--padding);
-
 		@include media(mobile) {
 			display: flex;
 			align-items: center;
 			margin-left: calc(-1 * var(--primary-nav--padding)); // Better align with the site title when the menu wraps.
 			margin-right: var(--primary-nav--padding);
+			padding: 0 var(--primary-nav--padding);
 		}
 	}
 
@@ -326,6 +327,10 @@
 
 		.menu-item {
 			margin: calc(2 * var(--primary-nav--padding)) 0;
+
+			&:last-child(){
+				margin-bottom: 0;
+			}
 
 			> a {
 				display: inline;
