@@ -45,4 +45,14 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'content'       => '<!-- wp:media-text {"mediaId":1752,"mediaLink":"' . esc_url( get_template_directory_uri() ) . '/assets/images/the_poplars_at_saint_remy.jpg","mediaType":"image","className":"is-style-twentytwentyone-border"} --><div class="wp-block-media-text alignwide is-stacked-on-mobile is-style-twentytwentyone-border"><figure class="wp-block-media-text__media"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/the_poplars_at_saint_remy.jpg" alt="' . esc_attr__( '&quot;The Poplars at Saint-Rémy&quot; by Vincent Van Gogh (1889)', 'twentytwentyone' ) . '" class="wp-image-1752"/></figure><div class="wp-block-media-text__content"><!-- wp:heading {"align":"center"} --><h2 class="has-text-align-center">' . wp_kses_post( __( 'The Poplars at<br>Saint-Rémy', 'twentytwentyone' ) ) . '</h2><!-- /wp:heading --><!-- wp:separator --><hr class="wp-block-separator"/><!-- /wp:separator --><!-- wp:paragraph {"align":"center","fontSize":"small"} --><p class="has-text-align-center has-small-font-size">' . wp_kses_post( __( 'Vincent van Gogh<br>(Dutch, 1853-1890)', 'twentytwentyone' ) ) . '</p><!-- /wp:paragraph --></div></div><!-- /wp:media-text -->',
 		)
 	);
+
+	register_block_pattern(
+		'twentytwentyone/large-text',
+		array(
+			'title'         => __( 'Large Text', 'twentytwentyone' ),
+			'categories'    => array( 'twentytwentyone' ),
+			'viewportWidth' => 1440,
+			'content'       => '<!-- wp:paragraph --><p>A new portfolio default theme for WordPress</p><!-- /wp:paragraph --><!-- wp:columns {"align":"wide"} --><div class="wp-block-columns alignwide"><!-- wp:column {"width":95} --><div class="wp-block-column" style="flex-basis:95%"><!-- wp:paragraph {"style":{"typography":{"fontSize":144,"lineHeight":"1.1"}}} --><p style="line-height:1.1;font-size:144px">A new portfolio default theme for WordPress</p><!-- /wp:paragraph --></div><!-- /wp:column --><!-- wp:column {"width":6.5} --><div class="wp-block-column" style="flex-basis:6.5%"></div><!-- /wp:column --></div><!-- /wp:columns --><!-- wp:paragraph --><p></p><!-- /wp:paragraph -->',
+		)
+	);
 }
