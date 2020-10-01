@@ -3082,6 +3082,12 @@ h1.entry-title {
 	word-wrap: break-word;
 }
 
+.entry-content .more-link {
+	display: block;
+	max-width: var(--responsive--aligndefault-width);
+	width: auto;
+}
+
 .entry-content .more-link:hover {
 	text-decoration: none;
 }
