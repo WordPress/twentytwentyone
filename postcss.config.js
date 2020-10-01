@@ -1,5 +1,12 @@
 module.exports = {
-    plugins: {
-        autoprefixer: {}
-    }
-};
+	plugins: [
+		require( 'postcss-nested' ),
+		require( 'postcss-css-variables' )({
+			"preserve": false,
+			"preserveAtRulesOrder": true
+		}),
+		require( 'postcss-calc' )({
+			"precision": 0
+		})
+	]
+}
