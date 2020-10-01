@@ -64,6 +64,8 @@ class Twenty_Twenty_One_Custom_Colors {
 			$theme_css .= '--global--color-background: #' . get_theme_mod( 'background_color', 'D1E4DD' ) . ';';
 			$theme_css .= '--global--color-primary: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
 			$theme_css .= '--global--color-secondary: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
+			$theme_css .= '--button--color-background: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
+			$theme_css .= '--button--color-text-hover: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
 		}
 
 		if ( $this->get_relative_luminance_from_hex( get_theme_mod( 'background_color', 'D1E4DD' ) ) <= 40 ) {

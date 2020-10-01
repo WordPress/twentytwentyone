@@ -52,6 +52,9 @@
       document.documentElement.style.setProperty( '--global--color-background', to );
 			document.documentElement.style.setProperty( '--global--color-border', borderColor );
 
+		  document.documentElement.style.setProperty( '--button--color-background', textColor );
+		  document.documentElement.style.setProperty( '--button--color-text', to );
+		  document.documentElement.style.setProperty( '--button--color-text-hover', textColor);
 		} );
 	} );
 }( wp.customize, _ ) );

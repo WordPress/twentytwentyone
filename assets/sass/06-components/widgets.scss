@@ -1,5 +1,7 @@
 .widget-area {
 	font-size: var(--footer--font-size);
+	margin-bottom: 0;
+
 	@include media(desktop) {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -7,19 +9,31 @@
 	}
 }
 
+.widget-title {
+	font-size: var(--global--font-size-sm);
+	font-weight: 700;
+	line-height: 1.4;
+}
+
 // Search widget styles
 .search-form {
 	display: flex;
+	flex-wrap: wrap;
 	margin: auto;
 	max-width: var(--responsive--aligndefault-width);
 
 	> label {
-		display: flex;
-		margin-right: var(--global--spacing-horizontal);
 		width: 100%;
+		font-weight: var(--form--label-weight-strong);
+	}
 
-		.search-field {
-			width: 100%;
-		}
+	.search-field {
+		flex-grow: 1;
+		max-width: inherit;
+		margin-right: calc(0.66 * var(--global--spacing-horizontal));
+	}
+
+	.search-submit {
+		margin-left: 10px;
 	}
 }
