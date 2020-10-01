@@ -1247,11 +1247,16 @@ select {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	appearance: none;
+	line-height: var(--global--line-height-body);
 	padding: var(--form--spacing-unit) calc(3 * var(--form--spacing-unit)) var(--form--spacing-unit) var(--form--spacing-unit);
 	/* stylelint-disable */
 	background: var(--global--color-white) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2328303d'><polygon points='0,0 10,0 5,5'/></svg>") no-repeat;
 	/* stylelint-enable */
 	background-position: right var(--form--spacing-unit) top 60%;
+}
+
+select:focus {
+	outline: 1px solid var(--form--border-color);
 }
 
 textarea {
