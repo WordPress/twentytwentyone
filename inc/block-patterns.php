@@ -52,7 +52,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'title'         => __( 'Large Text', 'twentytwentyone' ),
 			'categories'    => array( 'twentytwentyone' ),
 			'viewportWidth' => 1440,
-			'content'       => '<!-- wp:paragraph --><p>A new portfolio default theme for WordPress</p><!-- /wp:paragraph --><!-- wp:columns {"align":"wide"} --><div class="wp-block-columns alignwide"><!-- wp:column {"width":95} --><div class="wp-block-column" style="flex-basis:95%"><!-- wp:paragraph {"style":{"typography":{"fontSize":144,"lineHeight":"1.1"}}} --><p style="line-height:1.1;font-size:144px">A new portfolio default theme for WordPress</p><!-- /wp:paragraph --></div><!-- /wp:column --><!-- wp:column {"width":6.5} --><div class="wp-block-column" style="flex-basis:6.5%"></div><!-- /wp:column --></div><!-- /wp:columns --><!-- wp:paragraph --><p></p><!-- /wp:paragraph -->',
+			'content'       => '<!-- wp:columns {"align":"wide"} --><div class="wp-block-columns alignwide"><!-- wp:column {"width":98} --><div class="wp-block-column" style="flex-basis:98%"><!-- wp:paragraph {"style":{"typography":{"fontSize":144,"lineHeight":"1.1"}}} --><p style="line-height:1.1;font-size:144px">' . wp_kses_post( __( 'A new portfolio default theme for WordPress', 'twentytwentyone' ) ) . '</p><!-- /wp:paragraph --></div><!-- /wp:column --><!-- wp:column {"width":2} --><div class="wp-block-column" style="flex-basis:2%"></div><!-- /wp:column --></div><!-- /wp:columns --><!-- wp:paragraph --><p></p><!-- /wp:paragraph -->',
 		)
 	);
 }

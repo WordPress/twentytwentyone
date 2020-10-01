@@ -516,6 +516,11 @@ div[data-type="core/button"] {
 	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
 }
 
+.wp-block-columns .wp-block,
+.wp-block-columns .wp-block-column {
+	max-width: none;
+}
+
 .wp-block-file .wp-block-file__textlink {
 	border-bottom: 1px solid var(--global--color-secondary);
 	color: var(--global--color-primary);
