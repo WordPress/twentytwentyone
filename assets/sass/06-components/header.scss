@@ -1,6 +1,4 @@
-
 // Site header
-
 .site-header {
 	@extend %responsive-alignwide-width;
 	display: flex;
@@ -17,20 +15,20 @@
 }
 
 // Site branding
-
 .site-branding {
 	color: var(--branding--color-text);
 	margin-right: 140px; /* TODO: Make room for the menu button if the title is very long. Adjust depending on menu icon.*/
 
 	@include media(mobile) {
 		margin-right: initial;
+		margin-bottom: var(--global--spacing-vertical); // Add a margin in case the menu wraps below the site branding.
+		margin-top: 4px; // Align the baseline of the site title with the primary menu
 
 		/* TODO: Make room for the menu if the title is very long.*/
 	}
 }
 
 // Site title
-
 .site-title {
 
 	color: var(--branding--color-link);
