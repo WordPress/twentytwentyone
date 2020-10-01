@@ -15,8 +15,17 @@ table,
 		word-break: break-all;
 	}
 
+	&.is-style-regular .has-background,
+	&.is-style-stripes .has-background tbody tr:nth-child(even) {
+		color: var(--table--has-background-text-color);
+	}
+
 	&.is-style-stripes {
 		border-color: var(--table--stripes-border-color);
+
+		td {
+			border-width: 0;
+		}
 
 		tbody tr:nth-child(odd) {
 			background-color: var(--table--stripes-background-color);

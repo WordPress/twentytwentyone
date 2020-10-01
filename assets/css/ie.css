@@ -3765,12 +3765,33 @@ table th {
 	word-break: break-all;
 }
 
+table.is-style-regular .has-background {
+	color: #28303d;
+}
+
+table.is-style-stripes .has-background tbody tr:nth-child(even) {
+	color: #28303d;
+}
+
+.wp-block-table.is-style-regular .has-background {
+	color: #28303d;
+}
+
+.wp-block-table.is-style-stripes .has-background tbody tr:nth-child(even) {
+	color: #28303d;
+}
+
 table.is-style-stripes {
 	border-color: #f0f0f0;
 }
 
 .wp-block-table.is-style-stripes {
 	border-color: #f0f0f0;
+}
+
+table.is-style-stripes td,
+.wp-block-table.is-style-stripes td {
+	border-width: 0;
 }
 
 table.is-style-stripes tbody tr:nth-child(odd) {

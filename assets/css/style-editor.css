@@ -208,6 +208,8 @@
 	/* Block: Table */
 	--table--stripes-border-color: var(--global--color-light-gray);
 	--table--stripes-background-color: var(--global--color-light-gray);
+	--table--has-background-border-color: var(--global--color-dark-gray);
+	--table--has-background-text-color: var(--global--color-dark-gray);
 }
 
 @media only screen and (min-width: 652px) {
@@ -1284,9 +1286,21 @@ table th,
 	padding: calc(0.5 * var(--global--spacing-unit));
 }
 
+table.is-style-regular .has-background,
+table.is-style-stripes .has-background tbody tr:nth-child(even),
+.wp-block-table.is-style-regular .has-background,
+.wp-block-table.is-style-stripes .has-background tbody tr:nth-child(even) {
+	color: var(--table--has-background-text-color);
+}
+
 table.is-style-stripes,
 .wp-block-table.is-style-stripes {
 	border-color: var(--table--stripes-border-color);
+}
+
+table.is-style-stripes td,
+.wp-block-table.is-style-stripes td {
+	border-width: 0;
 }
 
 table.is-style-stripes tbody tr:nth-child(odd),
