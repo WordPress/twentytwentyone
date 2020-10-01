@@ -27,6 +27,7 @@
 	/* Comments */
 	/* Footer */
 	/* Block: Pull quote */
+	/* Block: Table */
 }
 
 /* Button extends */
@@ -1664,6 +1665,22 @@ table th {
 
 .wp-block-table th {
 	padding: 10px;
+}
+
+table.is-style-stripes {
+	border-color: #f0f0f0;
+}
+
+.wp-block-table.is-style-stripes {
+	border-color: #f0f0f0;
+}
+
+table.is-style-stripes tbody tr:nth-child(odd) {
+	background-color: #f0f0f0;
+}
+
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+	background-color: #f0f0f0;
 }
 
 pre.wp-block-verse {

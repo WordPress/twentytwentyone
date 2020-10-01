@@ -14,4 +14,12 @@ table,
 		border: 1px solid;
 		word-break: break-all;
 	}
+
+	&.is-style-stripes {
+		border-color: var(--table--stripes-border-color);
+
+		tbody tr:nth-child(odd) {
+			background-color: var(--table--stripes-background-color);
+		}
+	}
 }

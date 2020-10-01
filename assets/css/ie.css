@@ -118,6 +118,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	/* Comments */
 	/* Footer */
 	/* Block: Pull quote */
+	/* Block: Table */
 }
 
 /* Button extends */
@@ -3752,6 +3753,22 @@ table th {
 	padding: 10px;
 	border: 1px solid;
 	word-break: break-all;
+}
+
+table.is-style-stripes {
+	border-color: #f0f0f0;
+}
+
+.wp-block-table.is-style-stripes {
+	border-color: #f0f0f0;
+}
+
+table.is-style-stripes tbody tr:nth-child(odd) {
+	background-color: #f0f0f0;
+}
+
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+	background-color: #f0f0f0;
 }
 
 .wp-block-verse {

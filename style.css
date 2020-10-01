@@ -149,6 +149,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--global--color-black: #000;
 	--global--color-dark-gray: #28303d;
 	--global--color-gray: #39414d;
+	--global--color-light-gray: #f0f0f0;
 	--global--color-green: #d1e4dd;
 	--global--color-blue: #d1dfe4;
 	--global--color-purple: #d1d1e4;
@@ -294,6 +295,9 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
 	--separator--width: calc(6 * var(--global--spacing-horizontal));
+	/* Block: Table */
+	--table--stripes-border-color: var(--global--color-light-gray);
+	--table--stripes-background-color: var(--global--color-light-gray);
 }
 
 @media only screen and (min-width: 652px) {
@@ -2669,6 +2673,16 @@ table th,
 	padding: calc(0.5 * var(--global--spacing-unit));
 	border: 1px solid;
 	word-break: break-all;
+}
+
+table.is-style-stripes,
+.wp-block-table.is-style-stripes {
+	border-color: var(--table--stripes-border-color);
+}
+
+table.is-style-stripes tbody tr:nth-child(odd),
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+	background-color: var(--table--stripes-background-color);
 }
 
 .wp-block-verse {
