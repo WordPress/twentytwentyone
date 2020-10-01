@@ -48,7 +48,7 @@ To install the project's dependencies and start a development server to watch fo
 ```sh
 cd path/to/twentytwentyone
 npm install
-npm start
+npm run watch
 ```
 
 Twenty Twenty-One relies on [Sass](https://sass-lang.com/guide) which allows us to more easily share code between multiple stylesheets (`style.css`, `style-editor.css`, etc.).
