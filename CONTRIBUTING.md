@@ -53,7 +53,7 @@ All changes happen through a pull request made by contributors, ideally associat
 
 When you add a pull request, please also add in the description your WordPress.org username. We will then add it to CONTRIBUTORS.md. This is a running list of all contributors and essential to giving everyone that has helped make this project props in Core.
 
-## Compling SCSS
+## Compiling SCSS
 
 Twenty Twenty-One relies on [Sass](https://sass-lang.com/guide) which allows us to more easily share code between multiple stylesheets (`style.css`, `style-editor.css`, etc.).
 To compile Sass files (`.scss`) use the built-in `npm` build tool. The build tool will make sure that your compiled CSS code stays in sync and has the correct formatting.
