@@ -69,6 +69,10 @@ https://codepen.io/aaroniker/pen/ZEYoxEY Copyright (c) 2020 Aaron Iker
 https://codepen.io/chriscoyier/pen/FtnAa Copyright (c) 2020 Chris Coyier
 License: MIT.
 
+css-vars-ponyfill v2.3.2
+https://jhildenbiddle.github.io/css-vars-ponyfill/ (c) 2018-2020 John Hildenbiddle <http://hildenbiddle.com>
+License: MIT.
+
 Images
 Irises, Vincent van Gogh, 1890. Public domain. https://www.metmuseum.org/art/collection/search/436528
 Girl in white, Vincent van Gogh, 1890. Public domain. https://www.nga.gov/collection/art-object-page.46505.html
