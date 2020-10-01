@@ -372,6 +372,7 @@
 @include media(mobile-only) {
 
 	.lock-scrolling .site {
+		display: flex;
 		position: fixed;
 		max-width: 100%;
 	}

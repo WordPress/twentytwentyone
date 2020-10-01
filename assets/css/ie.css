@@ -5247,6 +5247,7 @@ h2.page-title {
 
 @media only screen and (max-width: 481px) {
 	.lock-scrolling .site {
+		display: flex;
 		position: fixed;
 		max-width: 100%;
 	}
