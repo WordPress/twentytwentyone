@@ -34,6 +34,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
  * Vertical-margins.....Vertical spacing for the main components.
  * Reset................Reset specific elements to make them easier to style in other contexts.
  * Clearings............Clearnings for the main components.
+ * IE11.................Add the ponyfill for IE11.
  *
  * ELEMENTS
  * Blockquote...........Default blockquote.
@@ -1107,6 +1108,12 @@ button {
 .site-content:after,
 .site-footer:after {
 	clear: both;
+}
+
+body {
+	display: none;
+	/* Legacy */
+	display: var(--skip, block);
 }
 
 /* Category 04 can contain any default HTML element. Do not add classes here, just give the elements some basic styles. */

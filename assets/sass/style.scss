@@ -17,6 +17,7 @@
  * Vertical-margins.....Vertical spacing for the main components.
  * Reset................Reset specific elements to make them easier to style in other contexts.
  * Clearings............Clearnings for the main components.
+ * IE11.................Add the ponyfill for IE11.
  *
  * ELEMENTS
  * Blockquote...........Default blockquote.
@@ -90,6 +91,7 @@
 @import "03-generic/vertical-margins";
 @import "03-generic/reset";
 @import "03-generic/clearings";
+@import "03-generic/ie11";
 
 /* Category 04 can contain any default HTML element. Do not add classes here, just give the elements some basic styles. */
 @import "04-elements/blockquote";
