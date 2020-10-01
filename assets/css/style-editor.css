@@ -441,7 +441,7 @@ select {
 	/* stylelint-enable */
 	background-position: right var(--form--spacing-unit) top 60%;
 }
-  
+
 /*
  * text-underline-offset doesn't work in Chrome at all 👎
  * But looks nice in Safari/Firefox, so let's keep it and
@@ -618,12 +618,6 @@ div[data-type="core/button"] {
 .wp-block-cover.is-style-twentytwentyone-border,
 .wp-block-cover-image.is-style-twentytwentyone-border {
 	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
-}
-
-.wp-block-file .wp-block-file__textlink {
-	border-bottom: 1px solid var(--global--color-secondary);
-	color: var(--global--color-primary);
-	text-decoration: none;
 }
 
 .wp-block-file .wp-block-file__button {
