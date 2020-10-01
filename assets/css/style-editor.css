@@ -620,6 +620,12 @@ div[data-type="core/button"] {
 	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
 }
 
+.wp-block-file .wp-block-file__textlink {
+	border-bottom: 1px solid var(--global--color-secondary);
+	color: var(--global--color-primary);
+	text-decoration: none;
+}
+
 .wp-block-file .wp-block-file__button {
 	display: inline-block;
 }
