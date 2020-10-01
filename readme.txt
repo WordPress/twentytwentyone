@@ -59,6 +59,13 @@ https://github.com/WordPress/gutenberg/tree/master/packages/icons
 
 This theme bundles the following third-party resources:
 
+input[type='checkbox'], input[type='radio'], input[type='ranged'],
+https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
+https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+https://codepen.io/aaroniker/pen/ZEYoxEY Copyright (c) 2020 Aaron Iker
+https://codepen.io/chriscoyier/pen/FtnAa Copyright (c) 2020 Chris Coyier
+License: MIT.
+
 Images
 Irises, Vincent van Gogh, 1890. Public domain. https://www.metmuseum.org/art/collection/search/436528
 Girl in white, Vincent van Gogh, 1890. Public domain. https://www.nga.gov/collection/art-object-page.46505.html
