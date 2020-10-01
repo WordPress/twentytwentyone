@@ -1637,6 +1637,10 @@ hr {
 	border-color: currentColor;
 }
 
+.wp-block-social-links li.wp-block-social-link:first-child {
+	margin-top: auto;
+}
+
 table th {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
