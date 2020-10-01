@@ -87,10 +87,13 @@
 	--global--elevation: 1px 1px 3px 0 rgba(0, 0, 0, 0.2);
 	/* Forms */
 	--form--font-family: var(--global--font-secondary);
-	--form--font-size: var(--global--font-size-md);
+	--form--font-size: var(--global--font-size-sm);
 	--form--line-height: var(--global--line-height-body);
-	--form--color-text: var(--global--color-primary);
-	--form--border-color: var(--global--color-border);
+	--form--color-text: var(--global--color-dark-gray);
+	--form--color-ranged: var(--global--color-secondary);
+	--form--label-weight: normal;
+	--form--label-weight-strong: 500;
+	--form--border-color: var(--global--color-secondary);
 	--form--border-width: 3px;
 	--form--border-radius: 0;
 	--form--spacing-unit: calc(0.5 * var(--global--spacing-unit));
@@ -100,19 +103,19 @@
 	--cover--color-background: var(--global--color-black);
 	/* Buttons */
 	--button--color-text: var(--global--color-background);
-	--button--color-text-hover: var(--button--color-text);
-	--button--color-text-active: var(--button--color-text);
+	--button--color-text-hover: var(--global--color-secondary);
+	--button--color-text-active: var(--global--color-secondary);
 	--button--color-background: var(--global--color-secondary);
-	--button--color-background-hover: var(--global--color-secondary-hover);
-	--button--color-background-active: var(--global--color-primary);
-	--button--font-family: var(--global--font-ui);
+	--button--color-background-hover: var(--global--color-background);
+	--button--color-background-active: var(--global--color-background);
+	--button--font-family: var(--global--font-primary);
 	--button--font-size: var(--global--font-size-base);
-	--button--font-weight: normal;
-	--button--line-height: 1;
-	--button--border-width: 2px;
-	--button--border-radius: 4px;
-	--button--padding-vertical: calc(var(--global--spacing-horizontal) - var(--button--border-width));
-	--button--padding-horizontal: var(--global--spacing-horizontal);
+	--button--font-weight: 500;
+	--button--line-height: 1.5;
+	--button--border-width: 3px;
+	--button--border-radius: 0;
+	--button--padding-vertical: 15px;
+	--button--padding-horizontal: calc(2 * var(--button--padding-vertical));
 	/* entry */
 	--entry-header--color: var(--global--color-primary);
 	--entry-header--color-link: currentColor;
@@ -162,7 +165,7 @@
 	--primary-nav--color-link-border: var(--global--color-primary);
 	--primary-nav--color-text: var(--global--color-primary);
 	--primary-nav--padding: calc(0.66 * var(--global--spacing-unit));
-	--primary-nav--justify-content: center;
+	--primary-nav--justify-content: right;
 	/* Pagination */
 	--pagination--color-text: var(--global--color-primary);
 	--pagination--color-link: var(--global--color-primary);
@@ -216,7 +219,7 @@
 }
 
 /* Button extends */
-.wp-block-search .wp-block-search__button {
+.wp-block-file .wp-block-file__button, .wp-block-search .wp-block-search__button {
 	line-height: var(--button--line-height);
 	color: var(--button--color-text);
 	cursor: pointer;
@@ -225,34 +228,45 @@
 	font-size: var(--button--font-size);
 	background-color: var(--button--color-background);
 	border-radius: var(--button--border-radius);
-	border-width: 0;
+	border: var(--button--border-width) solid var(--button--color-background);
 	text-decoration: none;
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
 
-.wp-block-search .wp-block-search__button:before, .wp-block-search .wp-block-search__button:after {
+.wp-block-file .wp-block-file__button:before, .wp-block-search .wp-block-search__button:before, .wp-block-file .wp-block-file__button:after, .wp-block-search .wp-block-search__button:after {
 	content: "";
 	display: block;
 	height: 0;
 	width: 0;
 }
 
-.wp-block-search .wp-block-search__button:before {
+.wp-block-file .wp-block-file__button:before, .wp-block-search .wp-block-search__button:before {
 	margin-bottom: -calc(.5em * var(--button--line-height) + -.38);
 }
 
-.wp-block-search .wp-block-search__button:after {
+.wp-block-file .wp-block-file__button:after, .wp-block-search .wp-block-search__button:after {
 	margin-top: -calc(.5em * var(--button--line-height) + -.39);
 }
 
-.wp-block-search .wp-block-search__button:active {
+.wp-block-file .wp-block-file__button:active, .wp-block-search .wp-block-search__button:active {
 	color: var(--button--color-text-active);
 	background-color: var(--button--color-background-active);
 }
 
-.wp-block-search .wp-block-search__button:hover, .wp-block-search .wp-block-search__button:focus, .wp-block-search .has-focus.wp-block-search__button {
+.wp-block-file .wp-block-file__button:hover, .wp-block-search .wp-block-search__button:hover {
 	color: var(--button--color-text-hover);
-	background-color: var(--button--color-background-hover);
+	background: transparent;
+}
+
+.wp-block-file .wp-block-file__button:focus, .wp-block-search .wp-block-search__button:focus, .wp-block-file .has-focus.wp-block-file__button, .wp-block-search .has-focus.wp-block-search__button {
+	outline-offset: -4px;
+	outline: 2px dotted currentColor;
+}
+
+.wp-block-file .wp-block-file__button:disabled, .wp-block-search .wp-block-search__button:disabled {
+	background-color: var(--global--color-white-50);
+	border-color: var(--global--color-white-50);
+	color: var(--button--color-text-active);
 }
 
 /**
@@ -367,6 +381,11 @@ img {
 	max-width: 100%;
 }
 
+/* Classic editor images */
+.entry-content img {
+	max-width: 100%;
+}
+
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
@@ -408,6 +427,21 @@ figcaption,
 	padding: 0;
 }
 
+select {
+	border: var(--form--border-width) solid var(--form--border-color);
+	border-radius: var(--form--border-radius);
+	color: var(--form--color-text);
+	font-size: var(--form--font-size);
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	padding: var(--form--spacing-unit) calc(3 * var(--form--spacing-unit)) var(--form--spacing-unit) var(--form--spacing-unit);
+	/* stylelint-disable */
+	background: var(--global--color-white) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2328303d'><polygon points='0,0 10,0 5,5'/></svg>") no-repeat;
+	/* stylelint-enable */
+	background-position: right var(--form--spacing-unit) top 60%;
+}
+  
 /*
  * text-underline-offset doesn't work in Chrome at all 👎
  * But looks nice in Safari/Firefox, so let's keep it and
@@ -441,24 +475,63 @@ a:hover {
 	line-height: var(--button--line-height);
 	background-color: var(--button--color-background);
 	border-radius: var(--button--border-radius);
+	border: var(--button--border-width) solid var(--button--color-background);
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
 
-.wp-block-button__link:hover, .wp-block-button__link:focus, .wp-block-button__link.has-focus {
+.wp-block-button__link:visited {
+	color: var(--button--color-text);
+}
+
+.wp-block-button__link:hover {
 	color: var(--button--color-text-hover);
 	background-color: var(--button--color-background-hover);
+}
+
+.wp-block-button__link:focus, .wp-block-button__link.has-focus {
+	outline-offset: -4px;
+	outline: 2px dotted currentColor;
 }
 
 .wp-block-button__link.is-style-outline,
 .is-style-outline .wp-block-button__link {
 	color: var(--button--color-background);
 	background: transparent;
-	border: 2px solid currentColor;
+	border: var(--button--border-width) solid currentColor;
+}
+
+.wp-block-button__link.is-style-outline:visited,
+.is-style-outline .wp-block-button__link:visited {
+	color: var(--button--color-background);
+}
+
+.wp-block-button__link.is-style-outline:active, .wp-block-button__link.is-style-outline:hover,
+.is-style-outline .wp-block-button__link:active,
+.is-style-outline .wp-block-button__link:hover {
+	background-color: var(--button--color-background);
+	color: var(--button--color-text);
+	border: var(--button--border-width) solid var(--button--color-background);
+}
+
+.wp-block-button__link.is-style-outline:focus, .wp-block-button__link.is-style-outline.has-focus,
+.is-style-outline .wp-block-button__link:focus,
+.is-style-outline .wp-block-button__link.has-focus {
+	outline-offset: -6px;
+	background: transparent;
 }
 
 .wp-block-button__link.is-style-squared,
 .is-style-squared .wp-block-button__link {
 	border-radius: 0;
+}
+
+.is-selected.is-style-outline .wp-block-button__link:hover {
+	color: var(--button--color-background);
+}
+
+.is-style-outline .wp-block-button__link[style*="radius"],
+.wp-block-button__link[style*="radius"] {
+	outline-offset: 2px;
 }
 
 div[data-type="core/button"] {
@@ -554,19 +627,7 @@ div[data-type="core/button"] {
 }
 
 .wp-block-file .wp-block-file__button {
-	color: var(--button--color-text);
-	font-weight: var(--button--font-weight);
-	font-family: var(--button--font-family);
-	font-size: var(--button--font-size);
-	line-height: var(--button--line-height);
-	background-color: var(--button--color-background);
-	border-radius: var(--button--border-radius);
-	padding: calc(0.5 * var(--button--padding-vertical)) calc(0.5 * var(--button--padding-horizontal));
-}
-
-.wp-block-file .wp-block-file__button:hover, .wp-block-file .wp-block-file__button:focus, .wp-block-file .wp-block-file__button.has-focus {
-	color: var(--button--color-text-hover);
-	background-color: var(--button--color-background-hover);
+	display: inline-block;
 }
 
 .wp-block-gallery figcaption {
@@ -1116,7 +1177,9 @@ p.has-background {
 }
 
 .wp-block-search .wp-block-search__label {
-	font-weight: normal;
+	font-size: var(--form--font-size);
+	font-weight: var(--form--label-weight-strong);
+	margin-bottom: calc(var(--global--spacing-vertical) / 3);
 }
 
 .wp-block-search .wp-block-search__input {
@@ -1132,6 +1195,10 @@ p.has-background {
 
 .wp-block-search .wp-block-search__input:focus {
 	border-color: var(--form--border-color);
+}
+
+.wp-block-search .wp-block-search__button {
+	box-shadow: none;
 }
 
 .wp-block-separator,

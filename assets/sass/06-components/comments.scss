@@ -275,6 +275,7 @@
 	.comment-form-cookies-consent > label,
 	.comment-notes {
 		font-size: var(--global--font-size-xs);
+		font-weight: normal;
 	}
 }
 
@@ -298,7 +299,7 @@
 		font-size: var(--global--font-size-sm);
 		margin-bottom: calc(.5 * var(--global--spacing-unit));
 		width: 100%;
-		font-weight: 500;
+		font-weight: var(--form--label-weight-strong);
 	}
 
 	&.comment-form-cookies-consent {

@@ -44,6 +44,9 @@ Twenty Nineteen is distributed under the terms of the GNU GPL v2 or later.
 Twenty Seventeen. Copyright (C) 2016-2020 WordPress.org
 Twenty Seventeen is distributed under the terms of the GNU GPL v2 or later.
 
+Twenty Sixteen. Copyright (C) 2015-2020 WordPress.org
+Twenty Sixteen is distributed under the terms of the GNU GPL v2 or later.
+
 Twenty Twenty. Copyright (C) 2020 WordPress.org
 Twenty Twenty is distributed under the terms of the GNU GPL v2 or later.
 
@@ -58,6 +61,13 @@ Icons Library, licensed under the terms of the GNU GPL v2 or later.
 https://github.com/WordPress/gutenberg/tree/master/packages/icons
 
 This theme bundles the following third-party resources:
+
+input[type='checkbox'], input[type='radio'], input[type='ranged'],
+https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
+https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+https://codepen.io/aaroniker/pen/ZEYoxEY Copyright (c) 2020 Aaron Iker
+https://codepen.io/chriscoyier/pen/FtnAa Copyright (c) 2020 Chris Coyier
+License: MIT.
 
 Images
 Irises, Vincent van Gogh, 1890. Public domain. https://www.metmuseum.org/art/collection/search/436528
