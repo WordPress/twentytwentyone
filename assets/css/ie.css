@@ -5000,7 +5000,7 @@ h2.page-title {
 	padding: 80px 20px 25px;
 	background-color: #d1e4dd;
 	overflow-x: hidden;
-	overflow-y: scroll;
+	overflow-y: auto;
 	transition: all .15s ease-in-out;
 	transform: translateY(30px);
 }
