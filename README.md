@@ -9,6 +9,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Description
 
+To contribute to TT1 development, please read the [contributor's guide](/CONTRIBUTING.md).
+
 ## Installation
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
