@@ -255,7 +255,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--primary-nav--color-link-border: var(--global--color-primary);
 	--primary-nav--color-text: var(--global--color-primary);
 	--primary-nav--padding: calc(0.66 * var(--global--spacing-unit));
-	--primary-nav--justify-content: center;
+	--primary-nav--justify-content: right;
 	/* Pagination */
 	--pagination--color-text: var(--global--color-primary);
 	--pagination--color-link: var(--global--color-primary);
@@ -2865,6 +2865,8 @@ table th,
 @media only screen and (min-width: 482px) {
 	.site-branding {
 		margin-right: initial;
+		margin-bottom: var(--global--spacing-vertical);
+		margin-top: 4px;
 		/* TODO: Make room for the menu if the title is very long.*/
 	}
 }
@@ -3756,6 +3758,7 @@ h2.page-title {
 
 .primary-navigation > div > .menu-wrapper li {
 	display: block;
+	margin: var(--primary-nav--padding) 0;
 	position: relative;
 	width: 100%;
 	z-index: 1;
@@ -3769,6 +3772,7 @@ h2.page-title {
 @media only screen and (min-width: 482px) {
 	.primary-navigation > div > .menu-wrapper li {
 		display: inherit;
+		margin: 0;
 		width: inherit;
 		/* Submenu display in the responsive menu */
 	}
@@ -3780,6 +3784,9 @@ h2.page-title {
 		opacity: 1;
 		display: block;
 	}
+	.primary-navigation > div > .menu-wrapper li:last-child {
+		margin-right: 0;
+	}
 }
 
 .primary-navigation > div > .menu-wrapper > li > .sub-menu {
@@ -3788,13 +3795,13 @@ h2.page-title {
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation > div > .menu-wrapper > li > .sub-menu {
-		margin: 0;
 		background: var(--global--color-background);
-		left: -15px;
-		top: calc(100% - (0.5 * var(--primary-nav--padding)));
+		left: 0;
+		margin: 0;
 		min-width: max-content;
 		opacity: 0;
 		position: absolute;
+		top: calc(100% - var(--primary-nav--padding));
 		transition: all 0.5s ease;
 		visibility: hidden;
 	}
@@ -3808,15 +3815,13 @@ h2.page-title {
 	color: var(--primary-nav--color-link-hover);
 }
 
-.primary-navigation .primary-menu-container > ul > .menu-item {
-	padding: calc(0.5 * var(--primary-nav--padding)) 0;
-}
-
 @media only screen and (min-width: 482px) {
 	.primary-navigation .primary-menu-container > ul > .menu-item {
 		display: flex;
 		align-items: center;
-		padding: calc(0.7 * var(--primary-nav--padding)) calc(3 * var(--primary-nav--padding)) var(--primary-nav--padding) 0;
+		margin-left: calc(-1 * var(--primary-nav--padding));
+		margin-right: var(--primary-nav--padding);
+		padding: 0 var(--primary-nav--padding);
 	}
 }
 
@@ -3825,6 +3830,7 @@ h2.page-title {
 	font-family: var(--primary-nav--font-family-mobile);
 	font-size: var(--primary-nav--font-size-mobile);
 	font-weight: var(--primary-nav--font-weight);
+	padding: var(--primary-nav--padding) 0;
 }
 
 @media only screen and (min-width: 482px) {
@@ -3845,17 +3851,21 @@ h2.page-title {
 }
 
 .primary-navigation a:hover {
-	border-bottom: 1px dashed var(--primary-nav--color-link-border);
+	text-decoration: underline dotted;
+}
+
+.primary-navigation a:focus {
+	z-index: 99999;
 }
 
 .primary-navigation .current-menu-item > a:first-child,
 .primary-navigation .current_page_item > a:first-child {
-	border-bottom: 1px solid var(--primary-nav--color-link-border);
+	text-decoration: underline solid;
 }
 
 .primary-navigation .current-menu-item > a:first-child:hover,
 .primary-navigation .current_page_item > a:first-child:hover {
-	border-bottom: 1px dashed var(--primary-nav--color-link-border);
+	text-decoration: underline dotted;
 }
 
 .primary-navigation .sub-menu {
@@ -3865,34 +3875,29 @@ h2.page-title {
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation .sub-menu {
-		padding: var(--primary-nav--padding);
+		padding: 0 var(--primary-nav--padding);
 	}
 	.primary-navigation .sub-menu > .menu-item > .sub-menu {
-		padding: var(--primary-nav--padding) 0 0 0;
-	}
-	.primary-navigation .sub-menu > .menu-item.menu-item-has-children {
-		padding: var(--primary-nav--padding) 0 0 0;
+		padding: 0;
 	}
 }
 
 .primary-navigation .sub-menu .menu-item {
-	padding: calc(0.5 * var(--primary-nav--padding)) var(--primary-nav--padding);
+	margin: calc(2 * var(--primary-nav--padding)) 0;
 }
 
-@media only screen and (min-width: 482px) {
-	.primary-navigation .sub-menu .menu-item {
-		padding: var(--primary-nav--padding) 0;
-	}
+.primary-navigation .sub-menu .menu-item:last-child {
+	margin-bottom: 0;
 }
 
-.primary-navigation .sub-menu .menu-item a {
+.primary-navigation .sub-menu .menu-item > a {
 	display: inline;
 	font-size: var(--primary-nav--font-size-sub-menu-mobile);
 	font-style: var(--primary-nav--font-style-sub-menu-mobile);
 }
 
 @media only screen and (min-width: 482px) {
-	.primary-navigation .sub-menu .menu-item a {
+	.primary-navigation .sub-menu .menu-item > a {
 		font-size: var(--primary-nav--font-size-sub-menu);
 		font-style: var(--primary-nav--font-style);
 	}
