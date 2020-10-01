@@ -43,7 +43,7 @@ _When you add a pull request, please also add in the description your WordPress.
 
 Building the theme requires [node.js](https://nodejs.org/en/) to be installed. 
 
-To install the project's dependencies and start the server to watch for changes within the theme: 
+To install the project's dependencies and start a development server to watch for changes within the theme's sass: 
 
 ```sh
 cd path/to/twentytwentyone
@@ -51,13 +51,13 @@ npm install
 npm start
 ```
 
-This will start a development server that watches for changes. Twenty Twenty-One relies on [Sass](https://sass-lang.com/guide) which allows us to more easily share code between multiple stylesheets (`style.css`, `style-editor.css`, etc.).
+Twenty Twenty-One relies on [Sass](https://sass-lang.com/guide) which allows us to more easily share code between multiple stylesheets (`style.css`, `style-editor.css`, etc.).
 
 More development scripts can be found in the [package.json](/package.json).
 
 #### Using wp-env
 
-To make it easier to get started with contributing Twenty Twenty-One includes @wordpress/env, which is a project developed by the Gutenberg Project to allow for easy lightweight preconfigured local environments. 
+To make it easier to get started with contributing Twenty Twenty-One includes [@wordpress/env](https://developer.wordpress.org/block-editor/packages/packages-env/), which is a project developed by the Gutenberg Project to allow for easy lightweight preconfigured local environments. 
 
 wp-env requires [docker](https://docs.docker.com/get-docker/) to be installed and running. 
 
