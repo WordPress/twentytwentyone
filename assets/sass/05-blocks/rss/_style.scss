@@ -1,0 +1,24 @@
+.wp-block-rss {
+
+	&.aligncenter,
+	&.alignright {
+		list-style: none;
+	}
+
+	&.is-grid {
+
+		.wp-block-rss__item-title,
+		.wp-block-rss__item-author {
+			margin-bottom: calc(var(--global--spacing-vertical) * 0.25);
+		}
+	}
+
+	li {
+		margin-bottom: var(--global--spacing-vertical);
+
+		.wp-block-rss__item-publish-date,
+		.wp-block-rss__item-author {
+			color: var(--global--color-gray);
+		}
+	}
+}

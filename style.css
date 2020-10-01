@@ -2577,6 +2577,24 @@ p.has-text-color a {
 	border-color: currentColor;
 }
 
+.wp-block-rss.aligncenter, .wp-block-rss.alignright {
+	list-style: none;
+}
+
+.wp-block-rss.is-grid .wp-block-rss__item-title,
+.wp-block-rss.is-grid .wp-block-rss__item-author {
+	margin-bottom: calc(var(--global--spacing-vertical) * 0.25);
+}
+
+.wp-block-rss li {
+	margin-bottom: var(--global--spacing-vertical);
+}
+
+.wp-block-rss li .wp-block-rss__item-publish-date,
+.wp-block-rss li .wp-block-rss__item-author {
+	color: var(--global--color-gray);
+}
+
 .wp-block-search {
 	max-width: var(--responsive--aligndefault-width);
 }

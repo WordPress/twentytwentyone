@@ -3621,6 +3621,30 @@ p.has-text-color a {
 	border-color: currentColor;
 }
 
+.wp-block-rss.aligncenter, .wp-block-rss.alignright {
+	list-style: none;
+}
+
+.wp-block-rss.is-grid .wp-block-rss__item-title {
+	margin-bottom: 8px;
+}
+
+.wp-block-rss.is-grid .wp-block-rss__item-author {
+	margin-bottom: 8px;
+}
+
+.wp-block-rss li {
+	margin-bottom: 30px;
+}
+
+.wp-block-rss li .wp-block-rss__item-publish-date {
+	color: #39414d;
+}
+
+.wp-block-rss li .wp-block-rss__item-author {
+	color: #39414d;
+}
+
 .wp-block-search {
 	max-width: calc(100vw - 30px);
 }
