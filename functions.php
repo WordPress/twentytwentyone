@@ -113,17 +113,8 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 		// Add support for editor styles.
 		add_theme_support( 'editor-styles' );
 
-		$editor_stylesheet_path = './assets/css/style-editor.css';
-
-		// Note, the is_IE global variable is defined by WordPress and is used
-		// to detect if the current browser is internet explorer.
-		global $is_IE;
-		if ( $is_IE ) {
-			$editor_stylesheet_path = './assets/css/ie-editor.css';
-		}
-
 		// Enqueue editor styles.
-		add_editor_style( $editor_stylesheet_path );
+		add_editor_style( './assets/css/style-editor.css' );
 
 		// Add custom editor font sizes.
 		add_theme_support(
@@ -326,16 +317,8 @@ add_action( 'after_setup_theme', 'twenty_twenty_one_content_width', 0 );
  * Enqueue scripts and styles.
  */
 function twenty_twenty_one_scripts() {
-	// Note, the is_IE global variable is defined by WordPress and is used
-	// to detect if the current browser is internet explorer.
-	global $is_IE;
-	if ( $is_IE ) {
-		// If IE 11 or below, use a flattened stylesheet with static values replacing CSS Variables.
-		wp_enqueue_style( 'twenty-twenty-one-style', get_template_directory_uri() . '/assets/css/ie.css', array(), wp_get_theme()->get( 'Version' ) );
-	} else {
-		// If not IE, use the standard stylesheet.
-		wp_enqueue_style( 'twenty-twenty-one-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
-	}
+	// Theme styles.
+	wp_enqueue_style( 'twenty-twenty-one-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
 
 	// RTL styles.
 	wp_style_add_data( 'twenty-twenty-one-style', 'rtl', 'replace' );
@@ -351,6 +334,15 @@ function twenty_twenty_one_scripts() {
 	// Main navigation scripts.
 	if ( has_nav_menu( 'primary' ) ) {
 		wp_enqueue_script( 'twenty-twenty-one-primary-navigation-script', get_template_directory_uri() . '/assets/js/primary-navigation.js', array(), wp_get_theme()->get( 'Version' ), true );
+	}
+
+	// Note, the is_IE global variable is defined by WordPress and is used
+	// to detect if the current browser is internet explorer.
+	global $is_IE;
+	if ( $is_IE ) {
+		// If IE 11 or below, use a ponyfill to add CSS Variable support.
+		wp_register_script( 'css-vars-ponyfill', get_stylesheet_directory_uri() . '/assets/js/css-vars-ponyfill2.js', array(), wp_get_theme()->get( 'Version' ), true );
+		wp_enqueue_script( 'ie11-fix', get_template_directory_uri() . '/assets/js/ie11-fix.js', array( 'css-vars-ponyfill' ), wp_get_theme()->get( 'Version' ), true );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'twenty_twenty_one_scripts' );
