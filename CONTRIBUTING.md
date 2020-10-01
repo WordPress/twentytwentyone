@@ -96,7 +96,7 @@ Here are some good ideas for commit messages:
 
 #### Linting
 
-It is recommended to lint your code before submitting a pull request. The repository is configured with [automated checks](https://github.com/WordPress/twentytwentyone/actions) to enforce WordPress php and scss standards, both of which can be run locally. 
+It is recommended to lint your code before submitting a pull request. The repository is configured with [automated checks](https://github.com/WordPress/twentytwentyone/actions) to enforce WordPress PHP and scss standards, both of which can be run locally. 
 
 To lint sass:
 
@@ -104,7 +104,7 @@ To lint sass:
 npm run lint:scss
 ```
 
-To lint php, [composer](https://getcomposer.org/download/) and its dependencies must be installed in addition to the node project dependencies":
+To lint PHP, [composer](https://getcomposer.org/download/) and its dependencies must be installed in addition to the node project dependencies:
 
 ```sh
 composer install
