@@ -74,6 +74,7 @@
 
 		#primary-mobile-menu {
 			display: flex;
+			margin-top: 0;
 		}
 	}
 }
@@ -374,5 +375,7 @@
 	.lock-scrolling .site {
 		position: fixed;
 		max-width: 100%;
+		left: 0;
+		right: 0;
 	}
 }

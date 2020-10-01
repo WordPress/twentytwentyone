@@ -3649,6 +3649,7 @@ h2.page-title {
 
 .primary-navigation-open .menu-button-container #primary-mobile-menu {
 	display: flex;
+	margin-top: 0;
 }
 
 .primary-navigation {
@@ -3924,6 +3925,8 @@ h2.page-title {
 	.lock-scrolling .site {
 		position: fixed;
 		max-width: 100%;
+		right: 0;
+		left: 0;
 	}
 }
 
