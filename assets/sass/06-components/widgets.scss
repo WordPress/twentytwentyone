@@ -1,10 +1,18 @@
 .widget-area {
 	font-size: var(--footer--font-size);
+	margin-bottom: 0;
+
 	@include media(desktop) {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		column-gap: calc(2 * var(--global--spacing-horizontal));
 	}
+}
+
+.widget-title {
+	font-size: var(--global--font-size-sm);
+	font-weight: 700;
+	line-height: 1.4;
 }
 
 // Search widget styles

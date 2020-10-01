@@ -5404,6 +5404,7 @@ h2.page-title {
 
 .widget-area {
 	font-size: 1rem;
+	margin-bottom: 0;
 }
 
 @media only screen and (min-width: 822px) {
@@ -5412,6 +5413,12 @@ h2.page-title {
 		grid-template-columns: repeat(3, 1fr);
 		column-gap: 50px;
 	}
+}
+
+.widget-title {
+	font-size: 1.125rem;
+	font-weight: 700;
+	line-height: 1.4;
 }
 
 .search-form {

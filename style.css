@@ -4064,6 +4064,7 @@ h2.page-title {
 
 .widget-area {
 	font-size: var(--footer--font-size);
+	margin-bottom: 0;
 }
 
 @media only screen and (min-width: 822px) {
@@ -4072,6 +4073,12 @@ h2.page-title {
 		grid-template-columns: repeat(3, 1fr);
 		column-gap: calc(2 * var(--global--spacing-horizontal));
 	}
+}
+
+.widget-title {
+	font-size: var(--global--font-size-sm);
+	font-weight: 700;
+	line-height: 1.4;
 }
 
 .search-form {
