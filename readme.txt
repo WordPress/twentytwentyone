@@ -44,6 +44,9 @@ Twenty Nineteen is distributed under the terms of the GNU GPL v2 or later.
 Twenty Seventeen. Copyright (C) 2016-2020 WordPress.org
 Twenty Seventeen is distributed under the terms of the GNU GPL v2 or later.
 
+Twenty Sixteen. Copyright (C) 2015-2020 WordPress.org
+Twenty Sixteen is distributed under the terms of the GNU GPL v2 or later.
+
 Twenty Twenty. Copyright (C) 2020 WordPress.org
 Twenty Twenty is distributed under the terms of the GNU GPL v2 or later.
 
