@@ -1606,13 +1606,7 @@ pre.wp-block-verse {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-weight: 300;
 	font-size: 4rem;
-	line-height: 4rem;
-}
-
-@media only screen and (min-width: 652px){
-	.wp-block.editor-post-title__block .editor-post-title__input{
-	line-height: 6rem;
-	}
+	line-height: 1.1;
 }
 
 @media only screen and (min-width: 652px){
