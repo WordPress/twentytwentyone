@@ -158,11 +158,11 @@ function twenty_twenty_one_continue_reading_link() {
 	if ( ! is_admin() ) {
 		$continue_reading = sprintf(
 			/* translators: %s: Name of current post. */
-			wp_kses( __( 'Read more %s', 'twentytwentyone' ), array( 'span' => array( 'class' => array() ) ) ),
+			wp_kses( __( 'Read More %s', 'twentytwentyone' ), array( 'span' => array( 'class' => array() ) ) ),
 			the_title( '<span class="screen-reader-text">' . __( 'about ', 'twentytwentyone' ), '</span>', false )
 		);
 
-		return '<a class="more-link" href="' . esc_url( get_permalink() ) . '">' . $continue_reading . '</a>';
+		return '<span class="more" > &hellip; <a class="more-link" href="' . esc_url( get_permalink() ) . '">' . $continue_reading . '</a></span>';
 	}
 }
 

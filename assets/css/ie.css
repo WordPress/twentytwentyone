@@ -4295,24 +4295,6 @@ h1.entry-title {
 	word-wrap: break-word;
 }
 
-.entry-content .more-link {
-	display: block;
-	max-width: calc(100vw - 30px);
-	width: auto;
-}
-
-@media only screen and (min-width: 482px){
-	.entry-content .more-link{
-	max-width: min(calc(100vw - 100px), 610px);
-	}
-}
-
-@media only screen and (min-width: 822px){
-	.entry-content .more-link{
-	max-width: min(calc(100vw - 200px), 610px);
-	}
-}
-
 .entry-content .more-link:hover {
 	text-decoration: none;
 }

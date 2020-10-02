@@ -48,10 +48,6 @@ h1.entry-title {
 
 	.more-link {
 
-		display: block;
-		max-width: var(--responsive--aligndefault-width);
-		width: auto;
-
 		&:hover {
 			text-decoration: none;
 		}
