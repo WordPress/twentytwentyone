@@ -4106,7 +4106,7 @@ h1.page-title {
 }
 
 .widget-area a {
-	border-bottom: 1px solid currentColor;
+	text-decoration: underline solid currentColor;
 }
 
 .widget-title {
