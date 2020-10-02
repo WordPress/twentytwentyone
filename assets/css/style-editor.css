@@ -621,9 +621,14 @@ div[data-type="core/button"] {
 }
 
 .wp-block-file .wp-block-file__textlink {
-	border-bottom: 1px solid var(--global--color-secondary);
-	color: var(--global--color-primary);
-	text-decoration: none;
+	text-decoration: underline;
+	text-decoration-style: solid;
+	text-decoration-thickness: 1px;
+}
+
+.wp-block-file .wp-block-file__textlink:hover {
+	text-decoration: underline;
+	text-decoration-style: dotted;
 }
 
 .wp-block-file .wp-block-file__button {
