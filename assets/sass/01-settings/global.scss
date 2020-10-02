@@ -70,6 +70,7 @@ $baseline-unit: 10px;
 	--global--color-black: #000;
 	--global--color-dark-gray: #28303d;
 	--global--color-gray: #39414d;
+	--global--color-light-gray: #f0f0f0;
 	--global--color-green: #d1e4dd;
 	--global--color-blue: #d1dfe4;
 	--global--color-purple: #d1d1e4;
@@ -230,6 +231,10 @@ $baseline-unit: 10px;
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
 	--separator--width: calc(6 * var(--global--spacing-horizontal));
+
+	/* Block: Table */
+	--table--stripes-border-color: var(--global--color-light-gray);
+	--table--stripes-background-color: var(--global--color-light-gray);
 }
 
 @media only screen and (min-width: 652px) { // Not using the mixin because it's compiled after this file
