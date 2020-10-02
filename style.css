@@ -2416,7 +2416,7 @@ p.has-text-color a {
 
 .wp-block-pullquote::before {
 	color: currentColor;
-	content: "“";
+	content: "\201C";
 	display: block;
 	font-size: 3rem;
 	font-weight: 500;
