@@ -1431,10 +1431,16 @@ p.has-background {
 .wp-block-pullquote.is-style-solid-color {
 	background-color: #d1e4dd;
 	color: #28303d;
-	padding: 100px;
+	padding: 50px;
 	border-width: 3px;
 	border-style: solid;
 	border-color: #28303d;
+}
+
+@media (min-width: 600px) {
+	.wp-block-pullquote.is-style-solid-color {
+		padding: 100px;
+	}
 }
 
 .wp-block-pullquote.is-style-solid-color::before {
