@@ -7,6 +7,15 @@
 		grid-template-columns: repeat(3, 1fr);
 		column-gap: calc(2 * var(--global--spacing-horizontal));
 	}
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+	}
+
+	a {
+		border-bottom: 1px solid currentColor;
+	}
 }
 
 .widget-title {

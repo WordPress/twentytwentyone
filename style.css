@@ -4100,6 +4100,15 @@ h1.page-title {
 	}
 }
 
+.widget-area ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.widget-area a {
+	border-bottom: 1px solid currentColor;
+}
+
 .widget-title {
 	font-size: var(--global--font-size-sm);
 	font-weight: 700;
