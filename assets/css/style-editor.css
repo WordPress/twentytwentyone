@@ -1248,6 +1248,10 @@ hr {
 	border-color: currentColor;
 }
 
+.wp-block-social-links li.wp-block-social-link:first-child {
+	margin-top: auto;
+}
+
 table th,
 .wp-block-table th {
 	font-family: var(--heading--font-family);
