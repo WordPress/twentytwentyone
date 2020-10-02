@@ -7,7 +7,7 @@ Author URI: https://wordpress.org/
 Description:
 Requires at least: 5.3
 Tested up to: 5.5
-Requires PHP: 5.6
+Requires PHP: 7.2
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -2938,7 +2938,7 @@ nav a {
 }
 
 .site-logo {
-	margin: calc(var(--global--spacing-vertical) / 2) var(--global--spacing-horizontal);
+	margin: calc(var(--global--spacing-vertical) / 2) 0;
 }
 
 .site-logo .custom-logo {
