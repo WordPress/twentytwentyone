@@ -8,6 +8,10 @@ h2.page-title {
 	font-weight: var(--heading--font-weight-page-title);
 }
 
+h1.page-title {
+	line-height: var(--heading--line-height-h1);
+}
+
 .page-header {
 	border-bottom: 3px solid var(--global--color-border);
 	padding-bottom: calc(2 * var(--global--spacing-vertical));
