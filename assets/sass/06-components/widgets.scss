@@ -11,6 +11,10 @@
 	ul {
 		list-style-type: none;
 		padding: 0;
+
+		&.sub-menu {
+			margin-left: var(--primary-nav--padding);
+		}
 	}
 
 	a {

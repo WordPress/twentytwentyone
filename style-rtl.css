@@ -4092,6 +4092,10 @@ h1.page-title {
 	padding: 0;
 }
 
+.widget-area ul.sub-menu {
+	margin-right: var(--primary-nav--padding);
+}
+
 .widget-area a {
 	text-decoration: underline solid currentColor;
 }

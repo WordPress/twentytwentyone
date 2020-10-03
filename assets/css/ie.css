@@ -5447,6 +5447,10 @@ h1.page-title {
 	padding: 0;
 }
 
+.widget-area ul.sub-menu {
+	margin-left: 13px;
+}
+
 .widget-area a {
 	text-decoration: underline solid currentColor;
 }
