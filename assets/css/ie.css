@@ -3354,6 +3354,7 @@ p.has-text-color a {
 	border-bottom-style: solid;
 	border-bottom-width: 3px;
 	color: #28303d;
+	position: relative;
 	/**
 	 * Block Options
 	 */

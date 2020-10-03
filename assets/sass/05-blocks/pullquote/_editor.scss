@@ -11,6 +11,7 @@
 	border-bottom-style: solid;
 	border-bottom-width: var(--pullquote--border-width);
 	color: var(--pullquote--color-foreground);
+	position: relative;
 
 	&::before {
 		color: currentColor;

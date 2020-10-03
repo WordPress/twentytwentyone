@@ -1372,6 +1372,7 @@ p.has-background {
 	border-bottom-style: solid;
 	border-bottom-width: 3px;
 	color: #28303d;
+	position: relative;
 }
 
 .wp-block-pullquote::before {
