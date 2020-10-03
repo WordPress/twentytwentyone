@@ -15,10 +15,9 @@
 	<header class="entry-header">
 		<?php
 		the_title( sprintf( '<h2 class="entry-title default-max-width"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
+		twenty_twenty_one_post_thumbnail();
 		?>
 	</header><!-- .entry-header -->
-
-	<?php twenty_twenty_one_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php the_excerpt(); ?>
