@@ -1518,12 +1518,9 @@ a:hover {
 }
 
 /* Category 05 is all about adjusting the default block styles to the given layout. I only added three blocks as examples. */
-.wp-block-audio {
-	min-width: inherit;
-}
-
-.wp-block-audio.alignleft, .wp-block-audio.alignright {
-	min-width: 300px;
+.wp-block-audio audio:focus {
+	outline-offset: 5px;
+	outline: 2px solid var(--global--color-primary);
 }
 
 /**
