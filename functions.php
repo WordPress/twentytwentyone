@@ -84,12 +84,6 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 		$logo_width  = 300;
 		$logo_height = 100;
 
-		// If the retina setting is active, double the recommended width and height.
-		if ( get_theme_mod( 'retina_logo', false ) ) {
-			$logo_width  = floor( $logo_width * 2 );
-			$logo_height = floor( $logo_height * 2 );
-		}
-
 		add_theme_support(
 			'custom-logo',
 			array(
