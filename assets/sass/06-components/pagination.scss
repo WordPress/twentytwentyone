@@ -98,7 +98,8 @@
 }
 
 // Index/archive navigation
-.pagination {
+.pagination,
+.comments-pagination {
 
 	border-top: 3px solid var(--global--color-border);
 	padding-top: var(--global--spacing-vertical);
@@ -142,4 +143,19 @@
 			margin-right: auto;
 		}
 	}
+}
+
+// Comments pagination
+.comments-pagination {
+	padding-top: calc(0.66 * var(--global--spacing-vertical));
+	margin: calc(3 * var(--global--spacing-vertical)) auto;
+
+	@include media(desktop) {
+		margin: calc(3 * var(--global--spacing-vertical)) auto calc(4 * var(--global--spacing-vertical)) auto;
+	}
+
+	.nav-links > * {
+		font-size: var(--global--font-size-md);
+	}
+
 }

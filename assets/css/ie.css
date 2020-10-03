@@ -924,6 +924,24 @@ hr.wp-block-separator.is-style-wide {
 	}
 }
 
+.comments-pagination {
+	max-width: calc(100vw - 30px);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media only screen and (min-width: 482px){
+	.comments-pagination{
+	max-width: calc(100vw - 100px);
+	}
+}
+
+@media only screen and (min-width: 822px){
+	.comments-pagination{
+	max-width: min(calc(100vw - 200px), 1240px);
+	}
+}
+
 .full-max-width {
 	max-width: calc(100% + 50px);
 	width: calc(100% + 50px);
@@ -4615,29 +4633,11 @@ h1.page-title {
 }
 
 .comment-reply-title small a {
-	border-color: transparent;
-	color: currentColor;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1rem;
 	font-style: normal;
 	font-weight: normal;
 	letter-spacing: normal;
-}
-
-.comment-reply-title small a:hover {
-	color: #28303d;
-}
-
-.comment-reply-title small a:focus {
-	color: #28303d;
-}
-
-.comment-reply-title small a:hover {
-	border-color: #39414d;
-}
-
-.comment-reply-title small a:active {
-	color: currentColor;
 }
 
 /* Nested comment reply title*/
@@ -4709,27 +4709,6 @@ h1.page-title {
 
 .comment-meta .comment-metadata .edit-link {
 	margin-left: 25px;
-}
-
-.comment-meta .comment-metadata a {
-	color: currentColor;
-	border-color: transparent;
-}
-
-.comment-meta .comment-metadata a:hover {
-	color: #28303d;
-}
-
-.comment-meta .comment-metadata a:focus {
-	color: #28303d;
-}
-
-.comment-meta .comment-metadata a:hover {
-	border-color: #39414d;
-}
-
-.comment-meta .comment-metadata a:active {
-	color: currentColor;
 }
 
 @media only screen and (min-width: 482px) {
@@ -4917,12 +4896,6 @@ h1.page-title {
 	.comment-form > p.comment-notes, .comment-form > p.logged-in-as {
 		display: block;
 	}
-}
-
-.comment-navigation a {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1.25rem;
-	font-weight: 600;
 }
 
 .menu-button-container {
@@ -5386,8 +5359,17 @@ h1.page-title {
 	margin: 30px auto;
 }
 
+.comments-pagination {
+	border-top: 3px solid #28303d;
+	padding-top: 30px;
+	margin: 30px auto;
+}
+
 @media only screen and (min-width: 822px) {
 	.pagination {
+		margin: 30px auto;
+	}
+	.comments-pagination {
 		margin: 30px auto;
 	}
 }
@@ -5401,11 +5383,25 @@ h1.page-title {
 	margin-right: 13px;
 }
 
+.comments-pagination .nav-links > * {
+	color: #28303d;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: 1.5rem;
+	font-weight: normal;
+	margin-left: 13px;
+	margin-right: 13px;
+}
+
 .pagination .nav-links > *.current {
 	border-bottom: 1px solid #28303d;
 }
 
-.pagination .nav-links > *:first-child {
+.comments-pagination .nav-links > *.current {
+	border-bottom: 1px solid #28303d;
+}
+
+.pagination .nav-links > *:first-child,
+.comments-pagination .nav-links > *:first-child {
 	margin-left: 0;
 }
 
@@ -5413,16 +5409,38 @@ h1.page-title {
 	color: #28303d;
 }
 
-.pagination .nav-links > *:last-child {
+.comments-pagination .nav-links > *a:hover {
+	color: #28303d;
+}
+
+.pagination .nav-links > *:last-child,
+.comments-pagination .nav-links > *:last-child {
 	margin-right: 0;
 }
 
-.pagination .nav-links > *.next {
+.pagination .nav-links > *.next,
+.comments-pagination .nav-links > *.next {
 	margin-left: auto;
 }
 
-.pagination .nav-links > *.prev {
+.pagination .nav-links > *.prev,
+.comments-pagination .nav-links > *.prev {
 	margin-right: auto;
+}
+
+.comments-pagination {
+	padding-top: 20px;
+	margin: 90px auto;
+}
+
+@media only screen and (min-width: 822px) {
+	.comments-pagination {
+		margin: 90px auto 120px auto;
+	}
+}
+
+.comments-pagination .nav-links > * {
+	font-size: 1.25rem;
 }
 
 .widget-area {
