@@ -27,6 +27,7 @@ $baseline-unit: 10px;
 	--global--line-height-base: 1;
 	--global--line-height-body: 1.7;
 	--global--line-height-heading: 1.3;
+	--global--line-height-page-title: 1.1;
 
 	/* Headings */
 	--heading--font-family: var(--global--font-primary);
@@ -51,7 +52,7 @@ $baseline-unit: 10px;
 	--heading--line-height-h4: var(--global--line-height-heading);
 	--heading--line-height-h3: var(--heading--line-height);
 	--heading--line-height-h2: var(--heading--line-height);
-	--heading--line-height-h1: var(--heading--line-height);
+	--heading--line-height-h1: var(--global--line-height-page-title);
 
 	--heading--font-weight: normal;
 	--heading--font-weight-page-title: 300;
@@ -85,7 +86,7 @@ $baseline-unit: 10px;
 	--global--color-primary-hover: var(--global--color-primary);
 	--global--color-secondary-hover: var(--global--color-secondary);
 	--global--color-background: var(--global--color-green); /* Mint, default body background */
-	--global--color-border: var(--global--color-dark-gray); /* Used for borders (separators) */
+	--global--color-border: var(--global--color-primary); /* Used for borders (separators) */
 
 	/* Spacing */
 	--global--spacing-unit: #{2 * $baseline-unit}; // 20px

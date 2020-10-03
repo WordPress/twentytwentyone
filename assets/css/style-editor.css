@@ -23,6 +23,7 @@
 	--global--line-height-base: 1;
 	--global--line-height-body: 1.7;
 	--global--line-height-heading: 1.3;
+	--global--line-height-page-title: 1.1;
 	/* Headings */
 	--heading--font-family: var(--global--font-primary);
 	--heading--line-height: var(--global--line-height-heading);
@@ -43,7 +44,7 @@
 	--heading--line-height-h4: var(--global--line-height-heading);
 	--heading--line-height-h3: var(--heading--line-height);
 	--heading--line-height-h2: var(--heading--line-height);
-	--heading--line-height-h1: var(--heading--line-height);
+	--heading--line-height-h1: var(--global--line-height-page-title);
 	--heading--font-weight: normal;
 	--heading--font-weight-page-title: 300;
 	--heading--font-weight-strong: 600;
@@ -76,7 +77,7 @@
 	--global--color-secondary-hover: var(--global--color-secondary);
 	--global--color-background: var(--global--color-green);
 	/* Mint, default body background */
-	--global--color-border: var(--global--color-dark-gray);
+	--global--color-border: var(--global--color-primary);
 	/* Used for borders (separators) */
 	/* Spacing */
 	--global--spacing-unit: 20px;
@@ -1248,6 +1249,10 @@ hr {
 	border-color: currentColor;
 }
 
+.wp-block-social-links li.wp-block-social-link:first-child {
+	margin-top: auto;
+}
+
 table th,
 .wp-block-table th {
 	font-family: var(--heading--font-family);
@@ -1290,7 +1295,7 @@ pre.wp-block-verse {
 	font-family: var(--heading--font-family);
 	font-weight: var(--heading--font-weight-page-title);
 	font-size: var(--global--font-size-page-title);
-	line-height: var(--heading--line-height);
+	line-height: var(--heading--line-height-h1);
 }
 
 .wp-block.block-editor-default-block-appender > textarea {

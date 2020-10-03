@@ -7,7 +7,7 @@ Author URI: https://wordpress.org/
 Description:
 Requires at least: 5.3
 Tested up to: 5.5
-Requires PHP: 7.2
+Requires PHP: 5.6
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -114,6 +114,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--global--line-height-base: 1;
 	--global--line-height-body: 1.7;
 	--global--line-height-heading: 1.3;
+	--global--line-height-page-title: 1.1;
 	/* Headings */
 	--heading--font-family: var(--global--font-primary);
 	--heading--line-height: var(--global--line-height-heading);
@@ -134,7 +135,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--heading--line-height-h4: var(--global--line-height-heading);
 	--heading--line-height-h3: var(--heading--line-height);
 	--heading--line-height-h2: var(--heading--line-height);
-	--heading--line-height-h1: var(--heading--line-height);
+	--heading--line-height-h1: var(--global--line-height-page-title);
 	--heading--font-weight: normal;
 	--heading--font-weight-page-title: 300;
 	--heading--font-weight-strong: 600;
@@ -167,7 +168,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--global--color-secondary-hover: var(--global--color-secondary);
 	--global--color-background: var(--global--color-green);
 	/* Mint, default body background */
-	--global--color-border: var(--global--color-dark-gray);
+	--global--color-border: var(--global--color-primary);
 	/* Used for borders (separators) */
 	/* Spacing */
 	--global--spacing-unit: 20px;
@@ -1509,12 +1510,9 @@ a:hover {
 }
 
 /* Category 05 is all about adjusting the default block styles to the given layout. I only added three blocks as examples. */
-.wp-block-audio {
-	min-width: inherit;
-}
-
-.wp-block-audio.alignleft, .wp-block-audio.alignright {
-	min-width: 300px;
+.wp-block-audio audio:focus {
+	outline-offset: 5px;
+	outline: 2px solid var(--global--color-primary);
 }
 
 /**
@@ -3054,6 +3052,7 @@ nav a {
 }
 
 h1.entry-title {
+	line-height: var(--heading--line-height-h1);
 	font-weight: var(--heading--font-weight-page-title);
 }
 
@@ -3263,6 +3262,10 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 h1.page-title,
 h2.page-title {
 	font-weight: var(--heading--font-weight-page-title);
+}
+
+h1.page-title {
+	line-height: var(--heading--line-height-h1);
 }
 
 .page-header {
