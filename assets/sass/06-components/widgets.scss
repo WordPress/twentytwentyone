@@ -15,6 +15,10 @@
 
 	a {
 		text-decoration: underline solid currentColor;
+
+		&:hover {
+			text-decoration-style: dotted;
+		}
 	}
 }
 
