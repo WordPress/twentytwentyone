@@ -3036,6 +3036,10 @@ nav a {
 	margin-bottom: calc(3 * var(--global--spacing-vertical));
 }
 
+.home.singular .entry-header {
+	display: none;
+}
+
 .entry-title {
 	color: var(--entry-header--color);
 	font-size: var(--entry-header--font-size);

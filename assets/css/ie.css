@@ -4234,6 +4234,10 @@ nav a {
 	margin-bottom: 90px;
 }
 
+.home.singular .entry-header {
+	display: none;
+}
+
 .entry-title {
 	color: #28303d;
 	font-size: 2.25rem;
