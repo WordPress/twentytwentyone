@@ -2099,18 +2099,10 @@ a {
 	background: linear-gradient(to bottom right, #d1e4dd 49.9%, #d1dfe4 50%);
 }
 
-.has-hard-diagonal-inverted-gradient-background {
-	background: undefined;
+.has-hard-horizontal-gradient-background {
+	background: linear-gradient(to bottom, #d1e4dd 50%, #e4d1d1 50%);
 }
 
 .has-diagonal-gradient-background {
-	background: linear-gradient(to bottom right, #d1e4dd, #e4d1d1);
-}
-
-.has-diagonal-inverted-gradient-background {
-	background: linear-gradient(to top left, #d1e4dd, #e4dad1);
-}
-
-.has-hard-horizontal-gradient-background {
-	background: linear-gradient(to bottom, #d1e4dd 50%, #eeeadd 50%);
+	background: linear-gradient(to bottom right, #d1e4dd, #eeeadd);
 }

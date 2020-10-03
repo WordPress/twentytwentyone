@@ -1569,18 +1569,10 @@ a {
 	background: linear-gradient(to bottom right, var(--global--color-green) 49.9%, var(--global--color-blue) 50%);
 }
 
-.has-hard-diagonal-inverted-gradient-background {
-	background: linear-gradient(to top left, var(--global--color-green) 49.9%, var(---global--color-purple) 50%);
+.has-hard-horizontal-gradient-background {
+	background: linear-gradient(to bottom, var(--global--color-green) 50%, var(--global--color-red) 50%);
 }
 
 .has-diagonal-gradient-background {
-	background: linear-gradient(to bottom right, var(--global--color-green), var(--global--color-red));
-}
-
-.has-diagonal-inverted-gradient-background {
-	background: linear-gradient(to top left, var(--global--color-green), var(--global--color-orange));
-}
-
-.has-hard-horizontal-gradient-background {
-	background: linear-gradient(to bottom, var(--global--color-green) 50%, var(--global--color-yellow) 50%);
+	background: linear-gradient(to bottom right, var(--global--color-green), var(--global--color-yellow));
 }

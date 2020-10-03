@@ -258,11 +258,6 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 					'slug'     => 'hard-horizontal',
 				),
 				array(
-					'name'     => __( 'Horizontal inverted', 'twentytwentyone' ),
-					'gradient' => 'linear-gradient(to top, ' . $green . ' 50%, ' . $orange . ' 50%)',
-					'slug'     => 'hard-horizontal-inverted',
-				),
-				array(
 					'name'     => __( 'Diagonal gradient', 'twentytwentyone' ),
 					'gradient' => 'linear-gradient(to bottom right, ' . $green . ', ' . $yellow . ')',
 					'slug'     => 'diagonal',
