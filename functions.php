@@ -244,19 +244,31 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 			)
 		);
 
-		/**
-		 * TODO: No gradients are currently included.
 		add_theme_support(
 			'editor-gradient-presets',
 			array(
 				array(
-					'name'     => __( '', 'twentytwentyone' ),
-					'gradient' => '',
-					'slug'     => '',
+					'name'     => __( 'Diagonal', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(to bottom right, ' . $green . ' 49.9%, ' . $blue  . ' 50%)',
+					'slug'     => 'hard-diagonal',
+				),
+				array(
+					'name'     => __( 'Horizontal', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(to bottom, ' . $green . ' 50%, ' . $red . ' 50%)',
+					'slug'     => 'hard-horizontal',
+				),
+				array(
+					'name'     => __( 'Horizontal inverted', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(to top, ' . $green . ' 50%, ' . $orange . ' 50%)',
+					'slug'     => 'hard-horizontal-inverted',
+				),
+				array(
+					'name'     => __( 'Diagonal gradient', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(to bottom right, ' . $green . ', ' . $yellow . ')',
+					'slug'     => 'diagonal',
 				),
 			)
 		);
-		*/
 
 		/*
 		* Adds starter content to highlight the theme on fresh sites.

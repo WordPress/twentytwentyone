@@ -7,7 +7,7 @@ Author URI: https://wordpress.org/
 Description:
 Requires at least: 5.3
 Tested up to: 5.5
-Requires PHP: 5.6
+Requires PHP: 7.2
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -4259,6 +4259,29 @@ h1.page-title {
 
 .has-white-background-color[class] {
 	background-color: var(--global--color-white);
+}
+
+/* 
+ * Custom gradients 
+*/
+.has-hard-diagonal-gradient-background {
+	background: linear-gradient(to bottom right, var(--global--color-green) 49.9%, var(--global--color-blue) 50%);
+}
+
+.has-hard-diagonal-inverted-gradient-background {
+	background: linear-gradient(to top left, var(--global--color-green) 49.9%, var(---global--color-purple) 50%);
+}
+
+.has-diagonal-gradient-background {
+	background: linear-gradient(to bottom right, var(--global--color-green), var(--global--color-red));
+}
+
+.has-diagonal-inverted-gradient-background {
+	background: linear-gradient(to top left, var(--global--color-green), var(--global--color-orange));
+}
+
+.has-hard-horizontal-gradient-background {
+	background: linear-gradient(to bottom, var(--global--color-green) 50%, var(--global--color-yellow) 50%);
 }
 
 header *,
