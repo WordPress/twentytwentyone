@@ -7,7 +7,7 @@ Author URI: https://wordpress.org/
 Description:
 Requires at least: 5.3
 Tested up to: 5.5
-Requires PHP: 5.6
+Requires PHP: 7.2
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -168,7 +168,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--global--color-secondary-hover: var(--global--color-secondary);
 	--global--color-background: var(--global--color-green);
 	/* Mint, default body background */
-	--global--color-border: var(--global--color-dark-gray);
+	--global--color-border: var(--global--color-primary);
 	/* Used for borders (separators) */
 	/* Spacing */
 	--global--spacing-unit: 20px;
