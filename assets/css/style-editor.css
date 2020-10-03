@@ -621,6 +621,17 @@ div[data-type="core/button"] {
 	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
 }
 
+.wp-block-file .wp-block-file__textlink {
+	text-decoration: underline;
+	text-decoration-style: solid;
+	text-decoration-thickness: 1px;
+}
+
+.wp-block-file .wp-block-file__textlink:hover {
+	text-decoration: underline;
+	text-decoration-style: dotted;
+}
+
 .wp-block-file .wp-block-file__button {
 	display: inline-block;
 }

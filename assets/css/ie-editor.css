@@ -603,6 +603,17 @@ div[data-type="core/button"] {
 	border: 3px solid #28303d;
 }
 
+.wp-block-file .wp-block-file__textlink {
+	text-decoration: underline;
+	text-decoration-style: solid;
+	text-decoration-thickness: 1px;
+}
+
+.wp-block-file .wp-block-file__textlink:hover {
+	text-decoration: underline;
+	text-decoration-style: dotted;
+}
+
 .wp-block-file .wp-block-file__button {
 	display: inline-block;
 }
