@@ -7,7 +7,7 @@ Author URI: https://wordpress.org/
 Description:
 Requires at least: 5.3
 Tested up to: 5.5
-Requires PHP: 5.6
+Requires PHP: 7.2
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -3272,7 +3272,6 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .page-title {
 	font-size: var(--global--font-size-page-title);
-	word-break: break-all;
 }
 
 h1.page-title,

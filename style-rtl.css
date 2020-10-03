@@ -3259,7 +3259,6 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .page-title {
 	font-size: var(--global--font-size-page-title);
-	word-break: break-all;
 }
 
 h1.page-title,
