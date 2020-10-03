@@ -5438,6 +5438,15 @@ h1.page-title {
 	}
 }
 
+.widget-area .wp-block-social-links.alignright {
+	margin-top: 30px;
+	justify-content: flex-end;
+}
+
+.widget-area .wp-block-social-links.alignleft {
+	margin-top: 30px;
+}
+
 .widget-title {
 	font-size: 1.125rem;
 	font-weight: 700;
@@ -5476,15 +5485,6 @@ h1.page-title {
 
 .search-form .search-submit {
 	margin-left: 10px;
-}
-
-.widget .wp-block-social-links.alignright {
-	margin-top: 30px;
-	justify-content: flex-end;
-}
-
-.widget .wp-block-social-links.alignleft {
-	margin-top: 30px;
 }
 
 /* Category 07 is for any utility classes that are not assigned to a specific component. */
