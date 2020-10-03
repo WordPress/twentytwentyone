@@ -4096,6 +4096,15 @@ h1.page-title {
 	}
 }
 
+.widget-area .wp-block-social-links.alignright {
+	margin-top: var(--global--spacing-vertical);
+	justify-content: flex-end;
+}
+
+.widget-area .wp-block-social-links.alignleft {
+	margin-top: var(--global--spacing-vertical);
+}
+
 .widget-title {
 	font-size: var(--global--font-size-sm);
 	font-weight: 700;

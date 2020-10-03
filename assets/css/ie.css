@@ -5438,6 +5438,15 @@ h1.page-title {
 	}
 }
 
+.widget-area .wp-block-social-links.alignright {
+	margin-top: 30px;
+	justify-content: flex-end;
+}
+
+.widget-area .wp-block-social-links.alignleft {
+	margin-top: 30px;
+}
+
 .widget-title {
 	font-size: 1.125rem;
 	font-weight: 700;
