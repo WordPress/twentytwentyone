@@ -315,7 +315,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 .site .button,
 input[type="submit"],
 input[type="reset"],
-.wp-block-button__link, .wp-block-file .wp-block-file__button {
+.wp-block-button .wp-block-button__link, .wp-block-file .wp-block-file__button {
 	line-height: var(--button--line-height);
 	color: var(--button--color-text);
 	cursor: pointer;
@@ -333,11 +333,11 @@ input[type="reset"],
 .site .button:before,
 input[type="submit"]:before,
 input[type="reset"]:before,
-.wp-block-button__link:before, .wp-block-file .wp-block-file__button:before, .site button:not(.customize-partial-edit-shortcut-button):after,
+.wp-block-button .wp-block-button__link:before, .wp-block-file .wp-block-file__button:before, .site button:not(.customize-partial-edit-shortcut-button):after,
 .site .button:after,
 input[type="submit"]:after,
 input[type="reset"]:after,
-.wp-block-button__link:after, .wp-block-file .wp-block-file__button:after {
+.wp-block-button .wp-block-button__link:after, .wp-block-file .wp-block-file__button:after {
 	content: "";
 	display: block;
 	height: 0;
@@ -348,7 +348,7 @@ input[type="reset"]:after,
 .site .button:before,
 input[type="submit"]:before,
 input[type="reset"]:before,
-.wp-block-button__link:before, .wp-block-file .wp-block-file__button:before {
+.wp-block-button .wp-block-button__link:before, .wp-block-file .wp-block-file__button:before {
 	margin-bottom: -calc(.5em * var(--button--line-height) + -.38);
 }
 
@@ -356,7 +356,7 @@ input[type="reset"]:before,
 .site .button:after,
 input[type="submit"]:after,
 input[type="reset"]:after,
-.wp-block-button__link:after, .wp-block-file .wp-block-file__button:after {
+.wp-block-button .wp-block-button__link:after, .wp-block-file .wp-block-file__button:after {
 	margin-top: -calc(.5em * var(--button--line-height) + -.39);
 }
 
@@ -364,7 +364,7 @@ input[type="reset"]:after,
 .site .button:active,
 input:active[type="submit"],
 input:active[type="reset"],
-.wp-block-button__link:active, .wp-block-file .wp-block-file__button:active {
+.wp-block-button .wp-block-button__link:active, .wp-block-file .wp-block-file__button:active {
 	color: var(--button--color-text-active);
 	background-color: var(--button--color-background-active);
 }
@@ -373,7 +373,7 @@ input:active[type="reset"],
 .site .button:hover,
 input:hover[type="submit"],
 input:hover[type="reset"],
-.wp-block-button__link:hover, .wp-block-file .wp-block-file__button:hover {
+.wp-block-button .wp-block-button__link:hover, .wp-block-file .wp-block-file__button:hover {
 	color: var(--button--color-text-hover);
 	background: transparent;
 }
@@ -382,11 +382,11 @@ input:hover[type="reset"],
 .site .button:focus,
 input:focus[type="submit"],
 input:focus[type="reset"],
-.wp-block-button__link:focus, .wp-block-file .wp-block-file__button:focus, .site button.has-focus:not(.customize-partial-edit-shortcut-button),
+.wp-block-button .wp-block-button__link:focus, .wp-block-file .wp-block-file__button:focus, .site button.has-focus:not(.customize-partial-edit-shortcut-button),
 .site .has-focus.button,
 input.has-focus[type="submit"],
 input.has-focus[type="reset"],
-.has-focus.wp-block-button__link, .wp-block-file .has-focus.wp-block-file__button {
+.wp-block-button .has-focus.wp-block-button__link, .wp-block-file .has-focus.wp-block-file__button {
 	outline-offset: -4px;
 	outline: 2px dotted currentColor;
 }
@@ -395,7 +395,7 @@ input.has-focus[type="reset"],
 .site .button:disabled,
 input:disabled[type="submit"],
 input:disabled[type="reset"],
-.wp-block-button__link:disabled, .wp-block-file .wp-block-file__button:disabled {
+.wp-block-button .wp-block-button__link:disabled, .wp-block-file .wp-block-file__button:disabled {
 	background-color: var(--global--color-white-50);
 	border-color: var(--global--color-white-50);
 	color: var(--button--color-text-active);
@@ -1529,31 +1529,6 @@ a:hover {
 /**
  * Block Options
  */
-.wp-block-button {
-	font-family: var(--button--font-family);
-	font-size: var(--button--font-size);
-	font-weight: var(--button--font-weight);
-	line-height: var(--button--line-height);
-}
-
-.wp-block-button a.wp-block-button__link {
-	border-bottom: var(--button--border-width) solid var(--button--color-background);
-}
-
-.wp-block-button a.wp-block-button__link:focus {
-	outline-offset: -4px;
-	outline: 2px dotted var(--button--color-text);
-	color: var(--button--color-text);
-}
-
-.wp-block-button .wp-block-button__link:visited {
-	color: var(--button--color-text);
-}
-
-.wp-block-button .wp-block-button__link:visited:hover {
-	color: var(--button--color-text-hover);
-}
-
 .wp-block-button.is-style-outline.wp-block-button__link,
 .wp-block-button.is-style-outline .wp-block-button__link {
 	color: var(--button--color-background);
