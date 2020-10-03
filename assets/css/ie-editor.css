@@ -1652,6 +1652,14 @@ hr {
 	margin-top: auto;
 }
 
+.wp-block-social-links.is-style-twentytwentyone-social-icons-color button {
+	color: #28303d;
+}
+
+.wp-block-social-links.is-style-twentytwentyone-social-icons-color .wp-social-link {
+	background: none;
+}
+
 table th {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }

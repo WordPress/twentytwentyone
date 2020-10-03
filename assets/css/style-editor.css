@@ -1264,6 +1264,14 @@ hr {
 	margin-top: auto;
 }
 
+.wp-block-social-links.is-style-twentytwentyone-social-icons-color button {
+	color: var(--global--color-primary);
+}
+
+.wp-block-social-links.is-style-twentytwentyone-social-icons-color .wp-social-link {
+	background: none;
+}
+
 table th,
 .wp-block-table th {
 	font-family: var(--heading--font-family);
