@@ -1036,48 +1036,12 @@ hr.wp-block-separator.is-style-wide {
 	}
 }
 
-.entry-content > .alignleft {
-	/*rtl:ignore*/
-	margin-left: 30px;
-	/*rtl:ignore*/
-	margin-right: 30px;
-	max-width: calc(100vw - 30px);
-}
-
-@media only screen and (min-width: 482px){
-	.entry-content > .alignleft{
-	max-width: min(calc(100vw - 100px), 610px);
-	}
-}
-
-@media only screen and (min-width: 822px){
-	.entry-content > .alignleft{
-	max-width: min(calc(100vw - 200px), 610px);
-	}
-}
-
 @media only screen and (min-width: 482px) {
 	.entry-content > .alignleft {
 		/*rtl:ignore*/
 		margin-left: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		/*rtl:ignore*/
 		margin-right: 25px;
-		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
-	}
-	@media only screen and (min-width: 482px){
-		.entry-content > .alignleft{
-		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
-		}
-	}
-	@media only screen and (min-width: 482px){
-		.entry-content > .alignleft{
-		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
-		}
-	}
-	@media only screen and (min-width: 822px){
-		.entry-content > .alignleft{
-		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
-		}
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignleft{
@@ -1094,13 +1058,6 @@ hr.wp-block-separator.is-style-wide {
 		margin-left: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
-}
-
-.entry-content > .alignright {
-	/*rtl:ignore*/
-	margin-left: 30px;
-	/*rtl:ignore*/
-	margin-right: 0;
 }
 
 @media only screen and (min-width: 482px) {
@@ -3829,12 +3786,51 @@ table.is-style-stripes tbody tr:nth-child(odd) {
 .alignleft {
 	/*rtl:ignore*/
 	text-align: left;
-	/*rtl:ignore*/
-	float: left;
 	margin-top: 0;
-	/*rtl:ignore*/
-	margin-right: 25px;
-	margin-bottom: 30px;
+}
+
+.entry-content > .alignleft {
+	max-width: calc(100vw - 30px);
+}
+
+@media only screen and (min-width: 482px){
+	.entry-content > .alignleft{
+	max-width: min(calc(100vw - 100px), 610px);
+	}
+}
+
+@media only screen and (min-width: 822px){
+	.entry-content > .alignleft{
+	max-width: min(calc(100vw - 200px), 610px);
+	}
+}
+
+@media only screen and (min-width: 482px) {
+	.alignleft {
+		/*rtl:ignore*/
+		float: left;
+		/*rtl:ignore*/
+		margin-right: 25px;
+		margin-bottom: 30px;
+	}
+	.entry-content > .alignleft {
+		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+	}
+	@media only screen and (min-width: 482px){
+		.entry-content > .alignleft{
+		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		}
+	}
+	@media only screen and (min-width: 482px){
+		.entry-content > .alignleft{
+		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		}
+	}
+	@media only screen and (min-width: 822px){
+		.entry-content > .alignleft{
+		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		}
+	}
 }
 
 /**
@@ -3853,12 +3849,8 @@ table.is-style-stripes tbody tr:nth-child(odd) {
  * .alignright
  */
 .alignright {
-	/*rtl:ignore*/
-	float: right;
 	margin-top: 0;
 	margin-bottom: 30px;
-	/*rtl:ignore*/
-	margin-left: 25px;
 }
 
 .entry-content > .alignright {
@@ -3874,6 +3866,33 @@ table.is-style-stripes tbody tr:nth-child(odd) {
 @media only screen and (min-width: 822px){
 	.entry-content > .alignright{
 	max-width: min(calc(100vw - 200px), 610px);
+	}
+}
+
+@media only screen and (min-width: 482px) {
+	.alignright {
+		/*rtl:ignore*/
+		float: right;
+		/*rtl:ignore*/
+		margin-left: 25px;
+	}
+	.entry-content > .alignleft {
+		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+	}
+	@media only screen and (min-width: 482px){
+		.entry-content > .alignleft{
+		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		}
+	}
+	@media only screen and (min-width: 482px){
+		.entry-content > .alignleft{
+		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		}
+	}
+	@media only screen and (min-width: 822px){
+		.entry-content > .alignleft{
+		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		}
 	}
 }
 

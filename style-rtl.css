@@ -814,23 +814,11 @@ template {
 	max-width: var(--responsive--alignfull-width);
 }
 
-.entry-content > .alignleft {
-	margin-left: var(--responsive--spacing-horizontal);
-	margin-right: var(--responsive--spacing-horizontal);
-	max-width: var(--responsive--aligndefault-width);
-}
-
 @media only screen and (min-width: 482px) {
 	.entry-content > .alignleft {
 		margin-left: var(--responsive--alignleft-margin);
 		margin-right: var(--global--spacing-horizontal);
-		max-width: calc(50% - var(--responsive--alignleft-margin));
 	}
-}
-
-.entry-content > .alignright {
-	margin-left: var(--responsive--spacing-horizontal);
-	margin-right: 0;
 }
 
 @media only screen and (min-width: 482px) {
@@ -2708,10 +2696,22 @@ table.is-style-stripes tbody tr:nth-child(odd),
  */
 .alignleft {
 	text-align: left;
-	float: left;
 	margin-top: 0;
-	margin-right: var(--global--spacing-horizontal);
-	margin-bottom: var(--global--spacing-vertical);
+}
+
+.entry-content > .alignleft {
+	max-width: var(--responsive--aligndefault-width);
+}
+
+@media only screen and (min-width: 482px) {
+	.alignleft {
+		float: left;
+		margin-right: var(--global--spacing-horizontal);
+		margin-bottom: var(--global--spacing-vertical);
+	}
+	.entry-content > .alignleft {
+		max-width: calc(50% - var(--responsive--alignleft-margin));
+	}
 }
 
 /**
@@ -2730,14 +2730,22 @@ table.is-style-stripes tbody tr:nth-child(odd),
  * .alignright
  */
 .alignright {
-	float: right;
 	margin-top: 0;
 	margin-bottom: var(--global--spacing-vertical);
-	margin-left: var(--global--spacing-horizontal);
 }
 
 .entry-content > .alignright {
 	max-width: var(--responsive--aligndefault-width);
+}
+
+@media only screen and (min-width: 482px) {
+	.alignright {
+		float: right;
+		margin-left: var(--global--spacing-horizontal);
+	}
+	.entry-content > .alignleft {
+		max-width: calc(50% - var(--responsive--alignright-margin));
+	}
 }
 
 [class*="inner-container"] > .alignleft + *,
