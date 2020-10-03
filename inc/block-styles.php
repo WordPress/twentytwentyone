@@ -73,6 +73,15 @@ if ( function_exists( 'register_block_style' ) ) {
 				'label' => __( 'Borders', 'twentytwentyone' ),
 			)
 		);
+
+		/* Social icons: Dark gray color */
+		register_block_style(
+			'core/social-links',
+			array(
+				'name'  => 'twentytwentyone-social-icons-color',
+				'label' => __( 'Dark Gray', 'twentytwentyone' ),
+			)
+		);
 	}
 	add_action( 'init', 'twenty_twenty_one_register_block_styles' );
 }
