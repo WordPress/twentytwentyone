@@ -16,6 +16,8 @@ table,
 	}
 
 	&.is-style-regular .has-background,
+	&.is-style-stripes .has-background thead tr,
+	&.is-style-stripes .has-background tfoot tr,
 	&.is-style-stripes .has-background tbody tr:nth-child(even) {
 		color: var(--table--has-background-text-color);
 	}
@@ -23,6 +25,7 @@ table,
 	&.is-style-stripes {
 		border-color: var(--table--stripes-border-color);
 
+		th,
 		td {
 			border-width: 0;
 		}

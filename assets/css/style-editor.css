@@ -1287,8 +1287,12 @@ table th,
 }
 
 table.is-style-regular .has-background,
+table.is-style-stripes .has-background thead tr,
+table.is-style-stripes .has-background tfoot tr,
 table.is-style-stripes .has-background tbody tr:nth-child(even),
 .wp-block-table.is-style-regular .has-background,
+.wp-block-table.is-style-stripes .has-background thead tr,
+.wp-block-table.is-style-stripes .has-background tfoot tr,
 .wp-block-table.is-style-stripes .has-background tbody tr:nth-child(even) {
 	color: var(--table--has-background-text-color);
 }
@@ -1298,7 +1302,9 @@ table.is-style-stripes,
 	border-color: var(--table--stripes-border-color);
 }
 
+table.is-style-stripes th,
 table.is-style-stripes td,
+.wp-block-table.is-style-stripes th,
 .wp-block-table.is-style-stripes td {
 	border-width: 0;
 }
