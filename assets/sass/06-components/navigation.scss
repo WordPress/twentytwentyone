@@ -162,7 +162,7 @@
 		}
 
 		// Hide sub-sub-menus
-		> .primary-menu-container > ul > li > ul {
+		> .primary-menu-container ul > li .sub-menu-toggle[aria-expanded="false"] ~ ul {
 			display: none;
 		}
 
@@ -200,32 +200,35 @@
 			margin: var(--primary-nav--padding) 0;
 			position: relative;
 			width: 100%;
-			z-index: 1;
-
-			&:hover,
-			&:focus-within {
-				cursor: pointer;
-				z-index: 99999;
-			}
 
 			@include media(mobile) {
-				display: inherit;
 				margin: 0;
 				width: inherit;
-
-				/* Submenu display in the responsive menu */
-				&:hover > ul,
-				&:focus-within > ul,
-				ul:hover,
-				ul:focus {
-					visibility: visible;
-					opacity: 1;
-					display: block;
-				}
 
 				&:last-child() {
 					margin-right: 0;
 				}
+			}
+		}
+
+		// Sub menu buttons
+		.sub-menu-toggle {
+			display: flex;
+			height: 44px;
+			width: 44px;
+			padding: 0;
+			justify-content: center;
+			align-items: center;
+			background: transparent;
+			color: currentColor;
+			border: none;
+
+			&:focus {
+				outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
+			}
+
+			@include media(mobile-only) {
+				display: none;
 			}
 		}
 
@@ -239,11 +242,10 @@
 				left: 0;
 				margin: 0;
 				min-width: max-content;
-				opacity: 0;
 				position: absolute;
-				top: calc(100% - var(--primary-nav--padding));
+				top: 100%;
 				transition: all 0.5s ease;
-				visibility: hidden;
+				z-index: 99999;
 			}
 
 			.sub-menu {

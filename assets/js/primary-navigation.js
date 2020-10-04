@@ -3,30 +3,40 @@
  *
  * Required to open and close the mobile navigation.
  */
-( function() {
 
-	/**
-	 * Toggle an attribute's value
-	 * 
-	 * @param {Element} element
-	 * @param {Attribute} attribute
-	 * @param {String} trueVal
-	 * @param {String} falseVal
-	 * @since 1.0.0
-	 */
-	var toggleAttribute = function ( element, attribute, trueVal, falseVal ) {
-		if ( undefined === trueVal ) {
-			trueVal = true;
-		}
-		if ( undefined === falseVal ) {
-			falseVal = false;
-		}
-		if ( trueVal !== element.getAttribute( attribute ) ) {
-			element.setAttribute( attribute, trueVal );
-		} else {
-			element.setAttribute( attribute, falseVal );
-		}
+/**
+ * Toggle an attribute's value
+ *
+ * @param {Element} element
+ * @param {Attribute} attribute
+ * @param {String} trueVal
+ * @param {String} falseVal
+ * @since 1.0.0
+ */
+function twentytwentyoneToggleAttribute(element, attribute, trueVal, falseVal) {
+	if (undefined === trueVal) {
+		trueVal = true;
 	}
+	if (undefined === falseVal) {
+		falseVal = false;
+	}
+	if (trueVal !== element.getAttribute(attribute)) {
+		element.setAttribute(attribute, trueVal);
+	} else {
+		element.setAttribute(attribute, falseVal);
+	}
+}
+
+/**
+ * Handle clicks on submenu toggles.
+ *
+ * @param {Element} el
+ */
+function twentytwentyoneExpandSubMenu(el) { // eslint-disable-line no-unused-vars
+	twentytwentyoneToggleAttribute(el, 'aria-expanded', 'true', 'false');
+}
+
+( function() {
 
 	/**
 	 * Menu Toggle Behaviors
@@ -41,11 +51,10 @@
 			mobileButton.onclick = function() {
 				wrapper.classList.toggle( `${ id }-navigation-open` );
 				wrapper.classList.toggle( 'lock-scrolling' );
-				toggleAttribute( mobileButton, 'aria-expanded', 'true', 'false' );
+				twentytwentyoneToggleAttribute( mobileButton, 'aria-expanded', 'true', 'false' );
 				mobileButton.focus();
 			}
 		}
-
 		/**
 		 * Trap keyboard navigation in the menu modal.
 		 * Adapted from TwentyTwenty
@@ -53,7 +62,7 @@
 		document.addEventListener( 'keydown', function( event ) {
 			if ( ! wrapper.classList.contains( `${ id }-navigation-open` ) ){
 				return;
-			} 
+			}
 			var modal, elements, selectors, lastEl, firstEl, activeEl, tabKey, shiftKey, escKey;
 
 			modal = document.querySelector( `.${ id }-navigation` );
