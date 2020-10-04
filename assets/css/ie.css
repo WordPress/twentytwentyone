@@ -5605,30 +5605,37 @@ h1.page-title {
 
 .has-green-background-color[class] {
 	background-color: #d1e4dd;
+	color: #000;
 }
 
 .has-blue-background-color[class] {
 	background-color: #d1dfe4;
+	color: #000;
 }
 
 .has-purple-background-color[class] {
 	background-color: #d1d1e4;
+	color: #000;
 }
 
 .has-red-background-color[class] {
 	background-color: #e4d1d1;
+	color: #000;
 }
 
 .has-orange-background-color[class] {
 	background-color: #e4dad1;
+	color: #000;
 }
 
 .has-yellow-background-color[class] {
 	background-color: #eeeadd;
+	color: #000;
 }
 
 .has-white-background-color[class] {
 	background-color: #fff;
+	color: #000;
 }
 
 header * {
