@@ -49,3 +49,17 @@
 		margin-left: 10px;
 	}
 }
+
+.widget_search > .search-form {
+
+	.search-field {
+		margin-right: 0;
+	}
+
+	.search-submit {
+		margin-left: 0;
+		border-left: 0;
+		background-color: transparent;
+		color: var(--button--color-background);
+	}
+}

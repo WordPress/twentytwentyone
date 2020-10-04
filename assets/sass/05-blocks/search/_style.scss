@@ -13,13 +13,20 @@
 		color: var(--form--color-text);
 		line-height: var(--global--line-height-body);
 		max-width: inherit;
-		margin-right: calc(.66 * var(--global--spacing-horizontal));
+		margin-right: 0;
 		padding: var(--form--spacing-unit);
 
 		&:focus {
 			color: var(--form--color-text);
 			border-color: var(--form--border-color);
 		}
+	}
+
+	button.wp-block-search__button {
+		margin-left: 0;
+		border-left: 0;
+		background-color: transparent;
+		color: var(--button--color-background);
 	}
 }
 
