@@ -249,7 +249,7 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 			array(
 				array(
 					'name'     => __( 'Diagonal', 'twentytwentyone' ),
-					'gradient' => 'linear-gradient(to bottom right, ' . $green . ' 49.9%, ' . $blue  . ' 50%)',
+					'gradient' => 'linear-gradient(to bottom right, ' . $green . ' 49.9%, ' . $blue . ' 50%)',
 					'slug'     => 'hard-diagonal',
 				),
 				array(

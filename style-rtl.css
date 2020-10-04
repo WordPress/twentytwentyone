@@ -4248,8 +4248,8 @@ h1.page-title {
 	background-color: var(--global--color-white);
 }
 
-/* 
- * Custom gradients 
+/*
+ * Custom gradients
 */
 .has-hard-diagonal-gradient-background {
 	background: linear-gradient(to bottom left, var(--global--color-green) 49.9%, var(--global--color-blue) 50%);

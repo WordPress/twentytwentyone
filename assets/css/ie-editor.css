@@ -2092,8 +2092,8 @@ a {
 	background-color: #fff;
 }
 
-/* 
- * Custom gradients 
+/*
+ * Custom gradients
 */
 .has-hard-diagonal-gradient-background {
 	background: linear-gradient(to bottom right, #d1e4dd 49.9%, #d1dfe4 50%);
