@@ -572,14 +572,18 @@ div[data-type="core/button"] {
 .wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-grid {
 	display: grid;
 	grid-auto-rows: max-content;
+	grid-auto-flow: column;
 	grid-row-gap: var(--global--spacing-vertical);
-	grid-template-columns: repeat(7, 1fr);
+	grid-column-gap: calc(2 * var(--global--spacing-horizontal));
+	grid-template-columns: repeat(2, 1fr);
 }
 
 .wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item {
 	margin: 0;
 	width: 100%;
 	justify-self: start;
+	grid-column-start: 1;
+	grid-column-end: 1;
 }
 
 .wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item figure {
@@ -591,31 +595,30 @@ div[data-type="core/button"] {
 }
 
 .wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:first-child {
+	margin-bottom: 50%;
+}
+
+.wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:nth-child(4n+2) {
+	grid-column-start: 2;
+	grid-column-end: 2;
+	margin-top: 50%;
+}
+
+.wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:nth-child(4n+3) {
 	grid-column-start: 1;
-	grid-column-end: span 3;
-	grid-row-start: 1;
-	grid-row-end: 4;
+	grid-column-end: span 2;
+	max-width: 66.66%;
+	transform: translateY(-25%);
 }
 
-.wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:nth-child(2) {
-	grid-column-start: 5;
-	grid-column-end: span 8;
-	grid-row-start: 3;
-	grid-row-end: 7;
+.wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:nth-child(4n+4) {
+	margin-top: -25%;
+	grid-column-start: 2;
+	grid-column-end: 2;
 }
 
-.wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:nth-child(3) {
-	grid-column-start: 1;
-	grid-column-end: span 5;
-	grid-row-start: 6;
-	grid-row-end: 9;
-}
-
-.wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:nth-child(4) {
-	grid-column-start: 5;
-	grid-column-end: span 8;
-	grid-row-start: 9;
-	grid-row-end: 12;
+.wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:nth-child(4n+5) {
+	transform: translateY(100%);
 }
 
 .wp-block-group.has-background {
