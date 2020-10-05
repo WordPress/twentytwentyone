@@ -32,7 +32,7 @@ function twentytwentyoneToggleAttribute(element, attribute, trueVal, falseVal) {
  *
  * @param {Element} el
  */
-function twentytwentyoneExpandSubMenu(el) { // eslint-disable-line no-unused-vars
+function twentytwentyoneExpandSubMenu(el) {
 	twentytwentyoneToggleAttribute(el, 'aria-expanded', 'true', 'false');
 }
 
