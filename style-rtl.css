@@ -1817,8 +1817,7 @@ a:hover {
 	grid-auto-rows: max-content;
 	grid-auto-flow: column;
 	grid-row-gap: var(--global--spacing-vertical);
-	grid-column-gap: 20%;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(7, 1fr);
 }
 
 .wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item {
@@ -1826,7 +1825,7 @@ a:hover {
 	width: 100%;
 	justify-self: start;
 	grid-column-start: 1;
-	grid-column-end: 1;
+	grid-column-end: 4;
 }
 
 .wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item figure {
@@ -1842,8 +1841,8 @@ a:hover {
 }
 
 .wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:nth-child(4n+2) {
-	grid-column-start: 2;
-	grid-column-end: 2;
+	grid-column-start: 5;
+	grid-column-end: 8;
 }
 
 .wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:nth-child(4n+2):nth-child(2) {
@@ -1851,15 +1850,14 @@ a:hover {
 }
 
 .wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:nth-child(4n+3) {
-	grid-column-end: span 2;
-	max-width: 66.66%;
+	grid-column-end: span 5;
 	transform: translateY(-25%);
 }
 
 .wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:nth-child(4n+4) {
 	margin-top: -25%;
-	grid-column-start: 2;
-	grid-column-end: 2;
+	grid-column-start: 5;
+	grid-column-end: 8;
 }
 
 .wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:nth-child(4n+4):not(:last-of-type) {
