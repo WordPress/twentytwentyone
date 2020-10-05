@@ -34,6 +34,7 @@
 			&:first-child() {
 				margin-bottom: 50%;
 
+				// Additional styles for when there are only two gallery items.
 				&:nth-last-child(2) {
 					margin-bottom: 0;
 					grid-column-end: span 5;
@@ -48,6 +49,7 @@
 					margin-top: 50%;
 				}
 
+				// Additional styles for when there are only two gallery items.
 				&:last-child {
 					margin-top: 25%;
 					grid-column-start: 3;
