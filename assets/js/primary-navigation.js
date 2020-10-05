@@ -79,7 +79,7 @@ function twentytwentyoneExpandSubMenu(el) { // eslint-disable-line no-unused-var
 			if ( escKey ) {
 				event.preventDefault();
 				wrapper.classList.remove( `${ id }-navigation-open`, 'lock-scrolling' );
-				toggleAttribute( mobileButton, 'aria-expanded', 'true', 'false' );
+				twentytwentyoneToggleAttribute( mobileButton, 'aria-expanded', 'true', 'false' );
 				mobileButton.focus();
 			}
 
