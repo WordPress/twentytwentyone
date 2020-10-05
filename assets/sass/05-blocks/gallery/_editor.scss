@@ -43,10 +43,8 @@
 			}
 
 			&:nth-child(4n+3) {
-				grid-column-start: 1;
 				grid-column-end: span 2;
 				max-width: 66.66%;
-
 				transform: translateY(-25%); 
 			}
 
