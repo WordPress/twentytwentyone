@@ -4144,6 +4144,7 @@ nav a {
 	max-width: 96px;
 	max-height: 96px;
 	height: auto;
+	width: auto;
 }
 
 @media only screen and (min-width: 482px) {
@@ -4151,6 +4152,7 @@ nav a {
 		max-width: 300px;
 		max-height: 100px;
 		height: auto;
+		width: auto;
 	}
 }
 

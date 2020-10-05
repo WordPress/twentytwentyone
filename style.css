@@ -2950,6 +2950,7 @@ nav a {
 	max-width: var(--branding--logo--max-width-mobile);
 	max-height: var(--branding--logo--max-height-mobile);
 	height: auto;
+	width: auto;
 }
 
 @media only screen and (min-width: 482px) {
@@ -2957,6 +2958,7 @@ nav a {
 		max-width: var(--branding--logo--max-width);
 		max-height: var(--branding--logo--max-height);
 		height: auto;
+		width: auto;
 	}
 }
 

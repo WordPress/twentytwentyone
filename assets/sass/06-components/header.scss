@@ -89,6 +89,7 @@ nav a {
 		max-width: var(--branding--logo--max-width-mobile);
 		max-height: var(--branding--logo--max-height-mobile);
 		height: auto;
+		width: auto;
 	}
 
 	@include media(mobile) {
@@ -97,6 +98,7 @@ nav a {
 			max-width: var(--branding--logo--max-width);
 			max-height: var(--branding--logo--max-height);
 			height: auto;
+			width: auto;
 		}
 	}
 }

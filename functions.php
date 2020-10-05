@@ -95,8 +95,8 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 			array(
 				'height'               => $logo_height,
 				'width'                => $logo_width,
-				'flex-width'           => false,
-				'flex-height'          => false,
+				'flex-width'           => true,
+				'flex-height'          => true,
 				'unlink-homepage-logo' => true,
 			)
 		);
