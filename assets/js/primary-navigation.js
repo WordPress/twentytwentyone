@@ -13,12 +13,22 @@
 function twentytwentyoneToggleAriaExpanded( el ) {
 	if ( 'true' !== el.getAttribute( 'aria-expanded' ) ) {
 		el.setAttribute( 'aria-expanded', 'true' );
+		document.addEventListener( 'click', twentytwentyoneCollapseMenuOnClickOutside );
 	} else {
 		el.setAttribute( 'aria-expanded', 'false' );
+		document.removeEventListener( 'click', twentytwentyoneCollapseMenuOnClickOutside );
 	}
 }
 
-function twentytwentyoneCollapseAllOtherSubMenus(element) {
+function twentytwentyoneCollapseMenuOnClickOutside( event ) {
+	if ( ! document.getElementById( 'site-navigation' ).contains( event.target ) ) {
+		document.getElementById( 'site-navigation' ).querySelectorAll( '.sub-menu-toggle' ).forEach( function( button ) {
+			button.setAttribute( 'aria-expanded', 'false' );
+		} );
+	}
+}
+
+function twentytwentyoneCollapseAllOtherSubMenus( element ) {
 	var nav = element.closest( 'nav' );
 	nav.querySelectorAll( '.sub-menu-toggle' ).forEach( function( button ) {
 		if ( button !== element ) {
