@@ -105,7 +105,7 @@
 		padding: calc(4 * var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
 		background-color: var(--global--color-background);
 		overflow-x: hidden;
-		overflow-y: scroll;
+		overflow-y: auto;
 		transition: all .15s ease-in-out;
 		transform: translateY(var(--global--spacing-vertical));
 
@@ -197,6 +197,7 @@
 
 		li {
 			display: block;
+			margin: var(--primary-nav--padding) 0;
 			position: relative;
 			width: 100%;
 			z-index: 1;
@@ -209,6 +210,7 @@
 
 			@include media(mobile) {
 				display: inherit;
+				margin: 0;
 				width: inherit;
 
 				/* Submenu display in the responsive menu */
@@ -220,6 +222,10 @@
 					opacity: 1;
 					display: block;
 				}
+
+				&:last-child() {
+					margin-right: 0;
+				}
 			}
 		}
 
@@ -229,13 +235,13 @@
 			position: relative;
 
 			@include media(mobile) {
-				margin: 0;
 				background: var(--global--color-background);
-				left: -15px;
-				top: calc(100% - (0.5 * var(--primary-nav--padding)));
+				left: 0;
+				margin: 0;
 				min-width: max-content;
 				opacity: 0;
 				position: absolute;
+				top: calc(100% - var(--primary-nav--padding));
 				transition: all 0.5s ease;
 				visibility: hidden;
 			}
@@ -252,13 +258,12 @@
 	}
 	// Top-level Menu Item
 	.primary-menu-container > ul > .menu-item {
-		padding: calc(0.5 * var(--primary-nav--padding)) 0;
-
 		@include media(mobile) {
 			display: flex;
 			align-items: center;
-			// Sets the left padding to 0 to better align with the site title when wrapped.
-			padding: calc(0.7 * var(--primary-nav--padding)) calc(3 * var(--primary-nav--padding)) var(--primary-nav--padding) 0;
+			margin-left: calc(-1 * var(--primary-nav--padding)); // Better align with the site title when the menu wraps.
+			margin-right: var(--primary-nav--padding);
+			padding: 0 var(--primary-nav--padding);
 		}
 	}
 
@@ -268,6 +273,7 @@
 		font-family: var(--primary-nav--font-family-mobile);
 		font-size: var(--primary-nav--font-size-mobile);
 		font-weight: var(--primary-nav--font-weight);
+		padding: var(--primary-nav--padding) 0;
 
 		@include media(mobile) {
 			display: block;
@@ -287,16 +293,20 @@
 		}
 
 		&:hover {
-			border-bottom: 1px dashed var(--primary-nav--color-link-border);
+			text-decoration: underline dotted;
+		}
+
+		&:focus {
+			z-index: 99999; // Ensure focus styles appear above absolute positioned elements
 		}
 	}
 
 	.current-menu-item > a:first-child,
 	.current_page_item > a:first-child {
-		border-bottom: 1px solid var(--primary-nav--color-link-border);
+		text-decoration: underline solid;
 
 		&:hover {
-			border-bottom: 1px dashed var(--primary-nav--color-link-border);
+			text-decoration: underline dotted;
 		}
 	}
 
@@ -307,25 +317,22 @@
 
 		// Sub menu items om wide screens.
 		@include media(mobile) {
-			padding: var(--primary-nav--padding);
+			padding: 0 var(--primary-nav--padding);
 
+			// For nested sub-menus, don't duplicate the padding
 			> .menu-item > .sub-menu {
-				padding: var(--primary-nav--padding) 0 0 0;
-			}
-
-			> .menu-item.menu-item-has-children {
-				padding: var(--primary-nav--padding) 0 0 0;
+				padding: 0;
 			}
 		}
 
 		.menu-item {
-			padding: calc(0.5 * var(--primary-nav--padding)) var(--primary-nav--padding);
+			margin: calc(2 * var(--primary-nav--padding)) 0;
 
-			@include media(mobile) {
-				padding: var(--primary-nav--padding) 0;
+			&:last-child() {
+				margin-bottom: 0;
 			}
 
-			a {
+			> a {
 				display: inline;
 				font-size: var(--primary-nav--font-size-sub-menu-mobile);
 				font-style: var(--primary-nav--font-style-sub-menu-mobile);

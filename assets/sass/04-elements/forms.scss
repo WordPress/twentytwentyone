@@ -5,7 +5,6 @@ input[type="password"],
 input[type="search"],
 input[type="number"],
 input[type="tel"],
-input[type="range"],
 input[type="date"],
 input[type="month"],
 input[type="week"],
@@ -13,30 +12,238 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea {
+.site textarea {
 	border: var(--form--border-width) solid var(--form--border-color);
 	border-radius: var(--form--border-radius);
 	color: var(--form--color-text);
+	background: var(--global--color-white-50);
 	line-height: var(--global--line-height-body);
 	padding: var(--form--spacing-unit);
 
 	&:focus {
 		color: var(--form--color-text);
-		border-color: var(--form--border-color);
+		outline: 1px solid var(--form--border-color);
+		background: var(--global--color-white);
 	}
+
+	&:disabled {
+		opacity: 0.7;
+	}
+
+}
+
+// Reset the negative offset from normalize to make the thicker "border" work on focus.
+input[type="search"] {
+
+	&:focus {
+		outline-offset: 0;
+	}
+}
+
+input[type="date"] {
+	background: var(--global--color-white);
+}
+
+input[type="color"] {
+	background: var(--global--color-white);
+	padding: calc(var(--form--spacing-unit) / 2);
+	height: calc(4 * var(--form--spacing-unit));
 }
 
 select {
 	border: var(--form--border-width) solid var(--form--border-color);
+	color: var(--form--color-text);
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	line-height: var(--global--line-height-body);
+	padding: var(--form--spacing-unit) calc(3 * var(--form--spacing-unit)) var(--form--spacing-unit) var(--form--spacing-unit);
+	/* stylelint-disable */
+	background: var(--global--color-white) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2328303d'><polygon points='0,0 10,0 5,5'/></svg>") no-repeat;
+	/* stylelint-enable */
+	background-position: right var(--form--spacing-unit) top 60%;
+
+	&:focus {
+		outline: 1px solid var(--form--border-color);
+	}
 }
 
 textarea {
 	width: 100%;
 }
 
-// Vertically align checkbox + label relationship
-input[type="checkbox"] + label {
-	display: inline;
-	margin-left: 0.5em;
-	line-height: 1;
+label {
+	font-size: var(--form--font-size);
+	font-weight: var(--form--label-weight);
+	margin-bottom: calc(var(--global--spacing-vertical) / 3);
+}
+
+/**
+https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
+https://codepen.io/aaroniker/pen/ZEYoxEY by Aaron Iker.
+License: MIT.
+*/
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+
+	input[type="checkbox"],
+	input[type="radio"] {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		position: relative;
+		width: 25px;
+		height: 25px;
+		background: var(--global--color-white-50);
+		border: var(--form--border-width) solid var(--form--border-color);
+		outline-offset: 0;
+
+		&:disabled {
+			opacity: 0.7;
+		}
+	}
+
+	input[type="checkbox"] {
+
+		&:focus {
+			outline: 1px solid var(--form--border-color);
+			background: var(--global--color-white);
+		}
+
+		&:after {
+			content: "";
+			opacity: 0;
+			display: block;
+			left: 5px;
+			top: 2px;
+			position: absolute;
+			width: 7px;
+			height: 13px;
+			border: 3px solid var(--form--color-text);
+			border-top: 0;
+			border-left: 0;
+			transform: rotate(30deg);
+		}
+
+		&:checked {
+			background: var(--global--color-white);
+			color: var(--form--color-text);
+
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+
+	input[type="radio"] {
+		border-radius: 50%;
+
+		&:focus {
+			background: var(--global--color-white);
+			border: 4px solid var(--form--border-color);
+			outline: 1px dotted transparent;
+		}
+
+		&:after {
+			content: "";
+			opacity: 0;
+			display: block;
+			left: 3px;
+			top: 3px;
+			position: absolute;
+			width: 11px;
+			height: 11px;
+			border-radius: 50%;
+			background: var(--form--color-text);
+		}
+
+		&:checked {
+			background: var(--global--color-white);
+			border: 4px solid var(--form--border-color);
+			outline: 1px dotted transparent;
+
+			&:after {
+				opacity: 1;
+			}
+
+			// Focus style for checked radio buttons.
+			&:focus {
+				box-shadow: 0 0 0 2px var(--form--border-color);
+			}
+		}
+	}
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+	display: inline-block;
+	padding-left: 10px;
+	font-size: var(--global--font-size-xs);
+	vertical-align: top;
+}
+
+/**
+ * https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+*/
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+
+	input[type="range"] {
+		-webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+		width: 100%; /* Specific width is required for Firefox. */
+		height: 6px;
+		background: var(--form--color-ranged);
+		border-radius: 6px;
+		outline-offset: 10px;
+
+		&:disabled {
+			opacity: 0.7;
+		}
+	}
+
+	input[type="range"]::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		border: 3px solid var(--form--color-ranged);
+		height: 25px;
+		width: 25px;
+		border-radius: 50%;
+		background: var(--global--color-background);
+		cursor: pointer;
+	}
+
+	input[type="range"]::-moz-range-thumb {
+		border: 3px solid var(--form--color-ranged);
+		height: 25px;
+		width: 25px;
+		border-radius: 50%;
+		background: var(--global--color-background);
+		cursor: pointer;
+	}
+}
+
+input[type="range"]::-ms-track {
+	width: 100%;
+	height: 6px;
+	border-radius: 6px;
+	border-width: 19px 0;
+	border-color: var(--global--color-background);
+	background: transparent;
+	color: transparent;
+	cursor: pointer;
+}
+
+input[type="range"]::-ms-fill-upper {
+	background: var(--form--color-ranged);
+	border-radius: 6px;
+}
+
+input[type="range"]::-ms-fill-lower {
+	background: var(--form--color-ranged);
+	border-radius: 6px;
+}
+
+input[type="range"]::-ms-thumb {
+	border: 3px solid var(--form--color-ranged);
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	background: var(--global--color-background);
+	cursor: pointer;
 }

@@ -3,19 +3,20 @@
 Contributors: wordpressdotorg  
 Requires at least: 5.3  
 Tested up to: 5.5  
-Requires PHP: 7.2  
+Requires PHP: 5.6  
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
 ## Description
 
+To contribute to TT1 development, please read the [contributor's guide](/CONTRIBUTING.md).
+
 ## Installation
 
-1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
-2. Type in Twenty Twenty-One in the search form and press the 'Enter' key on your keyboard.
-3. Click on the 'Activate' button to use your new theme right away.
-4. Go to INSERT ABOUT PAGE for a guide on how to customize this theme.
-5. Navigate to Appearance > Customize in your admin panel and customize to taste.
+1. Click the 'Code' button on this Github page and select 'Download ZIP'.
+2. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
+3. Click on 'Upload Theme', select the zip file, and click on 'Install Now'.
+4. Click on the 'Activate' button to use your new theme right away.
 
 ## Changelog
 

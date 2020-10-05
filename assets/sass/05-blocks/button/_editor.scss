@@ -7,13 +7,22 @@
 	line-height: var(--button--line-height);
 	background-color: var(--button--color-background);
 	border-radius: var(--button--border-radius);
+	border: var(--button--border-width) solid var(--button--color-background);
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 
-	&:hover,
-	&:focus,
-	&.has-focus {
+	&:visited {
+		color: var(--button--color-text);
+	}
+
+	&:hover {
 		color: var(--button--color-text-hover);
 		background-color: var(--button--color-background-hover);
+	}
+
+	&:focus,
+	&.has-focus {
+		outline-offset: -4px;
+		outline: 2px dotted currentColor;
 	}
 
 	// Outline Style
@@ -21,7 +30,24 @@
 	.is-style-outline & {
 		color: var(--button--color-background);
 		background: transparent;
-		border: 2px solid currentColor;
+		border: var(--button--border-width) solid currentColor;
+
+		&:visited {
+			color: var(--button--color-background);
+		}
+
+		&:active,
+		&:hover {
+			background-color: var(--button--color-background);
+			color: var(--button--color-text);
+			border: var(--button--border-width) solid var(--button--color-background);
+		}
+
+		&:focus,
+		&.has-focus {
+			outline-offset: -6px;
+			background: transparent;
+		}
 	}
 
 	// Squared Style
@@ -29,6 +55,15 @@
 	.is-style-squared & {
 		border-radius: 0;
 	}
+}
+
+.is-selected.is-style-outline .wp-block-button__link:hover {
+	color: var(--button--color-background);
+}
+
+.is-style-outline .wp-block-button__link[style*="radius"],
+.wp-block-button__link[style*="radius"] {
+	outline-offset: 2px;
 }
 
 div[data-type="core/button"] {

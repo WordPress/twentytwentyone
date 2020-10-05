@@ -15,7 +15,7 @@
 		font-family: var(--heading--font-family);
 		font-weight: var(--heading--font-weight-page-title);
 		font-size: var(--global--font-size-page-title);
-		line-height: var(--heading--line-height);
+		line-height: var(--heading--line-height-h1);
 	}
 }
 
@@ -38,7 +38,7 @@
 // Gutenberg background-color options
 .has-background {
 
-	&:not(.has-background-background-color) a,
+	&:not(.has-background-background-color) a:not(.wp-block-button__link),
 	p,
 	h1,
 	h2,

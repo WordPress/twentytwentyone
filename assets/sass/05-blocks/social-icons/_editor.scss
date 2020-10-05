@@ -1,0 +1,18 @@
+.wp-block-social-links {
+
+	li.wp-block-social-link:first-child {
+		margin-top: auto;
+	}
+
+	&.is-style-twentytwentyone-social-icons-color {
+
+		button {
+			color: var(--global--color-primary);
+		}
+
+		.wp-social-link {
+			background: none;
+		}
+	}
+
+}

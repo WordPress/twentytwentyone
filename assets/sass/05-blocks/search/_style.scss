@@ -2,7 +2,9 @@
 	max-width: var(--responsive--aligndefault-width);
 
 	.wp-block-search__label {
-		font-weight: normal;
+		font-size: var(--form--font-size);
+		font-weight: var(--form--label-weight-strong);
+		margin-bottom: calc(var(--global--spacing-vertical) / 3);
 	}
 
 	.wp-block-search__input {
@@ -19,4 +21,8 @@
 			border-color: var(--form--border-color);
 		}
 	}
+}
+
+.wp-block-search__button {
+	box-shadow: none;
 }
