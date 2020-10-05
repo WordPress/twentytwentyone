@@ -70,7 +70,6 @@
 
 				// Additional styles for when there are only two gallery items.
 				&:last-child {
-					margin-top: 25%;
 					grid-column-start: 3;
 					grid-column-end: 8;
 					margin-top: 0;
@@ -80,7 +79,7 @@
 
 			&:nth-child(4n+3) {
 				grid-column-end: span 5;
-				transform: translateY(-25%); 
+				transform: translateY(-25%);
 			}
 
 			&:nth-child(4n+4) {
