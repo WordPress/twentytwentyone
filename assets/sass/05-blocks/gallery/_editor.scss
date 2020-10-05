@@ -12,7 +12,7 @@
 			grid-auto-rows: max-content;
 			grid-auto-flow: column;
 			grid-row-gap: var(--global--spacing-vertical);
-			grid-column-gap: calc(2 * var(--global--spacing-horizontal));
+			grid-column-gap: 20%;
 			grid-template-columns: repeat(2, 1fr);
 		}
 		
@@ -39,7 +39,10 @@
 			&:nth-child(4n+2) {
 				grid-column-start: 2;
 				grid-column-end: 2;
-				margin-top: 50%;
+				
+				&:nth-child(2) {
+					margin-top: 50%;
+				}
 			}
 
 			&:nth-child(4n+3) {
@@ -52,10 +55,14 @@
 				margin-top: -25%;
 				grid-column-start: 2;
 				grid-column-end: 2;
+
+				&:not(:last-of-type) {
+					margin-bottom: 100%;
+				}
 			}
 
 			&:nth-child(4n+5) {
-				transform: translateY(100%);
+				margin-top: 100%;
 			}
 		}
 	}
