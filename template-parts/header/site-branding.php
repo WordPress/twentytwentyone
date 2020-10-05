@@ -6,12 +6,6 @@
  * @subpackage Twenty_Twenty_One
  * @since 1.0.0
  */
-
-// If there is neither a title, tagline or logo, we don't want to print the empty site branding tag.
-if ( get_theme_mod( 'display_title_and_tagline', true ) === false && ! has_custom_logo() ) {
-	return;
-}
-
 ?>
 <div class="site-branding">
 
@@ -20,11 +14,12 @@ if ( get_theme_mod( 'display_title_and_tagline', true ) === false && ! has_custo
 		<?php
 	}
 	$blog_info = get_bloginfo( 'name' );
+
 	if ( ! empty( $blog_info ) && get_theme_mod( 'display_title_and_tagline', true ) === true ) {
 		if ( is_front_page() ) {
 			if ( is_paged() ) {
 				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php
 			} else {
 				?>
@@ -36,6 +31,10 @@ if ( get_theme_mod( 'display_title_and_tagline', true ) === false && ! has_custo
 			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php
 		}
+	} elseif ( ! empty( $blog_info ) && is_front_page() ) {
+		?>
+		<h1 class="screen-reader-text"><?php bloginfo( 'name' ); ?></h1>
+		<?php
 	}
 
 	$description = get_bloginfo( 'description', 'display' );
