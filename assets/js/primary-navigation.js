@@ -27,12 +27,22 @@ function twentytwentyoneToggleAttribute(element, attribute, trueVal, falseVal) {
 	}
 }
 
+function twentytwentyoneCollapseAllOtherSubMenus(element) {
+	var nav = element.closest( 'nav' );
+	nav.querySelectorAll( '.sub-menu-toggle' ).forEach( function( button ) {
+		if ( button !== element ) {
+			button.setAttribute( 'aria-expanded', 'false' );
+		}
+	} );
+}
+
 /**
  * Handle clicks on submenu toggles.
  *
  * @param {Element} el
  */
 function twentytwentyoneExpandSubMenu(el) {
+	twentytwentyoneCollapseAllOtherSubMenus(el);
 	twentytwentyoneToggleAttribute(el, 'aria-expanded', 'true', 'false');
 }
 
