@@ -2070,50 +2070,80 @@ a {
 
 .has-black-background-color[class] {
 	background-color: #000;
-	color: #fff;
 }
 
 .has-gray-background-color[class] {
 	background-color: #39414d;
-	color: #fff;
 }
 
 .has-dark-gray-background-color[class] {
 	background-color: #28303d;
-	color: #fff;
 }
 
 .has-green-background-color[class] {
 	background-color: #d1e4dd;
-	color: #000;
 }
 
 .has-blue-background-color[class] {
 	background-color: #d1dfe4;
-	color: #000;
 }
 
 .has-purple-background-color[class] {
 	background-color: #d1d1e4;
-	color: #000;
 }
 
 .has-red-background-color[class] {
 	background-color: #e4d1d1;
-	color: #000;
 }
 
 .has-orange-background-color[class] {
 	background-color: #e4dad1;
-	color: #000;
 }
 
 .has-yellow-background-color[class] {
 	background-color: #eeeadd;
-	color: #000;
 }
 
 .has-white-background-color[class] {
 	background-color: #fff;
-	color: #000;
+}
+
+:not(.has-text-color).has-black-background-color[class] {
+	color: #fff;
+}
+
+:not(.has-text-color).has-gray-background-color[class] {
+	color: #fff;
+}
+
+:not(.has-text-color).has-dark-gray-background-color[class] {
+	color: #fff;
+}
+
+:not(.has-text-color).has-green-background-color[class] {
+	color: #28303d;
+}
+
+:not(.has-text-color).has-blue-background-color[class] {
+	color: #28303d;
+}
+
+:not(.has-text-color).has-purple-background-color[class] {
+	color: #28303d;
+}
+
+:not(.has-text-color).has-red-background-color[class] {
+	color: #28303d;
+}
+
+:not(.has-text-color).has-orange-background-color[class] {
+	color: #28303d;
+}
+
+:not(.has-text-color).has-yellow-background-color[class] {
+	color: #28303d;
+}
+
+:not(.has-text-color).has-white-background-color[class] {
+	color: #28303d;
 }

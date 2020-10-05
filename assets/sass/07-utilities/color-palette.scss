@@ -57,50 +57,59 @@
 
 .has-black-background-color[class] {
 	background-color: var(--global--color-black);
-	color: var(--global--color-white);
 }
 
 .has-gray-background-color[class] {
 	background-color: var(--global--color-gray);
-	color: var(--global--color-white);
 }
 
 .has-dark-gray-background-color[class] {
 	background-color: var(--global--color-dark-gray);
-	color: var(--global--color-white);
 }
 
 .has-green-background-color[class] {
 	background-color: var(--global--color-green);
-	color: var(--global--color-black);
 }
 
 .has-blue-background-color[class] {
 	background-color: var(--global--color-blue);
-	color: var(--global--color-black);
 }
 
 .has-purple-background-color[class] {
 	background-color: var(--global--color-purple);
-	color: var(--global--color-black);
 }
 
 .has-red-background-color[class] {
 	background-color: var(--global--color-red);
-	color: var(--global--color-black);
 }
 
 .has-orange-background-color[class] {
 	background-color: var(--global--color-orange);
-	color: var(--global--color-black);
 }
 
 .has-yellow-background-color[class] {
 	background-color: var(--global--color-yellow);
-	color: var(--global--color-black);
 }
 
 .has-white-background-color[class] {
 	background-color: var(--global--color-white);
-	color: var(--global--color-black);
+}
+
+:not(.has-text-color) {
+
+	&.has-black-background-color[class],
+	&.has-gray-background-color[class],
+	&.has-dark-gray-background-color[class] {
+		color: var(--global--color-white);
+	}
+
+	&.has-green-background-color[class],
+	&.has-blue-background-color[class],
+	&.has-purple-background-color[class],
+	&.has-red-background-color[class],
+	&.has-orange-background-color[class],
+	&.has-yellow-background-color[class],
+	&.has-white-background-color[class] {
+		color: var(--global--color-dark-gray);
+	}
 }

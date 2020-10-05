@@ -4236,52 +4236,50 @@ h1.page-title {
 
 .has-black-background-color[class] {
 	background-color: var(--global--color-black);
-	color: var(--global--color-white);
 }
 
 .has-gray-background-color[class] {
 	background-color: var(--global--color-gray);
-	color: var(--global--color-white);
 }
 
 .has-dark-gray-background-color[class] {
 	background-color: var(--global--color-dark-gray);
-	color: var(--global--color-white);
 }
 
 .has-green-background-color[class] {
 	background-color: var(--global--color-green);
-	color: var(--global--color-black);
 }
 
 .has-blue-background-color[class] {
 	background-color: var(--global--color-blue);
-	color: var(--global--color-black);
 }
 
 .has-purple-background-color[class] {
 	background-color: var(--global--color-purple);
-	color: var(--global--color-black);
 }
 
 .has-red-background-color[class] {
 	background-color: var(--global--color-red);
-	color: var(--global--color-black);
 }
 
 .has-orange-background-color[class] {
 	background-color: var(--global--color-orange);
-	color: var(--global--color-black);
 }
 
 .has-yellow-background-color[class] {
 	background-color: var(--global--color-yellow);
-	color: var(--global--color-black);
 }
 
 .has-white-background-color[class] {
 	background-color: var(--global--color-white);
-	color: var(--global--color-black);
+}
+
+:not(.has-text-color).has-black-background-color[class], :not(.has-text-color).has-gray-background-color[class], :not(.has-text-color).has-dark-gray-background-color[class] {
+	color: var(--global--color-white);
+}
+
+:not(.has-text-color).has-green-background-color[class], :not(.has-text-color).has-blue-background-color[class], :not(.has-text-color).has-purple-background-color[class], :not(.has-text-color).has-red-background-color[class], :not(.has-text-color).has-orange-background-color[class], :not(.has-text-color).has-yellow-background-color[class], :not(.has-text-color).has-white-background-color[class] {
+	color: var(--global--color-dark-gray);
 }
 
 header *,
