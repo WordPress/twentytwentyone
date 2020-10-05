@@ -26,6 +26,7 @@
 		@include media(mobile) {
 			display: flex;
 			justify-content: center;
+			flex-wrap: wrap;
 
 			.nav-next,
 			.nav-previous {

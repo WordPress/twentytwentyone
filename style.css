@@ -3976,6 +3976,7 @@ h1.page-title {
 	.navigation .nav-links {
 		display: flex;
 		justify-content: center;
+		flex-wrap: wrap;
 	}
 	.navigation .nav-links .nav-next,
 	.navigation .nav-links .nav-previous {
