@@ -99,6 +99,15 @@ function twentytwentyoneExpandSubMenu( el ) {
 				event.preventDefault();
 			}
 		} );
+
+		document.getElementById( 'site-navigation' ).querySelectorAll( '.menu-wrapper > .menu-item-has-children' ).forEach( function( li ) {
+			li.addEventListener( 'mouseenter', function() {
+				this.classList.add( 'hover' );
+			} );
+			li.addEventListener( 'mouseleave', function() {
+				this.classList.remove( 'hover' );
+			} );
+		} );
 	}
 
 	window.addEventListener( 'load', function() {
