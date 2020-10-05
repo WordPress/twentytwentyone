@@ -27,7 +27,7 @@
 					<?php
 					else :
 						$blog_info = get_bloginfo( 'name' );
-						if ( ! empty( $blog_info ) ) :
+						if ( ! empty( $blog_info ) && get_theme_mod( 'display_title_and_tagline', true ) === true) :
 							if ( is_front_page() && ! is_paged() ) :
 								?>
 								<?php bloginfo( 'name' ); ?>
