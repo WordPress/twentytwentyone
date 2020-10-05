@@ -33,7 +33,7 @@
 			grid-row-gap: var(--global--spacing-vertical);
 			grid-template-columns: repeat(7, 1fr);
 		}
-		
+
 		.blocks-gallery-item {
 			margin: 0;
 			width: 100%;
@@ -63,7 +63,7 @@
 			&:nth-child(4n+2) {
 				grid-column-start: 5;
 				grid-column-end: 8;
-				
+
 				&:nth-child(2) {
 					margin-top: 50%;
 				}
