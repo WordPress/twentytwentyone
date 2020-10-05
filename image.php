@@ -10,35 +10,31 @@
 get_header();
 
 // Start the loop.
-while ( have_posts() ) :
+while ( have_posts() ) {
 	the_post();
 	?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<nav id="image-navigation" class="navigation image-navigation default-max-width">
-			<div class="nav-links">
-				<div class="nav-previous"><?php previous_image_link( false, __( 'Previous Image', 'twentytwentyone' ) ); ?></div>
-				<div class="nav-next"><?php next_image_link( false, __( 'Next Image', 'twentytwentyone' ) ); ?></div>
-			</div><!-- .nav-links -->
-		</nav><!-- .image-navigation -->
-
-		<header class="entry-header default-max-width">
+		<header class="entry-header alignwide">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		</header><!-- .entry-header -->
 
 		<div class="entry-content">
-			<figure class="entry-attachment wp-block-image">
+			<figure class="wp-block-image">
 				<?php
 				/**
 				 * Filter the default image attachment size.
 				 *
-				 * @since Twenty Sixteen 1.0
-				 *
 				 * @param string $image_size Image size. Default 'large'.
 				 */
 				$image_size = apply_filters( 'twenty_twenty_one_attachment_size', 'full' );
-					echo wp_get_attachment_image( get_the_ID(), $image_size );
+				echo wp_get_attachment_image( get_the_ID(), $image_size );
+
+				if ( wp_get_attachment_caption() ) {
+					?>
+					<figcaption class="wp-caption-text"><?php echo wp_kses_post( wp_get_attachment_caption() ); ?></figcaption>
+					<?php
+				}
 				?>
-				<figcaption class="wp-caption-text"><?php the_excerpt(); ?></figcaption>
 			</figure><!-- .entry-attachment -->
 
 			<?php
@@ -59,6 +55,35 @@ while ( have_posts() ) :
 
 		<footer class="entry-footer default-max-width">
 			<?php
+			// Check if there is a parent, then add the published in link.
+			if ( wp_get_post_parent_id( $post ) ) {
+				printf(
+					/* translators: 2: parent post link. 3: parent post title*/
+					'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
+					esc_html__( 'Published in', 'twentytwentyone' ),
+					esc_url( get_the_permalink( wp_get_post_parent_id( $post ) ) ),
+					esc_html( get_the_title( wp_get_post_parent_id( $post ) ) )
+				);
+			} else {
+				// Edit post link.
+				edit_post_link(
+					sprintf(
+						wp_kses(
+							/* translators: %s: Name of current post. Only visible to screen readers. */
+							__( 'Edit<span class="screen-reader-text"> %s</span>', 'twentytwentyone' ),
+							array(
+								'span' => array(
+									'class' => array(),
+								),
+							)
+						),
+						get_the_title()
+					),
+					'<span class="edit-link">',
+					'</span>'
+				);
+			}
+
 			// Retrieve attachment metadata.
 			$metadata = wp_get_attachment_metadata();
 			if ( $metadata ) {
@@ -71,24 +96,33 @@ while ( have_posts() ) :
 				);
 			}
 
-			twenty_twenty_one_entry_meta_footer();
+			if ( wp_get_post_parent_id( $post ) ) {
+				// Edit post link.
+				edit_post_link(
+					sprintf(
+						wp_kses(
+							/* translators: %s: Name of current post. Only visible to screen readers. */
+							__( 'Edit<span class="screen-reader-text"> %s</span>', 'twentytwentyone' ),
+							array(
+								'span' => array(
+									'class' => array(),
+								),
+							)
+						),
+						get_the_title()
+					),
+					'<span class="edit-link">',
+					'</span><br>'
+				);
+			}
 			?>
 		</footer><!-- .entry-footer -->
 	</article><!-- #post-## -->
-
 	<?php
-	// Parent post navigation.
-	the_post_navigation(
-		array(
-			'prev_text' => _x( '<span class="meta-nav">Published in</span><br><span class="post-title">%title</span>', 'Parent post link', 'twentytwentyone' ),
-		)
-	);
-
 	// If comments are open or we have at least one comment, load up the comment template.
 	if ( comments_open() || get_comments_number() ) {
 		comments_template();
 	}
-
-endwhile; // End the loop.
+} // End the loop.
 
 get_footer();

@@ -3,14 +3,14 @@
  * Customize API: WP_Customize_Color_Control class
  *
  * @package WordPress
- * @subpackage Customize
- * @since 4.4.0
+ * @subpackage Twenty_Twenty_One
+ * @since 1.0.0
  */
 
 /**
  * Customize Color Control class.
  *
- * @since 3.4.0
+ * @since 1.0.0
  *
  * @see WP_Customize_Control
  */

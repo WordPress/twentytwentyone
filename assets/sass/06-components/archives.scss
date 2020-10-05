@@ -1,11 +1,14 @@
 .page-title {
 	font-size: var(--global--font-size-page-title);
-	word-break: break-all;
 }
 
 h1.page-title,
 h2.page-title {
 	font-weight: var(--heading--font-weight-page-title);
+}
+
+h1.page-title {
+	line-height: var(--heading--line-height-h1);
 }
 
 .page-header {

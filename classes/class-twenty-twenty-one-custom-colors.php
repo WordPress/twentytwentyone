@@ -64,6 +64,13 @@ class Twenty_Twenty_One_Custom_Colors {
 			$theme_css .= '--global--color-background: #' . get_theme_mod( 'background_color', 'D1E4DD' ) . ';';
 			$theme_css .= '--global--color-primary: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
 			$theme_css .= '--global--color-secondary: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
+			$theme_css .= '--button--color-background: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
+			$theme_css .= '--button--color-text-hover: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
+
+			if ( '#fff' === $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) ) {
+				$theme_css .= '--table--stripes-border-color: var(--global--color-dark-gray);';
+				$theme_css .= '--table--stripes-background-color: var(--global--color-dark-gray);';
+			}
 		}
 
 		$theme_css .= '}';

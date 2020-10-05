@@ -22,14 +22,22 @@
 
 		<div class="site-info">
 			<div class="site-name">
-				<?php
-				$blog_info = get_bloginfo( 'name' );
-				if ( ! empty( $blog_info ) ) {
-					?>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				<?php if ( has_custom_logo() ) : ?>
+					<?php the_custom_logo(); ?>
 					<?php
-				}
-				?>
+					else :
+						$blog_info = get_bloginfo( 'name' );
+						if ( ! empty( $blog_info ) ) :
+							if ( is_front_page() && ! is_paged() ) :
+								?>
+								<?php bloginfo( 'name' ); ?>
+							<?php else : ?>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+								<?php
+								endif;
+							endif;
+						endif;
+					?>
 			</div><!-- .site-name -->
 			<div class="copyright">
 				<?php

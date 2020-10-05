@@ -28,6 +28,7 @@
 }
 
 h1.entry-title {
+	line-height: var(--heading--line-height-h1);
 	font-weight: var(--heading--font-weight-page-title);
 }
 
@@ -68,10 +69,6 @@ h1.entry-title {
 	.wp-audio-shortcode {
 		@extend %responsive-aligndefault-width;
 	}
-}
-
-.entry-attachment {
-	text-align: center;
 }
 
 .entry-meta {
@@ -187,7 +184,8 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .single .site-main > article > .entry-footer .cat-links,
-.single .site-main > article > .entry-footer .tags-links {
+.single .site-main > article > .entry-footer .tags-links,
+.single .site-main > article > .entry-footer .full-size-link {
 	justify-self: end;
 	text-align: right;
 }

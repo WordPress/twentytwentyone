@@ -13,11 +13,10 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="entry-header default-max-width">
+	<header class="entry-header alignwide">
 		<?php get_template_part( 'template-parts/header/entry-header' ); ?>
+		<?php twenty_twenty_one_post_thumbnail(); ?>
 	</header>
-
-	<?php twenty_twenty_one_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
