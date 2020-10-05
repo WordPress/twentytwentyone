@@ -94,9 +94,9 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		page-break-after: avoid;
 		page-break-inside: avoid;
 	}
-	img,
-	.wp-block-cover.has-background-dim{
+	img{
 		page-break-inside: avoid  !important;
+		display: inline-block !important;
 	}
 	table,
 	pre {
@@ -272,8 +272,9 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	}
 	figure:not(.wp-block-embed-instagram):not(.wp-block-embed-facebook) .wp-block-embed__wrapper,
 	.wp-block-embed-instagram blockquote,
-	.wp-block-embed-facebook blockquote {
-		border: 1pt solid black !important;
+	.wp-block-embed-facebook blockquote,
+	.wp-block-audio:before {
+		border: 1pt dotted black !important;
 		box-shadow: none !important;
 	}
 	.wp-block-embed:before {
