@@ -3808,6 +3808,18 @@ h1.page-title {
 	}
 }
 
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle[aria-expanded="false"] {
+	/* stylelint-disable */
+	background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z' fill='%2328303d'/></svg>") no-repeat center center;
+	/* stylelint-enable */
+}
+
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle[aria-expanded="true"] {
+	/* stylelint-disable */
+	background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M4 9h12v2H4V9z' fill='%2328303d'/></svg>") no-repeat center center;
+	/* stylelint-enable */
+}
+
 .primary-navigation > div > .menu-wrapper > li > .sub-menu {
 	position: relative;
 }

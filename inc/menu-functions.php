@@ -13,7 +13,8 @@
  */
 
 /**
- * Add a dropdown toggle with icon to top-level menu items.
+ * Add a button to top-level menu items that has sub-menus.
+ * An icon is added using CSS depending on the value of aria-expanded.
  *
  * @param string $output Nav menu item start element.
  * @param object $item   Nav menu item.
@@ -21,13 +22,13 @@
  * @param object $args   Nav menu args.
  * @return string Nav menu item start element.
  */
-function twenty_twenty_one_add_dropdown_toggle( $output, $item, $depth, $args ) {
+function twenty_twenty_one_add_sub_menu_toggle( $output, $item, $depth, $args ) {
 
 	if ( 0 === $depth && in_array( 'menu-item-has-children', $item->classes, true ) ) {
-		// Add toggle button with icon.
-		$output .= '<button class="sub-menu-toggle" aria-expanded="false" onClick="twentytwentyoneExpandSubMenu(this)"><span class="screen-reader-text">' . esc_html__( 'Toggle child menu', 'twentytwentyone' ) . '</span>' . twenty_twenty_one_get_icon_svg( 'plus', 18 ) . '</button>';
+		// Add toggle button.
+		$output .= '<button class="sub-menu-toggle" aria-expanded="false" onClick="twentytwentyoneExpandSubMenu(this)"><span class="screen-reader-text">' . esc_html__( 'Toggle child menu', 'twentytwentyone' ) . '</span></button>';
 	}
 
 	return $output;
 }
-add_filter( 'walker_nav_menu_start_el', 'twenty_twenty_one_add_dropdown_toggle', 10, 4 );
+add_filter( 'walker_nav_menu_start_el', 'twenty_twenty_one_add_sub_menu_toggle', 10, 4 );
