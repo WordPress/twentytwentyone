@@ -650,6 +650,11 @@ div[data-type="core/button"] {
 	margin-bottom: 50%;
 }
 
+.wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:first-child:nth-last-child(2) {
+	margin-bottom: 0;
+	grid-column-end: span 5;
+}
+
 .wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:nth-child(4n+2) {
 	grid-column-start: 5;
 	grid-column-end: 8;
@@ -657,6 +662,14 @@ div[data-type="core/button"] {
 
 .wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:nth-child(4n+2):nth-child(2) {
 	margin-top: 50%;
+}
+
+.wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:nth-child(4n+2):last-child {
+	margin-top: 25%;
+	grid-column-start: 3;
+	grid-column-end: 8;
+	margin-top: 0;
+	transform: translateY(-50%);
 }
 
 .wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:nth-child(4n+3) {
