@@ -3876,21 +3876,21 @@ table.is-style-stripes tbody tr:nth-child(odd) {
 		/*rtl:ignore*/
 		margin-left: 25px;
 	}
-	.entry-content > .alignleft {
+	.entry-content > .alignright {
 		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 	}
 	@media only screen and (min-width: 482px){
-		.entry-content > .alignleft{
+		.entry-content > .alignright{
 		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 482px){
-		.entry-content > .alignleft{
+		.entry-content > .alignright{
 		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 822px){
-		.entry-content > .alignleft{
+		.entry-content > .alignright{
 		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}

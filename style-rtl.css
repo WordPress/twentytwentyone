@@ -2743,7 +2743,7 @@ table.is-style-stripes tbody tr:nth-child(odd),
 		float: right;
 		margin-left: var(--global--spacing-horizontal);
 	}
-	.entry-content > .alignleft {
+	.entry-content > .alignright {
 		max-width: calc(50% - var(--responsive--alignright-margin));
 	}
 }
