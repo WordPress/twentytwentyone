@@ -4,17 +4,16 @@
  * Required to open and close the mobile navigation.
  */
 ( function() {
-
 	/**
 	 * Toggle an attribute's value
-	 * 
+	 *
 	 * @param {Element} element
-	 * @param {Attribute} attribute
-	 * @param {String} trueVal
-	 * @param {String} falseVal
+	 * @param {string} attribute
+	 * @param {string} trueVal
+	 * @param {string} falseVal
 	 * @since 1.0.0
 	 */
-	var toggleAttribute = function ( element, attribute, trueVal, falseVal ) {
+	function toggleAttribute( element, attribute, trueVal, falseVal ) {
 		if ( undefined === trueVal ) {
 			trueVal = true;
 		}
@@ -31,19 +30,19 @@
 	/**
 	 * Menu Toggle Behaviors
 	 *
-	 * @param {Element} element
+	 * @param {string} id - The ID.
 	 */
-	var navMenu = function ( id ){
-		var wrapper      = document.body; // this is the element to which a CSS class is added when a mobile nav menu is open
-		var mobileButton = document.getElementById( `${ id }-mobile-menu` );
+	function navMenu( id ) {
+		var wrapper = document.body; // this is the element to which a CSS class is added when a mobile nav menu is open
+		var mobileButton = document.getElementById( id + '-mobile-menu' );
 
-		if ( mobileButton ){
+		if ( mobileButton ) {
 			mobileButton.onclick = function() {
-				wrapper.classList.toggle( `${ id }-navigation-open` );
+				wrapper.classList.toggle( id + '-navigation-open' );
 				wrapper.classList.toggle( 'lock-scrolling' );
 				toggleAttribute( mobileButton, 'aria-expanded', 'true', 'false' );
 				mobileButton.focus();
-			}
+			};
 		}
 
 		/**
@@ -51,13 +50,13 @@
 		 * Adapted from TwentyTwenty
 		 */
 		document.addEventListener( 'keydown', function( event ) {
-			if ( ! wrapper.classList.contains( `${ id }-navigation-open` ) ){
-				return;
-			} 
 			var modal, elements, selectors, lastEl, firstEl, activeEl, tabKey, shiftKey, escKey;
+			if ( ! wrapper.classList.contains( id + '-navigation-open' ) ) {
+				return;
+			}
 
-			modal = document.querySelector( `.${ id }-navigation` );
-			selectors = "input, a, button";
+			modal = document.querySelector( '.' + id + '-navigation' );
+			selectors = 'input, a, button';
 			elements = modal.querySelectorAll( selectors );
 			elements = Array.prototype.slice.call( elements );
 			tabKey = event.keyCode === 9;
@@ -69,7 +68,7 @@
 
 			if ( escKey ) {
 				event.preventDefault();
-				wrapper.classList.remove( `${ id }-navigation-open`, 'lock-scrolling' );
+				wrapper.classList.remove( id + '-navigation-open', 'lock-scrolling' );
 				toggleAttribute( mobileButton, 'aria-expanded', 'true', 'false' );
 				mobileButton.focus();
 			}
@@ -88,10 +87,10 @@
 			if ( tabKey && firstEl === lastEl ) {
 				event.preventDefault();
 			}
-		});
+		} );
 	}
 
 	window.addEventListener( 'load', function() {
 		new navMenu( 'primary' );
-	});
-} )();
+	} );
+}() );

@@ -13,7 +13,7 @@ wp.customize.controlConstructor['twenty-twenty-one-color'] = wp.customize.Contro
 			picker;
 
 		picker = this.container.find( '.color-picker-hex' );
-		picker.val( control.setting() ).wpColorPicker({
+		picker.val( control.setting() ).wpColorPicker( {
 			palettes: control.params.palette,
 			change: function() {
 				updating = true;
@@ -24,10 +24,10 @@ wp.customize.controlConstructor['twenty-twenty-one-color'] = wp.customize.Contro
 				updating = true;
 				control.setting.set( '' );
 				updating = false;
-			}
-		});
+			},
+		} );
 
-		control.setting.bind( function ( value ) {
+		control.setting.bind( function( value ) {
 			// Bail if the update came from the control itself.
 			if ( updating ) {
 				return;
@@ -49,5 +49,5 @@ wp.customize.controlConstructor['twenty-twenty-one-color'] = wp.customize.Contro
 				event.stopPropagation(); // Prevent section from being collapsed.
 			}
 		} );
-	}
+	},
 } );
