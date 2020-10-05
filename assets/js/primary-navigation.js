@@ -7,23 +7,14 @@
 /**
  * Toggle an attribute's value
  *
- * @param {Element} element
- * @param {Attribute} attribute
- * @param {String} trueVal
- * @param {String} falseVal
+ * @param {Element} el - The element.
  * @since 1.0.0
  */
-function twentytwentyoneToggleAttribute(element, attribute, trueVal, falseVal) {
-	if (undefined === trueVal) {
-		trueVal = true;
-	}
-	if (undefined === falseVal) {
-		falseVal = false;
-	}
-	if (trueVal !== element.getAttribute(attribute)) {
-		element.setAttribute(attribute, trueVal);
+function twentytwentyoneToggleAriaExpanded( el ) {
+	if ( 'true' !== el.getAttribute( 'aria-expanded' ) ) {
+		el.setAttribute( 'aria-expanded', 'true' );
 	} else {
-		element.setAttribute(attribute, falseVal);
+		el.setAttribute( 'aria-expanded', 'false' );
 	}
 }
 
@@ -39,11 +30,11 @@ function twentytwentyoneCollapseAllOtherSubMenus(element) {
 /**
  * Handle clicks on submenu toggles.
  *
- * @param {Element} el
+ * @param {Element} el - The element.
  */
-function twentytwentyoneExpandSubMenu(el) {
-	twentytwentyoneCollapseAllOtherSubMenus(el);
-	twentytwentyoneToggleAttribute(el, 'aria-expanded', 'true', 'false');
+function twentytwentyoneExpandSubMenu( el ) {
+	twentytwentyoneCollapseAllOtherSubMenus( el );
+	twentytwentyoneToggleAriaExpanded( el );
 }
 
 ( function() {
@@ -54,14 +45,14 @@ function twentytwentyoneExpandSubMenu(el) {
 	 * @param {Element} element
 	 */
 	var navMenu = function ( id ){
-		var wrapper      = document.body; // this is the element to which a CSS class is added when a mobile nav menu is open
-		var mobileButton = document.getElementById( `${ id }-mobile-menu` );
+		var wrapper      = document.body, // this is the element to which a CSS class is added when a mobile nav menu is open
+			mobileButton = document.getElementById( `${ id }-mobile-menu` );
 
 		if ( mobileButton ){
 			mobileButton.onclick = function() {
 				wrapper.classList.toggle( `${ id }-navigation-open` );
 				wrapper.classList.toggle( 'lock-scrolling' );
-				twentytwentyoneToggleAttribute( mobileButton, 'aria-expanded', 'true', 'false' );
+				twentytwentyoneToggleAriaExpanded( mobileButton );
 				mobileButton.focus();
 			}
 		}
@@ -70,10 +61,10 @@ function twentytwentyoneExpandSubMenu(el) {
 		 * Adapted from TwentyTwenty
 		 */
 		document.addEventListener( 'keydown', function( event ) {
+			var modal, elements, selectors, lastEl, firstEl, activeEl, tabKey, shiftKey, escKey;
 			if ( ! wrapper.classList.contains( `${ id }-navigation-open` ) ){
 				return;
 			}
-			var modal, elements, selectors, lastEl, firstEl, activeEl, tabKey, shiftKey, escKey;
 
 			modal = document.querySelector( `.${ id }-navigation` );
 			selectors = "input, a, button";
@@ -89,7 +80,7 @@ function twentytwentyoneExpandSubMenu(el) {
 			if ( escKey ) {
 				event.preventDefault();
 				wrapper.classList.remove( `${ id }-navigation-open`, 'lock-scrolling' );
-				twentytwentyoneToggleAttribute( mobileButton, 'aria-expanded', 'true', 'false' );
+				twentytwentyoneToggleAriaExpanded( mobileButton );
 				mobileButton.focus();
 			}
 
@@ -107,7 +98,7 @@ function twentytwentyoneExpandSubMenu(el) {
 			if ( tabKey && firstEl === lastEl ) {
 				event.preventDefault();
 			}
-		});
+		} );
 	}
 
 	window.addEventListener( 'load', function() {
