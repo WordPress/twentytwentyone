@@ -1330,7 +1330,7 @@ pre.wp-block-verse {
 	color: var(--global--color-secondary);
 }
 
-.has-background:not(.has-background-background-color) a,
+.has-background:not(.has-background-background-color) a:not(.wp-block-button__link),
 .has-background p,
 .has-background h1,
 .has-background h2,
@@ -1527,7 +1527,7 @@ a {
 	color: var(--global--color-white);
 }
 
-.has-background:not(.has-background-background-color) a,
+.has-background:not(.has-background-background-color) a:not(.wp-block-button__link),
 .has-background p,
 .has-background h1,
 .has-background h2,
