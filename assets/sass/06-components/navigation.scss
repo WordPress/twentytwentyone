@@ -5,10 +5,10 @@
 .menu-button-container {
 	display: none;
 	justify-content: space-between;
-	left: 0;
 	position: absolute;
-	top: 0;
-	width: 100%;
+	right: 0;
+	padding-top: calc(1.4 * var(--global--spacing-vertical));
+	padding-bottom: calc(0.25 * var(--global--spacing-vertical));
 
 	#primary-mobile-menu {
 		margin-left: auto;
@@ -21,10 +21,6 @@
 		display: flex;
 	}
 
-	.admin-bar:not(.primary-navigation-open) & {
-		top: calc(1.4 * var(--global--spacing-vertical));
-	}
-
 	.button {
 		display: flex;
 		font-size: var(--primary-nav--font-size-button);
@@ -32,7 +28,6 @@
 		text-transform: var(--branding--title--text-transform);
 		background-color: transparent;
 		color: var(--primary-nav--color-link);
-		z-index: 500;
 
 		.dropdown-icon {
 			display: flex;
@@ -71,9 +66,12 @@
 
 	// When the menu is open, hide the close button and show the hide button.
 	.primary-navigation-open & {
+		width: 100%;
+		z-index: 500;
+		background-color: var(--global--color-background);
 
 		#primary-mobile-menu {
-			display: flex;
+			position: static;
 		}
 	}
 }
@@ -91,26 +89,32 @@
 
 	@include media(mobile-only) {
 		width: 100%;
+		position: fixed;
 	}
 
 	// Mobile menu closed
 	> .primary-menu-container {
 		visibility: hidden;
 		opacity: 0;
-		position: fixed;
 		top: 0;
 		right: 0;
 		bottom: 0;
 		left: 0;
-		padding: calc(4 * var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
+		padding: calc(5.5 * var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
 		background-color: var(--global--color-background);
-		overflow-x: hidden;
+		overflow-x: scroll;
 		overflow-y: auto;
 		transition: all .15s ease-in-out;
 		transform: translateY(var(--global--spacing-vertical));
 
 		@include media(mobile-only) {
+			height: 100vh;
 			z-index: 499;
+		}
+
+		.admin-bar & {
+			height: calc(100vh - 46px);
+			padding-top: calc(4 * var(--global--spacing-unit) + 46px);
 		}
 	}
 
@@ -125,17 +129,10 @@
 
 	}
 
-	// Adjust button postion when scrolling is locked
-	.lock-scrolling & > .button {
-		position: fixed;
-		top: 0;
-		right: 0;
-	}
-
 	// Adjust positions when logged-in
 	.admin-bar &,
 	.admin-bar & > .primary-menu-container,
-	.admin-bar.lock-scrolling & > .button {
+	.admin-bar.lock-scrolling & .button {
 		top: 46px;
 	}
 
@@ -188,7 +185,6 @@
 		position: relative;
 
 		@include media(mobile-only) {
-			margin: calc(2 * var(--global--spacing-vertical)) 0 0 0;
 
 			ul {
 				padding-left: 0;

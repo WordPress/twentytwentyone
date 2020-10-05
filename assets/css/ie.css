@@ -4973,10 +4973,10 @@ h1.page-title {
 .menu-button-container {
 	display: none;
 	justify-content: space-between;
-	left: 0;
 	position: absolute;
-	top: 0;
-	width: 100%;
+	right: 0;
+	padding-top: 42px;
+	padding-bottom: 8px;
 }
 
 .menu-button-container #primary-mobile-menu {
@@ -4992,10 +4992,6 @@ h1.page-title {
 	}
 }
 
-.admin-bar:not(.primary-navigation-open) .menu-button-container {
-	top: 42px;
-}
-
 .menu-button-container .button {
 	display: flex;
 	font-size: 1rem;
@@ -5003,7 +4999,6 @@ h1.page-title {
 	text-transform: uppercase;
 	background-color: transparent;
 	color: #28303d;
-	z-index: 500;
 }
 
 .menu-button-container .button .dropdown-icon {
@@ -5032,8 +5027,14 @@ h1.page-title {
 	display: flex;
 }
 
+.primary-navigation-open .menu-button-container {
+	width: 100%;
+	z-index: 500;
+	background-color: #d1e4dd;
+}
+
 .primary-navigation-open .menu-button-container #primary-mobile-menu {
-	display: flex;
+	position: static;
 }
 
 .primary-navigation {
@@ -5051,20 +5052,20 @@ h1.page-title {
 @media only screen and (max-width: 481px) {
 	.primary-navigation {
 		width: 100%;
+		position: fixed;
 	}
 }
 
 .primary-navigation > .primary-menu-container {
 	visibility: hidden;
 	opacity: 0;
-	position: fixed;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	padding: 80px 20px 25px;
+	padding: 110px 20px 25px;
 	background-color: #d1e4dd;
-	overflow-x: hidden;
+	overflow-x: scroll;
 	overflow-y: auto;
 	transition: all .15s ease-in-out;
 	transform: translateY(30px);
@@ -5072,8 +5073,14 @@ h1.page-title {
 
 @media only screen and (max-width: 481px) {
 	.primary-navigation > .primary-menu-container {
+		height: 100vh;
 		z-index: 499;
 	}
+}
+
+.admin-bar .primary-navigation > .primary-menu-container {
+	height: calc(100vh - 46px);
+	padding-top: 126px;
 }
 
 .primary-navigation-open .primary-navigation > .primary-menu-container {
@@ -5082,15 +5089,9 @@ h1.page-title {
 	transform: translateY(0);
 }
 
-.lock-scrolling .primary-navigation > .button {
-	position: fixed;
-	top: 0;
-	right: 0;
-}
-
 .admin-bar .primary-navigation,
 .admin-bar .primary-navigation > .primary-menu-container,
-.admin-bar.lock-scrolling .primary-navigation > .button {
+.admin-bar.lock-scrolling .primary-navigation .button {
 	top: 46px;
 }
 
@@ -5136,9 +5137,6 @@ h1.page-title {
 }
 
 @media only screen and (max-width: 481px) {
-	.primary-navigation > div > .menu-wrapper {
-		margin: 60px 0 0 0;
-	}
 	.primary-navigation > div > .menu-wrapper ul {
 		padding-left: 0;
 	}
