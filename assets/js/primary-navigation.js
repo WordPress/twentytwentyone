@@ -10,13 +10,17 @@
  * @param {Element} el - The element.
  * @since 1.0.0
  */
-function twentytwentyoneToggleAriaExpanded( el ) {
+function twentytwentyoneToggleAriaExpanded( el, withListeners ) {
 	if ( 'true' !== el.getAttribute( 'aria-expanded' ) ) {
 		el.setAttribute( 'aria-expanded', 'true' );
-		document.addEventListener( 'click', twentytwentyoneCollapseMenuOnClickOutside );
+		if ( withListeners ) {
+			document.addEventListener( 'click', twentytwentyoneCollapseMenuOnClickOutside );
+		}
 	} else {
 		el.setAttribute( 'aria-expanded', 'false' );
-		document.removeEventListener( 'click', twentytwentyoneCollapseMenuOnClickOutside );
+		if ( withListeners ) {
+			document.removeEventListener( 'click', twentytwentyoneCollapseMenuOnClickOutside );
+		}
 	}
 }
 
@@ -28,23 +32,31 @@ function twentytwentyoneCollapseMenuOnClickOutside( event ) {
 	}
 }
 
-function twentytwentyoneCollapseAllOtherSubMenus( element ) {
-	var nav = element.closest( 'nav' );
-	nav.querySelectorAll( '.sub-menu-toggle' ).forEach( function( button ) {
-		if ( button !== element ) {
-			button.setAttribute( 'aria-expanded', 'false' );
-		}
-	} );
-}
-
 /**
  * Handle clicks on submenu toggles.
  *
  * @param {Element} el - The element.
  */
 function twentytwentyoneExpandSubMenu( el ) {
-	twentytwentyoneCollapseAllOtherSubMenus( el );
-	twentytwentyoneToggleAriaExpanded( el );
+
+	// Close other expanded items.
+	el.closest( 'nav' ).querySelectorAll( '.sub-menu-toggle' ).forEach( function( button ) {
+		if ( button !== el ) {
+			button.setAttribute( 'aria-expanded', 'false' );
+		}
+	} );
+
+	// Toggle aria-expanded on the button.
+	twentytwentyoneToggleAriaExpanded( el, true );
+
+	// On tab-away collapse the menu.
+	el.parentNode.querySelectorAll( 'ul > li:last-child > a' ).forEach( function( linkEl ) {
+		linkEl.addEventListener( 'blur', function( event ) {
+			if ( ! el.parentNode.contains( event.relatedTarget ) ) {
+				el.setAttribute( 'aria-expanded', 'false' );
+			}
+		} );
+	} );
 }
 
 ( function() {
