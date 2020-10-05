@@ -7,7 +7,7 @@ Author URI: https://wordpress.org/
 Description:
 Requires at least: 5.3
 Tested up to: 5.5
-Requires PHP: 7.2
+Requires PHP: 5.6
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -3228,6 +3228,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: calc(2.0 * var(--global--spacing-vertical));
 }
 
 /**

@@ -215,6 +215,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 		max-width: 100%;
 		margin-left: auto;
 		margin-right: auto;
+		margin-top: calc(2.0 * var(--global--spacing-vertical)); // 100px
 	}
 }
 
