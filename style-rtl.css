@@ -3925,7 +3925,7 @@ h1.page-title {
 	color: var(--global--color-primary);
 }
 
-@media only screen and (min-width: 482px) {
+@media only screen and (min-width: 592px) {
 	.navigation .nav-links {
 		display: flex;
 		justify-content: center;
@@ -4052,6 +4052,19 @@ h1.page-title {
 .pagination .nav-links > *.prev,
 .comments-pagination .nav-links > *.prev {
 	margin-left: auto;
+}
+
+@media only screen and (max-width: 591px) {
+	.pagination .nav-links,
+	.comments-pagination .nav-links {
+		text-align: center;
+	}
+	.pagination .nav-links .next,
+	.pagination .nav-links .prev,
+	.comments-pagination .nav-links .next,
+	.comments-pagination .nav-links .prev {
+		display: block;
+	}
 }
 
 .comments-pagination {
