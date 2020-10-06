@@ -10,6 +10,8 @@
 		"window": "readonly",
 		"navigator": "readonly",
 		"wp": "readonly",
-		"_": "readonly"
+		"_": "readonly",
+		"NodeList": "readonly",
+		"Element": "readonly"
 	}
 }
