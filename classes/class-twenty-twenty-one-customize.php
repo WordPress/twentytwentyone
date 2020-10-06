@@ -44,47 +44,9 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 				)
 			);
 
-			$wp_customize->selective_refresh->add_partial(
-				'custom_logo',
-				array(
-					'selector'        => '.custom-logo',
-					'render_callback' => 'twenty_twenty_one_customize_partial_site_logo',
-				)
-			);
-
-			$wp_customize->selective_refresh->add_partial(
-				'retina_logo',
-				array(
-					'selector'        => '.custom-logo',
-					'render_callback' => 'twenty_twenty_one_customize_partial_site_logo',
-				)
-			);
-
 			/**
 			 * Site Identity
 			 */
-
-			/* 2X Header Logo ---------------- */
-			$wp_customize->add_setting(
-				'retina_logo',
-				array(
-					'capability'        => 'edit_theme_options',
-					'sanitize_callback' => array( __CLASS__, 'sanitize_checkbox' ),
-					'transport'         => 'postMessage',
-				)
-			);
-
-			$wp_customize->add_control(
-				'retina_logo',
-				array(
-					'type'            => 'checkbox',
-					'section'         => 'title_tagline',
-					'priority'        => 9,
-					'label'           => __( 'Retina logo', 'twentytwentyone' ),
-					'description'     => __( 'Scales the logo to half its uploaded size, making it sharp on high-res screens.', 'twentytwentyone' ),
-					'active_callback' => array( __CLASS__, 'has_custom_logo' ),
-				)
-			);
 
 			$wp_customize->add_setting(
 				'display_title_and_tagline',
@@ -147,18 +109,6 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 			return ( ( isset( $checked ) && true === $checked ) ? true : false );
 		}
 
-		/**
-		 * Check if there is a custom logo to use with the retina option.
-		 *
-		 * @return bool
-		 */
-		public static function has_custom_logo() {
-			if ( get_theme_mod( 'custom_logo' ) ) {
-				return true;
-			}
-			return false;
-		}
-
 	}
 
 	// Setup the Theme Customizer settings and controls.
@@ -185,18 +135,5 @@ if ( ! function_exists( 'twenty_twenty_one_customize_partial_blogdescription' ) 
 	 */
 	function twenty_twenty_one_customize_partial_blogdescription() {
 		bloginfo( 'description' );
-	}
-}
-
-if ( ! function_exists( 'twenty_twenty_one_customize_partial_site_logo' ) ) {
-	/**
-	 * Render the site logo for the selective refresh partial.
-	 *
-	 * Doing it this way so we don't have issues with `render_callback`'s arguments.
-	 *
-	 * @return void
-	 */
-	function twenty_twenty_one_customize_partial_site_logo() {
-		the_custom_logo();
 	}
 }
