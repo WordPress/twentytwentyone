@@ -273,12 +273,12 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 				),
 				array(
 					'name'     => __( 'Purple to Red', 'twentytwentyone' ),
-					'gradient' => 'linear-gradient(160deg, ' . $yellow . ', ' . $red . ')',
+					'gradient' => 'linear-gradient(160deg, ' . $purple . ', ' . $red . ')',
 					'slug'     => 'purple-to-red',
 				),
 				array(
 					'name'     => __( 'Red to Purple', 'twentytwentyone' ),
-					'gradient' => 'linear-gradient(160deg, ' . $red . ', ' . $yellow . ')',
+					'gradient' => 'linear-gradient(160deg, ' . $red . ', ' . $purple . ')',
 					'slug'     => 'red-to-purple',
 				),
 			)
