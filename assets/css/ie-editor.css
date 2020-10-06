@@ -605,7 +605,7 @@ div[data-type="core/button"] {
 
 .wp-block-columns .wp-block,
 .wp-block-columns .wp-block-column {
-	max-width: none;
+	max-width: inherit;
 }
 
 .wp-block-file .wp-block-file__textlink {

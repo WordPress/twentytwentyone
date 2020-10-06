@@ -1,6 +1,5 @@
 .wp-block-columns .wp-block,
 .wp-block-columns .wp-block-column {
-	// Allow the width of a block that lives inside the columns block to be
-	// determined by the parent columns block
-	max-width: none;
+	// Allow Gutenberg to set the width of a block that lives inside the columns block.
+	max-width: inherit;
 }
