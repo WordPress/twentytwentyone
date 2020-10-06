@@ -2893,7 +2893,6 @@ table.is-style-stripes tbody tr:nth-child(odd),
 .site-branding {
 	color: var(--branding--color-text);
 	margin-left: 140px;
-	/* TODO: Make room for the menu button if the title is very long. Adjust depending on menu icon.*/
 }
 
 @media only screen and (min-width: 482px) {
@@ -2901,7 +2900,6 @@ table.is-style-stripes tbody tr:nth-child(odd),
 		margin-left: initial;
 		margin-bottom: var(--global--spacing-vertical);
 		margin-top: 4px;
-		/* TODO: Make room for the menu if the title is very long.*/
 	}
 }
 

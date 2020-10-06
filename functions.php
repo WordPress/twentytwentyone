@@ -238,20 +238,6 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 			)
 		);
 
-		/**
-		 * TODO: No gradients are currently included.
-		add_theme_support(
-			'editor-gradient-presets',
-			array(
-				array(
-					'name'     => __( '', 'twentytwentyone' ),
-					'gradient' => '',
-					'slug'     => '',
-				),
-			)
-		);
-		*/
-
 		/*
 		* Adds starter content to highlight the theme on fresh sites.
 		* This is done conditionally to avoid loading the starter content on every
