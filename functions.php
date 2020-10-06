@@ -248,19 +248,44 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 			'editor-gradient-presets',
 			array(
 				array(
-					'name'     => __( 'Diagonal', 'twentytwentyone' ),
-					'gradient' => 'linear-gradient(to bottom right, ' . $green . ' 49.9%, ' . $blue . ' 50%)',
-					'slug'     => 'hard-diagonal',
+					'name'     => __( 'Purple to Yellow', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(160deg, ' . $purple . ', ' . $yellow . ')',
+					'slug'     => 'purple-to-yellow',
 				),
 				array(
-					'name'     => __( 'Horizontal', 'twentytwentyone' ),
-					'gradient' => 'linear-gradient(to bottom, ' . $green . ' 50%, ' . $red . ' 50%)',
-					'slug'     => 'hard-horizontal',
+					'name'     => __( 'Yellow to Purple', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(160deg, ' . $yellow . ', ' . $purple . ')',
+					'slug'     => 'yellow-to-purple',
 				),
 				array(
-					'name'     => __( 'Diagonal gradient', 'twentytwentyone' ),
-					'gradient' => 'linear-gradient(to bottom right, ' . $green . ', ' . $yellow . ')',
-					'slug'     => 'diagonal',
+					'name'     => __( 'Green to Yellow', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(160deg, ' . $green . ', ' . $yellow . ')',
+					'slug'     => 'green-to-yellow',
+				),
+				array(
+					'name'     => __( 'Yellow to Green', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(160deg, ' . $yellow . ', ' . $green . ')',
+					'slug'     => 'yellow-to-green',
+				),
+				array(
+					'name'     => __( 'Red to Yellow', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(160deg, ' . $red . ', ' . $yellow . ')',
+					'slug'     => 'red-to-yellow',
+				),
+				array(
+					'name'     => __( 'Yellow to Red', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(160deg, ' . $yellow . ', ' . $red . ')',
+					'slug'     => 'yellow-to-red',
+				),
+				array(
+					'name'     => __( 'Purple to Red', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(160deg, ' . $yellow . ', ' . $red . ')',
+					'slug'     => 'purple-to-red',
+				),
+				array(
+					'name'     => __( 'Red to Purple', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(160deg, ' . $red . ', ' . $yellow . ')',
+					'slug'     => 'red-to-purple',
 				),
 			)
 		);
