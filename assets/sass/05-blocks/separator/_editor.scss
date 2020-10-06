@@ -9,7 +9,7 @@ hr {
 	}
 
 	&.is-style-wide {
-		border-bottom-width: var(--separator--height);
+		border-bottom-width: calc(3 * var(--separator--height));
 	}
 
 	&.is-style-dots {

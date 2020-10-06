@@ -1652,11 +1652,11 @@ hr[style*="text-align: right"] {
 }
 
 .wp-block-separator.is-style-wide {
-	border-bottom-width: 1px;
+	border-bottom-width: 3px;
 }
 
 hr.is-style-wide {
-	border-bottom-width: 1px;
+	border-bottom-width: 3px;
 }
 
 .wp-block-separator.is-style-dots,

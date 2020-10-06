@@ -1226,7 +1226,7 @@ hr[style*="text-align: right"] {
 
 .wp-block-separator.is-style-wide,
 hr.is-style-wide {
-	border-bottom-width: var(--separator--height);
+	border-bottom-width: calc(3 * var(--separator--height));
 }
 
 .wp-block-separator.is-style-dots,
