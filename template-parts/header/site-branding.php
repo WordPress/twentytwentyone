@@ -17,7 +17,7 @@
 	$blog_info = get_bloginfo( 'name' );
 
 	if ( ! empty( $blog_info ) && get_theme_mod( 'display_title_and_tagline', true ) === true ) {
-		if ( is_front_page() ) {
+		if ( is_home() ) {
 			if ( is_paged() ) {
 				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -27,12 +27,16 @@
 				<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 				<?php
 			}
+		} elseif ( is_front_page() ) {
+			?>
+			<p class="site-title"><?php bloginfo( 'name' ); ?></p>
+			<?php
 		} else {
 			?>
 			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php
 		}
-	} elseif ( ! empty( $blog_info ) && is_front_page() ) {
+	} elseif ( ! empty( $blog_info ) && is_home() ) {
 		?>
 		<h1 class="screen-reader-text"><?php bloginfo( 'name' ); ?></h1>
 		<?php
