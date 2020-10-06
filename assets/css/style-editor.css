@@ -17,6 +17,7 @@
 	--global--font-size-lg: 1.5rem;
 	--global--font-size-xl: 2.25rem;
 	--global--font-size-xxl: 4rem;
+	--global--font-size-xxxl: 5rem;
 	--global--font-size-page-title: var(--global--font-size-xxl);
 	--global--letter-spacing: normal;
 	/* Line Height */
@@ -214,6 +215,7 @@
 	:root {
 		--global--font-size-xl: 2.5rem;
 		--global--font-size-xxl: 6rem;
+		--global--font-size-xxxl: 9rem;
 		--heading--font-size-h3: 2rem;
 		--heading--font-size-h2: 3rem;
 	}

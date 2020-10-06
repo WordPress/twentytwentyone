@@ -154,15 +154,21 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 					'slug'      => 'large',
 				),
 				array(
-					'name'      => __( 'Huge', 'twentytwentyone' ),
+					'name'      => __( 'Extra Large', 'twentytwentyone' ),
 					'shortName' => __( 'XL', 'twentytwentyone' ),
 					'size'      => 40,
+					'slug'      => 'extra-large',
+				),
+				array(
+					'name'      => __( 'Huge', 'twentytwentyone' ),
+					'shortName' => __( 'XXL', 'twentytwentyone' ),
+					'size'      => 96,
 					'slug'      => 'huge',
 				),
 				array(
 					'name'      => __( 'Gigantic', 'twentytwentyone' ),
-					'shortName' => __( 'XXL', 'twentytwentyone' ),
-					'size'      => 96,
+					'shortName' => __( 'XXXL', 'twentytwentyone' ),
+					'size'      => 144,
 					'slug'      => 'gigantic',
 				),
 			)
