@@ -3247,6 +3247,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	max-width: 100%;
 	margin-right: auto;
 	margin-left: auto;
+	margin-top: calc(2 * var(--global--spacing-vertical));
 }
 
 /**
