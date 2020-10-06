@@ -39,6 +39,13 @@ function twentytwentyoneCollapseMenuOnClickOutside( event ) {
  */
 function twentytwentyoneExpandSubMenu( el ) {
 
+	// Close submenu that was opened from a hover action.
+	// We'll return early in this case to avoid changing the aria-expanded attribute.
+	if ( el.parentNode.classList.contains( 'hover' ) ) {
+		el.parentNode.classList.remove( 'hover' );
+		return;
+	}
+
 	// Close other expanded items.
 	el.closest( 'nav' ).querySelectorAll( '.sub-menu-toggle' ).forEach( function( button ) {
 		if ( button !== el ) {
