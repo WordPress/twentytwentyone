@@ -4165,7 +4165,6 @@ table.is-style-stripes tbody tr:nth-child(odd) {
 .site-branding {
 	color: #28303d;
 	margin-right: 140px;
-	/* TODO: Make room for the menu button if the title is very long. Adjust depending on menu icon.*/
 }
 
 @media only screen and (min-width: 482px) {
@@ -4173,7 +4172,6 @@ table.is-style-stripes tbody tr:nth-child(odd) {
 		margin-right: initial;
 		margin-bottom: 30px;
 		margin-top: 4px;
-		/* TODO: Make room for the menu if the title is very long.*/
 	}
 }
 
