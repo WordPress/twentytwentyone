@@ -97,7 +97,11 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
-		padding: calc(3.5 * var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
+		// Height of the menu-button-container using font size, line height, and total padding, plus 5px so the focus of the first item is visible.
+		padding-top: calc(var(--button--line-height) * var(--primary-nav--font-size-button) + 42px + 5px);
+		padding-left: var(--global--spacing-unit);
+		padding-right: var(--global--spacing-unit);
+		padding-bottom: var(--global--spacing-horizontal);
 		background-color: var(--global--color-background);
 		overflow-x: scroll;
 		overflow-y: auto;
@@ -131,9 +135,7 @@
 	}
 
 	// Adjust positions when logged-in
-	.admin-bar &,
-	.admin-bar & > .primary-menu-container,
-	.admin-bar.lock-scrolling & .button {
+	.admin-bar & {
 		top: 46px;
 	}
 
