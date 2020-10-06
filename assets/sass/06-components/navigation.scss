@@ -107,11 +107,10 @@
 		@include media(mobile-only) {
 			height: 100vh;
 			z-index: 499;
-		}
 
-		.admin-bar & {
-			height: calc(100vh - 46px);
-			padding-top: calc(3.5 * var(--global--spacing-unit) - 46px);
+			.admin-bar & {
+				height: calc(100vh - 46px);
+			}
 		}
 	}
 
