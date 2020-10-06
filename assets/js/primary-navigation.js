@@ -131,7 +131,9 @@ function twentytwentyoneExpandSubMenu( el ) {
 
 		document.getElementById( 'site-navigation' ).querySelectorAll( '.menu-wrapper > .menu-item-has-children' ).forEach( function( li ) {
 			li.addEventListener( 'mouseenter', function() {
-				this.classList.add( 'hover' );
+				if ( 'false' === this.querySelector( '.sub-menu-toggle' ).getAttribute( 'aria-expanded' ) ) {
+					this.classList.add( 'hover' );
+				}
 			} );
 			li.addEventListener( 'mouseleave', function() {
 				this.classList.remove( 'hover' );
