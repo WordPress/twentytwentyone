@@ -5,7 +5,7 @@
 .site .button,
 input[type="submit"],
 input[type="reset"],
-.wp-block-button__link {
+.wp-block-button .wp-block-button__link {
 	// Extend button style
 	@extend %button-style;
 }
@@ -14,30 +14,6 @@ input[type="reset"],
  * Block Options
  */
 .wp-block-button {
-
-	font-family: var(--button--font-family);
-	font-size: var(--button--font-size);
-	font-weight: var(--button--font-weight);
-	line-height: var(--button--line-height);
-
-	// Override the link style in the reset file.
-	a.wp-block-button__link {
-		border-bottom: var(--button--border-width) solid var(--button--color-background);
-	}
-
-	a.wp-block-button__link:focus {
-		outline-offset: -4px;
-		outline: 2px dotted var(--button--color-text);
-		color: var(--button--color-text);
-	}
-
-	.wp-block-button__link:visited {
-		color: var(--button--color-text);
-
-		&:hover {
-			color: var(--button--color-text-hover);
-		}
-	}
 
 	// Outline Style.
 	&.is-style-outline {

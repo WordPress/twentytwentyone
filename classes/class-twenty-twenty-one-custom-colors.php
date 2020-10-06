@@ -105,7 +105,7 @@ class Twenty_Twenty_One_Custom_Colors {
 			array(),
 			(string) filemtime( get_theme_file_path( 'assets/css/custom-color-overrides.css' ) )
 		);
-		if ( 'D1E4DD' !== get_theme_mod( 'background_color', 'D1E4DD' ) ) {
+		if ( 'd1e4dd' !== strtolower( get_theme_mod( 'background_color', 'D1E4DD' ) ) ) {
 			wp_add_inline_style( 'twenty-twenty-one-custom-color-overrides', $this->generate_custom_color_variables( 'editor' ) );
 		}
 	}
