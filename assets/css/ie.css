@@ -2202,12 +2202,6 @@ a:hover {
 	color: #28303d;
 }
 
-.wp-block-columns {
-	/**
-	 * Block Options
-	 */
-}
-
 .wp-block-columns .wp-block-column > * {
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -2247,11 +2241,6 @@ a:hover {
 		/* Resetting margins to match _block-container.scss */
 		margin-bottom: 0;
 	}
-}
-
-.wp-block-columns.alignfull {
-	padding-left: 20px;
-	padding-right: 20px;
 }
 
 .wp-block-cover {
