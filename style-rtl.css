@@ -1463,7 +1463,7 @@ figcaption,
 /* Over here, place any elements that do not need to have their own file. */
 b,
 strong {
-	font-weight: bold;
+	font-weight: 600;
 }
 
 dfn,
