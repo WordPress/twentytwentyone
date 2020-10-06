@@ -5467,13 +5467,18 @@ h1.page-title {
 @media only screen and (max-width: 591px) {
 	.pagination .nav-links,
 	.comments-pagination .nav-links {
-		text-align: center;
+		display: flex;
+		flex-wrap: wrap;
 	}
-	.pagination .nav-links .next,
-	.pagination .nav-links .prev,
-	.comments-pagination .nav-links .next,
-	.comments-pagination .nav-links .prev {
-		display: block;
+	.pagination .page-numbers,
+	.comments-pagination .page-numbers {
+		display: none;
+	}
+	.pagination .page-numbers.prev, .pagination .page-numbers.next,
+	.comments-pagination .page-numbers.prev,
+	.comments-pagination .page-numbers.next {
+		display: inline-block;
+		flex: 0 1 auto;
 	}
 }
 

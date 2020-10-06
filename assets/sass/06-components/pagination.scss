@@ -148,11 +148,17 @@
 	@include media(tablet-only) {
 
 		.nav-links {
-			text-align: center;
+			display: flex;
+			flex-wrap: wrap;
+		}
 
-			.next,
-			.prev {
-				display: block;
+		.page-numbers {
+			display: none;
+
+			&.prev,
+			&.next {
+				display: inline-block;
+				flex: 0 1 auto;
 			}
 		}
 	}
