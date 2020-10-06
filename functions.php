@@ -84,19 +84,13 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 		$logo_width  = 300;
 		$logo_height = 100;
 
-		// If the retina setting is active, double the recommended width and height.
-		if ( get_theme_mod( 'retina_logo', false ) ) {
-			$logo_width  = floor( $logo_width * 2 );
-			$logo_height = floor( $logo_height * 2 );
-		}
-
 		add_theme_support(
 			'custom-logo',
 			array(
 				'height'               => $logo_height,
 				'width'                => $logo_width,
-				'flex-width'           => false,
-				'flex-height'          => false,
+				'flex-width'           => true,
+				'flex-height'          => true,
 				'unlink-homepage-logo' => true,
 			)
 		);
@@ -382,7 +376,20 @@ function twenty_twenty_one_scripts() {
 
 	// Main navigation scripts.
 	if ( has_nav_menu( 'primary' ) ) {
-		wp_enqueue_script( 'twenty-twenty-one-primary-navigation-script', get_template_directory_uri() . '/assets/js/primary-navigation.js', array(), wp_get_theme()->get( 'Version' ), true );
+		wp_register_script(
+			'twenty-twenty-one-ie11-polyfills',
+			get_template_directory_uri() . '/assets/js/polyfills.js',
+			array(),
+			wp_get_theme()->get( 'Version' ),
+			true
+		);
+		wp_enqueue_script(
+			'twenty-twenty-one-primary-navigation-script',
+			get_template_directory_uri() . '/assets/js/primary-navigation.js',
+			array( 'twenty-twenty-one-ie11-polyfills' ),
+			wp_get_theme()->get( 'Version' ),
+			true
+		);
 	}
 }
 add_action( 'wp_enqueue_scripts', 'twenty_twenty_one_scripts' );

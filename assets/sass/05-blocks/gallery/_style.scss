@@ -15,10 +15,4 @@
 			font: var(--global--font-size-sm);
 		}
 	}
-
-	// Apply max-width to floated items that have no intrinsic width.
-	&.alignleft,
-	&.alignright {
-		max-width: 50%;
-	}
 }
