@@ -3909,8 +3909,10 @@ h1.page-title {
 	margin: calc(2 * var(--primary-nav--padding)) 0;
 }
 
-.primary-navigation .sub-menu .menu-item:last-child {
-	margin-bottom: 0;
+@media only screen and (max-width: 481px) {
+	.primary-navigation .sub-menu .menu-item:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .primary-navigation .sub-menu .menu-item > a {
