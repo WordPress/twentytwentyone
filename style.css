@@ -2591,7 +2591,7 @@ p.has-text-color a {
 	color: var(--form--color-text);
 	line-height: var(--global--line-height-body);
 	max-width: inherit;
-	margin-right: 0;
+	margin-right: calc(-1 * var(--button--border-width));
 	padding: var(--form--spacing-unit);
 }
 
@@ -2602,9 +2602,13 @@ p.has-text-color a {
 
 .wp-block-search button.wp-block-search__button {
 	margin-left: 0;
-	border-left: 0;
 	background-color: transparent;
-	color: var(--button--color-background);
+	color: var(--button--color-text-hover);
+}
+
+.wp-block-search button.wp-block-search__button:hover {
+	background-color: var(--button--color-background);
+	color: var(--button--color-text);
 }
 
 .wp-block-search__button {
@@ -4149,14 +4153,18 @@ h1.page-title {
 }
 
 .widget_search > .search-form .search-field {
-	margin-right: 0;
+	margin-right: calc(-1 * var(--button--border-width));
 }
 
 .widget_search > .search-form .search-submit {
 	margin-left: 0;
-	border-left: 0;
 	background-color: transparent;
-	color: var(--button--color-background);
+	color: var(--button--color-text-hover);
+}
+
+.widget_search > .search-form .search-submit:hover {
+	background-color: var(--button--color-background);
+	color: var(--button--color-text);
 }
 
 /* Category 07 is for any utility classes that are not assigned to a specific component. */
