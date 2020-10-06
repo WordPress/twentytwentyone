@@ -9,6 +9,7 @@
 	}
 
 	.wp-block-social-links {
+
 		&.alignright {
 			margin-top: var(--global--spacing-vertical);
 			justify-content: flex-end;
@@ -18,7 +19,7 @@
 			margin-top: var(--global--spacing-vertical);
 		}
 	}
-	
+
 	&:after {
 		content: "";
 		display: table;
