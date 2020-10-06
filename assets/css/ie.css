@@ -2551,6 +2551,75 @@ a:hover {
 	font: 1.125rem;
 }
 
+.wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-grid {
+	width: 100%;
+	display: grid;
+	grid-auto-rows: max-content;
+	grid-auto-flow: column;
+	grid-row-gap: 30px;
+	grid-template-columns: repeat(7, 1fr);
+}
+
+.wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item {
+	margin: 0;
+	width: 100%;
+	justify-self: start;
+	grid-column-start: 1;
+	grid-column-end: 4;
+}
+
+.wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item figure {
+	align-items: flex-start;
+}
+
+.wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item figcaption {
+	display: none;
+}
+
+.wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:first-child {
+	margin-bottom: 50%;
+}
+
+.wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:first-child:nth-last-child(2) {
+	margin-bottom: 0;
+	grid-column-end: span 5;
+}
+
+.wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:nth-child(4n+2) {
+	grid-column-start: 5;
+	grid-column-end: 8;
+}
+
+.wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:nth-child(4n+2):nth-child(2) {
+	margin-top: 50%;
+}
+
+.wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:nth-child(4n+2):last-child {
+	grid-column-start: 3;
+	grid-column-end: 8;
+	margin-top: 0;
+	transform: translateY(-50%);
+}
+
+.wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:nth-child(4n+3) {
+	grid-column-end: span 5;
+	transform: translateY(-25%);
+}
+
+.wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:nth-child(4n+4) {
+	margin-top: -25%;
+	grid-column-start: 5;
+	grid-column-end: 8;
+}
+
+.wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:nth-child(4n+4):not(:last-of-type) {
+	margin-bottom: 100%;
+}
+
+.wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:nth-child(4n+5) {
+	margin-top: 100%;
+}
+
 .wp-block-group .wp-block-group__inner-container {
 	margin-left: auto;
 	margin-right: auto;

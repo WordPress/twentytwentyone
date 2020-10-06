@@ -657,7 +657,6 @@ a:hover {
 }
 
 .wp-block-gallery.is-style-twentytwentyone-overlapping-gallery .blocks-gallery-item:nth-child(4n+2):last-child {
-	margin-top: 25%;
 	grid-column-start: 3;
 	grid-column-end: 8;
 	margin-top: 0;
