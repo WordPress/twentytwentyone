@@ -5057,7 +5057,10 @@ h1.page-title {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	padding: 70px 20px 25px;
+	padding-top: calc(2rem + 47px);
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 25px;
 	background-color: #d1e4dd;
 	overflow-x: scroll;
 	overflow-y: auto;
@@ -5070,11 +5073,9 @@ h1.page-title {
 		height: 100vh;
 		z-index: 499;
 	}
-}
-
-.admin-bar .primary-navigation > .primary-menu-container {
-	height: calc(100vh - 46px);
-	padding-top: 24px;
+	.admin-bar .primary-navigation > .primary-menu-container {
+		height: calc(100vh - 46px);
+	}
 }
 
 @media only screen and (max-width: 481px) {
@@ -5090,9 +5091,7 @@ h1.page-title {
 	transform: translateY(0);
 }
 
-.admin-bar .primary-navigation,
-.admin-bar .primary-navigation > .primary-menu-container,
-.admin-bar.lock-scrolling .primary-navigation .button {
+.admin-bar .primary-navigation {
 	top: 46px;
 }
 
@@ -5341,6 +5340,7 @@ h1.page-title {
 	.lock-scrolling .site {
 		position: fixed;
 		max-width: 100%;
+		width: 100%;
 	}
 }
 
