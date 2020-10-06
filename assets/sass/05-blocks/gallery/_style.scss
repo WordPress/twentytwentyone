@@ -16,12 +16,6 @@
 		}
 	}
 
-	// Apply max-width to floated items that have no intrinsic width.
-	&.alignleft,
-	&.alignright {
-		max-width: 50%;
-	}
-
 	// Block Styles
 	&.is-style-twentytwentyone-overlapping-gallery {
 

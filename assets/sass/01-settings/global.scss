@@ -210,12 +210,12 @@ $baseline-unit: 10px;
 
 	/* Block: Pull quote */
 	--pullquote--font-family: var(--global--font-primary);
-	--pullquote--font-size: var(--heading--font-size-h2);
-	--pullquote--font-style: italic;
+	--pullquote--font-size: var(--heading--font-size-h3);
+	--pullquote--font-style: normal;
 	--pullquote--letter-spacing: var(--heading--letter-spacing-h4);
 	--pullquote--line-height: var(--global--line-height-heading);
-	--pullquote--border-width: 0;
-	--pullquote--border-color: transparent;
+	--pullquote--border-width: 3px;
+	--pullquote--border-color: var(--global--color-primary);
 	--pullquote--color-foreground: var(--global--color-primary);
 	--pullquote--color-background: var(--global--color-background);
 
@@ -236,6 +236,8 @@ $baseline-unit: 10px;
 	/* Block: Table */
 	--table--stripes-border-color: var(--global--color-light-gray);
 	--table--stripes-background-color: var(--global--color-light-gray);
+	--table--has-background-border-color: var(--global--color-dark-gray);
+	--table--has-background-text-color: var(--global--color-dark-gray);
 }
 
 @media only screen and (min-width: 652px) { // Not using the mixin because it's compiled after this file
