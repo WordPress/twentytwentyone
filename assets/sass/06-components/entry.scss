@@ -145,10 +145,6 @@ h1.entry-title {
 			color: var(--entry-meta--color-hover);
 		}
 
-		&:hover {
-			border-color: transparent;
-		}
-
 		&:active {
 			color: var(--entry-meta--color-link);
 		}
@@ -177,6 +173,15 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	column-gap: calc(2 * var(--global--spacing-horizontal));
+
+	.posted-by {
+		grid-row: 1 / span 2;
+
+		.posted-on,
+		.byline {
+			display: block;
+		}
+	}
 }
 
 .single .site-main > article > .entry-footer > span {

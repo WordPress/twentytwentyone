@@ -4489,10 +4489,6 @@ h1.entry-title {
 	color: #28303d;
 }
 
-.entry-footer a:hover {
-	border-color: transparent;
-}
-
 .entry-footer a:active {
 	color: currentColor;
 }
@@ -4518,6 +4514,15 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	column-gap: 50px;
+}
+
+.single .site-main > article > .entry-footer .posted-by {
+	grid-row: 1 / span 2;
+}
+
+.single .site-main > article > .entry-footer .posted-by .posted-on,
+.single .site-main > article > .entry-footer .posted-by .byline {
+	display: block;
 }
 
 .single .site-main > article > .entry-footer > span {
