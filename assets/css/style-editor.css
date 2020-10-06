@@ -1603,3 +1603,35 @@ a {
 .has-white-background-color[class] {
 	background-color: var(--global--color-white);
 }
+
+.has-purple-to-yellow-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-purple), var(--global--color-yellow));
+}
+
+.has-yellow-to-purple-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-yellow), var(--global--color-purple));
+}
+
+.has-green-to-yellow-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-green), var(--global--color-yellow));
+}
+
+.has-yellow-to-green-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-yellow), var(--global--color-green));
+}
+
+.has-red-to-yellow-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-red), var(--global--color-yellow));
+}
+
+.has-yellow-to-red-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-yellow), var(--global--color-red));
+}
+
+.has-purple-to-red-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-purple), var(--global--color-red));
+}
+
+.has-red-to-purple-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-red), var(--global--color-purple));
+}

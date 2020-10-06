@@ -2199,3 +2199,35 @@ a {
 .has-white-background-color[class] {
 	background-color: #fff;
 }
+
+.has-purple-to-yellow-gradient-background {
+	background: linear-gradient(160deg, #d1d1e4, #eeeadd);
+}
+
+.has-yellow-to-purple-gradient-background {
+	background: linear-gradient(160deg, #eeeadd, #d1d1e4);
+}
+
+.has-green-to-yellow-gradient-background {
+	background: linear-gradient(160deg, #d1e4dd, #eeeadd);
+}
+
+.has-yellow-to-green-gradient-background {
+	background: linear-gradient(160deg, #eeeadd, #d1e4dd);
+}
+
+.has-red-to-yellow-gradient-background {
+	background: linear-gradient(160deg, #e4d1d1, #eeeadd);
+}
+
+.has-yellow-to-red-gradient-background {
+	background: linear-gradient(160deg, #eeeadd, #e4d1d1);
+}
+
+.has-purple-to-red-gradient-background {
+	background: linear-gradient(160deg, #d1d1e4, #e4d1d1);
+}
+
+.has-red-to-purple-gradient-background {
+	background: linear-gradient(160deg, #e4d1d1, #d1d1e4);
+}
