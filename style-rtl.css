@@ -1566,12 +1566,6 @@ a:hover {
 	color: var(--global--color-primary);
 }
 
-.wp-block-columns {
-	/**
-	 * Block Options
-	 */
-}
-
 .wp-block-columns .wp-block-column > * {
 	margin-top: calc(0.66 * var(--global--spacing-vertical));
 	margin-bottom: calc(0.66 * var(--global--spacing-vertical));
@@ -1611,11 +1605,6 @@ a:hover {
 		/* Resetting margins to match _block-container.scss */
 		margin-bottom: 0;
 	}
-}
-
-.wp-block-columns.alignfull {
-	padding-right: var(--global--spacing-unit);
-	padding-left: var(--global--spacing-unit);
 }
 
 .wp-block-cover,
