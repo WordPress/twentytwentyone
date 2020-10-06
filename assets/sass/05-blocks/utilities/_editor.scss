@@ -179,3 +179,15 @@
 	margin: 0;
 	margin-left: var(--global--spacing-horizontal);
 }
+
+@media only screen and (min-width: 482px) {
+	.wp-block[data-align="left"] > * {
+		max-width: 290px;
+		margin-right: var(--global--spacing-horizontal);
+	}
+
+	.wp-block[data-align="right"] > * {
+		max-width: 290px;
+		margin-left: var(--global--spacing-horizontal);
+	}
+}
