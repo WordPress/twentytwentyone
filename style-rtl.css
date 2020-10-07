@@ -789,7 +789,7 @@ template {
 /**
  * Child Block Responsive Query Variables
  */
-*[class^='wp-block'] *[class^='wp-block'],
+*[class^="wp-block"] *[class^="wp-block"],
 .wp-block .wp-block {
 	--responsive--aligndefault-width: calc(100vw - var(--responsive--spacing-horizontal));
 	--responsive--alignwide-width: calc(100vw - var(--responsive--spacing-horizontal));
@@ -797,7 +797,7 @@ template {
 }
 
 @media only screen and (min-width: 482px) {
-	*[class^='wp-block'] *[class^='wp-block'],
+	*[class^="wp-block"] *[class^="wp-block"],
 	.wp-block .wp-block {
 		--responsive--aligndefault-width: min(calc(100vw - 4 * var(--global--spacing-horizontal)), 610px);
 		--responsive--alignwide-width: calc(100vw - 4 * var(--global--spacing-horizontal));
@@ -807,7 +807,7 @@ template {
 }
 
 @media only screen and (min-width: 822px) {
-	*[class^='wp-block'] *[class^='wp-block'],
+	*[class^="wp-block"] *[class^="wp-block"],
 	.wp-block .wp-block {
 		--responsive--aligndefault-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), 610px);
 		--responsive--alignwide-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), 1240px);
