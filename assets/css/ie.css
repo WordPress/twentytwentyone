@@ -5598,6 +5598,12 @@ h1.page-title {
 	margin-top: 30px;
 }
 
+.widget-area:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
 .widget-title {
 	font-size: 1.125rem;
 	font-weight: 700;

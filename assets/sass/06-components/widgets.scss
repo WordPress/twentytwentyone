@@ -19,6 +19,12 @@
 			margin-top: var(--global--spacing-vertical);
 		}
 	}
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 }
 
 .widget-title {

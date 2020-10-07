@@ -4146,6 +4146,12 @@ h1.page-title {
 	margin-top: var(--global--spacing-vertical);
 }
 
+.widget-area:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
 .widget-title {
 	font-size: var(--global--font-size-sm);
 	font-weight: 700;
