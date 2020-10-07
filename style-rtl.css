@@ -1614,6 +1614,13 @@ a:hover {
 	}
 }
 
+@media only screen and (min-width: 652px) {
+	.wp-block-columns.is-style-twentytwentyone-columns-overlapping .wp-block-column:nth-child(2n) {
+		margin-right: calc(-1 * var(--global--spacing-horizontal));
+		margin-top: var(--global--spacing-horizontal);
+	}
+}
+
 .wp-block-cover,
 .wp-block-cover-image {
 	background-color: var(--cover--color-foreground);

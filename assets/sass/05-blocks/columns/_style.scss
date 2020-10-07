@@ -38,4 +38,15 @@
 			margin-bottom: 0;
 		}
 	}
+
+	&.is-style-twentytwentyone-columns-overlapping {
+
+		@include media(laptop) {
+
+			.wp-block-column:nth-child(2n) {
+				margin-left: calc(-1 * var(--global--spacing-horizontal));
+				margin-top: var(--global--spacing-horizontal);
+			}
+		}
+	}
 }
