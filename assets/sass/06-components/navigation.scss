@@ -162,7 +162,7 @@
 		}
 
 		// Hide sub-sub-menus
-		> .primary-menu-container > ul > li > ul {
+		> .primary-menu-container ul > li:not(.hover) .sub-menu-toggle[aria-expanded="false"] ~ ul {
 			display: none;
 		}
 
@@ -200,33 +200,57 @@
 			margin: var(--primary-nav--padding) 0;
 			position: relative;
 			width: 100%;
-			z-index: 1;
-
-			&:hover,
-			&:focus-within {
-				cursor: pointer;
-				z-index: 99999;
-			}
 
 			@include media(mobile) {
-				display: inherit;
 				margin: 0;
 				width: inherit;
-
-				/* Submenu display in the responsive menu */
-				&:hover > ul,
-				&:focus-within > ul,
-				ul:hover,
-				ul:focus {
-					visibility: visible;
-					opacity: 1;
-					display: block;
-				}
 
 				&:last-child() {
 					margin-right: 0;
 				}
 			}
+		}
+
+		// Sub-menu buttons
+		.sub-menu-toggle {
+			display: flex;
+			height: 44px;
+			width: 44px;
+			padding: 0;
+			justify-content: center;
+			align-items: center;
+			background: transparent;
+			color: currentColor;
+			border: none;
+
+			&:focus {
+				outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
+			}
+
+			@include media(mobile-only) {
+				display: none;
+			}
+
+			// When the sub-menu is closed, display the plus icon
+			&[aria-expanded="false"] {
+				/* stylelint-disable */
+				background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z' fill='%2328303d'/></svg>") no-repeat center center;
+				/* stylelint-enable */
+			}
+
+			// When the sub-menu is open, display the minus icon
+			&[aria-expanded="true"] {
+				/* stylelint-disable */
+				background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M4 9h12v2H4V9z' fill='%2328303d'/></svg>") no-repeat center center;
+				/* stylelint-enable */
+			}
+
+		}
+
+		.hover .sub-menu-toggle {
+			/* stylelint-disable */
+			background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M4 9h12v2H4V9z' fill='%2328303d'/></svg>") no-repeat center center;
+			/* stylelint-enable */
 		}
 
 		// Sub-menus Flyout
@@ -239,11 +263,10 @@
 				left: 0;
 				margin: 0;
 				min-width: max-content;
-				opacity: 0;
 				position: absolute;
-				top: calc(100% - var(--primary-nav--padding));
+				top: 100%;
 				transition: all 0.5s ease;
-				visibility: hidden;
+				z-index: 99999;
 			}
 
 			.sub-menu {
@@ -315,7 +338,7 @@
 		list-style: none;
 		margin-left: var(--primary-nav--padding);
 
-		// Sub menu items om wide screens.
+		// Sub-menu items om wide screens.
 		@include media(mobile) {
 			padding: 0 var(--primary-nav--padding);
 
@@ -328,8 +351,13 @@
 		.menu-item {
 			margin: calc(2 * var(--primary-nav--padding)) 0;
 
-			&:last-child() {
-				margin-bottom: 0;
+
+			@include media(mobile-only) {
+
+				&:last-child() {
+					margin-bottom: 0;
+				}
+
 			}
 
 			> a {

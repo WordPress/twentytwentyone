@@ -52,26 +52,11 @@
 	small {
 
 		a {
-			border-color: transparent;
-			color: currentColor;
 			font-family: var(--global--font-secondary);
 			font-size: var(--global--font-size-xs);
 			font-style: normal;
 			font-weight: normal;
 			letter-spacing: normal;
-
-			&:hover,
-			&:focus {
-				color: var(--global--color-primary-hover);
-			}
-
-			&:hover {
-				border-color: var(--global--color-secondary);
-			}
-
-			&:active {
-				color: currentColor;
-			}
 		}
 	}
 }
@@ -147,23 +132,6 @@
 			margin-left: var(--global--spacing-horizontal);
 		}
 
-		a {
-			color: currentColor;
-			border-color: transparent;
-
-			&:hover,
-			&:focus {
-				color: var(--global--color-primary-hover);
-			}
-
-			&:hover {
-				border-color: var(--global--color-secondary);
-			}
-
-			&:active {
-				color: currentColor;
-			}
-		}
 	}
 
 	@include media(mobile) {
@@ -316,15 +284,5 @@
 		&.logged-in-as {
 			display: block;
 		}
-	}
-}
-
-// Comment navigation
-.comment-navigation {
-
-	a {
-		font-family: var(--global--font-primary);
-		font-size: var(--global--font-size-md);
-		font-weight: 600;
 	}
 }

@@ -1,29 +1,7 @@
+
 .wp-block-button__link {
-
-	color: var(--button--color-text);
-	font-weight: var(--button--font-weight);
-	font-family: var(--button--font-family);
-	font-size: var(--button--font-size);
-	line-height: var(--button--line-height);
-	background-color: var(--button--color-background);
-	border-radius: var(--button--border-radius);
-	border: var(--button--border-width) solid var(--button--color-background);
-	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
-
-	&:visited {
-		color: var(--button--color-text);
-	}
-
-	&:hover {
-		color: var(--button--color-text-hover);
-		background-color: var(--button--color-background-hover);
-	}
-
-	&:focus,
-	&.has-focus {
-		outline-offset: -4px;
-		outline: 2px dotted currentColor;
-	}
+	// Extend button style
+	@extend %button-style;
 
 	// Outline Style
 	&.is-style-outline,
@@ -45,7 +23,7 @@
 
 		&:focus,
 		&.has-focus {
-			outline-offset: -6px;
+			outline-offset: -7px;
 			background: transparent;
 		}
 	}
@@ -58,14 +36,11 @@
 }
 
 .is-selected.is-style-outline .wp-block-button__link:hover {
+	background-color: transparent;
 	color: var(--button--color-background);
 }
 
 .is-style-outline .wp-block-button__link[style*="radius"],
 .wp-block-button__link[style*="radius"] {
 	outline-offset: 2px;
-}
-
-div[data-type="core/button"] {
-	display: block;
 }
