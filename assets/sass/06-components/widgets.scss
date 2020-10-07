@@ -49,3 +49,21 @@
 		margin-left: 10px;
 	}
 }
+
+.widget_search > .search-form {
+
+	.search-field {
+		margin-right: calc(-1 * var(--button--border-width));
+	}
+
+	.search-submit {
+		margin-left: 0;
+		background-color: transparent;
+		color: var(--button--color-text-hover);
+
+		&:hover {
+			background-color: var(--button--color-background);
+			color: var(--button--color-text);
+		}
+	}
+}

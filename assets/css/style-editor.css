@@ -1200,7 +1200,7 @@ p.has-background {
 	font-size: var(--form--font-size);
 	line-height: var(--form--line-height);
 	max-width: inherit;
-	margin-right: calc(.66 * var(--global--spacing-horizontal));
+	margin-right: calc(-1 * var(--button--border-width));
 	padding: var(--form--spacing-unit);
 }
 
@@ -1210,6 +1210,14 @@ p.has-background {
 
 .wp-block-search .wp-block-search__button {
 	box-shadow: none;
+	margin-left: 0;
+	background-color: transparent;
+	color: var(--button--color-text-hover);
+}
+
+.wp-block-search .wp-block-search__button:hover {
+	background-color: var(--button--color-background);
+	color: var(--button--color-text);
 }
 
 .wp-block-separator,
