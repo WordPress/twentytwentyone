@@ -10,6 +10,8 @@
 /**
  * Generate CSS.
  *
+ * @since 1.0.0
+ *
  * @param string $selector The CSS selector.
  * @param string $style The CSS style.
  * @param string $value The CSS value.
@@ -20,19 +22,22 @@
  * @return string
  */
 function twenty_twenty_one_generate_css( $selector, $style, $value, $prefix = '', $suffix = '', $echo = true ) {
-	$return = '';
 
-	/*
-	* Bail early if we have no $selector elements or properties and $value.
-	*/
+	// Bail early if we have no $selector elements or properties and $value.
 	if ( ! $value || ! $selector ) {
 		return '';
 	}
 
-	$return = sprintf( '%s { %s: %s; }', $selector, $style, $prefix . $value . $suffix );
+	$css = sprintf( '%s { %s: %s; }', $selector, $style, $prefix . $value . $suffix );
 
 	if ( $echo ) {
-		echo $return; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- We need to double check this, but for now, we want to pass PHPCS ;)
+		/**
+		 * Note to reviewers: $css contains auto-generated CSS.
+		 * It is included inside <style> tags and can only be interpreted as CSS on the browser.
+		 * Using wp_strip_all_tags() here is sufficient escaping since we just need to avoid
+		 * malicious attempts to close </style> and open a <script>.
+		 */
+		echo wp_strip_all_tags( $css ); // phpcs:ignore WordPress.Security.EscapeOutput
 	}
-	return $return;
+	return $css;
 }

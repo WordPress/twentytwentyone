@@ -13,6 +13,8 @@ if ( function_exists( 'register_block_style' ) ) {
 	/**
 	 * Register block styles.
 	 *
+	 * @since 1.0.0
+	 *
 	 * @return void
 	 */
 	function twenty_twenty_one_register_block_styles() {
@@ -56,7 +58,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			)
 		);
 
-		/* Latest Posts: Dividers */
+		// Latest Posts: Dividers.
 		register_block_style(
 			'core/latest-posts',
 			array(
@@ -65,7 +67,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			)
 		);
 
-		/* Latest Posts: Borders */
+		// Latest Posts: Borders.
 		register_block_style(
 			'core/latest-posts',
 			array(
@@ -74,7 +76,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			)
 		);
 
-		/* Social icons: Dark gray color */
+		// Social icons: Dark gray color.
 		register_block_style(
 			'core/social-links',
 			array(
