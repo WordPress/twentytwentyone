@@ -204,7 +204,7 @@
 	--quote--line-height-large: 1.5;
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
-	--separator--width: calc(6 * var(--global--spacing-horizontal));
+	--separator--width: var(--responsive--aligndefault-width);
 	/* Block: Table */
 	--table--stripes-border-color: var(--global--color-light-gray);
 	--table--stripes-background-color: var(--global--color-light-gray);
@@ -1222,6 +1222,11 @@ hr {
 hr[style*="text-align:right"],
 hr[style*="text-align: right"] {
 	border-right-color: var(--separator--border-color);
+}
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots),
+hr:not(.is-style-wide):not(.is-style-dots) {
+	max-width: var(--separator--width);
 }
 
 .wp-block-separator.is-style-wide,
