@@ -108,6 +108,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--global--font-size-lg: 1.5rem;
 	--global--font-size-xl: 2.25rem;
 	--global--font-size-xxl: 4rem;
+	--global--font-size-xxxl: 5rem;
 	--global--font-size-page-title: var(--global--font-size-xxl);
 	--global--letter-spacing: normal;
 	/* Line Height */
@@ -307,6 +308,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	:root {
 		--global--font-size-xl: 2.5rem;
 		--global--font-size-xxl: 6rem;
+		--global--font-size-xxxl: 9rem;
 		--heading--font-size-h3: 2rem;
 		--heading--font-size-h2: 3rem;
 	}
@@ -2831,15 +2833,22 @@ table.is-style-stripes tbody tr:nth-child(odd),
 
 :root .is-larger-text,
 :root .has-larger-font-size,
-:root .is-huge-text,
-:root .has-huge-font-size {
+:root .is-extra-large-text,
+:root .has-extra-large-font-size {
 	font-size: var(--global--font-size-xl);
 	line-height: var(--global--line-height-heading);
 }
 
+:root .is-huge-text,
+:root .has-huge-font-size {
+	font-size: var(--global--font-size-xxl);
+	line-height: var(--global--line-height-heading);
+	font-weight: var(--heading--font-weight-page-title);
+}
+
 :root .is-gigantic-text,
 :root .has-gigantic-font-size {
-	font-size: var(--global--font-size-xxl);
+	font-size: var(--global--font-size-xxxl);
 	line-height: var(--global--line-height-heading);
 	font-weight: var(--heading--font-weight-page-title);
 }
