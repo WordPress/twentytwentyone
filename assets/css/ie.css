@@ -5261,12 +5261,20 @@ h1.page-title {
 }
 
 @media only screen and (min-width: 482px) {
+	.primary-navigation .primary-menu-container {
+		margin-right: -13px;
+		margin-left: -13px;
+	}
 	.primary-navigation .primary-menu-container > ul > .menu-item {
 		display: flex;
 		align-items: center;
+	}
+	.primary-navigation .primary-menu-container > ul > .menu-item > a {
+		padding-left: 13px;
+		padding-right: 13px;
+	}
+	.primary-navigation .primary-menu-container > ul > .menu-item > a + .sub-menu-toggle {
 		margin-left: -13px;
-		margin-right: 13px;
-		padding: 0 13px;
 	}
 }
 

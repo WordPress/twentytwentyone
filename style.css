@@ -3860,12 +3860,20 @@ h1.page-title {
 }
 
 @media only screen and (min-width: 482px) {
+	.primary-navigation .primary-menu-container {
+		margin-right: calc(0px - var(--primary-nav--padding));
+		margin-left: calc(0px - var(--primary-nav--padding));
+	}
 	.primary-navigation .primary-menu-container > ul > .menu-item {
 		display: flex;
 		align-items: center;
-		margin-left: calc(-1 * var(--primary-nav--padding));
-		margin-right: var(--primary-nav--padding);
-		padding: 0 var(--primary-nav--padding);
+	}
+	.primary-navigation .primary-menu-container > ul > .menu-item > a {
+		padding-left: var(--primary-nav--padding);
+		padding-right: var(--primary-nav--padding);
+	}
+	.primary-navigation .primary-menu-container > ul > .menu-item > a + .sub-menu-toggle {
+		margin-left: calc(0px - var(--primary-nav--padding));
 	}
 }
 
