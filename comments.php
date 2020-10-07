@@ -20,27 +20,28 @@
 if ( post_password_required() ) {
 	return;
 }
+
+$twenty_twenty_one_comment_count = get_comments_number();
 ?>
 
 <div id="comments" class="comments-area default-max-width <?php echo get_option( 'show_avatars' ) ? 'show-avatars' : ''; ?>">
 
 	<?php
-	// You can start editing here -- including this comment!
-	if ( have_comments() ) {
+	if ( have_comments() ) :
+		;
 		?>
 		<h2 class="comments-title">
-			<?php
-			$twenty_twenty_one_comment_count = get_comments_number();
-			if ( '1' === $twenty_twenty_one_comment_count ) {
-				esc_html_e( '1 Reply', 'twentytwentyone' );
-			} else {
+			<?php if ( '1' === $twenty_twenty_one_comment_count ) : ?>
+				<?php esc_html_e( '1 Reply', 'twentytwentyone' ); ?>
+			<?php else : ?>
+				<?php
 				printf(
 					/* Translators: %s: comment count number. */
 					esc_html( _nx( '%s Reply', '%s Replies', $twenty_twenty_one_comment_count, 'comments title', 'twentytwentyone' ) ),
 					esc_html( number_format_i18n( $twenty_twenty_one_comment_count ) )
 				);
-			}
-			?>
+				?>
+			<?php endif; ?>
 		</h2><!-- .comments-title -->
 
 		<ol class="comment-list">
@@ -73,15 +74,14 @@ if ( post_password_required() ) {
 				),
 			)
 		);
+		?>
 
-		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() ) {
-			?>
+		<?php if ( ! comments_open() ) : ?>
 			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'twentytwentyone' ); ?></p>
-			<?php
-		}
-	} // Check for have_comments().
+		<?php endif; ?>
+	<?php endif; ?>
 
+	<?php
 	comment_form(
 		array(
 			'logged_in_as' => null,

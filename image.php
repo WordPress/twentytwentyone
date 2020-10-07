@@ -28,13 +28,11 @@ while ( have_posts() ) {
 				 */
 				$image_size = apply_filters( 'twenty_twenty_one_attachment_size', 'full' );
 				echo wp_get_attachment_image( get_the_ID(), $image_size );
-
-				if ( wp_get_attachment_caption() ) {
-					?>
-					<figcaption class="wp-caption-text"><?php echo wp_kses_post( wp_get_attachment_caption() ); ?></figcaption>
-					<?php
-				}
 				?>
+
+				<?php if ( wp_get_attachment_caption() ) : ?>
+					<figcaption class="wp-caption-text"><?php echo wp_kses_post( wp_get_attachment_caption() ); ?></figcaption>
+				<?php endif; ?>
 			</figure><!-- .entry-attachment -->
 
 			<?php
