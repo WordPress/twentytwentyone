@@ -1,0 +1,17 @@
+{
+    "extends": [
+		"plugin:@wordpress/eslint-plugin/custom",
+		"plugin:@wordpress/eslint-plugin/es5",
+		"plugin:@wordpress/eslint-plugin/jsdoc"
+	],
+	"globals": {
+		"document": "readonly",
+		"location": "readonly",
+		"window": "readonly",
+		"navigator": "readonly",
+		"wp": "readonly",
+		"_": "readonly",
+		"NodeList": "readonly",
+		"Element": "readonly"
+	}
+}

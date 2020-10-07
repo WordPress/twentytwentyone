@@ -351,8 +351,13 @@
 		.menu-item {
 			margin: calc(2 * var(--primary-nav--padding)) 0;
 
-			&:last-child() {
-				margin-bottom: 0;
+
+			@include media(mobile-only) {
+
+				&:last-child() {
+					margin-bottom: 0;
+				}
+
 			}
 
 			> a {

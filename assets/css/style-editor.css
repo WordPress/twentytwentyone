@@ -17,6 +17,7 @@
 	--global--font-size-lg: 1.5rem;
 	--global--font-size-xl: 2.25rem;
 	--global--font-size-xxl: 4rem;
+	--global--font-size-xxxl: 5rem;
 	--global--font-size-page-title: var(--global--font-size-xxl);
 	--global--letter-spacing: normal;
 	/* Line Height */
@@ -216,6 +217,7 @@
 	:root {
 		--global--font-size-xl: 2.5rem;
 		--global--font-size-xxl: 6rem;
+		--global--font-size-xxxl: 9rem;
 		--heading--font-size-h3: 2rem;
 		--heading--font-size-h2: 3rem;
 	}
@@ -458,6 +460,7 @@ a {
 
 a:hover {
 	text-decoration-style: dotted;
+	text-decoration-skip-ink: none;
 }
 
 .site a:focus {
@@ -592,6 +595,11 @@ a:hover {
 .wp-block-cover.is-style-twentytwentyone-border,
 .wp-block-cover-image.is-style-twentytwentyone-border {
 	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+}
+
+.wp-block-columns .wp-block,
+.wp-block-columns .wp-block-column {
+	max-width: inherit;
 }
 
 .wp-block-file .wp-block-file__textlink {
@@ -1199,7 +1207,7 @@ p.has-background {
 	font-size: var(--form--font-size);
 	line-height: var(--form--line-height);
 	max-width: inherit;
-	margin-right: calc(.66 * var(--global--spacing-horizontal));
+	margin-right: calc(-1 * var(--button--border-width));
 	padding: var(--form--spacing-unit);
 }
 
@@ -1209,6 +1217,14 @@ p.has-background {
 
 .wp-block-search .wp-block-search__button {
 	box-shadow: none;
+	margin-left: 0;
+	background-color: transparent;
+	color: var(--button--color-text-hover);
+}
+
+.wp-block-search .wp-block-search__button:hover {
+	background-color: var(--button--color-background);
+	color: var(--button--color-text);
 }
 
 .wp-block-separator,
@@ -1601,4 +1617,36 @@ a {
 
 .has-white-background-color[class] {
 	background-color: var(--global--color-white);
+}
+
+.has-purple-to-yellow-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-purple), var(--global--color-yellow));
+}
+
+.has-yellow-to-purple-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-yellow), var(--global--color-purple));
+}
+
+.has-green-to-yellow-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-green), var(--global--color-yellow));
+}
+
+.has-yellow-to-green-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-yellow), var(--global--color-green));
+}
+
+.has-red-to-yellow-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-red), var(--global--color-yellow));
+}
+
+.has-yellow-to-red-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-yellow), var(--global--color-red));
+}
+
+.has-purple-to-red-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-purple), var(--global--color-red));
+}
+
+.has-red-to-purple-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-red), var(--global--color-purple));
 }

@@ -148,15 +148,21 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 					'slug'      => 'large',
 				),
 				array(
-					'name'      => __( 'Huge', 'twentytwentyone' ),
+					'name'      => __( 'Extra Large', 'twentytwentyone' ),
 					'shortName' => __( 'XL', 'twentytwentyone' ),
 					'size'      => 40,
+					'slug'      => 'extra-large',
+				),
+				array(
+					'name'      => __( 'Huge', 'twentytwentyone' ),
+					'shortName' => __( 'XXL', 'twentytwentyone' ),
+					'size'      => 96,
 					'slug'      => 'huge',
 				),
 				array(
 					'name'      => __( 'Gigantic', 'twentytwentyone' ),
-					'shortName' => __( 'XXL', 'twentytwentyone' ),
-					'size'      => 96,
+					'shortName' => __( 'XXXL', 'twentytwentyone' ),
+					'size'      => 144,
 					'slug'      => 'gigantic',
 				),
 			)
@@ -238,19 +244,51 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 			)
 		);
 
-		/**
-		 * TODO: No gradients are currently included.
 		add_theme_support(
 			'editor-gradient-presets',
 			array(
 				array(
-					'name'     => __( '', 'twentytwentyone' ),
-					'gradient' => '',
-					'slug'     => '',
+					'name'     => __( 'Purple to Yellow', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(160deg, ' . $purple . ', ' . $yellow . ')',
+					'slug'     => 'purple-to-yellow',
+				),
+				array(
+					'name'     => __( 'Yellow to Purple', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(160deg, ' . $yellow . ', ' . $purple . ')',
+					'slug'     => 'yellow-to-purple',
+				),
+				array(
+					'name'     => __( 'Green to Yellow', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(160deg, ' . $green . ', ' . $yellow . ')',
+					'slug'     => 'green-to-yellow',
+				),
+				array(
+					'name'     => __( 'Yellow to Green', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(160deg, ' . $yellow . ', ' . $green . ')',
+					'slug'     => 'yellow-to-green',
+				),
+				array(
+					'name'     => __( 'Red to Yellow', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(160deg, ' . $red . ', ' . $yellow . ')',
+					'slug'     => 'red-to-yellow',
+				),
+				array(
+					'name'     => __( 'Yellow to Red', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(160deg, ' . $yellow . ', ' . $red . ')',
+					'slug'     => 'yellow-to-red',
+				),
+				array(
+					'name'     => __( 'Purple to Red', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(160deg, ' . $purple . ', ' . $red . ')',
+					'slug'     => 'purple-to-red',
+				),
+				array(
+					'name'     => __( 'Red to Purple', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(160deg, ' . $red . ', ' . $purple . ')',
+					'slug'     => 'red-to-purple',
 				),
 			)
 		);
-		*/
 
 		/*
 		* Adds starter content to highlight the theme on fresh sites.

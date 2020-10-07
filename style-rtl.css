@@ -108,6 +108,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--global--font-size-lg: 1.5rem;
 	--global--font-size-xl: 2.25rem;
 	--global--font-size-xxl: 4rem;
+	--global--font-size-xxxl: 5rem;
 	--global--font-size-page-title: var(--global--font-size-xxl);
 	--global--letter-spacing: normal;
 	/* Line Height */
@@ -307,6 +308,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	:root {
 		--global--font-size-xl: 2.5rem;
 		--global--font-size-xxl: 6rem;
+		--global--font-size-xxxl: 9rem;
 		--heading--font-size-h3: 2rem;
 		--heading--font-size-h2: 3rem;
 	}
@@ -1490,6 +1492,7 @@ a {
 
 a:hover {
 	text-decoration-style: dotted;
+	text-decoration-skip-ink: none;
 }
 
 .site a:focus {
@@ -1565,12 +1568,6 @@ a:hover {
 	color: var(--global--color-primary);
 }
 
-.wp-block-columns {
-	/**
-	 * Block Options
-	 */
-}
-
 .wp-block-columns .wp-block-column > * {
 	margin-top: calc(0.66 * var(--global--spacing-vertical));
 	margin-bottom: calc(0.66 * var(--global--spacing-vertical));
@@ -1610,11 +1607,6 @@ a:hover {
 		/* Resetting margins to match _block-container.scss */
 		margin-bottom: 0;
 	}
-}
-
-.wp-block-columns.alignfull {
-	padding-right: var(--global--spacing-unit);
-	padding-left: var(--global--spacing-unit);
 }
 
 .wp-block-cover,
@@ -2571,13 +2563,24 @@ p.has-text-color a {
 	color: var(--form--color-text);
 	line-height: var(--global--line-height-body);
 	max-width: inherit;
-	margin-left: calc(.66 * var(--global--spacing-horizontal));
+	margin-left: calc(-1 * var(--button--border-width));
 	padding: var(--form--spacing-unit);
 }
 
 .wp-block-search .wp-block-search__input:focus {
 	color: var(--form--color-text);
 	border-color: var(--form--border-color);
+}
+
+.wp-block-search button.wp-block-search__button {
+	margin-right: 0;
+	background-color: transparent;
+	color: var(--button--color-text-hover);
+}
+
+.wp-block-search button.wp-block-search__button:hover {
+	background-color: var(--button--color-background);
+	color: var(--button--color-text);
 }
 
 .wp-block-search__button {
@@ -2830,15 +2833,22 @@ table.is-style-stripes tbody tr:nth-child(odd),
 
 :root .is-larger-text,
 :root .has-larger-font-size,
-:root .is-huge-text,
-:root .has-huge-font-size {
+:root .is-extra-large-text,
+:root .has-extra-large-font-size {
 	font-size: var(--global--font-size-xl);
 	line-height: var(--global--line-height-heading);
 }
 
+:root .is-huge-text,
+:root .has-huge-font-size {
+	font-size: var(--global--font-size-xxl);
+	line-height: var(--global--line-height-heading);
+	font-weight: var(--heading--font-weight-page-title);
+}
+
 :root .is-gigantic-text,
 :root .has-gigantic-font-size {
-	font-size: var(--global--font-size-xxl);
+	font-size: var(--global--font-size-xxxl);
 	line-height: var(--global--line-height-heading);
 	font-weight: var(--heading--font-weight-page-title);
 }
@@ -2893,7 +2903,6 @@ table.is-style-stripes tbody tr:nth-child(odd),
 .site-branding {
 	color: var(--branding--color-text);
 	margin-left: 140px;
-	/* TODO: Make room for the menu button if the title is very long. Adjust depending on menu icon.*/
 }
 
 @media only screen and (min-width: 482px) {
@@ -2901,7 +2910,6 @@ table.is-style-stripes tbody tr:nth-child(odd),
 		margin-left: initial;
 		margin-bottom: var(--global--spacing-vertical);
 		margin-top: 4px;
-		/* TODO: Make room for the menu if the title is very long.*/
 	}
 }
 
@@ -3915,8 +3923,10 @@ h1.page-title {
 	margin: calc(2 * var(--primary-nav--padding)) 0;
 }
 
-.primary-navigation .sub-menu .menu-item:last-child {
-	margin-bottom: 0;
+@media only screen and (max-width: 481px) {
+	.primary-navigation .sub-menu .menu-item:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .primary-navigation .sub-menu .menu-item > a {
@@ -4132,6 +4142,23 @@ h1.page-title {
 	}
 }
 
+.widget-area ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.widget-area ul.sub-menu {
+	margin-right: var(--primary-nav--padding);
+}
+
+.widget-area a {
+	text-decoration: underline solid currentColor;
+}
+
+.widget-area a:hover {
+	text-decoration-style: dotted;
+}
+
 .widget-area .wp-block-social-links.alignright {
 	margin-top: var(--global--spacing-vertical);
 	justify-content: flex-end;
@@ -4139,6 +4166,12 @@ h1.page-title {
 
 .widget-area .wp-block-social-links.alignleft {
 	margin-top: var(--global--spacing-vertical);
+}
+
+.widget-area:after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 .widget-title {
@@ -4167,6 +4200,21 @@ h1.page-title {
 
 .search-form .search-submit {
 	margin-right: 10px;
+}
+
+.widget_search > .search-form .search-field {
+	margin-left: calc(-1 * var(--button--border-width));
+}
+
+.widget_search > .search-form .search-submit {
+	margin-right: 0;
+	background-color: transparent;
+	color: var(--button--color-text-hover);
+}
+
+.widget_search > .search-form .search-submit:hover {
+	background-color: var(--button--color-background);
+	color: var(--button--color-text);
 }
 
 /* Category 07 is for any utility classes that are not assigned to a specific component. */
@@ -4303,6 +4351,38 @@ h1.page-title {
 
 .has-white-background-color[class] {
 	background-color: var(--global--color-white);
+}
+
+.has-purple-to-yellow-gradient-background {
+	background: linear-gradient(-160deg, var(--global--color-purple), var(--global--color-yellow));
+}
+
+.has-yellow-to-purple-gradient-background {
+	background: linear-gradient(-160deg, var(--global--color-yellow), var(--global--color-purple));
+}
+
+.has-green-to-yellow-gradient-background {
+	background: linear-gradient(-160deg, var(--global--color-green), var(--global--color-yellow));
+}
+
+.has-yellow-to-green-gradient-background {
+	background: linear-gradient(-160deg, var(--global--color-yellow), var(--global--color-green));
+}
+
+.has-red-to-yellow-gradient-background {
+	background: linear-gradient(-160deg, var(--global--color-red), var(--global--color-yellow));
+}
+
+.has-yellow-to-red-gradient-background {
+	background: linear-gradient(-160deg, var(--global--color-yellow), var(--global--color-red));
+}
+
+.has-purple-to-red-gradient-background {
+	background: linear-gradient(-160deg, var(--global--color-purple), var(--global--color-red));
+}
+
+.has-red-to-purple-gradient-background {
+	background: linear-gradient(-160deg, var(--global--color-red), var(--global--color-purple));
 }
 
 header *,

@@ -2076,6 +2076,7 @@ a {
 
 a:hover {
 	text-decoration-style: dotted;
+	text-decoration-skip-ink: none;
 }
 
 .site a:focus {
@@ -2201,12 +2202,6 @@ a:hover {
 	color: #28303d;
 }
 
-.wp-block-columns {
-	/**
-	 * Block Options
-	 */
-}
-
 .wp-block-columns .wp-block-column > * {
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -2246,11 +2241,6 @@ a:hover {
 		/* Resetting margins to match _block-container.scss */
 		margin-bottom: 0;
 	}
-}
-
-.wp-block-columns.alignfull {
-	padding-left: 20px;
-	padding-right: 20px;
 }
 
 .wp-block-cover {
@@ -3652,13 +3642,24 @@ p.has-text-color a {
 	color: #28303d;
 	line-height: 1.7;
 	max-width: inherit;
-	margin-right: 17px;
+	margin-right: -3px;
 	padding: 10px;
 }
 
 .wp-block-search .wp-block-search__input:focus {
 	color: #28303d;
 	border-color: #39414d;
+}
+
+.wp-block-search button.wp-block-search__button {
+	margin-left: 0;
+	background-color: transparent;
+	color: #39414d;
+}
+
+.wp-block-search button.wp-block-search__button:hover {
+	background-color: #39414d;
+	color: #d1e4dd;
 }
 
 .wp-block-search__button {
@@ -4063,49 +4064,73 @@ table.is-style-stripes tbody tr:nth-child(odd) {
 	}
 }
 
-:root .is-huge-text {
+:root .is-extra-large-text {
 	font-size: 2.5rem;
 	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px){
+	:root .is-extra-large-text{
+	font-size: 2.5rem;
+	}
+}
+
+:root .has-extra-large-font-size {
+	font-size: 2.5rem;
+	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px){
+	:root .has-extra-large-font-size{
+	font-size: 2.5rem;
+	}
+}
+
+:root .is-huge-text {
+	font-size: 6rem;
+	line-height: 1.3;
+	font-weight: 300;
 }
 
 @media only screen and (min-width: 652px){
 	:root .is-huge-text{
-	font-size: 2.5rem;
+	font-size: 6rem;
 	}
 }
 
 :root .has-huge-font-size {
-	font-size: 2.5rem;
+	font-size: 6rem;
 	line-height: 1.3;
+	font-weight: 300;
 }
 
 @media only screen and (min-width: 652px){
 	:root .has-huge-font-size{
-	font-size: 2.5rem;
+	font-size: 6rem;
 	}
 }
 
 :root .is-gigantic-text {
-	font-size: 6rem;
+	font-size: 9rem;
 	line-height: 1.3;
 	font-weight: 300;
 }
 
 @media only screen and (min-width: 652px){
 	:root .is-gigantic-text{
-	font-size: 6rem;
+	font-size: 9rem;
 	}
 }
 
 :root .has-gigantic-font-size {
-	font-size: 6rem;
+	font-size: 9rem;
 	line-height: 1.3;
 	font-weight: 300;
 }
 
 @media only screen and (min-width: 652px){
 	:root .has-gigantic-font-size{
-	font-size: 6rem;
+	font-size: 9rem;
 	}
 }
 
@@ -4165,7 +4190,6 @@ table.is-style-stripes tbody tr:nth-child(odd) {
 .site-branding {
 	color: #28303d;
 	margin-right: 140px;
-	/* TODO: Make room for the menu button if the title is very long. Adjust depending on menu icon.*/
 }
 
 @media only screen and (min-width: 482px) {
@@ -4173,7 +4197,6 @@ table.is-style-stripes tbody tr:nth-child(odd) {
 		margin-right: initial;
 		margin-bottom: 30px;
 		margin-top: 4px;
-		/* TODO: Make room for the menu if the title is very long.*/
 	}
 }
 
@@ -5322,8 +5345,10 @@ h1.page-title {
 	margin: 26px 0;
 }
 
-.primary-navigation .sub-menu .menu-item:last-child {
-	margin-bottom: 0;
+@media only screen and (max-width: 481px) {
+	.primary-navigation .sub-menu .menu-item:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .primary-navigation .sub-menu .menu-item > a {
@@ -5569,6 +5594,23 @@ h1.page-title {
 	}
 }
 
+.widget-area ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.widget-area ul.sub-menu {
+	margin-left: 13px;
+}
+
+.widget-area a {
+	text-decoration: underline solid currentColor;
+}
+
+.widget-area a:hover {
+	text-decoration-style: dotted;
+}
+
 .widget-area .wp-block-social-links.alignright {
 	margin-top: 30px;
 	justify-content: flex-end;
@@ -5576,6 +5618,12 @@ h1.page-title {
 
 .widget-area .wp-block-social-links.alignleft {
 	margin-top: 30px;
+}
+
+.widget-area:after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 .widget-title {
@@ -5616,6 +5664,21 @@ h1.page-title {
 
 .search-form .search-submit {
 	margin-left: 10px;
+}
+
+.widget_search > .search-form .search-field {
+	margin-right: -3px;
+}
+
+.widget_search > .search-form .search-submit {
+	margin-left: 0;
+	background-color: transparent;
+	color: #39414d;
+}
+
+.widget_search > .search-form .search-submit:hover {
+	background-color: #39414d;
+	color: #d1e4dd;
 }
 
 /* Category 07 is for any utility classes that are not assigned to a specific component. */
@@ -5752,6 +5815,38 @@ h1.page-title {
 
 .has-white-background-color[class] {
 	background-color: #fff;
+}
+
+.has-purple-to-yellow-gradient-background {
+	background: linear-gradient(160deg, #d1d1e4, #eeeadd);
+}
+
+.has-yellow-to-purple-gradient-background {
+	background: linear-gradient(160deg, #eeeadd, #d1d1e4);
+}
+
+.has-green-to-yellow-gradient-background {
+	background: linear-gradient(160deg, #d1e4dd, #eeeadd);
+}
+
+.has-yellow-to-green-gradient-background {
+	background: linear-gradient(160deg, #eeeadd, #d1e4dd);
+}
+
+.has-red-to-yellow-gradient-background {
+	background: linear-gradient(160deg, #e4d1d1, #eeeadd);
+}
+
+.has-yellow-to-red-gradient-background {
+	background: linear-gradient(160deg, #eeeadd, #e4d1d1);
+}
+
+.has-purple-to-red-gradient-background {
+	background: linear-gradient(160deg, #d1d1e4, #e4d1d1);
+}
+
+.has-red-to-purple-gradient-background {
+	background: linear-gradient(160deg, #e4d1d1, #d1d1e4);
 }
 
 header * {
