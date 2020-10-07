@@ -17,7 +17,7 @@
  * All icons are assumed to have equal width and height, hence the option
  * to only specify a `$size` parameter in the svg methods.
  *
- * @since 1.0
+ * @since 1.0.0
  */
 class Twenty_Twenty_One_SVG_Icons {
 
@@ -26,7 +26,7 @@ class Twenty_Twenty_One_SVG_Icons {
 	 *
 	 * @access protected
 	 *
-	 * @since 1.0
+	 * @since 1.0.0
 	 *
 	 * @var array
 	 */
@@ -44,7 +44,7 @@ class Twenty_Twenty_One_SVG_Icons {
 	 *
 	 * @access public
 	 *
-	 * @since 1.0
+	 * @since 1.0.0
 	 *
 	 * @param string $icon The icon.
 	 * @param int    $size The icon-size in pixels.

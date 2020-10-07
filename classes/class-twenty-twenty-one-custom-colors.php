@@ -17,7 +17,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @access public
 	 *
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public function __construct() {
 
@@ -35,7 +35,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @param string $background_color The background color.
 	 *
-	 * @since 1.0
+	 * @since 1.0.0
 	 *
 	 * @return string (hex color)
 	 */
@@ -52,7 +52,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @access public
 	 *
-	 * @since 1.0
+	 * @since 1.0.0
 	 *
 	 * @param string|null $context Can be "editor" or null.
 	 *
@@ -85,7 +85,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @access public
 	 *
-	 * @since 1.0
+	 * @since 1.0.0
 	 *
 	 * @return void
 	 */
@@ -100,7 +100,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @access public
 	 *
-	 * @since 1.0
+	 * @since 1.0.0
 	 *
 	 * @return void
 	 */
@@ -121,7 +121,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @access public
 	 *
-	 * @since 1.0
+	 * @since 1.0.0
 	 *
 	 * @param string $hex The HEX color.
 	 *

@@ -13,7 +13,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Non_Latin_Languages' ) ) {
 	/**
 	 * Language handling.
 	 *
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	class Twenty_Twenty_One_Non_Latin_Languages {
 
@@ -24,7 +24,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Non_Latin_Languages' ) ) {
 		 *
 		 * @access public
 		 *
-		 * @since 1.0
+		 * @since 1.0.0
 		 *
 		 * @param string $type Whether to return CSS for the "front-end", "block-editor" or "classic-editor".
 		 *
