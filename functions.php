@@ -468,6 +468,7 @@ require get_template_directory() . '/inc/template-tags.php';
  * Customizer additions.
  */
 require get_template_directory() . '/classes/class-twenty-twenty-one-customize.php';
+new Twenty_Twenty_One_Customize();
 
 /**
  * Block Patterns.
