@@ -40,11 +40,11 @@ while ( have_posts() ) {
 
 			wp_link_pages(
 				array(
-					'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentytwentyone' ) . '</span>',
+					'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'twentytwentyone' ) . '</span>',
 					'after'       => '</div>',
 					'link_before' => '<span>',
 					'link_after'  => '</span>',
-					'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentytwentyone' ) . ' </span>%',
+					'pagelink'    => '<span class="screen-reader-text">' . esc_html__( 'Page', 'twentytwentyone' ) . ' </span>%',
 					'separator'   => '<span class="screen-reader-text">, </span>',
 				)
 			);

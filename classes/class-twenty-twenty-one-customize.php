@@ -77,7 +77,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 				array(
 					'type'    => 'checkbox',
 					'section' => 'title_tagline',
-					'label'   => __( 'Display Site Title & Tagline', 'twentytwentyone' ),
+					'label'   => esc_html__( 'Display Site Title & Tagline', 'twentytwentyone' ),
 				)
 			);
 

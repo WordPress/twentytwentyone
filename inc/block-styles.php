@@ -22,7 +22,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			'core/image',
 			array(
 				'name'  => 'twentytwentyone-image-frame',
-				'label' => __( 'Bordered Frame', 'twentytwentyone' ),
+				'label' => esc_html__( 'Bordered Frame', 'twentytwentyone' ),
 			)
 		);
 
@@ -30,7 +30,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			'core/image',
 			array(
 				'name'  => 'twentytwentyone-border',
-				'label' => __( 'Bordered', 'twentytwentyone' ),
+				'label' => esc_html__( 'Bordered', 'twentytwentyone' ),
 			)
 		);
 
@@ -38,7 +38,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			'core/cover',
 			array(
 				'name'  => 'twentytwentyone-border',
-				'label' => __( 'Bordered', 'twentytwentyone' ),
+				'label' => esc_html__( 'Bordered', 'twentytwentyone' ),
 			)
 		);
 
@@ -46,7 +46,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			'core/group',
 			array(
 				'name'  => 'twentytwentyone-border',
-				'label' => __( 'Bordered', 'twentytwentyone' ),
+				'label' => esc_html__( 'Bordered', 'twentytwentyone' ),
 			)
 		);
 
@@ -54,7 +54,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			'core/media-text',
 			array(
 				'name'  => 'twentytwentyone-border',
-				'label' => __( 'Bordered', 'twentytwentyone' ),
+				'label' => esc_html__( 'Bordered', 'twentytwentyone' ),
 			)
 		);
 
@@ -63,7 +63,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			'core/latest-posts',
 			array(
 				'name'  => 'twentytwentyone-latest-posts-dividers',
-				'label' => __( 'Dividers', 'twentytwentyone' ),
+				'label' => esc_html__( 'Dividers', 'twentytwentyone' ),
 			)
 		);
 
@@ -72,7 +72,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			'core/latest-posts',
 			array(
 				'name'  => 'twentytwentyone-latest-posts-borders',
-				'label' => __( 'Borders', 'twentytwentyone' ),
+				'label' => esc_html__( 'Borders', 'twentytwentyone' ),
 			)
 		);
 
@@ -81,7 +81,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			'core/social-links',
 			array(
 				'name'  => 'twentytwentyone-social-icons-color',
-				'label' => __( 'Dark Gray', 'twentytwentyone' ),
+				'label' => esc_html__( 'Dark Gray', 'twentytwentyone' ),
 			)
 		);
 	}

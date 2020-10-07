@@ -97,27 +97,27 @@ add_filter( 'comment_form_defaults', 'twenty_twenty_one_comment_form_defaults' )
  */
 function twenty_twenty_one_get_the_archive_title() {
 	if ( is_category() ) {
-		return __( 'Category Archives: ', 'twentytwentyone' ) . '<span class="page-description">' . single_term_title( '', false ) . '</span>';
+		return esc_html__( 'Category Archives: ', 'twentytwentyone' ) . '<span class="page-description">' . single_term_title( '', false ) . '</span>';
 	}
 
 	if ( is_tag() ) {
-		return __( 'Tag Archives: ', 'twentytwentyone' ) . '<span class="page-description">' . single_term_title( '', false ) . '</span>';
+		return esc_html__( 'Tag Archives: ', 'twentytwentyone' ) . '<span class="page-description">' . single_term_title( '', false ) . '</span>';
 	}
 
 	if ( is_author() ) {
-		return __( 'Author Archives: ', 'twentytwentyone' ) . '<span class="page-description">' . get_the_author_meta( 'display_name' ) . '</span>';
+		return esc_html__( 'Author Archives: ', 'twentytwentyone' ) . '<span class="page-description">' . get_the_author_meta( 'display_name' ) . '</span>';
 	}
 
 	if ( is_year() ) {
-		return __( 'Yearly Archives: ', 'twentytwentyone' ) . '<span class="page-description">' . get_the_date( _x( 'Y', 'yearly archives date format', 'twentytwentyone' ) ) . '</span>';
+		return esc_html__( 'Yearly Archives: ', 'twentytwentyone' ) . '<span class="page-description">' . get_the_date( _x( 'Y', 'yearly archives date format', 'twentytwentyone' ) ) . '</span>';
 	}
 
 	if ( is_month() ) {
-		return __( 'Monthly Archives: ', 'twentytwentyone' ) . '<span class="page-description">' . get_the_date( _x( 'F Y', 'monthly archives date format', 'twentytwentyone' ) ) . '</span>';
+		return esc_html__( 'Monthly Archives: ', 'twentytwentyone' ) . '<span class="page-description">' . get_the_date( _x( 'F Y', 'monthly archives date format', 'twentytwentyone' ) ) . '</span>';
 	}
 
 	if ( is_day() ) {
-		return __( 'Daily Archives: ', 'twentytwentyone' ) . '<span class="page-description">' . get_the_date() . '</span>';
+		return esc_html__( 'Daily Archives: ', 'twentytwentyone' ) . '<span class="page-description">' . get_the_date() . '</span>';
 	}
 
 	if ( is_post_type_archive() ) {
@@ -136,7 +136,7 @@ function twenty_twenty_one_get_the_archive_title() {
 		);
 	}
 
-	return __( 'Archives:', 'twentytwentyone' );
+	return esc_html__( 'Archives:', 'twentytwentyone' );
 }
 add_filter( 'get_the_archive_title', 'twenty_twenty_one_get_the_archive_title' );
 
@@ -195,8 +195,8 @@ function twenty_twenty_one_continue_reading_link() {
 	if ( ! is_admin() ) {
 		$continue_reading = sprintf(
 			/* translators: %s: Name of current post. */
-			wp_kses( __( 'Read more %s', 'twentytwentyone' ), array( 'span' => array( 'class' => array() ) ) ),
-			the_title( '<span class="screen-reader-text">' . __( 'about ', 'twentytwentyone' ), '</span>', false )
+			wp_kses( esc_html__( 'Read more %s', 'twentytwentyone' ), array( 'span' => array( 'class' => array() ) ) ),
+			the_title( '<span class="screen-reader-text">' . esc_html__( 'about ', 'twentytwentyone' ), '</span>', false )
 		);
 
 		return '&hellip; <a class="more-link" href="' . esc_url( get_permalink() ) . '">' . $continue_reading . '</a>';

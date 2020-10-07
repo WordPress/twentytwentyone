@@ -64,12 +64,12 @@ $twenty_twenty_one_comment_count = get_comments_number();
 					/* Translators: Left arrow */
 					'%s <span class="nav-prev-text">%s</span>',
 					is_rtl() ? twenty_twenty_one_get_icon_svg( 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'arrow_left' ),
-					__( 'Older comments', 'twentytwentyone' )
+					esc_html__( 'Older comments', 'twentytwentyone' )
 				),
 				'next_text' => sprintf(
 					/* Translators: Right arrow */
 					'<span class="nav-next-text">%s</span> %s',
-					__( 'Newer comments', 'twentytwentyone' ),
+					esc_html__( 'Newer comments', 'twentytwentyone' ),
 					is_rtl() ? twenty_twenty_one_get_icon_svg( 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'arrow_right' )
 				),
 			)

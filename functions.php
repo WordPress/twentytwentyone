@@ -57,7 +57,7 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 
 		register_nav_menus(
 			array(
-				'primary' => __( 'Primary Navigation', 'twentytwentyone' ),
+				'primary' => esc_html__( 'Primary Navigation', 'twentytwentyone' ),
 			)
 		);
 
@@ -126,44 +126,44 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 			'editor-font-sizes',
 			array(
 				array(
-					'name'      => __( 'Extra small', 'twentytwentyone' ),
-					'shortName' => __( 'XS', 'twentytwentyone' ),
+					'name'      => esc_html__( 'Extra small', 'twentytwentyone' ),
+					'shortName' => esc_html__( 'XS', 'twentytwentyone' ),
 					'size'      => 16,
 					'slug'      => 'extra-small',
 				),
 				array(
-					'name'      => __( 'Small', 'twentytwentyone' ),
-					'shortName' => __( 'S', 'twentytwentyone' ),
+					'name'      => esc_html__( 'Small', 'twentytwentyone' ),
+					'shortName' => esc_html__( 'S', 'twentytwentyone' ),
 					'size'      => 18,
 					'slug'      => 'small',
 				),
 				array(
-					'name'      => __( 'Normal', 'twentytwentyone' ),
-					'shortName' => __( 'M', 'twentytwentyone' ),
+					'name'      => esc_html__( 'Normal', 'twentytwentyone' ),
+					'shortName' => esc_html__( 'M', 'twentytwentyone' ),
 					'size'      => 20,
 					'slug'      => 'normal',
 				),
 				array(
-					'name'      => __( 'Large', 'twentytwentyone' ),
-					'shortName' => __( 'L', 'twentytwentyone' ),
+					'name'      => esc_html__( 'Large', 'twentytwentyone' ),
+					'shortName' => esc_html__( 'L', 'twentytwentyone' ),
 					'size'      => 24,
 					'slug'      => 'large',
 				),
 				array(
-					'name'      => __( 'Extra Large', 'twentytwentyone' ),
-					'shortName' => __( 'XL', 'twentytwentyone' ),
+					'name'      => esc_html__( 'Extra Large', 'twentytwentyone' ),
+					'shortName' => esc_html__( 'XL', 'twentytwentyone' ),
 					'size'      => 40,
 					'slug'      => 'extra-large',
 				),
 				array(
-					'name'      => __( 'Huge', 'twentytwentyone' ),
-					'shortName' => __( 'XXL', 'twentytwentyone' ),
+					'name'      => esc_html__( 'Huge', 'twentytwentyone' ),
+					'shortName' => esc_html__( 'XXL', 'twentytwentyone' ),
 					'size'      => 96,
 					'slug'      => 'huge',
 				),
 				array(
-					'name'      => __( 'Gigantic', 'twentytwentyone' ),
-					'shortName' => __( 'XXXL', 'twentytwentyone' ),
+					'name'      => esc_html__( 'Gigantic', 'twentytwentyone' ),
+					'shortName' => esc_html__( 'XXXL', 'twentytwentyone' ),
 					'size'      => 144,
 					'slug'      => 'gigantic',
 				),
@@ -194,52 +194,52 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 			'editor-color-palette',
 			array(
 				array(
-					'name'  => __( 'Black', 'twentytwentyone' ),
+					'name'  => esc_html__( 'Black', 'twentytwentyone' ),
 					'slug'  => 'black',
 					'color' => $black,
 				),
 				array(
-					'name'  => __( 'Dark Gray', 'twentytwentyone' ),
+					'name'  => esc_html__( 'Dark Gray', 'twentytwentyone' ),
 					'slug'  => 'dark-gray',
 					'color' => $dark_gray,
 				),
 				array(
-					'name'  => __( 'Gray', 'twentytwentyone' ),
+					'name'  => esc_html__( 'Gray', 'twentytwentyone' ),
 					'slug'  => 'gray',
 					'color' => $gray,
 				),
 				array(
-					'name'  => __( 'Green', 'twentytwentyone' ),
+					'name'  => esc_html__( 'Green', 'twentytwentyone' ),
 					'slug'  => 'green',
 					'color' => $green,
 				),
 				array(
-					'name'  => __( 'Blue', 'twentytwentyone' ),
+					'name'  => esc_html__( 'Blue', 'twentytwentyone' ),
 					'slug'  => 'blue',
 					'color' => $blue,
 				),
 				array(
-					'name'  => __( 'Purple', 'twentytwentyone' ),
+					'name'  => esc_html__( 'Purple', 'twentytwentyone' ),
 					'slug'  => 'purple',
 					'color' => $purple,
 				),
 				array(
-					'name'  => __( 'Red', 'twentytwentyone' ),
+					'name'  => esc_html__( 'Red', 'twentytwentyone' ),
 					'slug'  => 'red',
 					'color' => $red,
 				),
 				array(
-					'name'  => __( 'Orange', 'twentytwentyone' ),
+					'name'  => esc_html__( 'Orange', 'twentytwentyone' ),
 					'slug'  => 'orange',
 					'color' => $orange,
 				),
 				array(
-					'name'  => __( 'Yellow', 'twentytwentyone' ),
+					'name'  => esc_html__( 'Yellow', 'twentytwentyone' ),
 					'slug'  => 'yellow',
 					'color' => $yellow,
 				),
 				array(
-					'name'  => __( 'White', 'twentytwentyone' ),
+					'name'  => esc_html__( 'White', 'twentytwentyone' ),
 					'slug'  => 'white',
 					'color' => $white,
 				),
@@ -250,42 +250,42 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 			'editor-gradient-presets',
 			array(
 				array(
-					'name'     => __( 'Purple to Yellow', 'twentytwentyone' ),
+					'name'     => esc_html__( 'Purple to Yellow', 'twentytwentyone' ),
 					'gradient' => 'linear-gradient(160deg, ' . $purple . ', ' . $yellow . ')',
 					'slug'     => 'purple-to-yellow',
 				),
 				array(
-					'name'     => __( 'Yellow to Purple', 'twentytwentyone' ),
+					'name'     => esc_html__( 'Yellow to Purple', 'twentytwentyone' ),
 					'gradient' => 'linear-gradient(160deg, ' . $yellow . ', ' . $purple . ')',
 					'slug'     => 'yellow-to-purple',
 				),
 				array(
-					'name'     => __( 'Green to Yellow', 'twentytwentyone' ),
+					'name'     => esc_html__( 'Green to Yellow', 'twentytwentyone' ),
 					'gradient' => 'linear-gradient(160deg, ' . $green . ', ' . $yellow . ')',
 					'slug'     => 'green-to-yellow',
 				),
 				array(
-					'name'     => __( 'Yellow to Green', 'twentytwentyone' ),
+					'name'     => esc_html__( 'Yellow to Green', 'twentytwentyone' ),
 					'gradient' => 'linear-gradient(160deg, ' . $yellow . ', ' . $green . ')',
 					'slug'     => 'yellow-to-green',
 				),
 				array(
-					'name'     => __( 'Red to Yellow', 'twentytwentyone' ),
+					'name'     => esc_html__( 'Red to Yellow', 'twentytwentyone' ),
 					'gradient' => 'linear-gradient(160deg, ' . $red . ', ' . $yellow . ')',
 					'slug'     => 'red-to-yellow',
 				),
 				array(
-					'name'     => __( 'Yellow to Red', 'twentytwentyone' ),
+					'name'     => esc_html__( 'Yellow to Red', 'twentytwentyone' ),
 					'gradient' => 'linear-gradient(160deg, ' . $yellow . ', ' . $red . ')',
 					'slug'     => 'yellow-to-red',
 				),
 				array(
-					'name'     => __( 'Purple to Red', 'twentytwentyone' ),
+					'name'     => esc_html__( 'Purple to Red', 'twentytwentyone' ),
 					'gradient' => 'linear-gradient(160deg, ' . $purple . ', ' . $red . ')',
 					'slug'     => 'purple-to-red',
 				),
 				array(
-					'name'     => __( 'Red to Purple', 'twentytwentyone' ),
+					'name'     => esc_html__( 'Red to Purple', 'twentytwentyone' ),
 					'gradient' => 'linear-gradient(160deg, ' . $red . ', ' . $purple . ')',
 					'slug'     => 'red-to-purple',
 				),
@@ -333,9 +333,9 @@ function twenty_twenty_one_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => __( 'Footer', 'twentytwentyone' ),
+			'name'          => esc_html__( 'Footer', 'twentytwentyone' ),
 			'id'            => 'sidebar-1',
-			'description'   => __( 'Add widgets here to appear in your footer.', 'twentytwentyone' ),
+			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'twentytwentyone' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
