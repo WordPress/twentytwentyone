@@ -163,43 +163,50 @@
  * Required Variables
  */
 /**
+ * Responsive Widths Mixin
+ */
+/**
  * Root Media Query Variables
+ */
+
+/**
+ * Child Block Responsive Query Variables
  */
 
 /**
  * Extends
  */
 .default-max-width {
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 	margin-left: auto;
 	margin-right: auto;
 }
 @media only screen and (min-width: 482px){
 	.default-max-width{
-	max-width: min(calc(100vw - 100px), 610px);
+	max-width: min(calc(100% - 100px), 610px);
 	}
 }
 @media only screen and (min-width: 822px){
 	.default-max-width{
-	max-width: min(calc(100vw - 200px), 610px);
+	max-width: min(calc(100% - 200px), 610px);
 	}
 }
 
 .wide-max-width {
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 	margin-left: auto;
 	margin-right: auto;
 }
 
 @media only screen and (min-width: 482px){
 	.wide-max-width{
-	max-width: calc(100vw - 100px);
+	max-width: calc(100% - 100px);
 	}
 }
 
 @media only screen and (min-width: 822px){
 	.wide-max-width{
-	max-width: min(calc(100vw - 200px), 1240px);
+	max-width: min(calc(100% - 200px), 1240px);
 	}
 }
 
@@ -1591,18 +1598,18 @@ p.has-background {
 }
 
 .wp-block-search {
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 }
 
 @media only screen and (min-width: 482px){
 	.wp-block-search{
-	max-width: min(calc(100vw - 100px), 610px);
+	max-width: min(calc(100% - 100px), 610px);
 	}
 }
 
 @media only screen and (min-width: 822px){
 	.wp-block-search{
-	max-width: min(calc(100vw - 200px), 610px);
+	max-width: min(calc(100% - 200px), 610px);
 	}
 }
 
@@ -1860,16 +1867,16 @@ pre.wp-block-verse {
 	border-bottom: 3px solid #28303d;
 	padding-bottom: 60px;
 	margin-bottom: 90px;
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 }
 @media only screen and (min-width: 482px){
 	.wp-block.editor-post-title__block{
-	max-width: calc(100vw - 100px);
+	max-width: calc(100% - 100px);
 	}
 }
 @media only screen and (min-width: 822px){
 	.wp-block.editor-post-title__block{
-	max-width: min(calc(100vw - 200px), 1240px);
+	max-width: min(calc(100% - 200px), 1240px);
 	}
 }
 
@@ -2060,48 +2067,48 @@ pre.wp-block-verse {
 
 /* Block Alignments */
 .wp-block {
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 }
 @media only screen and (min-width: 482px){
 	.wp-block{
-	max-width: min(calc(100vw - 100px), 610px);
+	max-width: min(calc(100% - 100px), 610px);
 	}
 }
 @media only screen and (min-width: 822px){
 	.wp-block{
-	max-width: min(calc(100vw - 200px), 610px);
+	max-width: min(calc(100% - 200px), 610px);
 	}
 }
 
 .wp-block[data-align="wide"] {
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 }
 
 @media only screen and (min-width: 482px){
 	.wp-block[data-align="wide"]{
-	max-width: calc(100vw - 100px);
+	max-width: calc(100% - 100px);
 	}
 }
 
 @media only screen and (min-width: 822px){
 	.wp-block[data-align="wide"]{
-	max-width: min(calc(100vw - 200px), 1240px);
+	max-width: min(calc(100% - 200px), 1240px);
 	}
 }
 
 .wp-block.alignwide {
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 }
 
 @media only screen and (min-width: 482px){
 	.wp-block.alignwide{
-	max-width: calc(100vw - 100px);
+	max-width: calc(100% - 100px);
 	}
 }
 
 @media only screen and (min-width: 822px){
 	.wp-block.alignwide{
-	max-width: min(calc(100vw - 200px), 1240px);
+	max-width: min(calc(100% - 200px), 1240px);
 	}
 }
 

@@ -79,33 +79,42 @@ $breakpoint_xxl: 1024px;
 }
 
 /**
+ * Responsive Widths Mixin
+ */
+@mixin responsive-widths( $unit ) {
+	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal) * 0.6);
+	--responsive--aligndefault-width: calc(100#{$unit} - var(--responsive--spacing-horizontal));
+	--responsive--alignwide-width: calc(100#{$unit} - var(--responsive--spacing-horizontal));
+	--responsive--alignfull-width: 100#{$unit};
+
+	@include media(mobile) {
+		--responsive--aligndefault-width: min(calc(100#{$unit} - 4 * var(--global--spacing-horizontal)), #{$default_width});
+		--responsive--alignwide-width: calc(100#{$unit} - 4 * var(--global--spacing-horizontal));
+		--responsive--alignright-margin: calc(0.5 * (100#{$unit} - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc(0.5 * (100#{$unit} - var(--responsive--aligndefault-width)));
+	}
+
+	@include media(desktop) {
+		--responsive--aligndefault-width: min(calc(100#{$unit} - 8 * var(--global--spacing-horizontal)), #{$default_width});
+		--responsive--alignwide-width: min(calc(100#{$unit} - 8 * var(--global--spacing-horizontal)), #{$max_content_width});
+	}
+}
+
+/**
  * Root Media Query Variables
  */
 :root {
-	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal) * 0.6);
-	--responsive--aligndefault-width: calc(100vw - var(--responsive--spacing-horizontal));
-	--responsive--alignwide-width: calc(100vw - var(--responsive--spacing-horizontal));
-	--responsive--alignfull-width: 100%;
 	--responsive--alignright-margin: var(--global--spacing-horizontal);
 	--responsive--alignleft-margin: var(--global--spacing-horizontal);
+	@include responsive-widths('%');
 }
 
-@include media(mobile) {
-
-	:root {
-		--responsive--aligndefault-width: min(calc(100vw - 4 * var(--global--spacing-horizontal)), #{$default_width});
-		--responsive--alignwide-width: calc(100vw - 4 * var(--global--spacing-horizontal));
-		--responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
-		--responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
-	}
-}
-
-@include media(desktop) {
-
-	:root {
-		--responsive--aligndefault-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), #{$default_width});
-		--responsive--alignwide-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), #{$max_content_width});
-	}
+/**
+ * Child Block Responsive Query Variables
+ */
+*[class^='wp-block'] *[class^='wp-block'],
+.wp-block .wp-block {
+	@include responsive-widths('vw');
 }
 
 /**

@@ -720,226 +720,233 @@ template {
  * Required Variables
  */
 /**
+ * Responsive Widths Mixin
+ */
+/**
  * Root Media Query Variables
+ */
+
+/**
+ * Child Block Responsive Query Variables
  */
 
 /**
  * Extends
  */
 .default-max-width {
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 	margin-left: auto;
 	margin-right: auto;
 }
 @media only screen and (min-width: 482px){
 	.default-max-width{
-	max-width: min(calc(100vw - 100px), 610px);
+	max-width: min(calc(100% - 100px), 610px);
 	}
 }
 @media only screen and (min-width: 822px){
 	.default-max-width{
-	max-width: min(calc(100vw - 200px), 610px);
+	max-width: min(calc(100% - 200px), 610px);
 	}
 }
 hr.wp-block-separator.is-style-wide {
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 	margin-left: auto;
 	margin-right: auto;
 }
 @media only screen and (min-width: 482px){
 	hr.wp-block-separator.is-style-wide{
-	max-width: min(calc(100vw - 100px), 610px);
+	max-width: min(calc(100% - 100px), 610px);
 	}
 }
 @media only screen and (min-width: 822px){
 	hr.wp-block-separator.is-style-wide{
-	max-width: min(calc(100vw - 200px), 610px);
+	max-width: min(calc(100% - 200px), 610px);
 	}
 }
 .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce) {
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 	margin-left: auto;
 	margin-right: auto;
 }
 @media only screen and (min-width: 482px){
 	.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce){
-	max-width: min(calc(100vw - 100px), 610px);
+	max-width: min(calc(100% - 100px), 610px);
 	}
 }
 @media only screen and (min-width: 822px){
 	.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce){
-	max-width: min(calc(100vw - 200px), 610px);
+	max-width: min(calc(100% - 200px), 610px);
 	}
 }
 *[class*="inner-container"] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce) {
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 	margin-left: auto;
 	margin-right: auto;
 }
 @media only screen and (min-width: 482px){
 	*[class*="inner-container"] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce){
-	max-width: min(calc(100vw - 100px), 610px);
+	max-width: min(calc(100% - 100px), 610px);
 	}
 }
 @media only screen and (min-width: 822px){
 	*[class*="inner-container"] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce){
-	max-width: min(calc(100vw - 200px), 610px);
+	max-width: min(calc(100% - 200px), 610px);
 	}
 }
 .entry-content .wp-audio-shortcode {
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 	margin-left: auto;
 	margin-right: auto;
 }
 @media only screen and (min-width: 482px){
 	.entry-content .wp-audio-shortcode{
-	max-width: min(calc(100vw - 100px), 610px);
+	max-width: min(calc(100% - 100px), 610px);
 	}
 }
 @media only screen and (min-width: 822px){
 	.entry-content .wp-audio-shortcode{
-	max-width: min(calc(100vw - 200px), 610px);
+	max-width: min(calc(100% - 200px), 610px);
 	}
 }
 .post-thumbnail {
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 	margin-left: auto;
 	margin-right: auto;
 }
 @media only screen and (min-width: 482px){
 	.post-thumbnail{
-	max-width: min(calc(100vw - 100px), 610px);
+	max-width: min(calc(100% - 100px), 610px);
 	}
 }
 @media only screen and (min-width: 822px){
 	.post-thumbnail{
-	max-width: min(calc(100vw - 200px), 610px);
+	max-width: min(calc(100% - 200px), 610px);
 	}
 }
 
 .wide-max-width {
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 	margin-left: auto;
 	margin-right: auto;
 }
 
 @media only screen and (min-width: 482px){
 	.wide-max-width{
-	max-width: calc(100vw - 100px);
+	max-width: calc(100% - 100px);
 	}
 }
 
 @media only screen and (min-width: 822px){
 	.wide-max-width{
-	max-width: min(calc(100vw - 200px), 1240px);
+	max-width: min(calc(100% - 200px), 1240px);
 	}
 }
 
 .alignwide {
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 	margin-left: auto;
 	margin-right: auto;
 }
 
 @media only screen and (min-width: 482px){
 	.alignwide{
-	max-width: calc(100vw - 100px);
+	max-width: calc(100% - 100px);
 	}
 }
 
 @media only screen and (min-width: 822px){
 	.alignwide{
-	max-width: min(calc(100vw - 200px), 1240px);
+	max-width: min(calc(100% - 200px), 1240px);
 	}
 }
 
 .site-header {
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 	margin-left: auto;
 	margin-right: auto;
 }
 
 @media only screen and (min-width: 482px){
 	.site-header{
-	max-width: calc(100vw - 100px);
+	max-width: calc(100% - 100px);
 	}
 }
 
 @media only screen and (min-width: 822px){
 	.site-header{
-	max-width: min(calc(100vw - 200px), 1240px);
+	max-width: min(calc(100% - 200px), 1240px);
 	}
 }
 
 .site-footer {
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 	margin-left: auto;
 	margin-right: auto;
 }
 
 @media only screen and (min-width: 482px){
 	.site-footer{
-	max-width: calc(100vw - 100px);
+	max-width: calc(100% - 100px);
 	}
 }
 
 @media only screen and (min-width: 822px){
 	.site-footer{
-	max-width: min(calc(100vw - 200px), 1240px);
+	max-width: min(calc(100% - 200px), 1240px);
 	}
 }
 
 .post-navigation {
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 	margin-left: auto;
 	margin-right: auto;
 }
 
 @media only screen and (min-width: 482px){
 	.post-navigation{
-	max-width: calc(100vw - 100px);
+	max-width: calc(100% - 100px);
 	}
 }
 
 @media only screen and (min-width: 822px){
 	.post-navigation{
-	max-width: min(calc(100vw - 200px), 1240px);
+	max-width: min(calc(100% - 200px), 1240px);
 	}
 }
 
 .pagination {
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 	margin-left: auto;
 	margin-right: auto;
 }
 
 @media only screen and (min-width: 482px){
 	.pagination{
-	max-width: calc(100vw - 100px);
+	max-width: calc(100% - 100px);
 	}
 }
 
 @media only screen and (min-width: 822px){
 	.pagination{
-	max-width: min(calc(100vw - 200px), 1240px);
+	max-width: min(calc(100% - 200px), 1240px);
 	}
 }
 
 .comments-pagination {
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 	margin-left: auto;
 	margin-right: auto;
 }
 
 @media only screen and (min-width: 482px){
 	.comments-pagination{
-	max-width: calc(100vw - 100px);
+	max-width: calc(100% - 100px);
 	}
 }
 
 @media only screen and (min-width: 822px){
 	.comments-pagination{
-	max-width: min(calc(100vw - 200px), 1240px);
+	max-width: min(calc(100% - 200px), 1240px);
 	}
 }
 
@@ -982,99 +989,99 @@ hr.wp-block-separator.is-style-wide {
 .alignwide [class*="inner-container"] > .alignwide {
 	margin-left: auto;
 	margin-right: auto;
-	width: calc(100vw - 30px);
+	width: calc(100% - 30px);
 	max-width: 100%;
 }
 
 @media only screen and (min-width: 482px){
 	.alignwide [class*="inner-container"] > .alignwide{
-	width: calc(100vw - 100px);
+	width: calc(100% - 100px);
 	}
 }
 
 @media only screen and (min-width: 822px){
 	.alignwide [class*="inner-container"] > .alignwide{
-	width: min(calc(100vw - 200px), 1240px);
+	width: min(calc(100% - 200px), 1240px);
 	}
 }
 
 .alignfull [class*="inner-container"] > .alignwide {
 	margin-left: auto;
 	margin-right: auto;
-	width: calc(100vw - 30px);
+	width: calc(100% - 30px);
 	max-width: 100%;
 }
 
 @media only screen and (min-width: 482px){
 	.alignfull [class*="inner-container"] > .alignwide{
-	width: calc(100vw - 100px);
+	width: calc(100% - 100px);
 	}
 }
 
 @media only screen and (min-width: 822px){
 	.alignfull [class*="inner-container"] > .alignwide{
-	width: min(calc(100vw - 200px), 1240px);
+	width: min(calc(100% - 200px), 1240px);
 	}
 }
 
 .entry-header .post-thumbnail {
 	margin-left: auto;
 	margin-right: auto;
-	width: calc(100vw - 30px);
+	width: calc(100% - 30px);
 	max-width: 100%;
 }
 
 @media only screen and (min-width: 482px){
 	.entry-header .post-thumbnail{
-	width: calc(100vw - 100px);
+	width: calc(100% - 100px);
 	}
 }
 
 @media only screen and (min-width: 822px){
 	.entry-header .post-thumbnail{
-	width: min(calc(100vw - 200px), 1240px);
+	width: min(calc(100% - 200px), 1240px);
 	}
 }
 
 .singular .post-thumbnail {
 	margin-left: auto;
 	margin-right: auto;
-	width: calc(100vw - 30px);
+	width: calc(100% - 30px);
 	max-width: 100%;
 }
 
 @media only screen and (min-width: 482px){
 	.singular .post-thumbnail{
-	width: calc(100vw - 100px);
+	width: calc(100% - 100px);
 	}
 }
 
 @media only screen and (min-width: 822px){
 	.singular .post-thumbnail{
-	width: min(calc(100vw - 200px), 1240px);
+	width: min(calc(100% - 200px), 1240px);
 	}
 }
 
 @media only screen and (min-width: 482px) {
 	.entry-content > .alignleft {
 		/*rtl:ignore*/
-		margin-left: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		margin-left: calc(1*(100% - min(calc(100% - 4 * 25px), 610px)));
 		/*rtl:ignore*/
 		margin-right: 25px;
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignleft{
-		margin-left: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		margin-left: calc(1*(100% - min(calc(100% - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignleft{
-		margin-left: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		margin-left: calc(1*(100% - min(calc(100% - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 822px){
 		.entry-content > .alignleft{
-		margin-left: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		margin-left: calc(1*(100% - min(calc(100% - 4 * 25px), 610px)));
 		}
 	}
 }
@@ -1084,21 +1091,21 @@ hr.wp-block-separator.is-style-wide {
 		/*rtl:ignore*/
 		margin-left: 25px;
 		/*rtl:ignore*/
-		margin-right: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		margin-right: calc(1*(100% - min(calc(100% - 4 * 25px), 610px)));
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignright{
-		margin-right: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		margin-right: calc(1*(100% - min(calc(100% - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignright{
-		margin-right: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		margin-right: calc(1*(100% - min(calc(100% - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 822px){
 		.entry-content > .alignright{
-		margin-right: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		margin-right: calc(1*(100% - min(calc(100% - 4 * 25px), 610px)));
 		}
 	}
 }
@@ -3380,34 +3387,34 @@ p.has-text-color a {
 }
 
 .wp-block-pullquote.alignwide > p {
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 }
 
 @media only screen and (min-width: 482px){
 	.wp-block-pullquote.alignwide > p{
-	max-width: calc(100vw - 100px);
+	max-width: calc(100% - 100px);
 	}
 }
 
 @media only screen and (min-width: 822px){
 	.wp-block-pullquote.alignwide > p{
-	max-width: min(calc(100vw - 200px), 1240px);
+	max-width: min(calc(100% - 200px), 1240px);
 	}
 }
 
 .wp-block-pullquote.alignwide blockquote {
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 }
 
 @media only screen and (min-width: 482px){
 	.wp-block-pullquote.alignwide blockquote{
-	max-width: calc(100vw - 100px);
+	max-width: calc(100% - 100px);
 	}
 }
 
 @media only screen and (min-width: 822px){
 	.wp-block-pullquote.alignwide blockquote{
-	max-width: min(calc(100vw - 200px), 1240px);
+	max-width: min(calc(100% - 200px), 1240px);
 	}
 }
 
@@ -3616,18 +3623,18 @@ p.has-text-color a {
 }
 
 .wp-block-search {
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 }
 
 @media only screen and (min-width: 482px){
 	.wp-block-search{
-	max-width: min(calc(100vw - 100px), 610px);
+	max-width: min(calc(100% - 100px), 610px);
 	}
 }
 
 @media only screen and (min-width: 822px){
 	.wp-block-search{
-	max-width: min(calc(100vw - 200px), 610px);
+	max-width: min(calc(100% - 200px), 610px);
 	}
 }
 
@@ -3905,18 +3912,18 @@ table.wp-calendar-table caption {
 }
 
 .entry-content > .alignleft {
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 }
 
 @media only screen and (min-width: 482px){
 	.entry-content > .alignleft{
-	max-width: min(calc(100vw - 100px), 610px);
+	max-width: min(calc(100% - 100px), 610px);
 	}
 }
 
 @media only screen and (min-width: 822px){
 	.entry-content > .alignleft{
-	max-width: min(calc(100vw - 200px), 610px);
+	max-width: min(calc(100% - 200px), 610px);
 	}
 }
 
@@ -3929,21 +3936,21 @@ table.wp-calendar-table caption {
 		margin-bottom: 30px;
 	}
 	.entry-content > .alignleft {
-		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		max-width: calc(50% - 1*(100% - min(calc(100% - 4 * 25px), 610px)));
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignleft{
-		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		max-width: calc(50% - 1*(100% - min(calc(100% - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignleft{
-		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		max-width: calc(50% - 1*(100% - min(calc(100% - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 822px){
 		.entry-content > .alignleft{
-		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		max-width: calc(50% - 1*(100% - min(calc(100% - 4 * 25px), 610px)));
 		}
 	}
 }
@@ -3969,18 +3976,18 @@ table.wp-calendar-table caption {
 }
 
 .entry-content > .alignright {
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 }
 
 @media only screen and (min-width: 482px){
 	.entry-content > .alignright{
-	max-width: min(calc(100vw - 100px), 610px);
+	max-width: min(calc(100% - 100px), 610px);
 	}
 }
 
 @media only screen and (min-width: 822px){
 	.entry-content > .alignright{
-	max-width: min(calc(100vw - 200px), 610px);
+	max-width: min(calc(100% - 200px), 610px);
 	}
 }
 
@@ -3992,21 +3999,21 @@ table.wp-calendar-table caption {
 		margin-left: 25px;
 	}
 	.entry-content > .alignright {
-		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		max-width: calc(50% - 1*(100% - min(calc(100% - 4 * 25px), 610px)));
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignright{
-		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		max-width: calc(50% - 1*(100% - min(calc(100% - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignright{
-		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		max-width: calc(50% - 1*(100% - min(calc(100% - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 822px){
 		.entry-content > .alignright{
-		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		max-width: calc(50% - 1*(100% - min(calc(100% - 4 * 25px), 610px)));
 		}
 	}
 }
@@ -4614,7 +4621,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .post-thumbnail .wp-post-image {
 	display: block;
 	width: auto;
-	min-width: calc(100vw - 30px);
+	min-width: calc(100% - 30px);
 	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
@@ -4623,13 +4630,13 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 @media only screen and (min-width: 482px){
 	.post-thumbnail .wp-post-image{
-	min-width: min(calc(100vw - 100px), 610px);
+	min-width: min(calc(100% - 100px), 610px);
 	}
 }
 
 @media only screen and (min-width: 822px){
 	.post-thumbnail .wp-post-image{
-	min-width: min(calc(100vw - 200px), 610px);
+	min-width: min(calc(100% - 200px), 610px);
 	}
 }
 
@@ -4639,16 +4646,16 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .author-bio {
 	position: relative;
 	font-size: 1rem;
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 }
 @media only screen and (min-width: 482px){
 	.author-bio{
-	max-width: min(calc(100vw - 100px), 610px);
+	max-width: min(calc(100% - 100px), 610px);
 	}
 }
 @media only screen and (min-width: 822px){
 	.author-bio{
-	max-width: min(calc(100vw - 200px), 610px);
+	max-width: min(calc(100% - 200px), 610px);
 	}
 }
 
@@ -4665,18 +4672,18 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .author-bio.show-avatars .author-bio-content {
 	display: inline-block;
 	padding-left: 25px;
-	max-width: calc(100vw - 120px);
+	max-width: calc(100% - 120px);
 }
 
 @media only screen and (min-width: 482px){
 	.author-bio.show-avatars .author-bio-content{
-	max-width: calc(min(calc(100vw - 4 * 25px), 610px) - 90px);
+	max-width: calc(min(calc(100% - 4 * 25px), 610px) - 90px);
 	}
 }
 
 @media only screen and (min-width: 822px){
 	.author-bio.show-avatars .author-bio-content{
-	max-width: calc(min(calc(100vw - 8 * 25px), 610px) - 90px);
+	max-width: calc(min(calc(100% - 8 * 25px), 610px) - 90px);
 	}
 }
 
@@ -5684,18 +5691,18 @@ h1.page-title {
 	display: flex;
 	flex-wrap: wrap;
 	margin: auto;
-	max-width: calc(100vw - 30px);
+	max-width: calc(100% - 30px);
 }
 
 @media only screen and (min-width: 482px){
 	.search-form{
-	max-width: min(calc(100vw - 100px), 610px);
+	max-width: min(calc(100% - 100px), 610px);
 	}
 }
 
 @media only screen and (min-width: 822px){
 	.search-form{
-	max-width: min(calc(100vw - 200px), 610px);
+	max-width: min(calc(100% - 200px), 610px);
 	}
 }
 
