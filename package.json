@@ -60,6 +60,7 @@
 		"build": "run-s \"build:*\"",
 		"watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial",
 		"lint:scss": "stylelint **/*.scss",
+		"lint:js": "eslint assets/js",
 		"wp-env": "wp-env"
 	}
 }
