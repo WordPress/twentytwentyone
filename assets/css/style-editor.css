@@ -612,6 +612,9 @@ a:hover {
 		margin-left: calc(-2 * var(--global--spacing-horizontal));
 		margin-top: calc(2.5 * var(--global--spacing-horizontal));
 	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlapping .wp-block-column:nth-child(2n).is-vertically-aligned-center {
+		margin-top: 0;
+	}
 }
 
 .wp-block-file .wp-block-file__textlink {
