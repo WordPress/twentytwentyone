@@ -44,8 +44,8 @@
 		@include media(laptop) {
 
 			.wp-block-column:nth-child(2n) {
-				margin-left: calc(-1 * var(--global--spacing-horizontal));
-				margin-top: var(--global--spacing-horizontal);
+				margin-left: calc(-2 * var(--global--spacing-horizontal));
+				margin-top: calc(2.5 * var(--global--spacing-horizontal));
 			}
 		}
 	}
