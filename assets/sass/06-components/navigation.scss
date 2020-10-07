@@ -375,6 +375,7 @@
 
 	// Show top-level sub-menu indicators above mobile-breakpoint-only
 	.menu-item-has-children {
+		margin-right: 0 !important;
 
 		> .svg-icon {
 			display: none;

@@ -5324,6 +5324,10 @@ h1.page-title {
 	}
 }
 
+.primary-navigation .menu-item-has-children {
+	margin-right: 0 !important;
+}
+
 .primary-navigation .menu-item-has-children > .svg-icon {
 	display: none;
 }

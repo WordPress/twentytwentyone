@@ -26,3 +26,4 @@
 | @kishanjasani | @kishanjasani |
 | @lukecav | @lukecavanagh |
 | @scruffian | @scruffian |
+| @mager19 | @mager19 |
