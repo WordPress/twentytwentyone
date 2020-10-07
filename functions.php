@@ -84,19 +84,13 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 		$logo_width  = 300;
 		$logo_height = 100;
 
-		// If the retina setting is active, double the recommended width and height.
-		if ( get_theme_mod( 'retina_logo', false ) ) {
-			$logo_width  = floor( $logo_width * 2 );
-			$logo_height = floor( $logo_height * 2 );
-		}
-
 		add_theme_support(
 			'custom-logo',
 			array(
 				'height'               => $logo_height,
 				'width'                => $logo_width,
-				'flex-width'           => false,
-				'flex-height'          => false,
+				'flex-width'           => true,
+				'flex-height'          => true,
 				'unlink-homepage-logo' => true,
 			)
 		);
@@ -154,15 +148,21 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 					'slug'      => 'large',
 				),
 				array(
-					'name'      => __( 'Huge', 'twentytwentyone' ),
+					'name'      => __( 'Extra Large', 'twentytwentyone' ),
 					'shortName' => __( 'XL', 'twentytwentyone' ),
 					'size'      => 40,
+					'slug'      => 'extra-large',
+				),
+				array(
+					'name'      => __( 'Huge', 'twentytwentyone' ),
+					'shortName' => __( 'XXL', 'twentytwentyone' ),
+					'size'      => 96,
 					'slug'      => 'huge',
 				),
 				array(
 					'name'      => __( 'Gigantic', 'twentytwentyone' ),
-					'shortName' => __( 'XXL', 'twentytwentyone' ),
-					'size'      => 96,
+					'shortName' => __( 'XXXL', 'twentytwentyone' ),
+					'size'      => 144,
 					'slug'      => 'gigantic',
 				),
 			)
@@ -244,19 +244,51 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 			)
 		);
 
-		/**
-		 * TODO: No gradients are currently included.
 		add_theme_support(
 			'editor-gradient-presets',
 			array(
 				array(
-					'name'     => __( '', 'twentytwentyone' ),
-					'gradient' => '',
-					'slug'     => '',
+					'name'     => __( 'Purple to Yellow', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(160deg, ' . $purple . ', ' . $yellow . ')',
+					'slug'     => 'purple-to-yellow',
+				),
+				array(
+					'name'     => __( 'Yellow to Purple', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(160deg, ' . $yellow . ', ' . $purple . ')',
+					'slug'     => 'yellow-to-purple',
+				),
+				array(
+					'name'     => __( 'Green to Yellow', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(160deg, ' . $green . ', ' . $yellow . ')',
+					'slug'     => 'green-to-yellow',
+				),
+				array(
+					'name'     => __( 'Yellow to Green', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(160deg, ' . $yellow . ', ' . $green . ')',
+					'slug'     => 'yellow-to-green',
+				),
+				array(
+					'name'     => __( 'Red to Yellow', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(160deg, ' . $red . ', ' . $yellow . ')',
+					'slug'     => 'red-to-yellow',
+				),
+				array(
+					'name'     => __( 'Yellow to Red', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(160deg, ' . $yellow . ', ' . $red . ')',
+					'slug'     => 'yellow-to-red',
+				),
+				array(
+					'name'     => __( 'Purple to Red', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(160deg, ' . $purple . ', ' . $red . ')',
+					'slug'     => 'purple-to-red',
+				),
+				array(
+					'name'     => __( 'Red to Purple', 'twentytwentyone' ),
+					'gradient' => 'linear-gradient(160deg, ' . $red . ', ' . $purple . ')',
+					'slug'     => 'red-to-purple',
 				),
 			)
 		);
-		*/
 
 		/*
 		* Adds starter content to highlight the theme on fresh sites.
@@ -350,7 +382,20 @@ function twenty_twenty_one_scripts() {
 
 	// Main navigation scripts.
 	if ( has_nav_menu( 'primary' ) ) {
-		wp_enqueue_script( 'twenty-twenty-one-primary-navigation-script', get_template_directory_uri() . '/assets/js/primary-navigation.js', array(), wp_get_theme()->get( 'Version' ), true );
+		wp_register_script(
+			'twenty-twenty-one-ie11-polyfills',
+			get_template_directory_uri() . '/assets/js/polyfills.js',
+			array(),
+			wp_get_theme()->get( 'Version' ),
+			true
+		);
+		wp_enqueue_script(
+			'twenty-twenty-one-primary-navigation-script',
+			get_template_directory_uri() . '/assets/js/primary-navigation.js',
+			array( 'twenty-twenty-one-ie11-polyfills' ),
+			wp_get_theme()->get( 'Version' ),
+			true
+		);
 	}
 }
 add_action( 'wp_enqueue_scripts', 'twenty_twenty_one_scripts' );
