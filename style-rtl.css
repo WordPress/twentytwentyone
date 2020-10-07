@@ -791,7 +791,6 @@ template {
  */
 *[class^='wp-block'] *[class^='wp-block'],
 .wp-block .wp-block {
-	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal) * 0.6);
 	--responsive--aligndefault-width: calc(100vw - var(--responsive--spacing-horizontal));
 	--responsive--alignwide-width: calc(100vw - var(--responsive--spacing-horizontal));
 	--responsive--alignfull-width: 100vw;
