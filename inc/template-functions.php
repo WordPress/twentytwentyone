@@ -97,27 +97,51 @@ add_filter( 'comment_form_defaults', 'twenty_twenty_one_comment_form_defaults' )
  */
 function twenty_twenty_one_get_the_archive_title() {
 	if ( is_category() ) {
-		return esc_html__( 'Category Archives: ', 'twentytwentyone' ) . '<span class="page-description">' . single_term_title( '', false ) . '</span>';
+		return sprintf(
+			/* Translators: %s: The term title. */
+			esc_html__( 'Category Archives: %s', 'twentytwentyone' ),
+			'<span class="page-description">' . single_term_title( '', false ) . '</span>'
+		);
 	}
 
 	if ( is_tag() ) {
-		return esc_html__( 'Tag Archives: ', 'twentytwentyone' ) . '<span class="page-description">' . single_term_title( '', false ) . '</span>';
+		return sprintf(
+			/* Translators: %s: The term title. */
+			esc_html__( 'Tag Archives: %s', 'twentytwentyone' ),
+			'<span class="page-description">' . single_term_title( '', false ) . '</span>'
+		);
 	}
 
 	if ( is_author() ) {
-		return esc_html__( 'Author Archives: ', 'twentytwentyone' ) . '<span class="page-description">' . get_the_author_meta( 'display_name' ) . '</span>';
+		return sprintf(
+			/* Translators: %s: The author name. */
+			esc_html__( 'Author Archives: %s', 'twentytwentyone' ),
+			'<span class="page-description">' . get_the_author_meta( 'display_name' ) . '</span>'
+		);
 	}
 
 	if ( is_year() ) {
-		return esc_html__( 'Yearly Archives: ', 'twentytwentyone' ) . '<span class="page-description">' . get_the_date( _x( 'Y', 'yearly archives date format', 'twentytwentyone' ) ) . '</span>';
+		return sprintf(
+			/* Translators: %s: The year. */
+			esc_html__( 'Yearly Archives: %s', 'twentytwentyone' ),
+			'<span class="page-description">' . get_the_date( _x( 'Y', 'yearly archives date format', 'twentytwentyone' ) ) . '</span>'
+		);
 	}
 
 	if ( is_month() ) {
-		return esc_html__( 'Monthly Archives: ', 'twentytwentyone' ) . '<span class="page-description">' . get_the_date( _x( 'F Y', 'monthly archives date format', 'twentytwentyone' ) ) . '</span>';
+		return sprintf(
+			/* Translators: %s: The month. */
+			esc_html__( 'Monthly Archives: %s', 'twentytwentyone' ),
+			'<span class="page-description">' . get_the_date( _x( 'F Y', 'monthly archives date format', 'twentytwentyone' ) ) . '</span>'
+		);
 	}
 
 	if ( is_day() ) {
-		return esc_html__( 'Daily Archives: ', 'twentytwentyone' ) . '<span class="page-description">' . get_the_date() . '</span>';
+		return sprintf(
+			/* Translators: %s: The day. */
+			esc_html__( 'Daily Archives: %s', 'twentytwentyone' ),
+			'<span class="page-description">' . get_the_date() . '</span>'
+		);
 	}
 
 	if ( is_post_type_archive() ) {
