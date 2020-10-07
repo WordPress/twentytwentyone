@@ -5604,6 +5604,8 @@ h1.page-title {
 
 .widget-area a:hover {
 	text-decoration-style: dotted;
+}
+
 .widget-area .wp-block-social-links.alignright {
 	margin-top: 30px;
 	justify-content: flex-end;
