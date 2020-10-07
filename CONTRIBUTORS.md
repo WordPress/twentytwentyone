@@ -32,3 +32,5 @@
 | @2ndkauboy | @kau-boy |
 | @JustinyAhin | @justinahinon |
 | @jdevalk | @joostdevalk |
+| @briceduclos | @jbduclos |
+
