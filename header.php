@@ -52,7 +52,15 @@
 					);
 					?>
 				</nav><!-- #site-navigation -->
-				<?php } ?>
+			<?php } ?>
+			<?php
+			/**
+			 * Triggered just before closing <header> tag.
+			 *
+			 * @since 1.0.0
+			 */
+			do_action( 'twentytwentyone_header' );
+			?>
 		</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
