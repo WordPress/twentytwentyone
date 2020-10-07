@@ -9,21 +9,23 @@
  * @since 1.0.0
  */
 
-/**
- * This theme only works in WordPress 5.3 or later.
- */
+// This theme requires WordPress 5.3 or later.
 if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 	return;
 }
 
-if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
+if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
 	 * Note that this function is hooked into the after_setup_theme hook, which
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return void
 	 */
 	function twenty_twenty_one_setup() {
 		/*
@@ -315,13 +317,17 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) :
 		// Add support for custom units.
 		add_theme_support( 'custom-units' );
 	}
-endif;
+}
 add_action( 'after_setup_theme', 'twenty_twenty_one_setup' );
 
 /**
  * Register widget area.
  *
+ * @since 1.0.0
+ *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ *
+ * @return void
  */
 function twenty_twenty_one_widgets_init() {
 
@@ -344,7 +350,11 @@ add_action( 'widgets_init', 'twenty_twenty_one_widgets_init' );
  *
  * Priority 0 to make it available to lower priority callbacks.
  *
+ * @since 1.0.0
+ *
  * @global int $content_width Content width.
+ *
+ * @return void
  */
 function twenty_twenty_one_content_width() {
 	// This variable is intended to be overruled from themes.
@@ -356,6 +366,10 @@ add_action( 'after_setup_theme', 'twenty_twenty_one_content_width', 0 );
 
 /**
  * Enqueue scripts and styles.
+ *
+ * @since 1.0.0
+ *
+ * @return void
  */
 function twenty_twenty_one_scripts() {
 	// Note, the is_IE global variable is defined by WordPress and is used
@@ -418,10 +432,6 @@ function twenty_twenty_one_skip_link_focus_fix() {
 }
 add_action( 'wp_print_footer_scripts', 'twenty_twenty_one_skip_link_focus_fix' );
 
-
-// Non-latin language handling.
-require get_template_directory() . '/classes/class-twenty-twenty-one-non-latin-languages.php';
-
 /** Enqueue non-latin language styles
  *
  * @since 1.0.0
@@ -429,55 +439,39 @@ require get_template_directory() . '/classes/class-twenty-twenty-one-non-latin-l
  * @return void
  */
 function twenty_twenty_one_non_latin_languages() {
+	require get_template_directory() . '/classes/class-twenty-twenty-one-non-latin-languages.php';
 	$custom_css = Twenty_Twenty_One_Non_Latin_Languages::get_non_latin_css( 'front-end' );
 
 	if ( $custom_css ) {
 		wp_add_inline_style( 'twenty-twenty-one-style', $custom_css );
 	}
 }
-
 add_action( 'wp_enqueue_scripts', 'twenty_twenty_one_non_latin_languages' );
 
-/**
- * SVG Icons class.
- */
+// SVG Icons class.
 require get_template_directory() . '/classes/class-twenty-twenty-one-svg-icons.php';
 
-/**
- * Custom color classes.
- */
+// Custom color classes.
 require get_template_directory() . '/classes/class-twenty-twenty-one-custom-colors.php';
 new Twenty_Twenty_One_Custom_Colors();
 
-/**
- * Enhance the theme by hooking into WordPress.
- */
+// Enhance the theme by hooking into WordPress.
 require get_template_directory() . '/inc/template-functions.php';
 
-/**
- * Menu functions and filters.
- */
+// Menu functions and filters.
 require get_template_directory() . '/inc/menu-functions.php';
 
-/**
- * Custom template tags for the theme.
- */
+// Custom template tags for the theme.
 require get_template_directory() . '/inc/template-tags.php';
 
-/**
- * Customizer additions.
- */
+// Customizer additions.
 require get_template_directory() . '/classes/class-twenty-twenty-one-customize.php';
 new Twenty_Twenty_One_Customize();
 
-/**
- * Block Patterns.
- */
+// Block Patterns.
 require get_template_directory() . '/inc/block-patterns.php';
 
-/**
- * Block Styles.
- */
+// Block Styles.
 require get_template_directory() . '/inc/block-styles.php';
 
 /**
