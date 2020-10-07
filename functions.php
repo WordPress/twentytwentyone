@@ -447,6 +447,7 @@ require get_template_directory() . '/classes/class-twenty-twenty-one-svg-icons.p
  * Custom color classes.
  */
 require get_template_directory() . '/classes/class-twenty-twenty-one-custom-colors.php';
+new Twenty_Twenty_One_Custom_Colors();
 
 /**
  * Enhance the theme by hooking into WordPress.

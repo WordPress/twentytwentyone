@@ -16,17 +16,15 @@ class Twenty_Twenty_One_Custom_Colors {
 	 * Instantiate the object.
 	 *
 	 * @access public
+	 *
+	 * @since 1.0
 	 */
 	public function __construct() {
 
-		/**
-		 * Enqueue color variables for customizer & frontend.
-		 */
+		// Enqueue color variables for customizer & frontend.
 		add_action( 'wp_enqueue_scripts', array( $this, 'custom_color_variables' ) );
 
-		/**
-		 * Enqueue color variables for editor.
-		 */
+		// Enqueue color variables for editor.
 		add_action( 'enqueue_block_editor_assets', array( $this, 'editor_custom_color_variables' ) );
 	}
 
@@ -36,6 +34,8 @@ class Twenty_Twenty_One_Custom_Colors {
 	 * @access public
 	 *
 	 * @param string $background_color The background color.
+	 *
+	 * @since 1.0
 	 *
 	 * @return string (hex color)
 	 */
@@ -52,6 +52,8 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @access public
 	 *
+	 * @since 1.0
+	 *
 	 * @param string|null $context Can be "editor" or null.
 	 *
 	 * @return string
@@ -60,7 +62,7 @@ class Twenty_Twenty_One_Custom_Colors {
 
 		$theme_css = 'editor' === $context ? ':root .editor-styles-wrapper{' : ':root{';
 
-		if ( get_theme_mod( 'background_color', 'D1E4DD' ) !== 'D1E4DD' ) {
+		if ( 'd1e4dd' !== strtolower( get_theme_mod( 'background_color', 'D1E4DD' ) ) ) {
 			$theme_css .= '--global--color-background: #' . get_theme_mod( 'background_color', 'D1E4DD' ) . ';';
 			$theme_css .= '--global--color-primary: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
 			$theme_css .= '--global--color-secondary: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
@@ -83,6 +85,8 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @access public
 	 *
+	 * @since 1.0
+	 *
 	 * @return void
 	 */
 	public function custom_color_variables() {
@@ -95,6 +99,8 @@ class Twenty_Twenty_One_Custom_Colors {
 	 * Editor custom color variables.
 	 *
 	 * @access public
+	 *
+	 * @since 1.0
 	 *
 	 * @return void
 	 */
@@ -141,5 +147,3 @@ class Twenty_Twenty_One_Custom_Colors {
 		return (int) round( $lum );
 	}
 }
-
-new Twenty_Twenty_One_Custom_Colors();
