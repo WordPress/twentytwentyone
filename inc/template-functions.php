@@ -190,28 +190,6 @@ function twenty_twenty_one_get_avatar_size() {
 }
 
 /**
- * Returns true if comment is by author of the post.
- *
- * @since 1.0.0
- *
- * @see get_comment_class()
- *
- * @param Object $comment The comment object.
- *
- * @return bool
- */
-function twenty_twenty_one_is_comment_by_post_author( $comment = null ) {
-	if ( is_object( $comment ) && $comment->user_id > 0 ) {
-		$user = get_userdata( $comment->user_id );
-		$post = get_post( $comment->comment_post_ID );
-		if ( ! empty( $user ) && ! empty( $post ) ) {
-			return $comment->user_id === $post->post_author;
-		}
-	}
-	return false;
-}
-
-/**
  * Create the continue reading link.
  */
 function twenty_twenty_one_continue_reading_link() {
