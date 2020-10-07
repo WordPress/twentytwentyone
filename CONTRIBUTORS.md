@@ -26,3 +26,11 @@
 | @kishanjasani | @kishanjasani |
 | @lukecav | @lukecavanagh |
 | @scruffian | @scruffian |
+| @abhijitrakas | @abhijitrakas |
+| @TeBenachi | @utz119 |
+| @sudoshreyansh | @sudoshreyansh |
+| @2ndkauboy | @kau-boy |
+| @JustinyAhin | @justinahinon |
+| @jdevalk | @joostdevalk |
+| @briceduclos | @bduclos |
+

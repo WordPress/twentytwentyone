@@ -5,34 +5,30 @@
 .menu-button-container {
 	display: none;
 	justify-content: space-between;
-	left: 0;
 	position: absolute;
-	top: 0;
-	width: 100%;
+	right: 0;
+	padding-top: calc(0.5 * var(--global--spacing-vertical));
+	padding-bottom: calc(0.25 * var(--global--spacing-vertical));
 
 	#primary-mobile-menu {
 		margin-left: auto;
 		padding: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit))) calc(var(--button--padding-horizontal) - (0.25 * var(--global--spacing-unit)));
-		margin-top: calc(0.25 * var(--global--spacing-unit));
-		margin-right: calc(0.25 * var(--global--spacing-unit));
+		margin-right: calc(0.5 * var(--global--spacing-unit));
 	}
 
 	@include media(mobile-only) {
 		display: flex;
 	}
 
-	.admin-bar:not(.primary-navigation-open) & {
-		top: calc(1.4 * var(--global--spacing-vertical));
-	}
-
-	.button {
+	// Override specificty from default button styles.
+	.button.button {
 		display: flex;
 		font-size: var(--primary-nav--font-size-button);
 		font-weight: var(--primary-nav--font-weight-button);
 		text-transform: var(--branding--title--text-transform);
 		background-color: transparent;
+		border: none;
 		color: var(--primary-nav--color-link);
-		z-index: 500;
 
 		.dropdown-icon {
 			display: flex;
@@ -71,9 +67,12 @@
 
 	// When the menu is open, hide the close button and show the hide button.
 	.primary-navigation-open & {
+		width: 100%;
+		z-index: 500;
+		background-color: var(--global--color-background);
 
 		#primary-mobile-menu {
-			display: flex;
+			position: static;
 		}
 	}
 }
@@ -89,33 +88,43 @@
 	margin-top: 0;
 	margin-bottom: 0;
 
-	@include media(mobile-only) {
-		width: 100%;
-	}
-
 	// Mobile menu closed
 	> .primary-menu-container {
+		position: absolute;
 		visibility: hidden;
 		opacity: 0;
-		position: fixed;
 		top: 0;
 		right: 0;
 		bottom: 0;
 		left: 0;
-		padding: calc(4 * var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
+		// Height of the menu-button-container using font size, line height, and total padding, plus 5px so the focus of the first item is visible.
+		padding-top: calc(var(--button--line-height) * var(--primary-nav--font-size-button) + 42px + 5px);
+		padding-left: var(--global--spacing-unit);
+		padding-right: var(--global--spacing-unit);
+		padding-bottom: var(--global--spacing-horizontal);
 		background-color: var(--global--color-background);
-		overflow-x: hidden;
+		overflow-x: scroll;
 		overflow-y: auto;
 		transition: all .15s ease-in-out;
 		transform: translateY(var(--global--spacing-vertical));
 
 		@include media(mobile-only) {
+			height: 100vh;
 			z-index: 499;
+
+			.admin-bar & {
+				height: calc(100vh - 46px);
+			}
 		}
 	}
 
 	// Mobile menu open
 	.primary-navigation-open & {
+
+		@include media(mobile-only) {
+			width: 100%;
+			position: fixed;
+		}
 
 		> .primary-menu-container {
 			visibility: visible;
@@ -125,17 +134,8 @@
 
 	}
 
-	// Adjust button postion when scrolling is locked
-	.lock-scrolling & > .button {
-		position: fixed;
-		top: 0;
-		right: 0;
-	}
-
 	// Adjust positions when logged-in
-	.admin-bar &,
-	.admin-bar & > .primary-menu-container,
-	.admin-bar.lock-scrolling & > .button {
+	.admin-bar & {
 		top: 46px;
 	}
 
@@ -188,7 +188,6 @@
 		position: relative;
 
 		@include media(mobile-only) {
-			margin: calc(2 * var(--global--spacing-vertical)) 0 0 0;
 
 			ul {
 				padding-left: 0;
@@ -402,5 +401,6 @@
 	.lock-scrolling .site {
 		position: fixed;
 		max-width: 100%;
+		width: 100%;
 	}
 }
