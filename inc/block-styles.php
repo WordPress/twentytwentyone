@@ -82,6 +82,15 @@ if ( function_exists( 'register_block_style' ) ) {
 				'label' => __( 'Dark Gray', 'twentytwentyone' ),
 			)
 		);
+
+		/* Columns: Overlapping */
+		register_block_style(
+			'core/columns',
+			array(
+				'name'  => 'twentytwentyone-columns-overlapping',
+				'label' => __( 'Overlapping', 'twentytwentyone' ),
+			)
+		);
 	}
 	add_action( 'init', 'twenty_twenty_one_register_block_styles' );
 }

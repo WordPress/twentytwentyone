@@ -618,6 +618,13 @@ a:hover {
 	max-width: inherit;
 }
 
+@media only screen and (min-width: 652px) {
+	.wp-block-columns.is-style-twentytwentyone-columns-overlapping .wp-block-column:nth-child(2n) {
+		margin-left: -25px;
+		margin-top: 25px;
+	}
+}
+
 .wp-block-file .wp-block-file__textlink {
 	text-decoration: underline;
 	text-decoration-style: solid;

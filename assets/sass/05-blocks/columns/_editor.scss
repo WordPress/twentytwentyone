@@ -1,5 +1,18 @@
-.wp-block-columns .wp-block,
-.wp-block-columns .wp-block-column {
-	// Allow Gutenberg to set the width of a block that lives inside the columns block.
-	max-width: inherit;
+.wp-block-columns {
+
+	.wp-block,
+	.wp-block-column {
+		// Allow Gutenberg to set the width of a block that lives inside the columns block.
+		max-width: inherit;
+	}
+
+	&.is-style-twentytwentyone-columns-overlapping {
+
+		@include media(laptop) {
+			.wp-block-column:nth-child(2n) {
+				margin-left: calc(-1 * var(--global--spacing-horizontal));
+				margin-top: var(--global--spacing-horizontal);
+			}
+		}
+	}
 }
