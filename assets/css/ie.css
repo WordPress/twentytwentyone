@@ -3828,6 +3828,51 @@ table.is-style-stripes tbody tr:nth-child(odd) {
 	background-color: #f0f0f0;
 }
 
+table.wp-calendar-table td,
+table.wp-calendar-table th {
+	background: transparent;
+	border: 0;
+	text-align: center;
+	line-height: 2;
+	vertical-align: middle;
+}
+
+table.wp-calendar-table th {
+	font-weight: bold;
+}
+
+table.wp-calendar-table thead {
+	border: 1px solid #28303d;
+}
+
+table.wp-calendar-table tbody {
+	border: 1px solid #28303d;
+}
+
+table.wp-calendar-table caption {
+	font-weight: bold;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.wp-calendar-nav {
+	text-align: left;
+	margin-top: 10px;
+}
+
+.wp-calendar-nav svg {
+	height: 1em;
+	vertical-align: middle;
+}
+
+.wp-calendar-nav svg path {
+	fill: currentColor;
+}
+
+.wp-calendar-nav .wp-calendar-nav-next {
+	float: right;
+}
+
 .wp-block-verse {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
