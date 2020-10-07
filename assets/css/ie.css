@@ -119,6 +119,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	/* Footer */
 	/* Block: Pull quote */
 	/* Block: Table */
+	/* Widgets */
 }
 
 /* Button extends */
@@ -5594,8 +5595,16 @@ h1.page-title {
 	padding: 0;
 }
 
+.widget-area ul li {
+	line-height: 1.9;
+}
+
 .widget-area ul.sub-menu {
 	margin-left: 13px;
+}
+
+.widget-area ul .sub-menu-toggle {
+	display: none;
 }
 
 .widget-area a {

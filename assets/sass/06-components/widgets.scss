@@ -12,8 +12,16 @@
 		list-style-type: none;
 		padding: 0;
 
+		li {
+			line-height: var(--widget--line-height-list);
+		}
+
 		&.sub-menu {
-			margin-left: var(--primary-nav--padding);
+			margin-left: var(--widget--spacing-menu);
+		}
+
+		.sub-menu-toggle {
+			display: none;
 		}
 	}
 
@@ -46,8 +54,8 @@
 
 .widget-title {
 	font-size: var(--global--font-size-sm);
-	font-weight: 700;
-	line-height: 1.4;
+	font-weight: var(--widget--font-weight-title);
+	line-height: var(--widget--line-height-title);
 }
 
 // Search widget styles
