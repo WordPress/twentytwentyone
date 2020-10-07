@@ -239,6 +239,13 @@ $baseline-unit: 10px;
 	--table--stripes-background-color: var(--global--color-light-gray);
 	--table--has-background-border-color: var(--global--color-dark-gray);
 	--table--has-background-text-color: var(--global--color-dark-gray);
+
+	/* Widgets */
+	--widget--line-height-list: 1.9;
+	--widget--line-height-title: 1.4;
+	--widget--font-weight-title: 700;
+	--widget--spacing-menu: calc(0.66 * var(--global--spacing-unit));
+
 }
 
 @media only screen and (min-width: 652px) { // Not using the mixin because it's compiled after this file

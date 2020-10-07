@@ -302,6 +302,11 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--table--stripes-background-color: var(--global--color-light-gray);
 	--table--has-background-border-color: var(--global--color-dark-gray);
 	--table--has-background-text-color: var(--global--color-dark-gray);
+	/* Widgets */
+	--widget--line-height-list: 1.9;
+	--widget--line-height-title: 1.4;
+	--widget--font-weight-title: 700;
+	--widget--spacing-menu: calc(0.66 * var(--global--spacing-unit));
 }
 
 @media only screen and (min-width: 652px) {
@@ -4142,8 +4147,16 @@ h1.page-title {
 	padding: 0;
 }
 
+.widget-area ul li {
+	line-height: var(--widget--line-height-list);
+}
+
 .widget-area ul.sub-menu {
-	margin-right: var(--primary-nav--padding);
+	margin-right: var(--widget--spacing-menu);
+}
+
+.widget-area ul .sub-menu-toggle {
+	display: none;
 }
 
 .widget-area a {
@@ -4171,8 +4184,8 @@ h1.page-title {
 
 .widget-title {
 	font-size: var(--global--font-size-sm);
-	font-weight: 700;
-	line-height: 1.4;
+	font-weight: var(--widget--font-weight-title);
+	line-height: var(--widget--line-height-title);
 }
 
 .search-form {
