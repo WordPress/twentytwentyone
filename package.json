@@ -16,6 +16,7 @@
 		"@wordpress/browserslist-config": "^2.2.2",
 		"@wordpress/env": "^2.0.1",
 		"@wordpress/eslint-plugin": "^7.2.1",
+		"eslint": "^7.10.0",
 		"autoprefixer": "^9.5.1",
 		"chokidar-cli": "^2.1.0",
 		"minimist": "^1.2.2",
