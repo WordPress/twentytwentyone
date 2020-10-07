@@ -3707,9 +3707,13 @@ h1.page-title {
 	.primary-navigation > .primary-menu-container {
 		height: 100vh;
 		z-index: 499;
+		border-left: 4px solid transparent;
 	}
 	.admin-bar .primary-navigation > .primary-menu-container {
 		height: calc(100vh - 46px);
+	}
+	.primary-navigation > .primary-menu-container:focus {
+		border-left: 4px solid var(--global--color-primary);
 	}
 }
 

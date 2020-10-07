@@ -111,9 +111,14 @@
 		@include media(mobile-only) {
 			height: 100vh;
 			z-index: 499;
+			border-left: 4px solid transparent;
 
 			.admin-bar & {
 				height: calc(100vh - 46px);
+			}
+
+			&:focus {
+				border-left: 4px solid var(--global--color-primary);
 			}
 		}
 	}
