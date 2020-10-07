@@ -17,6 +17,7 @@
 	--global--font-size-lg: 1.5rem;
 	--global--font-size-xl: 2.25rem;
 	--global--font-size-xxl: 4rem;
+	--global--font-size-xxxl: 5rem;
 	--global--font-size-page-title: var(--global--font-size-xxl);
 	--global--letter-spacing: normal;
 	/* Line Height */
@@ -210,12 +211,18 @@
 	--table--stripes-background-color: var(--global--color-light-gray);
 	--table--has-background-border-color: var(--global--color-dark-gray);
 	--table--has-background-text-color: var(--global--color-dark-gray);
+	/* Widgets */
+	--widget--line-height-list: 1.9;
+	--widget--line-height-title: 1.4;
+	--widget--font-weight-title: 700;
+	--widget--spacing-menu: calc(0.66 * var(--global--spacing-unit));
 }
 
 @media only screen and (min-width: 652px) {
 	:root {
 		--global--font-size-xl: 2.5rem;
 		--global--font-size-xxl: 6rem;
+		--global--font-size-xxxl: 9rem;
 		--heading--font-size-h3: 2rem;
 		--heading--font-size-h2: 3rem;
 	}
@@ -593,6 +600,11 @@ a:hover {
 .wp-block-cover.is-style-twentytwentyone-border,
 .wp-block-cover-image.is-style-twentytwentyone-border {
 	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+}
+
+.wp-block-columns .wp-block,
+.wp-block-columns .wp-block-column {
+	max-width: inherit;
 }
 
 .wp-block-file .wp-block-file__textlink {
@@ -1200,7 +1212,7 @@ p.has-background {
 	font-size: var(--form--font-size);
 	line-height: var(--form--line-height);
 	max-width: inherit;
-	margin-right: calc(.66 * var(--global--spacing-horizontal));
+	margin-right: calc(-1 * var(--button--border-width));
 	padding: var(--form--spacing-unit);
 }
 
@@ -1210,6 +1222,14 @@ p.has-background {
 
 .wp-block-search .wp-block-search__button {
 	box-shadow: none;
+	margin-left: 0;
+	background-color: transparent;
+	color: var(--button--color-text-hover);
+}
+
+.wp-block-search .wp-block-search__button:hover {
+	background-color: var(--button--color-background);
+	color: var(--button--color-text);
 }
 
 .wp-block-separator,

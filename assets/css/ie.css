@@ -119,6 +119,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	/* Footer */
 	/* Block: Pull quote */
 	/* Block: Table */
+	/* Widgets */
 }
 
 /* Button extends */
@@ -3642,13 +3643,24 @@ p.has-text-color a {
 	color: #28303d;
 	line-height: 1.7;
 	max-width: inherit;
-	margin-right: 17px;
+	margin-right: -3px;
 	padding: 10px;
 }
 
 .wp-block-search .wp-block-search__input:focus {
 	color: #28303d;
 	border-color: #39414d;
+}
+
+.wp-block-search button.wp-block-search__button {
+	margin-left: 0;
+	background-color: transparent;
+	color: #39414d;
+}
+
+.wp-block-search button.wp-block-search__button:hover {
+	background-color: #39414d;
+	color: #d1e4dd;
 }
 
 .wp-block-search__button {
@@ -4053,49 +4065,73 @@ table.is-style-stripes tbody tr:nth-child(odd) {
 	}
 }
 
-:root .is-huge-text {
+:root .is-extra-large-text {
 	font-size: 2.5rem;
 	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px){
+	:root .is-extra-large-text{
+	font-size: 2.5rem;
+	}
+}
+
+:root .has-extra-large-font-size {
+	font-size: 2.5rem;
+	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px){
+	:root .has-extra-large-font-size{
+	font-size: 2.5rem;
+	}
+}
+
+:root .is-huge-text {
+	font-size: 6rem;
+	line-height: 1.3;
+	font-weight: 300;
 }
 
 @media only screen and (min-width: 652px){
 	:root .is-huge-text{
-	font-size: 2.5rem;
+	font-size: 6rem;
 	}
 }
 
 :root .has-huge-font-size {
-	font-size: 2.5rem;
+	font-size: 6rem;
 	line-height: 1.3;
+	font-weight: 300;
 }
 
 @media only screen and (min-width: 652px){
 	:root .has-huge-font-size{
-	font-size: 2.5rem;
+	font-size: 6rem;
 	}
 }
 
 :root .is-gigantic-text {
-	font-size: 6rem;
+	font-size: 9rem;
 	line-height: 1.3;
 	font-weight: 300;
 }
 
 @media only screen and (min-width: 652px){
 	:root .is-gigantic-text{
-	font-size: 6rem;
+	font-size: 9rem;
 	}
 }
 
 :root .has-gigantic-font-size {
-	font-size: 6rem;
+	font-size: 9rem;
 	line-height: 1.3;
 	font-weight: 300;
 }
 
 @media only screen and (min-width: 652px){
 	:root .has-gigantic-font-size{
-	font-size: 6rem;
+	font-size: 9rem;
 	}
 }
 
@@ -5558,6 +5594,31 @@ h1.page-title {
 	}
 }
 
+.widget-area ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.widget-area ul li {
+	line-height: 1.9;
+}
+
+.widget-area ul.sub-menu {
+	margin-left: 13px;
+}
+
+.widget-area ul .sub-menu-toggle {
+	display: none;
+}
+
+.widget-area a {
+	text-decoration: underline solid currentColor;
+}
+
+.widget-area a:hover {
+	text-decoration-style: dotted;
+}
+
 .widget-area .wp-block-social-links.alignright {
 	margin-top: 30px;
 	justify-content: flex-end;
@@ -5565,6 +5626,12 @@ h1.page-title {
 
 .widget-area .wp-block-social-links.alignleft {
 	margin-top: 30px;
+}
+
+.widget-area:after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 .widget-title {
@@ -5605,6 +5672,21 @@ h1.page-title {
 
 .search-form .search-submit {
 	margin-left: 10px;
+}
+
+.widget_search > .search-form .search-field {
+	margin-right: -3px;
+}
+
+.widget_search > .search-form .search-submit {
+	margin-left: 0;
+	background-color: transparent;
+	color: #39414d;
+}
+
+.widget_search > .search-form .search-submit:hover {
+	background-color: #39414d;
+	color: #d1e4dd;
 }
 
 /* Category 07 is for any utility classes that are not assigned to a specific component. */

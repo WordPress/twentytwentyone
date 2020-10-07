@@ -28,6 +28,7 @@
 	/* Footer */
 	/* Block: Pull quote */
 	/* Block: Table */
+	/* Widgets */
 }
 
 /* Button extends */
@@ -610,6 +611,11 @@ a:hover {
 
 .wp-block-cover-image.is-style-twentytwentyone-border {
 	border: 3px solid #28303d;
+}
+
+.wp-block-columns .wp-block,
+.wp-block-columns .wp-block-column {
+	max-width: inherit;
 }
 
 .wp-block-file .wp-block-file__textlink {
@@ -1613,7 +1619,7 @@ p.has-background {
 	font-size: 1.125rem;
 	line-height: 1.7;
 	max-width: inherit;
-	margin-right: 17px;
+	margin-right: -3px;
 	padding: 10px;
 }
 
@@ -1623,6 +1629,14 @@ p.has-background {
 
 .wp-block-search .wp-block-search__button {
 	box-shadow: none;
+	margin-left: 0;
+	background-color: transparent;
+	color: #39414d;
+}
+
+.wp-block-search .wp-block-search__button:hover {
+	background-color: #39414d;
+	color: #d1e4dd;
 }
 
 .wp-block-separator {
