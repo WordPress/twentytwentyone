@@ -4146,6 +4146,23 @@ h1.page-title {
 	}
 }
 
+.widget-area ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.widget-area ul.sub-menu {
+	margin-left: var(--primary-nav--padding);
+}
+
+.widget-area a {
+	text-decoration: underline solid currentColor;
+}
+
+.widget-area a:hover {
+	text-decoration-style: dotted;
+}
+
 .widget-area .wp-block-social-links.alignright {
 	margin-top: var(--global--spacing-vertical);
 	justify-content: flex-end;

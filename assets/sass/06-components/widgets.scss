@@ -8,6 +8,23 @@
 		column-gap: calc(2 * var(--global--spacing-horizontal));
 	}
 
+	ul {
+		list-style-type: none;
+		padding: 0;
+
+		&.sub-menu {
+			margin-left: var(--primary-nav--padding);
+		}
+	}
+
+	a {
+		text-decoration: underline solid currentColor;
+
+		&:hover {
+			text-decoration-style: dotted;
+		}
+	}
+	
 	.wp-block-social-links {
 
 		&.alignright {

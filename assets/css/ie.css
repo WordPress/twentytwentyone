@@ -5589,6 +5589,21 @@ h1.page-title {
 	}
 }
 
+.widget-area ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.widget-area ul.sub-menu {
+	margin-left: 13px;
+}
+
+.widget-area a {
+	text-decoration: underline solid currentColor;
+}
+
+.widget-area a:hover {
+	text-decoration-style: dotted;
 .widget-area .wp-block-social-links.alignright {
 	margin-top: 30px;
 	justify-content: flex-end;
