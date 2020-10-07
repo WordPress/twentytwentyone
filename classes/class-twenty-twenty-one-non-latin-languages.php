@@ -12,6 +12,8 @@
 if ( ! class_exists( 'Twenty_Twenty_One_Non_Latin_Languages' ) ) {
 	/**
 	 * Language handling.
+	 *
+	 * @since 1.0
 	 */
 	class Twenty_Twenty_One_Non_Latin_Languages {
 
@@ -19,6 +21,10 @@ if ( ! class_exists( 'Twenty_Twenty_One_Non_Latin_Languages' ) ) {
 		 * Get custom CSS.
 		 *
 		 * Return CSS for non-latin language, if available, or null
+		 *
+		 * @access public
+		 *
+		 * @since 1.0
 		 *
 		 * @param string $type Whether to return CSS for the "front-end", "block-editor" or "classic-editor".
 		 *
@@ -90,7 +96,6 @@ if ( ! class_exists( 'Twenty_Twenty_One_Non_Latin_Languages' ) ) {
 
 					// Vietnamese.
 					'vi'    => array( '\'Libre Franklin\'', 'sans-serif' ),
-
 				)
 			);
 
