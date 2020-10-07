@@ -2202,6 +2202,12 @@ a:hover {
 	color: #28303d;
 }
 
+.wp-block-columns {
+	/**
+	 * Block Options
+	 */
+}
+
 .wp-block-columns .wp-block-column > * {
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -2241,6 +2247,14 @@ a:hover {
 		/* Resetting margins to match _block-container.scss */
 		margin-bottom: 0;
 	}
+}
+
+.wp-block-columns.alignfull .wp-block-column:first-of-type > *:not(ul):not(.wp-block-image):not(.wp-block-cover):not(.wp-block-media-text):not(.has-background) {
+	padding-left: 20px;
+}
+
+.wp-block-columns.alignfull .wp-block-column:last-of-type > *:not(ul):not(.wp-block-image):not(.wp-block-cover):not(.wp-block-media-text):not(.has-background) {
+	padding-right: 20px;
 }
 
 .wp-block-cover {
