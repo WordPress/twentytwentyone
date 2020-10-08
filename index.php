@@ -22,7 +22,7 @@ if ( have_posts() ) {
 	while ( have_posts() ) {
 		the_post();
 
-		if( get_theme_mod( 'display_excerpt_or_fullpost', 'excerpt' ) === 'excerpt' ){
+		if ( get_theme_mod( 'display_excerpt_or_fullpost', 'excerpt' ) === 'excerpt' ) {
 			get_template_part( 'template-parts/content/content-excerpt' );
 		} else {
 			get_template_part( 'template-parts/content/content' );
