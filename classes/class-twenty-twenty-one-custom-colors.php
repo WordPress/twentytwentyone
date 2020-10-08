@@ -26,6 +26,9 @@ class Twenty_Twenty_One_Custom_Colors {
 
 		// Enqueue color variables for editor.
 		add_action( 'enqueue_block_editor_assets', array( $this, 'editor_custom_color_variables' ) );
+
+		// Add body-class if needed.
+		add_filter( 'body_class', array( $this, 'body_class' ) );
 	}
 
 	/**
@@ -40,7 +43,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 * @return string (hex color)
 	 */
 	public function custom_get_readable_color( $background_color ) {
-		return ( 127 < self::get_relative_luminance_from_hex( $background_color ) ) ? '#000' : '#fff';
+		return ( 127 < $this->get_relative_luminance_from_hex( $background_color ) ) ? '#000' : '#fff';
 	}
 
 	/**
@@ -119,8 +122,6 @@ class Twenty_Twenty_One_Custom_Colors {
 	/**
 	 * Get luminance from a HEX color.
 	 *
-	 * @static
-	 *
 	 * @access public
 	 *
 	 * @since 1.0.0
@@ -129,7 +130,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @return int Returns a number (0-255).
 	 */
-	public static function get_relative_luminance_from_hex( $hex ) {
+	public function get_relative_luminance_from_hex( $hex ) {
 
 		// Remove the "#" symbol from the beginning of the color.
 		$hex = ltrim( $hex, '#' );
@@ -147,5 +148,25 @@ class Twenty_Twenty_One_Custom_Colors {
 		// Calculate the luminance.
 		$lum = ( 0.2126 * $red ) + ( 0.7152 * $green ) + ( 0.0722 * $blue );
 		return (int) round( $lum );
+	}
+
+	/**
+	 * Adds a class to <body> if the background-color is dark.
+	 *
+	 * @access public
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param array $classes The existing body classes.
+	 *
+	 * @return array
+	 */
+	public function body_class( $classes ) {
+		$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
+		if ( 127 > $this->get_relative_luminance_from_hex( $background_color ) ) {
+			$classes[] = 'is-background-dark';
+		}
+
+		return $classes;
 	}
 }
