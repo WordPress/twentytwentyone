@@ -66,6 +66,37 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 				)
 			);
 
+			/**
+			 * Add excerpt or full text selector to customizer
+			 */
+
+			$wp_customize->add_section( 'theme_settings' , array(
+				'title'      => __('Theme settings','twentytwentyone'),
+				'priority'   => 30,
+			) );
+
+
+			$wp_customize->add_setting(
+				'display_excerpt_or_fullpost',
+				array(
+					'capability'        => 'edit_theme_options',
+					'default'           => 'excerpt',
+				)
+			);
+
+			$wp_customize->add_control(
+				'display_excerpt_or_fullpost',
+				array(
+					'type'    => 'radio',
+					'section' => 'theme_settings',
+					'label'   => __( 'On the Posts page, post show:', 'twentytwentyone' ),
+					'choices' => array(
+						'excerpt' => 'Excerpt',
+						'full' 	  => 'Full text',
+					),
+				)
+			);
+
 			// Background color.
 			// Include the custom control class.
 			include_once get_theme_file_path( 'classes/class-twenty-twenty-one-customize-color-control.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
