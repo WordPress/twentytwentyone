@@ -41,11 +41,13 @@ jobs:
             - name: Check for PHP errors
               run: composer lint
 
+						- name: Check for JS errors
+							run: npm install && npm run lint:js
 
     phpcs_check:
         name: PHPCS check
         runs-on: ubuntu-latest
-            
+
         steps:
             # Checkout repository
             - name: Checkout
