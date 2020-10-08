@@ -98,7 +98,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 					'capability' => 'edit_theme_options',
 					'default'    => 'excerpt',
 					'sanitize_callback' => function( $value ) {
-						return 'excerpt' === $value || 'full' === $value ? $value : 'excerpt'
+						return 'excerpt' === $value || 'full' === $value ? $value : 'excerpt';
 					},
 				)
 			);
