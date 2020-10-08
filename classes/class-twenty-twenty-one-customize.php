@@ -88,7 +88,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 			$wp_customize->add_section(
 				'theme_settings',
 				array(
-					'title'    => __( 'Theme settings', 'twentytwentyone' ),
+					'title'    => esc_html__( 'Theme settings', 'twentytwentyone' ),
 					'priority' => 30,
 				)
 			);
