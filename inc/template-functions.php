@@ -190,7 +190,7 @@ function twenty_twenty_one_get_avatar_size() {
 }
 
 /**
- * Create the continue reading link.
+ * Create the continue reading link for excerpt.
  */
 function twenty_twenty_one_continue_reading_link_excerpt() {
 
@@ -208,6 +208,9 @@ function twenty_twenty_one_continue_reading_link_excerpt() {
 // Filter the excerpt more link.
 add_filter( 'excerpt_more', 'twenty_twenty_one_continue_reading_link_excerpt' );
 
+/**
+ * Create the continue reading link.
+ */
 function twenty_twenty_one_continue_reading_link() {
 
 	if ( ! is_admin() ) {
