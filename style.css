@@ -177,7 +177,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--global--spacing-horizontal: 25px;
 	--global--spacing-vertical: 30px;
 	/* Elevation */
-	--global--elevation: 1px 1px 3px 0 rgba(0, 0, 0, 0.2);
+	--global--elevation: 1px 2px 3px 0 rgba(0, 0, 0, 0.2);
 	/* Forms */
 	--form--font-family: var(--global--font-secondary);
 	--form--font-size: var(--global--font-size-sm);
@@ -204,10 +204,10 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--button--font-family: var(--global--font-primary);
 	--button--font-size: var(--global--font-size-base);
 	--button--font-weight: 500;
-	--button--line-height: 1.5;
+	--button--line-height: 1.7;
 	--button--border-width: 3px;
 	--button--border-radius: 0;
-	--button--padding-vertical: 15px;
+	--button--padding-vertical: 19px;
 	--button--padding-horizontal: calc(2 * var(--button--padding-vertical));
 	/* entry */
 	--entry-header--color: var(--global--color-primary);
