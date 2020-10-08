@@ -418,10 +418,6 @@ function twenty_twenty_one_skip_link_focus_fix() {
 }
 add_action( 'wp_print_footer_scripts', 'twenty_twenty_one_skip_link_focus_fix' );
 
-
-// Non-latin language handling.
-require get_template_directory() . '/classes/class-twenty-twenty-one-non-latin-languages.php';
-
 /** Enqueue non-latin language styles
  *
  * @since 1.0.0
