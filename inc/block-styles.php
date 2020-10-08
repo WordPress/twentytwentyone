@@ -18,43 +18,39 @@ if ( function_exists( 'register_block_style' ) ) {
 	 * @return void
 	 */
 	function twenty_twenty_one_register_block_styles() {
-		register_block_style(
-			'core/image',
-			array(
-				'name'  => 'twentytwentyone-image-frame',
-				'label' => esc_html__( 'Bordered Frame', 'twentytwentyone' ),
-			)
-		);
-
-		register_block_style(
-			'core/image',
-			array(
-				'name'  => 'twentytwentyone-border',
-				'label' => esc_html__( 'Bordered', 'twentytwentyone' ),
-			)
-		);
-
+		// Cover: Borders.
 		register_block_style(
 			'core/cover',
 			array(
 				'name'  => 'twentytwentyone-border',
-				'label' => esc_html__( 'Bordered', 'twentytwentyone' ),
+				'label' => esc_html__( 'Borders', 'twentytwentyone' ),
 			)
 		);
 
+		// Group: Borders.
 		register_block_style(
 			'core/group',
 			array(
 				'name'  => 'twentytwentyone-border',
-				'label' => esc_html__( 'Bordered', 'twentytwentyone' ),
+				'label' => esc_html__( 'Borders', 'twentytwentyone' ),
 			)
 		);
 
+		// Image: Borders.
 		register_block_style(
-			'core/media-text',
+			'core/image',
 			array(
 				'name'  => 'twentytwentyone-border',
-				'label' => esc_html__( 'Bordered', 'twentytwentyone' ),
+				'label' => esc_html__( 'Borders', 'twentytwentyone' ),
+			)
+		);
+
+		// Image: Frame.
+		register_block_style(
+			'core/image',
+			array(
+				'name'  => 'twentytwentyone-image-frame',
+				'label' => esc_html__( 'Frame', 'twentytwentyone' ),
 			)
 		);
 
@@ -72,6 +68,15 @@ if ( function_exists( 'register_block_style' ) ) {
 			'core/latest-posts',
 			array(
 				'name'  => 'twentytwentyone-latest-posts-borders',
+				'label' => esc_html__( 'Borders', 'twentytwentyone' ),
+			)
+		);
+
+		// Media & Text: Borders.
+		register_block_style(
+			'core/media-text',
+			array(
+				'name'  => 'twentytwentyone-border',
 				'label' => esc_html__( 'Borders', 'twentytwentyone' ),
 			)
 		);
