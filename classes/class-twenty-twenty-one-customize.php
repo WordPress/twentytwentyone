@@ -84,7 +84,6 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 			/**
 			 * Add excerpt or full text selector to customizer
 			 */
-
 			$wp_customize->add_section(
 				'theme_settings',
 				array(
@@ -92,7 +91,6 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 					'priority' => 30,
 				)
 			);
-
 
 			$wp_customize->add_setting(
 				'display_excerpt_or_fullpost',
