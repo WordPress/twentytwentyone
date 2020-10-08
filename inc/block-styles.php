@@ -85,7 +85,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			)
 		);
 
-		// Columns: Overlapping
+		// Columns: Overlapping.
 		register_block_style(
 			'core/columns',
 			array(
