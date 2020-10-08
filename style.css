@@ -2813,6 +2813,7 @@ table.wp-calendar-table th {
 	text-align: center;
 	line-height: 2;
 	vertical-align: middle;
+	word-break: normal;
 }
 
 table.wp-calendar-table th {
