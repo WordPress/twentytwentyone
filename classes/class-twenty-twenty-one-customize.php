@@ -107,7 +107,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 				array(
 					'type'    => 'radio',
 					'section' => 'theme_settings',
-					'label'   => __( 'On the Posts page, post show:', 'twentytwentyone' ),
+					'label'   => esc_html__( 'On the Posts page, post show:', 'twentytwentyone' ),
 					'choices' => array(
 						'excerpt' => 'Excerpt',
 						'full'    => 'Full text',
