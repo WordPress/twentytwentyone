@@ -58,6 +58,7 @@
 				> ul,
 				> ol,
 				> pre {
+
 					&:not(.has-background) {
 						background-color: var(--global--color-background);
 						padding: var(--global--spacing-unit);
