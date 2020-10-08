@@ -61,7 +61,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 		)
 	);
 
-	// Overlapping Images
+	// Overlapping Images.
 	register_block_pattern(
 		'twentytwentyone/overlapping-images',
 		array(
