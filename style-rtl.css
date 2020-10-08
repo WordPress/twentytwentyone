@@ -3878,7 +3878,7 @@ h1.page-title {
 		margin: 0;
 		min-width: max-content;
 		position: absolute;
-		top: 100%;
+		top: calc(100% + 2px);
 		transition: all 0.5s ease;
 		z-index: 99999;
 	}
