@@ -4494,6 +4494,12 @@ nav a {
 	margin-bottom: 90px;
 }
 
+.home .entry-header {
+	border-bottom: none;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
 .singular .has-post-thumbnail .entry-header {
 	border-bottom: none;
 	padding-bottom: 39px;
