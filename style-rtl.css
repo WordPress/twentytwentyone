@@ -4126,7 +4126,7 @@ h1.page-title {
 	color: var(--global--color-primary);
 }
 
-@media only screen and (min-width: 482px) {
+@media only screen and (min-width: 592px) {
 	.navigation .nav-links {
 		display: flex;
 		justify-content: center;
@@ -4253,6 +4253,24 @@ h1.page-title {
 .pagination .nav-links > *.prev,
 .comments-pagination .nav-links > *.prev {
 	margin-left: auto;
+}
+
+@media only screen and (max-width: 591px) {
+	.pagination .nav-links,
+	.comments-pagination .nav-links {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.pagination .page-numbers,
+	.comments-pagination .page-numbers {
+		display: none;
+	}
+	.pagination .page-numbers.prev, .pagination .page-numbers.next,
+	.comments-pagination .page-numbers.prev,
+	.comments-pagination .page-numbers.next {
+		display: inline-block;
+		flex: 0 1 auto;
+	}
 }
 
 .comments-pagination {
