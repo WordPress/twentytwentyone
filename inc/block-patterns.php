@@ -37,7 +37,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 		)
 	);
 
-	// Links Area
+	// Links Area.
 	register_block_pattern(
 		'twentytwentyone/links-area',
 		array(
