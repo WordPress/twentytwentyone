@@ -201,7 +201,7 @@ function twenty_twenty_one_continue_reading_link() {
 			the_title( '<span class="screen-reader-text">' . esc_html__( 'about ', 'twentytwentyone' ), '</span>', false )
 		);
 
-		return '&hellip; <a class="more-link" href="' . esc_url( get_permalink() ) . '">' . $continue_reading . '</a>';
+		return '<div><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . $continue_reading . '</a></div>';
 	}
 }
 
