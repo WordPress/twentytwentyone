@@ -240,7 +240,7 @@
 			// When the sub-menu is open, display the minus icon
 			&[aria-expanded="true"] {
 				/* stylelint-disable */
-				background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M4 9h12v2H4V9z' fill='%2328303d'/></svg>") no-repeat center center;
+				background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M6 11h12v2H6z' fill='%2328303d'/></svg>") no-repeat center center;
 				/* stylelint-enable */
 			}
 
@@ -248,7 +248,7 @@
 
 		.hover .sub-menu-toggle {
 			/* stylelint-disable */
-			background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M4 9h12v2H4V9z' fill='%2328303d'/></svg>") no-repeat center center;
+			background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M6 11h12v2H6z' fill='%2328303d'/></svg>") no-repeat center center;
 			/* stylelint-enable */
 		}
 
@@ -263,7 +263,7 @@
 				margin: 0;
 				min-width: max-content;
 				position: absolute;
-				top: 100%;
+				top: calc(100% + 3px);
 				transition: all 0.5s ease;
 				z-index: 99999;
 			}
@@ -278,14 +278,27 @@
 	.primary-menu > .menu-item:hover > a {
 		color: var(--primary-nav--color-link-hover);
 	}
-	// Top-level Menu Item
-	.primary-menu-container > ul > .menu-item {
+
+	.primary-menu-container {
 		@include media(mobile) {
-			display: flex;
-			align-items: center;
-			margin-left: calc(-1 * var(--primary-nav--padding)); // Better align with the site title when the menu wraps.
-			margin-right: var(--primary-nav--padding);
-			padding: 0 var(--primary-nav--padding);
+			// Better align with the site title when the menu wraps.
+			margin-right: calc(0px - var(--primary-nav--padding));
+			margin-left: calc(0px - var(--primary-nav--padding));
+
+			// Top-level Menu Item
+			> ul > .menu-item {
+				display: flex;
+				align-items: center;
+
+				> a {
+					padding-left: var(--primary-nav--padding);
+					padding-right: var(--primary-nav--padding);
+
+					+ .sub-menu-toggle {
+						margin-left: calc(0px - var(--primary-nav--padding));
+					}
+				}
+			}
 		}
 	}
 
