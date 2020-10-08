@@ -18,6 +18,15 @@ if ( function_exists( 'register_block_style' ) ) {
 	 * @return void
 	 */
 	function twenty_twenty_one_register_block_styles() {
+		// Columns: Overlap.
+		register_block_style(
+			'core/columns',
+			array(
+				'name'  => 'twentytwentyone-columns-overlap',
+				'label' => __( 'Overlap', 'twentytwentyone' ),
+			)
+		);
+
 		// Cover: Borders.
 		register_block_style(
 			'core/cover',
@@ -87,15 +96,6 @@ if ( function_exists( 'register_block_style' ) ) {
 			array(
 				'name'  => 'twentytwentyone-social-icons-color',
 				'label' => esc_html__( 'Dark Gray', 'twentytwentyone' ),
-			)
-		);
-
-		// Columns: Overlapping.
-		register_block_style(
-			'core/columns',
-			array(
-				'name'  => 'twentytwentyone-columns-overlapping',
-				'label' => __( 'Overlapping', 'twentytwentyone' ),
 			)
 		);
 	}
