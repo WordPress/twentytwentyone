@@ -4494,6 +4494,12 @@ nav a {
 	margin-bottom: 90px;
 }
 
+.home .entry-header {
+	border-bottom: none;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
 .singular .has-post-thumbnail .entry-header {
 	border-bottom: none;
 	padding-bottom: 39px;
@@ -5964,17 +5970,14 @@ h1.page-title {
 
 .has-black-background-color[class] {
 	background-color: #000;
-	color: #fff;
 }
 
 .has-gray-background-color[class] {
 	background-color: #39414d;
-	color: #fff;
 }
 
 .has-dark-gray-background-color[class] {
 	background-color: #28303d;
-	color: #fff;
 }
 
 .has-green-background-color[class] {
@@ -6003,6 +6006,46 @@ h1.page-title {
 
 .has-white-background-color[class] {
 	background-color: #fff;
+}
+
+:not(.has-text-color).has-black-background-color[class] {
+	color: #fff;
+}
+
+:not(.has-text-color).has-gray-background-color[class] {
+	color: #fff;
+}
+
+:not(.has-text-color).has-dark-gray-background-color[class] {
+	color: #fff;
+}
+
+:not(.has-text-color).has-green-background-color[class] {
+	color: #28303d;
+}
+
+:not(.has-text-color).has-blue-background-color[class] {
+	color: #28303d;
+}
+
+:not(.has-text-color).has-purple-background-color[class] {
+	color: #28303d;
+}
+
+:not(.has-text-color).has-red-background-color[class] {
+	color: #28303d;
+}
+
+:not(.has-text-color).has-orange-background-color[class] {
+	color: #28303d;
+}
+
+:not(.has-text-color).has-yellow-background-color[class] {
+	color: #28303d;
+}
+
+:not(.has-text-color).has-white-background-color[class] {
+	color: #28303d;
 }
 
 .has-purple-to-yellow-gradient-background {
