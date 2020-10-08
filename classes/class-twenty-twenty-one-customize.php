@@ -109,8 +109,8 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 					'section' => 'theme_settings',
 					'label'   => esc_html__( 'On the Posts page, post show:', 'twentytwentyone' ),
 					'choices' => array(
-						'excerpt' => 'Excerpt',
-						'full'    => 'Full text',
+						'excerpt' => esc_html__( 'Excerpt', 'twentytwentyone' ),
+						'full'    => esc_html__( 'Full text', 'twentytwentyone' ),
 					),
 				)
 			);
