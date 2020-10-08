@@ -4238,6 +4238,10 @@ table.wp-calendar-table caption {
 	margin-right: 140px;
 }
 
+.site-branding:last-child {
+	margin-right: 0;
+}
+
 @media only screen and (min-width: 482px) {
 	.site-branding {
 		margin-right: initial;
@@ -5474,8 +5478,6 @@ h1.page-title {
 	display: inline-block;
 	fill: currentColor;
 	vertical-align: middle;
-	position: relative;
-	top: -2px;
 }
 
 .post-navigation {

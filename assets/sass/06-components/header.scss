@@ -19,6 +19,10 @@
 	color: var(--branding--color-text);
 	margin-right: 140px;
 
+	&:last-child {
+		margin-right: 0;
+	}
+
 	@include media(mobile) {
 		margin-right: initial;
 		margin-bottom: var(--global--spacing-vertical); // Add a margin in case the menu wraps below the site branding.
