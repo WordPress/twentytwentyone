@@ -93,6 +93,15 @@ if ( function_exists( 'register_block_style' ) ) {
 				'label' => __( 'Overlapping', 'twentytwentyone' ),
 			)
 		);
+
+		// Media & Text: Overlapping
+		register_block_style(
+			'core/media-text',
+			array(
+				'name'  => 'twentytwentyone-media-text-overlapping',
+				'label' => __( 'Overlapping', 'twentytwentyone' ),
+			)
+		);
 	}
 	add_action( 'init', 'twenty_twenty_one_register_block_styles' );
 }
