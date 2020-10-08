@@ -40,7 +40,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 * @return string (hex color)
 	 */
 	public function custom_get_readable_color( $background_color ) {
-		return ( 127 < $this->get_relative_luminance_from_hex( $background_color ) ) ? '#000' : '#fff';
+		return ( 127 < self::get_relative_luminance_from_hex( $background_color ) ) ? '#000' : '#fff';
 	}
 
 	/**
@@ -119,6 +119,8 @@ class Twenty_Twenty_One_Custom_Colors {
 	/**
 	 * Get luminance from a HEX color.
 	 *
+	 * @static
+	 *
 	 * @access public
 	 *
 	 * @since 1.0.0
@@ -127,7 +129,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @return int Returns a number (0-255).
 	 */
-	public function get_relative_luminance_from_hex( $hex ) {
+	public static function get_relative_luminance_from_hex( $hex ) {
 
 		// Remove the "#" symbol from the beginning of the color.
 		$hex = ltrim( $hex, '#' );
