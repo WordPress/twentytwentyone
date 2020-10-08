@@ -38,4 +38,30 @@
 			margin-bottom: 0;
 		}
 	}
+
+	/**
+	 * Block Options
+	 */
+	 &.alignfull {
+
+		.wp-block-column:first-of-type {
+
+			> * {
+
+				&:not(ul):not(.wp-block-image):not(.wp-block-cover):not(.wp-block-media-text):not(.has-background) {
+					padding-left: var(--global--spacing-unit);
+				}
+			}
+		}
+
+		.wp-block-column:last-of-type {
+
+			> * {
+
+				&:not(ul):not(.wp-block-image):not(.wp-block-cover):not(.wp-block-media-text):not(.has-background) {
+					padding-right: var(--global--spacing-unit);
+				}
+			}
+		}
+	}
 }
