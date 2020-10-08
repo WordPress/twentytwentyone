@@ -138,8 +138,8 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--heading--line-height-h2: var(--heading--line-height);
 	--heading--line-height-h1: var(--global--line-height-page-title);
 	--heading--font-weight: normal;
-	--heading--font-weight-page-title: 300;
-	--heading--font-weight-strong: 600;
+	--heading--font-weight-page-title: 260;
+	--heading--font-weight-strong: 580;
 	/* Block: Latest posts */
 	--latest-posts--title-font-family: var(--heading--font-family);
 	--latest-posts--title-font-size: var(--heading--font-size-h3);
@@ -148,7 +148,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--list--font-family: var(--global--font-secondary);
 	--definition-term--font-family: var(--global--font-primary);
 	/* Colors */
-	--global--color-black: #000;
+	--global--color-black: #0000;
 	--global--color-dark-gray: #28303d;
 	--global--color-gray: #39414d;
 	--global--color-light-gray: #f0f0f0;
@@ -174,8 +174,8 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	/* Spacing */
 	--global--spacing-unit: 20px;
 	--global--spacing-measure: unset;
-	--global--spacing-horizontal: 25px;
-	--global--spacing-vertical: 30px;
+	--global--spacing-horizontal: 20px;
+	--global--spacing-vertical: 25px;
 	/* Elevation */
 	--global--elevation: 1px 1px 3px 0 rgba(0, 0, 0, 0.2);
 	/* Forms */
@@ -348,7 +348,7 @@ input[type="submit"]:after,
 input[type="reset"]:after,
 .wp-block-button .wp-block-button__link:after, .wp-block-file .wp-block-file__button:after {
 	content: "";
-	display: block;
+	display: inline-block;
 	height: 0;
 	width: 0;
 }
