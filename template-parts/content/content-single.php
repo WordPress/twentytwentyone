@@ -37,7 +37,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwentyone' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'twentytwentyone' ),
 				'after'  => '</div>',
 			)
 		);
@@ -48,8 +48,8 @@
 		<?php twenty_twenty_one_entry_meta_footer(); ?>
 	</footer><!-- .entry-footer -->
 
-	<?php if ( ! is_singular( 'attachment' ) ) { ?>
+	<?php if ( ! is_singular( 'attachment' ) ) : ?>
 		<?php get_template_part( 'template-parts/post/author-bio' ); ?>
-	<?php } ?>
+	<?php endif; ?>
 
 </article><!-- #post-${ID} -->

@@ -11,7 +11,8 @@
  * @since 1.0.0
  */
 
-?><!doctype html>
+?>
+<!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -29,7 +30,7 @@
 
 		<?php get_template_part( 'template-parts/header/site-branding' ); ?>
 
-			<?php if ( has_nav_menu( 'primary' ) ) { ?>
+			<?php if ( has_nav_menu( 'primary' ) ) : ?>
 				<nav id="site-navigation" class="primary-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary', 'twentytwentyone' ); ?>">
 					<div class="menu-button-container">
 						<button id="primary-mobile-menu" class="button" aria-controls="primary-menu-list" aria-expanded="false">
@@ -52,7 +53,7 @@
 					);
 					?>
 				</nav><!-- #site-navigation -->
-				<?php } ?>
+			<?php endif; ?>
 		</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
