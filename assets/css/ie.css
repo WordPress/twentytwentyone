@@ -3947,6 +3947,7 @@ table.wp-calendar-table th {
 	text-align: center;
 	line-height: 2;
 	vertical-align: middle;
+	word-break: normal;
 }
 
 table.wp-calendar-table th {
@@ -4964,6 +4965,7 @@ h1.page-title {
 	hyphens: auto;
 	word-wrap: break-word;
 	word-break: break-word;
+	display: inline-block;
 }
 
 .comment-meta .comment-metadata {
