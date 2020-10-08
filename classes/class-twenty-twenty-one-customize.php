@@ -85,17 +85,20 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 			 * Add excerpt or full text selector to customizer
 			 */
 
-			$wp_customize->add_section( 'theme_settings' , array(
-				'title'      => __('Theme settings','twentytwentyone'),
-				'priority'   => 30,
-			) );
+			$wp_customize->add_section(
+				'theme_settings',
+				array(
+					'title'    => __( 'Theme settings', 'twentytwentyone' ),
+					'priority' => 30,
+				)
+			);
 
 
 			$wp_customize->add_setting(
 				'display_excerpt_or_fullpost',
 				array(
-					'capability'        => 'edit_theme_options',
-					'default'           => 'excerpt',
+					'capability' => 'edit_theme_options',
+					'default'    => 'excerpt',
 				)
 			);
 
@@ -107,7 +110,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 					'label'   => __( 'On the Posts page, post show:', 'twentytwentyone' ),
 					'choices' => array(
 						'excerpt' => 'Excerpt',
-						'full' 	  => 'Full text',
+						'full'    => 'Full text',
 					),
 				)
 			);
