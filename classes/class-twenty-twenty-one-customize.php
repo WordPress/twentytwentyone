@@ -95,8 +95,8 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 			$wp_customize->add_setting(
 				'display_excerpt_or_fullpost',
 				array(
-					'capability' => 'edit_theme_options',
-					'default'    => 'excerpt',
+					'capability'        => 'edit_theme_options',
+					'default'           => 'excerpt',
 					'sanitize_callback' => function( $value ) {
 						return 'excerpt' === $value || 'full' === $value ? $value : 'excerpt';
 					},
