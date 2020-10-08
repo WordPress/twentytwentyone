@@ -36,6 +36,11 @@ function twenty_twenty_one_body_classes( $classes ) {
 		$classes[] = 'has-main-navigation';
 	}
 
+	$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
+	if ( 127 > Twenty_Twenty_One_Custom_Colors::get_relative_luminance_from_hex( $background_color ) ) {
+		$classes[] = 'is-background-dark';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'twenty_twenty_one_body_classes' );
