@@ -3585,6 +3585,7 @@ h1.page-title {
 	hyphens: auto;
 	word-wrap: break-word;
 	word-break: break-word;
+	display: inline-block;
 }
 
 .comment-meta .comment-metadata {
