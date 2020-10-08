@@ -13,15 +13,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title default-max-width">', '</h1>' );
-		else :
-			the_title( sprintf( '<h2 class="entry-title default-max-width"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
-		endif;
-		
-		twenty_twenty_one_post_thumbnail(); 
-		?>
+		<?php if ( is_singular() ) : ?>
+			<?php the_title( '<h1 class="entry-title default-max-width">', '</h1>' ); ?>
+		<?php else : ?>
+			<?php the_title( sprintf( '<h2 class="entry-title default-max-width"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		<?php endif; ?>
+
+		<?php twenty_twenty_one_post_thumbnail(); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -43,7 +41,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwentyone' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'twentytwentyone' ),
 				'after'  => '</div>',
 			)
 		);
