@@ -2244,6 +2244,62 @@ a:hover {
 	}
 }
 
+@media only screen and (min-width: 652px) {
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) {
+		margin-left: -50px;
+		margin-top: 63px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p:not(.has-background) {
+		background-color: #d1e4dd;
+		padding: 20px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1:not(.has-background) {
+		background-color: #d1e4dd;
+		padding: 20px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h2:not(.has-background) {
+		background-color: #d1e4dd;
+		padding: 20px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h3:not(.has-background) {
+		background-color: #d1e4dd;
+		padding: 20px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h4:not(.has-background) {
+		background-color: #d1e4dd;
+		padding: 20px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h5:not(.has-background) {
+		background-color: #d1e4dd;
+		padding: 20px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h6:not(.has-background) {
+		background-color: #d1e4dd;
+		padding: 20px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul:not(.has-background) {
+		background-color: #d1e4dd;
+		padding: 20px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol:not(.has-background) {
+		background-color: #d1e4dd;
+		padding: 20px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre:not(.has-background) {
+		background-color: #d1e4dd;
+		padding: 20px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul:not(.has-background) {
+		padding-left: 50px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol:not(.has-background) {
+		padding-left: 50px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n).is-vertically-aligned-center {
+		margin-top: 0;
+	}
+}
+
 .wp-block-cover {
 	background-color: #fff;
 	min-height: 450px;
