@@ -224,10 +224,6 @@ function twenty_twenty_one_continue_reading_link() {
 // Filter the excerpt more link.
 add_filter( 'the_content_more_link', 'twenty_twenty_one_continue_reading_link' );
 
-// Filter the content more link.
-add_filter( 'the_content_more_link', 'twenty_twenty_one_continue_reading_link' );
-
-
 if ( ! function_exists( 'twenty_twenty_one_post_title' ) ) {
 	/**
 	 * Add a title to posts that are missing titles.
