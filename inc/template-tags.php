@@ -219,28 +219,6 @@ if ( ! function_exists( 'twenty_twenty_one_post_thumbnail' ) ) {
 	}
 }
 
-if ( ! function_exists( 'twenty_twenty_one_get_user_avatar_markup' ) ) {
-	/**
-	 * Returns the HTML markup to generate a user avatar.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @param int|string $id_or_email The user-ID or email.
-	 *
-	 * @return string
-	 */
-	function twenty_twenty_one_get_user_avatar_markup( $id_or_email = null ) {
-		$id_or_email = isset( $id_or_email ) ? $id_or_email : get_current_user_id();
-		return sprintf(
-			'<div class="comment-user-avatar comment-author vcard">%s</div>',
-			get_avatar(
-				$id_or_email,
-				twenty_twenty_one_get_avatar_size()
-			)
-		);
-	}
-}
-
 if ( ! function_exists( 'twenty_twenty_one_the_posts_navigation' ) ) {
 	/**
 	 * Print the next and previous posts navigation.

@@ -10,3 +10,5 @@
 
 *.png binary
 *.jpg binary
+
+*.map linguist-generated

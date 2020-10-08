@@ -439,8 +439,7 @@ add_action( 'wp_print_footer_scripts', 'twenty_twenty_one_skip_link_focus_fix' )
  * @return void
  */
 function twenty_twenty_one_non_latin_languages() {
-	require get_template_directory() . '/classes/class-twenty-twenty-one-non-latin-languages.php';
-	$custom_css = Twenty_Twenty_One_Non_Latin_Languages::get_non_latin_css( 'front-end' );
+	$custom_css = twenty_twenty_one_get_non_latin_css( 'front-end' );
 
 	if ( $custom_css ) {
 		wp_add_inline_style( 'twenty-twenty-one-style', $custom_css );
