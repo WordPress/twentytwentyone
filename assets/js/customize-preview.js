@@ -45,7 +45,7 @@
 			document.documentElement.style.setProperty( '--global--color-primary', textColor );
 			document.documentElement.style.setProperty( '--global--color-secondary', textColor );
 			document.documentElement.style.setProperty( '--global--color-background', to );
-
+var lala="roaar";
 			document.documentElement.style.setProperty( '--button--color-background', textColor );
 			document.documentElement.style.setProperty( '--button--color-text', to );
 			document.documentElement.style.setProperty( '--button--color-text-hover', textColor );
