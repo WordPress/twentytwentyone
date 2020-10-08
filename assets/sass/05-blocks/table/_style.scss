@@ -35,3 +35,48 @@ table,
 		}
 	}
 }
+
+table.wp-calendar-table {
+
+	td,
+	th {
+		background: transparent;
+		border: 0;
+		text-align: center;
+		line-height: 2;
+		vertical-align: middle;
+	}
+
+	th {
+		font-weight: bold;
+	}
+
+	thead,
+	tbody {
+		border: 1px solid var(--global--color-dark-gray);
+	}
+
+	caption {
+		font-weight: bold;
+		text-align: left;
+		margin-bottom: var(--global--spacing-unit);
+	}
+}
+
+.wp-calendar-nav {
+	text-align: left;
+	margin-top: calc(var(--global--spacing-unit) / 2);
+
+	svg {
+		height: 1em;
+		vertical-align: middle;
+
+		path {
+			fill: currentColor;
+		}
+	}
+
+	.wp-calendar-nav-next {
+		float: right;
+	}
+}
