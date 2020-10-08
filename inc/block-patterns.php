@@ -17,7 +17,7 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
 
 	register_block_pattern_category(
 		'twentytwentyone',
-		array( 'label' => __( 'Twenty Twenty-One', 'twentytwentyone' ) )
+		array( 'label' => esc_html__( 'Twenty Twenty-One', 'twentytwentyone' ) )
 	);
 }
 
@@ -29,7 +29,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 	register_block_pattern(
 		'twentytwentyone/two-images-showcase',
 		array(
-			'title'         => __( 'Two Images Showcase', 'twentytwentyone' ),
+			'title'         => esc_html__( 'Two Images Showcase', 'twentytwentyone' ),
 			'categories'    => array( 'twentytwentyone' ),
 			'viewportWidth' => 1440,
 			'description'   => _x( 'A Media & Text block with a big image on the left and a smaller one with bordered frame on the right.', 'Block pattern description', 'twentytwentyone' ),
@@ -40,7 +40,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 	register_block_pattern(
 		'twentytwentyone/media-text-article-title',
 		array(
-			'title'         => __( 'Media & Text Article Title', 'twentytwentyone' ),
+			'title'         => esc_html__( 'Media & Text Article Title', 'twentytwentyone' ),
 			'categories'    => array( 'twentytwentyone' ),
 			'viewportWidth' => 1440,
 			'description'   => _x( 'A Media & Text block with a big image on the left and a heading on the right. The heading is followed by a separator and a description paragraph.', 'Block pattern description', 'twentytwentyone' ),
@@ -51,21 +51,21 @@ if ( function_exists( 'register_block_pattern' ) ) {
 	register_block_pattern(
 		'twentytwentyone/links-area',
 		array(
-			'title'         => __( 'Links Area', 'twentytwentyone' ),
+			'title'         => esc_html__( 'Links Area', 'twentytwentyone' ),
 			'categories'    => array( 'twentytwentyone' ),
 			'viewportWidth' => 1440,
 			'description'   => _x( 'A huge text followed by social networks and email address links.', 'Block pattern description', 'twentytwentyone' ),
-			'content'       => '<!-- wp:cover {"overlayColor":"green","contentPosition":"center center","align":"wide","className":"is-style-twentytwentyone-border"} --><div class="wp-block-cover alignwide has-green-background-color has-background-dim is-style-twentytwentyone-border"><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":20} --><div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer --><!-- wp:paragraph {"fontSize":"huge"} --><p class="has-huge-font-size">' . wp_kses_post( __( 'Let&#8217;s Connect.', 'twentytwentyone' ) ) . '</p><!-- /wp:paragraph --><!-- wp:spacer {"height":75} --><div style="height:75px" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer --><!-- wp:columns --><div class="wp-block-columns"><!-- wp:column --><div class="wp-block-column"><!-- wp:paragraph --><p><a href="#" data-type="URL">' . wp_kses_post( __( 'Twitter', 'twentytwentyone' ) ) . '</a> / <a href="#" data-type="URL">' . wp_kses_post( __( 'Instagram', 'twentytwentyone' ) ) . '</a> / <a href="#" data-type="URL">' . wp_kses_post( __( 'Dribbble', 'twentytwentyone' ) ) . '</a></p><!-- /wp:paragraph --></div><!-- /wp:column --><!-- wp:column --><div class="wp-block-column"><!-- wp:paragraph --><p><a href="#">' . wp_kses_post( __( 'example@example.com', 'twentytwentyone' ) ) . '</a></p><!-- /wp:paragraph --></div><!-- /wp:column --></div><!-- /wp:columns --><!-- wp:spacer {"height":20} --><div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer --></div></div><!-- /wp:cover --><!-- wp:paragraph --><p></p><!-- /wp:paragraph -->',
+			'content'       => '<!-- wp:cover {"overlayColor":"green","contentPosition":"center center","align":"wide","className":"is-style-twentytwentyone-border"} --><div class="wp-block-cover alignwide has-green-background-color has-background-dim is-style-twentytwentyone-border"><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":20} --><div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer --><!-- wp:paragraph {"fontSize":"huge"} --><p class="has-huge-font-size">' . wp_kses_post( __( 'Let&#8217;s Connect.', 'twentytwentyone' ) ) . '</p><!-- /wp:paragraph --><!-- wp:spacer {"height":75} --><div style="height:75px" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer --><!-- wp:columns --><div class="wp-block-columns"><!-- wp:column --><div class="wp-block-column"><!-- wp:paragraph --><p><a href="#" data-type="URL">' . wp_kses_post( esc_html__( 'Twitter', 'twentytwentyone' ) ) . '</a> / <a href="#" data-type="URL">' . wp_kses_post( esc_html__( 'Instagram', 'twentytwentyone' ) ) . '</a> / <a href="#" data-type="URL">' . wp_kses_post( esc_html__( 'Dribbble', 'twentytwentyone' ) ) . '</a></p><!-- /wp:paragraph --></div><!-- /wp:column --><!-- wp:column --><div class="wp-block-column"><!-- wp:paragraph --><p><a href="#">' . wp_kses_post( esc_html__( 'example@example.com', 'twentytwentyone' ) ) . '</a></p><!-- /wp:paragraph --></div><!-- /wp:column --></div><!-- /wp:columns --><!-- wp:spacer {"height":20} --><div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer --></div></div><!-- /wp:cover --><!-- wp:paragraph --><p></p><!-- /wp:paragraph -->',
 		)
 	);
 
 	register_block_pattern(
 		'twentytwentyone/large-text',
 		array(
-			'title'         => __( 'Large Text', 'twentytwentyone' ),
+			'title'         => esc_html__( 'Large Text', 'twentytwentyone' ),
 			'categories'    => array( 'twentytwentyone' ),
 			'viewportWidth' => 1440,
-			'content'       => '<!-- wp:columns {"align":"wide"} --><div class="wp-block-columns alignwide"><!-- wp:column {"width":98} --><div class="wp-block-column" style="flex-basis:98%"><!-- wp:paragraph {"fontSize":"gigantic","style":{"typography":{"lineHeight":"1.1"}}} --><p class="has-gigantic-font-size" style="line-height:1.1">' . wp_kses_post( __( 'A new portfolio default theme for WordPress', 'twentytwentyone' ) ) . '</p><!-- /wp:paragraph --></div><!-- /wp:column --><!-- wp:column {"width":2} --><div class="wp-block-column" style="flex-basis:2%"></div><!-- /wp:column --></div><!-- /wp:columns --><!-- wp:paragraph --><p></p><!-- /wp:paragraph -->',
+			'content'       => '<!-- wp:columns {"align":"wide"} --><div class="wp-block-columns alignwide"><!-- wp:column {"width":98} --><div class="wp-block-column" style="flex-basis:98%"><!-- wp:paragraph {"fontSize":"gigantic","style":{"typography":{"lineHeight":"1.1"}}} --><p class="has-gigantic-font-size" style="line-height:1.1">' . wp_kses_post( esc_html__( 'A new portfolio default theme for WordPress', 'twentytwentyone' ) ) . '</p><!-- /wp:paragraph --></div><!-- /wp:column --><!-- wp:column {"width":2} --><div class="wp-block-column" style="flex-basis:2%"></div><!-- /wp:column --></div><!-- /wp:columns --><!-- wp:paragraph --><p></p><!-- /wp:paragraph -->',
 		)
 	);
 }

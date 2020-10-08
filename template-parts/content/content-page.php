@@ -24,7 +24,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwentyone' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'twentytwentyone' ),
 				'after'  => '</div>',
 			)
 		);

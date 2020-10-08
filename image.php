@@ -28,13 +28,11 @@ while ( have_posts() ) {
 				 */
 				$image_size = apply_filters( 'twenty_twenty_one_attachment_size', 'full' );
 				echo wp_get_attachment_image( get_the_ID(), $image_size );
-
-				if ( wp_get_attachment_caption() ) {
-					?>
-					<figcaption class="wp-caption-text"><?php echo wp_kses_post( wp_get_attachment_caption() ); ?></figcaption>
-					<?php
-				}
 				?>
+
+				<?php if ( wp_get_attachment_caption() ) : ?>
+					<figcaption class="wp-caption-text"><?php echo wp_kses_post( wp_get_attachment_caption() ); ?></figcaption>
+				<?php endif; ?>
 			</figure><!-- .entry-attachment -->
 
 			<?php
@@ -42,11 +40,11 @@ while ( have_posts() ) {
 
 			wp_link_pages(
 				array(
-					'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentytwentyone' ) . '</span>',
+					'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'twentytwentyone' ) . '</span>',
 					'after'       => '</div>',
 					'link_before' => '<span>',
 					'link_after'  => '</span>',
-					'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentytwentyone' ) . ' </span>%',
+					'pagelink'    => '<span class="screen-reader-text">' . esc_html__( 'Page', 'twentytwentyone' ) . ' </span>%',
 					'separator'   => '<span class="screen-reader-text">, </span>',
 				)
 			);
