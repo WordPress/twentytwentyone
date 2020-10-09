@@ -102,14 +102,14 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers. */
-						__( 'Edit<span class="screen-reader-text"> %s</span>', 'twentytwentyone' ),
+						__( 'Edit %s', 'twentytwentyone' ),
 						array(
 							'span' => array(
 								'class' => array(),
 							),
 						)
 					),
-					get_the_title()
+					'<span class="screen-reader-text">' . get_the_title() . '</span>'
 				),
 				'<span class="edit-link">',
 				'</span><br>'
@@ -156,14 +156,14 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers. */
-						__( 'Edit<span class="screen-reader-text"> %s</span>', 'twentytwentyone' ),
+						__( 'Edit %s', 'twentytwentyone' ),
 						array(
 							'span' => array(
 								'class' => array(),
 							),
 						)
 					),
-					get_the_title()
+					'<span class="screen-reader-text">' . get_the_title() . '</span>'
 				),
 				'<span class="edit-link">',
 				'</span>'
