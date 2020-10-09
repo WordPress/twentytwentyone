@@ -674,6 +674,41 @@ a:hover {
 	}
 }
 
+.wp-block[data-align="full"] p:not(.has-background) {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.wp-block[data-align="full"] h1:not(.has-background) {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.wp-block[data-align="full"] h2:not(.has-background) {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.wp-block[data-align="full"] h3:not(.has-background) {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.wp-block[data-align="full"] h4:not(.has-background) {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.wp-block[data-align="full"] h5:not(.has-background) {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.wp-block[data-align="full"] h6:not(.has-background) {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
 .wp-block-file .wp-block-file__textlink {
 	text-decoration: underline;
 	text-decoration-style: solid;
@@ -2291,6 +2326,17 @@ pre.wp-block-verse {
 .alignright {
 	margin: 0;
 	margin-left: 25px;
+}
+
+@media only screen and (min-width: 482px) {
+	.wp-block[data-align="left"] > * {
+		max-width: 290px;
+		margin-right: 25px;
+	}
+	.wp-block[data-align="right"] > * {
+		max-width: 290px;
+		margin-left: 25px;
+	}
 }
 
 html {

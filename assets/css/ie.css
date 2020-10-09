@@ -2245,6 +2245,9 @@ a:hover {
 }
 
 @media only screen and (min-width: 652px) {
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column {
+		flex-grow: 1;
+	}
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) {
 		margin-left: -50px;
 		margin-top: 63px;
@@ -2298,6 +2301,41 @@ a:hover {
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n).is-vertically-aligned-center {
 		margin-top: 0;
 	}
+}
+
+.wp-block-columns.alignfull .wp-block-column p:not(.has-background) {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.wp-block-columns.alignfull .wp-block-column h1:not(.has-background) {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.wp-block-columns.alignfull .wp-block-column h2:not(.has-background) {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.wp-block-columns.alignfull .wp-block-column h3:not(.has-background) {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.wp-block-columns.alignfull .wp-block-column h4:not(.has-background) {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.wp-block-columns.alignfull .wp-block-column h5:not(.has-background) {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.wp-block-columns.alignfull .wp-block-column h6:not(.has-background) {
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .wp-block-cover {
@@ -3435,6 +3473,11 @@ p.has-text-color a {
 	background: none;
 }
 
+.wp-block-pullquote.alignleft:before,
+.wp-block-pullquote.alignleft cite {
+	text-align: center;
+}
+
 .wp-block-pullquote.alignwide > p {
 	max-width: calc(100vw - 30px);
 }
@@ -4407,6 +4450,10 @@ table.wp-calendar-table caption {
 	margin-right: 140px;
 }
 
+.site-branding:last-child {
+	margin-right: 0;
+}
+
 @media only screen and (min-width: 482px) {
 	.site-branding {
 		margin-right: initial;
@@ -4453,6 +4500,7 @@ table.wp-calendar-table caption {
 	color: currentColor;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1.125rem;
+	line-height: 1.4;
 }
 
 a.custom-logo-link,
@@ -5027,7 +5075,6 @@ h1.page-title {
 	hyphens: auto;
 	word-wrap: break-word;
 	word-break: break-word;
-	display: inline-block;
 }
 
 .comment-meta .comment-metadata {
@@ -5401,7 +5448,6 @@ h1.page-title {
 
 .primary-navigation > div > .menu-wrapper li {
 	display: block;
-	margin: 13px 0;
 	position: relative;
 	width: 100%;
 }
@@ -5474,14 +5520,17 @@ h1.page-title {
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation > div > .menu-wrapper > li > .sub-menu {
-		background: #d1e4dd;
 		left: 0;
 		margin: 0;
 		min-width: max-content;
 		position: absolute;
-		top: calc(100% + 3px);
+		top: 100%;
+		padding-top: 3px;
 		transition: all 0.5s ease;
 		z-index: 88888;
+	}
+	.primary-navigation > div > .menu-wrapper > li > .sub-menu li {
+		background: #d1e4dd;
 	}
 }
 
@@ -5512,7 +5561,7 @@ h1.page-title {
 }
 
 .primary-navigation a {
-	display: inline;
+	display: block;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1.25rem;
 	font-weight: normal;
@@ -5549,7 +5598,9 @@ h1.page-title {
 }
 
 .primary-navigation a:focus {
+	position: relative;
 	z-index: 99999;
+	outline-offset: 0;
 }
 
 .primary-navigation .current-menu-item > a:first-child,
@@ -5563,21 +5614,16 @@ h1.page-title {
 }
 
 .primary-navigation .sub-menu {
+	margin: 0;
+	padding: 0;
 	list-style: none;
 	margin-left: 13px;
 }
 
 @media only screen and (min-width: 482px) {
-	.primary-navigation .sub-menu {
-		padding: 0 13px;
-	}
 	.primary-navigation .sub-menu > .menu-item > .sub-menu {
 		padding: 0;
 	}
-}
-
-.primary-navigation .sub-menu .menu-item {
-	margin: 26px 0;
 }
 
 @media only screen and (max-width: 481px) {
@@ -5587,7 +5633,8 @@ h1.page-title {
 }
 
 .primary-navigation .sub-menu .menu-item > a {
-	display: inline;
+	padding: 17px 13px;
+	display: block;
 	font-size: 1.125rem;
 	font-style: normal;
 }
@@ -5941,6 +5988,10 @@ h1.page-title {
 .widget_search > .search-form .search-submit:hover {
 	background-color: #39414d;
 	color: #d1e4dd;
+}
+
+.widget_rss a.rsswidget .rss-widget-icon {
+	display: none;
 }
 
 /* Category 07 is for any utility classes that are not assigned to a specific component. */

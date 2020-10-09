@@ -1619,6 +1619,9 @@ a:hover {
 }
 
 @media only screen and (min-width: 652px) {
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column {
+		flex-grow: 1;
+	}
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) {
 		margin-left: calc(-2 * var(--global--spacing-horizontal));
 		margin-top: calc(2.5 * var(--global--spacing-horizontal));
@@ -1643,6 +1646,17 @@ a:hover {
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n).is-vertically-aligned-center {
 		margin-top: 0;
 	}
+}
+
+.wp-block-columns.alignfull .wp-block-column p:not(.has-background),
+.wp-block-columns.alignfull .wp-block-column h1:not(.has-background),
+.wp-block-columns.alignfull .wp-block-column h2:not(.has-background),
+.wp-block-columns.alignfull .wp-block-column h3:not(.has-background),
+.wp-block-columns.alignfull .wp-block-column h4:not(.has-background),
+.wp-block-columns.alignfull .wp-block-column h5:not(.has-background),
+.wp-block-columns.alignfull .wp-block-column h6:not(.has-background) {
+	padding-left: var(--global--spacing-unit);
+	padding-right: var(--global--spacing-unit);
 }
 
 .wp-block-cover,
@@ -2434,6 +2448,11 @@ p.has-text-color a {
 	background: none;
 }
 
+.wp-block-pullquote.alignleft:before,
+.wp-block-pullquote.alignleft cite {
+	text-align: center;
+}
+
 .wp-block-pullquote.alignwide > p,
 .wp-block-pullquote.alignwide blockquote {
 	max-width: var(--responsive--alignwide-width);
@@ -3089,6 +3108,10 @@ table.wp-calendar-table caption {
 	margin-right: 140px;
 }
 
+.site-branding:last-child {
+	margin-right: 0;
+}
+
 @media only screen and (min-width: 482px) {
 	.site-branding {
 		margin-right: initial;
@@ -3131,6 +3154,7 @@ table.wp-calendar-table caption {
 	color: currentColor;
 	font-family: var(--branding--description--font-family);
 	font-size: var(--branding--description--font-size);
+	line-height: 1.4;
 }
 
 a.custom-logo-link,
@@ -3621,7 +3645,6 @@ h1.page-title {
 	hyphens: auto;
 	word-wrap: break-word;
 	word-break: break-word;
-	display: inline-block;
 }
 
 .comment-meta .comment-metadata {
@@ -3956,7 +3979,6 @@ h1.page-title {
 
 .primary-navigation > div > .menu-wrapper li {
 	display: block;
-	margin: var(--primary-nav--padding) 0;
 	position: relative;
 	width: 100%;
 }
@@ -4029,14 +4051,17 @@ h1.page-title {
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation > div > .menu-wrapper > li > .sub-menu {
-		background: var(--global--color-background);
 		left: 0;
 		margin: 0;
 		min-width: max-content;
 		position: absolute;
-		top: calc(100% + 3px);
+		top: 100%;
+		padding-top: 3px;
 		transition: all 0.5s ease;
 		z-index: 88888;
+	}
+	.primary-navigation > div > .menu-wrapper > li > .sub-menu li {
+		background: var(--global--color-background);
 	}
 }
 
@@ -4067,7 +4092,7 @@ h1.page-title {
 }
 
 .primary-navigation a {
-	display: inline;
+	display: block;
 	font-family: var(--primary-nav--font-family-mobile);
 	font-size: var(--primary-nav--font-size-mobile);
 	font-weight: var(--primary-nav--font-weight);
@@ -4096,7 +4121,9 @@ h1.page-title {
 }
 
 .primary-navigation a:focus {
+	position: relative;
 	z-index: 99999;
+	outline-offset: 0;
 }
 
 .primary-navigation .current-menu-item > a:first-child,
@@ -4110,21 +4137,16 @@ h1.page-title {
 }
 
 .primary-navigation .sub-menu {
+	margin: 0;
+	padding: 0;
 	list-style: none;
 	margin-left: var(--primary-nav--padding);
 }
 
 @media only screen and (min-width: 482px) {
-	.primary-navigation .sub-menu {
-		padding: 0 var(--primary-nav--padding);
-	}
 	.primary-navigation .sub-menu > .menu-item > .sub-menu {
 		padding: 0;
 	}
-}
-
-.primary-navigation .sub-menu .menu-item {
-	margin: calc(2 * var(--primary-nav--padding)) 0;
 }
 
 @media only screen and (max-width: 481px) {
@@ -4134,7 +4156,8 @@ h1.page-title {
 }
 
 .primary-navigation .sub-menu .menu-item > a {
-	display: inline;
+	padding: calc(1.25 * var(--primary-nav--padding)) var(--primary-nav--padding);
+	display: block;
 	font-size: var(--primary-nav--font-size-sub-menu-mobile);
 	font-style: var(--primary-nav--font-style-sub-menu-mobile);
 }
@@ -4446,6 +4469,10 @@ h1.page-title {
 .widget_search > .search-form .search-submit:hover {
 	background-color: var(--button--color-background);
 	color: var(--button--color-text);
+}
+
+.widget_rss a.rsswidget .rss-widget-icon {
+	display: none;
 }
 
 /* Category 07 is for any utility classes that are not assigned to a specific component. */

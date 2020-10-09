@@ -51,6 +51,14 @@
 		background: none;
 	}
 
+	&.alignleft {
+
+		&:before,
+		cite {
+			text-align: center;
+		}
+	}
+
 	&.alignwide > p,
 	&.alignwide blockquote {
 		max-width: var(--responsive--alignwide-width);
