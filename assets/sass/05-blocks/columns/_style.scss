@@ -81,4 +81,21 @@
 			}
 		}
 	}
+
+	&.alignfull {
+
+		.wp-block-column {
+
+			p:not(.has-background),
+			h1:not(.has-background),
+			h2:not(.has-background),
+			h3:not(.has-background),
+			h4:not(.has-background),
+			h5:not(.has-background),
+			h6:not(.has-background) {
+				padding-left: var(--global--spacing-unit);
+				padding-right: var(--global--spacing-unit);
+			}
+		}
+	}
 }
