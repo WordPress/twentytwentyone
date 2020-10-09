@@ -208,12 +208,6 @@ function twenty_twenty_one_continue_reading_text() {
 function twenty_twenty_one_continue_reading_link_excerpt() {
 
 	if ( ! is_admin() ) {
-		$continue_reading = sprintf(
-			/* translators: %s: Name of current post. */
-			wp_kses( esc_html__( 'Read more %s', 'twentytwentyone' ), array( 'span' => array( 'class' => array() ) ) ),
-			the_title( '<span class="screen-reader-text">' . esc_html__( 'about ', 'twentytwentyone' ), '</span>', false )
-		);
-
 		return '&hellip; <a class="more-link" href="' . esc_url( get_permalink() ) . '">' . twenty_twenty_one_continue_reading_text() . '</a>';
 	}
 }
@@ -227,12 +221,6 @@ add_filter( 'excerpt_more', 'twenty_twenty_one_continue_reading_link_excerpt' );
 function twenty_twenty_one_continue_reading_link() {
 
 	if ( ! is_admin() ) {
-		$continue_reading = sprintf(
-			/* translators: %s: Name of current post. */
-			wp_kses( esc_html__( 'Read more %s', 'twentytwentyone' ), array( 'span' => array( 'class' => array() ) ) ),
-			the_title( '<span class="screen-reader-text">' . esc_html__( 'about ', 'twentytwentyone' ), '</span>', false )
-		);
-
 		return '<div class="more-link-container"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . twenty_twenty_one_continue_reading_text() . '</a></div>';
 	}
 }
