@@ -14,7 +14,6 @@
 		color: var(--global--color-secondary);
 		font-family: var(--heading--font-family);
 		font-weight: var(--heading--font-weight-page-title);
-		font-size: var(--global--font-size-page-title);
 		line-height: var(--heading--line-height-h1);
 	}
 }
@@ -22,7 +21,6 @@
 // Editor UI font styles
 .wp-block.block-editor-default-block-appender > textarea {
 	font-family: var(--global--font-secondary);
-	font-size: var(--global--font-size-md);
 }
 
 // Gutenberg text color options
@@ -71,39 +69,19 @@
 }
 
 // Gutenberg Font-size utility classes
-.is-tiny-text,
-.has-tiny-font-size {
-	font-size: var(--global--font-size-xs);
-}
-
-.is-small-text,
-.has-small-font-size {
-	font-size: var(--global--font-size-sm);
-}
-
-.is-regular-text,
-.has-regular-font-size,
-.has-normal-font-size,
-.has-medium-font-size {
-	font-size: var(--global--font-size-md);
-}
-
 .is-large-text,
 .has-large-font-size {
-	font-size: var(--global--font-size-lg);
 	line-height: var(--global--line-height-heading);
 }
 
 .is-larger-text,
 .has-larger-font-size,
 .has-huge-font-size {
-	font-size: var(--global--font-size-xl);
 	line-height: var(--global--line-height-heading);
 }
 
 .is-gigantic-text,
 .has-gigantic-font-size {
-	font-size: var(--global--font-size-xxl);
 	line-height: var(--global--line-height-heading);
 
 	// This size is meant to mimic the page titles, so the font weight is reduced to match.
@@ -113,7 +91,6 @@
 // Drop cap
 .has-drop-cap:not(:focus)::first-letter {
 	font-family: var(--heading--font-family);
-	font-size: calc(2 * var(--heading--font-size-h1));
 	font-weight: var(--heading--font-weight);
 }
 

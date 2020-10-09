@@ -134,28 +134,8 @@
 
 // Gutenberg Font-size options
 :root {
-
-	.is-extra-small-text,
-	.has-extra-small-font-size {
-		font-size: var(--global--font-size-xs);
-	}
-
-	.is-small-text,
-	.has-small-font-size {
-		font-size: var(--global--font-size-sm);
-	}
-
-	.is-regular-text,
-	.has-regular-font-size,
-	.is-normal-font-size,
-	.has-normal-font-size,
-	.has-medium-font-size {
-		font-size: var(--global--font-size-base);
-	}
-
 	.is-large-text,
 	.has-large-font-size {
-		font-size: var(--global--font-size-lg);
 		line-height: var(--global--line-height-heading);
 	}
 
@@ -163,13 +143,11 @@
 	.has-larger-font-size,
 	.is-extra-large-text,
 	.has-extra-large-font-size {
-		font-size: var(--global--font-size-xl);
 		line-height: var(--global--line-height-heading);
 	}
 
 	.is-huge-text,
 	.has-huge-font-size {
-		font-size: var(--global--font-size-xxl);
 		line-height: var(--global--line-height-heading);
 
 		// This size is meant to mimic the page titles, so the font weight is reduced to match.
@@ -178,7 +156,6 @@
 
 	.is-gigantic-text,
 	.has-gigantic-font-size {
-		font-size: var(--global--font-size-xxxl);
 		line-height: var(--global--line-height-heading);
 
 		// This size is meant to mimic the page titles, so the font weight is reduced to match.
@@ -189,7 +166,6 @@
 // Drop caps
 .has-drop-cap:not(:focus)::first-letter {
 	font-family: var(--heading--font-family);
-	font-size: calc(2 * var(--heading--font-size-h1));
 	font-weight: var(--heading--font-weight);
 	line-height: 0.66;
 	text-transform: uppercase;

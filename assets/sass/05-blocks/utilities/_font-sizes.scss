@@ -1,0 +1,96 @@
+// Gutenberg Font-size utility classes
+:root {
+
+	.is-extra-small-text,
+	.has-extra-small-font-size {
+		font-size: var(--global--font-size-xs);
+	}
+
+	.is-small-text,
+	.has-small-font-size {
+		font-size: var(--global--font-size-sm);
+	}
+
+	.is-regular-text,
+	.has-regular-font-size,
+	.is-normal-font-size,
+	.has-normal-font-size,
+	.has-medium-font-size {
+		font-size: var(--global--font-size-base);
+	}
+
+	.is-large-text,
+	.has-large-font-size {
+		font-size: var(--global--font-size-lg);
+	}
+
+	.is-larger-text,
+	.has-larger-font-size,
+	.is-extra-large-text,
+	.has-extra-large-font-size {
+		font-size: var(--global--font-size-xl);
+	}
+
+	.is-huge-text,
+	.has-huge-font-size {
+		font-size: var(--global--font-size-xxl);
+	}
+
+	.is-gigantic-text,
+	.has-gigantic-font-size {
+		font-size: var(--global--font-size-xxxl);
+	}
+}
+
+.is-tiny-text,
+.has-tiny-font-size {
+	font-size: var(--global--font-size-xs);
+}
+
+.is-small-text,
+.has-small-font-size {
+	font-size: var(--global--font-size-sm);
+}
+
+.is-regular-text,
+.has-regular-font-size,
+.has-normal-font-size,
+.has-medium-font-size {
+	font-size: var(--global--font-size-md);
+}
+
+.is-large-text,
+.has-large-font-size {
+	font-size: var(--global--font-size-lg);
+}
+
+.is-larger-text,
+.has-larger-font-size,
+.has-huge-font-size {
+	font-size: var(--global--font-size-xl);
+}
+
+.is-gigantic-text,
+.has-gigantic-font-size {
+	font-size: var(--global--font-size-xxl);
+}
+
+
+
+// Post title style
+.wp-block.editor-post-title__block {
+
+	.editor-post-title__input {
+		font-size: var(--global--font-size-page-title);
+	}
+}
+
+// Editor UI font styles
+.wp-block.block-editor-default-block-appender > textarea {
+	font-size: var(--global--font-size-md);
+}
+
+// Drop cap
+.has-drop-cap:not(:focus)::first-letter {
+	font-size: calc(2 * var(--heading--font-size-h1));
+}

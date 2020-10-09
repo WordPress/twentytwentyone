@@ -2890,6 +2890,91 @@ table.wp-calendar-table caption {
 	vertical-align: middle;
 }
 
+:root .is-extra-small-text,
+:root .has-extra-small-font-size {
+	font-size: var(--global--font-size-xs);
+}
+
+:root .is-small-text,
+:root .has-small-font-size {
+	font-size: var(--global--font-size-sm);
+}
+
+:root .is-regular-text,
+:root .has-regular-font-size,
+:root .is-normal-font-size,
+:root .has-normal-font-size,
+:root .has-medium-font-size {
+	font-size: var(--global--font-size-base);
+}
+
+:root .is-large-text,
+:root .has-large-font-size {
+	font-size: var(--global--font-size-lg);
+}
+
+:root .is-larger-text,
+:root .has-larger-font-size,
+:root .is-extra-large-text,
+:root .has-extra-large-font-size {
+	font-size: var(--global--font-size-xl);
+}
+
+:root .is-huge-text,
+:root .has-huge-font-size {
+	font-size: var(--global--font-size-xxl);
+}
+
+:root .is-gigantic-text,
+:root .has-gigantic-font-size {
+	font-size: var(--global--font-size-xxxl);
+}
+
+.is-tiny-text,
+.has-tiny-font-size {
+	font-size: var(--global--font-size-xs);
+}
+
+.is-small-text,
+.has-small-font-size {
+	font-size: var(--global--font-size-sm);
+}
+
+.is-regular-text,
+.has-regular-font-size,
+.has-normal-font-size,
+.has-medium-font-size {
+	font-size: var(--global--font-size-md);
+}
+
+.is-large-text,
+.has-large-font-size {
+	font-size: var(--global--font-size-lg);
+}
+
+.is-larger-text,
+.has-larger-font-size,
+.has-huge-font-size {
+	font-size: var(--global--font-size-xl);
+}
+
+.is-gigantic-text,
+.has-gigantic-font-size {
+	font-size: var(--global--font-size-xxl);
+}
+
+.wp-block.editor-post-title__block .editor-post-title__input {
+	font-size: var(--global--font-size-page-title);
+}
+
+.wp-block.block-editor-default-block-appender > textarea {
+	font-size: var(--global--font-size-md);
+}
+
+.has-drop-cap:not(:focus)::first-letter {
+	font-size: calc(2 * var(--heading--font-size-h1));
+}
+
 /* Block Alignments */
 /**
  * These selectors set the default max width for content appearing inside a post or page.
@@ -2982,27 +3067,8 @@ table.wp-calendar-table caption {
 	background-attachment: fixed;
 }
 
-:root .is-extra-small-text,
-:root .has-extra-small-font-size {
-	font-size: var(--global--font-size-xs);
-}
-
-:root .is-small-text,
-:root .has-small-font-size {
-	font-size: var(--global--font-size-sm);
-}
-
-:root .is-regular-text,
-:root .has-regular-font-size,
-:root .is-normal-font-size,
-:root .has-normal-font-size,
-:root .has-medium-font-size {
-	font-size: var(--global--font-size-base);
-}
-
 :root .is-large-text,
 :root .has-large-font-size {
-	font-size: var(--global--font-size-lg);
 	line-height: var(--global--line-height-heading);
 }
 
@@ -3010,27 +3076,23 @@ table.wp-calendar-table caption {
 :root .has-larger-font-size,
 :root .is-extra-large-text,
 :root .has-extra-large-font-size {
-	font-size: var(--global--font-size-xl);
 	line-height: var(--global--line-height-heading);
 }
 
 :root .is-huge-text,
 :root .has-huge-font-size {
-	font-size: var(--global--font-size-xxl);
 	line-height: var(--global--line-height-heading);
 	font-weight: var(--heading--font-weight-page-title);
 }
 
 :root .is-gigantic-text,
 :root .has-gigantic-font-size {
-	font-size: var(--global--font-size-xxxl);
 	line-height: var(--global--line-height-heading);
 	font-weight: var(--heading--font-weight-page-title);
 }
 
 .has-drop-cap:not(:focus)::first-letter {
 	font-family: var(--heading--font-family);
-	font-size: calc(2 * var(--heading--font-size-h1));
 	font-weight: var(--heading--font-weight);
 	line-height: 0.66;
 	text-transform: uppercase;
