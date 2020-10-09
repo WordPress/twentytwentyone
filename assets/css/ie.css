@@ -3438,6 +3438,11 @@ p.has-text-color a {
 	background: none;
 }
 
+.wp-block-pullquote.alignleft:before,
+.wp-block-pullquote.alignleft cite {
+	text-align: center;
+}
+
 .wp-block-pullquote.alignwide > p {
 	max-width: calc(100vw - 30px);
 }
