@@ -387,3 +387,26 @@ function twenty_twenty_one_get_non_latin_css( $type = 'front-end' ) {
 		false
 	);
 }
+
+/**
+ * Print the first instance of a block in the content, and then break away.
+ *
+ * @since 1.0.0
+ *
+ * @param string      $block_name The block name/type. Example: `core/image`.
+ * @param string|null $content    The content we need to search in. Use null for get_the_content().
+ *
+ * @return void
+ */
+function twenty_twenty_one_print_first_instance_of_block( $block_name, $content = null ) {
+	if ( ! $content ) {
+		$content = get_the_content();
+	}
+	$blocks = parse_blocks( $content );
+	foreach ( $blocks as $block ) {
+		if ( $block_name === $block['blockName'] ) {
+			echo render_block( $block ); // phpcs:ignore WordPress.Security.EscapeOutput
+			break;
+		}
+	}
+}
