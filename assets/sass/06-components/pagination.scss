@@ -49,11 +49,13 @@
 		position: relative;
 	}
 
-	.nav-previous .svg-icon {
+	.nav-previous .svg-icon,
+	.prev .svg-icon {
 		top: -3px;
 	}
 
-	.nav-next .svg-icon {
+	.nav-next .svg-icon,
+	.next .svg-icon {
 		top: -1px;
 	}
 }
