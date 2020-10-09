@@ -2303,6 +2303,41 @@ a:hover {
 	}
 }
 
+.wp-block-columns.alignfull .wp-block-column p:not(.has-background) {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.wp-block-columns.alignfull .wp-block-column h1:not(.has-background) {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.wp-block-columns.alignfull .wp-block-column h2:not(.has-background) {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.wp-block-columns.alignfull .wp-block-column h3:not(.has-background) {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.wp-block-columns.alignfull .wp-block-column h4:not(.has-background) {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.wp-block-columns.alignfull .wp-block-column h5:not(.has-background) {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.wp-block-columns.alignfull .wp-block-column h6:not(.has-background) {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
 .wp-block-cover {
 	background-color: #fff;
 	min-height: 450px;
