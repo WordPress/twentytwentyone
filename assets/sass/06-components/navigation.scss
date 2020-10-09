@@ -5,34 +5,30 @@
 .menu-button-container {
 	display: none;
 	justify-content: space-between;
-	left: 0;
 	position: absolute;
-	top: 0;
-	width: 100%;
+	right: 0;
+	padding-top: calc(0.5 * var(--global--spacing-vertical));
+	padding-bottom: calc(0.25 * var(--global--spacing-vertical));
 
 	#primary-mobile-menu {
 		margin-left: auto;
 		padding: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit))) calc(var(--button--padding-horizontal) - (0.25 * var(--global--spacing-unit)));
-		margin-top: calc(0.25 * var(--global--spacing-unit));
-		margin-right: calc(0.25 * var(--global--spacing-unit));
+		margin-right: calc(0.5 * var(--global--spacing-unit));
 	}
 
 	@include media(mobile-only) {
 		display: flex;
 	}
 
-	.admin-bar:not(.primary-navigation-open) & {
-		top: calc(1.4 * var(--global--spacing-vertical));
-	}
-
-	.button {
+	// Override specificty from default button styles.
+	.button.button {
 		display: flex;
 		font-size: var(--primary-nav--font-size-button);
 		font-weight: var(--primary-nav--font-weight-button);
 		text-transform: var(--branding--title--text-transform);
 		background-color: transparent;
+		border: none;
 		color: var(--primary-nav--color-link);
-		z-index: 500;
 
 		.dropdown-icon {
 			display: flex;
@@ -71,9 +67,12 @@
 
 	// When the menu is open, hide the close button and show the hide button.
 	.primary-navigation-open & {
+		width: 100%;
+		z-index: 500;
+		background-color: var(--global--color-background);
 
 		#primary-mobile-menu {
-			display: flex;
+			position: static;
 		}
 	}
 }
@@ -89,33 +88,43 @@
 	margin-top: 0;
 	margin-bottom: 0;
 
-	@include media(mobile-only) {
-		width: 100%;
-	}
-
 	// Mobile menu closed
 	> .primary-menu-container {
+		position: absolute;
 		visibility: hidden;
 		opacity: 0;
-		position: fixed;
 		top: 0;
 		right: 0;
 		bottom: 0;
 		left: 0;
-		padding: calc(4 * var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
+		// Height of the menu-button-container using font size, line height, and total padding, plus 5px so the focus of the first item is visible.
+		padding-top: calc(var(--button--line-height) * var(--primary-nav--font-size-button) + 42px + 5px);
+		padding-left: var(--global--spacing-unit);
+		padding-right: var(--global--spacing-unit);
+		padding-bottom: var(--global--spacing-horizontal);
 		background-color: var(--global--color-background);
-		overflow-x: hidden;
+		overflow-x: scroll;
 		overflow-y: auto;
 		transition: all .15s ease-in-out;
 		transform: translateY(var(--global--spacing-vertical));
 
 		@include media(mobile-only) {
+			height: 100vh;
 			z-index: 499;
+
+			.admin-bar & {
+				height: calc(100vh - 46px);
+			}
 		}
 	}
 
 	// Mobile menu open
 	.primary-navigation-open & {
+
+		@include media(mobile-only) {
+			width: 100%;
+			position: fixed;
+		}
 
 		> .primary-menu-container {
 			visibility: visible;
@@ -125,17 +134,8 @@
 
 	}
 
-	// Adjust button postion when scrolling is locked
-	.lock-scrolling & > .button {
-		position: fixed;
-		top: 0;
-		right: 0;
-	}
-
 	// Adjust positions when logged-in
-	.admin-bar &,
-	.admin-bar & > .primary-menu-container,
-	.admin-bar.lock-scrolling & > .button {
+	.admin-bar & {
 		top: 46px;
 	}
 
@@ -188,7 +188,6 @@
 		position: relative;
 
 		@include media(mobile-only) {
-			margin: calc(2 * var(--global--spacing-vertical)) 0 0 0;
 
 			ul {
 				padding-left: 0;
@@ -235,13 +234,20 @@
 			&[aria-expanded="false"] {
 				/* stylelint-disable */
 				background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z' fill='%2328303d'/></svg>") no-repeat center center;
+				.is-background-dark & {
+					background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z' fill='%23fff'/></svg>") no-repeat center center;
+				}
 				/* stylelint-enable */
 			}
 
 			// When the sub-menu is open, display the minus icon
 			&[aria-expanded="true"] {
 				/* stylelint-disable */
-				background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M4 9h12v2H4V9z' fill='%2328303d'/></svg>") no-repeat center center;
+				background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M6 11h12v2H6z' fill='%2328303d'/></svg>") no-repeat center center;
+
+				.is-background-dark & {
+					background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M6 11h12v2H6z' fill='%23fff'/></svg>") no-repeat center center;
+				}
 				/* stylelint-enable */
 			}
 
@@ -249,7 +255,11 @@
 
 		.hover .sub-menu-toggle {
 			/* stylelint-disable */
-			background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M4 9h12v2H4V9z' fill='%2328303d'/></svg>") no-repeat center center;
+			background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M6 11h12v2H6z' fill='%2328303d'/></svg>") no-repeat center center;
+
+			.is-background-dark & {
+				background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M6 11h12v2H6z' fill='%23fff'/></svg>") no-repeat center center;
+			}
 			/* stylelint-enable */
 		}
 
@@ -264,9 +274,9 @@
 				margin: 0;
 				min-width: max-content;
 				position: absolute;
-				top: 100%;
+				top: calc(100% + 3px);
 				transition: all 0.5s ease;
-				z-index: 99999;
+				z-index: 88888;
 			}
 
 			.sub-menu {
@@ -279,14 +289,27 @@
 	.primary-menu > .menu-item:hover > a {
 		color: var(--primary-nav--color-link-hover);
 	}
-	// Top-level Menu Item
-	.primary-menu-container > ul > .menu-item {
+
+	.primary-menu-container {
 		@include media(mobile) {
-			display: flex;
-			align-items: center;
-			margin-left: calc(-1 * var(--primary-nav--padding)); // Better align with the site title when the menu wraps.
-			margin-right: var(--primary-nav--padding);
-			padding: 0 var(--primary-nav--padding);
+			// Better align with the site title when the menu wraps.
+			margin-right: calc(0px - var(--primary-nav--padding));
+			margin-left: calc(0px - var(--primary-nav--padding));
+
+			// Top-level Menu Item
+			> ul > .menu-item {
+				display: flex;
+				align-items: center;
+
+				> a {
+					padding-left: var(--primary-nav--padding);
+					padding-right: var(--primary-nav--padding);
+
+					+ .sub-menu-toggle {
+						margin-left: calc(0px - var(--primary-nav--padding));
+					}
+				}
+			}
 		}
 	}
 
@@ -402,5 +425,6 @@
 	.lock-scrolling .site {
 		position: fixed;
 		max-width: 100%;
+		width: 100%;
 	}
 }

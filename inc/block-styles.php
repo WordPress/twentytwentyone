@@ -13,73 +13,89 @@ if ( function_exists( 'register_block_style' ) ) {
 	/**
 	 * Register block styles.
 	 *
+	 * @since 1.0.0
+	 *
 	 * @return void
 	 */
 	function twenty_twenty_one_register_block_styles() {
+		// Columns: Overlap.
 		register_block_style(
-			'core/image',
+			'core/columns',
 			array(
-				'name'  => 'twentytwentyone-image-frame',
-				'label' => __( 'Bordered Frame', 'twentytwentyone' ),
+				'name'  => 'twentytwentyone-columns-overlap',
+				'label' => __( 'Overlap', 'twentytwentyone' ),
 			)
 		);
 
-		register_block_style(
-			'core/image',
-			array(
-				'name'  => 'twentytwentyone-border',
-				'label' => __( 'Bordered', 'twentytwentyone' ),
-			)
-		);
-
+		// Cover: Borders.
 		register_block_style(
 			'core/cover',
 			array(
 				'name'  => 'twentytwentyone-border',
-				'label' => __( 'Bordered', 'twentytwentyone' ),
+				'label' => esc_html__( 'Borders', 'twentytwentyone' ),
 			)
 		);
 
+		// Group: Borders.
 		register_block_style(
 			'core/group',
 			array(
 				'name'  => 'twentytwentyone-border',
-				'label' => __( 'Bordered', 'twentytwentyone' ),
+				'label' => esc_html__( 'Borders', 'twentytwentyone' ),
 			)
 		);
 
+		// Image: Borders.
 		register_block_style(
-			'core/media-text',
+			'core/image',
 			array(
 				'name'  => 'twentytwentyone-border',
-				'label' => __( 'Bordered', 'twentytwentyone' ),
+				'label' => esc_html__( 'Borders', 'twentytwentyone' ),
 			)
 		);
 
-		/* Latest Posts: Dividers */
+		// Image: Frame.
+		register_block_style(
+			'core/image',
+			array(
+				'name'  => 'twentytwentyone-image-frame',
+				'label' => esc_html__( 'Frame', 'twentytwentyone' ),
+			)
+		);
+
+		// Latest Posts: Dividers.
 		register_block_style(
 			'core/latest-posts',
 			array(
 				'name'  => 'twentytwentyone-latest-posts-dividers',
-				'label' => __( 'Dividers', 'twentytwentyone' ),
+				'label' => esc_html__( 'Dividers', 'twentytwentyone' ),
 			)
 		);
 
-		/* Latest Posts: Borders */
+		// Latest Posts: Borders.
 		register_block_style(
 			'core/latest-posts',
 			array(
 				'name'  => 'twentytwentyone-latest-posts-borders',
-				'label' => __( 'Borders', 'twentytwentyone' ),
+				'label' => esc_html__( 'Borders', 'twentytwentyone' ),
 			)
 		);
 
-		/* Social icons: Dark gray color */
+		// Media & Text: Borders.
+		register_block_style(
+			'core/media-text',
+			array(
+				'name'  => 'twentytwentyone-border',
+				'label' => esc_html__( 'Borders', 'twentytwentyone' ),
+			)
+		);
+
+		// Social icons: Dark gray color.
 		register_block_style(
 			'core/social-links',
 			array(
 				'name'  => 'twentytwentyone-social-icons-color',
-				'label' => __( 'Dark Gray', 'twentytwentyone' ),
+				'label' => esc_html__( 'Dark Gray', 'twentytwentyone' ),
 			)
 		);
 	}

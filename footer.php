@@ -24,20 +24,15 @@
 			<div class="site-name">
 				<?php if ( has_custom_logo() ) : ?>
 					<div class="site-logo"><?php the_custom_logo(); ?></div>
-					<?php
-					else :
-						$blog_info = get_bloginfo( 'name' );
-						if ( ! empty( $blog_info ) && get_theme_mod( 'display_title_and_tagline', true ) ) :
-							if ( is_front_page() && ! is_paged() ) :
-								?>
-								<?php bloginfo( 'name' ); ?>
-							<?php else : ?>
+				<?php else : ?>
+					<?php if ( get_bloginfo( 'name' ) && get_theme_mod( 'display_title_and_tagline', true ) ) : ?>
+						<?php if ( is_front_page() && ! is_paged() ) : ?>
+							<?php bloginfo( 'name' ); ?>
+						<?php else : ?>
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-								<?php
-								endif;
-							endif;
-						endif;
-					?>
+						<?php endif; ?>
+					<?php endif; ?>
+				<?php endif; ?>
 			</div><!-- .site-name -->
 			<div class="copyright">
 				<?php

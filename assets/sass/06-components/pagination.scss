@@ -23,7 +23,7 @@
 	}
 
 	.nav-links {
-		@include media(mobile) {
+		@include media(tablet) {
 			display: flex;
 			justify-content: center;
 			flex-wrap: wrap;
@@ -142,6 +142,24 @@
 
 		&.prev {
 			margin-right: auto;
+		}
+	}
+
+	@include media(tablet-only) {
+
+		.nav-links {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.page-numbers {
+			display: none;
+
+			&.prev,
+			&.next {
+				display: inline-block;
+				flex: 0 1 auto;
+			}
 		}
 	}
 }
