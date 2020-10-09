@@ -12,7 +12,6 @@ $post_format = get_post_format();
 if ( 'aside' === $post_format || 'status' === $post_format ) {
 	return;
 }
-
 ?>
 
 <header class="entry-header">
