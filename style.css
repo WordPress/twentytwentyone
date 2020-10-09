@@ -3097,6 +3097,10 @@ table.wp-calendar-table caption {
 	margin-right: 140px;
 }
 
+.site-branding:last-child {
+	margin-right: 0;
+}
+
 @media only screen and (min-width: 482px) {
 	.site-branding {
 		margin-right: initial;
@@ -3630,7 +3634,6 @@ h1.page-title {
 	hyphens: auto;
 	word-wrap: break-word;
 	word-break: break-word;
-	display: inline-block;
 }
 
 .comment-meta .comment-metadata {
@@ -4455,6 +4458,10 @@ h1.page-title {
 .widget_search > .search-form .search-submit:hover {
 	background-color: var(--button--color-background);
 	color: var(--button--color-text);
+}
+
+.widget_rss a.rsswidget .rss-widget-icon {
+	display: none;
 }
 
 /* Category 07 is for any utility classes that are not assigned to a specific component. */
