@@ -2,7 +2,7 @@
 name: Block pattern ideas
 about: Suggest a new block pattern
 title: 'Block Pattern: '
-labels: Needs design feedback, [Component] Block Patterns
+labels: Needs design feedback
 assignees: ''
 
 ---
