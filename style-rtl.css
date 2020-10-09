@@ -4114,6 +4114,7 @@ h1.page-title {
 .primary-navigation a:focus {
 	position: relative;
 	z-index: 99999;
+	outline-offset: 0;
 }
 
 .primary-navigation .current-menu-item > a:first-child,
