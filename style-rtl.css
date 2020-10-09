@@ -1615,6 +1615,9 @@ a:hover {
 }
 
 @media only screen and (min-width: 652px) {
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column {
+		flex-grow: 1;
+	}
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) {
 		margin-right: calc(-2 * var(--global--spacing-horizontal));
 		margin-top: calc(2.5 * var(--global--spacing-horizontal));
@@ -2430,6 +2433,11 @@ p.has-text-color a {
 	background: none;
 }
 
+.wp-block-pullquote.alignleft:before,
+.wp-block-pullquote.alignleft cite {
+	text-align: center;
+}
+
 .wp-block-pullquote.alignwide > p,
 .wp-block-pullquote.alignwide blockquote {
 	max-width: var(--responsive--alignwide-width);
@@ -3142,6 +3150,10 @@ table.wp-calendar-table caption {
 	margin-left: 140px;
 }
 
+.site-branding:last-child {
+	margin-left: 0;
+}
+
 @media only screen and (min-width: 482px) {
 	.site-branding {
 		margin-left: initial;
@@ -3184,6 +3196,7 @@ table.wp-calendar-table caption {
 	color: currentColor;
 	font-family: var(--branding--description--font-family);
 	font-size: var(--branding--description--font-size);
+	line-height: 1.4;
 }
 
 a.custom-logo-link,
@@ -3674,7 +3687,6 @@ h1.page-title {
 	hyphens: auto;
 	word-wrap: break-word;
 	word-break: break-word;
-	display: inline-block;
 }
 
 .comment-meta .comment-metadata {
@@ -4499,6 +4511,10 @@ h1.page-title {
 .widget_search > .search-form .search-submit:hover {
 	background-color: var(--button--color-background);
 	color: var(--button--color-text);
+}
+
+.widget_rss a.rsswidget .rss-widget-icon {
+	display: none;
 }
 
 /* Category 07 is for any utility classes that are not assigned to a specific component. */
