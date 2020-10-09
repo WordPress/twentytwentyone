@@ -34,8 +34,8 @@ while ( have_posts() ) :
 
 	if ( is_singular( 'post' ) ) {
 		// Previous/next post navigation.
-		$twentytwentyone_next = is_rtl() ? twenty_twenty_one_get_icon_svg( 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'arrow_right' );
-		$twentytwentyone_prev = is_rtl() ? twenty_twenty_one_get_icon_svg( 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'arrow_left' );
+		$twentytwentyone_next = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' );
+		$twentytwentyone_prev = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' );
 		the_post_navigation(
 			array(
 				'next_text' => '<span class="meta-nav" aria-hidden="true">' .

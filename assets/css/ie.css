@@ -5635,7 +5635,7 @@ h1.page-title {
 }
 
 .footer-navigation {
-	font-size: 1.125rem;
+	font-size: 1rem;
 }
 
 .footer-navigation-wrapper {
@@ -5650,18 +5650,26 @@ h1.page-title {
 
 .footer-navigation-wrapper li {
 	display: inline;
-	margin: 30px 13px;
-	position: relative;
+	line-height: 3;
 }
 
-.footer-navigation-wrapper a {
+.footer-navigation-wrapper li a {
 	padding: 17px 13px;
+	transition: transform 0.1s ease;
 }
 
-.footer-navigation-wrapper a:hover {
+.footer-navigation-wrapper li a:hover {
 	text-decoration: underline;
 	text-decoration-style: dotted;
 	text-decoration-skip-ink: none;
+}
+
+.footer-navigation-wrapper li svg {
+	vertical-align: middle;
+}
+
+.footer-navigation-wrapper li svg:hover {
+	transform: scale(1.1);
 }
 
 .footer-navigation-wrapper .sub-menu-toggle {

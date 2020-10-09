@@ -1,6 +1,6 @@
 
 .footer-navigation {
-	font-size: var(--primary-nav--font-size);
+	font-size: var(--global--font-size-xs);
 }
 
 .footer-navigation-wrapper {
@@ -14,17 +14,26 @@
 
 	li {
 		display: inline;
-		margin: var(--global--spacing-vertical) calc(0.5 * var(--global--spacing-horizontal));
-		position: relative;
-	}
+		// This is to prevent hover styles from overlapping when the menu wraps.
+		line-height: 3;
 
-	a {
-		padding: calc(1.25 * var(--primary-nav--padding)) var(--primary-nav--padding);
+		a {
+			padding: calc(1.25 * var(--primary-nav--padding)) var(--primary-nav--padding);
+			transition: transform 0.1s ease;
 
-		&:hover {
-			text-decoration: underline;
-			text-decoration-style: dotted;
-			text-decoration-skip-ink: none;
+			&:hover {
+				text-decoration: underline;
+				text-decoration-style: dotted;
+				text-decoration-skip-ink: none;
+			}
+		}
+
+		svg {
+			vertical-align: middle;
+
+			&:hover {
+				transform: scale(1.1);
+			}
 		}
 	}
 

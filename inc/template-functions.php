@@ -249,15 +249,15 @@ add_filter( 'the_title', 'twenty_twenty_one_post_title' );
  *
  * @since 1.0.0
  *
+ * @param string $group The icon group.
  * @param string $icon The icon.
  * @param int    $size The icon size in pixels.
  *
  * @return string
  */
-function twenty_twenty_one_get_icon_svg( $icon, $size = 24 ) {
-	return Twenty_Twenty_One_SVG_Icons::get_svg( $icon, $size );
+function twenty_twenty_one_get_icon_svg( $group, $icon, $size = 24 ) {
+	return Twenty_Twenty_One_SVG_Icons::get_svg( 'ui', $icon, $size );
 }
-
 
 /**
  * Changes the default navigation arrows to svg icons
@@ -267,8 +267,8 @@ function twenty_twenty_one_get_icon_svg( $icon, $size = 24 ) {
  * @return string
  */
 function twenty_twenty_one_change_calendar_nav_arrows( $calendar_output ) {
-	$calendar_output = str_replace( '&laquo; ', twenty_twenty_one_get_icon_svg( 'arrow_left' ), $calendar_output );
-	$calendar_output = str_replace( ' &raquo;', twenty_twenty_one_get_icon_svg( 'arrow_right' ), $calendar_output );
+	$calendar_output = str_replace( '&laquo; ', twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ), $calendar_output );
+	$calendar_output = str_replace( ' &raquo;', twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ), $calendar_output );
 	return $calendar_output;
 }
 add_filter( 'get_calendar', 'twenty_twenty_one_change_calendar_nav_arrows' );

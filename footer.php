@@ -29,8 +29,8 @@
 							'theme_location' => 'footer',
 							'items_wrap'     => '%3$s',
 							'depth'          => 1,
-							// 'link_before' => '<span class="screen-reader-text">',
-							// 'link_after'  => '</span>',
+							'link_before'    => '<span>',
+							'link_after'     => '</span>',
 						)
 					);
 					?>
