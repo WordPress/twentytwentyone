@@ -190,6 +190,19 @@ function twenty_twenty_one_get_avatar_size() {
 }
 
 /**
+ * Creates continue reading text
+ */
+function twenty_twenty_one_continue_reading_text() {
+	$continue_reading = sprintf(
+		/* translators: %s: Name of current post. */
+		wp_kses( esc_html__( 'Read more %s', 'twentytwentyone' ), array( 'span' => array( 'class' => array() ) ) ),
+		the_title( '<span class="screen-reader-text">' . esc_html__( 'about ', 'twentytwentyone' ), '</span>', false )
+	);
+
+	return $continue_reading;
+}
+
+/**
  * Create the continue reading link for excerpt.
  */
 function twenty_twenty_one_continue_reading_link_excerpt() {
@@ -201,7 +214,7 @@ function twenty_twenty_one_continue_reading_link_excerpt() {
 			the_title( '<span class="screen-reader-text">' . esc_html__( 'about ', 'twentytwentyone' ), '</span>', false )
 		);
 
-		return '&hellip; <a class="more-link" href="' . esc_url( get_permalink() ) . '">' . $continue_reading . '</a>';
+		return '&hellip; <a class="more-link" href="' . esc_url( get_permalink() ) . '">' . twenty_twenty_one_continue_reading_text() . '</a>';
 	}
 }
 
@@ -220,7 +233,7 @@ function twenty_twenty_one_continue_reading_link() {
 			the_title( '<span class="screen-reader-text">' . esc_html__( 'about ', 'twentytwentyone' ), '</span>', false )
 		);
 
-		return '<div><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . $continue_reading . '</a></div>';
+		return '<div class="more-link-container"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . twenty_twenty_one_continue_reading_text() . '</a></div>';
 	}
 }
 
