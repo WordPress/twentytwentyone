@@ -396,7 +396,7 @@ function twenty_twenty_one_get_non_latin_css( $type = 'front-end' ) {
  * @param string      $block_name The block name/type. Example: `core/image`.
  * @param string|null $content    The content we need to search in. Use null for get_the_content().
  *
- * @return void
+ * @return bool Returns true if a block was located & printed, otherwise false.
  */
 function twenty_twenty_one_print_first_instance_of_block( $block_name, $content = null ) {
 	if ( ! $content ) {
@@ -422,7 +422,8 @@ function twenty_twenty_one_print_first_instance_of_block( $block_name, $content 
 			)
 		) {
 			echo render_block( $block ); // phpcs:ignore WordPress.Security.EscapeOutput
-			break;
+			return true;
 		}
 	}
+	return false;
 }
