@@ -35,3 +35,27 @@ function twenty_twenty_one_add_sub_menu_toggle( $output, $item, $depth, $args ) 
 	return $output;
 }
 add_filter( 'walker_nav_menu_start_el', 'twenty_twenty_one_add_sub_menu_toggle', 10, 4 );
+
+
+/**
+ * Displays SVG icons in the footer navigation.
+ *
+ * @param string   $item_output The menu item's starting HTML output.
+ * @param WP_Post  $item        Menu item data object.
+ * @param int      $depth       Depth of the menu. Used for padding.
+ * @param stdClass $args        An object of wp_nav_menu() arguments.
+ * @return string The menu item output with social icon.
+ */
+function twenty_twenty_one_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
+	// Change SVG icon inside social links menu if there is supported URL.
+	if ( 'footer' === $args->theme_location ) {
+		if ( ! empty( $svg ) ) {
+			$svg         = twenty_twenty_one_get_icon_svg( $item->url );
+			$item_output = str_replace( $args->link_after, '</span>' . $svg, $item_output );
+		}
+	}
+
+	return $item_output;
+}
+
+add_filter( 'walker_nav_menu_start_el', 'twenty_twenty_one_nav_menu_social_icons', 10, 4 );

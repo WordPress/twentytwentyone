@@ -79,6 +79,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
  * 404..................404 styles.
  * Search...............Search styles.
  * Navigation...........Navigation styles.
+ * Footer Navigation....Footer Navigation styles.
  * Pagination...........Pagination styles.
  * Single...............Single page and post styles.
  * Posts and pages......Misc, sticky post styles.
@@ -5631,6 +5632,40 @@ h1.page-title {
 		max-width: 100%;
 		width: 100%;
 	}
+}
+
+.footer-navigation {
+	font-size: 1.125rem;
+}
+
+.footer-navigation-wrapper {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: 0 auto;
+	padding-left: 0;
+}
+
+.footer-navigation-wrapper li {
+	display: inline;
+	margin: 30px 13px;
+	position: relative;
+}
+
+.footer-navigation-wrapper a {
+	padding: 17px 13px;
+}
+
+.footer-navigation-wrapper a:hover {
+	text-decoration: underline;
+	text-decoration-style: dotted;
+	text-decoration-skip-ink: none;
+}
+
+.footer-navigation-wrapper .sub-menu-toggle {
+	display: none;
 }
 
 /* Next/Previous navigation */
