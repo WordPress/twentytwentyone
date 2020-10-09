@@ -56,7 +56,10 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		color: #000;
 	}
 	h1 {
-		font-size: 24pt;
+		font-size: 24pt !important;
+	}
+	h2.entry-title{
+		font-size: 16pt !important;
 	}
 	h2,
 	h3,
@@ -66,8 +69,7 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	h2.author-title,
 	p.author-bio,
 	.comments-title {
-		font-size: 14pt;
-		margin-top: 25px;
+		font-size: 14pt !important;
 	}
 	.wp-block-latest-posts > li > a {
 		font-size: 13pt;
@@ -78,6 +80,11 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		margin-top: 0;
 		line-height: 1.2;
 	}
+	.wp-block-pullquote p, 
+	.wp-block-quote.is-style-large p, 
+	.wp-block-quote.is-large p {
+        font-size: 20pt !important;
+    }
 	/* Page breaks */
 	a {
 		page-break-inside: avoid;
@@ -116,11 +123,15 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		text-align: left;
 		text-decoration: none;
 	}
+	a[href^="http"]{
+		text-decoration: underline;
+	}
 	a[href^="http"]:after {
 		content: " <" attr(href) "> ";
 		font-size: 9pt;
 		word-break: break-word;
 		font-weight: 300;
+		text-decoration: none !important;
 	}
 	a:after > img {
 		content: "";
@@ -183,6 +194,10 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	.entry .entry-content .button {
 		color: #000;
 		background: none;
+		border: none;
+		padding: 0;
+		font-size: 13pt;
+		text-decoration: underline;
 	}
 	/* Site Header (With Featured Image) */
 	.site-header.featured-image {
@@ -240,6 +255,9 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		width: auto;
 		display: table;
 	}
+	.wp-block-button {
+		float: none !important;
+	}
 	.wp-block-gallery .blocks-gallery-image figcaption, 
 	.wp-block-gallery .blocks-gallery-item figcaption,
 	figcaption,
@@ -285,5 +303,8 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	}
 	.wp-block-latest-posts:not(.is-grid) > li {
 		margin: 10pt 0 !important;
+	}
+	.wp-block-columns.alignfull{
+		padding: 0 18pt !important;
 	}
 }
