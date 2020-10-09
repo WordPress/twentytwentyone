@@ -117,26 +117,32 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				'</span><br>'
 			);
 
-			/* translators: used between list items, there is a space after the comma. */
-			$categories_list = get_the_category_list( __( ', ', 'twentytwentyone' ) );
-			if ( $categories_list ) {
-				printf(
-					/* translators: 1: posted in label, 2: list of categories. */
-					'<span class="cat-links">%1$s %2$s</span>',
-					esc_html__( 'Categorized as', 'twentytwentyone' ),
-					$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
-				);
-			}
+			if ( has_category() || has_tag() ) {
 
-			/* translators: used between list items, there is a space after the comma. */
-			$tags_list = get_the_tag_list( '', __( ', ', 'twentytwentyone' ) );
-			if ( $tags_list ) {
-				printf(
-					/* translators: %1$s: posted in label, %2$s: list of tags. */
-					'<span class="tags-links">%1$s %2$s</span>',
-					esc_html__( 'Tagged', 'twentytwentyone' ),
-					$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
-				);
+				echo '<div class="post-taxonomies">';
+
+				/* translators: used between list items, there is a space after the comma. */
+				$categories_list = get_the_category_list( __( ', ', 'twentytwentyone' ) );
+				if ( $categories_list ) {
+					printf(
+						/* translators: 1: posted in label, 2: list of categories. */
+						'<span class="cat-links">%1$s %2$s</span>',
+						esc_html__( 'Categorized as', 'twentytwentyone' ),
+						$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
+					);
+				}
+
+				/* translators: used between list items, there is a space after the comma. */
+				$tags_list = get_the_tag_list( '', __( ', ', 'twentytwentyone' ) );
+				if ( $tags_list ) {
+					printf(
+						/* translators: %1$s: posted in label, %2$s: list of tags. */
+						'<span class="tags-links">%1$s %2$s</span>',
+						esc_html__( 'Tagged', 'twentytwentyone' ),
+						$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
+					);
+				}
+				echo '</div>';
 			}
 		} elseif ( 'post' === get_post_type() && is_single() ) {
 
@@ -164,26 +170,32 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 			);
 			echo '</div>';
 
-			/* translators: used between list items, there is a space after the comma. */
-			$categories_list = get_the_category_list( __( ', ', 'twentytwentyone' ) );
-			if ( $categories_list ) {
-				printf(
-					/* translators: 1: posted in label, 2: list of categories. */
-					'<span class="cat-links">%1$s %2$s</span>',
-					esc_html__( 'Categorized as', 'twentytwentyone' ),
-					$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
-				);
-			}
+			if ( has_category() || has_tag() ) {
 
-			/* translators: used between list items, there is a space after the comma. */
-			$tags_list = get_the_tag_list( '', __( ', ', 'twentytwentyone' ) );
-			if ( $tags_list ) {
-				printf(
-					/* translators: 1: posted in label, 2: list of tags. */
-					'<span class="tags-links">%1$s %2$s</span>',
-					esc_html__( 'Tagged', 'twentytwentyone' ),
-					$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
-				);
+				echo '<div class="post-taxonomies">';
+
+				/* translators: used between list items, there is a space after the comma. */
+				$categories_list = get_the_category_list( __( ', ', 'twentytwentyone' ) );
+				if ( $categories_list ) {
+					printf(
+						/* translators: 1: posted in label, 2: list of categories. */
+						'<span class="cat-links">%1$s %2$s</span>',
+						esc_html__( 'Categorized as', 'twentytwentyone' ),
+						$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
+					);
+				}
+
+				/* translators: used between list items, there is a space after the comma. */
+				$tags_list = get_the_tag_list( '', __( ', ', 'twentytwentyone' ) );
+				if ( $tags_list ) {
+					printf(
+						/* translators: 1: posted in label, 2: list of tags. */
+						'<span class="tags-links">%1$s %2$s</span>',
+						esc_html__( 'Tagged', 'twentytwentyone' ),
+						$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
+					);
+				}
+				echo '</div>';
 			}
 		}
 	}
