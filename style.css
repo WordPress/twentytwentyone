@@ -4005,11 +4005,6 @@ h1.page-title {
 	}
 }
 
-.is-background-dark .primary-navigation > div > .menu-wrapper .sub-menu-toggle svg,
-.is-background-dark .primary-navigation > div > .menu-wrapper .sub-menu-toggle path {
-	fill: #fff;
-}
-
 .primary-navigation > div > .menu-wrapper .sub-menu-toggle .icon-plus,
 .primary-navigation > div > .menu-wrapper .sub-menu-toggle .icon-minus {
 	height: 100%;
