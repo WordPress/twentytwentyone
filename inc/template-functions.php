@@ -404,7 +404,23 @@ function twenty_twenty_one_print_first_instance_of_block( $block_name, $content 
 	}
 	$blocks = parse_blocks( $content );
 	foreach ( $blocks as $block ) {
-		if ( $block_name === $block['blockName'] ) {
+
+		// Sanity check.
+		if ( ! isset( $block['blockName'] ) ) {
+			continue;
+		}
+
+		// Check if this the block we're looking for.
+		if (
+			$block_name === $block['blockName'] || // Varbatim match.
+			( // videos.
+				'core/embed/video' === $block_name &&
+				'core/embed' === $block['blockName'] &&
+				isset( $block['attrs'] ) &&
+				isset( $block['attrs']['type'] ) &&
+				'video' === $block['attrs']['type']
+			)
+		) {
 			echo render_block( $block ); // phpcs:ignore WordPress.Security.EscapeOutput
 			break;
 		}
