@@ -9,9 +9,8 @@
  * @since 1.0.0
  */
 
-// If there is no featured-image print the first image block we can find.
-if ( ! twenty_twenty_one_can_show_post_thumbnail() ) {
-	twenty_twenty_one_print_first_instance_of_block( 'core/embed/video', get_the_content() );
-}
+// Print the 1st video we can find.
+twenty_twenty_one_print_first_instance_of_block( 'core/embed/video', get_the_content() );
 
+// Add the excerpt.
 the_excerpt();

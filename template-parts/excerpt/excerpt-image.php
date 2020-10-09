@@ -14,4 +14,5 @@ if ( ! twenty_twenty_one_can_show_post_thumbnail() ) {
 	twenty_twenty_one_print_first_instance_of_block( 'core/image', get_the_content() );
 }
 
+// Add the excerpt.
 the_excerpt();
