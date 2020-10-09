@@ -46,6 +46,15 @@
 		display: inline-block;
 		fill: currentColor;
 		vertical-align: middle;
+		position: relative;
+	}
+
+	.nav-previous .svg-icon {
+		top: -3px;
+	}
+
+	.nav-next .svg-icon {
+		top: -1px;
 	}
 }
 
