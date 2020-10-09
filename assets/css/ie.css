@@ -5950,6 +5950,10 @@ h1.page-title {
 	color: #d1e4dd;
 }
 
+.widget_rss a.rsswidget .rss-widget-icon {
+	display: none;
+}
+
 /* Category 07 is for any utility classes that are not assigned to a specific component. */
 .screen-reader-text {
 	border: 0;
