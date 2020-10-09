@@ -618,6 +618,62 @@ a:hover {
 	max-width: inherit;
 }
 
+@media only screen and (min-width: 652px) {
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) {
+		margin-left: -50px;
+		margin-top: 63px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p:not(.has-background) {
+		background-color: #d1e4dd;
+		padding: 20px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1:not(.has-background) {
+		background-color: #d1e4dd;
+		padding: 20px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h2:not(.has-background) {
+		background-color: #d1e4dd;
+		padding: 20px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h3:not(.has-background) {
+		background-color: #d1e4dd;
+		padding: 20px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h4:not(.has-background) {
+		background-color: #d1e4dd;
+		padding: 20px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h5:not(.has-background) {
+		background-color: #d1e4dd;
+		padding: 20px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h6:not(.has-background) {
+		background-color: #d1e4dd;
+		padding: 20px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul:not(.has-background) {
+		background-color: #d1e4dd;
+		padding: 20px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol:not(.has-background) {
+		background-color: #d1e4dd;
+		padding: 20px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre:not(.has-background) {
+		background-color: #d1e4dd;
+		padding: 20px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul:not(.has-background) {
+		padding-left: 50px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol:not(.has-background) {
+		padding-left: 50px;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n).is-vertically-aligned-center {
+		margin-top: 0;
+	}
+}
+
 .wp-block-file .wp-block-file__textlink {
 	text-decoration: underline;
 	text-decoration-style: solid;
@@ -2237,6 +2293,17 @@ pre.wp-block-verse {
 	margin-left: 25px;
 }
 
+@media only screen and (min-width: 482px) {
+	.wp-block[data-align="left"] > * {
+		max-width: 290px;
+		margin-right: 25px;
+	}
+	.wp-block[data-align="right"] > * {
+		max-width: 290px;
+		margin-left: 25px;
+	}
+}
+
 html {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	line-height: 1.7;
@@ -2331,17 +2398,14 @@ a {
 
 .has-black-background-color[class] {
 	background-color: #000;
-	color: #fff;
 }
 
 .has-gray-background-color[class] {
 	background-color: #39414d;
-	color: #fff;
 }
 
 .has-dark-gray-background-color[class] {
 	background-color: #28303d;
-	color: #fff;
 }
 
 .has-green-background-color[class] {
@@ -2370,6 +2434,46 @@ a {
 
 .has-white-background-color[class] {
 	background-color: #fff;
+}
+
+:not(.has-text-color).has-black-background-color[class] {
+	color: #fff;
+}
+
+:not(.has-text-color).has-gray-background-color[class] {
+	color: #fff;
+}
+
+:not(.has-text-color).has-dark-gray-background-color[class] {
+	color: #fff;
+}
+
+:not(.has-text-color).has-green-background-color[class] {
+	color: #28303d;
+}
+
+:not(.has-text-color).has-blue-background-color[class] {
+	color: #28303d;
+}
+
+:not(.has-text-color).has-purple-background-color[class] {
+	color: #28303d;
+}
+
+:not(.has-text-color).has-red-background-color[class] {
+	color: #28303d;
+}
+
+:not(.has-text-color).has-orange-background-color[class] {
+	color: #28303d;
+}
+
+:not(.has-text-color).has-yellow-background-color[class] {
+	color: #28303d;
+}
+
+:not(.has-text-color).has-white-background-color[class] {
+	color: #28303d;
 }
 
 .has-purple-to-yellow-gradient-background {

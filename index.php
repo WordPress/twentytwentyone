@@ -21,7 +21,12 @@ if ( have_posts() ) {
 	// Load posts loop.
 	while ( have_posts() ) {
 		the_post();
-		get_template_part( 'template-parts/content/content' );
+
+		if ( 'excerpt' === get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) ) {
+			get_template_part( 'template-parts/content/content-excerpt' );
+		} else {
+			get_template_part( 'template-parts/content/content' );
+		}
 	}
 
 	// Previous/next page navigation.

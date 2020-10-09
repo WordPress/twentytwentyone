@@ -14,7 +14,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<header class="entry-header alignwide">
-		<?php get_template_part( 'template-parts/header/entry-header' ); ?>
+		<?php if ( ! is_front_page() ) : ?>
+			<?php get_template_part( 'template-parts/header/entry-header' ); ?>
+		<?php endif; ?>
 		<?php twenty_twenty_one_post_thumbnail(); ?>
 	</header>
 
