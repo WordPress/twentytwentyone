@@ -93,7 +93,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 			);
 
 			$wp_customize->add_setting(
-				'display_excerpt_or_fullpost',
+				'display_excerpt_or_full_post',
 				array(
 					'capability'        => 'edit_theme_options',
 					'default'           => 'excerpt',
@@ -104,7 +104,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 			);
 
 			$wp_customize->add_control(
-				'display_excerpt_or_fullpost',
+				'display_excerpt_or_full_post',
 				array(
 					'type'    => 'radio',
 					'section' => 'theme_settings',
