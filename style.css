@@ -3527,6 +3527,10 @@ h1.page-title {
 	padding-bottom: calc(2 * var(--global--spacing-vertical));
 }
 
+.content-area .format-aside .entry-content {
+	font-size: var(--global--font-size-lg);
+}
+
 .error404 main p {
 	font-size: var(--global--font-size-lg);
 	margin-bottom: calc(var(--global--spacing-vertical) * 1.6666666667);

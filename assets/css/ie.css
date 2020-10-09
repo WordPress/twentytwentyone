@@ -4942,6 +4942,10 @@ h1.page-title {
 	padding-bottom: 60px;
 }
 
+.content-area .format-aside .entry-content {
+	font-size: 1.5rem;
+}
+
 .error404 main p {
 	font-size: 1.5rem;
 	margin-bottom: 50px;
