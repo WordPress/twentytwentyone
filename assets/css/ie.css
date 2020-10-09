@@ -4410,6 +4410,10 @@ table.wp-calendar-table caption {
 	margin-right: 140px;
 }
 
+.site-branding:last-child {
+	margin-right: 0;
+}
+
 @media only screen and (min-width: 482px) {
 	.site-branding {
 		margin-right: initial;
@@ -5031,7 +5035,6 @@ h1.page-title {
 	hyphens: auto;
 	word-wrap: break-word;
 	word-break: break-word;
-	display: inline-block;
 }
 
 .comment-meta .comment-metadata {
