@@ -41,13 +41,13 @@ if ( ! function_exists( 'twenty_twenty_one_posted_by' ) ) {
 	 */
 	function twenty_twenty_one_posted_by() {
 		if ( ! get_the_author_meta( 'description' ) ) {
+			echo '<span class="byline">';
 			printf(
-				/* translators: 2: author link. 3: author name*/
-				'<span class="byline">%1$s <span class="author vcard"><a class="url fn n" href="%2$s">%3$s</a></span></span>',
-				esc_html__( 'By', 'twentytwentyone' ),
-				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-				esc_html( get_the_author() )
+				/* translators: %s author name. */
+				esc_html__( 'By %s', 'twentytwentyone' ),
+				'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 			);
+			echo '</span>';
 		}
 	}
 }
@@ -248,4 +248,3 @@ if ( ! function_exists( 'twenty_twenty_one_the_posts_navigation' ) ) {
 		);
 	}
 }
-
