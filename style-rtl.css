@@ -3122,6 +3122,7 @@ table.wp-calendar-table caption {
 	color: currentColor;
 	font-family: var(--branding--description--font-family);
 	font-size: var(--branding--description--font-size);
+	line-height: 1.4;
 }
 
 a.custom-logo-link,
