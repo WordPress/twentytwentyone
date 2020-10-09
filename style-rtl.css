@@ -3518,7 +3518,8 @@ h1.page-title {
 	padding-bottom: calc(2 * var(--global--spacing-vertical));
 }
 
-.content-area .format-aside .entry-content {
+.archive .content-area .format-aside .entry-content,
+.archive .content-area .format-status .entry-content {
 	font-size: var(--global--font-size-lg);
 }
 
