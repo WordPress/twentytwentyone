@@ -36,3 +36,4 @@
 | @hareesh-pillai | @hareesh-pillai |
 | @mager19 | @mager19 |
 | @rolf-yoast | @rolfsiebers
+| @web-migrates | @webmigrates
