@@ -20,14 +20,14 @@ $description = get_bloginfo( 'description', 'display' );
 
 	<?php if ( $blog_info && get_theme_mod( 'display_title_and_tagline', true ) === true ) : ?>
 		<?php if ( is_front_page() ) : ?>
-			<h1 class="site-title"><?php $blog_info ?></h1>
+			<h1 class="site-title"><?php $blog_info; ?></h1>
 		<?php elseif ( is_home() ) : ?>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php $blog_info ?></a></h1>
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php $blog_info; ?></a></h1>
 		<?php else : ?>
-			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php $blog_info ?></a></p>
+			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php $blog_info; ?></a></p>
 		<?php endif; ?>
 	<?php elseif ( $blog_info && is_home() ) : ?>
-		<h1 class="screen-reader-text"><?php $blog_info ?></h1>
+		<h1 class="screen-reader-text"><?php $blog_info; ?></h1>
 	<?php endif; ?>
 
 	<?php if ( $description && get_theme_mod( 'display_title_and_tagline', true ) === true ) : ?>
