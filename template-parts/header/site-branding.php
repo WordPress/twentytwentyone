@@ -26,7 +26,7 @@ $description = get_bloginfo( 'description', 'display' );
 		<?php else : ?>
 			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php $blog_info ?></a></p>
 		<?php endif; ?>
-	<?php elseif ( $blog_info && is_home() ) : ?>
+	<?php elseif ( ! empty( $blog_info ) && is_home() ) : ?>
 		<h1 class="screen-reader-text"><?php $blog_info ?></h1>
 	<?php endif; ?>
 
