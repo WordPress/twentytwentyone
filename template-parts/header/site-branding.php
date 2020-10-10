@@ -18,7 +18,7 @@ $description = get_bloginfo( 'description', 'display' );
 		<div class="site-logo"><?php the_custom_logo(); ?></div>
 	<?php endif; ?>
 
-	<?php if ( ! $blog_info && get_theme_mod( 'display_title_and_tagline', true ) === true ) : ?>
+	<?php if ( $blog_info && get_theme_mod( 'display_title_and_tagline', true ) === true ) : ?>
 		<?php if ( is_front_page() ) : ?>
 			<h1 class="site-title"><?php $blog_info ?></h1>
 		<?php elseif ( is_home() ) : ?>
