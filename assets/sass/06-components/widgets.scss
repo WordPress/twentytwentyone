@@ -85,6 +85,7 @@
 
 	.search-field {
 		margin-right: calc(-1 * var(--button--border-width));
+		-webkit-appearance: none;
 	}
 
 	.search-submit {
@@ -95,6 +96,10 @@
 		&:hover {
 			background-color: var(--button--color-background);
 			color: var(--button--color-text);
+		}
+
+		@include media(mobile-small) {
+			margin-top: 5px;
 		}
 	}
 }

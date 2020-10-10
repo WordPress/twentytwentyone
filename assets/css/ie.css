@@ -5978,6 +5978,7 @@ h1.page-title {
 
 .widget_search > .search-form .search-field {
 	margin-right: -3px;
+	-webkit-appearance: none;
 }
 
 .widget_search > .search-form .search-submit {
@@ -5989,6 +5990,12 @@ h1.page-title {
 .widget_search > .search-form .search-submit:hover {
 	background-color: #39414d;
 	color: #d1e4dd;
+}
+
+@media only screen and (max-width: 360px) {
+	.widget_search > .search-form .search-submit {
+		margin-top: 5px;
+	}
 }
 
 .widget_rss a.rsswidget .rss-widget-icon {
