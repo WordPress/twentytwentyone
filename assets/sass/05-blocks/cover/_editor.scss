@@ -1,10 +1,23 @@
 .wp-block-cover,
 .wp-block-cover-image {
 
-	background-color: var(--cover--color-foreground);
+	background-color: var(--cover--color-background);
 	min-height: var(--cover--height);
 	margin-top: inherit;
 	margin-bottom: inherit;
+
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+
+		&.block-editor-rich-text__editable:not(.has-background):not(.has-text-color) {
+			color: var(--global--color-white);
+		}
+	}
 
 	.wp-block-cover__inner-container,
 	.wp-block-cover-image-text,
