@@ -205,7 +205,7 @@
 	--quote--line-height-large: 1.5;
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
-	--separator--width: calc(6 * var(--global--spacing-horizontal));
+	--separator--width: calc(100vw - 1.2 * var(--global--spacing-horizontal));
 	/* Block: Table */
 	--table--stripes-border-color: var(--global--color-light-gray);
 	--table--stripes-background-color: var(--global--color-light-gray);
@@ -632,6 +632,17 @@ a:hover {
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n).is-vertically-aligned-center {
 		margin-top: 0;
 	}
+}
+
+.wp-block[data-align="full"] p:not(.has-background),
+.wp-block[data-align="full"] h1:not(.has-background),
+.wp-block[data-align="full"] h2:not(.has-background),
+.wp-block[data-align="full"] h3:not(.has-background),
+.wp-block[data-align="full"] h4:not(.has-background),
+.wp-block[data-align="full"] h5:not(.has-background),
+.wp-block[data-align="full"] h6:not(.has-background) {
+	padding-left: var(--global--spacing-unit);
+	padding-right: var(--global--spacing-unit);
 }
 
 .wp-block-file .wp-block-file__textlink {
@@ -1372,9 +1383,14 @@ hr[style*="text-align: right"] {
 	border-right-color: var(--separator--border-color);
 }
 
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots),
+hr:not(.is-style-wide):not(.is-style-dots) {
+	max-width: var(--separator--width);
+}
+
 .wp-block-separator.is-style-wide,
 hr.is-style-wide {
-	border-bottom-width: var(--separator--height);
+	border-bottom-width: calc(3 * var(--separator--height));
 }
 
 .wp-block-separator.is-style-dots,

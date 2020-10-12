@@ -296,7 +296,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--quote--line-height-large: 1.5;
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
-	--separator--width: calc(6 * var(--global--spacing-horizontal));
+	--separator--width: calc(100vw - 1.2 * var(--global--spacing-horizontal));
 	/* Block: Table */
 	--table--stripes-border-color: var(--global--color-light-gray);
 	--table--stripes-background-color: var(--global--color-light-gray);
@@ -482,6 +482,7 @@ pre {
  */
 a {
 	background-color: transparent;
+	text-decoration-thickness: 1px;
 }
 
 /**
@@ -1644,6 +1645,17 @@ a:hover {
 	}
 }
 
+.wp-block-columns.alignfull .wp-block-column p:not(.has-background),
+.wp-block-columns.alignfull .wp-block-column h1:not(.has-background),
+.wp-block-columns.alignfull .wp-block-column h2:not(.has-background),
+.wp-block-columns.alignfull .wp-block-column h3:not(.has-background),
+.wp-block-columns.alignfull .wp-block-column h4:not(.has-background),
+.wp-block-columns.alignfull .wp-block-column h5:not(.has-background),
+.wp-block-columns.alignfull .wp-block-column h6:not(.has-background) {
+	padding-right: var(--global--spacing-unit);
+	padding-left: var(--global--spacing-unit);
+}
+
 .wp-block-cover,
 .wp-block-cover-image {
 	background-color: var(--cover--color-foreground);
@@ -2744,6 +2756,10 @@ hr.wp-block-separator {
 
 hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
 	max-width: var(--separator--width);
+}
+
+hr.wp-block-separator.is-style-wide {
+	border-bottom-width: calc(3 * var(--separator--height));
 }
 
 hr.wp-block-separator.is-style-dots.has-background, hr.wp-block-separator.is-style-dots.has-text-color {
@@ -4008,7 +4024,6 @@ h1.page-title {
 
 .primary-navigation > div > .menu-wrapper li {
 	display: block;
-	margin: var(--primary-nav--padding) 0;
 	position: relative;
 	width: 100%;
 }
@@ -4081,14 +4096,17 @@ h1.page-title {
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation > div > .menu-wrapper > li > .sub-menu {
-		background: var(--global--color-background);
 		right: 0;
 		margin: 0;
 		min-width: max-content;
 		position: absolute;
-		top: calc(100% + 3px);
+		top: 100%;
+		padding-top: 3px;
 		transition: all 0.5s ease;
 		z-index: 88888;
+	}
+	.primary-navigation > div > .menu-wrapper > li > .sub-menu li {
+		background: var(--global--color-background);
 	}
 }
 
@@ -4119,7 +4137,7 @@ h1.page-title {
 }
 
 .primary-navigation a {
-	display: inline;
+	display: block;
 	font-family: var(--primary-nav--font-family-mobile);
 	font-size: var(--primary-nav--font-size-mobile);
 	font-weight: var(--primary-nav--font-weight);
@@ -4148,7 +4166,9 @@ h1.page-title {
 }
 
 .primary-navigation a:focus {
+	position: relative;
 	z-index: 99999;
+	outline-offset: 0;
 }
 
 .primary-navigation .current-menu-item > a:first-child,
@@ -4162,21 +4182,16 @@ h1.page-title {
 }
 
 .primary-navigation .sub-menu {
+	margin: 0;
+	padding: 0;
 	list-style: none;
 	margin-right: var(--primary-nav--padding);
 }
 
 @media only screen and (min-width: 482px) {
-	.primary-navigation .sub-menu {
-		padding: 0 var(--primary-nav--padding);
-	}
 	.primary-navigation .sub-menu > .menu-item > .sub-menu {
 		padding: 0;
 	}
-}
-
-.primary-navigation .sub-menu .menu-item {
-	margin: calc(2 * var(--primary-nav--padding)) 0;
 }
 
 @media only screen and (max-width: 481px) {
@@ -4186,7 +4201,8 @@ h1.page-title {
 }
 
 .primary-navigation .sub-menu .menu-item > a {
-	display: inline;
+	padding: calc(1.25 * var(--primary-nav--padding)) var(--primary-nav--padding);
+	display: block;
 	font-size: var(--primary-nav--font-size-sub-menu-mobile);
 	font-style: var(--primary-nav--font-style-sub-menu-mobile);
 }
