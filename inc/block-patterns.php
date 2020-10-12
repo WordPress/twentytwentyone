@@ -33,7 +33,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'title'         => esc_html__( 'Large Text', 'twentytwentyone' ),
 			'categories'    => array( 'twentytwentyone' ),
 			'viewportWidth' => 1440,
-			'content'       => '<!-- wp:columns {"align":"wide"} --><div class="wp-block-columns alignwide"><!-- wp:column {"width":98} --><div class="wp-block-column" style="flex-basis:98%"><!-- wp:paragraph {"fontSize":"gigantic","style":{"typography":{"lineHeight":"1.1"}}} --><p class="has-gigantic-font-size" style="line-height:1.1">' . esc_html__( 'A new portfolio default theme for WordPress', 'twentytwentyone' ) . '</p><!-- /wp:paragraph --></div><!-- /wp:column --><!-- wp:column {"width":2} --><div class="wp-block-column" style="flex-basis:2%"></div><!-- /wp:column --></div><!-- /wp:columns --><!-- wp:paragraph --><p></p><!-- /wp:paragraph -->',
+			'content'       => '<!-- wp:heading {"align":"wide","fontSize":"gigantic","style":{"typography":{"lineHeight":"1.1"}}} --><h2 class="alignwide has-text-align-wide has-gigantic-font-size" style="line-height:1.1">' . esc_html__( 'A new portfolio default theme for WordPress', 'twentytwentyone' ) . '</h2><!-- /wp:heading -->',
 		)
 	);
 
