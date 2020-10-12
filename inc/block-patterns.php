@@ -53,11 +53,11 @@ if ( function_exists( 'register_block_pattern' ) ) {
 	register_block_pattern(
 		'twentytwentyone/media-text-article-title',
 		array(
-			'title'         => esc_html__( 'Media & Text Article Title', 'twentytwentyone' ),
+			'title'         => esc_html__( 'Media and Text Article Title', 'twentytwentyone' ),
 			'categories'    => array( 'twentytwentyone' ),
 			'viewportWidth' => 1440,
 			'description'   => _x( 'A Media & Text block with a big image on the left and a heading on the right. The heading is followed by a separator and a description paragraph.', 'Block pattern description', 'twentytwentyone' ),
-			'content'       => '<!-- wp:media-text {"mediaId":1752,"mediaLink":"' . esc_url( get_template_directory_uri() ) . '/assets/images/the_poplars_at_saint_remy.jpg","mediaType":"image","className":"is-style-twentytwentyone-border"} --><div class="wp-block-media-text alignwide is-stacked-on-mobile is-style-twentytwentyone-border"><figure class="wp-block-media-text__media"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/the_poplars_at_saint_remy.jpg" alt="' . esc_attr__( '&quot;The Poplars at Saint-Rémy&quot; by Vincent Van Gogh (1889)', 'twentytwentyone' ) . '" class="wp-image-1752"/></figure><div class="wp-block-media-text__content"><!-- wp:heading {"align":"center"} --><h2 class="has-text-align-center">' . wp_kses_post( __( 'The Poplars at<br>Saint-Rémy', 'twentytwentyone' ) ) . '</h2><!-- /wp:heading --><!-- wp:separator --><hr class="wp-block-separator"/><!-- /wp:separator --><!-- wp:paragraph {"align":"center","fontSize":"small"} --><p class="has-text-align-center has-small-font-size">' . wp_kses_post( __( 'Vincent van Gogh<br>(Dutch, 1853-1890)', 'twentytwentyone' ) ) . '</p><!-- /wp:paragraph --></div></div><!-- /wp:media-text -->',
+			'content'       => '<!-- wp:media-text {"mediaId":1752,"mediaLink":"' . esc_url( get_template_directory_uri() ) . '/assets/images/the_poplars_at_saint_remy.jpg","mediaType":"image","className":"is-style-twentytwentyone-border"} --><div class="wp-block-media-text alignwide is-stacked-on-mobile is-style-twentytwentyone-border"><figure class="wp-block-media-text__media"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/the_poplars_at_saint_remy.jpg" alt="' . esc_attr__( '&quot;The Poplars at Saint-Rémy&quot; by Vincent Van Gogh (1889)', 'twentytwentyone' ) . '" class="wp-image-1752"/></figure><div class="wp-block-media-text__content"><!-- wp:heading {"align":"center"} --><h2 class="has-text-align-center">' . wp_kses_post( __( 'The Poplars at<br>Saint-Rémy', 'twentytwentyone' ) ) . '</h2><!-- /wp:heading --><!-- wp:separator {"className":"is-style-dots"} --><hr class="wp-block-separator is-style-dots"/><!-- /wp:separator --><!-- wp:paragraph {"align":"center","fontSize":"small"} --><p class="has-text-align-center has-small-font-size">' . wp_kses_post( __( 'Vincent van Gogh<br>(Dutch, 1853-1890)', 'twentytwentyone' ) ) . '</p><!-- /wp:paragraph --></div></div><!-- /wp:media-text -->',
 		)
 	);
 
@@ -97,6 +97,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 		)
 	);
 
+	// Portfolio List.
 	register_block_pattern(
 		'twentytwentyone/portfolio-list',
 		array(
