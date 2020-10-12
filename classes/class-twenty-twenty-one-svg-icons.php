@@ -201,7 +201,7 @@ class Twenty_Twenty_One_SVG_Icons {
 	 * @param string $uri Social link.
 	 * @param int    $size The icon-size in pixels.
 	 *
-	 * @return string
+	 * @return string|null
 	 */
 	public static function get_social_link_svg( $uri, $size ) {
 		static $regex_map; // Only compute regex map once, for performance.
