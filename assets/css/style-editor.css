@@ -205,7 +205,7 @@
 	--quote--line-height-large: 1.5;
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
-	--separator--width: calc(100vw - 1.2 * var(--global--spacing-horizontal));
+	--separator--width: var(--responsive--aligndefault-width);
 	/* Block: Table */
 	--table--stripes-border-color: var(--global--color-light-gray);
 	--table--stripes-background-color: var(--global--color-light-gray);
@@ -1392,6 +1392,7 @@ p.has-background {
 hr {
 	border-bottom: var(--separator--height) solid var(--separator--border-color);
 	clear: both;
+	opacity: 1;
 }
 
 .wp-block-separator[style*="text-align:right"], .wp-block-separator[style*="text-align: right"],
