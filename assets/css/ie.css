@@ -2684,13 +2684,13 @@ a:hover {
 .wp-block-gallery .blocks-gallery-image figcaption {
 	margin: 0;
 	color: #fff;
-	font: 1.125rem;
+	font-size: 1rem;
 }
 
 .wp-block-gallery .blocks-gallery-item figcaption {
 	margin: 0;
 	color: #fff;
-	font: 1.125rem;
+	font-size: 1rem;
 }
 
 .wp-block-group .wp-block-group__inner-container {
