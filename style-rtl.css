@@ -1829,7 +1829,7 @@ a:hover {
 .wp-block-gallery .blocks-gallery-item figcaption {
 	margin: 0;
 	color: var(--global--color-white);
-	font: var(--global--font-size-sm);
+	font-size: var(--global--font-size-xs);
 }
 
 .wp-block-group .wp-block-group__inner-container {
@@ -3232,6 +3232,7 @@ nav a {
 @media only screen and (min-width: 822px) {
 	.site-footer > .site-info {
 		display: flex;
+		align-items: center;
 		margin-top: calc(2 * var(--global--spacing-vertical));
 	}
 	.site-footer > .site-info .imprint {
