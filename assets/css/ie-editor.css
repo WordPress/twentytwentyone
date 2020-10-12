@@ -461,17 +461,73 @@ a:hover {
 }
 
 .wp-block-cover {
-	background-color: #fff;
+	background-color: #000;
 	min-height: 450px;
 	margin-top: inherit;
 	margin-bottom: inherit;
 }
 
 .wp-block-cover-image {
-	background-color: #fff;
+	background-color: #000;
 	min-height: 450px;
 	margin-top: inherit;
 	margin-bottom: inherit;
+}
+
+.wp-block-cover p.block-editor-rich-text__editable:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover h1.block-editor-rich-text__editable:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover h2.block-editor-rich-text__editable:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover h3.block-editor-rich-text__editable:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover h4.block-editor-rich-text__editable:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover h5.block-editor-rich-text__editable:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover h6.block-editor-rich-text__editable:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover-image p.block-editor-rich-text__editable:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover-image h1.block-editor-rich-text__editable:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover-image h2.block-editor-rich-text__editable:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover-image h3.block-editor-rich-text__editable:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover-image h4.block-editor-rich-text__editable:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover-image h5.block-editor-rich-text__editable:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover-image h6.block-editor-rich-text__editable:not(.has-background):not(.has-text-color) {
+	color: #fff;
 }
 
 .wp-block-cover .wp-block-cover__inner-container,
