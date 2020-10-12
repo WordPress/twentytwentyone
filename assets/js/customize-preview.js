@@ -40,7 +40,7 @@
 		value.bind( function( to ) {
 			var lum = twentytwentyoneGetHexLum( to ),
 				isDark = 127 > lum,
-				textColor = ! isDark ? '#000' : '#fff',
+				textColor = ! isDark ? 'var(--global--color-dark-gray)' : 'var(--global--color-light-gray)',
 				tableColor = ! isDark ? 'var(--global--color-light-gray)' : 'var(--global--color-dark-gray)';
 
 			// Modify the body class depending on whether this is a dark background or not.

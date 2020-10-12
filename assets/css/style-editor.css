@@ -205,7 +205,7 @@
 	--quote--line-height-large: 1.5;
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
-	--separator--width: calc(6 * var(--global--spacing-horizontal));
+	--separator--width: calc(100vw - 1.2 * var(--global--spacing-horizontal));
 	/* Block: Table */
 	--table--stripes-border-color: var(--global--color-light-gray);
 	--table--stripes-background-color: var(--global--color-light-gray);
@@ -522,10 +522,27 @@ a:hover {
 
 .wp-block-cover,
 .wp-block-cover-image {
-	background-color: var(--cover--color-foreground);
+	background-color: var(--cover--color-background);
 	min-height: var(--cover--height);
 	margin-top: inherit;
 	margin-bottom: inherit;
+}
+
+.wp-block-cover p.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover h1.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover h2.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover h3.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover h4.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover h5.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover h6.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover-image p.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover-image h1.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover-image h2.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover-image h3.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover-image h4.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover-image h5.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover-image h6.block-editor-rich-text__editable:not(.has-background):not(.has-text-color) {
+	color: var(--global--color-white);
 }
 
 .wp-block-cover .wp-block-cover__inner-container,
@@ -611,6 +628,7 @@ a:hover {
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) {
 		margin-left: calc(-2 * var(--global--spacing-horizontal));
 		margin-top: calc(2.5 * var(--global--spacing-horizontal));
+		z-index: 2;
 	}
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p:not(.has-background),
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1:not(.has-background),
@@ -1383,9 +1401,14 @@ hr[style*="text-align: right"] {
 	border-right-color: var(--separator--border-color);
 }
 
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots),
+hr:not(.is-style-wide):not(.is-style-dots) {
+	max-width: var(--separator--width);
+}
+
 .wp-block-separator.is-style-wide,
 hr.is-style-wide {
-	border-bottom-width: var(--separator--height);
+	border-bottom-width: calc(3 * var(--separator--height));
 }
 
 .wp-block-separator.is-style-dots,
