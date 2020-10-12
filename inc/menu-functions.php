@@ -47,6 +47,7 @@ add_filter( 'walker_nav_menu_start_el', 'twenty_twenty_one_add_sub_menu_toggle',
  * @return stdClass
  */
 function twenty_twenty_one_add_menu_description_args( $args, $item, $depth ) {
+	$args->link_after = '';
 	if ( 0 === $depth && isset( $item->description ) && $item->description ) {
 		$args->link_after = '<span class="menu-item-description">' . $item->description . '</span>';
 	}
