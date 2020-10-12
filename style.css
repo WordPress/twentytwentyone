@@ -4102,7 +4102,6 @@ h1.page-title {
 	}
 	.primary-navigation .primary-menu-container > ul > .menu-item {
 		display: flex;
-		align-items: center;
 	}
 	.primary-navigation .primary-menu-container > ul > .menu-item > a {
 		padding-left: var(--primary-nav--padding);
