@@ -20,7 +20,7 @@ $description = get_bloginfo( 'description', 'display' );
 
 	<?php if ( $blog_info && true === get_theme_mod( 'display_title_and_tagline', true ) ) : ?>
 		<?php if ( is_front_page() ) : ?>
-			<h1 class="site-title"><?php $blog_info; ?></h1>
+			<h1 class="site-title"><?php echo esc_html( $blog_info ); ?></h1>
 		<?php elseif ( is_home() ) : ?>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php $blog_info; ?></a></h1>
 		<?php else : ?>
