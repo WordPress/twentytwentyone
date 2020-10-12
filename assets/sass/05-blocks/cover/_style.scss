@@ -6,6 +6,16 @@
 	margin-top: inherit;
 	margin-bottom: inherit;
 
+	p:not(.has-background):not(.has-text-color),
+	h1:not(.has-background):not(.has-text-color),
+	h2:not(.has-background):not(.has-text-color),
+	h3:not(.has-background):not(.has-text-color),
+	h4:not(.has-background):not(.has-text-color),
+	h5:not(.has-background):not(.has-text-color),
+	h6:not(.has-background):not(.has-text-color) {
+		color: var(--global--color-white);
+	}
+
 	.wp-block-cover__inner-container,
 	.wp-block-cover-image-text,
 	.wp-block-cover-text {
