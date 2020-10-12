@@ -522,10 +522,27 @@ a:hover {
 
 .wp-block-cover,
 .wp-block-cover-image {
-	background-color: var(--cover--color-foreground);
+	background-color: var(--cover--color-background);
 	min-height: var(--cover--height);
 	margin-top: inherit;
 	margin-bottom: inherit;
+}
+
+.wp-block-cover p.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover h1.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover h2.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover h3.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover h4.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover h5.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover h6.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover-image p.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover-image h1.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover-image h2.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover-image h3.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover-image h4.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover-image h5.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
+.wp-block-cover-image h6.block-editor-rich-text__editable:not(.has-background):not(.has-text-color) {
+	color: var(--global--color-white);
 }
 
 .wp-block-cover .wp-block-cover__inner-container,

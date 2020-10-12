@@ -2359,6 +2359,62 @@ a:hover {
 	/* Block Styles */
 }
 
+.wp-block-cover p:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover h1:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover h2:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover h3:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover h4:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover h5:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover h6:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover-image p:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover-image h1:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover-image h2:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover-image h3:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover-image h4:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover-image h5:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
+.wp-block-cover-image h6:not(.has-background):not(.has-text-color) {
+	color: #fff;
+}
+
 .wp-block-cover .wp-block-cover__inner-container {
 	color: currentColor;
 	margin-top: 30px;
