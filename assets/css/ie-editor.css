@@ -1870,11 +1870,11 @@ hr[style*="text-align: right"] {
 }
 
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
-	max-width: 100%;
+	max-width: calc(100vw - 30px);
 }
 
 hr:not(.is-style-wide):not(.is-style-dots) {
-	max-width: 100%;
+	max-width: calc(100vw - 30px);
 }
 
 .wp-block-separator.is-style-wide {
