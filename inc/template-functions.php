@@ -415,7 +415,19 @@ function twenty_twenty_one_print_first_instance_of_block( $block_name, $content 
 		// Check if this the block we're looking for.
 		if ( $block_name === $block['blockName'] ) {
 			$instances_count++;
-			echo render_block( $block ); // phpcs:ignore WordPress.Security.EscapeOutput
+
+			$block_content = render_block( $block );
+			$block_content = wptexturize( $block_content );
+			$block_content = convert_smilies( $block_content );
+			$block_content = wpautop( $block_content );
+			$block_content = shortcode_unautop( $block_content );
+			$block_content = ( function_exists( 'wp_filter_content_tags' ) )
+				? wp_filter_content_tags( $block_content )
+				: wp_make_content_images_responsive( $block_content );
+			$block_content = do_shortcode( $block_content );
+			$block_content = str_replace( ']]>', ']]&gt;', $block_content );
+
+			echo $block_content; // phpcs:ignore WordPress.Security.EscapeOutput
 
 			if ( $instances_count >= $instances ) {
 				return true;
