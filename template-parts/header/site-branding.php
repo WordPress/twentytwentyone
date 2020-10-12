@@ -27,7 +27,7 @@ $description = get_bloginfo( 'description', 'display' );
 			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo esc_html( $blog_info ); ?></a></p>
 		<?php endif; ?>
 	<?php elseif ( $blog_info && is_home() ) : ?>
-		<h1 class="screen-reader-text"><?php $blog_info; ?></h1>
+		<h1 class="screen-reader-text"><?php echo esc_html( $blog_info ); ?></h1>
 	<?php endif; ?>
 
 	<?php if ( $description && get_theme_mod( 'display_title_and_tagline', true ) === true ) : ?>
