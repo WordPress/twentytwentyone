@@ -9,7 +9,7 @@
  * @since 1.0.0
  */
 
-// Print the 1st instance of a paragraph block. If none is found, print the excerpt.
+// Print the 1st instance of a paragraph block. If none is found, print the content.
 if ( ! twenty_twenty_one_print_first_instance_of_block( 'core/paragraph', get_the_content() ) ) {
-	the_excerpt();
+	the_content();
 }
