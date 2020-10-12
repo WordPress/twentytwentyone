@@ -195,6 +195,21 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 			display: block;
 		}
 	}
+
+	@include media(mobile-only) {
+		display: block;
+
+		.post-taxonomies {
+
+			.cat-links,
+			.tags-links {
+				margin-right: calc(0.5 * var(--global--spacing-unit));
+				text-align: left;
+				display: inline;
+			}
+		}
+	}
+
 }
 
 .single .site-main > article > .entry-footer > span {
