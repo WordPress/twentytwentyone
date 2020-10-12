@@ -387,3 +387,20 @@ function twenty_twenty_one_get_non_latin_css( $type = 'front-end' ) {
 		false
 	);
 }
+
+/**
+ * Print the footer copyright.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function twenty_twenty_one_the_footer_copyright() {
+	echo '<div id="footer-copyright" class="copyright">';
+	$footer_text = get_theme_mod(
+		'footer_text',
+		'<a href="' . esc_url( __( 'https://wordpress.org/', 'twentytwentyone' ) ) . '" class="imprint">' . esc_html__( 'Proudly powered by WordPress.', 'twentytwentyone' ) . '</a>'
+	);
+	echo wp_kses_post( $footer_text );
+	echo '</div>';
+}

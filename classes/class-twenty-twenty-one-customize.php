@@ -116,6 +116,35 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 				)
 			);
 
+			$wp_customize->add_setting(
+				'footer_text',
+				array(
+					'capability'        => 'edit_theme_options',
+					'default'           => '<a href="' . esc_url( __( 'https://wordpress.org/', 'twentytwentyone' ) ) . '" class="imprint">' . esc_html__( 'Proudly powered by WordPress.', 'twentytwentyone' ) . '</a>',
+					'sanitize_callback' => 'wp_kses_post',
+					'transport'         => 'postMessage',
+				)
+			);
+
+			$wp_customize->add_control(
+				'footer_text',
+				array(
+					'type'    => 'textarea',
+					'section' => 'theme_settings',
+					'label'   => esc_html__( 'Footer text and copyright:', 'twentytwentyone' ),
+				)
+			);
+
+			// Add partial for footer_text.
+			$wp_customize->selective_refresh->add_partial(
+				'footer_text',
+				array(
+					'selector'            => '#footer-copyright',
+					'render_callback'     => 'twenty_twenty_one_the_footer_copyright',
+					'container_inclusive' => true,
+				)
+			);
+
 			// Background color.
 			// Include the custom control class.
 			include_once get_theme_file_path( 'classes/class-twenty-twenty-one-customize-color-control.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
