@@ -61,6 +61,18 @@ if ( function_exists( 'register_block_pattern' ) ) {
 		)
 	);
 
+	// Overlapping Images.
+	register_block_pattern(
+		'twentytwentyone/overlapping-images',
+		array(
+			'title'         => esc_html__( 'Overlapping Images', 'twentytwentyone' ),
+			'categories'    => array( 'twentytwentyone' ),
+			'viewportWidth' => 1024,
+			'description'   => _x( 'Three images inside an overlapping columns block.', 'Block pattern description', 'twentytwentyone' ),
+			'content'       => '<!-- wp:columns {"verticalAlignment":"center","align":"wide","className":"is-style-twentytwentyone-columns-overlap"} --><div class="wp-block-columns alignwide are-vertically-aligned-center is-style-twentytwentyone-columns-overlap"><!-- wp:column {"verticalAlignment":"center"} --><div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"align":"full","sizeSlug":"full"} --><figure class="wp-block-image alignfull size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/the_smoker.png" alt="' . esc_attr__( '&quot;The Smoker&quot; by Vincent Van Gogh (1888)', 'twentytwentyone' ) . '"/></figure><!-- /wp:image --><!-- wp:spacer --><div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer --><!-- wp:image {"align":"full","sizeSlug":"full"} --><figure class="wp-block-image alignfull size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/irises.png" alt="' . esc_attr__( '&quot;Irises&quot; by Vincent Van Gogh (1890)', 'twentytwentyone' ) . '"/></figure><!-- /wp:image --></div><!-- /wp:column --><!-- wp:column {"verticalAlignment":"center"} --><div class="wp-block-column is-vertically-aligned-center"><!-- wp:spacer --><div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div><!-- /wp:spacer --><!-- wp:image {"align":"full",sizeSlug":"full"} --><figure class="wp-block-image alignfull size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/girl_in_white.png" alt="' . esc_attr__( '&quot;Girl in White&quot; by Vincent Van Gogh (1890)', 'twentytwentyone' ) . '"/></figure><!-- /wp:image --></div><!-- /wp:column --></div><!-- /wp:columns -->',
+		)
+	);
+
 	// Two Images Showcase.
 	register_block_pattern(
 		'twentytwentyone/two-images-showcase',
