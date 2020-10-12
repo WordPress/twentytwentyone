@@ -126,7 +126,7 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				if ( $categories_list ) {
 					printf(
 						/* translators: 1: posted in label, 2: list of categories. */
-						'<span class="cat-links">%1$s %2$s</span>',
+						'<span class="cat-links">%1$s %2$s.</span>',
 						esc_html__( 'Categorized as', 'twentytwentyone' ),
 						$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
 					);
@@ -137,7 +137,7 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				if ( $tags_list ) {
 					printf(
 						/* translators: %1$s: posted in label, %2$s: list of tags. */
-						'<span class="tags-links">%1$s %2$s</span>',
+						'<span class="tags-links">%1$s %2$s.</span>',
 						esc_html__( 'Tagged', 'twentytwentyone' ),
 						$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
 					);
@@ -179,7 +179,7 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				if ( $categories_list ) {
 					printf(
 						/* translators: 1: posted in label, 2: list of categories. */
-						'<span class="cat-links">%1$s %2$s</span>',
+						'<span class="cat-links">%1$s %2$s.</span>',
 						esc_html__( 'Categorized as', 'twentytwentyone' ),
 						$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
 					);
@@ -190,7 +190,7 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				if ( $tags_list ) {
 					printf(
 						/* translators: 1: posted in label, 2: list of tags. */
-						'<span class="tags-links">%1$s %2$s</span>',
+						'<span class="tags-links">%1$s %2$s.</span>',
 						esc_html__( 'Tagged', 'twentytwentyone' ),
 						$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
 					);
