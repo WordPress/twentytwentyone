@@ -1671,23 +1671,6 @@ a:hover {
 	/* Block Styles */
 }
 
-.wp-block-cover p:not(.has-background):not(.has-text-color),
-.wp-block-cover h1:not(.has-background):not(.has-text-color),
-.wp-block-cover h2:not(.has-background):not(.has-text-color),
-.wp-block-cover h3:not(.has-background):not(.has-text-color),
-.wp-block-cover h4:not(.has-background):not(.has-text-color),
-.wp-block-cover h5:not(.has-background):not(.has-text-color),
-.wp-block-cover h6:not(.has-background):not(.has-text-color),
-.wp-block-cover-image p:not(.has-background):not(.has-text-color),
-.wp-block-cover-image h1:not(.has-background):not(.has-text-color),
-.wp-block-cover-image h2:not(.has-background):not(.has-text-color),
-.wp-block-cover-image h3:not(.has-background):not(.has-text-color),
-.wp-block-cover-image h4:not(.has-background):not(.has-text-color),
-.wp-block-cover-image h5:not(.has-background):not(.has-text-color),
-.wp-block-cover-image h6:not(.has-background):not(.has-text-color) {
-	color: var(--global--color-white);
-}
-
 .wp-block-cover .wp-block-cover__inner-container,
 .wp-block-cover .wp-block-cover-image-text,
 .wp-block-cover .wp-block-cover-text,
@@ -1723,7 +1706,7 @@ a:hover {
 .wp-block-cover-image:not([class*="background-color"]) .wp-block-cover__inner-container,
 .wp-block-cover-image:not([class*="background-color"]) .wp-block-cover-image-text,
 .wp-block-cover-image:not([class*="background-color"]) .wp-block-cover-text {
-	color: var(--cover--color-background);
+	color: var(--cover--color-foreground);
 }
 
 .wp-block-cover h2,
