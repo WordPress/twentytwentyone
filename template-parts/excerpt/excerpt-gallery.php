@@ -10,7 +10,12 @@
  */
 
 // Print the 1st gallery we can find.
-twenty_twenty_one_print_first_instance_of_block( 'core/gallery', get_the_content() );
+if ( twenty_twenty_one_print_first_instance_of_block( 'core/gallery', get_the_content() ) ) {
 
-// Add the excerpt.
-the_excerpt();
+	// Add the excerpt.
+	the_excerpt();
+} else {
+
+	// Fallback to the content.
+	the_content();
+}
