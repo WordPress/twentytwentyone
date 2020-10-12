@@ -158,12 +158,9 @@ h1.entry-title {
 	padding-bottom: calc(3 * var(--global--spacing-vertical));
 	border-bottom: var(--separator--height) solid var(--separator--border-color);
 
-	.post-taxonomies {
+	.post-taxonomies > span {
+		margin-right: calc(0.5 * var(--global--spacing-unit));
 
-		.cat-links,
-		.tags-links {
-			display: block;
-		}
 	}
 }
 
@@ -186,6 +183,15 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 		.posted-on,
 		.byline {
+			display: block;
+		}
+	}
+
+	.post-taxonomies {
+
+		.cat-links,
+		.tags-links {
+			margin-right: 0;
 			display: block;
 		}
 	}
