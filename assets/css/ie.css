@@ -2672,6 +2672,30 @@ a:hover {
 	margin: 0 auto;
 }
 
+.wp-block-gallery.columns-3 .blocks-gallery-item figcaption {
+	font-size: 0.75rem;
+}
+
+.wp-block-gallery.columns-4 .blocks-gallery-item figcaption {
+	font-size: 0.75rem;
+}
+
+.wp-block-gallery.columns-5 .blocks-gallery-item figcaption {
+	font-size: 0.75rem;
+}
+
+.wp-block-gallery.columns-6 .blocks-gallery-item figcaption {
+	font-size: 0.75rem;
+}
+
+.wp-block-gallery.columns-7 .blocks-gallery-item figcaption {
+	font-size: 0.75rem;
+}
+
+.wp-block-gallery.columns-8 .blocks-gallery-item figcaption {
+	font-size: 0.75rem;
+}
+
 .wp-block-gallery .blocks-gallery-image {
 	width: calc((100% - 20px)/2);
 }
@@ -2683,13 +2707,13 @@ a:hover {
 .wp-block-gallery .blocks-gallery-image figcaption {
 	margin: 0;
 	color: #fff;
-	font: 1.125rem;
+	font-size: 1.125rem;
 }
 
 .wp-block-gallery .blocks-gallery-item figcaption {
 	margin: 0;
 	color: #fff;
-	font: 1.125rem;
+	font-size: 1.125rem;
 }
 
 .wp-block-group .wp-block-group__inner-container {

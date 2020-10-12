@@ -1,5 +1,20 @@
 .wp-block-gallery {
 
+	&.columns-3,
+	&.columns-4,
+	&.columns-5,
+	&.columns-6,
+	&.columns-7,
+	&.columns-8 {
+
+		.blocks-gallery-item {
+
+			figcaption {
+				font-size: var(--global--font-size-xxs);
+			}
+		}
+	}
+
 	margin: 0 auto;
 
 	.blocks-gallery-image,
@@ -12,7 +27,7 @@
 			margin: 0;
 			// Text color is always white to account for default gradient background
 			color: var(--global--color-white);
-			font: var(--global--font-size-sm);
+			font-size: var(--global--font-size-sm);
 		}
 	}
 }
