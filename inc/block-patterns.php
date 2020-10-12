@@ -53,7 +53,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 	register_block_pattern(
 		'twentytwentyone/media-text-article-title',
 		array(
-			'title'         => esc_html__( 'Media & Text Article Title', 'twentytwentyone' ),
+			'title'         => esc_html__( 'Media and Text Article Title', 'twentytwentyone' ),
 			'categories'    => array( 'twentytwentyone' ),
 			'viewportWidth' => 1440,
 			'description'   => _x( 'A Media & Text block with a big image on the left and a heading on the right. The heading is followed by a separator and a description paragraph.', 'Block pattern description', 'twentytwentyone' ),
