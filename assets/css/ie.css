@@ -136,6 +136,19 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	text-decoration: none;
 	padding: 15px 30px;
 }
+.mejs-button button:not {
+	line-height: 1.5;
+	color: #d1e4dd;
+	cursor: pointer;
+	font-weight: 500;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: 1.25rem;
+	background-color: #39414d;
+	border-radius: 0;
+	border: 3px solid #39414d;
+	text-decoration: none;
+	padding: 15px 30px;
+}
 .site .button {
 	line-height: 1.5;
 	color: #d1e4dd;
@@ -203,10 +216,12 @@ input[type="reset"] {
 }
 
 .site button:not(.customize-partial-edit-shortcut-button):before,
+.mejs-button button:not:before,
 .site .button:before,
 input[type="submit"]:before,
 input[type="reset"]:before,
 .wp-block-button .wp-block-button__link:before, .wp-block-file .wp-block-file__button:before, .site button:not(.customize-partial-edit-shortcut-button):after,
+.mejs-button button:not:after,
 .site .button:after,
 input[type="submit"]:after,
 input[type="reset"]:after,
@@ -218,6 +233,10 @@ input[type="reset"]:after,
 }
 
 .site button:not(.customize-partial-edit-shortcut-button):before {
+	margin-bottom: -calc(1em + 0);
+}
+
+.mejs-button button:not:before {
 	margin-bottom: -calc(1em + 0);
 }
 
@@ -245,6 +264,10 @@ input[type="reset"]:before {
 	margin-top: -calc(1em + 0);
 }
 
+.mejs-button button:not:after {
+	margin-top: -calc(1em + 0);
+}
+
 .site .button:after {
 	margin-top: -calc(1em + 0);
 }
@@ -266,6 +289,11 @@ input[type="reset"]:after {
 }
 
 .site button:active:not(.customize-partial-edit-shortcut-button) {
+	color: #39414d;
+	background-color: #d1e4dd;
+}
+
+.mejs-button button:active:not {
 	color: #39414d;
 	background-color: #d1e4dd;
 }
@@ -300,6 +328,11 @@ input:active[type="reset"] {
 	background: transparent;
 }
 
+.mejs-button button:hover:not {
+	color: #39414d;
+	background: transparent;
+}
+
 .site .button:hover {
 	color: #39414d;
 	background: transparent;
@@ -326,10 +359,12 @@ input:hover[type="reset"] {
 }
 
 .site button:focus:not(.customize-partial-edit-shortcut-button),
+.mejs-button button:focus:not,
 .site .button:focus,
 input:focus[type="submit"],
 input:focus[type="reset"],
 .wp-block-button .wp-block-button__link:focus, .wp-block-file .wp-block-file__button:focus, .site button.has-focus:not(.customize-partial-edit-shortcut-button),
+.mejs-button button.has-focus:not,
 .site .has-focus.button,
 input.has-focus[type="submit"],
 input.has-focus[type="reset"],
@@ -339,6 +374,12 @@ input.has-focus[type="reset"],
 }
 
 .site button:disabled:not(.customize-partial-edit-shortcut-button) {
+	background-color: rgba(255, 255, 255, 0.5);
+	border-color: rgba(255, 255, 255, 0.5);
+	color: #39414d;
+}
+
+.mejs-button button:disabled:not {
 	background-color: rgba(255, 255, 255, 0.5);
 	border-color: rgba(255, 255, 255, 0.5);
 	color: #39414d;

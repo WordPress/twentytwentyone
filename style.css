@@ -321,6 +321,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 
 /* Button extends */
 .site button:not(.customize-partial-edit-shortcut-button),
+.mejs-button button:not,
 .site .button,
 input[type="submit"],
 input[type="reset"],
@@ -339,10 +340,12 @@ input[type="reset"],
 }
 
 .site button:not(.customize-partial-edit-shortcut-button):before,
+.mejs-button button:not:before,
 .site .button:before,
 input[type="submit"]:before,
 input[type="reset"]:before,
 .wp-block-button .wp-block-button__link:before, .wp-block-file .wp-block-file__button:before, .site button:not(.customize-partial-edit-shortcut-button):after,
+.mejs-button button:not:after,
 .site .button:after,
 input[type="submit"]:after,
 input[type="reset"]:after,
@@ -354,6 +357,7 @@ input[type="reset"]:after,
 }
 
 .site button:not(.customize-partial-edit-shortcut-button):before,
+.mejs-button button:not:before,
 .site .button:before,
 input[type="submit"]:before,
 input[type="reset"]:before,
@@ -362,6 +366,7 @@ input[type="reset"]:before,
 }
 
 .site button:not(.customize-partial-edit-shortcut-button):after,
+.mejs-button button:not:after,
 .site .button:after,
 input[type="submit"]:after,
 input[type="reset"]:after,
@@ -370,6 +375,7 @@ input[type="reset"]:after,
 }
 
 .site button:active:not(.customize-partial-edit-shortcut-button),
+.mejs-button button:active:not,
 .site .button:active,
 input:active[type="submit"],
 input:active[type="reset"],
@@ -379,6 +385,7 @@ input:active[type="reset"],
 }
 
 .site button:hover:not(.customize-partial-edit-shortcut-button),
+.mejs-button button:hover:not,
 .site .button:hover,
 input:hover[type="submit"],
 input:hover[type="reset"],
@@ -388,10 +395,12 @@ input:hover[type="reset"],
 }
 
 .site button:focus:not(.customize-partial-edit-shortcut-button),
+.mejs-button button:focus:not,
 .site .button:focus,
 input:focus[type="submit"],
 input:focus[type="reset"],
 .wp-block-button .wp-block-button__link:focus, .wp-block-file .wp-block-file__button:focus, .site button.has-focus:not(.customize-partial-edit-shortcut-button),
+.mejs-button button.has-focus:not,
 .site .has-focus.button,
 input.has-focus[type="submit"],
 input.has-focus[type="reset"],
@@ -401,6 +410,7 @@ input.has-focus[type="reset"],
 }
 
 .site button:disabled:not(.customize-partial-edit-shortcut-button),
+.mejs-button button:disabled:not,
 .site .button:disabled,
 input:disabled[type="submit"],
 input:disabled[type="reset"],
