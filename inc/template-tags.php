@@ -119,9 +119,8 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 			$categories_list = get_the_category_list( __( ', ', 'twentytwentyone' ) );
 			if ( $categories_list ) {
 				printf(
-					/* translators: 1: posted in label, 2: list of categories. */
-					'<span class="cat-links">%1$s %2$s</span>',
-					esc_html__( 'Categorized as', 'twentytwentyone' ),
+					/* translators: %s: list of tags. */
+					'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . '</span>',
 					$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
 				);
 			}
@@ -130,9 +129,8 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 			$tags_list = get_the_tag_list( '', __( ', ', 'twentytwentyone' ) );
 			if ( $tags_list ) {
 				printf(
-					/* translators: %1$s: posted in label, %2$s: list of tags. */
-					'<span class="tags-links">%1$s %2$s</span>',
-					esc_html__( 'Tagged', 'twentytwentyone' ),
+					/* translators: %s: list of tags. */
+					'<span class="tags-links">' . esc_html__( 'Tagged %s', 'twentytwentyone' ) . '</span>',
 					$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
 				);
 			}
@@ -144,9 +142,8 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 			$categories_list = get_the_category_list( __( ', ', 'twentytwentyone' ) );
 			if ( $categories_list ) {
 				printf(
-					/* translators: 1: posted in label, 2: list of categories. */
-					'<span class="cat-links">%1$s %2$s</span>',
-					esc_html__( 'Categorized as', 'twentytwentyone' ),
+					/* translators: %s: list of tags. */
+					'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . '</span>',
 					$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
 				);
 			}
@@ -173,9 +170,8 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 			$tags_list = get_the_tag_list( '', __( ', ', 'twentytwentyone' ) );
 			if ( $tags_list ) {
 				printf(
-					/* translators: 1: posted in label, 2: list of tags. */
-					'<span class="tags-links">%1$s %2$s</span>',
-					esc_html__( 'Tagged', 'twentytwentyone' ),
+					/* translators: %s: list of tags. */
+					'<span class="tags-links">' . esc_html__( 'Tagged %s', 'twentytwentyone' ) . '</span>',
 					$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
 				);
 			}
