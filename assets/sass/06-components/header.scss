@@ -1,3 +1,9 @@
+.wp-custom-logo {
+	.site-header {
+		align-items: center;
+	}
+}
+
 // Site header
 .site-header {
 	@extend %responsive-alignwide-width;

@@ -3090,6 +3090,10 @@ table.wp-calendar-table caption {
 }
 
 /* Category 06 contains all "bigger" components which contain elements of the previous two categories like header, footer, page template, single template, comments section, archives, ... */
+.wp-custom-logo .site-header {
+	align-items: center;
+}
+
 .site-header {
 	display: flex;
 	align-items: flex-start;
