@@ -1903,11 +1903,13 @@ p.has-background {
 .wp-block-separator {
 	border-bottom: 1px solid #28303d;
 	clear: both;
+	opacity: 1;
 }
 
 hr {
 	border-bottom: 1px solid #28303d;
 	clear: both;
+	opacity: 1;
 }
 
 .wp-block-separator[style*="text-align:right"] {
@@ -1930,8 +1932,32 @@ hr[style*="text-align: right"] {
 	max-width: calc(100vw - 30px);
 }
 
+@media only screen and (min-width: 482px){
+	.wp-block-separator:not(.is-style-wide):not(.is-style-dots){
+	max-width: min(calc(100vw - 100px), 610px);
+	}
+}
+
+@media only screen and (min-width: 822px){
+	.wp-block-separator:not(.is-style-wide):not(.is-style-dots){
+	max-width: min(calc(100vw - 200px), 610px);
+	}
+}
+
 hr:not(.is-style-wide):not(.is-style-dots) {
 	max-width: calc(100vw - 30px);
+}
+
+@media only screen and (min-width: 482px){
+	hr:not(.is-style-wide):not(.is-style-dots){
+	max-width: min(calc(100vw - 100px), 610px);
+	}
+}
+
+@media only screen and (min-width: 822px){
+	hr:not(.is-style-wide):not(.is-style-dots){
+	max-width: min(calc(100vw - 200px), 610px);
+	}
 }
 
 .wp-block-separator.is-style-wide {

@@ -9,7 +9,7 @@ hr {
 		border-bottom: var(--separator--height) solid var(--separator--border-color);
 
 		&:not(.is-style-wide):not(.is-style-dots):not(.alignwide) {
-			max-width: var(--separator--width);
+			max-width: var(--responsive--aligndefault-width);
 
 			&.alignfull {
 				max-width: var(--responsive--alignfull-width);
