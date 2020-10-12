@@ -1869,12 +1869,20 @@ hr[style*="text-align: right"] {
 	border-right-color: #28303d;
 }
 
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+	max-width: calc(100vw - 30px);
+}
+
+hr:not(.is-style-wide):not(.is-style-dots) {
+	max-width: calc(100vw - 30px);
+}
+
 .wp-block-separator.is-style-wide {
-	border-bottom-width: 1px;
+	border-bottom-width: 3px;
 }
 
 hr.is-style-wide {
-	border-bottom-width: 1px;
+	border-bottom-width: 3px;
 }
 
 .wp-block-separator.is-style-dots,

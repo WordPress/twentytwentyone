@@ -17,6 +17,7 @@ hr {
 		 */
 		&.is-style-wide {
 			@extend %responsive-aligndefault-width;
+			border-bottom-width: calc(3 * var(--separator--height));
 		}
 
 		&.is-style-dots {
