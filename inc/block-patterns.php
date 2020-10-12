@@ -97,6 +97,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 		)
 	);
 
+	// Portfolio List.
 	register_block_pattern(
 		'twentytwentyone/portfolio-list',
 		array(
