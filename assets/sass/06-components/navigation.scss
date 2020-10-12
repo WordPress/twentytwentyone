@@ -196,7 +196,6 @@
 
 		li {
 			display: block;
-			margin: var(--primary-nav--padding) 0;
 			position: relative;
 			width: 100%;
 
@@ -269,14 +268,18 @@
 			position: relative;
 
 			@include media(mobile) {
-				background: var(--global--color-background);
 				left: 0;
 				margin: 0;
 				min-width: max-content;
 				position: absolute;
-				top: calc(100% + 3px);
+				top: 100%;
+				padding-top: 3px;
 				transition: all 0.5s ease;
 				z-index: 88888;
+
+				li {
+					background: var(--global--color-background);
+				}
 			}
 
 			.sub-menu {
@@ -315,7 +318,7 @@
 
 	// Menu Item Link
 	a {
-		display: inline;
+		display: block;
 		font-family: var(--primary-nav--font-family-mobile);
 		font-size: var(--primary-nav--font-size-mobile);
 		font-weight: var(--primary-nav--font-weight);
@@ -343,7 +346,9 @@
 		}
 
 		&:focus {
+			position: relative;
 			z-index: 99999; // Ensure focus styles appear above absolute positioned elements
+			outline-offset: 0;
 		}
 	}
 
@@ -358,12 +363,13 @@
 
 	// Sub-menu depth indicators + text styles
 	.sub-menu {
+		margin: 0;
+		padding: 0;
 		list-style: none;
 		margin-left: var(--primary-nav--padding);
 
 		// Sub-menu items om wide screens.
 		@include media(mobile) {
-			padding: 0 var(--primary-nav--padding);
 
 			// For nested sub-menus, don't duplicate the padding
 			> .menu-item > .sub-menu {
@@ -372,8 +378,6 @@
 		}
 
 		.menu-item {
-			margin: calc(2 * var(--primary-nav--padding)) 0;
-
 
 			@include media(mobile-only) {
 
@@ -384,7 +388,8 @@
 			}
 
 			> a {
-				display: inline;
+				padding: calc(1.25 * var(--primary-nav--padding)) var(--primary-nav--padding);
+				display: block;
 				font-size: var(--primary-nav--font-size-sub-menu-mobile);
 				font-style: var(--primary-nav--font-style-sub-menu-mobile);
 

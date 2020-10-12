@@ -446,6 +446,7 @@ pre {
  */
 a {
 	background-color: transparent;
+	text-decoration-thickness: 1px;
 }
 
 /**
@@ -3894,7 +3895,11 @@ hr.wp-block-separator {
 }
 
 hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
-	max-width: 150px;
+	max-width: calc(100vw - 30px);
+}
+
+hr.wp-block-separator.is-style-wide {
+	border-bottom-width: 3px;
 }
 
 hr.wp-block-separator.is-style-dots.has-background, hr.wp-block-separator.is-style-dots.has-text-color {
@@ -5456,7 +5461,6 @@ h1.page-title {
 
 .primary-navigation > div > .menu-wrapper li {
 	display: block;
-	margin: 13px 0;
 	position: relative;
 	width: 100%;
 }
@@ -5529,14 +5533,17 @@ h1.page-title {
 
 @media only screen and (min-width: 482px) {
 	.primary-navigation > div > .menu-wrapper > li > .sub-menu {
-		background: #d1e4dd;
 		left: 0;
 		margin: 0;
 		min-width: max-content;
 		position: absolute;
-		top: calc(100% + 3px);
+		top: 100%;
+		padding-top: 3px;
 		transition: all 0.5s ease;
 		z-index: 88888;
+	}
+	.primary-navigation > div > .menu-wrapper > li > .sub-menu li {
+		background: #d1e4dd;
 	}
 }
 
@@ -5567,7 +5574,7 @@ h1.page-title {
 }
 
 .primary-navigation a {
-	display: inline;
+	display: block;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1.25rem;
 	font-weight: normal;
@@ -5604,7 +5611,9 @@ h1.page-title {
 }
 
 .primary-navigation a:focus {
+	position: relative;
 	z-index: 99999;
+	outline-offset: 0;
 }
 
 .primary-navigation .current-menu-item > a:first-child,
@@ -5618,21 +5627,16 @@ h1.page-title {
 }
 
 .primary-navigation .sub-menu {
+	margin: 0;
+	padding: 0;
 	list-style: none;
 	margin-left: 13px;
 }
 
 @media only screen and (min-width: 482px) {
-	.primary-navigation .sub-menu {
-		padding: 0 13px;
-	}
 	.primary-navigation .sub-menu > .menu-item > .sub-menu {
 		padding: 0;
 	}
-}
-
-.primary-navigation .sub-menu .menu-item {
-	margin: 26px 0;
 }
 
 @media only screen and (max-width: 481px) {
@@ -5642,7 +5646,8 @@ h1.page-title {
 }
 
 .primary-navigation .sub-menu .menu-item > a {
-	display: inline;
+	padding: 17px 13px;
+	display: block;
 	font-size: 1.125rem;
 	font-style: normal;
 }
