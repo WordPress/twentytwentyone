@@ -4,7 +4,7 @@ Theme Name: Twenty Twenty-One
 Theme URI: https://wordpress.org/themes/twentytwentyone/
 Author: the WordPress team
 Author URI: https://wordpress.org/
-Description:
+Description: Twenty Twenty-One is a blank canvas for your ideas and it makes the block editor your best brush. With new block patterns, which allow you to create a beautiful layout in a matter of seconds, this theme’s soft colors and eye-catching — yet timeless — design will let your work shine. Take it for a spin! See how Twenty Twenty-One elevates your portfolio, business website, or personal blog.
 Requires at least: 5.3
 Tested up to: 5.5
 Requires PHP: 5.6
@@ -1622,6 +1622,7 @@ a:hover {
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) {
 		margin-right: calc(-2 * var(--global--spacing-horizontal));
 		margin-top: calc(2.5 * var(--global--spacing-horizontal));
+		z-index: 2;
 	}
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p:not(.has-background),
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1:not(.has-background),
@@ -4008,7 +4009,7 @@ h1.page-title {
 
 .primary-navigation > div > .menu-wrapper .sub-menu-toggle {
 	display: flex;
-	height: 44px;
+	height: 100%;
 	width: 44px;
 	padding: 0;
 	justify-content: center;
@@ -4028,34 +4029,36 @@ h1.page-title {
 	}
 }
 
-.primary-navigation > div > .menu-wrapper .sub-menu-toggle[aria-expanded="false"] {
-	/* stylelint-disable */
-	background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z' fill='%2328303d'/></svg>") no-repeat center center;
-	/* stylelint-enable */
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle .icon-plus,
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle .icon-minus {
+	height: 100%;
+	display: flex;
+	align-items: center;
 }
 
-.is-background-dark .primary-navigation > div > .menu-wrapper .sub-menu-toggle[aria-expanded="false"] {
-	background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z' fill='%23fff'/></svg>") no-repeat center center;
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle .icon-plus svg,
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle .icon-minus svg {
+	margin-top: -1px;
 }
 
-.primary-navigation > div > .menu-wrapper .sub-menu-toggle[aria-expanded="true"] {
-	/* stylelint-disable */
-	background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M6 11h12v2H6z' fill='%2328303d'/></svg>") no-repeat center center;
-	/* stylelint-enable */
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle .icon-minus {
+	display: none;
 }
 
-.is-background-dark .primary-navigation > div > .menu-wrapper .sub-menu-toggle[aria-expanded="true"] {
-	background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M6 11h12v2H6z' fill='%23fff'/></svg>") no-repeat center center;
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle[aria-expanded="true"] .icon-minus {
+	display: flex;
 }
 
-.primary-navigation > div > .menu-wrapper .hover .sub-menu-toggle {
-	/* stylelint-disable */
-	background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M6 11h12v2H6z' fill='%2328303d'/></svg>") no-repeat center center;
-	/* stylelint-enable */
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle[aria-expanded="true"] .icon-plus {
+	display: none;
 }
 
-.is-background-dark .primary-navigation > div > .menu-wrapper .hover .sub-menu-toggle {
-	background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M6 11h12v2H6z' fill='%23fff'/></svg>") no-repeat center center;
+.primary-navigation > div > .menu-wrapper .hover .sub-menu-toggle .icon-minus {
+	display: flex;
+}
+
+.primary-navigation > div > .menu-wrapper .hover .sub-menu-toggle .icon-plus {
+	display: none;
 }
 
 .primary-navigation > div > .menu-wrapper > li > .sub-menu {
