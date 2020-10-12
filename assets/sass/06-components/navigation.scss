@@ -422,6 +422,13 @@
 
 	}
 
+	.menu-item-description {
+		display: block;
+		clear:both;
+		font-size: var(--global--font-size-xs);
+		text-transform: none;
+		line-height: 1.7;
+	}
 }
 
 // Keep the menu pinned to the top when the menu is open.
