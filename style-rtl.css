@@ -102,7 +102,6 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--global--font-ui: var(--font-base, var(--global--font-secondary));
 	/* Font Size */
 	--global--font-size-base: 1.25rem;
-	--global--font-size-xxs: 0.75rem;
 	--global--font-size-xs: 1rem;
 	--global--font-size-sm: 1.125rem;
 	--global--font-size-md: 1.25rem;
@@ -1820,10 +1819,6 @@ a:hover {
 	margin: 0 auto;
 }
 
-.wp-block-gallery.columns-3 .blocks-gallery-item figcaption, .wp-block-gallery.columns-4 .blocks-gallery-item figcaption, .wp-block-gallery.columns-5 .blocks-gallery-item figcaption, .wp-block-gallery.columns-6 .blocks-gallery-item figcaption, .wp-block-gallery.columns-7 .blocks-gallery-item figcaption, .wp-block-gallery.columns-8 .blocks-gallery-item figcaption {
-	font-size: var(--global--font-size-xxs);
-}
-
 .wp-block-gallery .blocks-gallery-image,
 .wp-block-gallery .blocks-gallery-item {
 	width: calc((100% - var(--global--spacing-unit)) / 2);
@@ -1833,7 +1828,7 @@ a:hover {
 .wp-block-gallery .blocks-gallery-item figcaption {
 	margin: 0;
 	color: var(--global--color-white);
-	font-size: var(--global--font-size-sm);
+	font-size: var(--global--font-size-xs);
 }
 
 .wp-block-group .wp-block-group__inner-container {
