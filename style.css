@@ -1626,6 +1626,7 @@ a:hover {
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) {
 		margin-left: calc(-2 * var(--global--spacing-horizontal));
 		margin-top: calc(2.5 * var(--global--spacing-horizontal));
+		z-index: 2;
 	}
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p:not(.has-background),
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1:not(.has-background),
