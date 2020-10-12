@@ -3895,7 +3895,11 @@ hr.wp-block-separator {
 }
 
 hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
-	max-width: 150px;
+	max-width: 100%;
+}
+
+hr.wp-block-separator.is-style-wide {
+	border-bottom-width: 3px;
 }
 
 hr.wp-block-separator.is-style-dots.has-background, hr.wp-block-separator.is-style-dots.has-text-color {

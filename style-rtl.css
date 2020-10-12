@@ -296,7 +296,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--quote--line-height-large: 1.5;
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
-	--separator--width: calc(6 * var(--global--spacing-horizontal));
+	--separator--width: var(--responsive--aligndefault-width);
 	/* Block: Table */
 	--table--stripes-border-color: var(--global--color-light-gray);
 	--table--stripes-background-color: var(--global--color-light-gray);
@@ -2756,6 +2756,10 @@ hr.wp-block-separator {
 
 hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
 	max-width: var(--separator--width);
+}
+
+hr.wp-block-separator.is-style-wide {
+	border-bottom-width: calc(3 * var(--separator--height));
 }
 
 hr.wp-block-separator.is-style-dots.has-background, hr.wp-block-separator.is-style-dots.has-text-color {

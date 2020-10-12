@@ -232,7 +232,7 @@ $baseline-unit: 10px;
 
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
-	--separator--width: calc(6 * var(--global--spacing-horizontal));
+	--separator--width: var(--responsive--aligndefault-width);
 
 	/* Block: Table */
 	--table--stripes-border-color: var(--global--color-light-gray);
