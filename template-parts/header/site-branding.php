@@ -18,19 +18,19 @@ $description = get_bloginfo( 'description', 'display' );
 		<div class="site-logo"><?php the_custom_logo(); ?></div>
 	<?php endif; ?>
 
-	<?php if ( $blog_info && get_theme_mod( 'display_title_and_tagline', true ) === true ) : ?>
+	<?php if ( $blog_info && true === get_theme_mod( 'display_title_and_tagline', true ) ) : ?>
 		<?php if ( is_front_page() ) : ?>
-			<h1 class="site-title"><?php $blog_info; ?></h1>
+			<h1 class="site-title"><?php echo esc_html( $blog_info ); ?></h1>
 		<?php elseif ( is_home() ) : ?>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php $blog_info; ?></a></h1>
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo esc_html( $blog_info ); ?></a></h1>
 		<?php else : ?>
-			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php $blog_info; ?></a></p>
+			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo esc_html( $blog_info ); ?></a></p>
 		<?php endif; ?>
 	<?php elseif ( $blog_info && is_home() ) : ?>
-		<h1 class="screen-reader-text"><?php $blog_info; ?></h1>
+		<h1 class="screen-reader-text"><?php echo esc_html( $blog_info ); ?></h1>
 	<?php endif; ?>
 
-	<?php if ( $description && get_theme_mod( 'display_title_and_tagline', true ) === true ) : ?>
+	<?php if ( $description && true === get_theme_mod( 'display_title_and_tagline', true ) ) : ?>
 		<p class="site-description">
 			<?php echo $description; // phpcs:ignore WordPress.Security.EscapeOutput ?>
 		</p>
