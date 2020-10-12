@@ -11,6 +11,7 @@
 	--global--font-ui: var(--font-base, var(--global--font-secondary));
 	/* Font Size */
 	--global--font-size-base: 1.25rem;
+	--global--font-size-xxs: 0.75rem;
 	--global--font-size-xs: 1rem;
 	--global--font-size-sm: 1.125rem;
 	--global--font-size-md: 1.25rem;
