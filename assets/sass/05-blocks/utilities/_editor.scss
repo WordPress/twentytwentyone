@@ -68,32 +68,6 @@
 	color: var(--global--color-primary);
 }
 
-// Gutenberg Font-size utility classes
-.is-large-text,
-.has-large-font-size {
-	line-height: var(--global--line-height-heading);
-}
-
-.is-larger-text,
-.has-larger-font-size,
-.has-huge-font-size {
-	line-height: var(--global--line-height-heading);
-}
-
-.is-gigantic-text,
-.has-gigantic-font-size {
-	line-height: var(--global--line-height-heading);
-
-	// This size is meant to mimic the page titles, so the font weight is reduced to match.
-	font-weight: var(--heading--font-weight-page-title);
-}
-
-// Drop cap
-.has-drop-cap:not(:focus)::first-letter {
-	font-family: var(--heading--font-family);
-	font-weight: var(--heading--font-weight);
-}
-
 /**
  * Spacing Overrides
  */

@@ -1532,6 +1532,7 @@ pre.wp-block-verse {
 :root .is-large-text,
 :root .has-large-font-size {
 	font-size: var(--global--font-size-lg);
+	line-height: var(--global--line-height-heading);
 }
 
 :root .is-larger-text,
@@ -1539,16 +1540,21 @@ pre.wp-block-verse {
 :root .is-extra-large-text,
 :root .has-extra-large-font-size {
 	font-size: var(--global--font-size-xl);
+	line-height: var(--global--line-height-heading);
 }
 
 :root .is-huge-text,
 :root .has-huge-font-size {
 	font-size: var(--global--font-size-xxl);
+	line-height: var(--global--line-height-heading);
+	font-weight: var(--heading--font-weight-page-title);
 }
 
 :root .is-gigantic-text,
 :root .has-gigantic-font-size {
 	font-size: var(--global--font-size-xxxl);
+	line-height: var(--global--line-height-heading);
+	font-weight: var(--heading--font-weight-page-title);
 }
 
 .is-tiny-text,
@@ -1571,17 +1577,22 @@ pre.wp-block-verse {
 .is-large-text,
 .has-large-font-size {
 	font-size: var(--global--font-size-lg);
+	line-height: var(--global--line-height-heading);
 }
 
 .is-larger-text,
 .has-larger-font-size,
 .has-huge-font-size {
 	font-size: var(--global--font-size-xl);
+	line-height: var(--global--line-height-heading);
+	font-weight: var(--heading--font-weight-page-title);
 }
 
 .is-gigantic-text,
 .has-gigantic-font-size {
 	font-size: var(--global--font-size-xxl);
+	line-height: var(--global--line-height-heading);
+	font-weight: var(--heading--font-weight-page-title);
 }
 
 .wp-block.editor-post-title__block .editor-post-title__input {
@@ -1655,28 +1666,6 @@ pre.wp-block-verse {
 .has-black-background-color[class] {
 	background-color: var(--global--color-black);
 	color: var(--global--color-primary);
-}
-
-.is-large-text,
-.has-large-font-size {
-	line-height: var(--global--line-height-heading);
-}
-
-.is-larger-text,
-.has-larger-font-size,
-.has-huge-font-size {
-	line-height: var(--global--line-height-heading);
-}
-
-.is-gigantic-text,
-.has-gigantic-font-size {
-	line-height: var(--global--line-height-heading);
-	font-weight: var(--heading--font-weight-page-title);
-}
-
-.has-drop-cap:not(:focus)::first-letter {
-	font-family: var(--heading--font-family);
-	font-weight: var(--heading--font-weight);
 }
 
 /**

@@ -4106,14 +4106,17 @@ table.wp-calendar-table caption {
 
 :root .is-large-text {
 	font-size: 1.5rem;
+	line-height: 1.3;
 }
 
 :root .has-large-font-size {
 	font-size: 1.5rem;
+	line-height: 1.3;
 }
 
 :root .is-larger-text {
 	font-size: 2.5rem;
+	line-height: 1.3;
 }
 
 @media only screen and (min-width: 652px){
@@ -4124,6 +4127,7 @@ table.wp-calendar-table caption {
 
 :root .has-larger-font-size {
 	font-size: 2.5rem;
+	line-height: 1.3;
 }
 
 @media only screen and (min-width: 652px){
@@ -4134,6 +4138,7 @@ table.wp-calendar-table caption {
 
 :root .is-extra-large-text {
 	font-size: 2.5rem;
+	line-height: 1.3;
 }
 
 @media only screen and (min-width: 652px){
@@ -4144,6 +4149,7 @@ table.wp-calendar-table caption {
 
 :root .has-extra-large-font-size {
 	font-size: 2.5rem;
+	line-height: 1.3;
 }
 
 @media only screen and (min-width: 652px){
@@ -4154,6 +4160,8 @@ table.wp-calendar-table caption {
 
 :root .is-huge-text {
 	font-size: 6rem;
+	line-height: 1.3;
+	font-weight: 300;
 }
 
 @media only screen and (min-width: 652px){
@@ -4164,6 +4172,8 @@ table.wp-calendar-table caption {
 
 :root .has-huge-font-size {
 	font-size: 6rem;
+	line-height: 1.3;
+	font-weight: 300;
 }
 
 @media only screen and (min-width: 652px){
@@ -4174,6 +4184,8 @@ table.wp-calendar-table caption {
 
 :root .is-gigantic-text {
 	font-size: 9rem;
+	line-height: 1.3;
+	font-weight: 300;
 }
 
 @media only screen and (min-width: 652px){
@@ -4184,6 +4196,8 @@ table.wp-calendar-table caption {
 
 :root .has-gigantic-font-size {
 	font-size: 9rem;
+	line-height: 1.3;
+	font-weight: 300;
 }
 
 @media only screen and (min-width: 652px){
@@ -4226,14 +4240,18 @@ table.wp-calendar-table caption {
 
 .is-large-text {
 	font-size: 1.5rem;
+	line-height: 1.3;
 }
 
 .has-large-font-size {
 	font-size: 1.5rem;
+	line-height: 1.3;
 }
 
 .is-larger-text {
 	font-size: 2.25rem;
+	line-height: 1.3;
+	font-weight: 300;
 }
 
 @media only screen and (min-width: 652px){
@@ -4244,6 +4262,8 @@ table.wp-calendar-table caption {
 
 .has-larger-font-size {
 	font-size: 2.25rem;
+	line-height: 1.3;
+	font-weight: 300;
 }
 
 @media only screen and (min-width: 652px){
@@ -4254,6 +4274,8 @@ table.wp-calendar-table caption {
 
 .has-huge-font-size {
 	font-size: 2.25rem;
+	line-height: 1.3;
+	font-weight: 300;
 }
 
 @media only screen and (min-width: 652px){
@@ -4264,6 +4286,8 @@ table.wp-calendar-table caption {
 
 .is-gigantic-text {
 	font-size: 4rem;
+	line-height: 1.3;
+	font-weight: 300;
 }
 
 @media only screen and (min-width: 652px){
@@ -4274,6 +4298,8 @@ table.wp-calendar-table caption {
 
 .has-gigantic-font-size {
 	font-size: 4rem;
+	line-height: 1.3;
+	font-weight: 300;
 }
 
 @media only screen and (min-width: 652px){
@@ -4455,50 +4481,6 @@ table.wp-calendar-table caption {
 
 .has-parallax {
 	background-attachment: fixed;
-}
-
-:root .is-large-text {
-	line-height: 1.3;
-}
-
-:root .has-large-font-size {
-	line-height: 1.3;
-}
-
-:root .is-larger-text {
-	line-height: 1.3;
-}
-
-:root .has-larger-font-size {
-	line-height: 1.3;
-}
-
-:root .is-extra-large-text {
-	line-height: 1.3;
-}
-
-:root .has-extra-large-font-size {
-	line-height: 1.3;
-}
-
-:root .is-huge-text {
-	line-height: 1.3;
-	font-weight: 300;
-}
-
-:root .has-huge-font-size {
-	line-height: 1.3;
-	font-weight: 300;
-}
-
-:root .is-gigantic-text {
-	line-height: 1.3;
-	font-weight: 300;
-}
-
-:root .has-gigantic-font-size {
-	line-height: 1.3;
-	font-weight: 300;
 }
 
 .has-drop-cap:not(:focus)::first-letter {

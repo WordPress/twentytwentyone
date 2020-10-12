@@ -132,38 +132,6 @@
 	background-attachment: fixed;
 }
 
-// Gutenberg Font-size options
-:root {
-
-	.is-large-text,
-	.has-large-font-size {
-		line-height: var(--global--line-height-heading);
-	}
-
-	.is-larger-text,
-	.has-larger-font-size,
-	.is-extra-large-text,
-	.has-extra-large-font-size {
-		line-height: var(--global--line-height-heading);
-	}
-
-	.is-huge-text,
-	.has-huge-font-size {
-		line-height: var(--global--line-height-heading);
-
-		// This size is meant to mimic the page titles, so the font weight is reduced to match.
-		font-weight: var(--heading--font-weight-page-title);
-	}
-
-	.is-gigantic-text,
-	.has-gigantic-font-size {
-		line-height: var(--global--line-height-heading);
-
-		// This size is meant to mimic the page titles, so the font weight is reduced to match.
-		font-weight: var(--heading--font-weight-page-title);
-	}
-}
-
 // Drop caps
 .has-drop-cap:not(:focus)::first-letter {
 	font-family: var(--heading--font-family);

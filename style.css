@@ -2923,6 +2923,7 @@ table.wp-calendar-table caption {
 :root .is-large-text,
 :root .has-large-font-size {
 	font-size: var(--global--font-size-lg);
+	line-height: var(--global--line-height-heading);
 }
 
 :root .is-larger-text,
@@ -2930,16 +2931,21 @@ table.wp-calendar-table caption {
 :root .is-extra-large-text,
 :root .has-extra-large-font-size {
 	font-size: var(--global--font-size-xl);
+	line-height: var(--global--line-height-heading);
 }
 
 :root .is-huge-text,
 :root .has-huge-font-size {
 	font-size: var(--global--font-size-xxl);
+	line-height: var(--global--line-height-heading);
+	font-weight: var(--heading--font-weight-page-title);
 }
 
 :root .is-gigantic-text,
 :root .has-gigantic-font-size {
 	font-size: var(--global--font-size-xxxl);
+	line-height: var(--global--line-height-heading);
+	font-weight: var(--heading--font-weight-page-title);
 }
 
 .is-tiny-text,
@@ -2962,17 +2968,22 @@ table.wp-calendar-table caption {
 .is-large-text,
 .has-large-font-size {
 	font-size: var(--global--font-size-lg);
+	line-height: var(--global--line-height-heading);
 }
 
 .is-larger-text,
 .has-larger-font-size,
 .has-huge-font-size {
 	font-size: var(--global--font-size-xl);
+	line-height: var(--global--line-height-heading);
+	font-weight: var(--heading--font-weight-page-title);
 }
 
 .is-gigantic-text,
 .has-gigantic-font-size {
 	font-size: var(--global--font-size-xxl);
+	line-height: var(--global--line-height-heading);
+	font-weight: var(--heading--font-weight-page-title);
 }
 
 .wp-block.editor-post-title__block .editor-post-title__input {
@@ -3082,30 +3093,6 @@ table.wp-calendar-table caption {
 
 .has-parallax {
 	background-attachment: fixed;
-}
-
-:root .is-large-text,
-:root .has-large-font-size {
-	line-height: var(--global--line-height-heading);
-}
-
-:root .is-larger-text,
-:root .has-larger-font-size,
-:root .is-extra-large-text,
-:root .has-extra-large-font-size {
-	line-height: var(--global--line-height-heading);
-}
-
-:root .is-huge-text,
-:root .has-huge-font-size {
-	line-height: var(--global--line-height-heading);
-	font-weight: var(--heading--font-weight-page-title);
-}
-
-:root .is-gigantic-text,
-:root .has-gigantic-font-size {
-	line-height: var(--global--line-height-heading);
-	font-weight: var(--heading--font-weight-page-title);
 }
 
 .has-drop-cap:not(:focus)::first-letter {

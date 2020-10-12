@@ -22,6 +22,7 @@
 	.is-large-text,
 	.has-large-font-size {
 		font-size: var(--global--font-size-lg);
+		line-height: var(--global--line-height-heading);
 	}
 
 	.is-larger-text,
@@ -29,16 +30,25 @@
 	.is-extra-large-text,
 	.has-extra-large-font-size {
 		font-size: var(--global--font-size-xl);
+		line-height: var(--global--line-height-heading);
 	}
 
 	.is-huge-text,
 	.has-huge-font-size {
 		font-size: var(--global--font-size-xxl);
+		line-height: var(--global--line-height-heading);
+
+		// This size is meant to mimic the page titles, so the font weight is reduced to match.
+		font-weight: var(--heading--font-weight-page-title);
 	}
 
 	.is-gigantic-text,
 	.has-gigantic-font-size {
 		font-size: var(--global--font-size-xxxl);
+		line-height: var(--global--line-height-heading);
+
+		// This size is meant to mimic the page titles, so the font weight is reduced to match.
+		font-weight: var(--heading--font-weight-page-title);
 	}
 }
 
@@ -62,17 +72,26 @@
 .is-large-text,
 .has-large-font-size {
 	font-size: var(--global--font-size-lg);
+	line-height: var(--global--line-height-heading);
 }
 
 .is-larger-text,
 .has-larger-font-size,
 .has-huge-font-size {
 	font-size: var(--global--font-size-xl);
+	line-height: var(--global--line-height-heading);
+
+	// This size is meant to mimic the page titles, so the font weight is reduced to match.
+	font-weight: var(--heading--font-weight-page-title);
 }
 
 .is-gigantic-text,
 .has-gigantic-font-size {
 	font-size: var(--global--font-size-xxl);
+	line-height: var(--global--line-height-heading);
+
+	// This size is meant to mimic the page titles, so the font weight is reduced to match.
+	font-weight: var(--heading--font-weight-page-title);
 }
 
 // Post title style
