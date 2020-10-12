@@ -3533,7 +3533,11 @@ h1.page-title {
 }
 
 .archive .content-area .format-aside .entry-content,
-.archive .content-area .format-status .entry-content {
+.archive .content-area .format-status .entry-content,
+.archive .content-area .format-link .entry-content,
+.search .content-area .format-aside .entry-content,
+.search .content-area .format-status .entry-content,
+.search .content-area .format-link .entry-content {
 	font-size: var(--global--font-size-lg);
 }
 

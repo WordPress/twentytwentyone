@@ -53,6 +53,7 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 		add_theme_support(
 			'post-formats',
 			array(
+				'link',
 				'aside',
 				'gallery',
 				'image',

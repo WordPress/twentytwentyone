@@ -16,12 +16,16 @@ h1.page-title {
 	padding-bottom: calc(2 * var(--global--spacing-vertical));
 }
 
-.archive .content-area {
+.archive,
+.search {
+	.content-area {
 
-	.format-aside,
-	.format-status {
-		.entry-content {
-			font-size: var(--global--font-size-lg);
+		.format-aside,
+		.format-status,
+		.format-link {
+			.entry-content {
+				font-size: var(--global--font-size-lg);
+			}
 		}
 	}
 }
