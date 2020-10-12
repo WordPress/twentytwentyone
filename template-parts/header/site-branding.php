@@ -19,15 +19,17 @@ $description = get_bloginfo( 'description', 'display' );
 	<?php endif; ?>
 
 	<?php if ( $blog_info && true === get_theme_mod( 'display_title_and_tagline', true ) ) : ?>
-		<?php if ( is_front_page() ) : ?>
+		<?php if ( is_front_page() && ! is_paged() ) : ?>
 			<h1 class="site-title"><?php echo esc_html( $blog_info ); ?></h1>
-		<?php elseif ( is_home() ) : ?>
+		<?php elseif ( is_front_page() || is_home() ) : ?>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo esc_html( $blog_info ); ?></a></h1>
 		<?php else : ?>
 			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo esc_html( $blog_info ); ?></a></p>
 		<?php endif; ?>
-	<?php elseif ( $blog_info && is_home() ) : ?>
-		<h1 class="screen-reader-text"><?php echo esc_html( $blog_info ); ?></h1>
+	<?php elseif ( $blog_info ) : ?>
+		<?php if ( is_front_page() || is_home() ) : ?>
+			<h1 class="screen-reader-text"><?php echo esc_html( $blog_info ); ?></h1>
+		<?php endif; ?>
 	<?php endif; ?>
 
 	<?php if ( $description && true === get_theme_mod( 'display_title_and_tagline', true ) ) : ?>
