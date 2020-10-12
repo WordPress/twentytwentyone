@@ -401,10 +401,16 @@ function twenty_twenty_one_get_non_latin_css( $type = 'front-end' ) {
  */
 function twenty_twenty_one_print_first_instance_of_block( $block_name, $content = null, $instances = 1 ) {
 	$instances_count = 0;
+	$blocks_content  = '';
+
 	if ( ! $content ) {
 		$content = get_the_content();
 	}
+
+	// Parse blocks in the content.
 	$blocks = parse_blocks( $content );
+
+	// Loop blocks.
 	foreach ( $blocks as $block ) {
 
 		// Sanity check.
@@ -414,25 +420,23 @@ function twenty_twenty_one_print_first_instance_of_block( $block_name, $content 
 
 		// Check if this the block we're looking for.
 		if ( $block_name === $block['blockName'] ) {
+			// Increment count.
 			$instances_count++;
 
-			$block_content = render_block( $block );
-			$block_content = wptexturize( $block_content );
-			$block_content = convert_smilies( $block_content );
-			$block_content = wpautop( $block_content );
-			$block_content = shortcode_unautop( $block_content );
-			$block_content = ( function_exists( 'wp_filter_content_tags' ) )
-				? wp_filter_content_tags( $block_content )
-				: wp_make_content_images_responsive( $block_content );
-			$block_content = do_shortcode( $block_content );
-			$block_content = str_replace( ']]>', ']]&gt;', $block_content );
+			// Add the block HTML.
+			$blocks_content .= render_block( $block );
 
-			echo $block_content; // phpcs:ignore WordPress.Security.EscapeOutput
-
+			// Break the loop if we've reached the $instances count.
 			if ( $instances_count >= $instances ) {
-				return true;
+				break;
 			}
 		}
 	}
-	return (bool) $instances_count;
+
+	if ( $blocks_content ) {
+		echo apply_filters( 'the_content', $blocks_content ); // phpcs:ignore WordPress.Security.EscapeOutput
+		return true;
+	}
+
+	return false;
 }
