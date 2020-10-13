@@ -30,6 +30,7 @@
 
 	@include media(desktop) {
 		display: flex;
+		align-items: center;
 		margin-top: calc(2 * var(--global--spacing-vertical));
 
 		.imprint {
