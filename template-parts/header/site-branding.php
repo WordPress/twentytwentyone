@@ -9,6 +9,7 @@
 
 $blog_info   = get_bloginfo( 'name' );
 $description = get_bloginfo( 'description', 'display' );
+$header_class = ( true === get_theme_mod( 'display_title_and_tagline', true ) ) ? 'site-title' : 'screen-reader-text';
 
 ?>
 
@@ -18,17 +19,13 @@ $description = get_bloginfo( 'description', 'display' );
 		<div class="site-logo"><?php the_custom_logo(); ?></div>
 	<?php endif; ?>
 
-	<?php if ( $blog_info && true === get_theme_mod( 'display_title_and_tagline', true ) ) : ?>
+	<?php if ( $blog_info ) : ?>
 		<?php if ( is_front_page() && ! is_paged() ) : ?>
-			<h1 class="site-title"><?php echo esc_html( $blog_info ); ?></h1>
+			<h1 class="<?php echo $header_class; ?>"><?php echo esc_html( $blog_info ); ?></h1>
 		<?php elseif ( is_front_page() || is_home() ) : ?>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo esc_html( $blog_info ); ?></a></h1>
+			<h1 class="<?php echo $header_class; ?>"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo esc_html( $blog_info ); ?></a></h1>
 		<?php else : ?>
-			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo esc_html( $blog_info ); ?></a></p>
-		<?php endif; ?>
-	<?php elseif ( $blog_info ) : ?>
-		<?php if ( is_front_page() || is_home() ) : ?>
-			<h1 class="screen-reader-text"><?php echo esc_html( $blog_info ); ?></h1>
+			<p class="<?php echo $header_class; ?>"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo esc_html( $blog_info ); ?></a></p>
 		<?php endif; ?>
 	<?php endif; ?>
 
