@@ -122,24 +122,55 @@ nav a {
 
 @include media(mobile-only) {
 	.site-header {
-		&.has-logo:not(.has-title-and-tagline) {
+		&.has-logo {
+			&:not(.has-title-and-tagline) {
 
-			.site-logo {
-				position: absolute;
-				padding-top: calc(0.5 * var(--global--spacing-vertical));
-				margin-top: 0;
-				top: 0;
+				.site-logo {
+					position: absolute;
+					padding-top: calc(0.5 * var(--global--spacing-vertical));
+					margin-top: 0;
+					top: 0;
 
-				.admin-bar & {
-					top: 46px;
+					.admin-bar & {
+						top: 46px;
+					}
+
+					.primary-navigation-open & {
+						display: none;
+					}
+
+					img {
+						max-height: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit)) + 1.7em);
+					}
+				}
+			}
+
+			&.has-title-and-tagline {
+				justify-content: space-between;
+				align-items: flex-start;
+
+				.site-branding {
+					margin-right: var(--global--spacing-horizontal);
 				}
 
-				.primary-navigation-open & {
-					display: none;
-				}
+				body:not(.primary-navigation-open) & {
 
-				img {
-					max-height: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit)) + 1.7em);
+					&:after {
+						display: none;
+					}
+
+					.primary-navigation {
+						position: relative;
+						top: 0;
+					}
+
+					.menu-button-container {
+						position: relative;
+
+						#primary-mobile-menu {
+							margin-right: 0;
+						}
+					}
 				}
 			}
 		}

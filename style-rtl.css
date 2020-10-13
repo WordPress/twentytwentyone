@@ -3215,6 +3215,26 @@ nav a {
 	.site-header.has-logo:not(.has-title-and-tagline) .site-logo img {
 		max-height: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit)) + 1.7em);
 	}
+	.site-header.has-logo.has-title-and-tagline {
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	.site-header.has-logo.has-title-and-tagline .site-branding {
+		margin-left: var(--global--spacing-horizontal);
+	}
+	body:not(.primary-navigation-open) .site-header.has-logo.has-title-and-tagline:after {
+		display: none;
+	}
+	body:not(.primary-navigation-open) .site-header.has-logo.has-title-and-tagline .primary-navigation {
+		position: relative;
+		top: 0;
+	}
+	body:not(.primary-navigation-open) .site-header.has-logo.has-title-and-tagline .menu-button-container {
+		position: relative;
+	}
+	body:not(.primary-navigation-open) .site-header.has-logo.has-title-and-tagline .menu-button-container #primary-mobile-menu {
+		margin-left: 0;
+	}
 }
 
 .site-footer {
