@@ -3236,7 +3236,9 @@ nav a {
 		margin-top: calc(0px - var(--button--padding-vertical) + (0.25 * var(--global--spacing-unit)));
 	}
 	body:not(.primary-navigation-open) .site-header.has-logo.has-title-and-tagline .menu-button-container #primary-mobile-menu {
-		margin-left: 0;
+		padding-right: calc(var(--global--spacing-horizontal) * 0.6 - 4.5px);
+		padding-left: calc(var(--global--spacing-horizontal) * 0.6 - 4.5px);
+		margin-left: calc(0px - var(--global--spacing-horizontal) * 0.6);
 	}
 	.site-header:not(.has-logo).has-title-and-tagline .site-branding {
 		margin-left: 0;

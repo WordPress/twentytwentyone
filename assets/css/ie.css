@@ -4591,7 +4591,9 @@ nav a {
 		margin-top: -10px;
 	}
 	body:not(.primary-navigation-open) .site-header.has-logo.has-title-and-tagline .menu-button-container #primary-mobile-menu {
-		margin-right: 0;
+		padding-left: 11px;
+		padding-right: 11px;
+		margin-right: -15px;
 	}
 	.site-header:not(.has-logo).has-title-and-tagline .site-branding {
 		margin-right: 0;
