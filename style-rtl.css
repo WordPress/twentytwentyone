@@ -79,6 +79,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
  * 404..................404 styles.
  * Search...............Search styles.
  * Navigation...........Navigation styles.
+ * Footer Navigation....Footer Navigation styles.
  * Pagination...........Pagination styles.
  * Single...............Single page and post styles.
  * Posts and pages......Misc, sticky post styles.
@@ -1668,23 +1669,6 @@ a:hover {
 	/* Block Styles */
 }
 
-.wp-block-cover p:not(.has-background):not(.has-text-color),
-.wp-block-cover h1:not(.has-background):not(.has-text-color),
-.wp-block-cover h2:not(.has-background):not(.has-text-color),
-.wp-block-cover h3:not(.has-background):not(.has-text-color),
-.wp-block-cover h4:not(.has-background):not(.has-text-color),
-.wp-block-cover h5:not(.has-background):not(.has-text-color),
-.wp-block-cover h6:not(.has-background):not(.has-text-color),
-.wp-block-cover-image p:not(.has-background):not(.has-text-color),
-.wp-block-cover-image h1:not(.has-background):not(.has-text-color),
-.wp-block-cover-image h2:not(.has-background):not(.has-text-color),
-.wp-block-cover-image h3:not(.has-background):not(.has-text-color),
-.wp-block-cover-image h4:not(.has-background):not(.has-text-color),
-.wp-block-cover-image h5:not(.has-background):not(.has-text-color),
-.wp-block-cover-image h6:not(.has-background):not(.has-text-color) {
-	color: var(--global--color-white);
-}
-
 .wp-block-cover .wp-block-cover__inner-container,
 .wp-block-cover .wp-block-cover-image-text,
 .wp-block-cover .wp-block-cover-text,
@@ -1720,7 +1704,7 @@ a:hover {
 .wp-block-cover-image:not([class*="background-color"]) .wp-block-cover__inner-container,
 .wp-block-cover-image:not([class*="background-color"]) .wp-block-cover-image-text,
 .wp-block-cover-image:not([class*="background-color"]) .wp-block-cover-text {
-	color: var(--cover--color-background);
+	color: var(--cover--color-foreground);
 }
 
 .wp-block-cover h2,
@@ -3103,6 +3087,11 @@ table.wp-calendar-table caption {
 	display: flex;
 	align-items: flex-start;
 	flex-wrap: wrap;
+	row-gap: var(--global--spacing-vertical);
+}
+
+.wp-custom-logo .site-header {
+	align-items: center;
 }
 
 @media only screen and (min-width: 482px) {
@@ -3124,12 +3113,13 @@ table.wp-calendar-table caption {
 
 .site-branding:last-child {
 	margin-left: 0;
+	width: 100%;
+	text-align: center;
 }
 
 @media only screen and (min-width: 482px) {
 	.site-branding {
 		margin-left: initial;
-		margin-bottom: var(--global--spacing-vertical);
 		margin-top: 4px;
 	}
 }
@@ -3185,10 +3175,20 @@ nav a {
 	margin: calc(var(--global--spacing-vertical) / 2) 0;
 }
 
+.site-header > .site-logo {
+	width: 100%;
+	padding-bottom: calc(var(--global--spacing-vertical) * 1.5);
+	border-bottom: 1px solid;
+	text-align: center;
+}
+
 .site-logo .custom-logo {
+	margin-right: auto;
+	margin-left: auto;
 	max-width: var(--branding--logo--max-width-mobile);
 	max-height: var(--branding--logo--max-height-mobile);
 	height: auto;
+	display: inline-block;
 	width: auto;
 }
 
@@ -3213,7 +3213,7 @@ nav a {
 	line-height: var(--global--line-height-body);
 	border-top: 3px solid var(--global--color-border);
 	padding-top: var(--global--spacing-vertical);
-	margin-top: calc(2 * var(--global--spacing-vertical));
+	margin-top: var(--global--spacing-vertical);
 }
 
 .site-footer > .site-info .site-name {
@@ -3540,6 +3540,15 @@ h1.page-title {
 .page-header {
 	border-bottom: 3px solid var(--global--color-border);
 	padding-bottom: calc(2 * var(--global--spacing-vertical));
+}
+
+.archive .content-area .format-aside .entry-content,
+.archive .content-area .format-status .entry-content,
+.archive .content-area .format-link .entry-content,
+.search .content-area .format-aside .entry-content,
+.search .content-area .format-status .entry-content,
+.search .content-area .format-link .entry-content {
+	font-size: var(--global--font-size-lg);
 }
 
 .error404 main p {
@@ -4208,6 +4217,47 @@ h1.page-title {
 	}
 }
 
+.footer-navigation {
+	font-size: var(--global--font-size-xs);
+	margin-top: calc(2 * var(--global--spacing-vertical));
+}
+
+.footer-navigation-wrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	list-style: none;
+	padding-right: 0;
+}
+
+.footer-navigation-wrapper li {
+	display: inline;
+	line-height: 3;
+}
+
+.footer-navigation-wrapper li a {
+	padding: calc(1.25 * var(--primary-nav--padding)) var(--primary-nav--padding);
+	transition: transform 0.1s ease;
+}
+
+.footer-navigation-wrapper li a:hover {
+	text-decoration: underline;
+	text-decoration-style: dotted;
+	text-decoration-skip-ink: none;
+}
+
+.footer-navigation-wrapper li svg {
+	vertical-align: middle;
+}
+
+.footer-navigation-wrapper li svg:hover {
+	transform: scale(1.1);
+}
+
+.footer-navigation-wrapper .sub-menu-toggle {
+	display: none;
+}
+
 /* Next/Previous navigation */
 .navigation {
 	color: var(--global--color-primary);
@@ -4252,6 +4302,17 @@ h1.page-title {
 	display: inline-block;
 	fill: currentColor;
 	vertical-align: middle;
+	position: relative;
+}
+
+.navigation .nav-previous .svg-icon,
+.navigation .prev .svg-icon {
+	top: -2px;
+}
+
+.navigation .nav-next .svg-icon,
+.navigation .next .svg-icon {
+	top: -1px;
 }
 
 .post-navigation {
