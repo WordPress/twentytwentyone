@@ -123,8 +123,11 @@ nav a {
 }
 
 @include media(mobile-only) {
+
 	.site-header {
+
 		&.has-logo {
+
 			&:not(.has-title-and-tagline) {
 
 				.site-logo {
@@ -185,7 +188,9 @@ nav a {
 		}
 
 		&:not(.has-logo) {
+
 			&.has-title-and-tagline {
+
 				.site-branding {
 					margin-right: 0;
 					max-width: calc(100% - 160px);
