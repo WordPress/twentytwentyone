@@ -190,27 +190,43 @@ function twenty_twenty_one_get_avatar_size() {
 }
 
 /**
+ * Creates continue reading text
+ */
+function twenty_twenty_one_continue_reading_text() {
+	$continue_reading = sprintf(
+		/* translators: %s: Name of current post. */
+		wp_kses( esc_html__( 'Continue reading %s', 'twentytwentyone' ), array( 'span' => array( 'class' => array() ) ) ),
+		the_title( '<span class="screen-reader-text">', '</span>', false )
+	);
+
+	return $continue_reading;
+}
+
+/**
+ * Create the continue reading link for excerpt.
+ */
+function twenty_twenty_one_continue_reading_link_excerpt() {
+
+	if ( ! is_admin() ) {
+		return '&hellip; <a class="more-link" href="' . esc_url( get_permalink() ) . '">' . twenty_twenty_one_continue_reading_text() . '</a>';
+	}
+}
+
+// Filter the excerpt more link.
+add_filter( 'excerpt_more', 'twenty_twenty_one_continue_reading_link_excerpt' );
+
+/**
  * Create the continue reading link.
  */
 function twenty_twenty_one_continue_reading_link() {
 
 	if ( ! is_admin() ) {
-		$continue_reading = sprintf(
-			/* translators: %s: Name of current post. */
-			wp_kses( esc_html__( 'Read more %s', 'twentytwentyone' ), array( 'span' => array( 'class' => array() ) ) ),
-			the_title( '<span class="screen-reader-text">' . esc_html__( 'about ', 'twentytwentyone' ), '</span>', false )
-		);
-
-		return '&hellip; <a class="more-link" href="' . esc_url( get_permalink() ) . '">' . $continue_reading . '</a>';
+		return '<div class="more-link-container"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . twenty_twenty_one_continue_reading_text() . '</a></div>';
 	}
 }
 
 // Filter the excerpt more link.
-add_filter( 'excerpt_more', 'twenty_twenty_one_continue_reading_link' );
-
-// Filter the content more link.
 add_filter( 'the_content_more_link', 'twenty_twenty_one_continue_reading_link' );
-
 
 if ( ! function_exists( 'twenty_twenty_one_post_title' ) ) {
 	/**
@@ -370,4 +386,57 @@ function twenty_twenty_one_get_non_latin_css( $type = 'front-end' ) {
 		null,
 		false
 	);
+}
+
+/**
+ * Print the first instance of a block in the content, and then break away.
+ *
+ * @since 1.0.0
+ *
+ * @param string      $block_name The block name/type. Example: `core/image`.
+ * @param string|null $content    The content we need to search in. Use null for get_the_content().
+ * @param int         $instances  How many instances of the block we want to print. Defaults to 1.
+ *
+ * @return bool Returns true if a block was located & printed, otherwise false.
+ */
+function twenty_twenty_one_print_first_instance_of_block( $block_name, $content = null, $instances = 1 ) {
+	$instances_count = 0;
+	$blocks_content  = '';
+
+	if ( ! $content ) {
+		$content = get_the_content();
+	}
+
+	// Parse blocks in the content.
+	$blocks = parse_blocks( $content );
+
+	// Loop blocks.
+	foreach ( $blocks as $block ) {
+
+		// Sanity check.
+		if ( ! isset( $block['blockName'] ) ) {
+			continue;
+		}
+
+		// Check if this the block we're looking for.
+		if ( $block_name === $block['blockName'] ) {
+			// Increment count.
+			$instances_count++;
+
+			// Add the block HTML.
+			$blocks_content .= render_block( $block );
+
+			// Break the loop if we've reached the $instances count.
+			if ( $instances_count >= $instances ) {
+				break;
+			}
+		}
+	}
+
+	if ( $blocks_content ) {
+		echo apply_filters( 'the_content', $blocks_content ); // phpcs:ignore WordPress.Security.EscapeOutput
+		return true;
+	}
+
+	return false;
 }

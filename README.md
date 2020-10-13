@@ -1,13 +1,19 @@
 # Twenty Twenty-One
 
-Contributors: wordpressdotorg  
-Requires at least: 5.3  
-Tested up to: 5.5  
-Requires PHP: 5.6  
-License: GPLv2 or later  
-License URI: http://www.gnu.org/licenses/gpl-2.0.html  
+Contributors: wordpressdotorg
+Requires at least: 5.3
+Tested up to: 5.5
+Requires PHP: 5.6
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Description
+
+Twenty Twenty-One is a blank canvas for your ideas and it makes the block editor your best brush.
+
+With new block patterns, which allow you to create a beautiful layout in a matter of seconds, this theme’s soft colors and eye-catching — yet timeless — design will let your work shine.
+
+Take it for a spin! See how Twenty Twenty-One elevates your portfolio, business website, or personal blog.
 
 To contribute to TT1 development, please read the [contributor's guide](/CONTRIBUTING.md).
 
@@ -46,16 +52,16 @@ Twenty Nineteen is distributed under the terms of the GNU GPL v2 or later.
 Twenty Seventeen. Copyright (C) 2016-2020 WordPress.org
 Twenty Seventeen is distributed under the terms of the GNU GPL v2 or later.
 
-Twenty Twenty. Copyright (C) 2020 WordPress.org 
+Twenty Twenty. Copyright (C) 2020 WordPress.org
 Twenty Twenty is distributed under the terms of the GNU GPL v2 or later.
 
-Underscores https://underscores.me/, Copyright (C) 2012-2020 Automattic, Inc. 
+Underscores https://underscores.me/, Copyright (C) 2012-2020 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
-Unless otherwise noted, the icons in this theme are derived from the WordPress 
+Unless otherwise noted, the icons in this theme are derived from the WordPress
 Icons Library, licensed under the terms of the GNU GPL v2 or later.
 https://github.com/WordPress/gutenberg/tree/master/packages/icons
 

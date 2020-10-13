@@ -196,7 +196,6 @@
 
 		li {
 			display: block;
-			margin: var(--primary-nav--padding) 0;
 			position: relative;
 			width: 100%;
 
@@ -213,7 +212,7 @@
 		// Sub-menu buttons
 		.sub-menu-toggle {
 			display: flex;
-			height: 44px;
+			height: 100%;
 			width: 44px;
 			padding: 0;
 			justify-content: center;
@@ -230,26 +229,43 @@
 				display: none;
 			}
 
-			// When the sub-menu is closed, display the plus icon
-			&[aria-expanded="false"] {
-				/* stylelint-disable */
-				background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z' fill='%2328303d'/></svg>") no-repeat center center;
-				/* stylelint-enable */
+			.icon-plus,
+			.icon-minus {
+				height: 100%;
+				display: flex;
+				align-items: center;
+
+				svg {
+					margin-top: -1px;
+				}
+			}
+
+			.icon-minus {
+				display: none;
 			}
 
 			// When the sub-menu is open, display the minus icon
 			&[aria-expanded="true"] {
-				/* stylelint-disable */
-				background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M4 9h12v2H4V9z' fill='%2328303d'/></svg>") no-repeat center center;
-				/* stylelint-enable */
-			}
 
+				.icon-minus {
+					display: flex;
+				}
+
+				.icon-plus {
+					display: none;
+				}
+			}
 		}
 
 		.hover .sub-menu-toggle {
-			/* stylelint-disable */
-			background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M4 9h12v2H4V9z' fill='%2328303d'/></svg>") no-repeat center center;
-			/* stylelint-enable */
+
+			.icon-minus {
+				display: flex;
+			}
+
+			.icon-plus {
+				display: none;
+			}
 		}
 
 		// Sub-menus Flyout
@@ -258,14 +274,18 @@
 			position: relative;
 
 			@include media(mobile) {
-				background: var(--global--color-background);
 				left: 0;
 				margin: 0;
 				min-width: max-content;
 				position: absolute;
 				top: 100%;
+				padding-top: 3px;
 				transition: all 0.5s ease;
-				z-index: 99999;
+				z-index: 88888;
+
+				li {
+					background: var(--global--color-background);
+				}
 			}
 
 			.sub-menu {
@@ -278,20 +298,33 @@
 	.primary-menu > .menu-item:hover > a {
 		color: var(--primary-nav--color-link-hover);
 	}
-	// Top-level Menu Item
-	.primary-menu-container > ul > .menu-item {
+
+	.primary-menu-container {
 		@include media(mobile) {
-			display: flex;
-			align-items: center;
-			margin-left: calc(-1 * var(--primary-nav--padding)); // Better align with the site title when the menu wraps.
-			margin-right: var(--primary-nav--padding);
-			padding: 0 var(--primary-nav--padding);
+			// Better align with the site title when the menu wraps.
+			margin-right: calc(0px - var(--primary-nav--padding));
+			margin-left: calc(0px - var(--primary-nav--padding));
+
+			// Top-level Menu Item
+			> ul > .menu-item {
+				display: flex;
+				align-items: center;
+
+				> a {
+					padding-left: var(--primary-nav--padding);
+					padding-right: var(--primary-nav--padding);
+
+					+ .sub-menu-toggle {
+						margin-left: calc(0px - var(--primary-nav--padding));
+					}
+				}
+			}
 		}
 	}
 
 	// Menu Item Link
 	a {
-		display: inline;
+		display: block;
 		font-family: var(--primary-nav--font-family-mobile);
 		font-size: var(--primary-nav--font-size-mobile);
 		font-weight: var(--primary-nav--font-weight);
@@ -319,7 +352,9 @@
 		}
 
 		&:focus {
+			position: relative;
 			z-index: 99999; // Ensure focus styles appear above absolute positioned elements
+			outline-offset: 0;
 		}
 	}
 
@@ -334,12 +369,13 @@
 
 	// Sub-menu depth indicators + text styles
 	.sub-menu {
+		margin: 0;
+		padding: 0;
 		list-style: none;
 		margin-left: var(--primary-nav--padding);
 
 		// Sub-menu items om wide screens.
 		@include media(mobile) {
-			padding: 0 var(--primary-nav--padding);
 
 			// For nested sub-menus, don't duplicate the padding
 			> .menu-item > .sub-menu {
@@ -348,8 +384,6 @@
 		}
 
 		.menu-item {
-			margin: calc(2 * var(--primary-nav--padding)) 0;
-
 
 			@include media(mobile-only) {
 
@@ -360,7 +394,8 @@
 			}
 
 			> a {
-				display: inline;
+				padding: calc(1.25 * var(--primary-nav--padding)) var(--primary-nav--padding);
+				display: block;
 				font-size: var(--primary-nav--font-size-sub-menu-mobile);
 				font-style: var(--primary-nav--font-style-sub-menu-mobile);
 
