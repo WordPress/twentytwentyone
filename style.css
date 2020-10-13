@@ -2964,56 +2964,6 @@ table.wp-calendar-table caption {
 	font-weight: var(--heading--font-weight-page-title);
 }
 
-.is-tiny-text,
-.has-tiny-font-size {
-	font-size: var(--global--font-size-xs);
-}
-
-.is-small-text,
-.has-small-font-size {
-	font-size: var(--global--font-size-sm);
-}
-
-.is-regular-text,
-.has-regular-font-size,
-.has-normal-font-size,
-.has-medium-font-size {
-	font-size: var(--global--font-size-md);
-}
-
-.is-large-text,
-.has-large-font-size {
-	font-size: var(--global--font-size-lg);
-	line-height: var(--global--line-height-heading);
-}
-
-.is-larger-text,
-.has-larger-font-size,
-.has-huge-font-size {
-	font-size: var(--global--font-size-xl);
-	line-height: var(--global--line-height-heading);
-	font-weight: var(--heading--font-weight-page-title);
-}
-
-.is-gigantic-text,
-.has-gigantic-font-size {
-	font-size: var(--global--font-size-xxl);
-	line-height: var(--global--line-height-heading);
-	font-weight: var(--heading--font-weight-page-title);
-}
-
-.wp-block.editor-post-title__block .editor-post-title__input {
-	font-size: var(--global--font-size-page-title);
-}
-
-.wp-block.block-editor-default-block-appender > textarea {
-	font-size: var(--global--font-size-md);
-}
-
-.has-drop-cap:not(:focus)::first-letter {
-	font-size: calc(2 * var(--heading--font-size-h1));
-}
-
 /* Block Alignments */
 /**
  * These selectors set the default max width for content appearing inside a post or page.

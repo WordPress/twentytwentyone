@@ -13,6 +13,7 @@
 	.editor-post-title__input {
 		color: var(--global--color-secondary);
 		font-family: var(--heading--font-family);
+		font-size: var(--global--font-size-page-title);
 		font-weight: var(--heading--font-weight-page-title);
 		line-height: var(--heading--line-height-h1);
 	}
@@ -21,6 +22,7 @@
 // Editor UI font styles
 .wp-block.block-editor-default-block-appender > textarea {
 	font-family: var(--global--font-secondary);
+	font-size: var(--global--font-size-md);
 }
 
 // Gutenberg text color options
@@ -129,6 +131,11 @@
 .alignright {
 	margin: 0;
 	margin-left: var(--global--spacing-horizontal);
+}
+
+// Drop cap
+.has-drop-cap:not(:focus)::first-letter {
+	font-size: calc(2 * var(--heading--font-size-h1));
 }
 
 @media only screen and (min-width: 482px) {
