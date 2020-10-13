@@ -1,15 +1,15 @@
 
 .footer-navigation {
 	font-size: var(--global--font-size-xs);
+	margin-top: calc(2 * var(--global--spacing-vertical));
+	text-align: center;
 }
 
 .footer-navigation-wrapper {
 	display: flex;
-	position: relative;
 	justify-content: center;
 	flex-wrap: wrap;
 	list-style: none;
-	margin: 0 auto;
 	padding-left: 0;
 
 	li {

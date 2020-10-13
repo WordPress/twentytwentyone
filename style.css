@@ -3189,7 +3189,7 @@ nav a {
 	line-height: var(--global--line-height-body);
 	border-top: 3px solid var(--global--color-border);
 	padding-top: var(--global--spacing-vertical);
-	margin-top: calc(2 * var(--global--spacing-vertical));
+	margin-top: var(--global--spacing-vertical);
 }
 
 .site-footer > .site-info .site-name {
@@ -3208,7 +3208,6 @@ nav a {
 @media only screen and (min-width: 822px) {
 	.site-footer > .site-info {
 		display: flex;
-		margin-top: calc(2 * var(--global--spacing-vertical));
 	}
 	.site-footer > .site-info .imprint {
 		display: initial;
@@ -4183,15 +4182,15 @@ h1.page-title {
 
 .footer-navigation {
 	font-size: var(--global--font-size-xs);
+	margin-top: calc(2 * var(--global--spacing-vertical));
+	text-align: center;
 }
 
 .footer-navigation-wrapper {
 	display: flex;
-	position: relative;
 	justify-content: center;
 	flex-wrap: wrap;
 	list-style: none;
-	margin: 0 auto;
 	padding-left: 0;
 }
 
