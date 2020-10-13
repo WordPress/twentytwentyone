@@ -35,6 +35,7 @@
 		<exclude name="WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_style" />
 		<exclude name="WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_pattern" />
 		<exclude name="WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_pattern_category" />
+		<exclude name="PHPCompatibility.FunctionDeclarations.NewClosure.Found" />
 	</rule>
 	<rule ref="WPThemeReview" />
 
