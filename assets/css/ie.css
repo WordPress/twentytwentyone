@@ -4493,6 +4493,11 @@ table.wp-calendar-table caption {
 	display: flex;
 	align-items: flex-start;
 	flex-wrap: wrap;
+	row-gap: 30px;
+}
+
+.wp-custom-logo .site-header {
+	align-items: center;
 }
 
 @media only screen and (min-width: 482px) {
@@ -4514,12 +4519,13 @@ table.wp-calendar-table caption {
 
 .site-branding:last-child {
 	margin-right: 0;
+	width: 100%;
+	text-align: center;
 }
 
 @media only screen and (min-width: 482px) {
 	.site-branding {
 		margin-right: initial;
-		margin-bottom: 30px;
 		margin-top: 4px;
 	}
 }
@@ -4579,7 +4585,15 @@ nav a {
 	margin: 15px 0;
 }
 
+.site-header > .site-logo {
+	width: 100%;
+	padding-bottom: 45px;
+	border-bottom: 1px solid;
+}
+
 .site-logo .custom-logo {
+	margin-left: auto;
+	margin-right: auto;
 	max-width: 96px;
 	max-height: 96px;
 	height: auto;
