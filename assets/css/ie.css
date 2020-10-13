@@ -5019,6 +5019,30 @@ h1.page-title {
 	padding-bottom: 60px;
 }
 
+.archive .content-area .format-aside .entry-content {
+	font-size: 1.5rem;
+}
+
+.archive .content-area .format-status .entry-content {
+	font-size: 1.5rem;
+}
+
+.archive .content-area .format-link .entry-content {
+	font-size: 1.5rem;
+}
+
+.search .content-area .format-aside .entry-content {
+	font-size: 1.5rem;
+}
+
+.search .content-area .format-status .entry-content {
+	font-size: 1.5rem;
+}
+
+.search .content-area .format-link .entry-content {
+	font-size: 1.5rem;
+}
+
 .error404 main p {
 	font-size: 1.5rem;
 	margin-bottom: 50px;
