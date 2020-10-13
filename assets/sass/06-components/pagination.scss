@@ -46,6 +46,17 @@
 		display: inline-block;
 		fill: currentColor;
 		vertical-align: middle;
+		position: relative;
+	}
+
+	.nav-previous .svg-icon,
+	.prev .svg-icon {
+		top: -2px;
+	}
+
+	.nav-next .svg-icon,
+	.next .svg-icon {
+		top: -1px;
 	}
 }
 
