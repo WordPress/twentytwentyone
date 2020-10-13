@@ -1,7 +1,7 @@
 .wp-block-quote {
-	border-left: var(--quote--border-width) solid var(--quote--border-color);
 	margin: var(--global--spacing-vertical) 0;
 	padding-left: var(--global--spacing-horizontal);
+	position: relative;
 
 	> * {
 		margin-top: var(--global--spacing-unit);
@@ -16,18 +16,40 @@
 		}
 	}
 
+	&::before {
+		color: currentColor;
+		content: "\201C";
+		display: block;
+		font-size: 3rem;
+		font-weight: 700;
+		line-height: 1;
+		position: absolute;
+		top: 4px;
+		left: 0;
+	}
+
 	p {
+		color: #39414D;
 		font-family: var(--quote--font-family);
-		font-size: var(--quote--font-size);
+		font-size: 20px;
+		font-weight: 700;
 		font-style: var(--quote--font-style);
-		line-height: var(--quote--line-height);
+		line-height: 30px;
 	}
 
 	.wp-block-quote__citation,
 	cite,
 	footer {
-		color: var(--global--color-primary);
-		font-size: var(--global--font-size-xs);
+		color: #39414D;;
+		font-size: 18px;
+		font-style: var(--pullquote--font-style);
+		font-weight: 500;
+		line-height: 27px;
+		text-transform: none;
+
+		&::before {
+			content: '-\00a0';
+		}
 
 		.has-background:not(.has-background-background-color) &,
 		[class*="background-color"]:not(.has-background-background-color) &,
@@ -41,14 +63,8 @@
 	 * Block Options
 	 */
 	&.has-text-align-right {
-		border-left: none;
-		border-right: var(--quote--border-width) solid var(--quote--border-color);
 		padding-left: 0;
 		padding-right: var(--global--spacing-horizontal);
-	}
-
-	&.has-text-align-center {
-		border: none;
 	}
 
 	&.is-style-large,
@@ -69,23 +85,23 @@
 		}
 
 		p {
-			font-size: var(--quote--font-size-large);
+			font-size: 32px;
 			font-style: var(--quote--font-style-large);
-			line-height: var(--quote--line-height-large);
+			line-height: 43,2px;
 		}
 
 		.wp-block-quote__citation,
 		cite,
 		footer {
-			color: var(--global--color-primary);
-			font-size: var(--global--font-size-xs);
+			font-size: 20px;
+			line-height: 30px;
 		}
-	}
 
-	.has-background:not(.has-background-background-color) &,
-	[class*="background-color"]:not(.has-background-background-color) &,
-	[style*="background-color"] &,
-	.wp-block-cover[style*="background-image"] & {
-		border-color: currentColor;
+		&::before {
+			font-size: 5rem;
+			position: absolute;
+			top: 6px;
+			left: -15px;
+		}
 	}
 }

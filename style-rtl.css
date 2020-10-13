@@ -2495,9 +2495,9 @@ p.has-text-color a {
 }
 
 .wp-block-quote {
-	border-right: var(--quote--border-width) solid var(--quote--border-color);
 	margin: var(--global--spacing-vertical) 0;
 	padding-right: var(--global--spacing-horizontal);
+	position: relative;
 	/**
 	 * Block Options
 	 */
@@ -2516,18 +2516,42 @@ p.has-text-color a {
 	margin-bottom: 0;
 }
 
+.wp-block-quote::before {
+	color: currentColor;
+	content: "\201C";
+	display: block;
+	font-size: 3rem;
+	font-weight: 700;
+	line-height: 1;
+	position: absolute;
+	top: 4px;
+	right: 0;
+}
+
 .wp-block-quote p {
+	color: #39414D;
 	font-family: var(--quote--font-family);
-	font-size: var(--quote--font-size);
+	font-size: 20px;
+	font-weight: 700;
 	font-style: var(--quote--font-style);
-	line-height: var(--quote--line-height);
+	line-height: 30px;
 }
 
 .wp-block-quote .wp-block-quote__citation,
 .wp-block-quote cite,
 .wp-block-quote footer {
-	color: var(--global--color-primary);
-	font-size: var(--global--font-size-xs);
+	color: #39414D;
+	font-size: 18px;
+	font-style: var(--pullquote--font-style);
+	font-weight: 500;
+	line-height: 27px;
+	text-transform: none;
+}
+
+.wp-block-quote .wp-block-quote__citation::before,
+.wp-block-quote cite::before,
+.wp-block-quote footer::before {
+	content: '-\00a0';
 }
 
 .has-background:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
@@ -2552,14 +2576,8 @@ p.has-text-color a {
 }
 
 .wp-block-quote.has-text-align-right {
-	border-right: none;
-	border-left: var(--quote--border-width) solid var(--quote--border-color);
 	padding-right: 0;
 	padding-left: var(--global--spacing-horizontal);
-}
-
-.wp-block-quote.has-text-align-center {
-	border: none;
 }
 
 .wp-block-quote.is-style-large, .wp-block-quote.is-large {
@@ -2579,9 +2597,9 @@ p.has-text-color a {
 }
 
 .wp-block-quote.is-style-large p, .wp-block-quote.is-large p {
-	font-size: var(--quote--font-size-large);
+	font-size: 32px;
 	font-style: var(--quote--font-style-large);
-	line-height: var(--quote--line-height-large);
+	line-height: 43,2px;
 }
 
 .wp-block-quote.is-style-large .wp-block-quote__citation,
@@ -2589,15 +2607,15 @@ p.has-text-color a {
 .wp-block-quote.is-style-large footer, .wp-block-quote.is-large .wp-block-quote__citation,
 .wp-block-quote.is-large cite,
 .wp-block-quote.is-large footer {
-	color: var(--global--color-primary);
-	font-size: var(--global--font-size-xs);
+	font-size: 20px;
+	line-height: 30px;
 }
 
-.has-background:not(.has-background-background-color) .wp-block-quote,
-[class*="background-color"]:not(.has-background-background-color) .wp-block-quote,
-[style*="background-color"] .wp-block-quote,
-.wp-block-cover[style*="background-image"] .wp-block-quote {
-	border-color: currentColor;
+.wp-block-quote.is-style-large::before, .wp-block-quote.is-large::before {
+	font-size: 5rem;
+	position: absolute;
+	top: 6px;
+	right: -15px;
 }
 
 .wp-block-rss {
