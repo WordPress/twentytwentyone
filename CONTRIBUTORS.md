@@ -38,3 +38,5 @@
 | @rolf-yoast | @rolfsiebers
 | @SResok | @sresok |
 | @GuidoOffermans | @guidooffermans |
+| @francescamarano | @francina |
+| @marybaum | @marybaum |
