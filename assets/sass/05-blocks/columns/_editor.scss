@@ -13,6 +13,7 @@
 			.wp-block-column:nth-child(2n) {
 				margin-left: calc(-2 * var(--global--spacing-horizontal));
 				margin-top: calc(2.5 * var(--global--spacing-horizontal));
+				z-index: 2;
 
 				// Provide text-based child blocks with a default background color to ensure they're readable.
 				> p,

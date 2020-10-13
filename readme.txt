@@ -8,6 +8,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
+Twenty Twenty-One is a blank canvas for your ideas and it makes the block editor your best brush.
+
+With new block patterns, which allow you to create a beautiful layout in a matter of seconds, this theme’s soft colors and eye-catching — yet timeless — design will let your work shine.
+
+Take it for a spin! See how Twenty Twenty-One elevates your portfolio, business website, or personal blog.
+
 == Installation ==
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
@@ -75,4 +81,6 @@ Girl in white, Vincent van Gogh, 1890. Public domain. https://www.nga.gov/collec
 The smoker, Vincent van Gogh, 1888. Public domain. https://collection.barnesfoundation.org/objects/5177/The-Smoker-(Le-Fumeur)/
 La Mousmé, Vincent van Gogh, 1888. Public domain. https://www.nga.gov/collection/art-object-page.46626.html
 La Berceuse (Woman Rocking a Cradle), Vincent van Gogh, 1889. Public domain. https://www.metmuseum.org/art/collection/search/437984
-Two Poplars in the Alpilles near Saint-Rémy, Vincent Van Gogh, 1998. Public domain. https://www.clevelandart.org/art/1958.32
+Two Poplars in the Alpilles near Saint-Rémy, Vincent Van Gogh, 1889. Public domain. https://www.clevelandart.org/art/1958.32
+Roses, Vincent Van Gogh, 1890. Public Domain. https://www.metmuseum.org/art/collection/search/436534
+Roses, Vincent Van Gogh, 1890. Public Domain. https://commons.wikimedia.org/wiki/File:Roses_-_Vincent_van_Gogh.JPG

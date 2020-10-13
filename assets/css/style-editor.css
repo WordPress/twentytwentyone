@@ -522,7 +522,7 @@ a:hover {
 
 .wp-block-cover,
 .wp-block-cover-image {
-	background-color: var(--cover--color-foreground);
+	background-color: var(--cover--color-background);
 	min-height: var(--cover--height);
 	margin-top: inherit;
 	margin-bottom: inherit;
@@ -569,7 +569,7 @@ a:hover {
 .wp-block-cover-image:not([class*="background-color"]) .wp-block-cover-image-text,
 .wp-block-cover-image:not([class*="background-color"]) .wp-block-cover-text,
 .wp-block-cover-image:not([class*="background-color"]) .block-editor-block-list__block {
-	color: var(--cover--color-background);
+	color: var(--cover--color-foreground);
 }
 
 .wp-block-cover h2,
@@ -611,6 +611,7 @@ a:hover {
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) {
 		margin-left: calc(-2 * var(--global--spacing-horizontal));
 		margin-top: calc(2.5 * var(--global--spacing-horizontal));
+		z-index: 2;
 	}
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p:not(.has-background),
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1:not(.has-background),
