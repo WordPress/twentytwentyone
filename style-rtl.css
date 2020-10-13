@@ -3103,6 +3103,11 @@ table.wp-calendar-table caption {
 	display: flex;
 	align-items: flex-start;
 	flex-wrap: wrap;
+	row-gap: var(--global--spacing-vertical);
+}
+
+.wp-custom-logo .site-header {
+	align-items: center;
 }
 
 @media only screen and (min-width: 482px) {
@@ -3124,12 +3129,13 @@ table.wp-calendar-table caption {
 
 .site-branding:last-child {
 	margin-left: 0;
+	width: 100%;
+	text-align: center;
 }
 
 @media only screen and (min-width: 482px) {
 	.site-branding {
 		margin-left: initial;
-		margin-bottom: var(--global--spacing-vertical);
 		margin-top: 4px;
 	}
 }
@@ -3185,7 +3191,15 @@ nav a {
 	margin: calc(var(--global--spacing-vertical) / 2) 0;
 }
 
+.site-header > .site-logo {
+	width: 100%;
+	padding-bottom: calc(var(--global--spacing-vertical) * 1.5);
+	border-bottom: 1px solid;
+}
+
 .site-logo .custom-logo {
+	margin-right: auto;
+	margin-left: auto;
 	max-width: var(--branding--logo--max-width-mobile);
 	max-height: var(--branding--logo--max-height-mobile);
 	height: auto;
