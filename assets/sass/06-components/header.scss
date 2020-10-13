@@ -119,3 +119,29 @@ nav a {
 		}
 	}
 }
+
+@include media(mobile-only) {
+	.site-header {
+		&.has-logo:not(.has-title-and-tagline) {
+
+			.site-logo {
+				position: absolute;
+				padding-top: calc(0.5 * var(--global--spacing-vertical));
+				margin-top: 0;
+				top: 0;
+
+				.admin-bar & {
+					top: 46px;
+				}
+
+				.primary-navigation-open & {
+					display: none;
+				}
+
+				img {
+					max-height: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit)) + 1.7em);
+				}
+			}
+		}
+	}
+}

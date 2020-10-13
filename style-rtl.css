@@ -3198,6 +3198,24 @@ nav a {
 	}
 }
 
+@media only screen and (max-width: 481px) {
+	.site-header.has-logo:not(.has-title-and-tagline) .site-logo {
+		position: absolute;
+		padding-top: calc(0.5 * var(--global--spacing-vertical));
+		margin-top: 0;
+		top: 0;
+	}
+	.admin-bar .site-header.has-logo:not(.has-title-and-tagline) .site-logo {
+		top: 46px;
+	}
+	.primary-navigation-open .site-header.has-logo:not(.has-title-and-tagline) .site-logo {
+		display: none;
+	}
+	.site-header.has-logo:not(.has-title-and-tagline) .site-logo img {
+		max-height: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit)) + 1.7em);
+	}
+}
+
 .site-footer {
 	padding-bottom: calc(1.7 * var(--global--spacing-vertical));
 	margin-top: calc(6 * var(--global--spacing-vertical));

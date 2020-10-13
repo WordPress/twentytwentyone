@@ -4553,6 +4553,24 @@ nav a {
 	}
 }
 
+@media only screen and (max-width: 481px) {
+	.site-header.has-logo:not(.has-title-and-tagline) .site-logo {
+		position: absolute;
+		padding-top: 15px;
+		margin-top: 0;
+		top: 0;
+	}
+	.admin-bar .site-header.has-logo:not(.has-title-and-tagline) .site-logo {
+		top: 46px;
+	}
+	.primary-navigation-open .site-header.has-logo:not(.has-title-and-tagline) .site-logo {
+		display: none;
+	}
+	.site-header.has-logo:not(.has-title-and-tagline) .site-logo img {
+		max-height: calc(10px + 2em);
+	}
+}
+
 .site-footer {
 	padding-bottom: 51px;
 	margin-top: 180px;
