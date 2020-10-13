@@ -17,9 +17,6 @@ if ( ! function_exists( 'twenty_twenty_one_posted_on' ) ) {
 	 */
 	function twenty_twenty_one_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-		}
 
 		$time_string = sprintf(
 			$time_string,
@@ -31,11 +28,28 @@ if ( ! function_exists( 'twenty_twenty_one_posted_on' ) ) {
 
 		printf(
 			/* translators: 2: author link. 3: author name*/
-			'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
+			'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span> ',
 			esc_html__( 'Published', 'twentytwentyone' ),
 			esc_url( get_permalink() ),
 			$time_string // phpcs:ignore WordPress.Security.EscapeOutput
 		);
+
+		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+			$time_string = '<time class="updated" datetime="%1$s">%2$s</time>';
+			$time_string = sprintf(
+				$time_string,
+				esc_attr( get_the_modified_date( DATE_W3C ) ),
+				esc_html( get_the_modified_date() )
+			);
+
+			printf(
+				/* translators: 2: author link. 3: author name*/
+				'<span class="updated-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
+				esc_html__( 'Updated', 'twentytwentyone' ),
+				esc_url( get_permalink() ),
+				$time_string // phpcs:ignore WordPress.Security.EscapeOutput
+			);
+		}
 	}
 }
 

@@ -93,7 +93,7 @@ h1.entry-title {
 			margin-right: 0;
 		}
 
-		.published + .updated {
+		&.updated-on {
 			display: none; // Hide updated date?
 		}
 	}
@@ -130,10 +130,9 @@ h1.entry-title {
 	display: block;
 
 	> span {
-		margin-right: calc(0.5 * var(--global--spacing-unit));
 
-		.published + .updated {
-			display: none; // Hide updated date?
+		&.updated-on {
+			display: none;
 		}
 	}
 
