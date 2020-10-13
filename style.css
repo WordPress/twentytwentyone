@@ -2535,7 +2535,7 @@ p.has-text-color a {
 .wp-block-quote p {
 	color: var(--global--color-primary);
 	font-family: var(--quote--font-family);
-	font-size: var(--quote--font-sizes);
+	font-size: var(--quote--font-size);
 	font-style: var(--quote--font-style);
 	line-height: var(--quote--line-height);
 	font-weight: 700;
@@ -2611,7 +2611,7 @@ p.has-text-color a {
 .wp-block-quote.is-style-large footer, .wp-block-quote.is-large .wp-block-quote__citation,
 .wp-block-quote.is-large cite,
 .wp-block-quote.is-large footer {
-	font-size: var(--quote--font-sizes);
+	font-size: var(--quote--font-size);
 	line-height: var(--quote--line-height);
 }
 

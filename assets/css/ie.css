@@ -3596,7 +3596,7 @@ p.has-text-color a {
 .wp-block-quote p {
 	color: #28303d;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: undefined;
+	font-size: 1.25rem;
 	font-style: normal;
 	line-height: 1.5;
 	font-weight: 700;
@@ -3706,32 +3706,32 @@ p.has-text-color a {
 }
 
 .wp-block-quote.is-style-large .wp-block-quote__citation {
-	font-size: undefined;
+	font-size: 1.25rem;
 	line-height: 1.5;
 }
 
 .wp-block-quote.is-style-large cite {
-	font-size: undefined;
+	font-size: 1.25rem;
 	line-height: 1.5;
 }
 
 .wp-block-quote.is-style-large footer {
-	font-size: undefined;
+	font-size: 1.25rem;
 	line-height: 1.5;
 }
 
 .wp-block-quote.is-large .wp-block-quote__citation {
-	font-size: undefined;
+	font-size: 1.25rem;
 	line-height: 1.5;
 }
 
 .wp-block-quote.is-large cite {
-	font-size: undefined;
+	font-size: 1.25rem;
 	line-height: 1.5;
 }
 
 .wp-block-quote.is-large footer {
-	font-size: undefined;
+	font-size: 1.25rem;
 	line-height: 1.5;
 }
 

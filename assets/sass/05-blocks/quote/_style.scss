@@ -31,7 +31,7 @@
 	p {
 		color: var(--global--color-primary);
 		font-family: var(--quote--font-family);
-		font-size: var(--quote--font-sizes);
+		font-size: var(--quote--font-size);
 		font-style: var(--quote--font-style);
 		line-height: var(--quote--line-height);
 		font-weight: 700;
@@ -93,7 +93,7 @@
 		.wp-block-quote__citation,
 		cite,
 		footer {
-			font-size: var(--quote--font-sizes);
+			font-size: var(--quote--font-size);
 			line-height: var(--quote--line-height);
 		}
 
