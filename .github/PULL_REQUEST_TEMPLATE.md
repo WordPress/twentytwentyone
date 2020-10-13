@@ -1,5 +1,5 @@
 <!-- Add reference to the issue this pull-request fixes.-->
-Fixes 
+Fixes
 
 ## Summary
 <!-- Explain what you changed and why in one or two sentences. -->
@@ -10,10 +10,36 @@ Fixes
 ## Test instructions
 
 This PR can be tested by following these steps:
-1. 
-1. 
-1. 
+1.
+1.
+1.
 <!-- Don't forget to test the unhappy-paths! -->
+
+## Screenshots
+
+If this is a visual change please include screenshots of the change at various screen sizes.
+
+<details>
+<summary>Desktop (Extra Large)</summary>
+
+</details>
+
+<details>
+<summary>Desktop (Large)</summary>
+
+</details>
+
+
+<details>
+<summary>Tablet (Medium)</summary>
+
+</details>
+
+
+<details>
+<summary>Mobile (Small)</summary>
+
+</details>
 
 ## Quality assurance
 * [ ] I have thought about any security implications this code might add.

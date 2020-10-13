@@ -195,8 +195,8 @@ function twenty_twenty_one_get_avatar_size() {
 function twenty_twenty_one_continue_reading_text() {
 	$continue_reading = sprintf(
 		/* translators: %s: Name of current post. */
-		wp_kses( esc_html__( 'Read more %s', 'twentytwentyone' ), array( 'span' => array( 'class' => array() ) ) ),
-		the_title( '<span class="screen-reader-text">&nbsp;' . esc_html__( 'about ', 'twentytwentyone' ), '</span>', false )
+		wp_kses( esc_html__( 'Continue reading %s', 'twentytwentyone' ), array( 'span' => array( 'class' => array() ) ) ),
+		the_title( '<span class="screen-reader-text">', '</span>', false )
 	);
 
 	return $continue_reading;
