@@ -5744,7 +5744,7 @@ h1.page-title {
 
 .navigation a:hover {
 	color: #28303d;
-	border-color: #39414d;
+	text-decoration: underline;
 }
 
 .navigation a:focus {
@@ -5809,7 +5809,7 @@ h1.page-title {
 
 @media only screen and (min-width: 822px) {
 	.post-navigation .post-title {
-		margin: 0;
+		margin: 0 25px;
 	}
 }
 
