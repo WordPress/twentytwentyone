@@ -289,11 +289,11 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--quote--border-width: 1px;
 	--quote--font-family: var(--global--font-secondary);
 	--quote--font-size: var(--global--font-size-md);
-	--quote--font-size-large: var(--global--font-size-lg);
+	--quote--font-size-large: 2rem;
 	--quote--font-style: normal;
 	--quote--font-style-large: normal;
-	--quote--line-height: var(--global--line-height-body);
-	--quote--line-height-large: 1.5;
+	--quote--line-height: 1.5;
+	--quote--line-height-large: 1.35;
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
 	--separator--width: calc(100vw - 1.2 * var(--global--spacing-horizontal));
@@ -2529,29 +2529,29 @@ p.has-text-color a {
 }
 
 .wp-block-quote p {
-	color: #39414D;
+	color: var(--global--color-primary);
 	font-family: var(--quote--font-family);
-	font-size: 20px;
-	font-weight: 700;
+	font-size: var(--quote--font-sizes);
 	font-style: var(--quote--font-style);
-	line-height: 30px;
+	line-height: var(--quote--line-height);
+	font-weight: 700;
 }
 
 .wp-block-quote .wp-block-quote__citation,
 .wp-block-quote cite,
 .wp-block-quote footer {
-	color: #39414D;
-	font-size: 18px;
+	color: var(--global--color-primary);
+	font-size: var(--global--font-size-sm);
 	font-style: var(--pullquote--font-style);
+	line-height: var(--quote--line-height);
 	font-weight: 500;
-	line-height: 27px;
 	text-transform: none;
 }
 
 .wp-block-quote .wp-block-quote__citation::before,
 .wp-block-quote cite::before,
 .wp-block-quote footer::before {
-	content: '-\00a0';
+	content: "-\00a0";
 }
 
 .has-background:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
@@ -2597,9 +2597,9 @@ p.has-text-color a {
 }
 
 .wp-block-quote.is-style-large p, .wp-block-quote.is-large p {
-	font-size: 32px;
+	font-size: var(--quote--font-size-large);
 	font-style: var(--quote--font-style-large);
-	line-height: 43,2px;
+	line-height: var(--quote--line-height-large);
 }
 
 .wp-block-quote.is-style-large .wp-block-quote__citation,
@@ -2607,8 +2607,8 @@ p.has-text-color a {
 .wp-block-quote.is-style-large footer, .wp-block-quote.is-large .wp-block-quote__citation,
 .wp-block-quote.is-large cite,
 .wp-block-quote.is-large footer {
-	font-size: 20px;
-	line-height: 30px;
+	font-size: var(--quote--font-sizes);
+	line-height: var(--quote--line-height);
 }
 
 .wp-block-quote.is-style-large::before, .wp-block-quote.is-large::before {

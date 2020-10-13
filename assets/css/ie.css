@@ -3594,45 +3594,45 @@ p.has-text-color a {
 }
 
 .wp-block-quote p {
-	color: #39414D;
+	color: #28303d;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 20px;
-	font-weight: 700;
+	font-size: undefined;
 	font-style: normal;
-	line-height: 30px;
+	line-height: 1.5;
+	font-weight: 700;
 }
 
 .wp-block-quote .wp-block-quote__citation {
-	color: #39414D;
-	font-size: 18px;
+	color: #28303d;
+	font-size: 1.125rem;
 	font-style: normal;
+	line-height: 1.5;
 	font-weight: 500;
-	line-height: 27px;
 	text-transform: none;
 }
 
 .wp-block-quote cite {
-	color: #39414D;
-	font-size: 18px;
+	color: #28303d;
+	font-size: 1.125rem;
 	font-style: normal;
+	line-height: 1.5;
 	font-weight: 500;
-	line-height: 27px;
 	text-transform: none;
 }
 
 .wp-block-quote footer {
-	color: #39414D;
-	font-size: 18px;
+	color: #28303d;
+	font-size: 1.125rem;
 	font-style: normal;
+	line-height: 1.5;
 	font-weight: 500;
-	line-height: 27px;
 	text-transform: none;
 }
 
 .wp-block-quote .wp-block-quote__citation::before,
 .wp-block-quote cite::before,
 .wp-block-quote footer::before {
-	content: '-\00a0';
+	content: "-\00a0";
 }
 
 .has-background:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
@@ -3694,24 +3694,45 @@ p.has-text-color a {
 }
 
 .wp-block-quote.is-style-large p {
-	font-size: 32px;
+	font-size: 2rem;
 	font-style: normal;
-	line-height: 43,2px;
+	line-height: 1.35;
 }
 
 .wp-block-quote.is-large p {
-	font-size: 32px;
+	font-size: 2rem;
 	font-style: normal;
-	line-height: 43,2px;
+	line-height: 1.35;
 }
 
-.wp-block-quote.is-style-large .wp-block-quote__citation,
-.wp-block-quote.is-style-large cite,
-.wp-block-quote.is-style-large footer, .wp-block-quote.is-large .wp-block-quote__citation,
-.wp-block-quote.is-large cite,
+.wp-block-quote.is-style-large .wp-block-quote__citation {
+	font-size: undefined;
+	line-height: 1.5;
+}
+
+.wp-block-quote.is-style-large cite {
+	font-size: undefined;
+	line-height: 1.5;
+}
+
+.wp-block-quote.is-style-large footer {
+	font-size: undefined;
+	line-height: 1.5;
+}
+
+.wp-block-quote.is-large .wp-block-quote__citation {
+	font-size: undefined;
+	line-height: 1.5;
+}
+
+.wp-block-quote.is-large cite {
+	font-size: undefined;
+	line-height: 1.5;
+}
+
 .wp-block-quote.is-large footer {
-	font-size: 20px;
-	line-height: 30px;
+	font-size: undefined;
+	line-height: 1.5;
 }
 
 .wp-block-quote.is-style-large::before, .wp-block-quote.is-large::before {

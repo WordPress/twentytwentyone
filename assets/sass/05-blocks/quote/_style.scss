@@ -29,26 +29,26 @@
 	}
 
 	p {
-		color: #39414D;
+		color: var(--global--color-primary);
 		font-family: var(--quote--font-family);
-		font-size: 20px;
-		font-weight: 700;
+		font-size: var(--quote--font-sizes);
 		font-style: var(--quote--font-style);
-		line-height: 30px;
+		line-height: var(--quote--line-height);
+		font-weight: 700;
 	}
 
 	.wp-block-quote__citation,
 	cite,
 	footer {
-		color: #39414D;;
-		font-size: 18px;
+		color: var(--global--color-primary);
+		font-size: var(--global--font-size-sm);
 		font-style: var(--pullquote--font-style);
+		line-height: var(--quote--line-height);
 		font-weight: 500;
-		line-height: 27px;
 		text-transform: none;
 
 		&::before {
-			content: '-\00a0';
+			content: "-\00a0";
 		}
 
 		.has-background:not(.has-background-background-color) &,
@@ -85,16 +85,16 @@
 		}
 
 		p {
-			font-size: 32px;
+			font-size: var(--quote--font-size-large);
 			font-style: var(--quote--font-style-large);
-			line-height: 43,2px;
+			line-height: var(--quote--line-height-large);
 		}
 
 		.wp-block-quote__citation,
 		cite,
 		footer {
-			font-size: 20px;
-			line-height: 30px;
+			font-size: var(--quote--font-sizes);
+			line-height: var(--quote--line-height);
 		}
 
 		&::before {
