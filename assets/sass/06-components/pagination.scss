@@ -23,7 +23,7 @@
 	}
 
 	.nav-links {
-		@include media(mobile) {
+		@include media(tablet) {
 			display: flex;
 			justify-content: center;
 			flex-wrap: wrap;
@@ -46,6 +46,17 @@
 		display: inline-block;
 		fill: currentColor;
 		vertical-align: middle;
+		position: relative;
+	}
+
+	.nav-previous .svg-icon,
+	.prev .svg-icon {
+		top: -2px;
+	}
+
+	.nav-next .svg-icon,
+	.next .svg-icon {
+		top: -1px;
 	}
 }
 
@@ -142,6 +153,24 @@
 
 		&.prev {
 			margin-right: auto;
+		}
+	}
+
+	@include media(tablet-only) {
+
+		.nav-links {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.page-numbers {
+			display: none;
+
+			&.prev,
+			&.next {
+				display: inline-block;
+				flex: 0 1 auto;
+			}
 		}
 	}
 }

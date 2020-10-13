@@ -32,3 +32,9 @@
 | @2ndkauboy | @kau-boy |
 | @JustinyAhin | @justinahinon |
 | @jdevalk | @joostdevalk |
+| @briceduclos | @bduclos |
+| @hareesh-pillai | @hareesh-pillai |
+| @mager19 | @mager19 |
+| @rolf-yoast | @rolfsiebers
+| @francescamarano | @francina |
+| @marybaum | @marybaum |

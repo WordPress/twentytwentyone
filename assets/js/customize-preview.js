@@ -39,8 +39,18 @@
 	api( 'background_color', function( value ) {
 		value.bind( function( to ) {
 			var lum = twentytwentyoneGetHexLum( to ),
-				textColor = 127 < lum ? '#000' : '#fff',
-				tableColor = 127 < lum ? 'var(--global--color-light-gray)' : 'var(--global--color-dark-gray)';
+				isDark = 127 > lum,
+				textColor = ! isDark ? 'var(--global--color-dark-gray)' : 'var(--global--color-light-gray)',
+				tableColor = ! isDark ? 'var(--global--color-light-gray)' : 'var(--global--color-dark-gray)';
+
+			// Modify the body class depending on whether this is a dark background or not.
+			if ( isDark ) {
+				if ( ! document.body.classList.contains( 'is-background-dark' ) ) {
+					document.body.classList.add( 'is-background-dark' );
+				}
+			} else {
+				document.body.classList.remove( 'is-background-dark' );
+			}
 
 			document.documentElement.style.setProperty( '--global--color-primary', textColor );
 			document.documentElement.style.setProperty( '--global--color-secondary', textColor );

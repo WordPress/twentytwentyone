@@ -10,6 +10,10 @@
 if ( ! function_exists( 'twenty_twenty_one_posted_on' ) ) {
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return void
 	 */
 	function twenty_twenty_one_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
@@ -38,6 +42,10 @@ if ( ! function_exists( 'twenty_twenty_one_posted_on' ) ) {
 if ( ! function_exists( 'twenty_twenty_one_posted_by' ) ) {
 	/**
 	 * Prints HTML with meta information about theme author.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return void
 	 */
 	function twenty_twenty_one_posted_by() {
 		printf(
@@ -53,6 +61,10 @@ if ( ! function_exists( 'twenty_twenty_one_posted_by' ) ) {
 if ( ! function_exists( 'twenty_twenty_one_comment_count' ) ) {
 	/**
 	 * Prints HTML with the comment count for the current post.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return void
 	 */
 	function twenty_twenty_one_comment_count() {
 		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
@@ -68,11 +80,20 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 * Footer entry meta is displayed differently in archives and single posts.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return void
 	 */
 	function twenty_twenty_one_entry_meta_footer() {
 
+		// Early exit if not a post.
+		if ( 'post' !== get_post_type() ) {
+			return;
+		}
+
 		// Hide meta information on pages.
-		if ( 'post' === get_post_type() && ! is_single() ) {
+		if ( ! is_single() ) {
 			// Posted on.
 			twenty_twenty_one_posted_on();
 
@@ -81,14 +102,14 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers. */
-						__( 'Edit<span class="screen-reader-text"> %s</span>', 'twentytwentyone' ),
+						__( 'Edit %s', 'twentytwentyone' ),
 						array(
 							'span' => array(
 								'class' => array(),
 							),
 						)
 					),
-					get_the_title()
+					'<span class="screen-reader-text">' . get_the_title() . '</span>'
 				),
 				'<span class="edit-link">',
 				'</span><br>'
@@ -98,9 +119,8 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 			$categories_list = get_the_category_list( __( ', ', 'twentytwentyone' ) );
 			if ( $categories_list ) {
 				printf(
-					/* translators: 1: posted in label, 2: list of categories. */
-					'<span class="cat-links">%1$s %2$s</span>',
-					esc_html__( 'Categorized as', 'twentytwentyone' ),
+					/* translators: %s: list of tags. */
+					'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . '</span>',
 					$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
 				);
 			}
@@ -109,13 +129,12 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 			$tags_list = get_the_tag_list( '', __( ', ', 'twentytwentyone' ) );
 			if ( $tags_list ) {
 				printf(
-					/* translators: 1: posted in label, 2: list of tags. */
-					'<span class="tags-links">%1$s %2$s</span>',
-					esc_html__( 'Tagged', 'twentytwentyone' ),
+					/* translators: %s: list of tags. */
+					'<span class="tags-links">' . esc_html__( 'Tagged %s', 'twentytwentyone' ) . '</span>',
 					$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
 				);
 			}
-		} elseif ( 'post' === get_post_type() && is_single() ) {
+		} elseif ( is_single() ) {
 			// Posted on.
 			twenty_twenty_one_posted_on();
 
@@ -123,9 +142,8 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 			$categories_list = get_the_category_list( __( ', ', 'twentytwentyone' ) );
 			if ( $categories_list ) {
 				printf(
-					/* translators: 1: posted in label, 2: list of categories. */
-					'<span class="cat-links">%1$s %2$s</span>',
-					esc_html__( 'Categorized as', 'twentytwentyone' ),
+					/* translators: %s: list of tags. */
+					'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . '</span>',
 					$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
 				);
 			}
@@ -135,14 +153,14 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers. */
-						__( 'Edit<span class="screen-reader-text"> %s</span>', 'twentytwentyone' ),
+						__( 'Edit %s', 'twentytwentyone' ),
 						array(
 							'span' => array(
 								'class' => array(),
 							),
 						)
 					),
-					get_the_title()
+					'<span class="screen-reader-text">' . get_the_title() . '</span>'
 				),
 				'<span class="edit-link">',
 				'</span>'
@@ -152,9 +170,8 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 			$tags_list = get_the_tag_list( '', __( ', ', 'twentytwentyone' ) );
 			if ( $tags_list ) {
 				printf(
-					/* translators: 1: posted in label, 2: list of tags. */
-					'<span class="tags-links">%1$s %2$s</span>',
-					esc_html__( 'Tagged', 'twentytwentyone' ),
+					/* translators: %s: list of tags. */
+					'<span class="tags-links">' . esc_html__( 'Tagged %s', 'twentytwentyone' ) . '</span>',
 					$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
 				);
 			}
@@ -168,22 +185,24 @@ if ( ! function_exists( 'twenty_twenty_one_post_thumbnail' ) ) {
 	 *
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return void
 	 */
 	function twenty_twenty_one_post_thumbnail() {
 		if ( ! twenty_twenty_one_can_show_post_thumbnail() ) {
 			return;
 		}
+		?>
 
-		if ( is_singular() ) :
-			?>
+		<?php if ( is_singular() ) : ?>
 
 			<figure class="post-thumbnail">
 				<?php the_post_thumbnail(); ?>
 			</figure><!-- .post-thumbnail -->
 
-			<?php
-		else :
-			?>
+		<?php else : ?>
 
 			<figure class="post-thumbnail">
 				<a class="post-thumbnail-inner alignwide" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
@@ -191,55 +210,34 @@ if ( ! function_exists( 'twenty_twenty_one_post_thumbnail' ) ) {
 				</a>
 			</figure>
 
-			<?php
-		endif; // End is_singular().
-	}
-}
-
-if ( ! function_exists( 'twenty_twenty_one_comment_avatar' ) ) {
-	/**
-	 * Returns the HTML markup to generate a user avatar.
-	 *
-	 * @param int|string $id_or_email The user-ID or email.
-	 *
-	 * @return string
-	 */
-	function twenty_twenty_one_get_user_avatar_markup( $id_or_email = null ) {
-		if ( ! isset( $id_or_email ) ) {
-			$id_or_email = get_current_user_id();
-		}
-		return sprintf(
-			'<div class="comment-user-avatar comment-author vcard">%s</div>',
-			get_avatar(
-				$id_or_email,
-				twenty_twenty_one_get_avatar_size()
-			)
-		);
+		<?php endif; ?>
+		<?php
 	}
 }
 
 if ( ! function_exists( 'twenty_twenty_one_the_posts_navigation' ) ) {
 	/**
 	 * Print the next and previous posts navigation.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return void
 	 */
 	function twenty_twenty_one_the_posts_navigation() {
 		the_posts_pagination(
 			array(
 				'mid_size'  => 2,
 				'prev_text' => sprintf(
-					/* Translators: Left arrow */
 					'%s <span class="nav-prev-text">%s</span>',
 					is_rtl() ? twenty_twenty_one_get_icon_svg( 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'arrow_left' ),
-					__( 'Older posts', 'twentytwentyone' )
+					esc_html__( 'Newer posts', 'twentytwentyone' )
 				),
 				'next_text' => sprintf(
-					/* Translators: Right arrow */
 					'<span class="nav-next-text">%s</span> %s',
-					__( 'Newer posts', 'twentytwentyone' ),
+					esc_html__( 'Older posts', 'twentytwentyone' ),
 					is_rtl() ? twenty_twenty_one_get_icon_svg( 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'arrow_right' )
 				),
 			)
 		);
 	}
 }
-

@@ -9,45 +9,59 @@
 
 if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 	/**
-	 * CUSTOMIZER SETTINGS
+	 * Customizer Settings.
+	 *
+	 * @since 1.0.0
 	 */
 	class Twenty_Twenty_One_Customize {
 
 		/**
+		 * Constructor. Instantiate the object.
+		 *
+		 * @access public
+		 *
+		 * @since 1.0.0
+		 */
+		public function __construct() {
+			add_action( 'customize_register', array( $this, 'register' ) );
+		}
+
+		/**
 		 * Register customizer options.
+		 *
+		 * @access public
+		 *
+		 * @since 1.0.0
 		 *
 		 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
 		 *
 		 * @return void
 		 */
-		public static function register( $wp_customize ) {
+		public function register( $wp_customize ) {
 
-			/**
-			 * Site Title & Description.
-			 * */
+			// Change site-title & description to postMessage.
 			$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage'; // @phpstan-ignore-line. We will assume that this setting exist.
 			$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage'; // @phpstan-ignore-line. We will assume that this setting exist.
 
+			// Add partial for blogname.
 			$wp_customize->selective_refresh->add_partial(
 				'blogname',
 				array(
 					'selector'        => '.site-title',
-					'render_callback' => 'twenty_twenty_one_customize_partial_blogname',
+					'render_callback' => array( $this, 'partial_blogname' ),
 				)
 			);
 
+			// Add partial for blogdescription.
 			$wp_customize->selective_refresh->add_partial(
 				'blogdescription',
 				array(
 					'selector'        => '.site-description',
-					'render_callback' => 'twenty_twenty_one_customize_partial_blogdescription',
+					'render_callback' => array( $this, 'partial_blogdescription' ),
 				)
 			);
 
-			/**
-			 * Site Identity
-			 */
-
+			// Add "display_title_and_tagline" setting for displaying the site-title & tagline.
 			$wp_customize->add_setting(
 				'display_title_and_tagline',
 				array(
@@ -57,12 +71,48 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 				)
 			);
 
+			// Add control for the "display_title_and_tagline" setting.
 			$wp_customize->add_control(
 				'display_title_and_tagline',
 				array(
 					'type'    => 'checkbox',
 					'section' => 'title_tagline',
-					'label'   => __( 'Display Site Title & Tagline', 'twentytwentyone' ),
+					'label'   => esc_html__( 'Display Site Title & Tagline', 'twentytwentyone' ),
+				)
+			);
+
+			/**
+			 * Add excerpt or full text selector to customizer
+			 */
+			$wp_customize->add_section(
+				'theme_settings',
+				array(
+					'title'    => esc_html__( 'Theme settings', 'twentytwentyone' ),
+					'priority' => 30,
+				)
+			);
+
+			$wp_customize->add_setting(
+				'display_excerpt_or_full_post',
+				array(
+					'capability'        => 'edit_theme_options',
+					'default'           => 'excerpt',
+					'sanitize_callback' => function( $value ) {
+						return 'excerpt' === $value || 'full' === $value ? $value : 'excerpt';
+					},
+				)
+			);
+
+			$wp_customize->add_control(
+				'display_excerpt_or_full_post',
+				array(
+					'type'    => 'radio',
+					'section' => 'theme_settings',
+					'label'   => esc_html__( 'On the Posts page, post show:', 'twentytwentyone' ),
+					'choices' => array(
+						'excerpt' => esc_html__( 'Excerpt', 'twentytwentyone' ),
+						'full'    => esc_html__( 'Full text', 'twentytwentyone' ),
+					),
 				)
 			);
 
@@ -96,44 +146,47 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 					)
 				)
 			);
-
 		}
 
 		/**
 		 * Sanitize boolean for checkbox.
 		 *
+		 * @access public
+		 *
+		 * @since 1.0.0
+		 *
 		 * @param bool $checked Whether or not a box is checked.
+		 *
 		 * @return bool
 		 */
 		public static function sanitize_checkbox( $checked = null ) {
-			return ( ( isset( $checked ) && true === $checked ) ? true : false );
+			return (bool) isset( $checked ) && true === $checked;
 		}
 
-	}
+		/**
+		 * Render the site title for the selective refresh partial.
+		 *
+		 * @access public
+		 *
+		 * @since 1.0.0
+		 *
+		 * @return void
+		 */
+		public function partial_blogname() {
+			bloginfo( 'name' );
+		}
 
-	// Setup the Theme Customizer settings and controls.
-	add_action( 'customize_register', array( 'Twenty_Twenty_One_Customize', 'register' ) );
-
-}
-
-if ( ! function_exists( 'twenty_twenty_one_customize_partial_blogname' ) ) {
-	/**
-	 * Render the site title for the selective refresh partial.
-	 *
-	 * @return void
-	 */
-	function twenty_twenty_one_customize_partial_blogname() {
-		bloginfo( 'name' );
-	}
-}
-
-if ( ! function_exists( 'twenty_twenty_one_customize_partial_blogdescription' ) ) {
-	/**
-	 * Render the site tagline for the selective refresh partial.
-	 *
-	 * @return void
-	 */
-	function twenty_twenty_one_customize_partial_blogdescription() {
-		bloginfo( 'description' );
+		/**
+		 * Render the site tagline for the selective refresh partial.
+		 *
+		 * @access public
+		 *
+		 * @since 1.0.0
+		 *
+		 * @return void
+		 */
+		public function partial_blogdescription() {
+			bloginfo( 'description' );
+		}
 	}
 }
