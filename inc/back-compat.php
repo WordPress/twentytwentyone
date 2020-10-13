@@ -12,22 +12,6 @@
  */
 
 /**
- * Prevent switching to the theme on old versions of WordPress.
- *
- * Switches to the default theme.
- *
- * @since 1.0.0
- *
- * @return void
- */
-function twenty_twenty_one_switch_theme() {
-	switch_theme( WP_DEFAULT_THEME );
-	unset( $_GET['activated'] ); // phpcs:ignore WordPress.Security.NonceVerification
-	add_action( 'admin_notices', 'twenty_twenty_one_upgrade_notice' );
-}
-add_action( 'after_switch_theme', 'twenty_twenty_one_switch_theme' );
-
-/**
  * Adds a message for unsuccessful theme switch.
  *
  * Prints an update nag after an unsuccessful attempt to switch to
