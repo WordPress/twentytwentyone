@@ -157,11 +157,6 @@ h1.entry-title {
 	padding-top: var(--global--spacing-unit);
 	padding-bottom: calc(3 * var(--global--spacing-vertical));
 	border-bottom: var(--separator--height) solid var(--separator--border-color);
-
-	.post-taxonomies > span {
-		margin-right: calc(0.5 * var(--global--spacing-unit));
-
-	}
 }
 
 body:not(.single) .site-main > article:last-of-type .entry-footer {
@@ -191,7 +186,6 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 		.cat-links,
 		.tags-links {
-			margin-right: 0;
 			display: block;
 		}
 	}
@@ -203,9 +197,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 			.cat-links,
 			.tags-links {
-				margin-right: calc(0.5 * var(--global--spacing-unit));
 				text-align: left;
-				display: inline;
 			}
 		}
 	}
