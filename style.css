@@ -3229,7 +3229,8 @@ nav a {
 		align-items: flex-start;
 	}
 	.site-header.has-logo.has-title-and-tagline .site-branding {
-		margin-right: var(--global--spacing-horizontal);
+		margin-right: 0;
+		max-width: calc(100% - 160px);
 	}
 	body:not(.primary-navigation-open) .site-header.has-logo.has-title-and-tagline:after {
 		display: none;
@@ -3240,6 +3241,8 @@ nav a {
 	}
 	body:not(.primary-navigation-open) .site-header.has-logo.has-title-and-tagline .menu-button-container {
 		position: relative;
+		padding-top: 0;
+		margin-top: calc(0px - var(--button--padding-vertical) + (0.25 * var(--global--spacing-unit)));
 	}
 	body:not(.primary-navigation-open) .site-header.has-logo.has-title-and-tagline .menu-button-container #primary-mobile-menu {
 		margin-right: 0;
