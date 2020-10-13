@@ -2360,62 +2360,6 @@ a:hover {
 	/* Block Styles */
 }
 
-.wp-block-cover p:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover h1:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover h2:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover h3:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover h4:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover h5:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover h6:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover-image p:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover-image h1:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover-image h2:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover-image h3:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover-image h4:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover-image h5:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover-image h6:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
 .wp-block-cover .wp-block-cover__inner-container {
 	color: currentColor;
 	margin-top: 30px;
@@ -2486,27 +2430,27 @@ a:hover {
 }
 
 .wp-block-cover:not([class*="background-color"]) .wp-block-cover__inner-container {
-	color: #000;
+	color: #fff;
 }
 
 .wp-block-cover:not([class*="background-color"]) .wp-block-cover-image-text {
-	color: #000;
+	color: #fff;
 }
 
 .wp-block-cover:not([class*="background-color"]) .wp-block-cover-text {
-	color: #000;
+	color: #fff;
 }
 
 .wp-block-cover-image:not([class*="background-color"]) .wp-block-cover__inner-container {
-	color: #000;
+	color: #fff;
 }
 
 .wp-block-cover-image:not([class*="background-color"]) .wp-block-cover-image-text {
-	color: #000;
+	color: #fff;
 }
 
 .wp-block-cover-image:not([class*="background-color"]) .wp-block-cover-text {
-	color: #000;
+	color: #fff;
 }
 
 .wp-block-cover h2 {
@@ -5017,6 +4961,30 @@ h1.page-title {
 .page-header {
 	border-bottom: 3px solid #28303d;
 	padding-bottom: 60px;
+}
+
+.archive .content-area .format-aside .entry-content {
+	font-size: 1.5rem;
+}
+
+.archive .content-area .format-status .entry-content {
+	font-size: 1.5rem;
+}
+
+.archive .content-area .format-link .entry-content {
+	font-size: 1.5rem;
+}
+
+.search .content-area .format-aside .entry-content {
+	font-size: 1.5rem;
+}
+
+.search .content-area .format-status .entry-content {
+	font-size: 1.5rem;
+}
+
+.search .content-area .format-link .entry-content {
+	font-size: 1.5rem;
 }
 
 .error404 main p {
