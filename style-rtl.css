@@ -3539,6 +3539,15 @@ h1.page-title {
 	padding-bottom: calc(2 * var(--global--spacing-vertical));
 }
 
+.archive .content-area .format-aside .entry-content,
+.archive .content-area .format-status .entry-content,
+.archive .content-area .format-link .entry-content,
+.search .content-area .format-aside .entry-content,
+.search .content-area .format-status .entry-content,
+.search .content-area .format-link .entry-content {
+	font-size: var(--global--font-size-lg);
+}
+
 .error404 main p {
 	font-size: var(--global--font-size-lg);
 	margin-bottom: calc(var(--global--spacing-vertical) * 1.6666666667);
