@@ -13,7 +13,7 @@
 	line-height: var(--global--line-height-body);
 	border-top: 3px solid var(--global--color-border);
 	padding-top: var(--global--spacing-vertical);
-	margin-top: calc(2 * var(--global--spacing-vertical));
+	margin-top: var(--global--spacing-vertical);
 
 	.site-name {
 		text-transform: var(--branding--title--text-transform);

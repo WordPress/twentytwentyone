@@ -22,11 +22,7 @@ if ( have_posts() ) {
 	while ( have_posts() ) {
 		the_post();
 
-		if ( 'excerpt' === get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) ) {
-			get_template_part( 'template-parts/content/content-excerpt', get_post_format() );
-		} else {
-			get_template_part( 'template-parts/content/content' );
-		}
+		get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) );
 	}
 
 	// Previous/next page navigation.

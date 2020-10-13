@@ -79,6 +79,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
  * 404..................404 styles.
  * Search...............Search styles.
  * Navigation...........Navigation styles.
+ * Footer Navigation....Footer Navigation styles.
  * Pagination...........Pagination styles.
  * Single...............Single page and post styles.
  * Posts and pages......Misc, sticky post styles.
@@ -3237,7 +3238,7 @@ nav a {
 	line-height: var(--global--line-height-body);
 	border-top: 3px solid var(--global--color-border);
 	padding-top: var(--global--spacing-vertical);
-	margin-top: calc(2 * var(--global--spacing-vertical));
+	margin-top: var(--global--spacing-vertical);
 }
 
 .site-footer > .site-info .site-name {
@@ -4239,6 +4240,47 @@ h1.page-title {
 		max-width: 100%;
 		width: 100%;
 	}
+}
+
+.footer-navigation {
+	font-size: var(--global--font-size-xs);
+	margin-top: calc(2 * var(--global--spacing-vertical));
+}
+
+.footer-navigation-wrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	list-style: none;
+	padding-left: 0;
+}
+
+.footer-navigation-wrapper li {
+	display: inline;
+	line-height: 3;
+}
+
+.footer-navigation-wrapper li a {
+	padding: calc(1.25 * var(--primary-nav--padding)) var(--primary-nav--padding);
+	transition: transform 0.1s ease;
+}
+
+.footer-navigation-wrapper li a:hover {
+	text-decoration: underline;
+	text-decoration-style: dotted;
+	text-decoration-skip-ink: none;
+}
+
+.footer-navigation-wrapper li svg {
+	vertical-align: middle;
+}
+
+.footer-navigation-wrapper li svg:hover {
+	transform: scale(1.1);
+}
+
+.footer-navigation-wrapper .sub-menu-toggle {
+	display: none;
 }
 
 /* Next/Previous navigation */

@@ -58,6 +58,7 @@
 		"assets/sass/06-components/search.scss",
 		"assets/sass/06-components/comments.scss",
 		"assets/sass/06-components/navigation.scss",
+		"assets/sass/06-components/footer-navigation.scss",
 		"assets/sass/06-components/pagination.scss",
 		"assets/sass/06-components/widgets.scss",
 		"assets/sass/07-utilities/a11y.scss",
