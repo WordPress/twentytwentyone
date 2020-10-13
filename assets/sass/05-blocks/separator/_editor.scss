@@ -8,8 +8,12 @@ hr {
 		border-right-color: var(--separator--border-color);
 	}
 
+	&:not(.is-style-wide):not(.is-style-dots) {
+		max-width: var(--separator--width);
+	}
+
 	&.is-style-wide {
-		border-bottom-width: var(--separator--height);
+		border-bottom-width: calc(3 * var(--separator--height));
 	}
 
 	&.is-style-dots {

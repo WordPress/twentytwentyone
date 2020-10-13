@@ -15,3 +15,19 @@ h1.page-title {
 	border-bottom: 3px solid var(--global--color-border);
 	padding-bottom: calc(2 * var(--global--spacing-vertical));
 }
+
+.archive,
+.search {
+
+	.content-area {
+
+		.format-aside,
+		.format-status,
+		.format-link {
+
+			.entry-content {
+				font-size: var(--global--font-size-lg);
+			}
+		}
+	}
+}
