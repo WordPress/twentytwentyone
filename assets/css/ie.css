@@ -4527,6 +4527,7 @@ nav a {
 	width: 100%;
 	padding-bottom: 45px;
 	border-bottom: 1px solid;
+	text-align: center;
 }
 
 .site-logo .custom-logo {
@@ -4535,6 +4536,7 @@ nav a {
 	max-width: 96px;
 	max-height: 96px;
 	height: auto;
+	display: inline-block;
 	width: auto;
 }
 
