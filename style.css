@@ -3247,6 +3247,10 @@ nav a {
 	body:not(.primary-navigation-open) .site-header.has-logo.has-title-and-tagline .menu-button-container #primary-mobile-menu {
 		margin-right: 0;
 	}
+	.site-header:not(.has-logo).has-title-and-tagline .site-branding {
+		margin-right: 0;
+		max-width: calc(100% - 160px);
+	}
 }
 
 .site-footer {
