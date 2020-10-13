@@ -4227,7 +4227,6 @@ h1.page-title {
 .footer-navigation {
 	font-size: var(--global--font-size-xs);
 	margin-top: calc(2 * var(--global--spacing-vertical));
-	text-align: center;
 }
 
 .footer-navigation-wrapper {
