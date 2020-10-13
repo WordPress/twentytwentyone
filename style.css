@@ -4261,6 +4261,17 @@ h1.page-title {
 	display: inline-block;
 	fill: currentColor;
 	vertical-align: middle;
+	position: relative;
+}
+
+.navigation .nav-previous .svg-icon,
+.navigation .prev .svg-icon {
+	top: -3px;
+}
+
+.navigation .nav-next .svg-icon,
+.navigation .next .svg-icon {
+	top: -1px;
 }
 
 .post-navigation {
