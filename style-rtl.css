@@ -3139,7 +3139,6 @@ table.wp-calendar-table caption {
 }
 
 .site-title a {
-	border-bottom: none;
 	color: currentColor;
 	font-weight: var(--branding--title--font-weight);
 }
@@ -3241,7 +3240,6 @@ a.custom-logo-link {
 
 .site-footer > .site-info a {
 	color: currentColor;
-	border-bottom: none;
 }
 
 .site-footer > .site-info a:link, .site-footer > .site-info a:visited, .site-footer > .site-info a:active {
@@ -3753,7 +3751,6 @@ h1.page-title {
 }
 
 .comment-author .url {
-	border-bottom: none;
 	color: currentColor;
 }
 
