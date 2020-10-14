@@ -451,8 +451,8 @@ function twenty_twenty_one_print_first_instance_of_block( $block_name, $content 
  */
 function twenty_twenty_one_password_form( $post = 0 ) {
 	$post   = get_post( $post );
-	$label  = 'pwbox-' . ( empty( $post->ID ) ? rand() : $post->ID );
-	$output = '<p>' . __(  'This content is password protected. To view it please enter your password below:', 'twentytwentyone') . '</p>
+	$label  = 'pwbox-' . ( empty( $post->ID ) ? wp_rand() : $post->ID );
+	$output = '<p>' . __( 'This content is password protected. To view it please enter your password below:', 'twentytwentyone' ) . '</p>
 	<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" class="post-password-form" method="post">
 	<label class="post-password-form__label" for="' . $label . '">' . __( 'Password:', 'twentytwentyone' ) . '</label><input class="post-password-form__input" name="post_password" id="' . $label . '" type="password" size="20" /><input type="submit" name="Submit" value="' . esc_attr_x( 'Enter', 'post password form', 'twentytwentyone' ) . '" /></form>
 	';
