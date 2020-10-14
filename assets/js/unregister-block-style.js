@@ -1,6 +1,6 @@
 /**
  * Unregister "Wide" Separator Style
  */
-wp.domReady( () => {
+wp.domReady( function() => {
 	wp.blocks.unregisterBlockStyle( 'core/separator', 'wide' );
 } );
