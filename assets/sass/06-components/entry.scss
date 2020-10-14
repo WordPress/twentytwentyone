@@ -8,8 +8,11 @@
 
 	a {
 		color: var(--entry-header--color-link);
+		text-decoration: none;
 
 		&:hover {
+			text-decoration: underline dotted;
+			text-decoration-thickness: 1px;
 			color: var(--entry-header--color-hover);
 		}
 
@@ -18,6 +21,8 @@
 		}
 
 		&:active {
+			text-decoration: underline dotted;
+			text-decoration-thickness: 1px;
 			color: var(--entry-header--color-link);
 		}
 	}
