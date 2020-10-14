@@ -9,11 +9,11 @@ hr {
 		border-right-color: var(--separator--border-color);
 	}
 
-	&:not(.is-style-wide):not(.is-style-dots) {
+	&:not(.is-style-dots) {
 		max-width: inherit;
 	}
 
-	&.is-style-wide {
+	&.is-style-twentytwentyone-separator-thick {
 		border-bottom-width: calc(3 * var(--separator--height));
 	}
 

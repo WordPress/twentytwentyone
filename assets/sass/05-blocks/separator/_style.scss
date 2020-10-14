@@ -8,7 +8,7 @@ hr {
 	&.wp-block-separator {
 		border-bottom: var(--separator--height) solid var(--separator--border-color);
 
-		&:not(.is-style-wide):not(.is-style-dots):not(.alignwide) {
+		&:not(.is-style-dots):not(.alignwide) {
 			max-width: var(--responsive--aligndefault-width);
 
 			&.alignfull {
@@ -19,16 +19,8 @@ hr {
 		/**
 		 * Block Options
 		 */
-		&.is-style-wide {
+		&.is-style-twentytwentyone-separator-thick {
 			border-bottom-width: calc(3 * var(--separator--height));
-
-			&:not(.alignwide) {
-				@extend %responsive-aligndefault-width;
-			}
-
-			&.alignfull {
-				max-width: var(--responsive--alignfull-width);
-			}
 		}
 
 		&.is-style-dots {

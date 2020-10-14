@@ -787,7 +787,7 @@ template {
 /**
  * Extends
  */
-.default-max-width, hr.wp-block-separator.is-style-wide:not(.alignwide), .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce),
+.default-max-width, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce),
 *[class*="inner-container"] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce), .entry-content .wp-audio-shortcode, .post-thumbnail {
 	max-width: var(--responsive--aligndefault-width);
 	margin-right: auto;
@@ -2756,20 +2756,16 @@ hr.wp-block-separator {
 		 */
 }
 
-hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignwide) {
+hr.wp-block-separator:not(.is-style-dots):not(.alignwide) {
 	max-width: var(--responsive--aligndefault-width);
 }
 
-hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignwide).alignfull {
+hr.wp-block-separator:not(.is-style-dots):not(.alignwide).alignfull {
 	max-width: var(--responsive--alignfull-width);
 }
 
-hr.wp-block-separator.is-style-wide {
+hr.wp-block-separator.is-style-twentytwentyone-separator-thick {
 	border-bottom-width: calc(3 * var(--separator--height));
-}
-
-hr.wp-block-separator.is-style-wide.alignfull {
-	max-width: var(--responsive--alignfull-width);
 }
 
 hr.wp-block-separator.is-style-dots.has-background, hr.wp-block-separator.is-style-dots.has-text-color {

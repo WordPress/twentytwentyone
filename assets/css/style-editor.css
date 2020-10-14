@@ -1385,13 +1385,13 @@ hr[style*="text-align: right"] {
 	border-right-color: var(--separator--border-color);
 }
 
-.wp-block-separator:not(.is-style-wide):not(.is-style-dots),
-hr:not(.is-style-wide):not(.is-style-dots) {
+.wp-block-separator:not(.is-style-dots),
+hr:not(.is-style-dots) {
 	max-width: inherit;
 }
 
-.wp-block-separator.is-style-wide,
-hr.is-style-wide {
+.wp-block-separator.is-style-twentytwentyone-separator-thick,
+hr.is-style-twentytwentyone-separator-thick {
 	border-bottom-width: calc(3 * var(--separator--height));
 }
 
