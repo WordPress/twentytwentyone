@@ -26,7 +26,6 @@
  * @return string Nav menu item start element.
  */
 function twenty_twenty_one_add_sub_menu_toggle( $output, $item, $depth, $args ) {
-
 	if ( 0 === $depth && in_array( 'menu-item-has-children', $item->classes, true ) ) {
 
 		// Add toggle button.
@@ -76,3 +75,23 @@ function twenty_twenty_one_nav_menu_social_icons( $item_output, $item, $depth, $
 }
 
 add_filter( 'walker_nav_menu_start_el', 'twenty_twenty_one_nav_menu_social_icons', 10, 4 );
+
+/**
+ * Filters the arguments for a single nav menu item.
+ *
+ * @since 1.0.0
+ *
+ * @param stdClass $args  An object of wp_nav_menu() arguments.
+ * @param WP_Post  $item  Menu item data object.
+ * @param int      $depth Depth of menu item. Used for padding.
+ *
+ * @return stdClass
+ */
+function twenty_twenty_one_add_menu_description_args( $args, $item, $depth ) {
+	$args->link_after = '';
+	if ( 0 === $depth && isset( $item->description ) && $item->description ) {
+		$args->link_after = '<span class="menu-item-description">' . $item->description . '</span>';
+	}
+	return $args;
+}
+add_filter( 'nav_menu_item_args', 'twenty_twenty_one_add_menu_description_args', 10, 3 );

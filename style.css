@@ -4112,7 +4112,6 @@ h1.page-title {
 	}
 	.primary-navigation .primary-menu-container > ul > .menu-item {
 		display: flex;
-		align-items: center;
 	}
 	.primary-navigation .primary-menu-container > ul > .menu-item > a {
 		padding-left: var(--primary-nav--padding);
@@ -4216,6 +4215,14 @@ h1.page-title {
 	.primary-navigation .menu-item-has-children .sub-menu .svg-icon {
 		display: none;
 	}
+}
+
+.primary-navigation .menu-item-description {
+	display: block;
+	clear: both;
+	font-size: var(--global--font-size-xs);
+	text-transform: none;
+	line-height: 1.7;
 }
 
 @media only screen and (max-width: 481px) {
