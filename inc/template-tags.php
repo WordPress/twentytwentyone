@@ -190,10 +190,9 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				$categories_list = get_the_category_list( __( ', ', 'twentytwentyone' ) );
 				if ( $categories_list ) {
 					printf(
-						/* translators: 1: posted in label, 2: list of categories. */
-						'<span class="cat-links">%1$s %2$s </span>',
-						esc_html__( 'Categorized as', 'twentytwentyone' ),
-						$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
+						/* translators: %s: list of categories. */
+						'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . '</span>',
+						$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
 					);
 				}
 
