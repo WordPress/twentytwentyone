@@ -4,16 +4,15 @@
 
 	&__label {
 		width: 100%;
+		margin-bottom: 0;
 	}
 
 	&__input {
-		margin-right: calc(0.66 * var(--global--spacing-horizontal));
+		margin-top: calc(var(--global--spacing-vertical) / 3);
+		margin-right: calc(-1 * var(--button--border-width));
 	}
 
-	@include media( mobile-only ) {
-
-		&__input {
-			width: 50%;
-		}
+	&__submit {
+		margin-top: calc(var(--global--spacing-vertical) / 3);
 	}
 }
