@@ -1928,36 +1928,9 @@ hr[style*="text-align: right"] {
 	border-right-color: #28303d;
 }
 
-.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
-	max-width: calc(100vw - 30px);
-}
-
-@media only screen and (min-width: 482px){
-	.wp-block-separator:not(.is-style-wide):not(.is-style-dots){
-	max-width: min(calc(100vw - 100px), 610px);
-	}
-}
-
-@media only screen and (min-width: 822px){
-	.wp-block-separator:not(.is-style-wide):not(.is-style-dots){
-	max-width: min(calc(100vw - 200px), 610px);
-	}
-}
-
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots),
 hr:not(.is-style-wide):not(.is-style-dots) {
-	max-width: calc(100vw - 30px);
-}
-
-@media only screen and (min-width: 482px){
-	hr:not(.is-style-wide):not(.is-style-dots){
-	max-width: min(calc(100vw - 100px), 610px);
-	}
-}
-
-@media only screen and (min-width: 822px){
-	hr:not(.is-style-wide):not(.is-style-dots){
-	max-width: min(calc(100vw - 200px), 610px);
-	}
+	max-width: inherit;
 }
 
 .wp-block-separator.is-style-wide {

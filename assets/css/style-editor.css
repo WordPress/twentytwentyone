@@ -1403,7 +1403,7 @@ hr[style*="text-align: right"] {
 
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots),
 hr:not(.is-style-wide):not(.is-style-dots) {
-	max-width: var(--responsive--aligndefault-width);
+	max-width: inherit;
 }
 
 .wp-block-separator.is-style-wide,
