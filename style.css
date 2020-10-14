@@ -494,7 +494,7 @@ abbr[title] {
 	/* 1 */
 	text-decoration: underline;
 	/* 2 */
-	text-decoration: underline dotted;
+	text-decoration-style: dotted;
 	/* 2 */
 }
 
@@ -4153,7 +4153,8 @@ h1.page-title {
 }
 
 .primary-navigation a:hover {
-	text-decoration: underline dotted;
+	text-decoration: underline;
+	text-decoration-style: dotted;
 }
 
 .primary-navigation a:focus {
@@ -4164,12 +4165,14 @@ h1.page-title {
 
 .primary-navigation .current-menu-item > a:first-child,
 .primary-navigation .current_page_item > a:first-child {
-	text-decoration: underline solid;
+	text-decoration: underline;
+	text-decoration-style: solid;
 }
 
 .primary-navigation .current-menu-item > a:first-child:hover,
 .primary-navigation .current_page_item > a:first-child:hover {
-	text-decoration: underline dotted;
+	text-decoration: underline;
+	text-decoration-style: dotted;
 }
 
 .primary-navigation .sub-menu {
@@ -4494,7 +4497,9 @@ h1.page-title {
 }
 
 .widget-area a {
-	text-decoration: underline solid currentColor;
+	text-decoration: underline;
+	text-decoration-style: solid;
+	text-decoration-color: currentColor;
 }
 
 .widget-area a:hover {
