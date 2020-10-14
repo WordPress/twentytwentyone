@@ -3,6 +3,18 @@
 	margin: var(--global--spacing-vertical) 0;
 	padding-left: var(--global--spacing-horizontal);
 
+	&::before {
+		color: currentColor;
+		content: "\201C";
+		display: block;
+		font-size: 3rem;
+		font-weight: 700;
+		line-height: 1;
+		position: absolute;
+		top: 4px;
+		left: -20px;
+	}
+
 	p {
 		color: var(--global--color-primary);
 		font-family: var(--quote--font-family);
@@ -19,6 +31,10 @@
 		line-height: var(--quote--line-height);
 		font-weight: 500;
 		text-transform: none;
+
+		&::before {
+			content: "-\00a0";
+		}
 
 
 		.has-background:not(.has-background-background-color) &,
@@ -46,6 +62,13 @@
 		.wp-block-quote__citation {
 			font-size: var(--quote--font-size);
 			line-height: var(--quote--line-height);
+		}
+
+		&::before {
+			font-size: 5rem;
+			position: absolute;
+			top: 2px;
+			left: -20px;
 		}
 	}
 }

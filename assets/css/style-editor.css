@@ -1181,6 +1181,18 @@ p.has-background {
 	padding-left: var(--global--spacing-horizontal);
 }
 
+.wp-block-quote::before {
+	color: currentColor;
+	content: "\201C";
+	display: block;
+	font-size: 3rem;
+	font-weight: 700;
+	line-height: 1;
+	position: absolute;
+	top: 4px;
+	left: -20px;
+}
+
 .wp-block-quote p {
 	color: var(--global--color-primary);
 	font-family: var(--quote--font-family);
@@ -1197,6 +1209,10 @@ p.has-background {
 	line-height: var(--quote--line-height);
 	font-weight: 500;
 	text-transform: none;
+}
+
+.wp-block-quote .wp-block-quote__citation::before {
+	content: "-\00a0";
 }
 
 .has-background:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
@@ -1222,6 +1238,13 @@ p.has-background {
 .wp-block-quote.is-large .wp-block-quote__citation, .wp-block-quote.is-style-large .wp-block-quote__citation {
 	font-size: var(--quote--font-size);
 	line-height: var(--quote--line-height);
+}
+
+.wp-block-quote.is-large::before, .wp-block-quote.is-style-large::before {
+	font-size: 5rem;
+	position: absolute;
+	top: 2px;
+	left: -20px;
 }
 
 .wp-block-rss {
