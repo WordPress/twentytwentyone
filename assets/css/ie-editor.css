@@ -1608,7 +1608,7 @@ p.has-background {
 .wp-block-quote {
 	border-left-color: #39414d;
 	border-left-width: 1px;
-	margin: 30px 0;
+	margin: 30px auto;
 	padding-left: 25px;
 }
 
