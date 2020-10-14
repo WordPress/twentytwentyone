@@ -466,6 +466,12 @@
 
 // Close button animation for when a custom logo is present.
 @keyframes twentytwentyone-close-button-transition {
-	from { opacity: 0; }
-	to { opacity: 1; }
+
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }
