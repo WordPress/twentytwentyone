@@ -2075,6 +2075,7 @@ a {
 	cursor: pointer;
 	color: #28303d;
 	text-underline-offset: 3px;
+	text-decoration-skip-ink: all;
 }
 
 a:hover {
@@ -6111,16 +6112,19 @@ h1.page-title {
 
 .search-form > label {
 	width: 100%;
+	margin-bottom: 0;
 	font-weight: 500;
 }
 
 .search-form .search-field {
 	flex-grow: 1;
 	max-width: inherit;
+	margin-top: 10px;
 	margin-right: 17px;
 }
 
 .search-form .search-submit {
+	margin-top: 10px;
 	margin-left: 10px;
 }
 
@@ -6159,7 +6163,7 @@ h1.page-title {
 	word-break: normal;
 }
 
-.screen-reader-text:focus {
+.skip-link:focus {
 	background-color: #f1f1f1;
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -6171,7 +6175,7 @@ h1.page-title {
 	font-size: 0.875rem;
 	font-weight: 700;
 	height: auto;
-	right: 5px;
+	left: 5px;
 	line-height: normal;
 	padding: 15px 23px 14px;
 	text-decoration: none;
