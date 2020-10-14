@@ -328,6 +328,7 @@
 		font-size: var(--primary-nav--font-size-mobile);
 		font-weight: var(--primary-nav--font-weight);
 		padding: var(--primary-nav--padding) 0;
+		text-decoration: none;
 
 		@include media(mobile) {
 			display: block;

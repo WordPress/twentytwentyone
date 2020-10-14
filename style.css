@@ -3174,9 +3174,7 @@ table.wp-calendar-table caption {
 	line-height: 1.4;
 }
 
-a.custom-logo-link,
-nav a {
-	border-bottom: 1px solid transparent;
+a.custom-logo-link {
 	text-decoration: none;
 }
 
@@ -4128,6 +4126,7 @@ h1.page-title {
 	font-size: var(--primary-nav--font-size-mobile);
 	font-weight: var(--primary-nav--font-weight);
 	padding: var(--primary-nav--padding) 0;
+	text-decoration: none;
 }
 
 @media only screen and (min-width: 482px) {
@@ -4281,11 +4280,12 @@ h1.page-title {
 
 .navigation a {
 	color: var(--global--color-primary);
+	text-decoration: none;
 }
 
 .navigation a:hover {
 	color: var(--global--color-primary-hover);
-	border-color: var(--global--color-secondary);
+	text-decoration: underline;
 }
 
 .navigation a:focus {

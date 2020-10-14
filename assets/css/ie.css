@@ -4518,9 +4518,7 @@ table.wp-calendar-table caption {
 	line-height: 1.4;
 }
 
-a.custom-logo-link,
-nav a {
-	border-bottom: 1px solid transparent;
+a.custom-logo-link {
 	text-decoration: none;
 }
 
@@ -5610,6 +5608,7 @@ h1.page-title {
 	font-size: 1.25rem;
 	font-weight: normal;
 	padding: 13px 0;
+	text-decoration: none;
 }
 
 @media only screen and (min-width: 482px) {
@@ -5771,11 +5770,12 @@ h1.page-title {
 
 .navigation a {
 	color: #28303d;
+	text-decoration: none;
 }
 
 .navigation a:hover {
 	color: #28303d;
-	border-color: #39414d;
+	text-decoration: underline;
 }
 
 .navigation a:focus {
