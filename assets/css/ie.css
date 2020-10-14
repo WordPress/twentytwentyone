@@ -448,7 +448,6 @@ pre {
 a {
 	background-color: transparent;
 	text-decoration-thickness: 1px;
-	text-decoration-skip-ink: all;
 }
 
 /**
@@ -2076,6 +2075,7 @@ a {
 	cursor: pointer;
 	color: #28303d;
 	text-underline-offset: 3px;
+	text-decoration-skip-ink: all;
 }
 
 a:hover {
