@@ -106,7 +106,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_tag() ) {
 		return sprintf(
-			/* Translators: %s: The term title. */
+		/* Translators: %s: The term title. */
 			esc_html__( 'Tag Archives: %s', 'twentytwentyone' ),
 			'<span class="page-description">' . single_term_title( '', false ) . '</span>'
 		);
@@ -114,7 +114,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_author() ) {
 		return sprintf(
-			/* Translators: %s: The author name. */
+		/* Translators: %s: The author name. */
 			esc_html__( 'Author Archives: %s', 'twentytwentyone' ),
 			'<span class="page-description">' . get_the_author_meta( 'display_name' ) . '</span>'
 		);
@@ -122,7 +122,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_year() ) {
 		return sprintf(
-			/* Translators: %s: The year. */
+		/* Translators: %s: The year. */
 			esc_html__( 'Yearly Archives: %s', 'twentytwentyone' ),
 			'<span class="page-description">' . get_the_date( _x( 'Y', 'yearly archives date format', 'twentytwentyone' ) ) . '</span>'
 		);
@@ -130,7 +130,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_month() ) {
 		return sprintf(
-			/* Translators: %s: The month. */
+		/* Translators: %s: The month. */
 			esc_html__( 'Monthly Archives: %s', 'twentytwentyone' ),
 			'<span class="page-description">' . get_the_date( _x( 'F Y', 'monthly archives date format', 'twentytwentyone' ) ) . '</span>'
 		);
@@ -138,7 +138,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_day() ) {
 		return sprintf(
-			/* Translators: %s: The day. */
+		/* Translators: %s: The day. */
 			esc_html__( 'Daily Archives: %s', 'twentytwentyone' ),
 			'<span class="page-description">' . get_the_date() . '</span>'
 		);
@@ -146,7 +146,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_post_type_archive() ) {
 		return sprintf(
-			/* translators: %s: Post type singular name */
+		/* translators: %s: Post type singular name */
 			esc_html__( '%s Archives', 'twentytwentyone' ),
 			get_post_type_object( get_queried_object()->name )->labels->singular_name
 		);
@@ -154,7 +154,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_tax() ) {
 		return sprintf(
-			/* translators: %s: Taxonomy singular name */
+		/* translators: %s: Taxonomy singular name */
 			esc_html__( '%s Archives', 'twentytwentyone' ),
 			get_taxonomy( get_queried_object()->taxonomy )->labels->singular_name
 		);
@@ -206,7 +206,6 @@ function twenty_twenty_one_continue_reading_text() {
  * Create the continue reading link for excerpt.
  */
 function twenty_twenty_one_continue_reading_link_excerpt() {
-
 	if ( ! is_admin() ) {
 		return '&hellip; <a class="more-link" href="' . esc_url( get_permalink() ) . '">' . twenty_twenty_one_continue_reading_text() . '</a>';
 	}
@@ -219,7 +218,6 @@ add_filter( 'excerpt_more', 'twenty_twenty_one_continue_reading_link_excerpt' );
  * Create the continue reading link.
  */
 function twenty_twenty_one_continue_reading_link() {
-
 	if ( ! is_admin() ) {
 		return '<div class="more-link-container"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . twenty_twenty_one_continue_reading_text() . '</a></div>';
 	}
@@ -454,7 +452,7 @@ function twenty_twenty_one_password_form( $post = 0 ) {
 	$label  = 'pwbox-' . ( empty( $post->ID ) ? wp_rand() : $post->ID );
 	$output = '<p>' . __( 'This content is password protected. To view it please enter your password below:', 'twentytwentyone' ) . '</p>
 	<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" class="post-password-form" method="post">
-	<label class="post-password-form__label" for="' . $label . '">' . __( 'Password:', 'twentytwentyone' ) . '</label><input class="post-password-form__input" name="post_password" id="' . $label . '" type="password" size="20" /><input type="submit" name="Submit" value="' . esc_attr_x( 'Enter', 'post password form', 'twentytwentyone' ) . '" /></form>
+	<label class="post-password-form__label" for="' . $label . '">' . __( 'Password:', 'twentytwentyone' ) . '</label><input class="post-password-form__input" name="post_password" id="' . $label . '" type="password" size="20" /><input type="submit" class="post-password-form__submit" name="Submit" value="' . esc_attr_x( 'Enter', 'post password form', 'twentytwentyone' ) . '" /></form>
 	';
 	return $output;
 }
