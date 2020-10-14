@@ -7,17 +7,19 @@
  * @since 1.0.0
  */
 
+$has_primary_nav = has_nav_menu( 'primary' );
+
 $wrapper_classes  = 'site-header';
 $wrapper_classes .= has_custom_logo() ? ' has-logo' : '';
 $wrapper_classes .= true === get_theme_mod( 'display_title_and_tagline', true ) ? ' has-title-and-tagline' : '';
-
+$wrapper_classes .= $has_primary_nav ? ' has-menu' : '';
 ?>
 
 <header id="masthead" class="<?php echo esc_attr( $wrapper_classes ); ?>" role="banner">
 
 	<?php get_template_part( 'template-parts/header/site-branding' ); ?>
 
-	<?php if ( has_nav_menu( 'primary' ) ) : ?>
+	<?php if ( $has_primary_nav ) : ?>
 		<nav id="site-navigation" class="primary-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary', 'twentytwentyone' ); ?>">
 			<div class="menu-button-container">
 				<button id="primary-mobile-menu" class="button" aria-controls="primary-menu-list" aria-expanded="false">
