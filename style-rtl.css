@@ -3307,7 +3307,8 @@ nav a {
 }
 
 .entry-title a:hover {
-	text-decoration: underline dotted;
+	text-decoration: underline;
+	text-decoration-style: dotted;
 	text-decoration-thickness: 1px;
 	color: var(--entry-header--color-hover);
 }
@@ -3317,7 +3318,8 @@ nav a {
 }
 
 .entry-title a:active {
-	text-decoration: underline dotted;
+	text-decoration: underline;
+	text-decoration-style: dotted;
 	text-decoration-thickness: 1px;
 	color: var(--entry-header--color-link);
 }
