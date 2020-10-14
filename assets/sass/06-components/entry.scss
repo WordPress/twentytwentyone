@@ -92,10 +92,6 @@ h1.entry-title {
 		&:last-child {
 			margin-right: 0;
 		}
-
-		&.updated-on {
-			display: none; // Hide updated date?
-		}
 	}
 
 	a {
@@ -128,13 +124,6 @@ h1.entry-title {
 	float: none;
 	font-size: var(--entry-meta--font-size);
 	display: block;
-
-	> span {
-
-		&.updated-on {
-			display: none;
-		}
-	}
 
 	a {
 		color: var(--entry-meta--color-link);

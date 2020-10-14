@@ -21,9 +21,7 @@ if ( ! function_exists( 'twenty_twenty_one_posted_on' ) ) {
 		$time_string = sprintf(
 			$time_string,
 			esc_attr( get_the_date( DATE_W3C ) ),
-			esc_html( get_the_date() ),
-			esc_attr( get_the_modified_date( DATE_W3C ) ),
-			esc_html( get_the_modified_date() )
+			esc_html( get_the_date() )
 		);
 
 		printf(
@@ -33,23 +31,6 @@ if ( ! function_exists( 'twenty_twenty_one_posted_on' ) ) {
 			esc_url( get_permalink() ),
 			$time_string // phpcs:ignore WordPress.Security.EscapeOutput
 		);
-
-		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="updated" datetime="%1$s">%2$s</time>';
-			$time_string = sprintf(
-				$time_string,
-				esc_attr( get_the_modified_date( DATE_W3C ) ),
-				esc_html( get_the_modified_date() )
-			);
-
-			printf(
-				/* translators: 2: author link. 3: author name*/
-				'<span class="updated-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
-				esc_html__( 'Updated', 'twentytwentyone' ),
-				esc_url( get_permalink() ),
-				$time_string // phpcs:ignore WordPress.Security.EscapeOutput
-			);
-		}
 	}
 }
 
@@ -140,7 +121,7 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				if ( $categories_list ) {
 					printf(
 						/* translators: %s: list of categories. */
-						'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . '</span>',
+						'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . '. </span>',
 						$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
 					);
 				}
@@ -150,7 +131,7 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				if ( $tags_list ) {
 					printf(
 						/* translators: %s: list of tags. */
-						'<span class="tags-links">' . esc_html__( 'Tagged %s', 'twentytwentyone' ) . '</span>',
+						'<span class="tags-links">' . esc_html__( 'Tagged %s', 'twentytwentyone' ) . '.</span>',
 						$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
 					);
 				}
@@ -191,8 +172,8 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				if ( $categories_list ) {
 					printf(
 						/* translators: %s: list of categories. */
-						'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . '</span>',
-						$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
+						'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . ' </span>',
+						$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
 					);
 				}
 
