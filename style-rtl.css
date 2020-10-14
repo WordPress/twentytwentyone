@@ -297,7 +297,6 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--quote--line-height-large: 1.5;
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
-	--separator--width: calc(100vw - 1.2 * var(--global--spacing-horizontal));
 	/* Block: Table */
 	--table--stripes-border-color: var(--global--color-light-gray);
 	--table--stripes-background-color: var(--global--color-light-gray);
@@ -495,7 +494,7 @@ abbr[title] {
 	/* 1 */
 	text-decoration: underline;
 	/* 2 */
-	text-decoration: underline dotted;
+	text-decoration-style: dotted;
 	/* 2 */
 }
 
@@ -788,7 +787,7 @@ template {
 /**
  * Extends
  */
-.default-max-width, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce),
+.default-max-width, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce),
 *[class*="inner-container"] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce), .entry-content .wp-audio-shortcode, .post-thumbnail {
 	max-width: var(--responsive--aligndefault-width);
 	margin-right: auto;
@@ -2757,11 +2756,15 @@ hr.wp-block-separator {
 		 */
 }
 
-hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
-	max-width: var(--separator--width);
+hr.wp-block-separator:not(.is-style-dots):not(.alignwide) {
+	max-width: var(--responsive--aligndefault-width);
 }
 
-hr.wp-block-separator.is-style-wide {
+hr.wp-block-separator:not(.is-style-dots):not(.alignwide).alignfull {
+	max-width: var(--responsive--alignfull-width);
+}
+
+hr.wp-block-separator.is-style-twentytwentyone-separator-thick {
 	border-bottom-width: calc(3 * var(--separator--height));
 }
 
@@ -3280,18 +3283,11 @@ nav a {
 	margin-top: calc(0.5 * var(--global--spacing-vertical));
 }
 
-.site-footer > .site-info .imprint {
-	display: block;
-}
-
 @media only screen and (min-width: 822px) {
 	.site-footer > .site-info {
 		display: flex;
 		align-items: center;
 		margin-top: calc(2 * var(--global--spacing-vertical));
-	}
-	.site-footer > .site-info .imprint {
-		display: initial;
 	}
 	.site-footer > .site-info .copyright {
 		margin-top: initial;
@@ -4174,7 +4170,6 @@ h1.page-title {
 	}
 	.primary-navigation .primary-menu-container > ul > .menu-item {
 		display: flex;
-		align-items: center;
 	}
 	.primary-navigation .primary-menu-container > ul > .menu-item > a {
 		padding-right: var(--primary-nav--padding);
@@ -4211,7 +4206,8 @@ h1.page-title {
 }
 
 .primary-navigation a:hover {
-	text-decoration: underline dotted;
+	text-decoration: underline;
+	text-decoration-style: dotted;
 }
 
 .primary-navigation a:focus {
@@ -4222,12 +4218,14 @@ h1.page-title {
 
 .primary-navigation .current-menu-item > a:first-child,
 .primary-navigation .current_page_item > a:first-child {
-	text-decoration: underline solid;
+	text-decoration: underline;
+	text-decoration-style: solid;
 }
 
 .primary-navigation .current-menu-item > a:first-child:hover,
 .primary-navigation .current_page_item > a:first-child:hover {
-	text-decoration: underline dotted;
+	text-decoration: underline;
+	text-decoration-style: dotted;
 }
 
 .primary-navigation .sub-menu {
@@ -4275,6 +4273,14 @@ h1.page-title {
 	.primary-navigation .menu-item-has-children .sub-menu .svg-icon {
 		display: none;
 	}
+}
+
+.primary-navigation .menu-item-description {
+	display: block;
+	clear: both;
+	font-size: var(--global--font-size-xs);
+	text-transform: none;
+	line-height: 1.7;
 }
 
 @media only screen and (max-width: 481px) {
@@ -4561,7 +4567,9 @@ h1.page-title {
 }
 
 .widget-area a {
-	text-decoration: underline solid currentColor;
+	text-decoration: underline;
+	text-decoration-style: solid;
+	text-decoration-color: currentColor;
 }
 
 .widget-area a:hover {
@@ -4673,6 +4681,13 @@ h1.page-title {
 /* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
 	outline: 0;
+}
+
+@media (prefers-reduced-motion) {
+	* {
+		transition-delay: 0s !important;
+		transition-duration: 0s !important;
+	}
 }
 
 .has-black-color[class] {

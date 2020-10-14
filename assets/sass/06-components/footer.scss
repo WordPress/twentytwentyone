@@ -24,18 +24,10 @@
 		margin-top: calc(0.5 * var(--global--spacing-vertical));
 	}
 
-	.imprint {
-		display: block;
-	}
-
 	@include media(desktop) {
 		display: flex;
 		align-items: center;
 		margin-top: calc(2 * var(--global--spacing-vertical));
-
-		.imprint {
-			display: initial;
-		}
 
 		.copyright {
 			margin-top: initial;

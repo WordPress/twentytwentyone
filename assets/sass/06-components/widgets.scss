@@ -26,7 +26,9 @@
 	}
 
 	a {
-		text-decoration: underline solid currentColor;
+		text-decoration: underline;
+		text-decoration-style: solid;
+		text-decoration-color: currentColor;
 
 		&:hover {
 			text-decoration-style: dotted;

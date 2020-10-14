@@ -20,7 +20,7 @@ $wrapper_classes .= $has_primary_nav ? ' has-menu' : '';
 	<?php get_template_part( 'template-parts/header/site-branding' ); ?>
 
 	<?php if ( $has_primary_nav ) : ?>
-		<nav id="site-navigation" class="primary-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary', 'twentytwentyone' ); ?>">
+		<nav id="site-navigation" class="primary-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary menu', 'twentytwentyone' ); ?>">
 			<div class="menu-button-container">
 				<button id="primary-mobile-menu" class="button" aria-controls="primary-menu-list" aria-expanded="false">
 					<span class="dropdown-icon open"><?php esc_html_e( 'Menu', 'twentytwentyone' ); ?>

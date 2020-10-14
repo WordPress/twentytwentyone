@@ -323,7 +323,6 @@
 			// Top-level Menu Item
 			> ul > .menu-item {
 				display: flex;
-				align-items: center;
 
 				> a {
 					padding-left: var(--primary-nav--padding);
@@ -363,7 +362,8 @@
 		}
 
 		&:hover {
-			text-decoration: underline dotted;
+			text-decoration: underline;
+			text-decoration-style: dotted;
 		}
 
 		&:focus {
@@ -375,10 +375,12 @@
 
 	.current-menu-item > a:first-child,
 	.current_page_item > a:first-child {
-		text-decoration: underline solid;
+		text-decoration: underline;
+		text-decoration-style: solid;
 
 		&:hover {
-			text-decoration: underline dotted;
+			text-decoration: underline;
+			text-decoration-style: dotted;
 		}
 	}
 
@@ -443,6 +445,13 @@
 
 	}
 
+	.menu-item-description {
+		display: block;
+		clear: both;
+		font-size: var(--global--font-size-xs);
+		text-transform: none;
+		line-height: 1.7;
+	}
 }
 
 // Keep the menu pinned to the top when the menu is open.
