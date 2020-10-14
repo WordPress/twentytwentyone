@@ -59,10 +59,14 @@
 
 				&.close {
 					display: flex;
+
+					.wp-custom-logo.has-title-and-tagline & {
+						animation-name: twentytwentyone-close-button-transition;
+						animation-duration: 0.3s;
+					}
 				}
 			}
 		}
-
 	}
 
 	// When the menu is open, hide the close button and show the hide button.
@@ -112,6 +116,11 @@
 			height: 100vh;
 			z-index: 499;
 
+			.wp-custom-logo.has-title-and-tagline & {
+				transition: all .25s ease-in-out;
+				transform: translateY(0) translateX(100%);
+			}
+
 			.admin-bar & {
 				height: calc(100vh - 46px);
 			}
@@ -131,7 +140,13 @@
 			opacity: 1;
 			transform: translateY(0);
 		}
+	}
 
+	.primary-navigation-open.wp-custom-logo.has-title-and-tagline & {
+
+		> .primary-menu-container {
+			transform: translateX(0) translateY(0);
+		}
 	}
 
 	// Adjust positions when logged-in
@@ -438,4 +453,10 @@
 		max-width: 100%;
 		width: 100%;
 	}
+}
+
+// Close button animation for when a custom logo is present.
+@keyframes twentytwentyone-close-button-transition {
+	from { opacity: 0; }
+	to { opacity: 1; }
 }
