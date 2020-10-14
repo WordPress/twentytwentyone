@@ -3590,7 +3590,7 @@ p.has-text-color a {
 	line-height: 1;
 	position: absolute;
 	top: 4px;
-	left: 0;
+	left: -20px;
 }
 
 .wp-block-quote p {
@@ -3738,8 +3738,8 @@ p.has-text-color a {
 .wp-block-quote.is-style-large::before, .wp-block-quote.is-large::before {
 	font-size: 5rem;
 	position: absolute;
-	top: 6px;
-	left: -15px;
+	top: 2px;
+	left: -20px;
 }
 
 .wp-block-rss {

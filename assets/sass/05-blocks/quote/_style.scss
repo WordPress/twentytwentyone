@@ -25,7 +25,7 @@
 		line-height: 1;
 		position: absolute;
 		top: 4px;
-		left: 0;
+		left: -20px;
 	}
 
 	p {
@@ -100,8 +100,8 @@
 		&::before {
 			font-size: 5rem;
 			position: absolute;
-			top: 6px;
-			left: -15px;
+			top: 2px;
+			left: -20px;
 		}
 	}
 }
