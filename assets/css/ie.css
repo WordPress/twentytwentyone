@@ -4558,28 +4558,32 @@ nav a {
 }
 
 @media only screen and (max-width: 481px) {
-	.site-header.has-logo:not(.has-title-and-tagline) .site-logo {
+	.site-header.has-logo:not(.has-title-and-tagline).has-menu .site-logo {
 		position: absolute;
 		padding-top: 15px;
 		margin-top: 0;
 		top: 0;
 	}
-	.admin-bar .site-header.has-logo:not(.has-title-and-tagline) .site-logo {
+	.admin-bar .site-header.has-logo:not(.has-title-and-tagline).has-menu .site-logo {
 		top: 46px;
 	}
-	.primary-navigation-open .site-header.has-logo:not(.has-title-and-tagline) .site-logo {
+	.primary-navigation-open .site-header.has-logo:not(.has-title-and-tagline).has-menu .site-logo {
 		display: none;
 	}
-	.site-header.has-logo:not(.has-title-and-tagline) .site-logo img {
+	.site-header.has-logo:not(.has-title-and-tagline).has-menu .site-logo img {
 		max-height: calc(10px + 2em);
 	}
 	.site-header.has-logo.has-title-and-tagline {
-		justify-content: space-between;
 		align-items: flex-start;
+	}
+	.site-header.has-logo.has-title-and-tagline.has-menu {
+		justify-content: space-between;
+	}
+	.site-header.has-logo.has-title-and-tagline.has-menu .site-branding {
+		max-width: calc(100% - 160px);
 	}
 	.site-header.has-logo.has-title-and-tagline .site-branding {
 		margin-right: 0;
-		max-width: calc(100% - 160px);
 	}
 	body:not(.primary-navigation-open) .site-header.has-logo.has-title-and-tagline:after {
 		display: none;
@@ -4601,6 +4605,9 @@ nav a {
 	.site-header:not(.has-logo).has-title-and-tagline .site-branding {
 		margin-right: 0;
 		max-width: calc(100% - 160px);
+	}
+	.site-header:not(.has-menu) {
+		justify-content: center;
 	}
 }
 

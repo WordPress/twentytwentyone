@@ -130,33 +130,42 @@ nav a {
 
 			&:not(.has-title-and-tagline) {
 
-				.site-logo {
-					position: absolute;
-					padding-top: calc(0.5 * var(--global--spacing-vertical));
-					margin-top: 0;
-					top: 0;
+				&.has-menu {
 
-					.admin-bar & {
-						top: 46px;
-					}
+					.site-logo {
+						position: absolute;
+						padding-top: calc(0.5 * var(--global--spacing-vertical));
+						margin-top: 0;
+						top: 0;
 
-					.primary-navigation-open & {
-						display: none;
-					}
+						.admin-bar & {
+							top: 46px;
+						}
 
-					img {
-						max-height: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit)) + 1.7em);
+						.primary-navigation-open & {
+							display: none;
+						}
+
+						img {
+							max-height: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit)) + 1.7em);
+						}
 					}
 				}
 			}
 
 			&.has-title-and-tagline {
-				justify-content: space-between;
 				align-items: flex-start;
+
+				&.has-menu {
+					justify-content: space-between;
+
+					.site-branding {
+						max-width: calc(100% - 160px);
+					}
+				}
 
 				.site-branding {
 					margin-right: 0;
-					max-width: calc(100% - 160px);
 				}
 
 				body:not(.primary-navigation-open) & {
@@ -196,6 +205,10 @@ nav a {
 					max-width: calc(100% - 160px);
 				}
 			}
+		}
+
+		&:not(.has-menu) {
+			justify-content: center;
 		}
 	}
 }
