@@ -79,6 +79,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
  * 404..................404 styles.
  * Search...............Search styles.
  * Navigation...........Navigation styles.
+ * Footer Navigation....Footer Navigation styles.
  * Pagination...........Pagination styles.
  * Single...............Single page and post styles.
  * Posts and pages......Misc, sticky post styles.
@@ -2074,6 +2075,7 @@ a {
 	cursor: pointer;
 	color: #28303d;
 	text-underline-offset: 3px;
+	text-decoration-skip-ink: all;
 }
 
 a:hover {
@@ -2360,62 +2362,6 @@ a:hover {
 	/* Block Styles */
 }
 
-.wp-block-cover p:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover h1:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover h2:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover h3:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover h4:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover h5:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover h6:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover-image p:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover-image h1:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover-image h2:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover-image h3:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover-image h4:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover-image h5:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
-.wp-block-cover-image h6:not(.has-background):not(.has-text-color) {
-	color: #fff;
-}
-
 .wp-block-cover .wp-block-cover__inner-container {
 	color: currentColor;
 	margin-top: 30px;
@@ -2486,27 +2432,27 @@ a:hover {
 }
 
 .wp-block-cover:not([class*="background-color"]) .wp-block-cover__inner-container {
-	color: #000;
+	color: #fff;
 }
 
 .wp-block-cover:not([class*="background-color"]) .wp-block-cover-image-text {
-	color: #000;
+	color: #fff;
 }
 
 .wp-block-cover:not([class*="background-color"]) .wp-block-cover-text {
-	color: #000;
+	color: #fff;
 }
 
 .wp-block-cover-image:not([class*="background-color"]) .wp-block-cover__inner-container {
-	color: #000;
+	color: #fff;
 }
 
 .wp-block-cover-image:not([class*="background-color"]) .wp-block-cover-image-text {
-	color: #000;
+	color: #fff;
 }
 
 .wp-block-cover-image:not([class*="background-color"]) .wp-block-cover-text {
-	color: #000;
+	color: #fff;
 }
 
 .wp-block-cover h2 {
@@ -2684,13 +2630,13 @@ a:hover {
 .wp-block-gallery .blocks-gallery-image figcaption {
 	margin: 0;
 	color: #fff;
-	font: 1.125rem;
+	font-size: 1rem;
 }
 
 .wp-block-gallery .blocks-gallery-item figcaption {
 	margin: 0;
 	color: #fff;
-	font: 1.125rem;
+	font-size: 1rem;
 }
 
 .wp-block-group .wp-block-group__inner-container {
@@ -4513,6 +4459,11 @@ table.wp-calendar-table caption {
 	display: flex;
 	align-items: flex-start;
 	flex-wrap: wrap;
+	row-gap: 30px;
+}
+
+.wp-custom-logo .site-header {
+	align-items: center;
 }
 
 @media only screen and (min-width: 482px) {
@@ -4534,12 +4485,13 @@ table.wp-calendar-table caption {
 
 .site-branding:last-child {
 	margin-right: 0;
+	width: 100%;
+	text-align: center;
 }
 
 @media only screen and (min-width: 482px) {
 	.site-branding {
 		margin-right: initial;
-		margin-bottom: 30px;
 		margin-top: 4px;
 	}
 }
@@ -4599,10 +4551,20 @@ nav a {
 	margin: 15px 0;
 }
 
+.site-header > .site-logo {
+	width: 100%;
+	padding-bottom: 45px;
+	border-bottom: 1px solid;
+	text-align: center;
+}
+
 .site-logo .custom-logo {
+	margin-left: auto;
+	margin-right: auto;
 	max-width: 96px;
 	max-height: 96px;
 	height: auto;
+	display: inline-block;
 	width: auto;
 }
 
@@ -4627,7 +4589,7 @@ nav a {
 	line-height: 1.7;
 	border-top: 3px solid #28303d;
 	padding-top: 30px;
-	margin-top: 60px;
+	margin-top: 30px;
 }
 
 .site-footer > .site-info .site-name {
@@ -4646,6 +4608,7 @@ nav a {
 @media only screen and (min-width: 822px) {
 	.site-footer > .site-info {
 		display: flex;
+		align-items: center;
 		margin-top: 60px;
 	}
 	.site-footer > .site-info .imprint {
@@ -5022,6 +4985,30 @@ h1.page-title {
 .page-header {
 	border-bottom: 3px solid #28303d;
 	padding-bottom: 60px;
+}
+
+.archive .content-area .format-aside .entry-content {
+	font-size: 1.5rem;
+}
+
+.archive .content-area .format-status .entry-content {
+	font-size: 1.5rem;
+}
+
+.archive .content-area .format-link .entry-content {
+	font-size: 1.5rem;
+}
+
+.search .content-area .format-aside .entry-content {
+	font-size: 1.5rem;
+}
+
+.search .content-area .format-status .entry-content {
+	font-size: 1.5rem;
+}
+
+.search .content-area .format-link .entry-content {
+	font-size: 1.5rem;
 }
 
 .error404 main p {
@@ -5752,6 +5739,47 @@ h1.page-title {
 	}
 }
 
+.footer-navigation {
+	font-size: 1rem;
+	margin-top: 60px;
+}
+
+.footer-navigation-wrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	list-style: none;
+	padding-left: 0;
+}
+
+.footer-navigation-wrapper li {
+	display: inline;
+	line-height: 3;
+}
+
+.footer-navigation-wrapper li a {
+	padding: 17px 13px;
+	transition: transform 0.1s ease;
+}
+
+.footer-navigation-wrapper li a:hover {
+	text-decoration: underline;
+	text-decoration-style: dotted;
+	text-decoration-skip-ink: none;
+}
+
+.footer-navigation-wrapper li svg {
+	vertical-align: middle;
+}
+
+.footer-navigation-wrapper li svg:hover {
+	transform: scale(1.1);
+}
+
+.footer-navigation-wrapper .sub-menu-toggle {
+	display: none;
+}
+
 /* Next/Previous navigation */
 .navigation {
 	color: #28303d;
@@ -5801,6 +5829,17 @@ h1.page-title {
 	display: inline-block;
 	fill: currentColor;
 	vertical-align: middle;
+	position: relative;
+}
+
+.navigation .nav-previous .svg-icon,
+.navigation .prev .svg-icon {
+	top: -2px;
+}
+
+.navigation .nav-next .svg-icon,
+.navigation .next .svg-icon {
+	top: -1px;
 }
 
 .post-navigation {
@@ -6046,16 +6085,19 @@ h1.page-title {
 
 .search-form > label {
 	width: 100%;
+	margin-bottom: 0;
 	font-weight: 500;
 }
 
 .search-form .search-field {
 	flex-grow: 1;
 	max-width: inherit;
+	margin-top: 10px;
 	margin-right: 17px;
 }
 
 .search-form .search-submit {
+	margin-top: 10px;
 	margin-left: 10px;
 }
 
@@ -6094,7 +6136,7 @@ h1.page-title {
 	word-break: normal;
 }
 
-.screen-reader-text:focus {
+.skip-link:focus {
 	background-color: #f1f1f1;
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -6106,7 +6148,7 @@ h1.page-title {
 	font-size: 0.875rem;
 	font-weight: 700;
 	height: auto;
-	right: 5px;
+	left: 5px;
 	line-height: normal;
 	padding: 15px 23px 14px;
 	text-decoration: none;
@@ -6118,6 +6160,13 @@ h1.page-title {
 /* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
 	outline: 0;
+}
+
+@media (prefers-reduced-motion) {
+	* {
+		transition-delay: 0s !important;
+		transition-duration: 0s !important;
+	}
 }
 
 .has-black-color[class] {
