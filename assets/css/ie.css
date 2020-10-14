@@ -743,18 +743,18 @@ template {
 	max-width: min(calc(100vw - 200px), 610px);
 	}
 }
-hr.wp-block-separator.is-style-wide {
+hr.wp-block-separator.is-style-wide:not(.alignwide) {
 	max-width: calc(100vw - 30px);
 	margin-left: auto;
 	margin-right: auto;
 }
 @media only screen and (min-width: 482px){
-	hr.wp-block-separator.is-style-wide{
+	hr.wp-block-separator.is-style-wide:not(.alignwide){
 	max-width: min(calc(100vw - 100px), 610px);
 	}
 }
 @media only screen and (min-width: 822px){
-	hr.wp-block-separator.is-style-wide{
+	hr.wp-block-separator.is-style-wide:not(.alignwide){
 	max-width: min(calc(100vw - 200px), 610px);
 	}
 }
@@ -3897,12 +3897,32 @@ hr.wp-block-separator {
 		 */
 }
 
-hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignwide) {
 	max-width: calc(100vw - 30px);
+}
+
+@media only screen and (min-width: 482px){
+	hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignwide){
+	max-width: min(calc(100vw - 100px), 610px);
+	}
+}
+
+@media only screen and (min-width: 822px){
+	hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignwide){
+	max-width: min(calc(100vw - 200px), 610px);
+	}
+}
+
+hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignwide).alignfull {
+	max-width: 100%;
 }
 
 hr.wp-block-separator.is-style-wide {
 	border-bottom-width: 3px;
+}
+
+hr.wp-block-separator.is-style-wide.alignfull {
+	max-width: 100%;
 }
 
 hr.wp-block-separator.is-style-dots.has-background, hr.wp-block-separator.is-style-dots.has-text-color {
@@ -4581,18 +4601,11 @@ nav a {
 	margin-top: 15px;
 }
 
-.site-footer > .site-info .imprint {
-	display: block;
-}
-
 @media only screen and (min-width: 822px) {
 	.site-footer > .site-info {
 		display: flex;
 		align-items: center;
 		margin-top: 60px;
-	}
-	.site-footer > .site-info .imprint {
-		display: initial;
 	}
 	.site-footer > .site-info .copyright {
 		margin-top: initial;
@@ -6070,16 +6083,19 @@ h1.page-title {
 
 .search-form > label {
 	width: 100%;
+	margin-bottom: 0;
 	font-weight: 500;
 }
 
 .search-form .search-field {
 	flex-grow: 1;
 	max-width: inherit;
+	margin-top: 10px;
 	margin-right: 17px;
 }
 
 .search-form .search-submit {
+	margin-top: 10px;
 	margin-left: 10px;
 }
 
@@ -6118,7 +6134,7 @@ h1.page-title {
 	word-break: normal;
 }
 
-.screen-reader-text:focus {
+.skip-link:focus {
 	background-color: #f1f1f1;
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -6130,7 +6146,7 @@ h1.page-title {
 	font-size: 0.875rem;
 	font-weight: 700;
 	height: auto;
-	right: 5px;
+	left: 5px;
 	line-height: normal;
 	padding: 15px 23px 14px;
 	text-decoration: none;
@@ -6142,6 +6158,13 @@ h1.page-title {
 /* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
 	outline: 0;
+}
+
+@media (prefers-reduced-motion) {
+	* {
+		transition-delay: 0s !important;
+		transition-duration: 0s !important;
+	}
 }
 
 .has-black-color[class] {

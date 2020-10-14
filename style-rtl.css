@@ -297,7 +297,6 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--quote--line-height-large: 1.5;
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
-	--separator--width: calc(100vw - 1.2 * var(--global--spacing-horizontal));
 	/* Block: Table */
 	--table--stripes-border-color: var(--global--color-light-gray);
 	--table--stripes-background-color: var(--global--color-light-gray);
@@ -788,7 +787,7 @@ template {
 /**
  * Extends
  */
-.default-max-width, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce),
+.default-max-width, hr.wp-block-separator.is-style-wide:not(.alignwide), .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce),
 *[class*="inner-container"] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce), .entry-content .wp-audio-shortcode, .post-thumbnail {
 	max-width: var(--responsive--aligndefault-width);
 	margin-right: auto;
@@ -2757,12 +2756,20 @@ hr.wp-block-separator {
 		 */
 }
 
-hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
-	max-width: var(--separator--width);
+hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignwide) {
+	max-width: var(--responsive--aligndefault-width);
+}
+
+hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignwide).alignfull {
+	max-width: var(--responsive--alignfull-width);
 }
 
 hr.wp-block-separator.is-style-wide {
 	border-bottom-width: calc(3 * var(--separator--height));
+}
+
+hr.wp-block-separator.is-style-wide.alignfull {
+	max-width: var(--responsive--alignfull-width);
 }
 
 hr.wp-block-separator.is-style-dots.has-background, hr.wp-block-separator.is-style-dots.has-text-color {
@@ -3226,18 +3233,11 @@ nav a {
 	margin-top: calc(0.5 * var(--global--spacing-vertical));
 }
 
-.site-footer > .site-info .imprint {
-	display: block;
-}
-
 @media only screen and (min-width: 822px) {
 	.site-footer > .site-info {
 		display: flex;
 		align-items: center;
 		margin-top: calc(2 * var(--global--spacing-vertical));
-	}
-	.site-footer > .site-info .imprint {
-		display: initial;
 	}
 	.site-footer > .site-info .copyright {
 		margin-top: initial;
@@ -4527,16 +4527,19 @@ h1.page-title {
 
 .search-form > label {
 	width: 100%;
+	margin-bottom: 0;
 	font-weight: var(--form--label-weight-strong);
 }
 
 .search-form .search-field {
 	flex-grow: 1;
 	max-width: inherit;
+	margin-top: calc(var(--global--spacing-vertical) / 3);
 	margin-left: calc(0.66 * var(--global--spacing-horizontal));
 }
 
 .search-form .search-submit {
+	margin-top: calc(var(--global--spacing-vertical) / 3);
 	margin-right: 10px;
 }
 
@@ -4575,7 +4578,7 @@ h1.page-title {
 	word-break: normal;
 }
 
-.screen-reader-text:focus {
+.skip-link:focus {
 	background-color: #f1f1f1;
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -4587,7 +4590,7 @@ h1.page-title {
 	font-size: 0.875rem;
 	font-weight: 700;
 	height: auto;
-	left: 5px;
+	right: 5px;
 	line-height: normal;
 	padding: 15px 23px 14px;
 	text-decoration: none;
@@ -4599,6 +4602,13 @@ h1.page-title {
 /* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
 	outline: 0;
+}
+
+@media (prefers-reduced-motion) {
+	* {
+		transition-delay: 0s !important;
+		transition-duration: 0s !important;
+	}
 }
 
 .has-black-color[class] {
