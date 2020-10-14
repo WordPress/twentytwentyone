@@ -4608,6 +4608,13 @@ h1.page-title {
 	outline: 0;
 }
 
+@media (prefers-reduced-motion) {
+	* {
+		transition-delay: 0s !important;
+		transition-duration: 0s !important;
+	}
+}
+
 .has-black-color[class] {
 	color: var(--global--color-black);
 }
