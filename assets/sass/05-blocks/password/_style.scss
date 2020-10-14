@@ -1,0 +1,19 @@
+.post-password-form {
+	display: flex;
+	flex-wrap: wrap;
+
+	&__label {
+		width: 100%;
+	}
+
+	&__input {
+		margin-right: calc(0.66 * var(--global--spacing-horizontal));
+	}
+
+	@include media( mobile-only ) {
+
+		&__input {
+			width: 50%;
+		}
+	}
+}
