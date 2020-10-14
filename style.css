@@ -3238,18 +3238,11 @@ nav a {
 	margin-top: calc(0.5 * var(--global--spacing-vertical));
 }
 
-.site-footer > .site-info .imprint {
-	display: block;
-}
-
 @media only screen and (min-width: 822px) {
 	.site-footer > .site-info {
 		display: flex;
 		align-items: center;
 		margin-top: calc(2 * var(--global--spacing-vertical));
-	}
-	.site-footer > .site-info .imprint {
-		display: initial;
 	}
 	.site-footer > .site-info .copyright {
 		margin-top: initial;
