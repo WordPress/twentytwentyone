@@ -5348,7 +5348,6 @@ h1.page-title {
 	display: flex;
 	font-size: 1rem;
 	font-weight: 500;
-	text-transform: uppercase;
 	background-color: transparent;
 	border: none;
 	color: #28303d;
@@ -5396,7 +5395,6 @@ h1.page-title {
 	right: 0;
 	color: #28303d;
 	font-size: 1.125rem;
-	text-transform: uppercase;
 	line-height: 1.15;
 	margin-top: 0;
 	margin-bottom: 0;
