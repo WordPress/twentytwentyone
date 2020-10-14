@@ -90,6 +90,15 @@ if ( function_exists( 'register_block_style' ) ) {
 			)
 		);
 
+		// Separator: Thick.
+		register_block_style(
+			'core/separator',
+			array(
+				'name'  => 'twentytwentyone-separator-thick',
+				'label' => esc_html__( 'Thick', 'twentytwentyone' ),
+			)
+		);
+
 		// Social icons: Dark gray color.
 		register_block_style(
 			'core/social-links',

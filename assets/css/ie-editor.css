@@ -1873,16 +1873,16 @@ hr[style*="text-align: right"] {
 	border-right-color: #28303d;
 }
 
-.wp-block-separator:not(.is-style-wide):not(.is-style-dots),
-hr:not(.is-style-wide):not(.is-style-dots) {
+.wp-block-separator:not(.is-style-dots),
+hr:not(.is-style-dots) {
 	max-width: inherit;
 }
 
-.wp-block-separator.is-style-wide {
+.wp-block-separator.is-style-twentytwentyone-separator-thick {
 	border-bottom-width: 3px;
 }
 
-hr.is-style-wide {
+hr.is-style-twentytwentyone-separator-thick {
 	border-bottom-width: 3px;
 }
 
