@@ -3998,8 +3998,8 @@ h1.page-title {
 		z-index: 499;
 	}
 	.wp-custom-logo.has-title-and-tagline .primary-navigation > .primary-menu-container {
-		width: 0;
-		transition: transform 0.25s ease-in-out;
+		position: fixed;
+		transition: all 0.25s ease-in-out;
 		transform: translateY(0) translateX(100%);
 	}
 	.admin-bar .primary-navigation > .primary-menu-container {
@@ -4021,7 +4021,6 @@ h1.page-title {
 }
 
 .primary-navigation-open.wp-custom-logo.has-title-and-tagline .primary-navigation > .primary-menu-container {
-	width: inherit;
 	transform: translateX(0) translateY(0);
 }
 

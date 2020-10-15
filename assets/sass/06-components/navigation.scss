@@ -117,8 +117,8 @@
 			z-index: 499;
 
 			.wp-custom-logo.has-title-and-tagline & {
-				width: 0;
-				transition: transform 0.25s ease-in-out;
+				position:fixed;
+				transition: all 0.25s ease-in-out;
 				transform: translateY(0) translateX(100%);
 			}
 
@@ -146,7 +146,6 @@
 	.primary-navigation-open.wp-custom-logo.has-title-and-tagline & {
 
 		> .primary-menu-container {
-			width: inherit;
 			transform: translateX(0) translateY(0);
 		}
 	}
