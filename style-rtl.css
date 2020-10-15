@@ -3552,6 +3552,11 @@ h1.page-title {
 	font-size: var(--global--font-size-lg);
 }
 
+.archive.logged-in .entry-footer .posted-on,
+.search.logged-in .entry-footer .posted-on {
+	margin-left: calc(0.5 * var(--global--spacing-unit));
+}
+
 .error404 main p {
 	font-size: var(--global--font-size-lg);
 	margin-bottom: calc(var(--global--spacing-vertical) * 1.6666666667);
