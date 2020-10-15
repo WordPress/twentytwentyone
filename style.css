@@ -3298,7 +3298,7 @@ a.custom-logo-link {
 	font-size: var(--branding--title--font-size);
 }
 
-.site-footer > .site-info .copyright {
+.site-footer > .site-info .powered-by {
 	margin-top: calc(0.5 * var(--global--spacing-vertical));
 }
 
@@ -3307,7 +3307,7 @@ a.custom-logo-link {
 		display: flex;
 		align-items: center;
 	}
-	.site-footer > .site-info .copyright {
+	.site-footer > .site-info .powered-by {
 		margin-top: initial;
 		margin-left: auto;
 	}

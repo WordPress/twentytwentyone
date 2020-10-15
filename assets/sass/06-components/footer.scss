@@ -24,7 +24,7 @@
 		font-size: var(--branding--title--font-size);
 	}
 
-	.copyright {
+	.powered-by {
 		margin-top: calc(0.5 * var(--global--spacing-vertical));
 	}
 
@@ -32,7 +32,7 @@
 		display: flex;
 		align-items: center;
 
-		.copyright {
+		.powered-by {
 			margin-top: initial;
 			margin-left: auto;
 		}

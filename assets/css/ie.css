@@ -4657,7 +4657,7 @@ a.custom-logo-link {
 	font-size: 1.5rem;
 }
 
-.site-footer > .site-info .copyright {
+.site-footer > .site-info .powered-by {
 	margin-top: 15px;
 }
 
@@ -4666,7 +4666,7 @@ a.custom-logo-link {
 		display: flex;
 		align-items: center;
 	}
-	.site-footer > .site-info .copyright {
+	.site-footer > .site-info .powered-by {
 		margin-top: initial;
 		margin-left: auto;
 	}
