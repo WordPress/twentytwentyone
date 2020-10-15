@@ -1778,6 +1778,15 @@ p.has-background {
 	}
 }
 
+@media only screen and (min-width: 482px) {
+	.wp-block-quote {
+		margin-left: auto;
+	}
+	.wp-block-quote.has-text-align-right {
+		margin-right: auto;
+	}
+}
+
 .wp-block-rss {
 	padding-left: 0;
 }

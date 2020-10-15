@@ -123,4 +123,12 @@
 			padding-right: 0;
 		}
 	}
+
+	@include media(mobile) {
+		margin-left: auto;
+
+		&.has-text-align-right {
+			margin-right: auto;
+		}
+	}
 }
