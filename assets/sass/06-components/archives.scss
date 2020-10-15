@@ -41,5 +41,15 @@ h1.page-title {
 			margin-top: calc(2 * var(--global--spacing-vertical));
 		}
 	}
+
+	&.logged-in {
+
+		.entry-footer {
+
+			.posted-on {
+				margin-right: calc(0.5 * var(--global--spacing-unit));
+			}
+		}
+	}
 }
 

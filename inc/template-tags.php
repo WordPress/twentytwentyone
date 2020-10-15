@@ -25,10 +25,9 @@ if ( ! function_exists( 'twenty_twenty_one_posted_on' ) ) {
 		);
 
 		printf(
-			/* translators: 2: author link. 3: author name*/
-			'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span> ',
+			/* translators: 2: author name*/
+			'<span class="posted-on">%1$s %2$s</span>',
 			esc_html__( 'Published', 'twentytwentyone' ),
-			esc_url( get_permalink() ),
 			$time_string // phpcs:ignore WordPress.Security.EscapeOutput
 		);
 	}
