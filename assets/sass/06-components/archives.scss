@@ -17,7 +17,8 @@ h1.page-title {
 }
 
 .archive,
-.search {
+.search,
+.blog {
 
 	.content-area {
 
@@ -28,6 +29,16 @@ h1.page-title {
 			.entry-content {
 				font-size: var(--global--font-size-lg);
 			}
+		}
+
+	}
+
+	.format-image,
+	.format-gallery,
+	.format-video {
+
+		.entry-content {
+			margin-top: calc(2 * var(--global--spacing-vertical));
 		}
 	}
 
@@ -41,3 +52,4 @@ h1.page-title {
 		}
 	}
 }
+
