@@ -7,4 +7,3 @@ vendor/
 .idea/
 *.sublime-project
 *.sublime-workspace
-*.map
