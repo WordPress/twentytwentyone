@@ -47,7 +47,7 @@ if ( ! function_exists( 'twenty_twenty_one_posted_by' ) ) {
 			printf(
 				/* translators: %s author name. */
 				esc_html__( 'By %s', 'twentytwentyone' ),
-				'<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a>'
+				'<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" rel="author">' . esc_html( get_the_author() ) . '</a>'
 			);
 			echo '</span>';
 		}
