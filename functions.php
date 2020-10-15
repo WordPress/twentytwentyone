@@ -12,7 +12,6 @@
 // This theme requires WordPress 5.3 or later.
 if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
-	return;
 }
 
 if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
@@ -47,6 +46,24 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 		 */
 		add_theme_support( 'title-tag' );
 
+		/**
+		 * Add post-formats support.
+		 */
+		add_theme_support(
+			'post-formats',
+			array(
+				'link',
+				'aside',
+				'gallery',
+				'image',
+				'quote',
+				'status',
+				'video',
+				'audio',
+				'chat',
+			)
+		);
+
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
 		 *
@@ -58,6 +75,7 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 		register_nav_menus(
 			array(
 				'primary' => esc_html__( 'Primary Navigation', 'twentytwentyone' ),
+				'footer'  => __( 'Footer Navigation', 'twentytwentyone' ),
 			)
 		);
 
@@ -413,6 +431,20 @@ function twenty_twenty_one_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'twenty_twenty_one_scripts' );
+
+/**
+ * Enqueue block editor script.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function twentytwentyone_block_editor_script() {
+
+	wp_enqueue_script( 'twentytwentyone-unregister-block-style', get_theme_file_uri( '/assets/js/unregister-block-style.js' ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
+}
+
+add_action( 'enqueue_block_editor_assets', 'twentytwentyone_block_editor_script' );
 
 /**
  * Fix skip link focus in IE11.

@@ -25,7 +25,6 @@
 		display: flex;
 		font-size: var(--primary-nav--font-size-button);
 		font-weight: var(--primary-nav--font-weight-button);
-		text-transform: var(--branding--title--text-transform);
 		background-color: transparent;
 		border: none;
 		color: var(--primary-nav--color-link);
@@ -83,7 +82,6 @@
 	right: 0;
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
-	text-transform: var(--branding--title--text-transform);
 	line-height: 1.15;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -212,7 +210,7 @@
 		// Sub-menu buttons
 		.sub-menu-toggle {
 			display: flex;
-			height: 44px;
+			height: calc(2 * var(--primary-nav--padding) + 1.15em + 1px);
 			width: 44px;
 			padding: 0;
 			justify-content: center;
@@ -229,37 +227,43 @@
 				display: none;
 			}
 
-			// When the sub-menu is closed, display the plus icon
-			&[aria-expanded="false"] {
-				/* stylelint-disable */
-				background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z' fill='%2328303d'/></svg>") no-repeat center center;
-				.is-background-dark & {
-					background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z' fill='%23fff'/></svg>") no-repeat center center;
+			.icon-plus,
+			.icon-minus {
+				height: 100%;
+				display: flex;
+				align-items: center;
+
+				svg {
+					margin-top: -1px;
 				}
-				/* stylelint-enable */
+			}
+
+			.icon-minus {
+				display: none;
 			}
 
 			// When the sub-menu is open, display the minus icon
 			&[aria-expanded="true"] {
-				/* stylelint-disable */
-				background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M6 11h12v2H6z' fill='%2328303d'/></svg>") no-repeat center center;
 
-				.is-background-dark & {
-					background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M6 11h12v2H6z' fill='%23fff'/></svg>") no-repeat center center;
+				.icon-minus {
+					display: flex;
 				}
-				/* stylelint-enable */
-			}
 
+				.icon-plus {
+					display: none;
+				}
+			}
 		}
 
 		.hover .sub-menu-toggle {
-			/* stylelint-disable */
-			background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M6 11h12v2H6z' fill='%2328303d'/></svg>") no-repeat center center;
 
-			.is-background-dark & {
-				background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path d='M6 11h12v2H6z' fill='%23fff'/></svg>") no-repeat center center;
+			.icon-minus {
+				display: flex;
 			}
-			/* stylelint-enable */
+
+			.icon-plus {
+				display: none;
+			}
 		}
 
 		// Sub-menus Flyout
@@ -302,7 +306,6 @@
 			// Top-level Menu Item
 			> ul > .menu-item {
 				display: flex;
-				align-items: center;
 
 				> a {
 					padding-left: var(--primary-nav--padding);
@@ -323,6 +326,7 @@
 		font-size: var(--primary-nav--font-size-mobile);
 		font-weight: var(--primary-nav--font-weight);
 		padding: var(--primary-nav--padding) 0;
+		text-decoration: none;
 
 		@include media(mobile) {
 			display: block;
@@ -342,7 +346,8 @@
 		}
 
 		&:hover {
-			text-decoration: underline dotted;
+			text-decoration: underline;
+			text-decoration-style: dotted;
 		}
 
 		&:focus {
@@ -354,10 +359,12 @@
 
 	.current-menu-item > a:first-child,
 	.current_page_item > a:first-child {
-		text-decoration: underline solid;
+		text-decoration: underline;
+		text-decoration-style: solid;
 
 		&:hover {
-			text-decoration: underline dotted;
+			text-decoration: underline;
+			text-decoration-style: dotted;
 		}
 	}
 
@@ -422,6 +429,17 @@
 
 	}
 
+	.menu-item-description {
+		display: block;
+		clear: both;
+		font-size: var(--global--font-size-xs);
+		text-transform: none;
+		line-height: 1.7;
+
+		> span {
+			display: inline-block;
+		}
+	}
 }
 
 // Keep the menu pinned to the top when the menu is open.

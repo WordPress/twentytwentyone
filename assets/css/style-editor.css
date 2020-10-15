@@ -126,11 +126,6 @@
 	--entry-header--font-family: var(--heading--font-family);
 	--entry-header--font-size: var(--heading--font-size-h2);
 	--entry-content--font-family: var(--global--font-secondary);
-	--entry-meta--color: var(--global--color-primary);
-	--entry-meta--color-link: currentColor;
-	--entry-meta--color-hover: var(--global--color-primary-hover);
-	--entry-meta--font-family: var(--global--font-primary);
-	--entry-meta--font-size: var(--global--font-size-xs);
 	--entry-author-bio--font-family: var(--heading--font-family);
 	--entry-author-bio--font-size: var(--heading--font-size-h4);
 	/* Header */
@@ -205,7 +200,6 @@
 	--quote--line-height-large: 1.5;
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
-	--separator--width: calc(100vw - 1.2 * var(--global--spacing-horizontal));
 	/* Block: Table */
 	--table--stripes-border-color: var(--global--color-light-gray);
 	--table--stripes-background-color: var(--global--color-light-gray);
@@ -461,6 +455,7 @@ a {
 	cursor: pointer;
 	color: var(--wp--style--color--link, var(--global--color-primary));
 	text-underline-offset: 3px;
+	text-decoration-skip-ink: all;
 }
 
 a:hover {
@@ -528,23 +523,6 @@ a:hover {
 	margin-bottom: inherit;
 }
 
-.wp-block-cover p.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
-.wp-block-cover h1.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
-.wp-block-cover h2.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
-.wp-block-cover h3.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
-.wp-block-cover h4.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
-.wp-block-cover h5.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
-.wp-block-cover h6.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
-.wp-block-cover-image p.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
-.wp-block-cover-image h1.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
-.wp-block-cover-image h2.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
-.wp-block-cover-image h3.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
-.wp-block-cover-image h4.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
-.wp-block-cover-image h5.block-editor-rich-text__editable:not(.has-background):not(.has-text-color),
-.wp-block-cover-image h6.block-editor-rich-text__editable:not(.has-background):not(.has-text-color) {
-	color: var(--global--color-white);
-}
-
 .wp-block-cover .wp-block-cover__inner-container,
 .wp-block-cover .wp-block-cover-image-text,
 .wp-block-cover .wp-block-cover-text,
@@ -586,7 +564,7 @@ a:hover {
 .wp-block-cover-image:not([class*="background-color"]) .wp-block-cover-image-text,
 .wp-block-cover-image:not([class*="background-color"]) .wp-block-cover-text,
 .wp-block-cover-image:not([class*="background-color"]) .block-editor-block-list__block {
-	color: var(--cover--color-background);
+	color: var(--cover--color-foreground);
 }
 
 .wp-block-cover h2,
@@ -628,6 +606,7 @@ a:hover {
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) {
 		margin-left: calc(-2 * var(--global--spacing-horizontal));
 		margin-top: calc(2.5 * var(--global--spacing-horizontal));
+		z-index: 2;
 	}
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p:not(.has-background),
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1:not(.has-background),
@@ -1194,7 +1173,7 @@ p.has-background {
 .wp-block-quote {
 	border-left-color: var(--quote--border-color);
 	border-left-width: var(--quote--border-width);
-	margin: var(--global--spacing-vertical) 0;
+	margin: var(--global--spacing-vertical) auto;
 	padding-left: var(--global--spacing-horizontal);
 }
 
@@ -1392,6 +1371,7 @@ p.has-background {
 hr {
 	border-bottom: var(--separator--height) solid var(--separator--border-color);
 	clear: both;
+	opacity: 1;
 }
 
 .wp-block-separator[style*="text-align:right"], .wp-block-separator[style*="text-align: right"],
@@ -1400,13 +1380,13 @@ hr[style*="text-align: right"] {
 	border-right-color: var(--separator--border-color);
 }
 
-.wp-block-separator:not(.is-style-wide):not(.is-style-dots),
-hr:not(.is-style-wide):not(.is-style-dots) {
-	max-width: var(--separator--width);
+.wp-block-separator:not(.is-style-dots),
+hr:not(.is-style-dots) {
+	max-width: inherit;
 }
 
-.wp-block-separator.is-style-wide,
-hr.is-style-wide {
+.wp-block-separator.is-style-twentytwentyone-separator-thick,
+hr.is-style-twentytwentyone-separator-thick {
 	border-bottom-width: calc(3 * var(--separator--height));
 }
 
@@ -1544,6 +1524,52 @@ pre.wp-block-verse {
 	padding: 0;
 }
 
+:root .is-extra-small-text,
+:root .has-extra-small-font-size {
+	font-size: var(--global--font-size-xs);
+}
+
+:root .is-small-text,
+:root .has-small-font-size {
+	font-size: var(--global--font-size-sm);
+}
+
+:root .is-regular-text,
+:root .has-regular-font-size,
+:root .is-normal-font-size,
+:root .has-normal-font-size,
+:root .has-medium-font-size {
+	font-size: var(--global--font-size-base);
+}
+
+:root .is-large-text,
+:root .has-large-font-size {
+	font-size: var(--global--font-size-lg);
+	line-height: var(--global--line-height-heading);
+}
+
+:root .is-larger-text,
+:root .has-larger-font-size,
+:root .is-extra-large-text,
+:root .has-extra-large-font-size {
+	font-size: var(--global--font-size-xl);
+	line-height: var(--global--line-height-heading);
+}
+
+:root .is-huge-text,
+:root .has-huge-font-size {
+	font-size: var(--global--font-size-xxl);
+	line-height: var(--global--line-height-heading);
+	font-weight: var(--heading--font-weight-page-title);
+}
+
+:root .is-gigantic-text,
+:root .has-gigantic-font-size {
+	font-size: var(--global--font-size-xxxl);
+	line-height: var(--global--line-height-heading);
+	font-weight: var(--heading--font-weight-page-title);
+}
+
 /**
 * Editor Post Title
 * - Needs a special styles
@@ -1558,8 +1584,8 @@ pre.wp-block-verse {
 .wp-block.editor-post-title__block .editor-post-title__input {
 	color: var(--global--color-secondary);
 	font-family: var(--heading--font-family);
-	font-weight: var(--heading--font-weight-page-title);
 	font-size: var(--global--font-size-page-title);
+	font-weight: var(--heading--font-weight-page-title);
 	line-height: var(--heading--line-height-h1);
 }
 
@@ -1607,49 +1633,6 @@ pre.wp-block-verse {
 	color: var(--global--color-primary);
 }
 
-.is-tiny-text,
-.has-tiny-font-size {
-	font-size: var(--global--font-size-xs);
-}
-
-.is-small-text,
-.has-small-font-size {
-	font-size: var(--global--font-size-sm);
-}
-
-.is-regular-text,
-.has-regular-font-size,
-.has-normal-font-size,
-.has-medium-font-size {
-	font-size: var(--global--font-size-md);
-}
-
-.is-large-text,
-.has-large-font-size {
-	font-size: var(--global--font-size-lg);
-	line-height: var(--global--line-height-heading);
-}
-
-.is-larger-text,
-.has-larger-font-size,
-.has-huge-font-size {
-	font-size: var(--global--font-size-xl);
-	line-height: var(--global--line-height-heading);
-}
-
-.is-gigantic-text,
-.has-gigantic-font-size {
-	font-size: var(--global--font-size-xxl);
-	line-height: var(--global--line-height-heading);
-	font-weight: var(--heading--font-weight-page-title);
-}
-
-.has-drop-cap:not(:focus)::first-letter {
-	font-family: var(--heading--font-family);
-	font-size: calc(2 * var(--heading--font-size-h1));
-	font-weight: var(--heading--font-weight);
-}
-
 /**
  * Spacing Overrides
  */
@@ -1692,6 +1675,10 @@ pre.wp-block-verse {
 .alignright {
 	margin: 0;
 	margin-left: var(--global--spacing-horizontal);
+}
+
+.has-drop-cap:not(:focus)::first-letter {
+	font-size: calc(2 * var(--heading--font-size-h1));
 }
 
 @media only screen and (min-width: 482px) {

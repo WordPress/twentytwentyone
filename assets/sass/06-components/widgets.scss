@@ -1,6 +1,10 @@
 .widget-area {
+	@extend %responsive-alignwide-width;
+	margin-top: calc(6 * var(--global--spacing-vertical));
+	padding-bottom: calc(var(--global--spacing-vertical) / 3);
+	color: var(--footer--color-text);
 	font-size: var(--footer--font-size);
-	margin-bottom: 0;
+	font-family: var(--footer--font-family);
 
 	@include media(desktop) {
 		display: grid;
@@ -26,9 +30,19 @@
 	}
 
 	a {
-		text-decoration: underline solid currentColor;
+		color: var(--footer--color-link);
+		text-decoration: underline;
+		text-decoration-style: solid;
+		text-decoration-color: currentColor;
+
+		&:link,
+		&:visited,
+		&:active {
+			color: var(--footer--color-link);
+		}
 
 		&:hover {
+			color: var(--footer--color-link-hover);
 			text-decoration-style: dotted;
 		}
 	}
@@ -67,16 +81,19 @@
 
 	> label {
 		width: 100%;
+		margin-bottom: 0;
 		font-weight: var(--form--label-weight-strong);
 	}
 
 	.search-field {
 		flex-grow: 1;
 		max-width: inherit;
+		margin-top: calc(var(--global--spacing-vertical) / 3);
 		margin-right: calc(0.66 * var(--global--spacing-horizontal));
 	}
 
 	.search-submit {
+		margin-top: calc(var(--global--spacing-vertical) / 3);
 		margin-left: 10px;
 	}
 }
