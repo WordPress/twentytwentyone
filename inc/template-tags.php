@@ -48,7 +48,7 @@ if ( ! function_exists( 'twenty_twenty_one_posted_by' ) ) {
 			printf(
 				/* translators: %s author name. */
 				esc_html__( 'By %s', 'twentytwentyone' ),
-				'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+				'<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a>'
 			);
 			echo '</span>';
 		}
