@@ -4129,6 +4129,144 @@ table.wp-calendar-table caption {
 	vertical-align: middle;
 }
 
+:root .is-extra-small-text {
+	font-size: 1rem;
+}
+
+:root .has-extra-small-font-size {
+	font-size: 1rem;
+}
+
+:root .is-small-text {
+	font-size: 1.125rem;
+}
+
+:root .has-small-font-size {
+	font-size: 1.125rem;
+}
+
+:root .is-regular-text {
+	font-size: 1.25rem;
+}
+
+:root .has-regular-font-size {
+	font-size: 1.25rem;
+}
+
+:root .is-normal-font-size {
+	font-size: 1.25rem;
+}
+
+:root .has-normal-font-size {
+	font-size: 1.25rem;
+}
+
+:root .has-medium-font-size {
+	font-size: 1.25rem;
+}
+
+:root .is-large-text {
+	font-size: 1.5rem;
+	line-height: 1.3;
+}
+
+:root .has-large-font-size {
+	font-size: 1.5rem;
+	line-height: 1.3;
+}
+
+:root .is-larger-text {
+	font-size: 2.5rem;
+	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px){
+	:root .is-larger-text{
+	font-size: 2.5rem;
+	}
+}
+
+:root .has-larger-font-size {
+	font-size: 2.5rem;
+	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px){
+	:root .has-larger-font-size{
+	font-size: 2.5rem;
+	}
+}
+
+:root .is-extra-large-text {
+	font-size: 2.5rem;
+	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px){
+	:root .is-extra-large-text{
+	font-size: 2.5rem;
+	}
+}
+
+:root .has-extra-large-font-size {
+	font-size: 2.5rem;
+	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px){
+	:root .has-extra-large-font-size{
+	font-size: 2.5rem;
+	}
+}
+
+:root .is-huge-text {
+	font-size: 6rem;
+	line-height: 1.3;
+	font-weight: 300;
+}
+
+@media only screen and (min-width: 652px){
+	:root .is-huge-text{
+	font-size: 6rem;
+	}
+}
+
+:root .has-huge-font-size {
+	font-size: 6rem;
+	line-height: 1.3;
+	font-weight: 300;
+}
+
+@media only screen and (min-width: 652px){
+	:root .has-huge-font-size{
+	font-size: 6rem;
+	}
+}
+
+:root .is-gigantic-text {
+	font-size: 9rem;
+	line-height: 1.3;
+	font-weight: 300;
+}
+
+@media only screen and (min-width: 652px){
+	:root .is-gigantic-text{
+	font-size: 9rem;
+	}
+}
+
+:root .has-gigantic-font-size {
+	font-size: 9rem;
+	line-height: 1.3;
+	font-weight: 300;
+}
+
+@media only screen and (min-width: 652px){
+	:root .has-gigantic-font-size{
+	font-size: 9rem;
+	}
+}
+
 /* Block Alignments */
 /**
  * These selectors set the default max width for content appearing inside a post or page.
@@ -4280,159 +4418,14 @@ table.wp-calendar-table caption {
 	background-attachment: fixed;
 }
 
-:root .is-extra-small-text {
-	font-size: 1rem;
-}
-
-:root .has-extra-small-font-size {
-	font-size: 1rem;
-}
-
-:root .is-small-text {
-	font-size: 1.125rem;
-}
-
-:root .has-small-font-size {
-	font-size: 1.125rem;
-}
-
-:root .is-regular-text {
-	font-size: 1.25rem;
-}
-
-:root .has-regular-font-size {
-	font-size: 1.25rem;
-}
-
-:root .is-normal-font-size {
-	font-size: 1.25rem;
-}
-
-:root .has-normal-font-size {
-	font-size: 1.25rem;
-}
-
-:root .has-medium-font-size {
-	font-size: 1.25rem;
-}
-
-:root .is-large-text {
-	font-size: 1.5rem;
-	line-height: 1.3;
-}
-
-:root .has-large-font-size {
-	font-size: 1.5rem;
-	line-height: 1.3;
-}
-
-:root .is-larger-text {
-	font-size: 2.5rem;
-	line-height: 1.3;
-}
-
-@media only screen and (min-width: 652px){
-	:root .is-larger-text{
-	font-size: 2.5rem;
-	}
-}
-
-:root .has-larger-font-size {
-	font-size: 2.5rem;
-	line-height: 1.3;
-}
-
-@media only screen and (min-width: 652px){
-	:root .has-larger-font-size{
-	font-size: 2.5rem;
-	}
-}
-
-:root .is-extra-large-text {
-	font-size: 2.5rem;
-	line-height: 1.3;
-}
-
-@media only screen and (min-width: 652px){
-	:root .is-extra-large-text{
-	font-size: 2.5rem;
-	}
-}
-
-:root .has-extra-large-font-size {
-	font-size: 2.5rem;
-	line-height: 1.3;
-}
-
-@media only screen and (min-width: 652px){
-	:root .has-extra-large-font-size{
-	font-size: 2.5rem;
-	}
-}
-
-:root .is-huge-text {
-	font-size: 6rem;
-	line-height: 1.3;
-	font-weight: 300;
-}
-
-@media only screen and (min-width: 652px){
-	:root .is-huge-text{
-	font-size: 6rem;
-	}
-}
-
-:root .has-huge-font-size {
-	font-size: 6rem;
-	line-height: 1.3;
-	font-weight: 300;
-}
-
-@media only screen and (min-width: 652px){
-	:root .has-huge-font-size{
-	font-size: 6rem;
-	}
-}
-
-:root .is-gigantic-text {
-	font-size: 9rem;
-	line-height: 1.3;
-	font-weight: 300;
-}
-
-@media only screen and (min-width: 652px){
-	:root .is-gigantic-text{
-	font-size: 9rem;
-	}
-}
-
-:root .has-gigantic-font-size {
-	font-size: 9rem;
-	line-height: 1.3;
-	font-weight: 300;
-}
-
-@media only screen and (min-width: 652px){
-	:root .has-gigantic-font-size{
-	font-size: 9rem;
-	}
-}
-
 .has-drop-cap:not(:focus)::first-letter {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 8rem;
 	font-weight: normal;
 	line-height: 0.66;
 	text-transform: uppercase;
 	font-style: normal;
 	float: left;
 	margin: 0.1em 0.1em 0 0;
-}
-
-@media only screen and (min-width: 652px){
-	.has-drop-cap:not(:focus)::first-letter{
-	font-size: 12rem;
-	}
 }
 
 .has-drop-cap:not(:focus)::after {
