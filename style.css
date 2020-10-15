@@ -1197,6 +1197,7 @@ input[type="color"]:focus,
 .site textarea:focus {
 	color: var(--form--color-text);
 	outline: 1px solid var(--form--border-color);
+	outline-offset: 4px;
 	background: var(--global--color-white);
 }
 

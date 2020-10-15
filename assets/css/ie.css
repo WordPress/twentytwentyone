@@ -1670,90 +1670,105 @@ input[type="color"] {
 input[type="text"]:focus {
 	color: #28303d;
 	outline: 1px solid #39414d;
+	outline-offset: 4px;
 	background: #fff;
 }
 
 input[type="email"]:focus {
 	color: #28303d;
 	outline: 1px solid #39414d;
+	outline-offset: 4px;
 	background: #fff;
 }
 
 input[type="url"]:focus {
 	color: #28303d;
 	outline: 1px solid #39414d;
+	outline-offset: 4px;
 	background: #fff;
 }
 
 input[type="password"]:focus {
 	color: #28303d;
 	outline: 1px solid #39414d;
+	outline-offset: 4px;
 	background: #fff;
 }
 
 input[type="search"]:focus {
 	color: #28303d;
 	outline: 1px solid #39414d;
+	outline-offset: 4px;
 	background: #fff;
 }
 
 input[type="number"]:focus {
 	color: #28303d;
 	outline: 1px solid #39414d;
+	outline-offset: 4px;
 	background: #fff;
 }
 
 input[type="tel"]:focus {
 	color: #28303d;
 	outline: 1px solid #39414d;
+	outline-offset: 4px;
 	background: #fff;
 }
 
 input[type="date"]:focus {
 	color: #28303d;
 	outline: 1px solid #39414d;
+	outline-offset: 4px;
 	background: #fff;
 }
 
 input[type="month"]:focus {
 	color: #28303d;
 	outline: 1px solid #39414d;
+	outline-offset: 4px;
 	background: #fff;
 }
 
 input[type="week"]:focus {
 	color: #28303d;
 	outline: 1px solid #39414d;
+	outline-offset: 4px;
 	background: #fff;
 }
 
 input[type="time"]:focus {
 	color: #28303d;
 	outline: 1px solid #39414d;
+	outline-offset: 4px;
 	background: #fff;
 }
 
 input[type="datetime"]:focus {
 	color: #28303d;
 	outline: 1px solid #39414d;
+	outline-offset: 4px;
 	background: #fff;
 }
 
 input[type="datetime-local"]:focus {
 	color: #28303d;
 	outline: 1px solid #39414d;
+	outline-offset: 4px;
 	background: #fff;
 }
 
 input[type="color"]:focus {
 	color: #28303d;
 	outline: 1px solid #39414d;
+	outline-offset: 4px;
 	background: #fff;
 }
 
 .site textarea:focus {
 	color: #28303d;
 	outline: 1px solid #39414d;
+	outline-offset: 4px;
 	background: #fff;
 }
 
