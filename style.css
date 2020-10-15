@@ -4319,11 +4319,13 @@ h1.page-title {
 .navigation .nav-previous .svg-icon,
 .navigation .prev .svg-icon {
 	top: -2px;
+	margin-right: calc(0.25 * var(--global--spacing-unit));
 }
 
 .navigation .nav-next .svg-icon,
 .navigation .next .svg-icon {
 	top: -1px;
+	margin-left: calc(0.25 * var(--global--spacing-unit));
 }
 
 .post-navigation {
@@ -4351,7 +4353,7 @@ h1.page-title {
 
 @media only screen and (min-width: 822px) {
 	.post-navigation .post-title {
-		margin: 0 var(--global--spacing-horizontal);
+		margin: 0 calc(24px + (0.25 * var(--global--spacing-unit)));
 	}
 }
 

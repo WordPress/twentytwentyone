@@ -53,11 +53,13 @@
 	.nav-previous .svg-icon,
 	.prev .svg-icon {
 		top: -2px;
+		margin-right: calc(0.25 * var(--global--spacing-unit));
 	}
 
 	.nav-next .svg-icon,
 	.next .svg-icon {
 		top: -1px;
+		margin-left: calc(0.25 * var(--global--spacing-unit));
 	}
 }
 
@@ -84,7 +86,7 @@
 		font-weight: var(--pagination--font-weight-strong);
 		line-height: var(--heading--line-height);
 		@include media(desktop) {
-			margin: 0 var(--global--spacing-horizontal);
+			margin: 0 calc(24px + (0.25 * var(--global--spacing-unit)));
 		}
 	}
 
