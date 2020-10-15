@@ -95,3 +95,23 @@ function twenty_twenty_one_add_menu_description_args( $args, $item, $depth ) {
 	return $args;
 }
 add_filter( 'nav_menu_item_args', 'twenty_twenty_one_add_menu_description_args', 10, 3 );
+
+/**
+ * Filters the CSS classes applied to a menu item's list item element.
+ *
+ * @since 1.0.0
+ *
+ * @param string[] $classes Array of the CSS classes that are applied to the menu item's `<li>` element.
+ * @param WP_Post  $item    The current menu item.
+ * @param stdClass $args    An object of wp_nav_menu() arguments.
+ * @param int      $depth   Depth of menu item. Used for padding.
+ *
+ * @return string[]
+ */
+function twenty_twenty_one_nav_menu_css_class( $classes, $item, $args, $depth ) {
+	if ( 0 === $depth && isset( $item->description ) && $item->description ) {
+		$classes[] = 'has-description';
+	}
+	return $classes;
+}
+add_filter( 'nav_menu_css_class', 'twenty_twenty_one_nav_menu_css_class', 10, 4 );
