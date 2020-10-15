@@ -930,6 +930,24 @@ template {
 	}
 }
 
+.widget-area {
+	max-width: calc(100vw - 30px);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media only screen and (min-width: 482px){
+	.widget-area{
+	max-width: calc(100vw - 100px);
+	}
+}
+
+@media only screen and (min-width: 822px){
+	.widget-area{
+	max-width: min(calc(100vw - 200px), 1240px);
+	}
+}
+
 .full-max-width {
 	max-width: 100%;
 	width: 100%;
@@ -1114,6 +1132,12 @@ template {
 	margin-left: auto;
 	margin-right: auto;
 }
+.widget-area {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
 .site-footer {
 	padding-top: 30px;
 	padding-bottom: 30px;
@@ -1192,21 +1216,11 @@ template {
 	margin-bottom: 30px;
 	margin-left: auto;
 }
-.widget-area {
-	margin-top: 30px;
-	margin-right: auto;
-	margin-bottom: 30px;
-	margin-left: auto;
-}
 
 /*
  * Block & non-gutenberg content wrapper children
  * - Sets spacing-vertical margin logic
  */
-.site-footer > * {
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
 .site-main > article > * {
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -1229,10 +1243,6 @@ template {
 }
 
 @media only screen and (min-width: 482px) {
-	.site-footer > * {
-		margin-top: 30px;
-		margin-bottom: 30px;
-	}
 	.site-main > article > * {
 		margin-top: 30px;
 		margin-bottom: 30px;
@@ -1255,7 +1265,6 @@ template {
 	}
 }
 
-.site-footer > *:first-child,
 .site-main > article > *:first-child,
 .site-main > .not-found > *:first-child,
 .entry-content > *:first-child,
@@ -1264,7 +1273,6 @@ template {
 	margin-top: 0;
 }
 
-.site-footer > *:last-child,
 .site-main > article > *:last-child,
 .site-main > .not-found > *:last-child,
 .entry-content > *:last-child,
@@ -1273,12 +1281,21 @@ template {
 	margin-bottom: 0;
 }
 
+.site-footer > * {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
 .widget-area > * {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 482px) {
+	.site-footer > * {
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
 	.widget-area > * {
 		margin-top: 30px;
 		margin-bottom: 30px;
@@ -4556,18 +4573,21 @@ a.custom-logo-link {
 }
 
 .site-footer {
+	padding-top: 0;
 	padding-bottom: 51px;
+}
+
+.no-widgets .site-footer {
 	margin-top: 180px;
 }
 
 .site-footer > .site-info {
+	padding-top: 30px;
 	color: #28303d;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1rem;
 	line-height: 1.7;
 	border-top: 3px solid #28303d;
-	padding-top: 30px;
-	margin-top: 30px;
 }
 
 .site-footer > .site-info .site-name {
@@ -4583,7 +4603,6 @@ a.custom-logo-link {
 	.site-footer > .site-info {
 		display: flex;
 		align-items: center;
-		margin-top: 60px;
 	}
 	.site-footer > .site-info .copyright {
 		margin-top: initial;
@@ -4592,11 +4611,19 @@ a.custom-logo-link {
 }
 
 .site-footer > .site-info a {
-	color: currentColor;
+	color: #28303d;
 }
 
-.site-footer > .site-info a:link, .site-footer > .site-info a:visited, .site-footer > .site-info a:active {
-	color: currentColor;
+.site-footer > .site-info a:link {
+	color: #28303d;
+}
+
+.site-footer > .site-info a:visited {
+	color: #28303d;
+}
+
+.site-footer > .site-info a:active {
+	color: #28303d;
 }
 
 .site-footer > .site-info a:hover {
@@ -5768,8 +5795,11 @@ h1.page-title {
 }
 
 .footer-navigation {
+	margin-top: 30px;
+	margin-bottom: 60px;
+	color: #28303d;
 	font-size: 1rem;
-	margin-top: 60px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 .footer-navigation-wrapper {
@@ -5788,12 +5818,26 @@ h1.page-title {
 .footer-navigation-wrapper li a {
 	padding: 17px 13px;
 	transition: transform 0.1s ease;
+	color: #28303d;
+}
+
+.footer-navigation-wrapper li a:link {
+	color: #28303d;
+}
+
+.footer-navigation-wrapper li a:visited {
+	color: #28303d;
+}
+
+.footer-navigation-wrapper li a:active {
+	color: #28303d;
 }
 
 .footer-navigation-wrapper li a:hover {
 	text-decoration: underline;
 	text-decoration-style: dotted;
 	text-decoration-skip-ink: none;
+	color: #28303d;
 }
 
 .footer-navigation-wrapper li svg {
@@ -6036,8 +6080,11 @@ h1.page-title {
 }
 
 .widget-area {
+	margin-top: 180px;
+	padding-bottom: 10px;
+	color: #28303d;
 	font-size: 1rem;
-	margin-bottom: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 @media only screen and (min-width: 822px) {
@@ -6066,12 +6113,26 @@ h1.page-title {
 }
 
 .widget-area a {
+	color: #28303d;
 	text-decoration: underline;
 	text-decoration-style: solid;
 	text-decoration-color: currentColor;
 }
 
+.widget-area a:link {
+	color: #28303d;
+}
+
+.widget-area a:visited {
+	color: #28303d;
+}
+
+.widget-area a:active {
+	color: #28303d;
+}
+
 .widget-area a:hover {
+	color: #28303d;
 	text-decoration-style: dotted;
 }
 
