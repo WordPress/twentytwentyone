@@ -106,7 +106,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_tag() ) {
 		return sprintf(
-		/* Translators: %s: The term title. */
+			/* Translators: %s: The term title. */
 			esc_html__( 'Tag Archives: %s', 'twentytwentyone' ),
 			'<span class="page-description">' . single_term_title( '', false ) . '</span>'
 		);
@@ -114,7 +114,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_author() ) {
 		return sprintf(
-		/* Translators: %s: The author name. */
+			/* Translators: %s: The author name. */
 			esc_html__( 'Author Archives: %s', 'twentytwentyone' ),
 			'<span class="page-description">' . get_the_author_meta( 'display_name' ) . '</span>'
 		);
@@ -122,7 +122,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_year() ) {
 		return sprintf(
-		/* Translators: %s: The year. */
+			/* Translators: %s: The year. */
 			esc_html__( 'Yearly Archives: %s', 'twentytwentyone' ),
 			'<span class="page-description">' . get_the_date( _x( 'Y', 'yearly archives date format', 'twentytwentyone' ) ) . '</span>'
 		);
@@ -130,7 +130,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_month() ) {
 		return sprintf(
-		/* Translators: %s: The month. */
+			/* Translators: %s: The month. */
 			esc_html__( 'Monthly Archives: %s', 'twentytwentyone' ),
 			'<span class="page-description">' . get_the_date( _x( 'F Y', 'monthly archives date format', 'twentytwentyone' ) ) . '</span>'
 		);
@@ -138,7 +138,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_day() ) {
 		return sprintf(
-		/* Translators: %s: The day. */
+			/* Translators: %s: The day. */
 			esc_html__( 'Daily Archives: %s', 'twentytwentyone' ),
 			'<span class="page-description">' . get_the_date() . '</span>'
 		);
@@ -146,7 +146,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_post_type_archive() ) {
 		return sprintf(
-		/* translators: %s: Post type singular name */
+			/* translators: %s: Post type singular name */
 			esc_html__( '%s Archives', 'twentytwentyone' ),
 			get_post_type_object( get_queried_object()->name )->labels->singular_name
 		);
