@@ -4751,54 +4751,6 @@ h1.entry-title {
 	}
 }
 
-.entry-meta {
-	color: #28303d;
-	clear: both;
-	float: none;
-	font-size: 1rem;
-	display: block;
-}
-
-.entry-meta > span {
-	display: inline-block;
-	margin-right: 20px;
-}
-
-.entry-meta > span > *,
-.entry-meta > span span .fn {
-	display: inline-block;
-	vertical-align: middle;
-}
-
-.entry-meta > span:last-child {
-	margin-right: 0;
-}
-
-.entry-meta a {
-	border-color: transparent;
-	color: currentColor;
-}
-
-.entry-meta a:hover {
-	color: #28303d;
-}
-
-.entry-meta a:focus {
-	color: #28303d;
-}
-
-.entry-meta a:hover {
-	border-color: #39414d;
-}
-
-.entry-meta a:focus {
-	color: #39414d;
-}
-
-.entry-meta a:active {
-	color: currentColor;
-}
-
 .entry-footer {
 	color: #28303d;
 	clear: both;
