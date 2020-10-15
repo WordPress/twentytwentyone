@@ -5,43 +5,30 @@
 .menu-button-container {
 	display: none;
 	justify-content: space-between;
-	left: 0;
 	position: absolute;
-	top: 0;
-	width: 100%;
+	right: 0;
+	padding-top: calc(0.5 * var(--global--spacing-vertical));
+	padding-bottom: calc(0.25 * var(--global--spacing-vertical));
 
-	#primary-open-menu,
-	#primary-close-menu {
+	#primary-mobile-menu {
 		margin-left: auto;
 		padding: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit))) calc(var(--button--padding-horizontal) - (0.25 * var(--global--spacing-unit)));
-		margin-top: calc(0.25 * var(--global--spacing-unit));
-		margin-right: calc(0.25 * var(--global--spacing-unit));
+		margin-right: calc(0.5 * var(--global--spacing-unit));
 	}
 
 	@include media(mobile-only) {
 		display: flex;
 	}
 
-	.admin-bar:not(.primary-navigation-open) & {
-		top: calc(1.4 * var(--global--spacing-vertical));
-	}
-
-	.button {
+	// Override specificty from default button styles.
+	.button.button {
+		display: flex;
 		font-size: var(--primary-nav--font-size-button);
 		font-weight: var(--primary-nav--font-weight-button);
 		text-transform: var(--branding--title--text-transform);
 		background-color: transparent;
+		border: none;
 		color: var(--primary-nav--color-link);
-		z-index: 500;
-
-		&.open {
-			display: flex;
-			z-index: 499;
-		}
-
-		&.close {
-			display: none;
-		}
 
 		.dropdown-icon {
 			display: flex;
@@ -56,28 +43,36 @@
 				position: relative;
 				top: -1px;
 			}
+
+			&.close {
+				display: none;
+			}
 		}
 
-		.hide-visually {
-			position: absolute !important;
-			clip: rect(1px, 1px, 1px, 1px);
-			padding: 0 !important;
-			border: 0 !important;
-			height: 1px !important;
-			width: 1px !important;
-			overflow: hidden;
+		&[aria-expanded*="true"] {
+
+			.dropdown-icon {
+
+				&.open {
+					display: none;
+				}
+
+				&.close {
+					display: flex;
+				}
+			}
 		}
+
 	}
 
 	// When the menu is open, hide the close button and show the hide button.
 	.primary-navigation-open & {
+		width: 100%;
+		z-index: 500;
+		background-color: var(--global--color-background);
 
-		#primary-open-menu {
-			display: none;
-		}
-
-		#primary-close-menu {
-			display: flex;
+		#primary-mobile-menu {
+			position: static;
 		}
 	}
 }
@@ -93,33 +88,43 @@
 	margin-top: 0;
 	margin-bottom: 0;
 
-	@include media(mobile-only) {
-		width: 100%;
-	}
-
 	// Mobile menu closed
 	> .primary-menu-container {
+		position: absolute;
 		visibility: hidden;
 		opacity: 0;
-		position: fixed;
 		top: 0;
 		right: 0;
 		bottom: 0;
 		left: 0;
-		padding: calc(4 * var(--global--spacing-unit)) var(--global--spacing-unit) var(--global--spacing-horizontal);
+		// Height of the menu-button-container using font size, line height, and total padding, plus 5px so the focus of the first item is visible.
+		padding-top: calc(var(--button--line-height) * var(--primary-nav--font-size-button) + 42px + 5px);
+		padding-left: var(--global--spacing-unit);
+		padding-right: var(--global--spacing-unit);
+		padding-bottom: var(--global--spacing-horizontal);
 		background-color: var(--global--color-background);
-		overflow-x: hidden;
-		overflow-y: scroll;
+		overflow-x: scroll;
+		overflow-y: auto;
 		transition: all .15s ease-in-out;
 		transform: translateY(var(--global--spacing-vertical));
 
 		@include media(mobile-only) {
+			height: 100vh;
 			z-index: 499;
+
+			.admin-bar & {
+				height: calc(100vh - 46px);
+			}
 		}
 	}
 
 	// Mobile menu open
 	.primary-navigation-open & {
+
+		@include media(mobile-only) {
+			width: 100%;
+			position: fixed;
+		}
 
 		> .primary-menu-container {
 			visibility: visible;
@@ -129,17 +134,8 @@
 
 	}
 
-	// Adjust button postion when scrolling is locked
-	.lock-scrolling & > .button {
-		position: fixed;
-		top: 0;
-		right: 0;
-	}
-
 	// Adjust positions when logged-in
-	.admin-bar &,
-	.admin-bar & > .primary-menu-container,
-	.admin-bar.lock-scrolling & > .button {
+	.admin-bar & {
 		top: 46px;
 	}
 
@@ -166,7 +162,7 @@
 		}
 
 		// Hide sub-sub-menus
-		> .primary-menu-container > ul > li > ul {
+		> .primary-menu-container ul > li:not(.hover) .sub-menu-toggle[aria-expanded="false"] ~ ul {
 			display: none;
 		}
 
@@ -192,7 +188,6 @@
 		position: relative;
 
 		@include media(mobile-only) {
-			margin: calc(2 * var(--global--spacing-vertical)) 0 0 0;
 
 			ul {
 				padding-left: 0;
@@ -203,27 +198,73 @@
 			display: block;
 			position: relative;
 			width: 100%;
-			z-index: 1;
-
-			&:hover,
-			&:focus-within {
-				cursor: pointer;
-				z-index: 99999;
-			}
 
 			@include media(mobile) {
-				display: inherit;
+				margin: 0;
 				width: inherit;
 
-				/* Submenu display in the responsive menu */
-				&:hover > ul,
-				&:focus-within > ul,
-				ul:hover,
-				ul:focus {
-					visibility: visible;
-					opacity: 1;
-					display: block;
+				&:last-child() {
+					margin-right: 0;
 				}
+			}
+		}
+
+		// Sub-menu buttons
+		.sub-menu-toggle {
+			display: flex;
+			height: calc(2 * var(--primary-nav--padding) + 1.15em + 1px);
+			width: 44px;
+			padding: 0;
+			justify-content: center;
+			align-items: center;
+			background: transparent;
+			color: currentColor;
+			border: none;
+
+			&:focus {
+				outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
+			}
+
+			@include media(mobile-only) {
+				display: none;
+			}
+
+			.icon-plus,
+			.icon-minus {
+				height: 100%;
+				display: flex;
+				align-items: center;
+
+				svg {
+					margin-top: -1px;
+				}
+			}
+
+			.icon-minus {
+				display: none;
+			}
+
+			// When the sub-menu is open, display the minus icon
+			&[aria-expanded="true"] {
+
+				.icon-minus {
+					display: flex;
+				}
+
+				.icon-plus {
+					display: none;
+				}
+			}
+		}
+
+		.hover .sub-menu-toggle {
+
+			.icon-minus {
+				display: flex;
+			}
+
+			.icon-plus {
+				display: none;
 			}
 		}
 
@@ -233,15 +274,18 @@
 			position: relative;
 
 			@include media(mobile) {
+				left: 0;
 				margin: 0;
-				background: var(--global--color-background);
-				left: -15px;
-				top: calc(100% - (0.5 * var(--primary-nav--padding)));
 				min-width: max-content;
-				opacity: 0;
 				position: absolute;
+				top: 100%;
+				padding-top: 3px;
 				transition: all 0.5s ease;
-				visibility: hidden;
+				z-index: 88888;
+
+				li {
+					background: var(--global--color-background);
+				}
 			}
 
 			.sub-menu {
@@ -254,24 +298,37 @@
 	.primary-menu > .menu-item:hover > a {
 		color: var(--primary-nav--color-link-hover);
 	}
-	// Top-level Menu Item
-	.primary-menu-container > ul > .menu-item {
-		padding: calc(0.5 * var(--primary-nav--padding)) 0;
 
+	.primary-menu-container {
 		@include media(mobile) {
-			display: flex;
-			align-items: center;
-			// Sets the left padding to 0 to better align with the site title when wrapped.
-			padding: calc(0.7 * var(--primary-nav--padding)) calc(3 * var(--primary-nav--padding)) var(--primary-nav--padding) 0;
+			// Better align with the site title when the menu wraps.
+			margin-right: calc(0px - var(--primary-nav--padding));
+			margin-left: calc(0px - var(--primary-nav--padding));
+
+			// Top-level Menu Item
+			> ul > .menu-item {
+				display: flex;
+
+				> a {
+					padding-left: var(--primary-nav--padding);
+					padding-right: var(--primary-nav--padding);
+
+					+ .sub-menu-toggle {
+						margin-left: calc(0px - var(--primary-nav--padding));
+					}
+				}
+			}
 		}
 	}
 
 	// Menu Item Link
 	a {
-		display: inline;
+		display: block;
 		font-family: var(--primary-nav--font-family-mobile);
 		font-size: var(--primary-nav--font-size-mobile);
 		font-weight: var(--primary-nav--font-weight);
+		padding: var(--primary-nav--padding) 0;
+		text-decoration: none;
 
 		@include media(mobile) {
 			display: block;
@@ -291,46 +348,57 @@
 		}
 
 		&:hover {
-			border-bottom: 1px dashed var(--primary-nav--color-link-border);
+			text-decoration: underline;
+			text-decoration-style: dotted;
+		}
+
+		&:focus {
+			position: relative;
+			z-index: 99999; // Ensure focus styles appear above absolute positioned elements
+			outline-offset: 0;
 		}
 	}
 
 	.current-menu-item > a:first-child,
 	.current_page_item > a:first-child {
-		border-bottom: 1px solid var(--primary-nav--color-link-border);
+		text-decoration: underline;
+		text-decoration-style: solid;
 
 		&:hover {
-			border-bottom: 1px dashed var(--primary-nav--color-link-border);
+			text-decoration: underline;
+			text-decoration-style: dotted;
 		}
 	}
 
 	// Sub-menu depth indicators + text styles
 	.sub-menu {
+		margin: 0;
+		padding: 0;
 		list-style: none;
 		margin-left: var(--primary-nav--padding);
 
-		// Sub menu items om wide screens.
+		// Sub-menu items om wide screens.
 		@include media(mobile) {
-			padding: var(--primary-nav--padding);
 
+			// For nested sub-menus, don't duplicate the padding
 			> .menu-item > .sub-menu {
-				padding: var(--primary-nav--padding) 0 0 0;
-			}
-
-			> .menu-item.menu-item-has-children {
-				padding: var(--primary-nav--padding) 0 0 0;
+				padding: 0;
 			}
 		}
 
 		.menu-item {
-			padding: calc(0.5 * var(--primary-nav--padding)) var(--primary-nav--padding);
 
-			@include media(mobile) {
-				padding: var(--primary-nav--padding) 0;
+			@include media(mobile-only) {
+
+				&:last-child() {
+					margin-bottom: 0;
+				}
+
 			}
 
-			a {
-				display: inline;
+			> a {
+				padding: calc(1.25 * var(--primary-nav--padding)) var(--primary-nav--padding);
+				display: block;
 				font-size: var(--primary-nav--font-size-sub-menu-mobile);
 				font-style: var(--primary-nav--font-style-sub-menu-mobile);
 
@@ -363,14 +431,12 @@
 
 	}
 
-	.hide-visually {
-		position: absolute !important;
-		clip: rect(1px, 1px, 1px, 1px);
-		padding: 0 !important;
-		border: 0 !important;
-		height: 1px !important;
-		width: 1px !important;
-		overflow: hidden;
+	.menu-item-description {
+		display: block;
+		clear: both;
+		font-size: var(--global--font-size-xs);
+		text-transform: none;
+		line-height: 1.7;
 	}
 }
 
@@ -380,5 +446,6 @@
 	.lock-scrolling .site {
 		position: fixed;
 		max-width: 100%;
+		width: 100%;
 	}
 }

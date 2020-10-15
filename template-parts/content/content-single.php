@@ -15,30 +15,21 @@
 
 	<header class="entry-header alignwide">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php twenty_twenty_one_post_thumbnail(); ?>
 	</header>
-
-	<?php twenty_twenty_one_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
 		the_content(
 			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentytwentyone' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
+				twenty_twenty_one_continue_reading_text(),
 				get_the_title()
 			)
 		);
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwentyone' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'twentytwentyone' ),
 				'after'  => '</div>',
 			)
 		);
@@ -49,8 +40,8 @@
 		<?php twenty_twenty_one_entry_meta_footer(); ?>
 	</footer><!-- .entry-footer -->
 
-	<?php if ( ! is_singular( 'attachment' ) ) { ?>
+	<?php if ( ! is_singular( 'attachment' ) ) : ?>
 		<?php get_template_part( 'template-parts/post/author-bio' ); ?>
-	<?php } ?>
+	<?php endif; ?>
 
 </article><!-- #post-${ID} -->

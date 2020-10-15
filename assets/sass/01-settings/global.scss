@@ -1,4 +1,4 @@
-/* Add all variables here. */
+/* Variables */
 
 // Vertical Rhythm Multiplier
 $baseline-unit: 10px;
@@ -18,14 +18,17 @@ $baseline-unit: 10px;
 	--global--font-size-sm: 1.125rem; // 18px / 16px
 	--global--font-size-md: 1.25rem; // 20px / 16px
 	--global--font-size-lg: 1.5rem; // 24px / 16px
-	--global--font-size-xl: 2rem; // 40px / 16px
-	--global--font-size-page-title: 6rem; // 96px / 16px
+	--global--font-size-xl: 2.25rem; // 36px / 16px
+	--global--font-size-xxl: 4rem; // 64px / 16px
+	--global--font-size-xxxl: 5rem; // 80px / 16px
+	--global--font-size-page-title: var(--global--font-size-xxl);
 	--global--letter-spacing: normal;
 
 	/* Line Height */
 	--global--line-height-base: 1;
 	--global--line-height-body: 1.7;
 	--global--line-height-heading: 1.3;
+	--global--line-height-page-title: 1.1;
 
 	/* Headings */
 	--heading--font-family: var(--global--font-primary);
@@ -34,8 +37,8 @@ $baseline-unit: 10px;
 	--heading--font-size-h6: var(--global--font-size-xs);
 	--heading--font-size-h5: var(--global--font-size-sm);
 	--heading--font-size-h4: var(--global--font-size-lg);
-	--heading--font-size-h3: 2rem; // 32px / 16px
-	--heading--font-size-h2: 3rem; // 48px / 16px
+	--heading--font-size-h3: 1.875rem; // 30px / 16px
+	--heading--font-size-h2: 2.25rem; // 36px / 16px
 	--heading--font-size-h1: var(--global--font-size-page-title);
 
 	--heading--letter-spacing-h6: 0.05em;
@@ -50,7 +53,7 @@ $baseline-unit: 10px;
 	--heading--line-height-h4: var(--global--line-height-heading);
 	--heading--line-height-h3: var(--heading--line-height);
 	--heading--line-height-h2: var(--heading--line-height);
-	--heading--line-height-h1: var(--heading--line-height);
+	--heading--line-height-h1: var(--global--line-height-page-title);
 
 	--heading--font-weight: normal;
 	--heading--font-weight-page-title: 300;
@@ -69,6 +72,7 @@ $baseline-unit: 10px;
 	--global--color-black: #000;
 	--global--color-dark-gray: #28303d;
 	--global--color-gray: #39414d;
+	--global--color-light-gray: #f0f0f0;
 	--global--color-green: #d1e4dd;
 	--global--color-blue: #d1dfe4;
 	--global--color-purple: #d1d1e4;
@@ -83,7 +87,7 @@ $baseline-unit: 10px;
 	--global--color-primary-hover: var(--global--color-primary);
 	--global--color-secondary-hover: var(--global--color-secondary);
 	--global--color-background: var(--global--color-green); /* Mint, default body background */
-	--global--color-border: var(--global--color-black); /* Used for borders (separators) */
+	--global--color-border: var(--global--color-primary); /* Used for borders (separators) */
 
 	/* Spacing */
 	--global--spacing-unit: #{2 * $baseline-unit}; // 20px
@@ -96,10 +100,13 @@ $baseline-unit: 10px;
 
 	/* Forms */
 	--form--font-family: var(--global--font-secondary);
-	--form--font-size: var(--global--font-size-md);
+	--form--font-size: var(--global--font-size-sm);
 	--form--line-height: var(--global--line-height-body);
-	--form--color-text: var(--global--color-primary);
-	--form--border-color: var(--global--color-border);
+	--form--color-text: var(--global--color-dark-gray); // Text color in input fields is always dark over light background.
+	--form--color-ranged: var(--global--color-secondary);
+	--form--label-weight: normal;
+	--form--label-weight-strong: 500;
+	--form--border-color: var(--global--color-secondary);
 	--form--border-width: 3px;
 	--form--border-radius: 0;
 	--form--spacing-unit: calc(0.5 * var(--global--spacing-unit));
@@ -112,22 +119,22 @@ $baseline-unit: 10px;
 	/* Buttons */
 	// Colors
 	--button--color-text: var(--global--color-background);
-	--button--color-text-hover: var(--button--color-text);
-	--button--color-text-active: var(--button--color-text);
+	--button--color-text-hover: var(--global--color-secondary);
+	--button--color-text-active: var(--global--color-secondary);
 	--button--color-background: var(--global--color-secondary);
-	--button--color-background-hover: var(--global--color-secondary-hover);
-	--button--color-background-active: var(--global--color-primary);
+	--button--color-background-hover: var(--global--color-background);
+	--button--color-background-active: var(--global--color-background);
 	// Fonts
-	--button--font-family: var(--global--font-ui);
+	--button--font-family: var(--global--font-primary);
 	--button--font-size: var(--global--font-size-base);
-	--button--font-weight: normal;
-	--button--line-height: 1;
+	--button--font-weight: 500;
+	--button--line-height: 1.5;
 	// Borders
-	--button--border-width: 2px;
-	--button--border-radius: 4px;
+	--button--border-width: 3px;
+	--button--border-radius: 0;
 	// Spacing
-	--button--padding-vertical: calc(var(--global--spacing-horizontal) - var(--button--border-width));
-	--button--padding-horizontal: var(--global--spacing-horizontal);
+	--button--padding-vertical: 15px;
+	--button--padding-horizontal: calc(2 * var(--button--padding-vertical));
 
 	/* entry */
 	--entry-header--color: var(--global--color-primary);
@@ -158,8 +165,8 @@ $baseline-unit: 10px;
 	--branding--description--font-size: var(--global--font-size-sm);
 	--branding--description--font-family: var(--global--font-secondary);
 
-	--branding--logo--max-width: 120px;
-	--branding--logo--max-height: 120px;
+	--branding--logo--max-width: 300px;
+	--branding--logo--max-height: 100px;
 	--branding--logo--max-width-mobile: 96px;
 	--branding--logo--max-height-mobile: 96px;
 
@@ -181,7 +188,7 @@ $baseline-unit: 10px;
 	--primary-nav--color-link-border: var(--global--color-primary);
 	--primary-nav--color-text: var(--global--color-primary);
 	--primary-nav--padding: calc(0.66 * var(--global--spacing-unit));
-	--primary-nav--justify-content: center;
+	--primary-nav--justify-content: right;
 
 	/* Pagination */
 	--pagination--color-text: var(--global--color-primary);
@@ -204,12 +211,12 @@ $baseline-unit: 10px;
 
 	/* Block: Pull quote */
 	--pullquote--font-family: var(--global--font-primary);
-	--pullquote--font-size: var(--heading--font-size-h2);
-	--pullquote--font-style: italic;
+	--pullquote--font-size: var(--heading--font-size-h3);
+	--pullquote--font-style: normal;
 	--pullquote--letter-spacing: var(--heading--letter-spacing-h4);
 	--pullquote--line-height: var(--global--line-height-heading);
-	--pullquote--border-width: 0;
-	--pullquote--border-color: transparent;
+	--pullquote--border-width: 3px;
+	--pullquote--border-color: var(--global--color-primary);
 	--pullquote--color-foreground: var(--global--color-primary);
 	--pullquote--color-background: var(--global--color-background);
 
@@ -225,5 +232,27 @@ $baseline-unit: 10px;
 
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
-	--separator--width: calc(6 * var(--global--spacing-horizontal));
+
+	/* Block: Table */
+	--table--stripes-border-color: var(--global--color-light-gray);
+	--table--stripes-background-color: var(--global--color-light-gray);
+	--table--has-background-border-color: var(--global--color-dark-gray);
+	--table--has-background-text-color: var(--global--color-dark-gray);
+
+	/* Widgets */
+	--widget--line-height-list: 1.9;
+	--widget--line-height-title: 1.4;
+	--widget--font-weight-title: 700;
+	--widget--spacing-menu: calc(0.66 * var(--global--spacing-unit));
+
+}
+
+@media only screen and (min-width: 652px) { // Not using the mixin because it's compiled after this file
+	:root {
+		--global--font-size-xl: 2.5rem; // 40px / 16px
+		--global--font-size-xxl: 6rem; // 96px / 16px
+		--global--font-size-xxxl: 9rem; // 144px / 16px
+		--heading--font-size-h3: 2rem; // 32px / 16px
+		--heading--font-size-h2: 3rem; // 48px / 16px
+	}
 }

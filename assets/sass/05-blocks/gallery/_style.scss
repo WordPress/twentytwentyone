@@ -12,13 +12,7 @@
 			margin: 0;
 			// Text color is always white to account for default gradient background
 			color: var(--global--color-white);
-			font: var(--global--font-size-sm);
+			font-size: var(--global--font-size-xs);
 		}
-	}
-
-	// Apply max-width to floated items that have no intrinsic width.
-	&.alignleft,
-	&.alignright {
-		max-width: 50%;
 	}
 }

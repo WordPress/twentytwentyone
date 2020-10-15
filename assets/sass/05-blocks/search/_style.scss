@@ -1,9 +1,10 @@
 .wp-block-search {
-	display: flex;
 	max-width: var(--responsive--aligndefault-width);
 
 	.wp-block-search__label {
-		font-weight: normal;
+		font-size: var(--form--font-size);
+		font-weight: var(--form--label-weight-strong);
+		margin-bottom: calc(var(--global--spacing-vertical) / 3);
 	}
 
 	.wp-block-search__input {
@@ -12,7 +13,7 @@
 		color: var(--form--color-text);
 		line-height: var(--global--line-height-body);
 		max-width: inherit;
-		margin-right: calc(.66 * var(--global--spacing-horizontal));
+		margin-right: calc(-1 * var(--button--border-width));
 		padding: var(--form--spacing-unit);
 
 		&:focus {
@@ -20,4 +21,19 @@
 			border-color: var(--form--border-color);
 		}
 	}
+
+	button.wp-block-search__button {
+		margin-left: 0;
+		background-color: transparent;
+		color: var(--button--color-text-hover);
+
+		&:hover {
+			background-color: var(--button--color-background);
+			color: var(--button--color-text);
+		}
+	}
+}
+
+.wp-block-search__button {
+	box-shadow: none;
 }

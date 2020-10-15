@@ -1,3 +1,4 @@
+/* Button extends */
 // Button Placeholder style
 // - Since buttons appear in various blocks,
 //   let’s use a placeholder to keep them all
@@ -11,7 +12,7 @@
 	font-size: var(--button--font-size);
 	background-color: var(--button--color-background);
 	border-radius: var(--button--border-radius);
-	border-width: 0;
+	border: var(--button--border-width) solid var(--button--color-background);
 	text-decoration: none;
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 
@@ -20,11 +21,22 @@
 		background-color: var(--button--color-background-active);
 	}
 
-	&:hover,
+	&:hover {
+		color: var(--button--color-text-hover);
+		background: transparent;
+	}
+
 	&:focus,
 	&.has-focus {
-		color: var(--button--color-text-hover);
-		background-color: var(--button--color-background-hover);
+		outline-offset: -4px;
+		outline: 2px dotted currentColor;
 	}
+
+	&:disabled {
+		background-color: var(--global--color-white-50);
+		border-color: var(--global--color-white-50);
+		color: var(--button--color-text-active);
+	}
+
 }
 

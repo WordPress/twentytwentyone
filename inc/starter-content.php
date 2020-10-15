@@ -1,6 +1,6 @@
 <?php
 /**
- * Twenty Twenty One Starter Content
+ * Twenty Twenty-One Starter Content
  *
  * @link https://make.wordpress.org/core/2016/11/30/starter-content-for-themes-in-4-7/
  *
@@ -45,7 +45,7 @@ function twenty_twenty_one_get_starter_content() {
 		'posts'       => array(
 			'front' => array(
 				'post_type'    => 'page',
-				'post_title'   => __( 'A new portfolio default theme for WordPress', 'twentytwentyone' ),
+				'post_title'   => esc_html__( 'A new portfolio default theme for WordPress', 'twentytwentyone' ),
 				// Use the above featured image with the predefined about page.
 
 				/*
@@ -93,7 +93,7 @@ function twenty_twenty_one_get_starter_content() {
 		'nav_menus'   => array(
 			// Assign a menu to the "primary" location.
 			'primary' => array(
-				'name'  => __( 'Primary', 'twentytwentyone' ),
+				'name'  => esc_html__( 'Primary', 'twentytwentyone' ),
 				'items' => array(
 					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
 					'page_about',
@@ -112,5 +112,4 @@ function twenty_twenty_one_get_starter_content() {
 	 * @param array $starter_content Array of starter content.
 	 */
 	return apply_filters( 'twenty_twenty_one_starter_content', $starter_content );
-
 }

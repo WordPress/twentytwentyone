@@ -28,7 +28,7 @@
 		.wp-block-cover__inner-container,
 		.wp-block-cover-image-text,
 		.wp-block-cover-text {
-			color: var(--cover--color-background);
+			color: var(--cover--color-foreground);
 		}
 	}
 
@@ -93,5 +93,10 @@
 	&.has-left-content,
 	&.has-right-content {
 		justify-content: center;
+	}
+
+	/* Block Styles */
+	&.is-style-twentytwentyone-border {
+		border: calc(3 * var(--separator--height)) solid var(--global--color-border);
 	}
 }

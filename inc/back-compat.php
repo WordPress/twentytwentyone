@@ -12,15 +12,13 @@
  */
 
 /**
- * Prevent switching to the theme on old versions of WordPress.
- *
- * Switches to the default theme.
+ * Display upgrade notice on theme switch.
  *
  * @since 1.0.0
+ *
+ * @return void
  */
 function twenty_twenty_one_switch_theme() {
-	switch_theme( WP_DEFAULT_THEME );
-	unset( $_GET['activated'] ); // phpcs:ignore WordPress.Security.NonceVerification
 	add_action( 'admin_notices', 'twenty_twenty_one_upgrade_notice' );
 }
 add_action( 'after_switch_theme', 'twenty_twenty_one_switch_theme' );
@@ -34,6 +32,8 @@ add_action( 'after_switch_theme', 'twenty_twenty_one_switch_theme' );
  * @since 1.0.0
  *
  * @global string $wp_version WordPress version.
+ *
+ * @return void
  */
 function twenty_twenty_one_upgrade_notice() {
 	echo '<div class="error"><p>';
@@ -51,6 +51,8 @@ function twenty_twenty_one_upgrade_notice() {
  * @since 1.0.0
  *
  * @global string $wp_version WordPress version.
+ *
+ * @return void
  */
 function twenty_twenty_one_customize() {
 	wp_die(
@@ -73,6 +75,8 @@ add_action( 'load-customize.php', 'twenty_twenty_one_customize' );
  * @since 1.0.0
  *
  * @global string $wp_version WordPress version.
+ *
+ * @return void
  */
 function twenty_twenty_one_preview() {
 	if ( isset( $_GET['preview'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification

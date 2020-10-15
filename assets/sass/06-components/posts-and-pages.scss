@@ -11,6 +11,6 @@
 	padding: calc(0.25 * var(--global--spacing-unit)) calc(0.33 * var(--global--spacing-unit));
 }
 
-.updated:not(.published) {
-	display: none;
+.no-results.not-found > *:first-child {
+	margin-bottom: calc(3 * var(--global--spacing-vertical));
 }

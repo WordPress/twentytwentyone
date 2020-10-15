@@ -1,7 +1,7 @@
 .wp-block-cover,
 .wp-block-cover-image {
 
-	background-color: var(--cover--color-foreground);
+	background-color: var(--cover--color-background);
 	min-height: var(--cover--height);
 	margin-top: inherit;
 	margin-bottom: inherit;
@@ -28,7 +28,7 @@
 		.wp-block-cover-image-text,
 		.wp-block-cover-text,
 		.block-editor-block-list__block {
-			color: var(--cover--color-background);
+			color: var(--cover--color-foreground);
 		}
 	}
 
@@ -52,5 +52,10 @@
 		&.has-text-align-right {
 			text-align: right;
 		}
+	}
+
+	// Block Styles
+	&.is-style-twentytwentyone-border {
+		border: calc(3 * var(--separator--height)) solid var(--global--color-border);
 	}
 }

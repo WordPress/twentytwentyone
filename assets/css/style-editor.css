@@ -1,8 +1,8 @@
+@charset "UTF-8";
 /**
  * These styles should be loaded by the Block Editor only
  */
-/* Do we need to serve a font? Add the @font-face styles here. */
-/* Add all variables here. */
+/* Variables */
 :root {
 	/* Font Family */
 	--global--font-primary: var(--font-headings, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
@@ -15,21 +15,24 @@
 	--global--font-size-sm: 1.125rem;
 	--global--font-size-md: 1.25rem;
 	--global--font-size-lg: 1.5rem;
-	--global--font-size-xl: 2rem;
-	--global--font-size-page-title: 6rem;
+	--global--font-size-xl: 2.25rem;
+	--global--font-size-xxl: 4rem;
+	--global--font-size-xxxl: 5rem;
+	--global--font-size-page-title: var(--global--font-size-xxl);
 	--global--letter-spacing: normal;
 	/* Line Height */
 	--global--line-height-base: 1;
 	--global--line-height-body: 1.7;
 	--global--line-height-heading: 1.3;
+	--global--line-height-page-title: 1.1;
 	/* Headings */
 	--heading--font-family: var(--global--font-primary);
 	--heading--line-height: var(--global--line-height-heading);
 	--heading--font-size-h6: var(--global--font-size-xs);
 	--heading--font-size-h5: var(--global--font-size-sm);
 	--heading--font-size-h4: var(--global--font-size-lg);
-	--heading--font-size-h3: 2rem;
-	--heading--font-size-h2: 3rem;
+	--heading--font-size-h3: 1.875rem;
+	--heading--font-size-h2: 2.25rem;
 	--heading--font-size-h1: var(--global--font-size-page-title);
 	--heading--letter-spacing-h6: 0.05em;
 	--heading--letter-spacing-h5: 0.05em;
@@ -42,7 +45,7 @@
 	--heading--line-height-h4: var(--global--line-height-heading);
 	--heading--line-height-h3: var(--heading--line-height);
 	--heading--line-height-h2: var(--heading--line-height);
-	--heading--line-height-h1: var(--heading--line-height);
+	--heading--line-height-h1: var(--global--line-height-page-title);
 	--heading--font-weight: normal;
 	--heading--font-weight-page-title: 300;
 	--heading--font-weight-strong: 600;
@@ -57,6 +60,7 @@
 	--global--color-black: #000;
 	--global--color-dark-gray: #28303d;
 	--global--color-gray: #39414d;
+	--global--color-light-gray: #f0f0f0;
 	--global--color-green: #d1e4dd;
 	--global--color-blue: #d1dfe4;
 	--global--color-purple: #d1d1e4;
@@ -74,7 +78,7 @@
 	--global--color-secondary-hover: var(--global--color-secondary);
 	--global--color-background: var(--global--color-green);
 	/* Mint, default body background */
-	--global--color-border: var(--global--color-black);
+	--global--color-border: var(--global--color-primary);
 	/* Used for borders (separators) */
 	/* Spacing */
 	--global--spacing-unit: 20px;
@@ -85,10 +89,13 @@
 	--global--elevation: 1px 1px 3px 0 rgba(0, 0, 0, 0.2);
 	/* Forms */
 	--form--font-family: var(--global--font-secondary);
-	--form--font-size: var(--global--font-size-md);
+	--form--font-size: var(--global--font-size-sm);
 	--form--line-height: var(--global--line-height-body);
-	--form--color-text: var(--global--color-primary);
-	--form--border-color: var(--global--color-border);
+	--form--color-text: var(--global--color-dark-gray);
+	--form--color-ranged: var(--global--color-secondary);
+	--form--label-weight: normal;
+	--form--label-weight-strong: 500;
+	--form--border-color: var(--global--color-secondary);
 	--form--border-width: 3px;
 	--form--border-radius: 0;
 	--form--spacing-unit: calc(0.5 * var(--global--spacing-unit));
@@ -98,19 +105,19 @@
 	--cover--color-background: var(--global--color-black);
 	/* Buttons */
 	--button--color-text: var(--global--color-background);
-	--button--color-text-hover: var(--button--color-text);
-	--button--color-text-active: var(--button--color-text);
+	--button--color-text-hover: var(--global--color-secondary);
+	--button--color-text-active: var(--global--color-secondary);
 	--button--color-background: var(--global--color-secondary);
-	--button--color-background-hover: var(--global--color-secondary-hover);
-	--button--color-background-active: var(--global--color-primary);
-	--button--font-family: var(--global--font-ui);
+	--button--color-background-hover: var(--global--color-background);
+	--button--color-background-active: var(--global--color-background);
+	--button--font-family: var(--global--font-primary);
 	--button--font-size: var(--global--font-size-base);
-	--button--font-weight: normal;
-	--button--line-height: 1;
-	--button--border-width: 2px;
-	--button--border-radius: 4px;
-	--button--padding-vertical: calc(var(--global--spacing-horizontal) - var(--button--border-width));
-	--button--padding-horizontal: var(--global--spacing-horizontal);
+	--button--font-weight: 500;
+	--button--line-height: 1.5;
+	--button--border-width: 3px;
+	--button--border-radius: 0;
+	--button--padding-vertical: 15px;
+	--button--padding-horizontal: calc(2 * var(--button--padding-vertical));
 	/* entry */
 	--entry-header--color: var(--global--color-primary);
 	--entry-header--color-link: currentColor;
@@ -138,8 +145,8 @@
 	--branding--description--font-family: var(--global--font-secondary);
 	--branding--description--font-size: var(--global--font-size-sm);
 	--branding--description--font-family: var(--global--font-secondary);
-	--branding--logo--max-width: 120px;
-	--branding--logo--max-height: 120px;
+	--branding--logo--max-width: 300px;
+	--branding--logo--max-height: 100px;
 	--branding--logo--max-width-mobile: 96px;
 	--branding--logo--max-height-mobile: 96px;
 	/* Main navigation */
@@ -160,7 +167,7 @@
 	--primary-nav--color-link-border: var(--global--color-primary);
 	--primary-nav--color-text: var(--global--color-primary);
 	--primary-nav--padding: calc(0.66 * var(--global--spacing-unit));
-	--primary-nav--justify-content: center;
+	--primary-nav--justify-content: right;
 	/* Pagination */
 	--pagination--color-text: var(--global--color-primary);
 	--pagination--color-link: var(--global--color-primary);
@@ -179,12 +186,12 @@
 	--footer--font-size: var(--global--font-size-xs);
 	/* Block: Pull quote */
 	--pullquote--font-family: var(--global--font-primary);
-	--pullquote--font-size: var(--heading--font-size-h2);
-	--pullquote--font-style: italic;
+	--pullquote--font-size: var(--heading--font-size-h3);
+	--pullquote--font-style: normal;
 	--pullquote--letter-spacing: var(--heading--letter-spacing-h4);
 	--pullquote--line-height: var(--global--line-height-heading);
-	--pullquote--border-width: 0;
-	--pullquote--border-color: transparent;
+	--pullquote--border-width: 3px;
+	--pullquote--border-color: var(--global--color-primary);
 	--pullquote--color-foreground: var(--global--color-primary);
 	--pullquote--color-background: var(--global--color-background);
 	--quote--border-color: var(--global--color-secondary);
@@ -198,21 +205,30 @@
 	--quote--line-height-large: 1.5;
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
-	--separator--width: calc(6 * var(--global--spacing-horizontal));
+	/* Block: Table */
+	--table--stripes-border-color: var(--global--color-light-gray);
+	--table--stripes-background-color: var(--global--color-light-gray);
+	--table--has-background-border-color: var(--global--color-dark-gray);
+	--table--has-background-text-color: var(--global--color-dark-gray);
+	/* Widgets */
+	--widget--line-height-list: 1.9;
+	--widget--line-height-title: 1.4;
+	--widget--font-weight-title: 700;
+	--widget--spacing-menu: calc(0.66 * var(--global--spacing-unit));
 }
 
-/* Any helpful mixins we need? Put them here. */
-/*
-Example:
-@mixin typography {
-	color: var(--color-charcoal);
-	font-family: var(--font-family);
-	font-size: var(--font-size-global);
-	line-height: var(--line-height-global);
-	word-wrap: break-word;
+@media only screen and (min-width: 652px) {
+	:root {
+		--global--font-size-xl: 2.5rem;
+		--global--font-size-xxl: 6rem;
+		--global--font-size-xxxl: 9rem;
+		--heading--font-size-h3: 2rem;
+		--heading--font-size-h2: 3rem;
+	}
 }
-*/
-.wp-block-search .wp-block-search__button {
+
+/* Button extends */
+.wp-block-button__link, .wp-block-file .wp-block-file__button, .wp-block-search .wp-block-search__button {
 	line-height: var(--button--line-height);
 	color: var(--button--color-text);
 	cursor: pointer;
@@ -221,34 +237,45 @@ Example:
 	font-size: var(--button--font-size);
 	background-color: var(--button--color-background);
 	border-radius: var(--button--border-radius);
-	border-width: 0;
+	border: var(--button--border-width) solid var(--button--color-background);
 	text-decoration: none;
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
 
-.wp-block-search .wp-block-search__button:before, .wp-block-search .wp-block-search__button:after {
+.wp-block-button__link:before, .wp-block-file .wp-block-file__button:before, .wp-block-search .wp-block-search__button:before, .wp-block-button__link:after, .wp-block-file .wp-block-file__button:after, .wp-block-search .wp-block-search__button:after {
 	content: "";
 	display: block;
 	height: 0;
 	width: 0;
 }
 
-.wp-block-search .wp-block-search__button:before {
+.wp-block-button__link:before, .wp-block-file .wp-block-file__button:before, .wp-block-search .wp-block-search__button:before {
 	margin-bottom: -calc(.5em * var(--button--line-height) + -.38);
 }
 
-.wp-block-search .wp-block-search__button:after {
+.wp-block-button__link:after, .wp-block-file .wp-block-file__button:after, .wp-block-search .wp-block-search__button:after {
 	margin-top: -calc(.5em * var(--button--line-height) + -.39);
 }
 
-.wp-block-search .wp-block-search__button:active {
+.wp-block-button__link:active, .wp-block-file .wp-block-file__button:active, .wp-block-search .wp-block-search__button:active {
 	color: var(--button--color-text-active);
 	background-color: var(--button--color-background-active);
 }
 
-.wp-block-search .wp-block-search__button:hover, .wp-block-search .wp-block-search__button:focus, .wp-block-search .has-focus.wp-block-search__button {
+.wp-block-button__link:hover, .wp-block-file .wp-block-file__button:hover, .wp-block-search .wp-block-search__button:hover {
 	color: var(--button--color-text-hover);
-	background-color: var(--button--color-background-hover);
+	background: transparent;
+}
+
+.wp-block-button__link:focus, .wp-block-file .wp-block-file__button:focus, .wp-block-search .wp-block-search__button:focus, .has-focus.wp-block-button__link, .wp-block-file .has-focus.wp-block-file__button, .wp-block-search .has-focus.wp-block-search__button {
+	outline-offset: -4px;
+	outline: 2px dotted currentColor;
+}
+
+.wp-block-button__link:disabled, .wp-block-file .wp-block-file__button:disabled, .wp-block-search .wp-block-search__button:disabled {
+	background-color: var(--global--color-white-50);
+	border-color: var(--global--color-white-50);
+	color: var(--button--color-text-active);
 }
 
 /**
@@ -261,7 +288,7 @@ Example:
  * Root Media Query Variables
  */
 :root {
-	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal) * 0.6 );
+	--responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal) * 0.6);
 	--responsive--aligndefault-width: calc(100vw - var(--responsive--spacing-horizontal));
 	--responsive--alignwide-width: calc(100vw - var(--responsive--spacing-horizontal));
 	--responsive--alignfull-width: 100%;
@@ -309,9 +336,6 @@ Example:
 	}
 }
 
-/**
- * Output
- */
 blockquote {
 	margin: 0;
 	padding: 0;
@@ -366,6 +390,11 @@ img {
 	max-width: 100%;
 }
 
+/* Classic editor images */
+.entry-content img {
+	max-width: 100%;
+}
+
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
@@ -407,27 +436,73 @@ figcaption,
 	padding: 0;
 }
 
-.wp-block-button__link {
-	color: var(--button--color-text);
-	font-weight: var(--button--font-weight);
-	font-family: var(--button--font-family);
-	font-size: var(--button--font-size);
-	line-height: var(--button--line-height);
-	background-color: var(--button--color-background);
-	border-radius: var(--button--border-radius);
-	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
+select {
+	border: var(--form--border-width) solid var(--form--border-color);
+	border-radius: var(--form--border-radius);
+	color: var(--form--color-text);
+	font-size: var(--form--font-size);
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	padding: var(--form--spacing-unit) calc(3 * var(--form--spacing-unit)) var(--form--spacing-unit) var(--form--spacing-unit);
+	/* stylelint-disable */
+	background: var(--global--color-white) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2328303d'><polygon points='0,0 10,0 5,5'/></svg>") no-repeat;
+	/* stylelint-enable */
+	background-position: right var(--form--spacing-unit) top 60%;
 }
 
-.wp-block-button__link:hover, .wp-block-button__link:focus, .wp-block-button__link.has-focus {
-	color: var(--button--color-text-hover);
-	background-color: var(--button--color-background-hover);
+/*
+ * text-underline-offset doesn't work in Chrome at all 👎
+ * But looks nice in Safari/Firefox, so let's keep it and
+ * maybe Chrome will support it soon.
+ */
+a {
+	cursor: pointer;
+	color: var(--wp--style--color--link, var(--global--color-primary));
+	text-underline-offset: 3px;
+	text-decoration-skip-ink: all;
+}
+
+a:hover {
+	text-decoration-style: dotted;
+	text-decoration-skip-ink: none;
+}
+
+.site a:focus {
+	outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
+	text-decoration: none;
+}
+
+.has-background:not(.has-background-background-color) .has-link-color a,
+.has-background:not(.has-background-background-color).has-link-color a {
+	color: var(--wp--style--color--link, var(--global--color-primary));
 }
 
 .wp-block-button__link.is-style-outline,
 .is-style-outline .wp-block-button__link {
 	color: var(--button--color-background);
 	background: transparent;
-	border: 2px solid currentColor;
+	border: var(--button--border-width) solid currentColor;
+}
+
+.wp-block-button__link.is-style-outline:visited,
+.is-style-outline .wp-block-button__link:visited {
+	color: var(--button--color-background);
+}
+
+.wp-block-button__link.is-style-outline:active, .wp-block-button__link.is-style-outline:hover,
+.is-style-outline .wp-block-button__link:active,
+.is-style-outline .wp-block-button__link:hover {
+	background-color: var(--button--color-background);
+	color: var(--button--color-text);
+	border: var(--button--border-width) solid var(--button--color-background);
+}
+
+.wp-block-button__link.is-style-outline:focus, .wp-block-button__link.is-style-outline.has-focus,
+.is-style-outline .wp-block-button__link:focus,
+.is-style-outline .wp-block-button__link.has-focus {
+	outline-offset: -7px;
+	background: transparent;
 }
 
 .wp-block-button__link.is-style-squared,
@@ -435,13 +510,19 @@ figcaption,
 	border-radius: 0;
 }
 
-div[data-type="core/button"] {
-	display: block;
+.is-selected.is-style-outline .wp-block-button__link:hover {
+	background-color: transparent;
+	color: var(--button--color-background);
+}
+
+.is-style-outline .wp-block-button__link[style*="radius"],
+.wp-block-button__link[style*="radius"] {
+	outline-offset: 2px;
 }
 
 .wp-block-cover,
 .wp-block-cover-image {
-	background-color: var(--cover--color-foreground);
+	background-color: var(--cover--color-background);
 	min-height: var(--cover--height);
 	margin-top: inherit;
 	margin-bottom: inherit;
@@ -488,7 +569,7 @@ div[data-type="core/button"] {
 .wp-block-cover-image:not([class*="background-color"]) .wp-block-cover-image-text,
 .wp-block-cover-image:not([class*="background-color"]) .wp-block-cover-text,
 .wp-block-cover-image:not([class*="background-color"]) .block-editor-block-list__block {
-	color: var(--cover--color-background);
+	color: var(--cover--color-foreground);
 }
 
 .wp-block-cover h2,
@@ -516,26 +597,68 @@ div[data-type="core/button"] {
 	text-align: right;
 }
 
+.wp-block-cover.is-style-twentytwentyone-border,
+.wp-block-cover-image.is-style-twentytwentyone-border {
+	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+}
+
+.wp-block-columns .wp-block,
+.wp-block-columns .wp-block-column {
+	max-width: inherit;
+}
+
+@media only screen and (min-width: 652px) {
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) {
+		margin-left: calc(-2 * var(--global--spacing-horizontal));
+		margin-top: calc(2.5 * var(--global--spacing-horizontal));
+		z-index: 2;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p:not(.has-background),
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1:not(.has-background),
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h2:not(.has-background),
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h3:not(.has-background),
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h4:not(.has-background),
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h5:not(.has-background),
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h6:not(.has-background),
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul:not(.has-background),
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol:not(.has-background),
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre:not(.has-background) {
+		background-color: var(--global--color-background);
+		padding: var(--global--spacing-unit);
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul:not(.has-background),
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol:not(.has-background) {
+		padding-left: calc(2 * var(--global--spacing-horizontal));
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n).is-vertically-aligned-center {
+		margin-top: 0;
+	}
+}
+
+.wp-block[data-align="full"] p:not(.has-background),
+.wp-block[data-align="full"] h1:not(.has-background),
+.wp-block[data-align="full"] h2:not(.has-background),
+.wp-block[data-align="full"] h3:not(.has-background),
+.wp-block[data-align="full"] h4:not(.has-background),
+.wp-block[data-align="full"] h5:not(.has-background),
+.wp-block[data-align="full"] h6:not(.has-background) {
+	padding-left: var(--global--spacing-unit);
+	padding-right: var(--global--spacing-unit);
+}
+
 .wp-block-file .wp-block-file__textlink {
-	border-bottom: 1px solid var(--global--color-secondary);
-	color: var(--global--color-primary);
-	text-decoration: none;
+	text-decoration: underline;
+	text-decoration-style: solid;
+	text-decoration-thickness: 1px;
+}
+
+.wp-block-file .wp-block-file__textlink:hover {
+	text-decoration: underline;
+	text-decoration-style: dotted;
 }
 
 .wp-block-file .wp-block-file__button {
-	color: var(--button--color-text);
-	font-weight: var(--button--font-weight);
-	font-family: var(--button--font-family);
-	font-size: var(--button--font-size);
-	line-height: var(--button--line-height);
-	background-color: var(--button--color-background);
-	border-radius: var(--button--border-radius);
-	padding: calc(0.5 * var(--button--padding-vertical)) calc(0.5 * var(--button--padding-horizontal));
-}
-
-.wp-block-file .wp-block-file__button:hover, .wp-block-file .wp-block-file__button:focus, .wp-block-file .wp-block-file__button.has-focus {
-	color: var(--button--color-text-hover);
-	background-color: var(--button--color-background-hover);
+	display: inline-block;
 }
 
 .wp-block-gallery figcaption {
@@ -544,6 +667,15 @@ div[data-type="core/button"] {
 
 .wp-block-group.has-background {
 	padding: var(--global--spacing-vertical);
+}
+
+.wp-block-group.is-style-twentytwentyone-border {
+	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+	padding: var(--global--spacing-vertical);
+}
+
+.wp-block-group .wp-block-group__inner-container *:last-child {
+	margin-bottom: 0;
 }
 
 .wp-block-group .wp-block-group.has-background > .block-editor-block-list__layout > [data-align="full"] {
@@ -676,6 +808,16 @@ h6,
 	margin: 0 auto;
 }
 
+/* Block Styles */
+.wp-block-image.is-style-twentytwentyone-border img,
+.wp-block-image.is-style-twentytwentyone-image-frame img {
+	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+}
+
+.wp-block-image.is-style-twentytwentyone-image-frame img {
+	padding: var(--global--spacing-unit);
+}
+
 .wp-block-latest-comments {
 	margin-left: 0;
 }
@@ -685,8 +827,8 @@ h6,
 }
 
 .wp-block-latest-posts:not(.is-grid) > li {
-	margin-top: var(--global--spacing-vertical);
-	margin-bottom: var(--global--spacing-vertical);
+	margin-top: calc(1.666 * var(--global--spacing-vertical));
+	margin-bottom: calc(1.666 * var(--global--spacing-vertical));
 }
 
 .wp-block-latest-posts:not(.is-grid) > li:first-child {
@@ -706,8 +848,8 @@ h6,
 }
 
 .wp-block-latest-posts > li > * {
-	margin-top: calc(0.5 * var(--global--spacing-vertical));
-	margin-bottom: calc(0.5 * var(--global--spacing-vertical));
+	margin-top: calc(0.333 * var(--global--spacing-vertical));
+	margin-bottom: calc(0.333 * var(--global--spacing-vertical));
 }
 
 .wp-block-latest-posts > li > *:first-child {
@@ -719,10 +861,18 @@ h6,
 }
 
 .wp-block-latest-posts > li > a {
+	display: inline-block;
 	font-family: var(--latest-posts--title-font-family);
 	font-size: var(--latest-posts--title-font-size);
 	font-weight: var(--heading--font-weight);
 	line-height: var(--global--line-height-heading);
+	margin-bottom: calc(0.333 * var(--global--spacing-vertical));
+}
+
+.wp-block-latest-posts .wp-block-latest-posts__post-author {
+	color: var(--global--color-primary);
+	font-size: var(--global--font-size-md);
+	line-height: var(--global--line-height-body);
 }
 
 .wp-block-latest-posts .wp-block-latest-posts__post-date {
@@ -741,34 +891,74 @@ h6,
 	font-family: var(--latest-posts--description-font-family);
 	font-size: var(--latest-posts--description-font-size);
 	line-height: var(--global--line-height-body);
+	margin-top: calc(0.666 * var(--global--spacing-vertical));
 }
 
-@media only screen and (min-width: 592px) {
-	.wp-block-latest-posts.is-style-tto-alternating-grid {
-		overflow: hidden;
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers {
+	border-top: calc(3 * var(--separator--height)) solid var(--global--color-border);
+	border-bottom: calc(3 * var(--separator--height)) solid var(--global--color-border);
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers:not(.is-grid) > li,
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers > li {
+	padding-bottom: var(--global--spacing-vertical);
+	border-bottom: var(--separator--height) solid var(--global--color-border);
+	margin-top: var(--global--spacing-vertical);
+	margin-bottom: var(--global--spacing-vertical);
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers:not(.is-grid) > li:last-child,
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers > li:last-child {
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid {
+	box-shadow: inset 0 -1px 0 0 var(--global--color-border);
+	border-bottom: calc(2 * var(--separator--height)) solid var(--global--color-border);
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid li {
+	margin: 0;
+	padding-top: var(--global--spacing-vertical);
+	padding-right: var(--global--spacing-horizontal);
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid li:last-child {
+	padding-bottom: var(--global--spacing-vertical);
+}
+
+@media screen and (min-width: 600px) {
+	.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid.columns-2 li {
+		width: calc((100% / 2));
 	}
-	.wp-block-latest-posts.is-style-tto-alternating-grid > li {
-		width: calc(50% - (0.5 * var(--global--spacing-horizontal)));
-		max-width: calc(50% - (0.5 * var(--global--spacing-horizontal)));
-		text-align: right;
+	.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid.columns-3 li {
+		width: calc((100% / 3));
 	}
-	.wp-block-latest-posts.is-style-tto-alternating-grid > li:nth-child(2n + 1) {
-		float: right;
-		text-align: left;
+	.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid.columns-4 li {
+		width: calc((100% / 4));
 	}
-	.wp-block-latest-posts.is-style-tto-alternating-grid.is-grid {
-		display: inherit;
+	.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid.columns-5 li {
+		width: calc((100% / 5));
 	}
-	.wp-block-latest-posts.is-style-tto-alternating-grid.is-grid > li {
-		margin-top: var(--global--spacing-vertical);
-		margin-right: 0;
+	.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-dividers.is-grid.columns-6 li {
+		width: calc((100% / 6));
 	}
-	.wp-block-latest-posts.is-style-tto-alternating-grid.is-grid > li:first-child {
-		margin-top: 0;
-	}
-	.wp-block-latest-posts.is-style-tto-alternating-grid.is-grid > li:last-child {
-		margin-bottom: 0;
-	}
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders li {
+	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+	padding: var(--global--spacing-vertical) var(--global--spacing-horizontal);
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders li:last-child {
+	padding-bottom: var(--global--spacing-vertical);
+	margin-bottom: var(--global--spacing-vertical);
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders:not(.is-grid) li {
+	margin-top: var(--global--spacing-horizontal);
+	margin-bottom: var(--global--spacing-horizontal);
 }
 
 .gallery-item {
@@ -825,13 +1015,14 @@ ul.aligncenter,
 ol.aligncenter {
 	list-style-position: inside;
 	padding: 0;
+	text-align: center;
 }
 
 ul.alignright,
 ol.alignright {
 	list-style-position: inside;
-	text-align: right;
 	padding: 0;
+	text-align: right;
 }
 
 li > ul,
@@ -847,6 +1038,10 @@ dt {
 .wp-block-media-text .block-editor-inner-blocks {
 	padding-right: var(--global--spacing-horizontal);
 	padding-left: var(--global--spacing-horizontal);
+}
+
+.wp-block-media-text.is-style-twentytwentyone-border {
+	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
 }
 
 .wp-block-navigation .wp-block-navigation__container {
@@ -888,18 +1083,31 @@ p.has-background {
 	padding: calc(2 * var(--global--spacing-unit)) 0;
 	margin-left: 0;
 	margin-right: 0;
-	text-align: left;
+	text-align: center;
 	border-top-color: var(--pullquote--border-color);
+	border-top-style: solid;
 	border-top-width: var(--pullquote--border-width);
 	border-bottom-color: var(--pullquote--border-color);
+	border-bottom-style: solid;
 	border-bottom-width: var(--pullquote--border-width);
 	color: var(--pullquote--color-foreground);
+	position: relative;
+}
+
+.wp-block-pullquote::before {
+	color: currentColor;
+	content: "\201C";
+	display: block;
+	font-size: 3rem;
+	font-weight: 500;
+	line-height: 1;
 }
 
 .wp-block-pullquote p {
 	font-family: var(--pullquote--font-family);
 	font-size: var(--pullquote--font-size);
 	font-style: var(--pullquote--font-style);
+	font-weight: 700;
 	letter-spacing: var(--pullquote--letter-spacing);
 	line-height: var(--pullquote--line-height);
 	margin: 0;
@@ -914,6 +1122,8 @@ p.has-background {
 .wp-block-pullquote footer {
 	color: var(--global--color-primary);
 	font-size: var(--global--font-size-xs);
+	font-style: var(--pullquote--font-style);
+	text-transform: none;
 }
 
 .wp-block-pullquote:not(.is-style-solid-color) {
@@ -921,9 +1131,22 @@ p.has-background {
 }
 
 .wp-block-pullquote.is-style-solid-color {
-	background-color: var(--pullquote--color-foreground);
-	color: var(--pullquote--color-background);
-	padding: calc(2 * var(--global--spacing-unit));
+	background-color: var(--pullquote--color-background);
+	color: var(--pullquote--color-foreground);
+	padding: calc(2.5 * var(--global--spacing-unit));
+	border-width: var(--pullquote--border-width);
+	border-style: solid;
+	border-color: var(--pullquote--border-color);
+}
+
+@media (min-width: 600px) {
+	.wp-block-pullquote.is-style-solid-color {
+		padding: calc(5 * var(--global--spacing-unit));
+	}
+}
+
+.wp-block-pullquote.is-style-solid-color::before {
+	text-align: left;
 }
 
 .wp-block-pullquote.is-style-solid-color.alignleft blockquote,
@@ -935,8 +1158,11 @@ p.has-background {
 
 .wp-block-pullquote.is-style-solid-color blockquote {
 	margin: 0;
-	text-align: left;
 	max-width: 100%;
+}
+
+.wp-block-pullquote.is-style-solid-color blockquote p {
+	font-size: var(--pullquote--font-size);
 }
 
 .wp-block-pullquote.is-style-solid-color .wp-block-pullquote__citation,
@@ -952,7 +1178,7 @@ p.has-background {
 .wp-block-quote {
 	border-left-color: var(--quote--border-color);
 	border-left-width: var(--quote--border-width);
-	margin: var(--global--spacing-vertical) 0;
+	margin: var(--global--spacing-vertical) auto;
 	padding-left: var(--global--spacing-horizontal);
 }
 
@@ -1009,13 +1235,114 @@ p.has-background {
 	color: currentColor;
 }
 
+.wp-block-rss {
+	padding-left: 0;
+}
+
+.wp-block-rss > li {
+	list-style: none;
+}
+
+.wp-block-rss:not(.is-grid) > li {
+	margin-top: calc(1.666 * var(--global--spacing-vertical));
+	margin-bottom: calc(1.666 * var(--global--spacing-vertical));
+}
+
+.wp-block-rss:not(.is-grid) > li:first-child {
+	margin-top: 0;
+}
+
+.wp-block-rss:not(.is-grid) > li:last-child {
+	margin-bottom: 0;
+}
+
+.wp-block-rss.is-grid > li {
+	margin-bottom: var(--global--spacing-vertical);
+}
+
+.wp-block-rss.is-grid > li:last-child {
+	margin-bottom: 0;
+}
+
+.wp-block-rss.is-grid.columns-2 > li:nth-last-child(-n + 2):nth-child(2n + 1),
+.wp-block-rss.is-grid.columns-2 > li:nth-last-child(-n + 2):nth-child(2n + 1) ~ li,
+.wp-block-rss.is-grid.columns-3 > li:nth-last-child(-n + 3):nth-child(3n + 1),
+.wp-block-rss.is-grid.columns-3 > li:nth-last-child(-n + 3):nth-child(3n + 1) ~ li,
+.wp-block-rss.is-grid.columns-4 > li:nth-last-child(-n + 4):nth-child(4n + 1),
+.wp-block-rss.is-grid.columns-4 > li:nth-last-child(-n + 4):nth-child(4n + 1) ~ li,
+.wp-block-rss.is-grid.columns-5 > li:nth-last-child(-n + 5):nth-child(5n + 1),
+.wp-block-rss.is-grid.columns-5 > li:nth-last-child(-n + 5):nth-child(5n + 1) ~ li,
+.wp-block-rss.is-grid.columns-6 > li:nth-last-child(-n + 6):nth-child(6n + 1),
+.wp-block-rss.is-grid.columns-6 > li:nth-last-child(-n + 6):nth-child(6n + 1) ~ li {
+	margin-bottom: 0;
+}
+
+.wp-block-rss > li > * {
+	margin-top: calc(0.333 * var(--global--spacing-vertical));
+	margin-bottom: calc(0.333 * var(--global--spacing-vertical));
+}
+
+.wp-block-rss > li > *:first-child {
+	margin-top: 0;
+}
+
+.wp-block-rss > li > *:last-child {
+	margin-bottom: 0;
+}
+
+.wp-block-rss .wp-block-rss__item-title > a {
+	display: inline-block;
+	font-family: var(--latest-posts--title-font-family);
+	font-size: var(--latest-posts--title-font-size);
+	font-weight: var(--heading--font-weight);
+	line-height: var(--global--line-height-heading);
+	margin-bottom: calc(0.333 * var(--global--spacing-vertical));
+}
+
+.wp-block-rss .wp-block-rss__item-author {
+	color: var(--global--color-primary);
+	font-size: var(--global--font-size-md);
+	line-height: var(--global--line-height-body);
+}
+
+.wp-block-rss .wp-block-rss__item-publish-date {
+	color: var(--global--color-primary);
+	font-size: var(--global--font-size-xs);
+	line-height: var(--global--line-height-body);
+}
+
+[class*="inner-container"] .wp-block-rss .wp-block-rss__item-publish-date,
+.has-background .wp-block-rss .wp-block-rss__item-publish-date {
+	color: currentColor;
+}
+
+.wp-block-rss .wp-block-rss__item-excerpt,
+.wp-block-rss .wp-block-rss__item-full-content {
+	font-family: var(--latest-posts--description-font-family);
+	font-size: var(--latest-posts--description-font-size);
+	line-height: var(--global--line-height-body);
+	margin-top: calc(0.666 * var(--global--spacing-vertical));
+}
+
+.wp-block-rss.alignfull {
+	padding-left: var(--global--spacing-unit);
+	padding-right: var(--global--spacing-unit);
+}
+
+.entry-content [class*="inner-container"] .wp-block-rss.alignfull,
+.entry-content .has-background .wp-block-rss.alignfull {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 .wp-block-search {
-	display: flex;
 	max-width: var(--responsive--aligndefault-width);
 }
 
 .wp-block-search .wp-block-search__label {
-	font-weight: normal;
+	font-size: var(--form--font-size);
+	font-weight: var(--form--label-weight-strong);
+	margin-bottom: calc(var(--global--spacing-vertical) / 3);
 }
 
 .wp-block-search .wp-block-search__input {
@@ -1025,7 +1352,7 @@ p.has-background {
 	font-size: var(--form--font-size);
 	line-height: var(--form--line-height);
 	max-width: inherit;
-	margin-right: calc(.66 * var(--global--spacing-horizontal));
+	margin-right: calc(-1 * var(--button--border-width));
 	padding: var(--form--spacing-unit);
 }
 
@@ -1033,10 +1360,23 @@ p.has-background {
 	border-color: var(--form--border-color);
 }
 
+.wp-block-search .wp-block-search__button {
+	box-shadow: none;
+	margin-left: 0;
+	background-color: transparent;
+	color: var(--button--color-text-hover);
+}
+
+.wp-block-search .wp-block-search__button:hover {
+	background-color: var(--button--color-background);
+	color: var(--button--color-text);
+}
+
 .wp-block-separator,
 hr {
 	border-bottom: var(--separator--height) solid var(--separator--border-color);
 	clear: both;
+	opacity: 1;
 }
 
 .wp-block-separator[style*="text-align:right"], .wp-block-separator[style*="text-align: right"],
@@ -1045,9 +1385,14 @@ hr[style*="text-align: right"] {
 	border-right-color: var(--separator--border-color);
 }
 
-.wp-block-separator.is-style-wide,
-hr.is-style-wide {
-	border-bottom-width: var(--separator--height);
+.wp-block-separator:not(.is-style-dots),
+hr:not(.is-style-dots) {
+	max-width: inherit;
+}
+
+.wp-block-separator.is-style-twentytwentyone-separator-thick,
+hr.is-style-twentytwentyone-separator-thick {
+	border-bottom-width: calc(3 * var(--separator--height));
 }
 
 .wp-block-separator.is-style-dots,
@@ -1086,6 +1431,18 @@ hr {
 	border-color: currentColor;
 }
 
+.wp-block-social-links li.wp-block-social-link:first-child {
+	margin-top: auto;
+}
+
+.wp-block-social-links.is-style-twentytwentyone-social-icons-color button {
+	color: var(--global--color-primary);
+}
+
+.wp-block-social-links.is-style-twentytwentyone-social-icons-color .wp-social-link {
+	background: none;
+}
+
 table th,
 .wp-block-table th {
 	font-family: var(--heading--font-family);
@@ -1098,20 +1455,143 @@ table th,
 	padding: calc(0.5 * var(--global--spacing-unit));
 }
 
+table.is-style-regular .has-background,
+table.is-style-stripes .has-background thead tr,
+table.is-style-stripes .has-background tfoot tr,
+table.is-style-stripes .has-background tbody tr:nth-child(even),
+.wp-block-table.is-style-regular .has-background,
+.wp-block-table.is-style-stripes .has-background thead tr,
+.wp-block-table.is-style-stripes .has-background tfoot tr,
+.wp-block-table.is-style-stripes .has-background tbody tr:nth-child(even) {
+	color: var(--table--has-background-text-color);
+}
+
+table.is-style-stripes,
+.wp-block-table.is-style-stripes {
+	border-color: var(--table--stripes-border-color);
+}
+
+table.is-style-stripes th,
+table.is-style-stripes td,
+.wp-block-table.is-style-stripes th,
+.wp-block-table.is-style-stripes td {
+	border-width: 0;
+}
+
+table.is-style-stripes tbody tr:nth-child(odd),
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+	background-color: var(--table--stripes-background-color);
+}
+
+table.wp-calendar-table td,
+table.wp-calendar-table th {
+	background: transparent;
+	border: 0;
+	text-align: center;
+	line-height: 2;
+	vertical-align: middle;
+}
+
+table.wp-calendar-table th {
+	font-weight: bold;
+}
+
+table.wp-calendar-table thead,
+table.wp-calendar-table tbody {
+	border: 1px solid var(--global--color-dark-gray);
+}
+
+table.wp-calendar-table caption {
+	font-weight: bold;
+	text-align: left;
+	margin-bottom: var(--global--spacing-unit);
+}
+
+.wp-calendar-nav {
+	text-align: left;
+	margin-top: calc(var(--global--spacing-unit) / 2);
+}
+
+.wp-calendar-nav svg {
+	height: 1em;
+	vertical-align: middle;
+}
+
+.wp-calendar-nav svg path {
+	fill: currentColor;
+}
+
+.wp-calendar-nav .wp-calendar-nav-next {
+	float: right;
+}
+
 pre.wp-block-verse {
 	padding: 0;
+}
+
+:root .is-extra-small-text,
+:root .has-extra-small-font-size {
+	font-size: var(--global--font-size-xs);
+}
+
+:root .is-small-text,
+:root .has-small-font-size {
+	font-size: var(--global--font-size-sm);
+}
+
+:root .is-regular-text,
+:root .has-regular-font-size,
+:root .is-normal-font-size,
+:root .has-normal-font-size,
+:root .has-medium-font-size {
+	font-size: var(--global--font-size-base);
+}
+
+:root .is-large-text,
+:root .has-large-font-size {
+	font-size: var(--global--font-size-lg);
+	line-height: var(--global--line-height-heading);
+}
+
+:root .is-larger-text,
+:root .has-larger-font-size,
+:root .is-extra-large-text,
+:root .has-extra-large-font-size {
+	font-size: var(--global--font-size-xl);
+	line-height: var(--global--line-height-heading);
+}
+
+:root .is-huge-text,
+:root .has-huge-font-size {
+	font-size: var(--global--font-size-xxl);
+	line-height: var(--global--line-height-heading);
+	font-weight: var(--heading--font-weight-page-title);
+}
+
+:root .is-gigantic-text,
+:root .has-gigantic-font-size {
+	font-size: var(--global--font-size-xxxl);
+	line-height: var(--global--line-height-heading);
+	font-weight: var(--heading--font-weight-page-title);
 }
 
 /**
 * Editor Post Title
 * - Needs a special styles
 */
-.editor-post-title__block .editor-post-title__input {
+.wp-block.editor-post-title__block {
+	border-bottom: 3px solid var(--global--color-border);
+	padding-bottom: calc(2 * var(--global--spacing-vertical));
+	margin-bottom: calc(3 * var(--global--spacing-vertical));
+	max-width: var(--responsive--alignwide-width);
+}
+
+.wp-block.editor-post-title__block .editor-post-title__input {
 	color: var(--global--color-secondary);
 	font-family: var(--heading--font-family);
-	font-weight: var(--heading--font-weight-page-title);
 	font-size: var(--global--font-size-page-title);
-	line-height: var(--heading--line-height);
+	font-weight: var(--heading--font-weight-page-title);
+	line-height: var(--heading--line-height-h1);
 }
 
 .wp-block.block-editor-default-block-appender > textarea {
@@ -1127,7 +1607,7 @@ pre.wp-block-verse {
 	color: var(--global--color-secondary);
 }
 
-.has-background:not(.has-background-background-color) a,
+.has-background:not(.has-background-background-color) a:not(.wp-block-button__link),
 .has-background p,
 .has-background h1,
 .has-background h2,
@@ -1156,42 +1636,6 @@ pre.wp-block-verse {
 .has-black-background-color[class] {
 	background-color: var(--global--color-black);
 	color: var(--global--color-primary);
-}
-
-.is-tiny-text,
-.has-tiny-font-size {
-	font-size: var(--global--font-size-xs);
-}
-
-.is-small-text,
-.has-small-font-size {
-	font-size: var(--global--font-size-sm);
-}
-
-.is-regular-text,
-.has-regular-font-size,
-.has-normal-font-size,
-.has-medium-font-size {
-	font-size: var(--global--font-size-md);
-}
-
-.is-large-text,
-.has-large-font-size {
-	font-size: var(--global--font-size-lg);
-	line-height: var(--global--line-height-heading);
-}
-
-.is-larger-text,
-.has-larger-font-size,
-.has-huge-font-size {
-	font-size: var(--global--font-size-xl);
-	line-height: var(--global--line-height-heading);
-}
-
-.has-drop-cap:not(:focus)::first-letter {
-	font-family: var(--heading--font-family);
-	font-size: calc(2 * var(--heading--font-size-h1));
-	font-weight: var(--heading--font-weight);
 }
 
 /**
@@ -1238,6 +1682,21 @@ pre.wp-block-verse {
 	margin-left: var(--global--spacing-horizontal);
 }
 
+.has-drop-cap:not(:focus)::first-letter {
+	font-size: calc(2 * var(--heading--font-size-h1));
+}
+
+@media only screen and (min-width: 482px) {
+	.wp-block[data-align="left"] > * {
+		max-width: 290px;
+		margin-right: var(--global--spacing-horizontal);
+	}
+	.wp-block[data-align="right"] > * {
+		max-width: 290px;
+		margin-left: var(--global--spacing-horizontal);
+	}
+}
+
 html {
 	font-family: var(--global--font-secondary);
 	line-height: var(--global--line-height-body);
@@ -1255,29 +1714,16 @@ body {
 }
 
 .wp-block a {
-	border-bottom: 1px solid var(--global--color-secondary);
 	color: var(--wp--style--color--link, var(--global--color-primary));
-	text-decoration: none;
-}
-
-.wp-block a:hover, .wp-block a:focus {
-	border-bottom-color: transparent;
 }
 
 .wp-block a:hover {
-	color: var(--global--color-primary-hover);
+	text-decoration-style: dotted;
 }
 
 .wp-block a:focus {
-	color: var(--global--color-secondary);
-}
-
-.wp-block a:active {
-	color: var(--wp--style--color--link, var(--global--color-primary));
-}
-
-.has-link-color .wp-block a {
-	border-bottom: 1px solid var(--wp--style--color--link, --global--color-primary);
+	outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
+	text-decoration: none;
 }
 
 .has-background:not(.has-background-background-color) .has-link-color a,
@@ -1330,7 +1776,7 @@ a {
 	color: var(--global--color-white);
 }
 
-.has-background:not(.has-background-background-color) a,
+.has-background:not(.has-background-background-color) a:not(.wp-block-button__link),
 .has-background p,
 .has-background h1,
 .has-background h2,
@@ -1343,17 +1789,14 @@ a {
 
 .has-black-background-color[class] {
 	background-color: var(--global--color-black);
-	color: var(--global--color-white);
 }
 
 .has-gray-background-color[class] {
 	background-color: var(--global--color-gray);
-	color: var(--global--color-white);
 }
 
 .has-dark-gray-background-color[class] {
 	background-color: var(--global--color-dark-gray);
-	color: var(--global--color-white);
 }
 
 .has-green-background-color[class] {
@@ -1383,3 +1826,45 @@ a {
 .has-white-background-color[class] {
 	background-color: var(--global--color-white);
 }
+
+:not(.has-text-color).has-black-background-color[class], :not(.has-text-color).has-gray-background-color[class], :not(.has-text-color).has-dark-gray-background-color[class] {
+	color: var(--global--color-white);
+}
+
+:not(.has-text-color).has-green-background-color[class], :not(.has-text-color).has-blue-background-color[class], :not(.has-text-color).has-purple-background-color[class], :not(.has-text-color).has-red-background-color[class], :not(.has-text-color).has-orange-background-color[class], :not(.has-text-color).has-yellow-background-color[class], :not(.has-text-color).has-white-background-color[class] {
+	color: var(--global--color-dark-gray);
+}
+
+.has-purple-to-yellow-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-purple), var(--global--color-yellow));
+}
+
+.has-yellow-to-purple-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-yellow), var(--global--color-purple));
+}
+
+.has-green-to-yellow-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-green), var(--global--color-yellow));
+}
+
+.has-yellow-to-green-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-yellow), var(--global--color-green));
+}
+
+.has-red-to-yellow-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-red), var(--global--color-yellow));
+}
+
+.has-yellow-to-red-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-yellow), var(--global--color-red));
+}
+
+.has-purple-to-red-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-purple), var(--global--color-red));
+}
+
+.has-red-to-purple-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-red), var(--global--color-purple));
+}
+
+/*# sourceMappingURL=style-editor.css.map */

@@ -28,6 +28,7 @@
 }
 
 h1.entry-title {
+	line-height: var(--heading--line-height-h1);
 	font-weight: var(--heading--font-weight-page-title);
 }
 
@@ -70,10 +71,6 @@ h1.entry-title {
 	}
 }
 
-.entry-attachment {
-	text-align: center;
-}
-
 .entry-meta {
 
 	color: var(--entry-meta--color);
@@ -94,10 +91,6 @@ h1.entry-title {
 
 		&:last-child {
 			margin-right: 0;
-		}
-
-		.published + .updated {
-			display: none; // Hide updated date?
 		}
 	}
 
@@ -132,24 +125,12 @@ h1.entry-title {
 	font-size: var(--entry-meta--font-size);
 	display: block;
 
-	> span {
-		margin-right: calc(0.5 * var(--global--spacing-unit));
-
-		.published + .updated {
-			display: none; // Hide updated date?
-		}
-	}
-
 	a {
 		color: var(--entry-meta--color-link);
 
 		&:hover,
 		&:focus {
 			color: var(--entry-meta--color-hover);
-		}
-
-		&:hover {
-			border-color: transparent;
 		}
 
 		&:active {
@@ -180,6 +161,35 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	column-gap: calc(2 * var(--global--spacing-horizontal));
+
+	.posted-by {
+
+		.posted-on,
+		.byline {
+			display: block;
+		}
+	}
+
+	.post-taxonomies {
+
+		.cat-links,
+		.tags-links {
+			display: block;
+		}
+	}
+
+	@include media(mobile-only) {
+		display: block;
+
+		.post-taxonomies {
+
+			.cat-links,
+			.tags-links {
+				text-align: left;
+			}
+		}
+	}
+
 }
 
 .single .site-main > article > .entry-footer > span {
@@ -187,9 +197,15 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .single .site-main > article > .entry-footer .cat-links,
-.single .site-main > article > .entry-footer .tags-links {
+.single .site-main > article > .entry-footer .tags-links,
+.single .site-main > article > .entry-footer .full-size-link {
 	justify-self: end;
 	text-align: right;
+}
+
+// Place tag links in last grid column space
+.single .site-main > article > .entry-footer .tags-links {
+	grid-column-start: 2;
 }
 
 /**
@@ -212,6 +228,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 		max-width: 100%;
 		margin-left: auto;
 		margin-right: auto;
+		margin-top: calc(2 * var(--global--spacing-vertical));
 	}
 }
 

@@ -124,9 +124,9 @@ $breakpoint_xxl: 1024px;
 }
 
 %responsive-alignfull-width-mobile {
-	max-width: calc(100% + (2 * var(--global--spacing-horizontal)));
-	width: calc(100% + (2 * var(--global--spacing-horizontal)));
-	margin-left: calc(-1 * var(--global--spacing-horizontal));
+	max-width: var(--responsive--alignfull-width);
+	width: var(--responsive--alignfull-width);
+	margin-left: auto;
 	margin-right: auto;
 }
 
@@ -203,10 +203,7 @@ $breakpoint_xxl: 1024px;
 	}
 }
 
-
-/**
- * Output
- */
+// Output
 .default-max-width {
 	@extend %responsive-aligndefault-width;
 }

@@ -1,10 +1,11 @@
 /**
  * Button
  */
-button,
-.button,
+.site button:not(.customize-partial-edit-shortcut-button).mejs-inner:not(button),
+.site .button,
 input[type="submit"],
-.wp-block-button__link {
+input[type="reset"],
+.wp-block-button .wp-block-button__link {
 	// Extend button style
 	@extend %button-style;
 }
@@ -14,14 +15,8 @@ input[type="submit"],
  */
 .wp-block-button {
 
-	font-family: var(--button--font-family);
-	font-size: var(--button--font-size);
-	font-weight: var(--button--font-weight);
-	line-height: var(--button--line-height);
-
-	// Outline Style
+	// Outline Style.
 	&.is-style-outline {
-		border: none;
 
 		&.wp-block-button__link,
 		.wp-block-button__link {
@@ -30,14 +25,23 @@ input[type="submit"],
 			border: var(--button--border-width) solid currentColor;
 			padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 
-			&:active {
+			&:visited {
 				color: var(--button--color-background);
 			}
 
-			&:hover,
+			&:active,
+			&:hover {
+				background-color: var(--button--color-background);
+				color: var(--button--color-text);
+				border: var(--button--border-width) solid var(--button--color-background);
+			}
+
 			&:focus,
 			&.has-focus {
-				color: var(--button--color-background-hover);
+				outline-offset: -7px;
+				background: transparent;
+				outline: 2px dotted var(--button--color-background);
+				color: var(--button--color-background);
 			}
 		}
 	}
@@ -46,4 +50,10 @@ input[type="submit"],
 	&.is-style-squared .wp-block-button__link {
 		border-radius: 0;
 	}
+}
+
+.is-style-outline .wp-block-button__link[style*="radius"]:focus,
+.wp-block-button a.wp-block-button__link[style*="radius"]:focus {
+	outline-offset: 2px;
+	outline: 2px dotted var(--button--color-background);
 }

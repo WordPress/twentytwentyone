@@ -43,7 +43,7 @@
 // Gutenberg background-color options
 .has-background {
 
-	&:not(.has-background-background-color) a,
+	&:not(.has-background-background-color) a:not(.wp-block-button__link),
 	p,
 	h1,
 	h2,
@@ -57,17 +57,14 @@
 
 .has-black-background-color[class] {
 	background-color: var(--global--color-black);
-	color: var(--global--color-white);
 }
 
 .has-gray-background-color[class] {
 	background-color: var(--global--color-gray);
-	color: var(--global--color-white);
 }
 
 .has-dark-gray-background-color[class] {
 	background-color: var(--global--color-dark-gray);
-	color: var(--global--color-white);
 }
 
 .has-green-background-color[class] {
@@ -96,4 +93,56 @@
 
 .has-white-background-color[class] {
 	background-color: var(--global--color-white);
+}
+
+:not(.has-text-color) {
+
+	&.has-black-background-color[class],
+	&.has-gray-background-color[class],
+	&.has-dark-gray-background-color[class] {
+		color: var(--global--color-white);
+	}
+
+	&.has-green-background-color[class],
+	&.has-blue-background-color[class],
+	&.has-purple-background-color[class],
+	&.has-red-background-color[class],
+	&.has-orange-background-color[class],
+	&.has-yellow-background-color[class],
+	&.has-white-background-color[class] {
+		color: var(--global--color-dark-gray);
+	}
+}
+
+// Custom gradients
+.has-purple-to-yellow-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-purple), var(--global--color-yellow));
+}
+
+.has-yellow-to-purple-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-yellow), var(--global--color-purple));
+}
+
+.has-green-to-yellow-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-green), var(--global--color-yellow));
+}
+
+.has-yellow-to-green-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-yellow), var(--global--color-green));
+}
+
+.has-red-to-yellow-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-red), var(--global--color-yellow));
+}
+
+.has-yellow-to-red-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-yellow), var(--global--color-red));
+}
+
+.has-purple-to-red-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-purple), var(--global--color-red));
+}
+
+.has-red-to-purple-gradient-background {
+	background: linear-gradient(160deg, var(--global--color-red), var(--global--color-purple));
 }

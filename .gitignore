@@ -1,3 +1,10 @@
 .DS_Store
+**/.DS_Store
 node_modules/
 vendor/
+.vscode/
+~/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.map

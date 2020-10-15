@@ -13,6 +13,7 @@
  */
 .site-header,
 .site-main,
+.widget-area,
 .site-footer {
 	padding-top: var(--global--spacing-vertical);
 	padding-bottom: var(--global--spacing-vertical);
@@ -21,7 +22,7 @@
 }
 
 .site-header {
-	padding-top: calc(2 * var(--global--spacing-vertical));
+	padding-top: calc(0.75 * var(--global--spacing-vertical));
 	padding-bottom: calc(2 * var(--global--spacing-vertical));
 
 	@include media(mobile) {
@@ -76,8 +77,7 @@
 .post-thumbnail,
 .entry-content,
 .entry-footer,
-.author-bio,
-.widget-area {
+.author-bio {
 	margin-top: var(--global--spacing-vertical);
 	margin-right: auto;
 	margin-bottom: var(--global--spacing-vertical);
@@ -88,7 +88,6 @@
  * Block & non-gutenberg content wrapper children
  * - Sets spacing-vertical margin logic
  */
-.site-footer > *,
 .site-main > article > *, // apply vertical margins to article level
 .site-main > .not-found > *, // apply vertical margins to article level
 .entry-content > *,
@@ -112,6 +111,7 @@
 	}
 }
 
+.site-footer > *,
 .widget-area > * {
 	margin-top: calc(0.666 * var(--global--spacing-vertical));
 	margin-bottom: calc(0.666 * var(--global--spacing-vertical));

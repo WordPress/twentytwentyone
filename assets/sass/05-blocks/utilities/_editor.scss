@@ -4,12 +4,19 @@
 */
 
 // Post title style
-.editor-post-title__block .editor-post-title__input {
-	color: var(--global--color-secondary);
-	font-family: var(--heading--font-family);
-	font-weight: var(--heading--font-weight-page-title);
-	font-size: var(--global--font-size-page-title);
-	line-height: var(--heading--line-height);
+.wp-block.editor-post-title__block {
+	border-bottom: 3px solid var(--global--color-border);
+	padding-bottom: calc(2 * var(--global--spacing-vertical));
+	margin-bottom: calc(3 * var(--global--spacing-vertical));
+	max-width: var(--responsive--alignwide-width);
+
+	.editor-post-title__input {
+		color: var(--global--color-secondary);
+		font-family: var(--heading--font-family);
+		font-size: var(--global--font-size-page-title);
+		font-weight: var(--heading--font-weight-page-title);
+		line-height: var(--heading--line-height-h1);
+	}
 }
 
 // Editor UI font styles
@@ -31,7 +38,7 @@
 // Gutenberg background-color options
 .has-background {
 
-	&:not(.has-background-background-color) a,
+	&:not(.has-background-background-color) a:not(.wp-block-button__link),
 	p,
 	h1,
 	h2,
@@ -61,44 +68,6 @@
 .has-black-background-color[class] {
 	background-color: var(--global--color-black);
 	color: var(--global--color-primary);
-}
-
-// Gutenberg Font-size utility classes
-.is-tiny-text,
-.has-tiny-font-size {
-	font-size: var(--global--font-size-xs);
-}
-
-.is-small-text,
-.has-small-font-size {
-	font-size: var(--global--font-size-sm);
-}
-
-.is-regular-text,
-.has-regular-font-size,
-.has-normal-font-size,
-.has-medium-font-size {
-	font-size: var(--global--font-size-md);
-}
-
-.is-large-text,
-.has-large-font-size {
-	font-size: var(--global--font-size-lg);
-	line-height: var(--global--line-height-heading);
-}
-
-.is-larger-text,
-.has-larger-font-size,
-.has-huge-font-size {
-	font-size: var(--global--font-size-xl);
-	line-height: var(--global--line-height-heading);
-}
-
-// Drop cap
-.has-drop-cap:not(:focus)::first-letter {
-	font-family: var(--heading--font-family);
-	font-size: calc(2 * var(--heading--font-size-h1));
-	font-weight: var(--heading--font-weight);
 }
 
 /**
@@ -162,4 +131,22 @@
 .alignright {
 	margin: 0;
 	margin-left: var(--global--spacing-horizontal);
+}
+
+// Drop cap
+.has-drop-cap:not(:focus)::first-letter {
+	font-size: calc(2 * var(--heading--font-size-h1));
+}
+
+@media only screen and (min-width: 482px) {
+
+	.wp-block[data-align="left"] > * {
+		max-width: 290px;
+		margin-right: var(--global--spacing-horizontal);
+	}
+
+	.wp-block[data-align="right"] > * {
+		max-width: 290px;
+		margin-left: var(--global--spacing-horizontal);
+	}
 }

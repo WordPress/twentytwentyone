@@ -16,18 +16,19 @@ class Twenty_Twenty_One_Custom_Colors {
 	 * Instantiate the object.
 	 *
 	 * @access public
+	 *
+	 * @since 1.0.0
 	 */
 	public function __construct() {
 
-		/**
-		 * Enqueue color variables for customizer & frontend.
-		 */
+		// Enqueue color variables for customizer & frontend.
 		add_action( 'wp_enqueue_scripts', array( $this, 'custom_color_variables' ) );
 
-		/**
-		 * Enqueue color variables for editor.
-		 */
+		// Enqueue color variables for editor.
 		add_action( 'enqueue_block_editor_assets', array( $this, 'editor_custom_color_variables' ) );
+
+		// Add body-class if needed.
+		add_filter( 'body_class', array( $this, 'body_class' ) );
 	}
 
 	/**
@@ -36,6 +37,8 @@ class Twenty_Twenty_One_Custom_Colors {
 	 * @access public
 	 *
 	 * @param string $background_color The background color.
+	 *
+	 * @since 1.0.0
 	 *
 	 * @return string (hex color)
 	 */
@@ -52,6 +55,8 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @access public
 	 *
+	 * @since 1.0.0
+	 *
 	 * @param string|null $context Can be "editor" or null.
 	 *
 	 * @return string
@@ -60,10 +65,17 @@ class Twenty_Twenty_One_Custom_Colors {
 
 		$theme_css = 'editor' === $context ? ':root .editor-styles-wrapper{' : ':root{';
 
-		if ( get_theme_mod( 'background_color', 'D1E4DD' ) !== 'D1E4DD' ) {
+		if ( 'd1e4dd' !== strtolower( get_theme_mod( 'background_color', 'D1E4DD' ) ) ) {
 			$theme_css .= '--global--color-background: #' . get_theme_mod( 'background_color', 'D1E4DD' ) . ';';
 			$theme_css .= '--global--color-primary: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
 			$theme_css .= '--global--color-secondary: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
+			$theme_css .= '--button--color-background: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
+			$theme_css .= '--button--color-text-hover: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
+
+			if ( '#fff' === $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) ) {
+				$theme_css .= '--table--stripes-border-color: var(--global--color-dark-gray);';
+				$theme_css .= '--table--stripes-background-color: var(--global--color-dark-gray);';
+			}
 		}
 
 		$theme_css .= '}';
@@ -75,9 +87,13 @@ class Twenty_Twenty_One_Custom_Colors {
 	 * Customizer & frontend custom color variables.
 	 *
 	 * @access public
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return void
 	 */
 	public function custom_color_variables() {
-		if ( 'D1E4DD' !== get_theme_mod( 'background_color', 'D1E4DD' ) ) {
+		if ( 'd1e4dd' !== strtolower( get_theme_mod( 'background_color', 'D1E4DD' ) ) ) {
 			wp_add_inline_style( 'twenty-twenty-one-style', $this->generate_custom_color_variables() );
 		}
 	}
@@ -86,10 +102,19 @@ class Twenty_Twenty_One_Custom_Colors {
 	 * Editor custom color variables.
 	 *
 	 * @access public
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return void
 	 */
 	public function editor_custom_color_variables() {
-		wp_enqueue_style( 'twenty-twenty-one-custom-color-overrides', get_template_directory_uri() . '/assets/css/custom-color-overrides.css', array(), wp_get_theme()->get( 'Version' ) );
-		if ( 'D1E4DD' !== get_theme_mod( 'background_color', 'D1E4DD' ) ) {
+		wp_enqueue_style(
+			'twenty-twenty-one-custom-color-overrides',
+			get_theme_file_uri( 'assets/css/custom-color-overrides.css' ),
+			array(),
+			(string) filemtime( get_theme_file_path( 'assets/css/custom-color-overrides.css' ) )
+		);
+		if ( 'd1e4dd' !== strtolower( get_theme_mod( 'background_color', 'D1E4DD' ) ) ) {
 			wp_add_inline_style( 'twenty-twenty-one-custom-color-overrides', $this->generate_custom_color_variables( 'editor' ) );
 		}
 	}
@@ -99,7 +124,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @access public
 	 *
-	 * @since 1.0
+	 * @since 1.0.0
 	 *
 	 * @param string $hex The HEX color.
 	 *
@@ -122,8 +147,26 @@ class Twenty_Twenty_One_Custom_Colors {
 
 		// Calculate the luminance.
 		$lum = ( 0.2126 * $red ) + ( 0.7152 * $green ) + ( 0.0722 * $blue );
-		return round( $lum );
+		return (int) round( $lum );
+	}
+
+	/**
+	 * Adds a class to <body> if the background-color is dark.
+	 *
+	 * @access public
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param array $classes The existing body classes.
+	 *
+	 * @return array
+	 */
+	public function body_class( $classes ) {
+		$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
+		if ( 127 > $this->get_relative_luminance_from_hex( $background_color ) ) {
+			$classes[] = 'is-background-dark';
+		}
+
+		return $classes;
 	}
 }
-
-new Twenty_Twenty_One_Custom_Colors();

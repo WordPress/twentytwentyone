@@ -6,6 +6,7 @@
 
 @import "button/editor";
 @import "cover/editor";
+@import "columns/editor";
 @import "file/editor";
 @import "gallery/editor";
 @import "group/editor";
@@ -20,8 +21,11 @@
 @import "paragraph/editor";
 @import "pullquote/editor";
 @import "quote/editor";
+@import "rss/editor";
 @import "search/editor";
 @import "separator/editor";
+@import "social-icons/editor";
 @import "table/editor";
 @import "verse/editor";
+@import "utilities/font-sizes";
 @import "utilities/editor"; // Import LAST to cascade properly
