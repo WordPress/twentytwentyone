@@ -87,8 +87,8 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 			$wp_customize->add_section(
 				'theme_settings',
 				array(
-					'title'    => esc_html__( 'Theme settings', 'twentytwentyone' ),
-					'priority' => 30,
+					'title'    => esc_html__( 'Excerpt settings', 'twentytwentyone' ),
+					'priority' => 120,
 				)
 			);
 
@@ -110,7 +110,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 					'section' => 'theme_settings',
 					'label'   => esc_html__( 'On archive pages, posts show:', 'twentytwentyone' ),
 					'choices' => array(
-						'excerpt' => esc_html__( 'Excerpt', 'twentytwentyone' ),
+						'excerpt' => esc_html__( 'Summary', 'twentytwentyone' ),
 						'full'    => esc_html__( 'Full text', 'twentytwentyone' ),
 					),
 				)
