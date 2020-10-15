@@ -211,7 +211,6 @@ function twenty_twenty_one_continue_reading_text() {
  * Create the continue reading link for excerpt.
  */
 function twenty_twenty_one_continue_reading_link_excerpt() {
-
 	if ( ! is_admin() ) {
 		return '&hellip; <a class="more-link" href="' . esc_url( get_permalink() ) . '">' . twenty_twenty_one_continue_reading_text() . '</a>';
 	}
@@ -224,7 +223,6 @@ add_filter( 'excerpt_more', 'twenty_twenty_one_continue_reading_link_excerpt' );
  * Create the continue reading link.
  */
 function twenty_twenty_one_continue_reading_link() {
-
 	if ( ! is_admin() ) {
 		return '<div class="more-link-container"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . twenty_twenty_one_continue_reading_text() . '</a></div>';
 	}
@@ -445,3 +443,22 @@ function twenty_twenty_one_print_first_instance_of_block( $block_name, $content 
 
 	return false;
 }
+
+/**
+ * Retrieve protected post password form content.
+ *
+ * @since 1.0.0
+ *
+ * @param int|WP_Post $post Optional. Post ID or WP_Post object. Default is global $post.
+ * @return string HTML content for password form for password protected post.
+ */
+function twenty_twenty_one_password_form( $post = 0 ) {
+	$post   = get_post( $post );
+	$label  = 'pwbox-' . ( empty( $post->ID ) ? wp_rand() : $post->ID );
+	$output = '<p>' . esc_html__( 'This content is password protected. To view it please enter your password below:', 'twentytwentyone' ) . '</p>
+	<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" class="post-password-form" method="post">
+	<label class="post-password-form__label" for="' . esc_attr( $label ) . '">' . esc_html__( 'Password:', 'twentytwentyone' ) . '</label><input class="post-password-form__input" name="post_password" id="' . esc_attr( $label ) . '" type="password" size="20" /><input type="submit" class="post-password-form__submit" name="' . esc_attr__( 'Submit', 'twentytwentyone' ) . '" value="' . esc_attr_x( 'Enter', 'post password form', 'twentytwentyone' ) . '" /></form>
+	';
+	return $output;
+}
+add_filter( 'the_password_form', 'twenty_twenty_one_password_form' );
