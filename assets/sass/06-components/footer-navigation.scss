@@ -1,7 +1,10 @@
 
 .footer-navigation {
+	margin-top: var(--global--spacing-vertical);
+	margin-bottom: calc(2 * var(--global--spacing-vertical));
+	color: var(--footer--color-text);
 	font-size: var(--global--font-size-xs);
-	margin-top: calc(2 * var(--global--spacing-vertical));
+	font-family: var(--footer--font-family);
 }
 
 .footer-navigation-wrapper {
@@ -19,11 +22,19 @@
 		a {
 			padding: calc(1.25 * var(--primary-nav--padding)) var(--primary-nav--padding);
 			transition: transform 0.1s ease;
+			color: var(--footer--color-link);
+
+			&:link,
+			&:visited,
+			&:active {
+				color: var(--footer--color-link);
+			}
 
 			&:hover {
 				text-decoration: underline;
 				text-decoration-style: dotted;
 				text-decoration-skip-ink: none;
+				color: var(--footer--color-link-hover);
 			}
 		}
 
@@ -36,7 +47,8 @@
 		}
 	}
 
-	.sub-menu-toggle {
+	.sub-menu-toggle,
+	.menu-item-description {
 		display: none;
 	}
 }

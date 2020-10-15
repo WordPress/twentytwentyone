@@ -25,7 +25,6 @@
 		display: flex;
 		font-size: var(--primary-nav--font-size-button);
 		font-weight: var(--primary-nav--font-weight-button);
-		text-transform: var(--branding--title--text-transform);
 		background-color: transparent;
 		border: none;
 		color: var(--primary-nav--color-link);
@@ -87,7 +86,6 @@
 	right: 0;
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
-	text-transform: var(--branding--title--text-transform);
 	line-height: 1.15;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -234,7 +232,7 @@
 		// Sub-menu buttons
 		.sub-menu-toggle {
 			display: flex;
-			height: 100%;
+			height: calc(2 * var(--primary-nav--padding) + 1.15em + 1px);
 			width: 44px;
 			padding: 0;
 			justify-content: center;
@@ -350,6 +348,7 @@
 		font-size: var(--primary-nav--font-size-mobile);
 		font-weight: var(--primary-nav--font-weight);
 		padding: var(--primary-nav--padding) 0;
+		text-decoration: none;
 
 		@include media(mobile) {
 			display: block;
@@ -458,6 +457,10 @@
 		font-size: var(--global--font-size-xs);
 		text-transform: none;
 		line-height: 1.7;
+
+		> span {
+			display: inline-block;
+		}
 	}
 }
 

@@ -90,7 +90,7 @@ add_filter( 'walker_nav_menu_start_el', 'twenty_twenty_one_nav_menu_social_icons
 function twenty_twenty_one_add_menu_description_args( $args, $item, $depth ) {
 	$args->link_after = '';
 	if ( 0 === $depth && isset( $item->description ) && $item->description ) {
-		$args->link_after = '<span class="menu-item-description">' . $item->description . '</span>';
+		$args->link_after = '<span class="menu-item-description"><span>' . $item->description . '</span></span>';
 	}
 	return $args;
 }

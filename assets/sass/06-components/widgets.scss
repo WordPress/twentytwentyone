@@ -1,6 +1,10 @@
 .widget-area {
+	@extend %responsive-alignwide-width;
+	margin-top: calc(6 * var(--global--spacing-vertical));
+	padding-bottom: calc(var(--global--spacing-vertical) / 3);
+	color: var(--footer--color-text);
 	font-size: var(--footer--font-size);
-	margin-bottom: 0;
+	font-family: var(--footer--font-family);
 
 	@include media(desktop) {
 		display: grid;
@@ -26,11 +30,19 @@
 	}
 
 	a {
+		color: var(--footer--color-link);
 		text-decoration: underline;
 		text-decoration-style: solid;
 		text-decoration-color: currentColor;
 
+		&:link,
+		&:visited,
+		&:active {
+			color: var(--footer--color-link);
+		}
+
 		&:hover {
+			color: var(--footer--color-link-hover);
 			text-decoration-style: dotted;
 		}
 	}

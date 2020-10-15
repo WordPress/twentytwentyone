@@ -16,9 +16,9 @@
 		</section><!-- #primary -->
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
 
-		<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
+	<footer id="colophon" class="site-footer" role="contentinfo">
 
 		<?php if ( has_nav_menu( 'footer' ) ) : ?>
 			<nav aria-label="<?php esc_attr_e( 'Secondary menu', 'twentytwentyone' ); ?>" class="footer-navigation">
@@ -28,6 +28,7 @@
 						array(
 							'theme_location' => 'footer',
 							'items_wrap'     => '%3$s',
+							'container'      => 'false',
 							'depth'          => 1,
 							'link_before'    => '<span>',
 							'link_after'     => '</span>',
@@ -46,7 +47,7 @@
 						<?php if ( is_front_page() && ! is_paged() ) : ?>
 							<?php bloginfo( 'name' ); ?>
 						<?php else : ?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
 						<?php endif; ?>
 					<?php endif; ?>
 				<?php endif; ?>

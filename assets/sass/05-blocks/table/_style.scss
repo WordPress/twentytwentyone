@@ -12,7 +12,6 @@ table,
 	th {
 		padding: calc(0.5 * var(--global--spacing-unit));
 		border: 1px solid;
-		word-break: break-all;
 	}
 
 	&.is-style-regular .has-background,
