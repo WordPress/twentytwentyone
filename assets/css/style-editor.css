@@ -205,7 +205,6 @@
 	--quote--line-height-large: 1.5;
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
-	--separator--width: calc(100vw - 1.2 * var(--global--spacing-horizontal));
 	/* Block: Table */
 	--table--stripes-border-color: var(--global--color-light-gray);
 	--table--stripes-background-color: var(--global--color-light-gray);
@@ -461,6 +460,7 @@ a {
 	cursor: pointer;
 	color: var(--wp--style--color--link, var(--global--color-primary));
 	text-underline-offset: 3px;
+	text-decoration-skip-ink: all;
 }
 
 a:hover {
@@ -1178,7 +1178,7 @@ p.has-background {
 .wp-block-quote {
 	border-left-color: var(--quote--border-color);
 	border-left-width: var(--quote--border-width);
-	margin: var(--global--spacing-vertical) 0;
+	margin: var(--global--spacing-vertical) auto;
 	padding-left: var(--global--spacing-horizontal);
 }
 
@@ -1376,6 +1376,7 @@ p.has-background {
 hr {
 	border-bottom: var(--separator--height) solid var(--separator--border-color);
 	clear: both;
+	opacity: 1;
 }
 
 .wp-block-separator[style*="text-align:right"], .wp-block-separator[style*="text-align: right"],
@@ -1384,13 +1385,13 @@ hr[style*="text-align: right"] {
 	border-right-color: var(--separator--border-color);
 }
 
-.wp-block-separator:not(.is-style-wide):not(.is-style-dots),
-hr:not(.is-style-wide):not(.is-style-dots) {
-	max-width: var(--separator--width);
+.wp-block-separator:not(.is-style-dots),
+hr:not(.is-style-dots) {
+	max-width: inherit;
 }
 
-.wp-block-separator.is-style-wide,
-hr.is-style-wide {
+.wp-block-separator.is-style-twentytwentyone-separator-thick,
+hr.is-style-twentytwentyone-separator-thick {
 	border-bottom-width: calc(3 * var(--separator--height));
 }
 

@@ -92,10 +92,6 @@ h1.entry-title {
 		&:last-child {
 			margin-right: 0;
 		}
-
-		.published + .updated {
-			display: none; // Hide updated date?
-		}
 	}
 
 	a {
@@ -129,24 +125,12 @@ h1.entry-title {
 	font-size: var(--entry-meta--font-size);
 	display: block;
 
-	> span {
-		margin-right: calc(0.5 * var(--global--spacing-unit));
-
-		.published + .updated {
-			display: none; // Hide updated date?
-		}
-	}
-
 	a {
 		color: var(--entry-meta--color-link);
 
 		&:hover,
 		&:focus {
 			color: var(--entry-meta--color-hover);
-		}
-
-		&:hover {
-			border-color: transparent;
 		}
 
 		&:active {
@@ -177,6 +161,35 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	column-gap: calc(2 * var(--global--spacing-horizontal));
+
+	.posted-by {
+
+		.posted-on,
+		.byline {
+			display: block;
+		}
+	}
+
+	.post-taxonomies {
+
+		.cat-links,
+		.tags-links {
+			display: block;
+		}
+	}
+
+	@include media(mobile-only) {
+		display: block;
+
+		.post-taxonomies {
+
+			.cat-links,
+			.tags-links {
+				text-align: left;
+			}
+		}
+	}
+
 }
 
 .single .site-main > article > .entry-footer > span {

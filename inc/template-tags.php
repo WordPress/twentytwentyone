@@ -17,23 +17,17 @@ if ( ! function_exists( 'twenty_twenty_one_posted_on' ) ) {
 	 */
 	function twenty_twenty_one_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> <time class="updated" datetime="%3$s">%4$s</time>';
-		}
 
 		$time_string = sprintf(
 			$time_string,
 			esc_attr( get_the_date( DATE_W3C ) ),
-			esc_html( get_the_date() ),
-			esc_attr( get_the_modified_date( DATE_W3C ) ),
-			esc_html( get_the_modified_date() )
+			esc_html( get_the_date() )
 		);
 
 		printf(
-			/* translators: 2: author link. 3: author name*/
-			'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
+			/* translators: 2: author name*/
+			'<span class="posted-on">%1$s %2$s</span>',
 			esc_html__( 'Published', 'twentytwentyone' ),
-			esc_url( get_permalink() ),
 			$time_string // phpcs:ignore WordPress.Security.EscapeOutput
 		);
 	}
@@ -48,13 +42,15 @@ if ( ! function_exists( 'twenty_twenty_one_posted_by' ) ) {
 	 * @return void
 	 */
 	function twenty_twenty_one_posted_by() {
-		printf(
-			/* translators: 1: post author, only visible to screen readers. 2: author link. 3: author name*/
-			'<span class="byline"><span class="screen-reader-text">%1$s</span><span class="author vcard"><a class="url fn n" href="%2$s">%3$s</a></span></span>',
-			esc_html__( 'Posted by', 'twentytwentyone' ),
-			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_html( get_the_author() )
-		);
+		if ( ! get_the_author_meta( 'description' ) ) {
+			echo '<span class="byline">';
+			printf(
+				/* translators: %s author name. */
+				esc_html__( 'By %s', 'twentytwentyone' ),
+				'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+			);
+			echo '</span>';
+		}
 	}
 }
 
@@ -115,39 +111,38 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				'</span><br>'
 			);
 
-			/* translators: used between list items, there is a space after the comma. */
-			$categories_list = get_the_category_list( __( ', ', 'twentytwentyone' ) );
-			if ( $categories_list ) {
-				printf(
-					/* translators: %s: list of tags. */
-					'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . '</span>',
-					$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
-				);
-			}
+			if ( has_category() || has_tag() ) {
 
-			/* translators: used between list items, there is a space after the comma. */
-			$tags_list = get_the_tag_list( '', __( ', ', 'twentytwentyone' ) );
-			if ( $tags_list ) {
-				printf(
-					/* translators: %s: list of tags. */
-					'<span class="tags-links">' . esc_html__( 'Tagged %s', 'twentytwentyone' ) . '</span>',
-					$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
-				);
+				echo '<div class="post-taxonomies">';
+
+				/* translators: used between list items, there is a space after the comma. */
+				$categories_list = get_the_category_list( __( ', ', 'twentytwentyone' ) );
+				if ( $categories_list ) {
+					printf(
+						/* translators: %s: list of categories. */
+						'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . '. </span>',
+						$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
+					);
+				}
+
+				/* translators: used between list items, there is a space after the comma. */
+				$tags_list = get_the_tag_list( '', __( ', ', 'twentytwentyone' ) );
+				if ( $tags_list ) {
+					printf(
+						/* translators: %s: list of tags. */
+						'<span class="tags-links">' . esc_html__( 'Tagged %s', 'twentytwentyone' ) . '.</span>',
+						$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
+					);
+				}
+				echo '</div>';
 			}
-		} elseif ( is_single() ) {
+		} elseif ( 'post' === get_post_type() && is_single() ) {
+
+			echo '<div class="posted-by">';
 			// Posted on.
 			twenty_twenty_one_posted_on();
-
-			/* translators: used between list items, there is a space after the comma. */
-			$categories_list = get_the_category_list( __( ', ', 'twentytwentyone' ) );
-			if ( $categories_list ) {
-				printf(
-					/* translators: %s: list of tags. */
-					'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . '</span>',
-					$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
-				);
-			}
-
+			// Posted by.
+			twenty_twenty_one_posted_by();
 			// Edit post link.
 			edit_post_link(
 				sprintf(
@@ -165,15 +160,32 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				'<span class="edit-link">',
 				'</span>'
 			);
+			echo '</div>';
 
-			/* translators: used between list items, there is a space after the comma. */
-			$tags_list = get_the_tag_list( '', __( ', ', 'twentytwentyone' ) );
-			if ( $tags_list ) {
-				printf(
-					/* translators: %s: list of tags. */
-					'<span class="tags-links">' . esc_html__( 'Tagged %s', 'twentytwentyone' ) . '</span>',
-					$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
-				);
+			if ( has_category() || has_tag() ) {
+
+				echo '<div class="post-taxonomies">';
+
+				/* translators: used between list items, there is a space after the comma. */
+				$categories_list = get_the_category_list( __( ', ', 'twentytwentyone' ) );
+				if ( $categories_list ) {
+					printf(
+						/* translators: %s: list of categories. */
+						'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . ' </span>',
+						$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
+					);
+				}
+
+				/* translators: used between list items, there is a space after the comma. */
+				$tags_list = get_the_tag_list( '', __( ', ', 'twentytwentyone' ) );
+				if ( $tags_list ) {
+					printf(
+						/* translators: %s: list of tags. */
+						'<span class="tags-links">' . esc_html__( 'Tagged %s', 'twentytwentyone' ) . '</span>',
+						$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
+					);
+				}
+				echo '</div>';
 			}
 		}
 	}

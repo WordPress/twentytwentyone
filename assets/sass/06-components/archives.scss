@@ -17,7 +17,8 @@ h1.page-title {
 }
 
 .archive,
-.search {
+.search,
+.blog {
 
 	.content-area {
 
@@ -29,5 +30,26 @@ h1.page-title {
 				font-size: var(--global--font-size-lg);
 			}
 		}
+
+	}
+
+	.format-image,
+	.format-gallery,
+	.format-video {
+
+		.entry-content {
+			margin-top: calc(2 * var(--global--spacing-vertical));
+		}
+	}
+
+	&.logged-in {
+
+		.entry-footer {
+
+			.posted-on {
+				margin-right: calc(0.5 * var(--global--spacing-unit));
+			}
+		}
 	}
 }
+
