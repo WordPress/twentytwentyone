@@ -33,7 +33,7 @@ while ( have_posts() ) {
 				<?php if ( wp_get_attachment_caption() ) : ?>
 					<figcaption class="wp-caption-text"><?php echo wp_kses_post( wp_get_attachment_caption() ); ?></figcaption>
 				<?php endif; ?>
-			</figure><!-- .entry-attachment -->
+			</figure><!-- .wp-block-image -->
 
 			<?php
 			the_content();

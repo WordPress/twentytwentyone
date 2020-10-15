@@ -782,8 +782,8 @@ template {
 /**
  * Extends
  */
-.default-max-width, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce),
-*[class*="inner-container"] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce), .entry-content .wp-audio-shortcode, .post-thumbnail {
+.default-max-width, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce),
+*[class*="inner-container"] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce), .entry-content .wp-audio-shortcode, .post-thumbnail {
 	max-width: var(--responsive--aligndefault-width);
 	margin-right: auto;
 	margin-left: auto;
