@@ -57,7 +57,7 @@ while ( have_posts() ) {
 			if ( wp_get_post_parent_id( $post ) ) {
 				printf(
 					/* translators: 2: parent post link. 3: parent post title*/
-					'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
+					'<span class="posted-on">%1$s <a href="%2$s">%3$s</a></span>',
 					esc_html__( 'Published in', 'twentytwentyone' ),
 					esc_url( get_the_permalink( wp_get_post_parent_id( $post ) ) ),
 					esc_html( get_the_title( wp_get_post_parent_id( $post ) ) )
