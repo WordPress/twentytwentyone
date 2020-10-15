@@ -15,6 +15,7 @@
 	--global--font-size-sm: 1.125rem;
 	--global--font-size-md: 1.25rem;
 	--global--font-size-lg: 1.5rem;
+	--global--font-size-llg: 2rem;
 	--global--font-size-xl: 2.25rem;
 	--global--font-size-xxl: 4rem;
 	--global--font-size-xxxl: 5rem;
@@ -198,7 +199,7 @@
 	--quote--border-width: 1px;
 	--quote--font-family: var(--global--font-secondary);
 	--quote--font-size: var(--global--font-size-md);
-	--quote--font-size-large: 2rem;
+	--quote--font-size-large: var(--global--font-size-llg);
 	--quote--font-style: normal;
 	--quote--font-style-large: normal;
 	--quote--line-height: 1.5;
