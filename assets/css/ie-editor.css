@@ -80,27 +80,27 @@
 }
 
 .wp-block-button__link:before {
-	margin-bottom: -calc(1em - 0);
+	margin-bottom: -calc(1em + 0);
 }
 
 .wp-block-file .wp-block-file__button:before {
-	margin-bottom: -calc(1em - 0);
+	margin-bottom: -calc(1em + 0);
 }
 
 .wp-block-search .wp-block-search__button:before {
-	margin-bottom: -calc(1em - 0);
+	margin-bottom: -calc(1em + 0);
 }
 
 .wp-block-button__link:after {
-	margin-top: -calc(1em - 0);
+	margin-top: -calc(1em + 0);
 }
 
 .wp-block-file .wp-block-file__button:after {
-	margin-top: -calc(1em - 0);
+	margin-top: -calc(1em + 0);
 }
 
 .wp-block-search .wp-block-search__button:after {
-	margin-top: -calc(1em - 0);
+	margin-top: -calc(1em + 0);
 }
 
 .wp-block-button__link:active {
@@ -1606,70 +1606,109 @@ p.has-background {
 }
 
 .wp-block-quote {
-	border-left-color: #39414d;
-	border-left-width: 1px;
-	margin: 30px auto;
-	padding-left: 25px;
+	position: relative;
+	border-left: none;
+	margin: 30px auto 30px 25px;
 }
 
 .wp-block-quote p {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1.25rem;
 	font-style: normal;
+	font-weight: 600;
 	line-height: 1.7;
 }
 
+.wp-block-quote strong {
+	font-weight: normal;
+}
+
+.wp-block-quote:before {
+	content: "\201C";
+	font-size: 1.25rem;
+	line-height: 1.7;
+	position: absolute;
+	left: -12px;
+}
+
+.wp-block-quote.has-text-align-right {
+	margin: 30px 25px 30px auto;
+}
+
+.wp-block-quote.has-text-align-right:before {
+	content: "\201D";
+	left: initial;
+	right: -12px;
+}
+
+.wp-block-quote.has-text-align-center {
+	margin: 30px auto;
+}
+
+.wp-block-quote.has-text-align-center:before {
+	display: none;
+}
+
 .wp-block-quote.is-large {
-	border-left: 1px solid #39414d;
-	padding-left: 25px;
+	padding-left: 0;
 	/* Resetting margins to match _block-container.scss */
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
 
 .wp-block-quote.is-style-large {
-	border-left: 1px solid #39414d;
-	padding-left: 25px;
+	padding-left: 0;
 	/* Resetting margins to match _block-container.scss */
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
 
 .wp-block-quote.is-large p {
-	font-size: 1.5rem;
+	font-size: 2.25rem;
 	font-style: normal;
-	line-height: 1.5;
+	line-height: 1.35;
+}
+
+@media only screen and (min-width: 652px){
+	.wp-block-quote.is-large p{
+	font-size: 2.5rem;
+	}
 }
 
 .wp-block-quote.is-style-large p {
-	font-size: 1.5rem;
+	font-size: 2.25rem;
 	font-style: normal;
-	line-height: 1.5;
+	line-height: 1.35;
 }
 
-.wp-block-quote.is-large.has-text-align-right {
-	border-left: none;
-	border-right: 1px solid #39414d;
+@media only screen and (min-width: 652px){
+	.wp-block-quote.is-style-large p{
+	font-size: 2.5rem;
+	}
 }
 
-.wp-block-quote.is-style-large.has-text-align-right {
-	border-left: none;
-	border-right: 1px solid #39414d;
+.wp-block-quote.is-large:before {
+	font-size: 2.25rem;
+	line-height: 1.35;
+	left: -25px;
 }
 
-.wp-block-quote.has-text-align-right {
-	border-right: 1px solid #39414d;
+@media only screen and (min-width: 652px){
+	.wp-block-quote.is-large:before{
+	font-size: 2.5rem;
+	}
 }
 
-.wp-block-quote.has-text-align-center {
-	border: none;
+.wp-block-quote.is-style-large:before {
+	font-size: 2.25rem;
+	line-height: 1.35;
+	left: -25px;
 }
 
-.has-background:not(.has-background-background-color) .wp-block-quote,
-[class*="background-color"]:not(.has-background-background-color) .wp-block-quote,
-[style*="background-color"]:not(.has-background-background-color) .wp-block-quote,
-.wp-block-cover[style*="background-image"] .wp-block-quote {
-	border-color: currentColor;
+@media only screen and (min-width: 652px){
+	.wp-block-quote.is-style-large:before{
+	font-size: 2.5rem;
+	}
 }
 
 .wp-block-quote .wp-block-quote__citation {
@@ -1682,6 +1721,15 @@ p.has-background {
 [style*="background-color"]:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
 .wp-block-cover[style*="background-image"] .wp-block-quote .wp-block-quote__citation {
 	color: currentColor;
+}
+
+@media only screen and (min-width: 482px) {
+	.wp-block-quote {
+		margin-left: auto;
+	}
+	.wp-block-quote.has-text-align-right {
+		margin-right: auto;
+	}
 }
 
 .wp-block-rss {

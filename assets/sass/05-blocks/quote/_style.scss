@@ -1,7 +1,6 @@
 .wp-block-quote {
-	border-left: var(--quote--border-width) solid var(--quote--border-color);
-	margin: var(--global--spacing-vertical) 0;
-	padding-left: var(--global--spacing-horizontal);
+	position: relative;
+	margin: var(--global--spacing-vertical) 0 var(--global--spacing-vertical) var(--global--spacing-horizontal);
 
 	> * {
 		margin-top: var(--global--spacing-unit);
@@ -20,7 +19,20 @@
 		font-family: var(--quote--font-family);
 		font-size: var(--quote--font-size);
 		font-style: var(--quote--font-style);
+		font-weight: var(--quote--font-weight-strong);
 		line-height: var(--quote--line-height);
+	}
+
+	strong {
+		font-weight: var(--quote--font-weight);
+	}
+
+	&:before {
+		content: "\201C";
+		font-size: var(--quote--font-size);
+		line-height: var(--quote--line-height);
+		position: absolute;
+		left: calc(-0.5 * var(--global--spacing-horizontal));
 	}
 
 	.wp-block-quote__citation,
@@ -40,38 +52,25 @@
 	/**
 	 * Block Options
 	 */
-	&.has-text-align-right {
-		border-left: none;
-		border-right: var(--quote--border-width) solid var(--quote--border-color);
+
+	&.is-large,
+	&.is-style-large {
 		padding-left: 0;
-		padding-right: var(--global--spacing-horizontal);
-	}
-
-	&.has-text-align-center {
-		border: none;
-	}
-
-	&.is-style-large,
-	&.is-large {
 
 		/* Resetting margins to match _block-container.scss */
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
-		padding-left: var(--global--spacing-horizontal);
-
-		&.has-text-align-right {
-			padding-left: 0;
-			padding-right: var(--global--spacing-horizontal);
-		}
-
-		&.has-text-align-center {
-			padding: 0 var(--global--spacing-horizontal);
-		}
 
 		p {
 			font-size: var(--quote--font-size-large);
 			font-style: var(--quote--font-style-large);
 			line-height: var(--quote--line-height-large);
+		}
+
+		&:before {
+			font-size: var(--quote--font-size-large);
+			line-height: var(--quote--line-height-large);
+			left: calc(-1 * var(--global--spacing-horizontal));
 		}
 
 		.wp-block-quote__citation,
@@ -87,5 +86,13 @@
 	[style*="background-color"] &,
 	.wp-block-cover[style*="background-image"] & {
 		border-color: currentColor;
+	}
+
+	@include media(mobile) {
+		margin-left: auto;
+
+		&.has-text-align-right {
+			margin-right: auto;
+		}
 	}
 }

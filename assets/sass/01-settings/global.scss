@@ -215,15 +215,15 @@ $baseline-unit: 10px;
 	--pullquote--color-foreground: var(--global--color-primary);
 	--pullquote--color-background: var(--global--color-background);
 
-	--quote--border-color: var(--global--color-secondary);
-	--quote--border-width: 1px;
 	--quote--font-family: var(--global--font-secondary);
 	--quote--font-size: var(--global--font-size-md);
-	--quote--font-size-large: var(--global--font-size-lg);
+	--quote--font-size-large: var(--global--font-size-xl);
 	--quote--font-style: normal;
+	--quote--font-weight: normal;
+	--quote--font-weight-strong: 600;
 	--quote--font-style-large: normal;
 	--quote--line-height: var(--global--line-height-body);
-	--quote--line-height-large: 1.5;
+	--quote--line-height-large: 1.35;
 
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;

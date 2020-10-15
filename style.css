@@ -281,15 +281,15 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--pullquote--border-color: var(--global--color-primary);
 	--pullquote--color-foreground: var(--global--color-primary);
 	--pullquote--color-background: var(--global--color-background);
-	--quote--border-color: var(--global--color-secondary);
-	--quote--border-width: 1px;
 	--quote--font-family: var(--global--font-secondary);
 	--quote--font-size: var(--global--font-size-md);
-	--quote--font-size-large: var(--global--font-size-lg);
+	--quote--font-size-large: var(--global--font-size-xl);
 	--quote--font-style: normal;
+	--quote--font-weight: normal;
+	--quote--font-weight-strong: 600;
 	--quote--font-style-large: normal;
 	--quote--line-height: var(--global--line-height-body);
-	--quote--line-height-large: 1.5;
+	--quote--line-height-large: 1.35;
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
 	/* Block: Table */
@@ -2512,9 +2512,8 @@ p.has-text-color a {
 }
 
 .wp-block-quote {
-	border-left: var(--quote--border-width) solid var(--quote--border-color);
-	margin: var(--global--spacing-vertical) 0;
-	padding-left: var(--global--spacing-horizontal);
+	position: relative;
+	margin: var(--global--spacing-vertical) 0 var(--global--spacing-vertical) var(--global--spacing-horizontal);
 	/**
 	 * Block Options
 	 */
@@ -2537,7 +2536,20 @@ p.has-text-color a {
 	font-family: var(--quote--font-family);
 	font-size: var(--quote--font-size);
 	font-style: var(--quote--font-style);
+	font-weight: var(--quote--font-weight-strong);
 	line-height: var(--quote--line-height);
+}
+
+.wp-block-quote strong {
+	font-weight: var(--quote--font-weight);
+}
+
+.wp-block-quote:before {
+	content: "\201C";
+	font-size: var(--quote--font-size);
+	line-height: var(--quote--line-height);
+	position: absolute;
+	left: calc(-0.5 * var(--global--spacing-horizontal));
 }
 
 .wp-block-quote .wp-block-quote__citation,
@@ -2568,44 +2580,30 @@ p.has-text-color a {
 	color: currentColor;
 }
 
-.wp-block-quote.has-text-align-right {
-	border-left: none;
-	border-right: var(--quote--border-width) solid var(--quote--border-color);
+.wp-block-quote.is-large, .wp-block-quote.is-style-large {
 	padding-left: 0;
-	padding-right: var(--global--spacing-horizontal);
-}
-
-.wp-block-quote.has-text-align-center {
-	border: none;
-}
-
-.wp-block-quote.is-style-large, .wp-block-quote.is-large {
 	/* Resetting margins to match _block-container.scss */
 	margin-top: var(--global--spacing-vertical);
 	margin-bottom: var(--global--spacing-vertical);
-	padding-left: var(--global--spacing-horizontal);
 }
 
-.wp-block-quote.is-style-large.has-text-align-right, .wp-block-quote.is-large.has-text-align-right {
-	padding-left: 0;
-	padding-right: var(--global--spacing-horizontal);
-}
-
-.wp-block-quote.is-style-large.has-text-align-center, .wp-block-quote.is-large.has-text-align-center {
-	padding: 0 var(--global--spacing-horizontal);
-}
-
-.wp-block-quote.is-style-large p, .wp-block-quote.is-large p {
+.wp-block-quote.is-large p, .wp-block-quote.is-style-large p {
 	font-size: var(--quote--font-size-large);
 	font-style: var(--quote--font-style-large);
 	line-height: var(--quote--line-height-large);
 }
 
-.wp-block-quote.is-style-large .wp-block-quote__citation,
-.wp-block-quote.is-style-large cite,
-.wp-block-quote.is-style-large footer, .wp-block-quote.is-large .wp-block-quote__citation,
+.wp-block-quote.is-large:before, .wp-block-quote.is-style-large:before {
+	font-size: var(--quote--font-size-large);
+	line-height: var(--quote--line-height-large);
+	left: calc(-1 * var(--global--spacing-horizontal));
+}
+
+.wp-block-quote.is-large .wp-block-quote__citation,
 .wp-block-quote.is-large cite,
-.wp-block-quote.is-large footer {
+.wp-block-quote.is-large footer, .wp-block-quote.is-style-large .wp-block-quote__citation,
+.wp-block-quote.is-style-large cite,
+.wp-block-quote.is-style-large footer {
 	color: var(--global--color-primary);
 	font-size: var(--global--font-size-xs);
 }
@@ -2615,6 +2613,15 @@ p.has-text-color a {
 [style*="background-color"] .wp-block-quote,
 .wp-block-cover[style*="background-image"] .wp-block-quote {
 	border-color: currentColor;
+}
+
+@media only screen and (min-width: 482px) {
+	.wp-block-quote {
+		margin-left: auto;
+	}
+	.wp-block-quote.has-text-align-right {
+		margin-right: auto;
+	}
 }
 
 .wp-block-rss {

@@ -189,15 +189,15 @@
 	--pullquote--border-color: var(--global--color-primary);
 	--pullquote--color-foreground: var(--global--color-primary);
 	--pullquote--color-background: var(--global--color-background);
-	--quote--border-color: var(--global--color-secondary);
-	--quote--border-width: 1px;
 	--quote--font-family: var(--global--font-secondary);
 	--quote--font-size: var(--global--font-size-md);
-	--quote--font-size-large: var(--global--font-size-lg);
+	--quote--font-size-large: var(--global--font-size-xl);
 	--quote--font-style: normal;
+	--quote--font-weight: normal;
+	--quote--font-weight-strong: 600;
 	--quote--font-style-large: normal;
 	--quote--line-height: var(--global--line-height-body);
-	--quote--line-height-large: 1.5;
+	--quote--line-height-large: 1.35;
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
 	/* Block: Table */
@@ -1171,22 +1171,51 @@ p.has-background {
 }
 
 .wp-block-quote {
-	border-left-color: var(--quote--border-color);
-	border-left-width: var(--quote--border-width);
-	margin: var(--global--spacing-vertical) auto;
-	padding-left: var(--global--spacing-horizontal);
+	position: relative;
+	border-left: none;
+	margin: var(--global--spacing-vertical) auto var(--global--spacing-vertical) var(--global--spacing-horizontal);
 }
 
 .wp-block-quote p {
 	font-family: var(--quote--font-family);
 	font-size: var(--quote--font-size);
 	font-style: var(--quote--font-style);
+	font-weight: var(--quote--font-weight-strong);
 	line-height: var(--quote--line-height);
 }
 
+.wp-block-quote strong {
+	font-weight: var(--quote--font-weight);
+}
+
+.wp-block-quote:before {
+	content: "\201C";
+	font-size: var(--quote--font-size);
+	line-height: var(--quote--line-height);
+	position: absolute;
+	left: calc(-0.5 * var(--global--spacing-horizontal));
+}
+
+.wp-block-quote.has-text-align-right {
+	margin: var(--global--spacing-vertical) var(--global--spacing-horizontal) var(--global--spacing-vertical) auto;
+}
+
+.wp-block-quote.has-text-align-right:before {
+	content: "\201D";
+	left: initial;
+	right: calc(-0.5 * var(--global--spacing-horizontal));
+}
+
+.wp-block-quote.has-text-align-center {
+	margin: var(--global--spacing-vertical) auto;
+}
+
+.wp-block-quote.has-text-align-center:before {
+	display: none;
+}
+
 .wp-block-quote.is-large, .wp-block-quote.is-style-large {
-	border-left: var(--quote--border-width) solid var(--quote--border-color);
-	padding-left: var(--global--spacing-horizontal);
+	padding-left: 0;
 	/* Resetting margins to match _block-container.scss */
 	margin-top: var(--global--spacing-vertical);
 	margin-bottom: var(--global--spacing-vertical);
@@ -1198,24 +1227,10 @@ p.has-background {
 	line-height: var(--quote--line-height-large);
 }
 
-.wp-block-quote.is-large.has-text-align-right, .wp-block-quote.is-style-large.has-text-align-right {
-	border-left: none;
-	border-right: var(--quote--border-width) solid var(--quote--border-color);
-}
-
-.wp-block-quote.has-text-align-right {
-	border-right: var(--quote--border-width) solid var(--quote--border-color);
-}
-
-.wp-block-quote.has-text-align-center {
-	border: none;
-}
-
-.has-background:not(.has-background-background-color) .wp-block-quote,
-[class*="background-color"]:not(.has-background-background-color) .wp-block-quote,
-[style*="background-color"]:not(.has-background-background-color) .wp-block-quote,
-.wp-block-cover[style*="background-image"] .wp-block-quote {
-	border-color: currentColor;
+.wp-block-quote.is-large:before, .wp-block-quote.is-style-large:before {
+	font-size: var(--quote--font-size-large);
+	line-height: var(--quote--line-height-large);
+	left: calc(-1 * var(--global--spacing-horizontal));
 }
 
 .wp-block-quote .wp-block-quote__citation {
@@ -1228,6 +1243,15 @@ p.has-background {
 [style*="background-color"]:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
 .wp-block-cover[style*="background-image"] .wp-block-quote .wp-block-quote__citation {
 	color: currentColor;
+}
+
+@media only screen and (min-width: 482px) {
+	.wp-block-quote {
+		margin-left: auto;
+	}
+	.wp-block-quote.has-text-align-right {
+		margin-right: auto;
+	}
 }
 
 .wp-block-rss {
