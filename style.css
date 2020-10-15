@@ -4002,6 +4002,9 @@ h1.page-title {
 		transition: all 0.25s ease-in-out;
 		transform: translateY(0) translateX(100%);
 	}
+	.wp-custom-logo.has-title-and-tagline.admin-bar .primary-navigation > .primary-menu-container {
+		top: 46px;
+	}
 	.admin-bar .primary-navigation > .primary-menu-container {
 		height: calc(100vh - 46px);
 	}
@@ -4020,8 +4023,10 @@ h1.page-title {
 	transform: translateY(0);
 }
 
-.primary-navigation-open.wp-custom-logo.has-title-and-tagline .primary-navigation > .primary-menu-container {
-	transform: translateX(0) translateY(0);
+@media only screen and (max-width: 481px) {
+	.primary-navigation-open.wp-custom-logo.has-title-and-tagline .primary-navigation > .primary-menu-container {
+		transform: translateX(0) translateY(0);
+	}
 }
 
 .admin-bar .primary-navigation {

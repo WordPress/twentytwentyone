@@ -117,9 +117,13 @@
 			z-index: 499;
 
 			.wp-custom-logo.has-title-and-tagline & {
-				position:fixed;
+				position: fixed;
 				transition: all 0.25s ease-in-out;
 				transform: translateY(0) translateX(100%);
+			}
+
+			.wp-custom-logo.has-title-and-tagline.admin-bar & {
+				top: 46px;
 			}
 
 			.admin-bar & {
@@ -144,9 +148,11 @@
 	}
 
 	.primary-navigation-open.wp-custom-logo.has-title-and-tagline & {
+		@include media(mobile-only) {
 
-		> .primary-menu-container {
-			transform: translateX(0) translateY(0);
+			> .primary-menu-container {
+				transform: translateX(0) translateY(0);
+			}
 		}
 	}
 
