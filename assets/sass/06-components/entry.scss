@@ -8,6 +8,7 @@
 
 	a {
 		color: var(--entry-header--color-link);
+		text-underline-offset: 0.15em;
 
 		&:hover {
 			color: var(--entry-header--color-hover);

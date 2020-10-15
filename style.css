@@ -3313,6 +3313,7 @@ a.custom-logo-link {
 
 .entry-title a {
 	color: var(--entry-header--color-link);
+	text-underline-offset: 0.15em;
 }
 
 .entry-title a:hover {
