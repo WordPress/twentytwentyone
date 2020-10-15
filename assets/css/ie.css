@@ -3699,10 +3699,22 @@ p.has-text-color a {
 	line-height: 1.35;
 }
 
+@media only screen and (min-width: 652px){
+	.wp-block-quote.is-style-large p{
+	font-size: 3rem;
+	}
+}
+
 .wp-block-quote.is-large p {
 	font-size: 2rem;
 	font-style: normal;
 	line-height: 1.35;
+}
+
+@media only screen and (min-width: 652px){
+	.wp-block-quote.is-large p{
+	font-size: 3rem;
+	}
 }
 
 .wp-block-quote.is-style-large .wp-block-quote__citation {
