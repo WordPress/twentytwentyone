@@ -3146,7 +3146,6 @@ table.wp-calendar-table caption {
 }
 
 .site-title a {
-	border-bottom: none;
 	color: currentColor;
 	font-weight: var(--branding--title--font-weight);
 }
@@ -3172,9 +3171,7 @@ table.wp-calendar-table caption {
 	line-height: 1.4;
 }
 
-a.custom-logo-link,
-nav a {
-	border-bottom: 1px solid transparent;
+a.custom-logo-link {
 	text-decoration: none;
 }
 
@@ -3289,10 +3286,6 @@ nav a {
 	padding: calc(0.25 * var(--global--spacing-unit)) calc(0.33 * var(--global--spacing-unit));
 }
 
-.updated:not(.published) {
-	display: none;
-}
-
 .no-results.not-found > *:first-child {
 	margin-bottom: calc(3 * var(--global--spacing-vertical));
 }
@@ -3380,10 +3373,6 @@ h1.entry-title {
 	margin-right: 0;
 }
 
-.entry-meta > span .published + .updated {
-	display: none;
-}
-
 .entry-meta a {
 	border-color: transparent;
 	color: var(--entry-meta--color-link);
@@ -3413,24 +3402,12 @@ h1.entry-title {
 	display: block;
 }
 
-.entry-footer > span {
-	margin-right: calc(0.5 * var(--global--spacing-unit));
-}
-
-.entry-footer > span .published + .updated {
-	display: none;
-}
-
 .entry-footer a {
 	color: var(--entry-meta--color-link);
 }
 
 .entry-footer a:hover, .entry-footer a:focus {
 	color: var(--entry-meta--color-hover);
-}
-
-.entry-footer a:hover {
-	border-color: transparent;
 }
 
 .entry-footer a:active {
@@ -3458,6 +3435,26 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	column-gap: calc(2 * var(--global--spacing-horizontal));
+}
+
+.single .site-main > article > .entry-footer .posted-by .posted-on,
+.single .site-main > article > .entry-footer .posted-by .byline {
+	display: block;
+}
+
+.single .site-main > article > .entry-footer .post-taxonomies .cat-links,
+.single .site-main > article > .entry-footer .post-taxonomies .tags-links {
+	display: block;
+}
+
+@media only screen and (max-width: 481px) {
+	.single .site-main > article > .entry-footer {
+		display: block;
+	}
+	.single .site-main > article > .entry-footer .post-taxonomies .cat-links,
+	.single .site-main > article > .entry-footer .post-taxonomies .tags-links {
+		text-align: left;
+	}
 }
 
 .single .site-main > article > .entry-footer > span {
@@ -3552,8 +3549,23 @@ h1.page-title {
 .archive .content-area .format-link .entry-content,
 .search .content-area .format-aside .entry-content,
 .search .content-area .format-status .entry-content,
-.search .content-area .format-link .entry-content {
+.search .content-area .format-link .entry-content,
+.blog .content-area .format-aside .entry-content,
+.blog .content-area .format-status .entry-content,
+.blog .content-area .format-link .entry-content {
 	font-size: var(--global--font-size-lg);
+}
+
+.archive .format-image .entry-content,
+.archive .format-gallery .entry-content,
+.archive .format-video .entry-content,
+.search .format-image .entry-content,
+.search .format-gallery .entry-content,
+.search .format-video .entry-content,
+.blog .format-image .entry-content,
+.blog .format-gallery .entry-content,
+.blog .format-video .entry-content {
+	margin-top: calc(2 * var(--global--spacing-vertical));
 }
 
 .error404 main p {
@@ -3763,7 +3775,6 @@ h1.page-title {
 }
 
 .comment-author .url {
-	border-bottom: none;
 	color: currentColor;
 }
 
@@ -4024,7 +4035,7 @@ h1.page-title {
 
 .primary-navigation > div > .menu-wrapper .sub-menu-toggle {
 	display: flex;
-	height: 100%;
+	height: calc(2 * var(--primary-nav--padding) + 1.15em + 1px);
 	width: 44px;
 	padding: 0;
 	justify-content: center;
@@ -4127,6 +4138,7 @@ h1.page-title {
 	font-size: var(--primary-nav--font-size-mobile);
 	font-weight: var(--primary-nav--font-weight);
 	padding: var(--primary-nav--padding) 0;
+	text-decoration: none;
 }
 
 @media only screen and (min-width: 482px) {
@@ -4278,7 +4290,8 @@ h1.page-title {
 	transform: scale(1.1);
 }
 
-.footer-navigation-wrapper .sub-menu-toggle {
+.footer-navigation-wrapper .sub-menu-toggle,
+.footer-navigation-wrapper .menu-item-description {
 	display: none;
 }
 
@@ -4289,11 +4302,12 @@ h1.page-title {
 
 .navigation a {
 	color: var(--global--color-primary);
+	text-decoration: none;
 }
 
 .navigation a:hover {
 	color: var(--global--color-primary-hover);
-	border-color: var(--global--color-secondary);
+	text-decoration: underline;
 }
 
 .navigation a:focus {
