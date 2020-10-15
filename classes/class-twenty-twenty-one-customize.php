@@ -85,9 +85,9 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 			 * Add excerpt or full text selector to customizer
 			 */
 			$wp_customize->add_section(
-				'theme_settings',
+				'excerpt_settings',
 				array(
-					'title'    => esc_html__( 'Excerpt settings', 'twentytwentyone' ),
+					'title'    => esc_html__( 'Excerpt Settings', 'twentytwentyone' ),
 					'priority' => 120,
 				)
 			);
@@ -107,7 +107,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 				'display_excerpt_or_full_post',
 				array(
 					'type'    => 'radio',
-					'section' => 'theme_settings',
+					'section' => 'excerpt_settings',
 					'label'   => esc_html__( 'On archive pages, posts show:', 'twentytwentyone' ),
 					'choices' => array(
 						'excerpt' => esc_html__( 'Summary', 'twentytwentyone' ),
