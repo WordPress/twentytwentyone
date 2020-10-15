@@ -1248,6 +1248,7 @@ select {
 }
 
 select:focus {
+	outline-offset: 4px;
 	outline: 1px solid var(--form--border-color);
 }
 
@@ -1284,6 +1285,7 @@ License: MIT.
 	}
 	input[type="checkbox"]:focus {
 		outline: 1px solid var(--form--border-color);
+		outline-offset: 4px;
 		background: var(--global--color-white);
 	}
 	input[type="checkbox"]:after {

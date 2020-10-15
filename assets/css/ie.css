@@ -1819,6 +1819,7 @@ select {
 }
 
 select:focus {
+	outline-offset: 4px;
 	outline: 1px solid #39414d;
 }
 
@@ -1864,6 +1865,7 @@ License: MIT.
 	}
 	input[type="checkbox"]:focus {
 		outline: 1px solid #39414d;
+		outline-offset: 4px;
 		background: #fff;
 	}
 	input[type="checkbox"]:after {
