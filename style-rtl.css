@@ -218,11 +218,6 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--entry-header--font-family: var(--heading--font-family);
 	--entry-header--font-size: var(--heading--font-size-h2);
 	--entry-content--font-family: var(--global--font-secondary);
-	--entry-meta--color: var(--global--color-primary);
-	--entry-meta--color-link: currentColor;
-	--entry-meta--color-hover: var(--global--color-primary-hover);
-	--entry-meta--font-family: var(--global--font-primary);
-	--entry-meta--font-size: var(--global--font-size-xs);
 	--entry-author-bio--font-family: var(--heading--font-family);
 	--entry-author-bio--font-size: var(--heading--font-size-h4);
 	/* Header */
@@ -2845,7 +2840,6 @@ table th,
 .wp-block-table th {
 	padding: calc(0.5 * var(--global--spacing-unit));
 	border: 1px solid;
-	word-break: break-all;
 }
 
 table.is-style-regular .has-background,
@@ -3309,6 +3303,7 @@ a.custom-logo-link {
 
 .entry-title a {
 	color: var(--entry-header--color-link);
+	text-underline-offset: 0.15em;
 }
 
 .entry-title a:hover {
@@ -3359,68 +3354,24 @@ h1.entry-title {
 	}
 }
 
-.entry-meta {
-	color: var(--entry-meta--color);
-	clear: both;
-	float: none;
-	font-size: var(--entry-meta--font-size);
-	display: block;
-}
-
-.entry-meta > span {
-	display: inline-block;
-	margin-left: var(--global--spacing-unit);
-}
-
-.entry-meta > span > *,
-.entry-meta > span span .fn {
-	display: inline-block;
-	vertical-align: middle;
-}
-
-.entry-meta > span:last-child {
-	margin-left: 0;
-}
-
-.entry-meta a {
-	border-color: transparent;
-	color: var(--entry-meta--color-link);
-}
-
-.entry-meta a:hover, .entry-meta a:focus {
-	color: var(--entry-meta--color-hover);
-}
-
-.entry-meta a:hover {
-	border-color: var(--global--color-secondary);
-}
-
-.entry-meta a:focus {
-	color: var(--global--color-secondary);
-}
-
-.entry-meta a:active {
-	color: var(--entry-meta--color-link);
-}
-
 .entry-footer {
-	color: var(--entry-meta--color);
+	color: var(--global--color-primary);
 	clear: both;
 	float: none;
-	font-size: var(--entry-meta--font-size);
+	font-size: var(--global--font-size-xs);
 	display: block;
 }
 
 .entry-footer a {
-	color: var(--entry-meta--color-link);
+	color: currentColor;
 }
 
 .entry-footer a:hover, .entry-footer a:focus {
-	color: var(--entry-meta--color-hover);
+	color: var(--global--color-primary-hover);
 }
 
 .entry-footer a:active {
-	color: var(--entry-meta--color-link);
+	color: currentColor;
 }
 
 .site-main > article > .entry-footer {
@@ -3885,7 +3836,6 @@ h1.page-title {
 	display: flex;
 	font-size: var(--primary-nav--font-size-button);
 	font-weight: var(--primary-nav--font-weight-button);
-	text-transform: var(--branding--title--text-transform);
 	background-color: transparent;
 	border: none;
 	color: var(--primary-nav--color-link);
@@ -3933,7 +3883,6 @@ h1.page-title {
 	left: 0;
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
-	text-transform: var(--branding--title--text-transform);
 	line-height: 1.15;
 	margin-top: 0;
 	margin-bottom: 0;

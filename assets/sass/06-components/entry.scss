@@ -8,6 +8,7 @@
 
 	a {
 		color: var(--entry-header--color-link);
+		text-underline-offset: 0.15em;
 
 		&:hover {
 			color: var(--entry-header--color-hover);
@@ -71,70 +72,24 @@ h1.entry-title {
 	}
 }
 
-.entry-meta {
-
-	color: var(--entry-meta--color);
-	clear: both;
-	float: none;
-	font-size: var(--entry-meta--font-size);
-	display: block;
-
-	> span {
-		display: inline-block;
-		margin-right: var(--global--spacing-unit);
-
-		> *,
-		span .fn {
-			display: inline-block;
-			vertical-align: middle;
-		}
-
-		&:last-child {
-			margin-right: 0;
-		}
-	}
-
-	a {
-		border-color: transparent;
-		color: var(--entry-meta--color-link);
-
-		&:hover,
-		&:focus {
-			color: var(--entry-meta--color-hover);
-		}
-
-		&:hover {
-			border-color: var(--global--color-secondary);
-		}
-
-		&:focus {
-			color: var(--global--color-secondary);
-		}
-
-		&:active {
-			color: var(--entry-meta--color-link);
-		}
-	}
-}
-
 .entry-footer {
 
-	color: var(--entry-meta--color);
+	color: var(--global--color-primary);
 	clear: both;
 	float: none;
-	font-size: var(--entry-meta--font-size);
+	font-size: var(--global--font-size-xs);
 	display: block;
 
 	a {
-		color: var(--entry-meta--color-link);
+		color: currentColor;
 
 		&:hover,
 		&:focus {
-			color: var(--entry-meta--color-hover);
+			color: var(--global--color-primary-hover);
 		}
 
 		&:active {
-			color: var(--entry-meta--color-link);
+			color: currentColor;
 		}
 	}
 }

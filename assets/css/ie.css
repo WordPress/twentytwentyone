@@ -4008,25 +4008,21 @@ table th {
 table td {
 	padding: 10px;
 	border: 1px solid;
-	word-break: break-all;
 }
 
 table th {
 	padding: 10px;
 	border: 1px solid;
-	word-break: break-all;
 }
 
 .wp-block-table td {
 	padding: 10px;
 	border: 1px solid;
-	word-break: break-all;
 }
 
 .wp-block-table th {
 	padding: 10px;
 	border: 1px solid;
-	word-break: break-all;
 }
 
 table.is-style-regular .has-background {
@@ -4693,6 +4689,7 @@ a.custom-logo-link {
 
 .entry-title a {
 	color: currentColor;
+	text-underline-offset: 0.15em;
 }
 
 .entry-title a:hover {
@@ -4749,54 +4746,6 @@ h1.entry-title {
 	.entry-content > iframe[style] {
 		max-width: 30px !important;
 	}
-}
-
-.entry-meta {
-	color: #28303d;
-	clear: both;
-	float: none;
-	font-size: 1rem;
-	display: block;
-}
-
-.entry-meta > span {
-	display: inline-block;
-	margin-right: 20px;
-}
-
-.entry-meta > span > *,
-.entry-meta > span span .fn {
-	display: inline-block;
-	vertical-align: middle;
-}
-
-.entry-meta > span:last-child {
-	margin-right: 0;
-}
-
-.entry-meta a {
-	border-color: transparent;
-	color: currentColor;
-}
-
-.entry-meta a:hover {
-	color: #28303d;
-}
-
-.entry-meta a:focus {
-	color: #28303d;
-}
-
-.entry-meta a:hover {
-	border-color: #39414d;
-}
-
-.entry-meta a:focus {
-	color: #39414d;
-}
-
-.entry-meta a:active {
-	color: currentColor;
 }
 
 .entry-footer {
@@ -5436,7 +5385,6 @@ h1.page-title {
 	display: flex;
 	font-size: 1rem;
 	font-weight: 500;
-	text-transform: uppercase;
 	background-color: transparent;
 	border: none;
 	color: #28303d;
@@ -5484,7 +5432,6 @@ h1.page-title {
 	right: 0;
 	color: #28303d;
 	font-size: 1.125rem;
-	text-transform: uppercase;
 	line-height: 1.15;
 	margin-top: 0;
 	margin-bottom: 0;
