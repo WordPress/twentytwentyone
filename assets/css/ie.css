@@ -5804,7 +5804,8 @@ h1.page-title {
 	transform: scale(1.1);
 }
 
-.footer-navigation-wrapper .sub-menu-toggle {
+.footer-navigation-wrapper .sub-menu-toggle,
+.footer-navigation-wrapper .menu-item-description {
 	display: none;
 }
 
