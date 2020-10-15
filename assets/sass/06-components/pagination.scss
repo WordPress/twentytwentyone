@@ -7,10 +7,11 @@
 
 	a {
 		color: var(--global--color-primary);
+		text-decoration: none;
 
 		&:hover {
 			color: var(--global--color-primary-hover);
-			border-color: var(--global--color-secondary);
+			text-decoration: underline;
 		}
 
 		&:focus {

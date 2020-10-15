@@ -212,7 +212,7 @@
 		// Sub-menu buttons
 		.sub-menu-toggle {
 			display: flex;
-			height: 100%;
+			height: calc(2 * var(--primary-nav--padding) + 1.15em + 1px);
 			width: 44px;
 			padding: 0;
 			justify-content: center;
@@ -328,6 +328,7 @@
 		font-size: var(--primary-nav--font-size-mobile);
 		font-weight: var(--primary-nav--font-weight);
 		padding: var(--primary-nav--padding) 0;
+		text-decoration: none;
 
 		@include media(mobile) {
 			display: block;
