@@ -4008,25 +4008,21 @@ table th {
 table td {
 	padding: 10px;
 	border: 1px solid;
-	word-break: break-all;
 }
 
 table th {
 	padding: 10px;
 	border: 1px solid;
-	word-break: break-all;
 }
 
 .wp-block-table td {
 	padding: 10px;
 	border: 1px solid;
-	word-break: break-all;
 }
 
 .wp-block-table th {
 	padding: 10px;
 	border: 1px solid;
-	word-break: break-all;
 }
 
 table.is-style-regular .has-background {
