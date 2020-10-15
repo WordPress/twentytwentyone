@@ -464,7 +464,6 @@ a:hover {
 }
 
 .site a:focus {
-	outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
 	text-decoration: none;
 }
 
