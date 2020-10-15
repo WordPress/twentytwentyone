@@ -5555,7 +5555,7 @@ h1.page-title {
 
 .primary-navigation > div > .menu-wrapper .sub-menu-toggle {
 	display: flex;
-	height: 100%;
+	height: calc(27px + 1em);
 	width: 44px;
 	padding: 0;
 	justify-content: center;
