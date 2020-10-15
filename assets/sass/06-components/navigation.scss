@@ -137,6 +137,7 @@
 		@include media(mobile-only) {
 			width: 100%;
 			position: fixed;
+			z-index: 2; // To be greater than the cover block and embeds.
 		}
 
 		> .primary-menu-container {
