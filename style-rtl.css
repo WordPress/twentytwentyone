@@ -4345,12 +4345,12 @@ h1.page-title {
 	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-lg);
 	font-weight: var(--pagination--font-weight-strong);
-	line-height: var(--global--line-height-body);
+	line-height: var(--heading--line-height);
 }
 
 @media only screen and (min-width: 822px) {
 	.post-navigation .post-title {
-		margin: 0 calc(24px + (0.25 * var(--global--spacing-unit)));
+		margin: 5px calc(24px + (0.25 * var(--global--spacing-unit))) 0;
 	}
 }
 
