@@ -10,11 +10,33 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 # Page breaks
 # Links
 # Visibility
+# Site Header
+# Blocks
 --------------------------------------------------------------*/
 @media print {
 	/* Margins */
 	@page {
 		margin: 2cm;
+	}
+	.default-max-width, hr.wp-block-separator.is-style-wide, 
+	.entry-content > :not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce), 
+	[class*="inner-container"] > :not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce), 
+	.entry-content .wp-audio-shortcode, 
+	.post-thumbnail,
+	.wp-cover-block,
+	.wp-block-gallery,
+	.wp-block-gallery > ul,
+	.wp-block-gallery.alignleft, 
+	.wp-block-gallery.alignright,
+	.wp-block-cover.alignleft, 
+	.wp-block-cover.alignright, 
+	.wp-block-cover-image.alignleft, 
+	.wp-block-cover-image.alignright{
+		max-width: none;
+	}
+	.wp-block-column {
+		flex-basis: 0 !important;
+		flex-grow: 1;
 	}
 	.entry {
 		margin-top: 1em;
@@ -22,6 +44,10 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	.entry .entry-header,
 	.site-footer .site-info {
 		margin: 0;
+	}
+	.site-main > *,
+	#colophon {
+		margin: 10pt 0;
 	}
 	/* Fonts */
 	body {
@@ -32,7 +58,10 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		color: #000;
 	}
 	h1 {
-		font-size: 24pt;
+		font-size: 24pt !important;
+	}
+	h2.entry-title{
+		font-size: 16pt !important;
 	}
 	h2,
 	h3,
@@ -42,9 +71,22 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	h2.author-title,
 	p.author-bio,
 	.comments-title {
-		font-size: 14pt;
-		margin-top: 25px;
+		font-size: 14pt !important;
 	}
+	.wp-block-latest-posts > li > a {
+		font-size: 13pt;
+		margin-bottom: 0;
+	}
+	.wp-block-latest-posts .wp-block-latest-posts__post-date {
+		font-size: 11pt;
+		margin-top: 0;
+		line-height: 1.2;
+	}
+	.wp-block-pullquote p, 
+	.wp-block-quote.is-style-large p, 
+	.wp-block-quote.is-large p {
+        font-size: 20pt !important;
+    }
 	/* Page breaks */
 	a {
 		page-break-inside: avoid;
@@ -61,9 +103,9 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		page-break-after: avoid;
 		page-break-inside: avoid;
 	}
-	img {
-		page-break-inside: avoid;
-		page-break-after: avoid;
+	img{
+		page-break-inside: avoid  !important;
+		display: inline-block !important;
 	}
 	table,
 	pre {
@@ -80,11 +122,18 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	a {
 		background: transparent;
 		font-weight: bold;
-		text-decoration: underline;
 		text-align: left;
+		text-decoration: none;
+	}
+	a[href^="http"]{
+		text-decoration: underline;
 	}
 	a[href^="http"]:after {
-		content: " < " attr(href) "> ";
+		content: " <" attr(href) "> ";
+		font-size: 9pt;
+		word-break: break-word;
+		font-weight: 300;
+		text-decoration: none !important;
 	}
 	a:after > img {
 		content: "";
@@ -93,7 +142,34 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		content: "";
 	}
 	a:not(:local-link):after {
-		content: " < " attr(href) "> ";
+		content: " <" attr(href) "> ";
+	}	
+	iframe:before{
+		content: " <" attr(src) "> " !important;
+		font-weight: bold;
+	}
+	.wp-block-embed-instagram blockquote:before {
+		content: " <" attr(data-instgrm-permalink) "> ";
+		font-weight: bold;
+	}
+	.wp-block-embed-facebook blockquote:before {
+		content: " <" attr(cite) "> ";
+		font-weight: bold;
+	}
+	.wp-block-audio:before {
+		content: "Audio";
+	}
+	.wp-block-audio audio {
+		display: none;
+	}
+	div.wp-block-embed__wrapper a[href^="http"]:after{
+		display: none !important;
+	} 
+	.wp-block-cover-text a[href^="http"]:after,
+	.entry-title a[href^="http"]:after,
+	.blocks-gallery-item figure a{
+		display: flex;
+		flex-direction: column;
 	}
 	/* Visibility */
 	.primary-navigation,
@@ -106,13 +182,24 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	.widget-area,
 	.comment-form-flex,
 	.comment-reply,
-	.comment .comment-metadata .edit-link {
+	.comment .comment-metadata .edit-link,
+	.wp-block-calendar,
+	.wp-block-search,
+	.navigation.pagination,
+	.wp-block-archives.wp-block-archives-dropdown,
+	.wp-block-categories.wp-block-categories-dropdown,
+	#comments #respond,
+	.edit-link {
 		display: none;
 	}
 	.entry .entry-content .wp-block-button .wp-block-button__link,
 	.entry .entry-content .button {
 		color: #000;
 		background: none;
+		border: none;
+		padding: 0;
+		font-size: 13pt;
+		text-decoration: underline;
 	}
 	/* Site Header (With Featured Image) */
 	.site-header.featured-image {
@@ -157,6 +244,70 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	}
 	.image-filters-enabled .site-header.featured-image .site-featured-image .post-thumbnail img {
 		filter: none;
+	}
+	/* Blocks */
+	.wp-block-cover.has-background-dim {
+		border: 1px solid black ;
+	}
+	.wp-block-cover-text {
+		background-color: #fff !important;
+	}
+	.wp-block-button__link[href^="http"]:after,
+	.wp-block-latest-posts.wp-block-latest-posts__list > li > a[href^="http"]:after {
+		width: auto;
+		display: table;
+	}
+	.wp-block-button {
+		float: none !important;
+	}
+	.wp-block-gallery .blocks-gallery-image figcaption, 
+	.wp-block-gallery .blocks-gallery-item figcaption,
+	figcaption,
+	.wp-caption-text {
+		position: static;
+		background: #fff;
+		color: #333;
+		padding: 5px 0;
+		font-size: small !important;
+		text-align: left;
+	}
+	.wp-block-gallery .blocks-gallery-image figure, 
+	.wp-block-gallery .blocks-gallery-item figure, 
+	.blocks-gallery-grid .blocks-gallery-image figure, 
+	.blocks-gallery-grid .blocks-gallery-item figure{
+		flex-direction: column;
+		height:auto !important;
+	}
+	.wp-block-gallery .blocks-gallery-image, 
+	.wp-block-gallery .blocks-gallery-item, 
+	.blocks-gallery-grid .blocks-gallery-image, 
+	.blocks-gallery-grid .blocks-gallery-item {
+		justify-content: flex-start;
+		display: block;
+		page-break-inside: avoid;
+	}
+	.wp-block-embed {
+		max-width: 70% !important;
+		margin: 10pt auto !important;
+	}
+	figure:not(.wp-block-embed-instagram):not(.wp-block-embed-facebook) .wp-block-embed__wrapper,
+	.wp-block-embed-instagram blockquote,
+	.wp-block-embed-facebook blockquote,
+	.wp-block-audio:before {
+		border: 1pt dotted black !important;
+		box-shadow: none !important;
+	}
+	.wp-block-embed:before {
+		content: "Embed: ";
+	}
+	.wp-block-embed-instagram blockquote{
+		box-shadow: none !important;
+	}
+	.wp-block-latest-posts:not(.is-grid) > li {
+		margin: 10pt 0 !important;
+	}
+	.wp-block-columns.alignfull{
+		padding: 0 18pt !important;
 	}
 }
 
