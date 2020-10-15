@@ -117,50 +117,31 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	grid-template-columns: repeat(2, 1fr);
 	column-gap: calc(2 * var(--global--spacing-horizontal));
 
-	.posted-by {
-
-		.posted-on,
-		.byline {
-			display: block;
-		}
+	.post-taxonomies,
+	.full-size-link {
+		justify-content: flex-end;
+		text-align: right;
 	}
 
-	.post-taxonomies {
-
-		.cat-links,
-		.tags-links {
-			display: block;
-		}
+	.posted-on,
+	.byline,
+	.cat-links,
+	.tags-links {
+		display: block;
 	}
 
 	@include media(mobile-only) {
 		display: block;
 
-		.post-taxonomies {
+		.full-size-link {
+			display: block;
+		}
 
-			.cat-links,
-			.tags-links {
-				text-align: left;
-			}
+		.post-taxonomies,
+		.full-size-link {
+			text-align: left;
 		}
 	}
-
-}
-
-.single .site-main > article > .entry-footer > span {
-	margin-right: 0;
-}
-
-.single .site-main > article > .entry-footer .cat-links,
-.single .site-main > article > .entry-footer .tags-links,
-.single .site-main > article > .entry-footer .full-size-link {
-	justify-self: end;
-	text-align: right;
-}
-
-// Place tag links in last grid column space
-.single .site-main > article > .entry-footer .tags-links {
-	grid-column-start: 2;
 }
 
 /**
