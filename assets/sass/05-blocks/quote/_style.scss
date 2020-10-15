@@ -41,6 +41,7 @@
 	footer {
 		color: var(--global--color-primary);
 		font-size: var(--global--font-size-xs);
+		font-style: var(--quote--font-style-cite);
 
 		.has-background:not(.has-background-background-color) &,
 		[class*="background-color"]:not(.has-background-background-color) &,

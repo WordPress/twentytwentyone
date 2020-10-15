@@ -3626,16 +3626,19 @@ p.has-text-color a {
 .wp-block-quote .wp-block-quote__citation {
 	color: #28303d;
 	font-size: 1rem;
+	font-style: normal;
 }
 
 .wp-block-quote cite {
 	color: #28303d;
 	font-size: 1rem;
+	font-style: normal;
 }
 
 .wp-block-quote footer {
 	color: #28303d;
 	font-size: 1rem;
+	font-style: normal;
 }
 
 .has-background:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,

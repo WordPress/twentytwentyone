@@ -196,6 +196,7 @@
 	--quote--font-weight: normal;
 	--quote--font-weight-strong: 600;
 	--quote--font-style-large: normal;
+	--quote--font-style-cite: normal;
 	--quote--line-height: var(--global--line-height-body);
 	--quote--line-height-large: 1.35;
 	--separator--border-color: var(--global--color-border);
@@ -1199,6 +1200,7 @@ p.has-background {
 .wp-block-quote .wp-block-quote__citation {
 	color: var(--global--color-primary);
 	font-size: var(--global--font-size-xs);
+	font-style: var(--quote--font-style-cite);
 }
 
 .has-background:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
