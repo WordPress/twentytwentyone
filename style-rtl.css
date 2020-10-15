@@ -4282,6 +4282,12 @@ h1.page-title {
 	color: var(--global--color-primary);
 }
 
+.navigation .nav-links .nav-next a,
+.navigation .nav-links .nav-previous a {
+	display: flex;
+	flex-direction: column;
+}
+
 @media only screen and (min-width: 592px) {
 	.navigation .nav-links {
 		display: flex;
@@ -4310,11 +4316,13 @@ h1.page-title {
 .navigation .nav-previous .svg-icon,
 .navigation .prev .svg-icon {
 	top: -2px;
+	margin-left: calc(0.25 * var(--global--spacing-unit));
 }
 
 .navigation .nav-next .svg-icon,
 .navigation .next .svg-icon {
 	top: -1px;
+	margin-right: calc(0.25 * var(--global--spacing-unit));
 }
 
 .post-navigation {
@@ -4342,7 +4350,7 @@ h1.page-title {
 
 @media only screen and (min-width: 822px) {
 	.post-navigation .post-title {
-		margin: 0 var(--global--spacing-horizontal);
+		margin: 0 calc(24px + (0.25 * var(--global--spacing-unit)));
 	}
 }
 

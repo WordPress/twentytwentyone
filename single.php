@@ -39,11 +39,11 @@ while ( have_posts() ) :
 		the_post_navigation(
 			array(
 				'next_text' => '<span class="meta-nav" aria-hidden="true">' .
-				esc_html__( 'Next Post', 'twentytwentyone' ) . ' ' . $twentytwentyone_next . '</span> ' .
-				'<span class="screen-reader-text">' . esc_html__( 'Next post:', 'twentytwentyone' ) . '</span> <br/>' .
+				esc_html__( 'Next Post', 'twentytwentyone' ) . $twentytwentyone_next . '</span> ' .
+				'<span class="screen-reader-text">' . esc_html__( 'Next post:', 'twentytwentyone' ) . '</span>' .
 				'<span class="post-title">%title</span>',
-				'prev_text' => '<span class="meta-nav" aria-hidden="true"> ' . $twentytwentyone_prev . ' ' . esc_html__( 'Previous Post', 'twentytwentyone' ) . '</span> ' .
-				'<span class="screen-reader-text">' . esc_html__( 'Previous post:', 'twentytwentyone' ) . '</span> <br/>' .
+				'prev_text' => '<span class="meta-nav" aria-hidden="true"> ' . $twentytwentyone_prev . esc_html__( 'Previous Post', 'twentytwentyone' ) . '</span> ' .
+				'<span class="screen-reader-text">' . esc_html__( 'Previous post:', 'twentytwentyone' ) . '</span>' .
 				'<span class="post-title">%title</span>',
 			)
 		);
