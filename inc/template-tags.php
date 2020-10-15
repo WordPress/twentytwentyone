@@ -118,7 +118,7 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				}
 				echo '</div>';
 			}
-		} elseif ( 'post' === get_post_type() && is_single() ) {
+		} else {
 
 			echo '<div class="posted-by">';
 			// Posted on.
