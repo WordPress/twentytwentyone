@@ -4985,6 +4985,54 @@ h1.page-title {
 	font-size: 1.5rem;
 }
 
+.blog .content-area .format-aside .entry-content {
+	font-size: 1.5rem;
+}
+
+.blog .content-area .format-status .entry-content {
+	font-size: 1.5rem;
+}
+
+.blog .content-area .format-link .entry-content {
+	font-size: 1.5rem;
+}
+
+.archive .format-image .entry-content {
+	margin-top: 60px;
+}
+
+.archive .format-gallery .entry-content {
+	margin-top: 60px;
+}
+
+.archive .format-video .entry-content {
+	margin-top: 60px;
+}
+
+.search .format-image .entry-content {
+	margin-top: 60px;
+}
+
+.search .format-gallery .entry-content {
+	margin-top: 60px;
+}
+
+.search .format-video .entry-content {
+	margin-top: 60px;
+}
+
+.blog .format-image .entry-content {
+	margin-top: 60px;
+}
+
+.blog .format-gallery .entry-content {
+	margin-top: 60px;
+}
+
+.blog .format-video .entry-content {
+	margin-top: 60px;
+}
+
 .error404 main p {
 	font-size: 1.5rem;
 	margin-bottom: 50px;

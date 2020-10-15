@@ -3553,8 +3553,23 @@ h1.page-title {
 .archive .content-area .format-link .entry-content,
 .search .content-area .format-aside .entry-content,
 .search .content-area .format-status .entry-content,
-.search .content-area .format-link .entry-content {
+.search .content-area .format-link .entry-content,
+.blog .content-area .format-aside .entry-content,
+.blog .content-area .format-status .entry-content,
+.blog .content-area .format-link .entry-content {
 	font-size: var(--global--font-size-lg);
+}
+
+.archive .format-image .entry-content,
+.archive .format-gallery .entry-content,
+.archive .format-video .entry-content,
+.search .format-image .entry-content,
+.search .format-gallery .entry-content,
+.search .format-video .entry-content,
+.blog .format-image .entry-content,
+.blog .format-gallery .entry-content,
+.blog .format-video .entry-content {
+	margin-top: calc(2 * var(--global--spacing-vertical));
 }
 
 .error404 main p {
