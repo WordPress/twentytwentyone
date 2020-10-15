@@ -3946,7 +3946,7 @@ h1.page-title {
 	display: flex;
 }
 
-.wp-custom-logo.has-title-and-tagline .menu-button-container .button.button[aria-expanded*="true"] .dropdown-icon.close {
+.has-logo.has-title-and-tagline .menu-button-container .button.button[aria-expanded*="true"] .dropdown-icon.close {
 	animation-name: twentytwentyone-close-button-transition;
 	animation-duration: 0.3s;
 }
@@ -3997,12 +3997,11 @@ h1.page-title {
 		height: 100vh;
 		z-index: 499;
 	}
-	.wp-custom-logo.has-title-and-tagline .primary-navigation > .primary-menu-container {
+	.has-logo.has-title-and-tagline .primary-navigation > .primary-menu-container {
 		position: fixed;
-		transition: all 0.25s ease-in-out;
 		transform: translateY(0) translateX(100%);
 	}
-	.wp-custom-logo.has-title-and-tagline.admin-bar .primary-navigation > .primary-menu-container {
+	.admin-bar .has-logo.has-title-and-tagline .primary-navigation > .primary-menu-container {
 		top: 46px;
 	}
 	.admin-bar .primary-navigation > .primary-menu-container {
@@ -4024,7 +4023,7 @@ h1.page-title {
 }
 
 @media only screen and (max-width: 481px) {
-	.primary-navigation-open.wp-custom-logo.has-title-and-tagline .primary-navigation > .primary-menu-container {
+	.primary-navigation-open .has-logo.has-title-and-tagline .primary-navigation > .primary-menu-container {
 		transform: translateX(0) translateY(0);
 	}
 }

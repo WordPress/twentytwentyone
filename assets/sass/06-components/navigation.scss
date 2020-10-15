@@ -60,7 +60,7 @@
 				&.close {
 					display: flex;
 
-					.wp-custom-logo.has-title-and-tagline & {
+					.has-logo.has-title-and-tagline & {
 						animation-name: twentytwentyone-close-button-transition;
 						animation-duration: 0.3s;
 					}
@@ -116,13 +116,12 @@
 			height: 100vh;
 			z-index: 499;
 
-			.wp-custom-logo.has-title-and-tagline & {
+			.has-logo.has-title-and-tagline & {
 				position: fixed;
-				transition: all 0.25s ease-in-out;
 				transform: translateY(0) translateX(100%);
 			}
 
-			.wp-custom-logo.has-title-and-tagline.admin-bar & {
+			.admin-bar .has-logo.has-title-and-tagline & {
 				top: 46px;
 			}
 
@@ -147,7 +146,7 @@
 		}
 	}
 
-	.primary-navigation-open.wp-custom-logo.has-title-and-tagline & {
+	.primary-navigation-open .has-logo.has-title-and-tagline & {
 		@include media(mobile-only) {
 
 			> .primary-menu-container {
