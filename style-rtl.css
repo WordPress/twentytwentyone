@@ -3836,7 +3836,6 @@ h1.page-title {
 	display: flex;
 	font-size: var(--primary-nav--font-size-button);
 	font-weight: var(--primary-nav--font-weight-button);
-	text-transform: var(--branding--title--text-transform);
 	background-color: transparent;
 	border: none;
 	color: var(--primary-nav--color-link);
@@ -3884,7 +3883,6 @@ h1.page-title {
 	left: 0;
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
-	text-transform: var(--branding--title--text-transform);
 	line-height: 1.15;
 	margin-top: 0;
 	margin-bottom: 0;
