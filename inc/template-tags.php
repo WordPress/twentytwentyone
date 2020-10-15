@@ -54,24 +54,6 @@ if ( ! function_exists( 'twenty_twenty_one_posted_by' ) ) {
 	}
 }
 
-if ( ! function_exists( 'twenty_twenty_one_comment_count' ) ) {
-	/**
-	 * Prints HTML with the comment count for the current post.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return void
-	 */
-	function twenty_twenty_one_comment_count() {
-		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
-			/* translators: %s: Name of current post. Only visible to screen readers. */
-			comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'twentytwentyone' ), get_the_title() ) );
-			echo '</span>';
-		}
-	}
-}
-
 if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
