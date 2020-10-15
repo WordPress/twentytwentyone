@@ -4488,7 +4488,6 @@ table.wp-calendar-table caption {
 }
 
 .site-title a {
-	border-bottom: none;
 	color: currentColor;
 	font-weight: normal;
 }
@@ -4518,9 +4517,7 @@ table.wp-calendar-table caption {
 	line-height: 1.4;
 }
 
-a.custom-logo-link,
-nav a {
-	border-bottom: 1px solid transparent;
+a.custom-logo-link {
 	text-decoration: none;
 }
 
@@ -4596,7 +4593,6 @@ nav a {
 
 .site-footer > .site-info a {
 	color: currentColor;
-	border-bottom: none;
 }
 
 .site-footer > .site-info a:link, .site-footer > .site-info a:visited, .site-footer > .site-info a:active {
@@ -5262,7 +5258,6 @@ h1.page-title {
 }
 
 .comment-author .url {
-	border-bottom: none;
 	color: currentColor;
 }
 
@@ -5658,6 +5653,7 @@ h1.page-title {
 	font-size: 1.25rem;
 	font-weight: normal;
 	padding: 13px 0;
+	text-decoration: none;
 }
 
 @media only screen and (min-width: 482px) {
@@ -5819,11 +5815,12 @@ h1.page-title {
 
 .navigation a {
 	color: #28303d;
+	text-decoration: none;
 }
 
 .navigation a:hover {
 	color: #28303d;
-	border-color: #39414d;
+	text-decoration: underline;
 }
 
 .navigation a:focus {

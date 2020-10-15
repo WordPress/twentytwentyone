@@ -48,7 +48,6 @@
 	margin-bottom: calc(var(--global--spacing-vertical) / 6);
 
 	a {
-		border-bottom: none;
 		color: currentColor;
 		font-weight: var(--branding--title--font-weight);
 
@@ -78,9 +77,7 @@
 	line-height: 1.4;
 }
 
-a.custom-logo-link,
-nav a {
-	border-bottom: 1px solid transparent;
+a.custom-logo-link {
 	text-decoration: none;
 }
 
