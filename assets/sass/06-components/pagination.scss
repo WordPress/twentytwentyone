@@ -73,16 +73,16 @@
 	@extend %responsive-alignwide-width;
 
 	.meta-nav {
-		font-size: var(--global--font-size-lg);
 		line-height: var(--global--line-height-body);
 		color: var(--global--color-primary);
 	}
 
 	.post-title {
+		display: inline-block;
 		font-family: var(--global--font-primary);
-		font-size: var(--global--font-size-base);
+		font-size: var(--global--font-size-lg);
 		font-weight: var(--pagination--font-weight-strong);
-		line-height: var(--heading--line-height);
+		line-height: var(--global--line-height-body);
 		@include media(desktop) {
 			margin: 0 var(--global--spacing-horizontal);
 		}
@@ -105,6 +105,14 @@
 
 		&:last-child {
 			margin-bottom: 0;
+		}
+
+		&:hover {
+
+			.post-title {
+				text-decoration: underline;
+				text-decoration-thickness: 1px;
+			}
 		}
 	}
 
