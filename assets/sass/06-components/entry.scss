@@ -123,6 +123,10 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 		text-align: right;
 	}
 
+	.full-size-link:first-child:last-child {
+		grid-column: span 2;
+	}
+
 	.posted-on,
 	.byline,
 	.cat-links,

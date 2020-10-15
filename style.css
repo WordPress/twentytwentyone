@@ -3466,6 +3466,10 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	text-align: right;
 }
 
+.single .site-main > article > .entry-footer .full-size-link:first-child:last-child {
+	grid-column: span 2;
+}
+
 .single .site-main > article > .entry-footer .posted-on,
 .single .site-main > article > .entry-footer .byline,
 .single .site-main > article > .entry-footer .cat-links,
