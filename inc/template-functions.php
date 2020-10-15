@@ -154,7 +154,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_tax() ) {
 		return sprintf(
-		/* translators: %s: Taxonomy singular name */
+			/* translators: %s: Taxonomy singular name */
 			esc_html__( '%s Archives', 'twentytwentyone' ),
 			get_taxonomy( get_queried_object()->taxonomy )->labels->singular_name
 		);
