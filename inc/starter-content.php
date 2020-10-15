@@ -22,100 +22,118 @@ function twenty_twenty_one_get_starter_content() {
 
 	// Define and register starter content to showcase the theme on new sites.
 	$starter_content = array(
-		'widgets'   => array(
-			// Place core-defined widgets in the footer widget area.
-			'sidebar-1' => array(
-				'text_business_info',
-				'text_about',
-			),
-		),
 
 		// Specify the core-defined pages to create and add custom thumbnails to some of them.
 		'posts'     => array(
 			'front' => array(
 				'post_type'    => 'page',
-				'post_title'   => esc_html_x( 'A new default theme for WordPress', 'Theme starter content', 'twentytwentyone' ),
+				'post_title'   => esc_html_x( 'Create your website with blocks', 'Theme starter content', 'twentytwentyone' ),
 				'post_content' => '
-				<!-- wp:columns {"align":"wide"} -->
-				<div class="wp-block-columns alignwide"><!-- wp:column {"width":98} -->
-				<div class="wp-block-column" style="flex-basis:98%"><!-- wp:paragraph {"fontSize":"huge","style":{"typography":{"lineHeight":"1.1"}}} -->
-				<p class="has-huge-font-size" style="line-height:1.1">' . esc_html_x( 'A new default theme for WordPress', 'Theme starter content', 'twentytwentyone' ) . '</p>
-				<!-- /wp:paragraph --></div>
-				<!-- /wp:column -->
-				<!-- wp:column {"width":2} -->
-				<div class="wp-block-column" style="flex-basis:2%"></div>
-				<!-- /wp:column --></div>
-				<!-- /wp:columns -->
-				<!-- wp:columns {"verticalAlignment":"center","align":"wide","className":"is-style-twentytwentyone-columns-overlap"} -->
-				<div class="wp-block-columns alignwide are-vertically-aligned-center is-style-twentytwentyone-columns-overlap"><!-- wp:column {"verticalAlignment":"center"} -->
-				<div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"align":"full","sizeSlug":"full"} -->
-				<figure class="wp-block-image alignfull size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/the_smoker.png" alt="' . esc_attr__( '&quot;The Smoker&quot; by Vincent Van Gogh (1888)', 'twentytwentyone' ) . '"/></figure>
-				<!-- /wp:image -->
-				<!-- wp:spacer -->
-				<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-				<!-- /wp:spacer -->
-				<!-- wp:image {"align":"full","sizeSlug":"full"} -->
-				<figure class="wp-block-image alignfull size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/irises.png" alt="' . esc_attr__( '&quot;Irises&quot; by Vincent Van Gogh (1890)', 'twentytwentyone' ) . '"/></figure>
-				<!-- /wp:image --></div>
-				<!-- /wp:column -->
-				<!-- wp:column {"verticalAlignment":"center"} -->
-				<div class="wp-block-column is-vertically-aligned-center"><!-- wp:spacer -->
-				<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-				<!-- /wp:spacer -->
-				<!-- wp:image {"className":"alignfull size-full"} -->
-				<figure class="wp-block-image alignfull size-full">
-				<img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/girl_in_white.png" alt="' . esc_attr__( '&quot;Girl in White&quot; by Vincent Van Gogh (1890)', 'twentytwentyone' ) . '"/></figure>
-				<!-- /wp:image --></div>
-				<!-- /wp:column --></div>
-				<!-- /wp:columns -->
-				<!-- wp:heading {"align":"center","fontSize":"huge"} -->
-				<h2 class="has-text-align-center has-huge-font-size">' . esc_html_x( 'Create your website with blocks', 'Theme starter content', 'twentytwentyone' ) . '</h2>
-				<!-- /wp:heading -->
-				<!-- wp:spacer {"height":50} -->
-				<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
-				<!-- /wp:spacer -->
-				<!-- wp:columns {"align":"wide"} -->
-				<div class="wp-block-columns alignwide"><!-- wp:column -->
-				<div class="wp-block-column"><!-- wp:heading -->
-				<h2>' . esc_html_x( 'Add unique block patterns to your layout', 'Theme starter content', 'twentytwentyone' ) . '</h2>
-				<!-- /wp:heading -->
-				<!-- wp:spacer {"height":40} -->
-				<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
-				<!-- /wp:spacer -->
-				<!-- wp:paragraph {"fontSize":"large"} -->
-				<p class="has-large-font-size">' . esc_html_x( 'To add a pattern, select Add block in the toolbar, and open the patterns tab.', 'Theme starter content', 'twentytwentyone' ) . '</p>
-				<!-- /wp:paragraph --></div>
-				<!-- /wp:column -->
-				<!-- wp:column -->
-				<div class="wp-block-column"><!-- wp:media-text {"mediaId":1747,"mediaType":"image","mediaWidth":36,"isStackedOnMobile":false,"className":"is-stacked-on-mobile"} -->
-				<div class="wp-block-media-text alignwide is-stacked-on-mobile" style="grid-template-columns:36% auto"><figure class="wp-block-media-text__media"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/la_mousme.jpg" alt="' . esc_attr__( '&quot;La Mousmé&quot; by Vincent Van Gogh (1888)', 'twentytwentyone' ) . '" class="wp-image-1747 size-full"/></figure><div class="wp-block-media-text__content"><!-- wp:image {"align":"center","width":400,"height":512,"className":"size-large is-style-twentytwentyone-image-frame"} -->
-				<div class="wp-block-image size-large is-style-twentytwentyone-image-frame"><figure class="aligncenter is-resized"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/the_berceuse_woman-rocking_a_cradle.jpg" alt="' . esc_attr__( '&quot;The Berceuse, Woman Rocking a Cradle&quot; by Vincent Van Gogh (1889)', 'twentytwentyone' ) . '" width="400" height="512"/></figure></div>
-				<!-- /wp:image --></div></div>
-				<!-- /wp:media-text --></div>
-				<!-- /wp:column --></div>
-				<!-- /wp:columns -->
-				<!-- wp:heading -->
-				<h2>' . esc_html_x( 'Mix borders and overlaps', 'Theme starter content', 'twentytwentyone' ) . '</h2>
-				<!-- /wp:heading -->
-				<!-- wp:paragraph -->
-				<p></p>
-				<!-- /wp:paragraph -->
-				<!-- wp:columns {"align":"wide"} -->
-				<div class="wp-block-columns alignwide"><!-- wp:column {"verticalAlignment":"bottom"} -->
-				<div class="wp-block-column is-vertically-aligned-bottom"><!-- wp:spacer {"height":50} -->
-				<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
-				<!-- /wp:spacer -->
-				<!-- wp:image {"id":12,"sizeSlug":"large","linkDestination":"none","className":"is-style-twentytwentyone-image-frame"} -->
-				<figure class="wp-block-image size-large is-style-twentytwentyone-image-frame"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/the_poplars_at_saint_remy.jpg" alt="' . esc_attr__( '&quot;The Poplars at Saint-Rémy&quot; by Vincent Van Gogh (1889)', 'twentytwentyone' ) . '" class="wp-image-12"/></figure>
-				<!-- /wp:image --></div>
-				<!-- /wp:column -->
-				<!-- wp:column -->
-				<div class="wp-block-column"><!-- wp:image {"id":2419,"sizeSlug":"large","linkDestination":"none","className":"is-style-twentytwentyone-border"} -->
-				<figure class="wp-block-image size-large is-style-twentytwentyone-border"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/roses_b.jpg" alt="' . esc_attr__( '&quot;Roses&quot; by Vincent Van Gogh (1890)', 'twentytwentyone' ) . '" class="wp-image-2419"/></figure>
-				<!-- /wp:image --></div>
-				<!-- /wp:column --></div>
-				<!-- /wp:columns -->
-				',
+					<!-- wp:heading {"align":"wide","fontSize":"gigantic","style":{"typography":{"lineHeight":"1.1"}}} -->
+					<h2 class="alignwide has-text-align-wide has-gigantic-font-size" style="line-height:1.1">' . esc_html_x( 'Create your website with blocks', 'Theme starter content', 'twentytwentyone' ) . '</h2>
+					<!-- /wp:heading -->
+
+					<!-- wp:spacer -->
+					<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+					<!-- /wp:spacer -->
+
+					<!-- wp:columns {"verticalAlignment":"center","align":"wide","className":"is-style-twentytwentyone-columns-overlap"} -->
+					<div class="wp-block-columns alignwide are-vertically-aligned-center is-style-twentytwentyone-columns-overlap"><!-- wp:column {"verticalAlignment":"center"} -->
+					<div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"align":"full","sizeSlug":"large"} -->
+					<figure class="wp-block-image alignfull size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/roses-tremieres-hollyhocks.jpg" alt="' . esc_attr__( 'Roses Tremieres (Hollyhocks), by Berthe Morisot, 1884', 'Theme starter content', 'twentytwentyone' ) . '"/></figure>
+					<!-- /wp:image -->
+
+					<!-- wp:spacer -->
+					<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+					<!-- /wp:spacer -->
+
+					<!-- wp:image {"align":"full","sizeSlug":"large","className":"is-style-twentytwentyone-image-frame"} -->
+					<figure class="wp-block-image alignfull size-large is-style-twentytwentyone-image-frame"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/in-the-bois-de-boulogne.jpg" alt="' . esc_attr__( 'In the Bois de Boulogne, by Berthe Morisot, 1879', 'Theme starter content', 'twentytwentyone' ) . '"/></figure>
+					<!-- /wp:image --></div>
+					<!-- /wp:column -->
+
+					<!-- wp:column {"verticalAlignment":"center"} -->
+					<div class="wp-block-column is-vertically-aligned-center"><!-- wp:spacer -->
+					<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+					<!-- /wp:spacer -->
+
+					<!-- wp:image {"sizeSlug":"large","className":"alignfull size-full is-style-twentytwentyone-border"} -->
+					<figure class="wp-block-image size-large alignfull size-full is-style-twentytwentyone-border"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/young-woman-in-mauve.jpg" alt="' . esc_attr__( 'Young Woman in Mauve, by Berthe Morisot, 1880', 'Theme starter content', 'twentytwentyone' ) . '"/></figure>
+					<!-- /wp:image --></div>
+					<!-- /wp:column --></div>
+					<!-- /wp:columns -->
+
+					<!-- wp:spacer {"height":50} -->
+					<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+					<!-- /wp:spacer -->
+
+					<!-- wp:columns {"verticalAlignment":"top","align":"wide"} -->
+					<div class="wp-block-columns alignwide are-vertically-aligned-top"><!-- wp:column {"verticalAlignment":"top"} -->
+					<div class="wp-block-column is-vertically-aligned-top"><!-- wp:heading {"level":3} -->
+					<h3>' . esc_html_x( 'Add block patterns', 'Theme starter content', 'twentytwentyone' ) . '</h3>
+					<!-- /wp:heading -->
+
+					<!-- wp:paragraph -->
+					<p>' . esc_html_x( 'To add a block pattern, select the Add Block button in the toolbar at the top of the editor. This button is a plus sign within a square. Underneath the search bar, you&rsquo;ll see some tabs, such as Blocks and Patterns. Select Patterns. Browse through the patterns and select one to add it to your content.', 'Theme starter content', 'twentytwentyone' ) . '</p>
+					<!-- /wp:paragraph --></div>
+					<!-- /wp:column -->
+
+					<!-- wp:column {"verticalAlignment":"top"} -->
+					<div class="wp-block-column is-vertically-aligned-top"><!-- wp:heading {"level":3} -->
+					<h3>' . esc_html_x( 'Frame your images', 'Theme starter content', 'twentytwentyone' ) . '</h3>
+					<!-- /wp:heading -->
+
+					<!-- wp:paragraph -->
+					<p>' . esc_html_x( 'Twenty Twenty-One comes with several block styles, including borders and frames for blocks like Image. Try it out by adding a new image block to your editor, and in the Editor sidebar, open the "Styles" panel and select the "Frame" block style. Your images will look like works of art!', 'Theme starter content', 'twentytwentyone' ) . '</p>
+					<!-- /wp:paragraph --></div>
+					<!-- /wp:column -->
+
+					<!-- wp:column {"verticalAlignment":"top"} -->
+					<div class="wp-block-column is-vertically-aligned-top"><!-- wp:heading {"level":3} -->
+					<h3>' . esc_html_x( 'Overlap columns', 'Theme starter content', 'twentytwentyone' ) . '</h3>
+					<!-- /wp:heading -->
+
+					<!-- wp:paragraph -->
+					<p>' . esc_html_x( 'Another block style included with Twenty Twenty-One is an overlap for column blocks. This allows you to create stacked layouts like the gallery on this page. Add a columns block to your editor, and in the Editor sidebar, and in the "Styles" panel, select the "Overlap" block style.', 'Theme starter content', 'twentytwentyone' ) . '</p>
+					<!-- /wp:paragraph --></div>
+					<!-- /wp:column --></div>
+					<!-- /wp:columns -->
+
+					<!-- wp:spacer -->
+					<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+					<!-- /wp:spacer -->
+
+					<!-- wp:cover {"overlayColor":"green","contentPosition":"center center","align":"wide","className":"is-style-twentytwentyone-border"} -->
+					<div class="wp-block-cover alignwide has-green-background-color has-background-dim is-style-twentytwentyone-border"><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":20} -->
+					<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+					<!-- /wp:spacer -->
+
+					<!-- wp:paragraph {"fontSize":"huge"} -->
+					<p class="has-huge-font-size">' . esc_html_x( 'Need help?', 'Theme starter content', 'twentytwentyone' ) . '</p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:spacer {"height":75} -->
+					<div style="height:75px" aria-hidden="true" class="wp-block-spacer"></div>
+					<!-- /wp:spacer -->
+
+					<!-- wp:columns -->
+					<div class="wp-block-columns"><!-- wp:column -->
+					<div class="wp-block-column"><!-- wp:paragraph -->
+					<p><a href="https://wordpress.org/support/article/twenty-twenty-one/">' . esc_html_x( 'Read the Theme Documentation', 'Theme starter content', 'twentytwentyone' ) . '</a></p>
+					<!-- /wp:paragraph --></div>
+					<!-- /wp:column -->
+
+					<!-- wp:column -->
+					<div class="wp-block-column"><!-- wp:paragraph -->
+					<p><a href="https://wordpress.org/support/theme/twentytwentyone/">' . esc_html_x( 'Check out the Support Forums', 'Theme starter content', 'twentytwentyone' ) . '</a></p>
+					<!-- /wp:paragraph --></div>
+					<!-- /wp:column --></div>
+					<!-- /wp:columns -->
+
+					<!-- wp:spacer {"height":20} -->
+					<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+					<!-- /wp:spacer --></div></div>
+					<!-- /wp:cover -->',
 			),
 			'about',
 			'contact',
