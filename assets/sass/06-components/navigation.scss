@@ -58,10 +58,14 @@
 
 				&.close {
 					display: flex;
+
+					.has-logo.has-title-and-tagline & {
+						animation-name: twentytwentyone-close-button-transition;
+						animation-duration: 0.3s;
+					}
 				}
 			}
 		}
-
 	}
 
 	// When the menu is open, hide the close button and show the hide button.
@@ -110,6 +114,15 @@
 			height: 100vh;
 			z-index: 499;
 
+			.has-logo.has-title-and-tagline & {
+				position: fixed;
+				transform: translateY(0) translateX(100%);
+			}
+
+			.admin-bar .has-logo.has-title-and-tagline & {
+				top: 46px;
+			}
+
 			.admin-bar & {
 				height: calc(100vh - 46px);
 			}
@@ -122,6 +135,7 @@
 		@include media(mobile-only) {
 			width: 100%;
 			position: fixed;
+			z-index: 2; // To be greater than the cover block and embeds.
 		}
 
 		> .primary-menu-container {
@@ -129,7 +143,15 @@
 			opacity: 1;
 			transform: translateY(0);
 		}
+	}
 
+	.primary-navigation-open .has-logo.has-title-and-tagline & {
+		@include media(mobile-only) {
+
+			> .primary-menu-container {
+				transform: translateX(0) translateY(0);
+			}
+		}
 	}
 
 	// Adjust positions when logged-in
@@ -449,5 +471,17 @@
 		position: fixed;
 		max-width: 100%;
 		width: 100%;
+	}
+}
+
+// Close button animation for when a custom logo is present.
+@keyframes twentytwentyone-close-button-transition {
+
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
 	}
 }
