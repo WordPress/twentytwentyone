@@ -23,13 +23,13 @@ if ( ! function_exists( 'twenty_twenty_one_posted_on' ) ) {
 			esc_attr( get_the_date( DATE_W3C ) ),
 			esc_html( get_the_date() )
 		);
-
+		echo '<span class="posted-on">';
 		printf(
-			/* translators: 2: author name*/
-			'<span class="posted-on">%1$s %2$s</span>',
-			esc_html__( 'Published', 'twentytwentyone' ),
+			/* translators: %s: publish date */
+			esc_html__( 'Published %s', 'twentytwentyone' ),
 			$time_string // phpcs:ignore WordPress.Security.EscapeOutput
 		);
+		echo '</span>';
 	}
 }
 

@@ -55,27 +55,27 @@ while ( have_posts() ) {
 			<?php
 			// Check if there is a parent, then add the published in link.
 			if ( wp_get_post_parent_id( $post ) ) {
+				echo '<span class="posted-on">';
 				printf(
-					/* translators: 2: parent post link. 3: parent post title*/
-					'<span class="posted-on">%1$s <a href="%2$s">%3$s</a></span>',
-					esc_html__( 'Published in', 'twentytwentyone' ),
-					esc_url( get_the_permalink( wp_get_post_parent_id( $post ) ) ),
-					esc_html( get_the_title( wp_get_post_parent_id( $post ) ) )
+					/* translators: %s: parent post */
+					esc_html__( 'Published in %s', 'twentytwentyone' ),
+					'<a href="' . esc_url( get_the_permalink( wp_get_post_parent_id( $post ) ) ) . '">' . esc_html( get_the_title( wp_get_post_parent_id( $post ) ) ) . '</a>'
 				);
+				echo '</span>';
 			} else {
 				// Edit post link.
 				edit_post_link(
 					sprintf(
 						wp_kses(
 							/* translators: %s: Name of current post. Only visible to screen readers. */
-							__( 'Edit<span class="screen-reader-text"> %s</span>', 'twentytwentyone' ),
+							__( 'Edit %s', 'twentytwentyone' ),
 							array(
 								'span' => array(
 									'class' => array(),
 								),
 							)
 						),
-						get_the_title()
+						'<span class="screen-reader-text">' . get_the_title() . '</span>'
 					),
 					'<span class="edit-link">',
 					'</span>'
@@ -100,14 +100,14 @@ while ( have_posts() ) {
 					sprintf(
 						wp_kses(
 							/* translators: %s: Name of current post. Only visible to screen readers. */
-							__( 'Edit<span class="screen-reader-text"> %s</span>', 'twentytwentyone' ),
+							__( 'Edit %s', 'twentytwentyone' ),
 							array(
 								'span' => array(
 									'class' => array(),
 								),
 							)
 						),
-						get_the_title()
+						'<span class="screen-reader-text">' . get_the_title() . '</span>'
 					),
 					'<span class="edit-link">',
 					'</span><br>'
