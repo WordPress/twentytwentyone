@@ -24,6 +24,7 @@
 	}
 
 	strong {
+		// "Bold" text is intentionally unbolded to differentiate from the rest of the quote.
 		font-weight: var(--quote--font-weight);
 	}
 
@@ -52,10 +53,30 @@
 	/**
 	 * Block Options
 	 */
+	&.has-text-align-right {
+		margin: var(--global--spacing-vertical) var(--global--spacing-horizontal) var(--global--spacing-vertical) auto;
+		padding-right: 0;
+		border-right: none;
+
+		&:before {
+			content: "\201D";
+			left: initial;
+			right: calc(-0.5 * var(--global--spacing-horizontal));
+		}
+	}
+
+	&.has-text-align-center {
+		margin: var(--global--spacing-vertical) auto;
+
+		&:before {
+			display: none;
+		}
+	}
 
 	&.is-large,
 	&.is-style-large {
 		padding-left: 0;
+		padding-right: 0;
 
 		/* Resetting margins to match _block-container.scss */
 		margin-top: var(--global--spacing-vertical);
@@ -73,26 +94,63 @@
 			left: calc(-1 * var(--global--spacing-horizontal));
 		}
 
+		&.has-text-align-right {
+
+			&:before {
+				left: initial;
+				right: calc(-1 * var(--global--spacing-horizontal));
+			}
+		}
+
 		.wp-block-quote__citation,
 		cite,
 		footer {
 			color: var(--global--color-primary);
-			font-size: var(--global--font-size-xs);
+			font-size: var(--global--font-size-sm);
+		}
+
+		@include media(mobile-only) {
+			padding-left: var(--global--spacing-horizontal);
+
+			&:before {
+				left: 0;
+			}
+
+			&.has-text-align-right {
+				padding-left: 0;
+				padding-right: var(--global--spacing-horizontal);
+
+				&:before {
+					right: 0;
+				}
+			}
+
+			&.has-text-align-center {
+				padding-left: 0;
+				padding-right: 0;
+			}
 		}
 	}
 
-	.has-background:not(.has-background-background-color) &,
-	[class*="background-color"]:not(.has-background-background-color) &,
-	[style*="background-color"] &,
-	.wp-block-cover[style*="background-image"] & {
-		border-color: currentColor;
-	}
+	@include media(mobile-only) {
+		padding-left: calc(0.5 * var(--global--spacing-horizontal));
 
-	@include media(mobile) {
-		margin-left: auto;
+		&:before {
+			left: 0;
+		}
 
 		&.has-text-align-right {
-			margin-right: auto;
+			padding-left: 0;
+			padding-right: calc(0.5 * var(--global--spacing-horizontal));
+
+			&:before {
+				right: 0;
+			}
+		}
+
+		&.has-text-align-center {
+			padding-left: 0;
+			padding-right: 0;
 		}
 	}
 }
