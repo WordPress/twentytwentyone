@@ -16,8 +16,11 @@ a:hover {
 }
 
 .site a:focus {
-	outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
-	text-decoration: none;
+
+	&:not(.skip-link) {
+		outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
+		text-decoration: none;
+	}
 }
 
 // Enforce the custom link color even if a custom background color has been set.
