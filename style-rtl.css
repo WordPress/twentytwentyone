@@ -1216,7 +1216,7 @@ input[type="color"]:disabled,
 }
 
 input[type="search"]:focus {
-	outline-offset: 0;
+	outline-offset: -6px;
 }
 
 input[type="date"] {
