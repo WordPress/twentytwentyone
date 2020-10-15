@@ -435,6 +435,10 @@
 		font-size: var(--global--font-size-xs);
 		text-transform: none;
 		line-height: 1.7;
+
+		> span {
+			display: inline-block;
+		}
 	}
 }
 

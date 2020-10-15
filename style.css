@@ -4209,6 +4209,10 @@ h1.page-title {
 	line-height: 1.7;
 }
 
+.primary-navigation .menu-item-description > span {
+	display: inline-block;
+}
+
 @media only screen and (max-width: 481px) {
 	.lock-scrolling .site {
 		position: fixed;
