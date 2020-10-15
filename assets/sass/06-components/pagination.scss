@@ -84,7 +84,7 @@
 		font-weight: var(--pagination--font-weight-strong);
 		line-height: var(--heading--line-height);
 		@include media(desktop) {
-			margin: 0 var(--global--spacing-horizontal);
+			margin: 5px var(--global--spacing-horizontal) 0;
 		}
 	}
 

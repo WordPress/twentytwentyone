@@ -5912,7 +5912,7 @@ h1.page-title {
 
 @media only screen and (min-width: 822px) {
 	.post-navigation .post-title {
-		margin: 0 25px;
+		margin: 5px 25px 0;
 	}
 }
 
