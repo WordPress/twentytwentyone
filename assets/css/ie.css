@@ -3406,6 +3406,25 @@ p.has-text-color a {
 	color: #28303d;
 }
 
+.post-password-form {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.post-password-form__label {
+	width: 100%;
+	margin-bottom: 0;
+}
+
+.post-password-form__input {
+	margin-top: 10px;
+	margin-right: -3px;
+}
+
+.post-password-form__submit {
+	margin-top: 10px;
+}
+
 .wp-block-pullquote {
 	padding: 40px 0;
 	text-align: center;

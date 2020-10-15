@@ -2392,6 +2392,25 @@ p.has-text-color a {
 	color: var(--wp--style--color--link, var(--global--color-primary));
 }
 
+.post-password-form {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.post-password-form__label {
+	width: 100%;
+	margin-bottom: 0;
+}
+
+.post-password-form__input {
+	margin-top: calc(var(--global--spacing-vertical) / 3);
+	margin-left: calc(-1 * var(--button--border-width));
+}
+
+.post-password-form__submit {
+	margin-top: calc(var(--global--spacing-vertical) / 3);
+}
+
 .wp-block-pullquote {
 	padding: calc(2 * var(--global--spacing-unit)) 0;
 	text-align: center;
