@@ -47,7 +47,7 @@
 						<?php if ( is_front_page() && ! is_paged() ) : ?>
 							<?php bloginfo( 'name' ); ?>
 						<?php else : ?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
 						<?php endif; ?>
 					<?php endif; ?>
 				<?php endif; ?>
