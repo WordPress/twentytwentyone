@@ -4379,14 +4379,14 @@ h1.page-title {
 }
 
 .post-navigation .meta-nav {
-	font-size: var(--global--font-size-lg);
 	line-height: var(--global--line-height-body);
 	color: var(--global--color-primary);
 }
 
 .post-navigation .post-title {
+	display: inline-block;
 	font-family: var(--global--font-primary);
-	font-size: var(--global--font-size-base);
+	font-size: var(--global--font-size-lg);
 	font-weight: var(--pagination--font-weight-strong);
 	line-height: var(--heading--line-height);
 }
@@ -4417,6 +4417,12 @@ h1.page-title {
 .post-navigation .nav-next:last-child,
 .post-navigation .nav-previous:last-child {
 	margin-bottom: 0;
+}
+
+.post-navigation .nav-next:hover .post-title,
+.post-navigation .nav-previous:hover .post-title {
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
 }
 
 .pagination,

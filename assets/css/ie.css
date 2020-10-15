@@ -5951,14 +5951,14 @@ h1.page-title {
 }
 
 .post-navigation .meta-nav {
-	font-size: 1.5rem;
 	line-height: 1.7;
 	color: #28303d;
 }
 
 .post-navigation .post-title {
+	display: inline-block;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 	font-weight: 600;
 	line-height: 1.3;
 }
@@ -5993,6 +5993,12 @@ h1.page-title {
 .post-navigation .nav-next:last-child,
 .post-navigation .nav-previous:last-child {
 	margin-bottom: 0;
+}
+
+.post-navigation .nav-next:hover .post-title,
+.post-navigation .nav-previous:hover .post-title {
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
 }
 
 .pagination {
