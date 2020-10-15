@@ -4346,12 +4346,12 @@ h1.page-title {
 	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-lg);
 	font-weight: var(--pagination--font-weight-strong);
-	line-height: var(--heading--line-height);
+	line-height: var(--global--line-height-body);
 }
 
 @media only screen and (min-width: 822px) {
 	.post-navigation .post-title {
-		margin: 5px var(--global--spacing-horizontal) 0;
+		margin: 0 var(--global--spacing-horizontal);
 	}
 }
 
