@@ -1,7 +1,7 @@
 /**
  * Button
  */
-.site button:not(.customize-partial-edit-shortcut-button),
+.site button:not(.customize-partial-edit-shortcut-button).mejs-inner:not(button),
 .site .button,
 input[type="submit"],
 input[type="reset"],

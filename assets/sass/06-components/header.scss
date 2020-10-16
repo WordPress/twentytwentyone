@@ -4,6 +4,11 @@
 	display: flex;
 	align-items: flex-start;
 	flex-wrap: wrap;
+	row-gap: var(--global--spacing-vertical); // Add space in case the menu wraps below the site branding.
+
+	.wp-custom-logo & {
+		align-items: center;
+	}
 
 	@include media(mobile) {
 		padding-top: calc(var(--global--spacing-vertical) / 0.75); // 40px
@@ -21,11 +26,12 @@
 
 	&:last-child {
 		margin-right: 0;
+		width: 100%;
+		text-align: center;
 	}
 
 	@include media(mobile) {
 		margin-right: initial;
-		margin-bottom: var(--global--spacing-vertical); // Add a margin in case the menu wraps below the site branding.
 		margin-top: 4px; // Align the baseline of the site title with the primary menu
 	}
 }
@@ -42,7 +48,6 @@
 	margin-bottom: calc(var(--global--spacing-vertical) / 6);
 
 	a {
-		border-bottom: none;
 		color: currentColor;
 		font-weight: var(--branding--title--font-weight);
 
@@ -72,9 +77,7 @@
 	line-height: 1.4;
 }
 
-a.custom-logo-link,
-nav a {
-	border-bottom: 1px solid transparent;
+a.custom-logo-link {
 	text-decoration: none;
 }
 
@@ -88,10 +91,20 @@ nav a {
 
 	margin: calc(var(--global--spacing-vertical) / 2) 0;
 
+	.site-header > & {
+		width: 100%;
+		padding-bottom: calc(var(--global--spacing-vertical) * 1.5);
+		border-bottom: 1px solid;
+		text-align: center;
+	}
+
 	.custom-logo {
+		margin-left: auto;
+		margin-right: auto;
 		max-width: var(--branding--logo--max-width-mobile);
 		max-height: var(--branding--logo--max-height-mobile);
 		height: auto;
+		display: inline-block;
 		width: auto;
 	}
 
@@ -102,6 +115,97 @@ nav a {
 			max-height: var(--branding--logo--max-height);
 			height: auto;
 			width: auto;
+		}
+	}
+}
+
+@include media(mobile-only) {
+
+	.site-header {
+
+		&.has-logo {
+
+			&:not(.has-title-and-tagline) {
+
+				&.has-menu {
+
+					.site-logo {
+						position: absolute;
+						padding-top: calc(0.5 * var(--global--spacing-vertical));
+						margin-top: 0;
+						top: 0;
+
+						.admin-bar & {
+							top: 46px;
+						}
+
+						.primary-navigation-open & {
+							display: none;
+						}
+
+						img {
+							max-height: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit)) + 1.7em);
+						}
+					}
+				}
+			}
+
+			&.has-title-and-tagline {
+				align-items: flex-start;
+
+				&.has-menu {
+					justify-content: space-between;
+
+					.site-branding {
+						max-width: calc(100% - 160px);
+					}
+				}
+
+				.site-branding {
+					margin-right: 0;
+				}
+
+				body:not(.primary-navigation-open) & {
+
+					&:after {
+						display: none;
+					}
+
+					.primary-navigation {
+						position: relative;
+						top: 0;
+					}
+
+					.menu-button-container {
+						position: relative;
+						padding-top: 0;
+						margin-top: calc(0px - var(--button--padding-vertical) + (0.25 * var(--global--spacing-unit)));
+
+						#primary-mobile-menu {
+							// The 4.5px here is to offset the icon size horizontallly
+							// (the icon's width is larger than the path's width and has extra space on the sides).
+							padding-left: calc(var(--global--spacing-horizontal) * 0.6 - 4.5px);
+							padding-right: calc(var(--global--spacing-horizontal) * 0.6 - 4.5px);
+							margin-right: calc(0px - var(--global--spacing-horizontal) * 0.6);
+						}
+					}
+				}
+			}
+		}
+
+		&:not(.has-logo) {
+
+			&.has-title-and-tagline {
+
+				.site-branding {
+					margin-right: 0;
+					max-width: calc(100% - 160px);
+				}
+			}
+		}
+
+		&:not(.has-menu) {
+			justify-content: center;
 		}
 	}
 }

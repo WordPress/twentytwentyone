@@ -37,3 +37,7 @@
 | @mager19 | @mager19 |
 | @rolf-yoast | @rolfsiebers
 | @web-migrates | @webmigrates
+| @SResok | @sresok |
+| @GuidoOffermans | @guidooffermans |
+| @francescamarano | @francina |
+| @marybaum | @marybaum |

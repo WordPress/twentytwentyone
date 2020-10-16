@@ -14,22 +14,22 @@
 	"homepage": "https://github.com/wordpress/twentytwentyone",
 	"devDependencies": {
 		"@wordpress/browserslist-config": "^2.2.2",
-		"@wordpress/env": "^2.0.1",
-		"@wordpress/eslint-plugin": "^7.2.1",
-		"eslint": "^7.10.0",
+		"@wordpress/env": "^2.1.0",
+		"@wordpress/eslint-plugin": "^7.3.0",
 		"autoprefixer": "^9.5.1",
 		"chokidar-cli": "^2.1.0",
+		"eslint": "^7.11.0",
 		"minimist": "^1.2.2",
 		"node-sass": "^4.13.1",
 		"npm-run-all": "^4.1.5",
-		"postcss-calc": "^7.0.2",
+		"postcss-calc": "^7.0.5",
 		"postcss-cli": "^7.1.0",
 		"postcss-css-variables": "^0.17.0",
 		"postcss-custom-media": "^7.0.8",
 		"postcss-focus-within": "^3.0.0",
 		"postcss-nested": "^4.2.1",
-		"rtlcss": "^2.4.0",
-		"stylelint": "^13.7.1",
+		"rtlcss": "^2.6.1",
+		"stylelint": "^13.7.2",
 		"stylelint-config-recommended-scss": "^4.2.0",
 		"stylelint-config-wordpress": "^17.0.0"
 	},
@@ -61,6 +61,8 @@
 		"watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial",
 		"lint:scss": "stylelint **/*.scss",
 		"lint:js": "eslint assets/js",
+		"lint-fix:scss": "stylelint **/*.scss --fix",
+		"lint-fix:js": "eslint assets/js --fix",
 		"wp-env": "wp-env"
 	}
 }

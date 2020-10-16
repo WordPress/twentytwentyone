@@ -34,16 +34,16 @@ while ( have_posts() ) :
 
 	if ( is_singular( 'post' ) ) {
 		// Previous/next post navigation.
-		$twentytwentyone_next = is_rtl() ? twenty_twenty_one_get_icon_svg( 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'arrow_right' );
-		$twentytwentyone_prev = is_rtl() ? twenty_twenty_one_get_icon_svg( 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'arrow_left' );
+		$twentytwentyone_next = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' );
+		$twentytwentyone_prev = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' );
 		the_post_navigation(
 			array(
 				'next_text' => '<span class="meta-nav" aria-hidden="true">' .
-				esc_html__( 'Next Post', 'twentytwentyone' ) . ' ' . $twentytwentyone_next . '</span> ' .
-				'<span class="screen-reader-text">' . esc_html__( 'Next post:', 'twentytwentyone' ) . '</span> <br/>' .
+				esc_html__( 'Next Post', 'twentytwentyone' ) . $twentytwentyone_next . '</span> ' .
+				'<span class="screen-reader-text">' . esc_html__( 'Next post:', 'twentytwentyone' ) . '</span>' .
 				'<span class="post-title">%title</span>',
-				'prev_text' => '<span class="meta-nav" aria-hidden="true"> ' . $twentytwentyone_prev . ' ' . esc_html__( 'Previous Post', 'twentytwentyone' ) . '</span> ' .
-				'<span class="screen-reader-text">' . esc_html__( 'Previous post:', 'twentytwentyone' ) . '</span> <br/>' .
+				'prev_text' => '<span class="meta-nav" aria-hidden="true"> ' . $twentytwentyone_prev . esc_html__( 'Previous Post', 'twentytwentyone' ) . '</span> ' .
+				'<span class="screen-reader-text">' . esc_html__( 'Previous post:', 'twentytwentyone' ) . '</span>' .
 				'<span class="post-title">%title</span>',
 			)
 		);

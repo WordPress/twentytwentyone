@@ -1,19 +1,23 @@
 // Footer
 .site-footer {
+	padding-top: 0;
 	padding-bottom: calc(1.7 * var(--global--spacing-vertical));
-	margin-top: calc(6 * var(--global--spacing-vertical));
 	@extend %responsive-alignwide-width;
+
+	// Increase the top vertical spacing when there is no widget area.
+	.no-widgets & {
+		margin-top: calc(6 * var(--global--spacing-vertical));
+	}
 }
 
 // Footer Branding
 .site-footer > .site-info {
+	padding-top: var(--global--spacing-vertical);
 	color: var(--footer--color-text);
 	font-family: var(--footer--font-family);
 	font-size: var(--footer--font-size);
 	line-height: var(--global--line-height-body);
 	border-top: 3px solid var(--global--color-border);
-	padding-top: var(--global--spacing-vertical);
-	margin-top: calc(2 * var(--global--spacing-vertical));
 
 	.site-name {
 		text-transform: var(--branding--title--text-transform);
@@ -24,17 +28,9 @@
 		margin-top: calc(0.5 * var(--global--spacing-vertical));
 	}
 
-	.imprint {
-		display: block;
-	}
-
 	@include media(desktop) {
 		display: flex;
-		margin-top: calc(2 * var(--global--spacing-vertical));
-
-		.imprint {
-			display: initial;
-		}
+		align-items: center;
 
 		.copyright {
 			margin-top: initial;
@@ -42,20 +38,18 @@
 		}
 	}
 
-
 	a {
-		color: currentColor;
-		border-bottom: none;
+		color: var(--footer--color-link);
 
 		&:link,
 		&:visited,
 		&:active {
-			color: currentColor;
+			color: var(--footer--color-link);
 		}
 
 		&:hover,
 		&:focus {
-			color: var(--footer--color-link);
+			color: var(--footer--color-link-hover);
 		}
 	}
 }

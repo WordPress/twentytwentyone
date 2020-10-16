@@ -16,7 +16,7 @@
 		<?php if ( is_singular() ) : ?>
 			<?php the_title( '<h1 class="entry-title default-max-width">', '</h1>' ); ?>
 		<?php else : ?>
-			<?php the_title( sprintf( '<h2 class="entry-title default-max-width"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+			<?php the_title( sprintf( '<h2 class="entry-title default-max-width"><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 		<?php endif; ?>
 
 		<?php twenty_twenty_one_post_thumbnail(); ?>
@@ -26,15 +26,7 @@
 		<?php
 		the_content(
 			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentytwentyone' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
+				twenty_twenty_one_continue_reading_text(),
 				get_the_title()
 			)
 		);
