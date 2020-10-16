@@ -2018,7 +2018,7 @@ video {
 
 /* Media captions */
 figcaption {
-	color: #28303d;
+	color: currentColor;
 	font-size: 1rem;
 	line-height: 1.7;
 	margin-top: 10px;
@@ -2026,7 +2026,7 @@ figcaption {
 	text-align: center;
 }
 .wp-caption {
-	color: #28303d;
+	color: currentColor;
 	font-size: 1rem;
 	line-height: 1.7;
 	margin-top: 10px;
@@ -2034,7 +2034,7 @@ figcaption {
 	text-align: center;
 }
 .wp-caption-text {
-	color: #28303d;
+	color: currentColor;
 	font-size: 1rem;
 	line-height: 1.7;
 	margin-top: 10px;
