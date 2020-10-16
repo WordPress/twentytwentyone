@@ -314,6 +314,24 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	}
 }
 
+/* OS dark theme preference */
+@media (prefers-color-scheme: dark) {
+	html.has-default-light-palette-background {
+		--global--color-background: var(--global--color-dark-gray);
+		--global--color-primary: var(--global--color-light-gray);
+		--global--color-secondary: var(--global--color-light-gray);
+		--button--color-text: var(--global--color-background);
+		--button--color-text-hover: var(--global--color-secondary);
+		--button--color-text-active: var(--global--color-secondary);
+		--button--color-background: var(--global--color-secondary);
+		--button--color-background-hover: var(--global--color-background);
+		--button--color-background-active: var(--global--color-background);
+	}
+	html.has-default-light-palette-background body {
+		background-color: var(--global--color-background);
+	}
+}
+
 /* Button extends */
 .site button.mejs-inner:not(.customize-partial-edit-shortcut-button):not(button),
 .site .button,
@@ -3083,6 +3101,7 @@ table.wp-calendar-table caption {
 	font-style: normal;
 	float: right;
 	margin: 0.1em 0 0 0.1em;
+	font-size: calc(1.2 * var(--heading--font-size-h1));
 }
 
 .has-drop-cap:not(:focus)::after {
@@ -3621,6 +3640,7 @@ h1.page-title {
 }
 
 .comments-area.show-avatars .fn {
+	display: inline-block;
 	padding-right: 85px;
 }
 
@@ -4658,12 +4678,15 @@ h1.page-title {
 
 .widget_search > .search-form .search-field {
 	margin-left: calc(-1 * var(--button--border-width));
+	-webkit-appearance: none;
+	margin-bottom: calc(0.5 * var(--global--spacing-vertical));
 }
 
 .widget_search > .search-form .search-submit {
 	margin-right: 0;
 	background-color: transparent;
 	color: var(--button--color-text-hover);
+	margin-bottom: calc(0.5 * var(--global--spacing-vertical));
 }
 
 .widget_search > .search-form .search-submit:hover {

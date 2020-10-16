@@ -21,7 +21,7 @@ while ( have_posts() ) :
 		// Parent post navigation.
 		the_post_navigation(
 			array(
-				/* translators: %s: parent post link */
+				/* translators: %s: parent post link. */
 				'prev_text' => sprintf( __( '<span class="meta-nav">Published in</span><span class="post-title">%s</span>', 'twentytwentyone' ), '%title' ),
 			)
 		);
@@ -38,13 +38,8 @@ while ( have_posts() ) :
 		$twentytwentyone_prev = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' );
 		the_post_navigation(
 			array(
-				'next_text' => '<span class="meta-nav" aria-hidden="true">' .
-				esc_html__( 'Next Post', 'twentytwentyone' ) . $twentytwentyone_next . '</span> ' .
-				'<span class="screen-reader-text">' . esc_html__( 'Next post:', 'twentytwentyone' ) . '</span>' .
-				'<span class="post-title">%title</span>',
-				'prev_text' => '<span class="meta-nav" aria-hidden="true"> ' . $twentytwentyone_prev . esc_html__( 'Previous Post', 'twentytwentyone' ) . '</span> ' .
-				'<span class="screen-reader-text">' . esc_html__( 'Previous post:', 'twentytwentyone' ) . '</span>' .
-				'<span class="post-title">%title</span>',
+				'next_text' => '<p class="meta-nav">' . esc_html__( 'Next Post', 'twentytwentyone' ) . $twentytwentyone_next . '</p><p class="post-title">%title</p>',
+				'prev_text' => '<p class="meta-nav">' . $twentytwentyone_prev . esc_html__( 'Previous Post', 'twentytwentyone' ) . '</p><p class="post-title">%title</p>',
 			)
 		);
 	}

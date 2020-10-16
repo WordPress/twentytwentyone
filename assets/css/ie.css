@@ -123,6 +123,18 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	/* Widgets */
 }
 
+/* OS dark theme preference */
+@media (prefers-color-scheme: dark) {
+	html.has-default-light-palette-background body {
+		background-color: #28303d;
+	}
+	@media (prefers-color-scheme: dark){
+		html.has-default-light-palette-background body{
+		background-color: #28303d;
+		}
+	}
+}
+
 /* Button extends */
 .site button.mejs-inner:not(.customize-partial-edit-shortcut-button):not(button) {
 	line-height: 1.5;
@@ -4447,6 +4459,13 @@ table.wp-calendar-table caption {
 	font-style: normal;
 	float: left;
 	margin: 0.1em 0.1em 0 0;
+	font-size: 5rem;
+}
+
+@media only screen and (min-width: 652px){
+	.has-drop-cap:not(:focus)::first-letter{
+	font-size: 7rem;
+	}
 }
 
 .has-drop-cap:not(:focus)::after {
@@ -5116,6 +5135,7 @@ h1.page-title {
 }
 
 .comments-area.show-avatars .fn {
+	display: inline-block;
 	padding-left: 85px;
 }
 
@@ -6081,6 +6101,12 @@ h1.page-title {
 	margin-right: 13px;
 }
 
+@media (prefers-color-scheme: dark){
+	.pagination .nav-links > *{
+	color: #f0f0f0;
+	}
+}
+
 .comments-pagination .nav-links > * {
 	color: #28303d;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -6088,6 +6114,12 @@ h1.page-title {
 	font-weight: normal;
 	margin-left: 13px;
 	margin-right: 13px;
+}
+
+@media (prefers-color-scheme: dark){
+	.comments-pagination .nav-links > *{
+	color: #f0f0f0;
+	}
 }
 
 .pagination .nav-links > *.current {
@@ -6281,12 +6313,15 @@ h1.page-title {
 
 .widget_search > .search-form .search-field {
 	margin-right: -3px;
+	-webkit-appearance: none;
+	margin-bottom: 15px;
 }
 
 .widget_search > .search-form .search-submit {
 	margin-left: 0;
 	background-color: transparent;
 	color: #39414d;
+	margin-bottom: 15px;
 }
 
 .widget_search > .search-form .search-submit:hover {
