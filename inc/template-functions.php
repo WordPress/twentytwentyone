@@ -200,7 +200,7 @@ function twenty_twenty_one_get_avatar_size() {
 function twenty_twenty_one_continue_reading_text() {
 	$continue_reading = sprintf(
 		/* translators: %s: Name of current post. */
-		wp_kses( esc_html__( 'Continue reading %s', 'twentytwentyone' ), array( 'span' => array( 'class' => array() ) ) ),
+		esc_html__( 'Continue reading %s', 'twentytwentyone' ),
 		the_title( '<span class="screen-reader-text">', '</span>', false )
 	);
 
