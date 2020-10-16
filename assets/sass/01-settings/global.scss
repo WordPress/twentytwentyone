@@ -251,3 +251,17 @@ $baseline-unit: 10px;
 		--heading--font-size-h2: 3rem; // 48px / 16px
 	}
 }
+
+/* OS dark theme preference */
+@media (prefers-color-scheme: dark) {
+
+	html.has-default-light-palette-background {
+		--global--color-background: var(--global--color-dark-gray);
+		--global--color-primary: var(--global--color-light-gray);
+		--global--color-secondary: var(--global--color-light-gray);
+
+		body {
+			background-color: var(--global--color-background);
+		}
+	}
+}

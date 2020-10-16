@@ -314,6 +314,18 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	}
 }
 
+/* OS dark theme preference */
+@media (prefers-color-scheme: dark) {
+	html.has-default-light-palette-background {
+		--global--color-background: var(--global--color-dark-gray);
+		--global--color-primary: var(--global--color-light-gray);
+		--global--color-secondary: var(--global--color-light-gray);
+	}
+	html.has-default-light-palette-background body {
+		background-color: var(--global--color-background);
+	}
+}
+
 /* Button extends */
 .site button.mejs-inner:not(.customize-partial-edit-shortcut-button):not(button),
 .site .button,

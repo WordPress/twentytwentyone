@@ -222,6 +222,18 @@
 	}
 }
 
+/* OS dark theme preference */
+@media (prefers-color-scheme: dark) {
+	html.has-default-light-palette-background {
+		--global--color-background: var(--global--color-dark-gray);
+		--global--color-primary: var(--global--color-light-gray);
+		--global--color-secondary: var(--global--color-light-gray);
+	}
+	html.has-default-light-palette-background body {
+		background-color: var(--global--color-background);
+	}
+}
+
 /* Button extends */
 .wp-block-button__link, .wp-block-file .wp-block-file__button, .wp-block-search .wp-block-search__button {
 	line-height: var(--button--line-height);
