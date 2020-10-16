@@ -68,8 +68,7 @@ while ( have_posts() ) {
 					sprintf(
 						/* translators: %s: Name of current post. Only visible to screen readers. */
 						esc_html__( 'Edit %s', 'twentytwentyone' ),
-						// We're adding &nbsp; before and after to accomodate both LTR & RTL, as NVDA doesn't add the space.
-						'<span class="screen-reader-text">&nbsp;' . get_the_title() . '&nbsp;</span>'
+						'<span class="screen-reader-text">' . get_the_title() . '</span>'
 					),
 					'<span class="edit-link">',
 					'</span>'
@@ -94,8 +93,7 @@ while ( have_posts() ) {
 					sprintf(
 						/* translators: %s: Name of current post. Only visible to screen readers. */
 						esc_html__( 'Edit %s', 'twentytwentyone' ),
-						// We're adding &nbsp; before and after to accomodate both LTR & RTL, as NVDA doesn't add the space.
-						'<span class="screen-reader-text">&nbsp;' . get_the_title() . '&nbsp;</span>'
+						'<span class="screen-reader-text">' . get_the_title() . '</span>'
 					),
 					'<span class="edit-link">',
 					'</span><br>'
