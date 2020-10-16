@@ -15,7 +15,6 @@
 	/* Headings */
 	/* Mint, default body background */
 	/* Used for borders (separators) */
-	/* OS dark theme preference */
 	/* Spacing */
 	/* Elevation */
 	/* Forms */
@@ -32,12 +31,13 @@
 	/* Widgets */
 }
 
+/* OS dark theme preference */
 @media (prefers-color-scheme: dark) {
-	:root .has-default-light-palette-background {
+	html.has-default-light-palette-background body {
 		background-color: #28303d;
 	}
 	@media (prefers-color-scheme: dark){
-		:root .has-default-light-palette-background{
+		html.has-default-light-palette-background body{
 		background-color: #28303d;
 		}
 	}

@@ -107,7 +107,6 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	/* Headings */
 	/* Mint, default body background */
 	/* Used for borders (separators) */
-	/* OS dark theme preference */
 	/* Spacing */
 	/* Elevation */
 	/* Forms */
@@ -124,12 +123,13 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	/* Widgets */
 }
 
+/* OS dark theme preference */
 @media (prefers-color-scheme: dark) {
-	:root .has-default-light-palette-background {
+	html.has-default-light-palette-background body {
 		background-color: #28303d;
 	}
 	@media (prefers-color-scheme: dark){
-		:root .has-default-light-palette-background{
+		html.has-default-light-palette-background body{
 		background-color: #28303d;
 		}
 	}
@@ -6095,7 +6095,7 @@ h1.page-title {
 
 @media (prefers-color-scheme: dark){
 	.pagination .nav-links > *{
-	color: #28303d;
+	color: #f0f0f0;
 	}
 }
 
@@ -6110,7 +6110,7 @@ h1.page-title {
 
 @media (prefers-color-scheme: dark){
 	.comments-pagination .nav-links > *{
-	color: #28303d;
+	color: #f0f0f0;
 	}
 }
 

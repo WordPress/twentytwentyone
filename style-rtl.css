@@ -172,7 +172,6 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	/* Mint, default body background */
 	--global--color-border: var(--global--color-primary);
 	/* Used for borders (separators) */
-	/* OS dark theme preference */
 	/* Spacing */
 	--global--spacing-unit: 20px;
 	--global--spacing-measure: unset;
@@ -305,15 +304,6 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--widget--spacing-menu: calc(0.66 * var(--global--spacing-unit));
 }
 
-@media (prefers-color-scheme: dark) {
-	:root .has-default-light-palette-background {
-		--global--color-background: var(--global--color-dark-gray);
-		--global--color-primary: var(--global--color-light-gray);
-		--global--color-secondary: var(--global--color-light-gray);
-		background-color: var(--global--color-background);
-	}
-}
-
 @media only screen and (min-width: 652px) {
 	:root {
 		--global--font-size-xl: 2.5rem;
@@ -321,6 +311,18 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 		--global--font-size-xxxl: 9rem;
 		--heading--font-size-h3: 2rem;
 		--heading--font-size-h2: 3rem;
+	}
+}
+
+/* OS dark theme preference */
+@media (prefers-color-scheme: dark) {
+	html.has-default-light-palette-background {
+		--global--color-background: var(--global--color-dark-gray);
+		--global--color-primary: var(--global--color-light-gray);
+		--global--color-secondary: var(--global--color-light-gray);
+	}
+	html.has-default-light-palette-background body {
+		background-color: var(--global--color-background);
 	}
 }
 
