@@ -193,7 +193,10 @@ if ( ! function_exists( 'twenty_twenty_one_post_thumbnail' ) ) {
 		<?php if ( is_singular() ) : ?>
 
 			<figure class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
+				<?php 
+				// Thumbnail is loaded eagerly because it's going to be in the viewport immediately.
+				the_post_thumbnail( 'post-thumbnail', array( 'loading' => 'eager' ) );
+				?>
 			</figure><!-- .post-thumbnail -->
 
 		<?php else : ?>
