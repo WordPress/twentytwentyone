@@ -220,11 +220,9 @@ $baseline-unit: 10px;
 	--pullquote--color-foreground: var(--global--color-primary);
 	--pullquote--color-background: var(--global--color-background);
 
-	--quote--border-color: var(--global--color-secondary);
-	--quote--border-width: 1px;
 	--quote--font-family: var(--global--font-secondary);
 	--quote--font-size: var(--global--font-size-md);
-	--quote--font-size-large: calc(.5 * var(--global--font-size-xxl));
+	--quote--font-size-large: calc(1.6 * var(--global--font-size-base));
 	--quote--font-style: normal;
 	--quote--font-style-large: normal;
 	--quote--line-height: 1.5;

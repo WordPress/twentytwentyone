@@ -1618,12 +1618,11 @@ p.has-background {
 	font-weight: 700;
 	line-height: 1;
 	position: absolute;
-	top: 4px;
+	top: 0;
 	left: -20px;
 }
 
 .wp-block-quote p {
-	color: #28303d;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1.25rem;
 	font-style: normal;
@@ -1671,22 +1670,10 @@ p.has-background {
 	line-height: 1.35;
 }
 
-@media only screen and (min-width: 652px){
-	.wp-block-quote.is-large p{
-	font-size: 3rem;
-	}
-}
-
 .wp-block-quote.is-style-large p {
 	font-size: 2rem;
 	font-style: normal;
 	line-height: 1.35;
-}
-
-@media only screen and (min-width: 652px){
-	.wp-block-quote.is-style-large p{
-	font-size: 3rem;
-	}
 }
 
 .wp-block-quote.is-large .wp-block-quote__citation {
@@ -1702,7 +1689,6 @@ p.has-background {
 .wp-block-quote.is-large::before, .wp-block-quote.is-style-large::before {
 	font-size: 5rem;
 	position: absolute;
-	top: 2px;
 	left: -20px;
 }
 

@@ -24,12 +24,11 @@
 		font-weight: 700;
 		line-height: 1;
 		position: absolute;
-		top: 4px;
+		top: 0;
 		left: -20px;
 	}
 
 	p {
-		color: var(--global--color-primary);
 		font-family: var(--quote--font-family);
 		font-size: var(--quote--font-size);
 		font-style: var(--quote--font-style);
@@ -42,7 +41,7 @@
 	footer {
 		color: var(--global--color-primary);
 		font-size: var(--global--font-size-sm);
-		font-style: var(--pullquote--font-style);
+		font-style: var(--quote--font-style);
 		line-height: var(--quote--line-height);
 		font-weight: 500;
 		text-transform: none;
@@ -100,7 +99,6 @@
 		&::before {
 			font-size: 5rem;
 			position: absolute;
-			top: 2px;
 			left: -20px;
 		}
 	}

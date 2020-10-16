@@ -194,11 +194,9 @@
 	--pullquote--border-color: var(--global--color-primary);
 	--pullquote--color-foreground: var(--global--color-primary);
 	--pullquote--color-background: var(--global--color-background);
-	--quote--border-color: var(--global--color-secondary);
-	--quote--border-width: 1px;
 	--quote--font-family: var(--global--font-secondary);
 	--quote--font-size: var(--global--font-size-md);
-	--quote--font-size-large: calc(.5 * var(--global--font-size-xxl));
+	--quote--font-size-large: calc(1.6 * var(--global--font-size-base));
 	--quote--font-style: normal;
 	--quote--font-style-large: normal;
 	--quote--line-height: 1.5;
@@ -1189,12 +1187,11 @@ p.has-background {
 	font-weight: 700;
 	line-height: 1;
 	position: absolute;
-	top: 4px;
+	top: 0;
 	left: -20px;
 }
 
 .wp-block-quote p {
-	color: var(--global--color-primary);
 	font-family: var(--quote--font-family);
 	font-size: var(--quote--font-size);
 	font-style: var(--quote--font-style);
@@ -1205,7 +1202,7 @@ p.has-background {
 .wp-block-quote .wp-block-quote__citation {
 	color: var(--global--color-primary);
 	font-size: var(--global--font-size-sm);
-	font-style: var(--pullquote--font-style);
+	font-style: var(--quote--font-style);
 	line-height: var(--quote--line-height);
 	font-weight: 500;
 	text-transform: none;
@@ -1243,7 +1240,6 @@ p.has-background {
 .wp-block-quote.is-large::before, .wp-block-quote.is-style-large::before {
 	font-size: 5rem;
 	position: absolute;
-	top: 2px;
 	left: -20px;
 }
 
