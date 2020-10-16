@@ -8,7 +8,6 @@
 
 $default_width: 610px;
 $max_content_width: 1240px;
-$breakpoint_xs: 360px;
 $breakpoint_sm: 482px;
 $breakpoint_md: 592px;
 $breakpoint_lg: 652px;
@@ -17,12 +16,6 @@ $breakpoint_xxl: 1024px;
 
 // Responsive breakpoints mixin
 @mixin media( $res ) {
-
-	@if mobile-small == $res {
-		@media only screen and (max-width: #{$breakpoint_xs}) {
-			@content;
-		}
-	}
 
 	@if mobile-only == $res {
 		@media only screen and (max-width: #{$breakpoint_sm - 1}) {
