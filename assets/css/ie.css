@@ -6307,12 +6307,15 @@ h1.page-title {
 
 .widget_search > .search-form .search-field {
 	margin-right: -3px;
+	-webkit-appearance: none;
+	margin-bottom: 15px;
 }
 
 .widget_search > .search-form .search-submit {
 	margin-left: 0;
 	background-color: transparent;
 	color: #39414d;
+	margin-bottom: 15px;
 }
 
 .widget_search > .search-form .search-submit:hover {
