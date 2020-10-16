@@ -2415,7 +2415,12 @@ p.has-text-color a {
 
 .post-password-form__submit {
 	margin-top: calc(var(--global--spacing-vertical) / 3);
-	margin-left: 10px;
+}
+
+@media only screen and (min-width: 592px) {
+	.post-password-form__submit {
+		margin-left: 10px;
+	}
 }
 
 .wp-block-pullquote {
