@@ -1825,7 +1825,7 @@ textarea {
 
 label {
 	font-size: 1.125rem;
-	font-weight: 500;
+	font-weight: normal;
 	margin-bottom: 10px;
 }
 
