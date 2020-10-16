@@ -13,12 +13,16 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="entry-header alignwide">
-		<?php if ( ! is_front_page() ) : ?>
+	<?php if ( ! is_front_page() ) : ?>
+		<header class="entry-header alignwide">
 			<?php get_template_part( 'template-parts/header/entry-header' ); ?>
-		<?php endif; ?>
-		<?php twenty_twenty_one_post_thumbnail(); ?>
-	</header>
+			<?php twenty_twenty_one_post_thumbnail(); ?>
+		</header>
+	<?php elseif ( has_post_thumbnail() ) : ?>
+		<header class="entry-header alignwide">
+			<?php twenty_twenty_one_post_thumbnail(); ?>
+		</header>
+	<?php endif; ?>
 
 	<div class="entry-content">
 		<?php
