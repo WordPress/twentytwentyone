@@ -216,7 +216,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	/* Header */
 	--branding--color-text: var(--global--color-primary);
 	--branding--color-link: var(--global--color-primary);
-	--branding--color-link-hover: var(--global--color-primary-hover);
+	--branding--color-link-hover: var(--global--color-secondary);
 	--branding--title--font-family: var(--global--font-primary);
 	--branding--title--font-size: var(--global--font-size-lg);
 	--branding--title--font-size-mobile: var(--heading--font-size-h4);
@@ -3258,7 +3258,7 @@ table.wp-calendar-table caption {
 }
 
 .site-title a:hover, .site-title a:focus {
-	color: var(--global--color-secondary);
+	color: var(--branding--color-link-hover);
 }
 
 @media only screen and (min-width: 482px) {
