@@ -333,10 +333,10 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 }
 
 /* Button extends */
-.site button.mejs-inner:not(.customize-partial-edit-shortcut-button):not(button),
 .site .button,
 input[type="submit"],
 input[type="reset"],
+.wp-block-search__button,
 .wp-block-button .wp-block-button__link, .wp-block-file .wp-block-file__button {
 	line-height: var(--button--line-height);
 	color: var(--button--color-text);
@@ -351,14 +351,14 @@ input[type="reset"],
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
 
-.site button.mejs-inner:not(button):not(.customize-partial-edit-shortcut-button):before,
 .site .button:before,
 input[type="submit"]:before,
 input[type="reset"]:before,
-.wp-block-button .wp-block-button__link:before, .wp-block-file .wp-block-file__button:before, .site button.mejs-inner:not(button):not(.customize-partial-edit-shortcut-button):after,
-.site .button:after,
+.wp-block-search__button:before,
+.wp-block-button .wp-block-button__link:before, .wp-block-file .wp-block-file__button:before, .site .button:after,
 input[type="submit"]:after,
 input[type="reset"]:after,
+.wp-block-search__button:after,
 .wp-block-button .wp-block-button__link:after, .wp-block-file .wp-block-file__button:after {
 	content: "";
 	display: block;
@@ -366,57 +366,57 @@ input[type="reset"]:after,
 	width: 0;
 }
 
-.site button.mejs-inner:not(button):not(.customize-partial-edit-shortcut-button):before,
 .site .button:before,
 input[type="submit"]:before,
 input[type="reset"]:before,
+.wp-block-search__button:before,
 .wp-block-button .wp-block-button__link:before, .wp-block-file .wp-block-file__button:before {
 	margin-bottom: -calc(.5em * var(--button--line-height) + -.38);
 }
 
-.site button.mejs-inner:not(button):not(.customize-partial-edit-shortcut-button):after,
 .site .button:after,
 input[type="submit"]:after,
 input[type="reset"]:after,
+.wp-block-search__button:after,
 .wp-block-button .wp-block-button__link:after, .wp-block-file .wp-block-file__button:after {
 	margin-top: -calc(.5em * var(--button--line-height) + -.39);
 }
 
-.site button.mejs-inner:active:not(.customize-partial-edit-shortcut-button):not(button),
 .site .button:active,
 input:active[type="submit"],
 input:active[type="reset"],
+.wp-block-search__button:active,
 .wp-block-button .wp-block-button__link:active, .wp-block-file .wp-block-file__button:active {
 	color: var(--button--color-text-active);
 	background-color: var(--button--color-background-active);
 }
 
-.site button.mejs-inner:hover:not(.customize-partial-edit-shortcut-button):not(button),
 .site .button:hover,
 input:hover[type="submit"],
 input:hover[type="reset"],
+.wp-block-search__button:hover,
 .wp-block-button .wp-block-button__link:hover, .wp-block-file .wp-block-file__button:hover {
 	color: var(--button--color-text-hover);
 	background: transparent;
 }
 
-.site button.mejs-inner:focus:not(.customize-partial-edit-shortcut-button):not(button),
 .site .button:focus,
 input:focus[type="submit"],
 input:focus[type="reset"],
-.wp-block-button .wp-block-button__link:focus, .wp-block-file .wp-block-file__button:focus, .site button.has-focus.mejs-inner:not(.customize-partial-edit-shortcut-button):not(button),
-.site .has-focus.button,
+.wp-block-search__button:focus,
+.wp-block-button .wp-block-button__link:focus, .wp-block-file .wp-block-file__button:focus, .site .has-focus.button,
 input.has-focus[type="submit"],
 input.has-focus[type="reset"],
+.has-focus.wp-block-search__button,
 .wp-block-button .has-focus.wp-block-button__link, .wp-block-file .has-focus.wp-block-file__button {
 	outline-offset: -4px;
 	outline: 2px dotted currentColor;
 }
 
-.site button.mejs-inner:disabled:not(.customize-partial-edit-shortcut-button):not(button),
 .site .button:disabled,
 input:disabled[type="submit"],
 input:disabled[type="reset"],
+.wp-block-search__button:disabled,
 .wp-block-button .wp-block-button__link:disabled, .wp-block-file .wp-block-file__button:disabled {
 	background-color: var(--global--color-white-50);
 	border-color: var(--global--color-white-50);
