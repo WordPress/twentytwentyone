@@ -3739,7 +3739,7 @@ h1.page-title {
 
 .comment-meta .comment-metadata {
 	color: var(--global--color-primary);
-	font-size: var(--global--font-size-sm);
+	font-size: var(--global--font-size-xs);
 	padding: 8px 0 9px 0;
 }
 
