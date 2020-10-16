@@ -4587,7 +4587,7 @@ dd {
 
 .wp-block-navigation .wp-block-navigation-link .wp-block-navigation-link__label {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1.125rem;
+	font-size: 1.25rem;
 	font-weight: normal;
 }
 
@@ -7165,7 +7165,7 @@ h1.page-title {
 	top: 0;
 	right: 0;
 	color: #28303d;
-	font-size: 1.125rem;
+	font-size: 1.25rem;
 	line-height: 1.15;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -7431,7 +7431,7 @@ h1.page-title {
 .primary-navigation a {
 	display: block;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1.25rem;
+	font-size: 1.125rem;
 	font-weight: normal;
 	padding: 13px 0;
 	text-decoration: none;
@@ -7441,7 +7441,7 @@ h1.page-title {
 	.primary-navigation a {
 		display: block;
 		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-		font-size: 1.125rem;
+		font-size: 1.25rem;
 		font-weight: normal;
 	}
 }
