@@ -104,7 +104,8 @@ $baseline-unit: 10px;
 	--form--line-height: var(--global--line-height-body);
 	--form--color-text: var(--global--color-dark-gray); // Text color in input fields is always dark over light background.
 	--form--color-ranged: var(--global--color-secondary);
-	--form--label-weight: 500;
+	--form--label-weight: normal;
+	--form--label-weight-strong: 500;
 	--form--border-color: var(--global--color-secondary);
 	--form--border-width: 3px;
 	--form--border-radius: 0;

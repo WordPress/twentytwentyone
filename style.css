@@ -185,7 +185,8 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--form--line-height: var(--global--line-height-body);
 	--form--color-text: var(--global--color-dark-gray);
 	--form--color-ranged: var(--global--color-secondary);
-	--form--label-weight: 500;
+	--form--label-weight: normal;
+	--form--label-weight-strong: 500;
 	--form--border-color: var(--global--color-secondary);
 	--form--border-width: 3px;
 	--form--border-radius: 0;
@@ -2746,7 +2747,7 @@ p.has-text-color a {
 
 .wp-block-search .wp-block-search__label {
 	font-size: var(--form--font-size);
-	font-weight: var(--form--label-weight);
+	font-weight: var(--form--label-weight-strong);
 	margin-bottom: calc(var(--global--spacing-vertical) / 3);
 }
 
@@ -3878,7 +3879,7 @@ h1.page-title {
 	font-size: var(--global--font-size-sm);
 	margin-bottom: calc(.5 * var(--global--spacing-unit));
 	width: 100%;
-	font-weight: var(--form--label-weight);
+	font-weight: var(--form--label-weight-strong);
 }
 
 .comment-form > p.comment-form-cookies-consent {
@@ -4664,7 +4665,7 @@ h1.page-title {
 .search-form > label {
 	width: 100%;
 	margin-bottom: 0;
-	font-weight: var(--form--label-weight);
+	font-weight: var(--form--label-weight-strong);
 }
 
 .search-form .search-field {
