@@ -8,11 +8,13 @@
 	}
 
 	&__input {
+		flex-grow: 1;
 		margin-top: calc(var(--global--spacing-vertical) / 3);
-		margin-right: calc(-1 * var(--button--border-width));
+		margin-right: calc(0.66 * var(--global--spacing-horizontal));
 	}
 
 	&__submit {
 		margin-top: calc(var(--global--spacing-vertical) / 3);
+		margin-left: 10px;
 	}
 }

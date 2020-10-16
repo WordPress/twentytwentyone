@@ -2404,12 +2404,14 @@ p.has-text-color a {
 }
 
 .post-password-form__input {
+	flex-grow: 1;
 	margin-top: calc(var(--global--spacing-vertical) / 3);
-	margin-left: calc(-1 * var(--button--border-width));
+	margin-left: calc(0.66 * var(--global--spacing-horizontal));
 }
 
 .post-password-form__submit {
 	margin-top: calc(var(--global--spacing-vertical) / 3);
+	margin-right: 10px;
 }
 
 .wp-block-pullquote {
