@@ -17,6 +17,13 @@ a:hover {
 
 .site a:focus {
 	text-decoration: none;
+
+	&.skip-link {
+
+		/* Only visible in Windows High Contrast mode */
+		outline: 2px solid transparent;
+		outline-offset: -2px;
+	}
 }
 
 // Enforce the custom link color even if a custom background color has been set.
