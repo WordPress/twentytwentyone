@@ -52,7 +52,7 @@
 					<?php endif; ?>
 				<?php endif; ?>
 			</div><!-- .site-name -->
-			<div class="copyright">
+			<div class="powered-by">
 				<?php
 				printf(
 					/* translators: %s: WordPress. */
@@ -61,7 +61,7 @@
 				);
 				?>
 				</a>
-			</div><!-- .copyright -->
+			</div><!-- .powered-by -->
 
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

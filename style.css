@@ -239,9 +239,9 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	/* Main navigation */
 	--primary-nav--font-family: var(--global--font-secondary);
 	--primary-nav--font-family-mobile: var(--global--font-primary);
-	--primary-nav--font-size: var(--global--font-size-sm);
+	--primary-nav--font-size: var(--global--font-size-md);
 	--primary-nav--font-size-sub-menu: var(--global--font-size-xs);
-	--primary-nav--font-size-mobile: var(--global--font-size-md);
+	--primary-nav--font-size-mobile: var(--global--font-size-sm);
 	--primary-nav--font-size-sub-menu-mobile: var(--global--font-size-sm);
 	--primary-nav--font-size-button: var(--global--font-size-xs);
 	--primary-nav--font-style: normal;
@@ -312,6 +312,24 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 		--global--font-size-xxxl: 9rem;
 		--heading--font-size-h3: 2rem;
 		--heading--font-size-h2: 3rem;
+	}
+}
+
+/* OS dark theme preference */
+@media (prefers-color-scheme: dark) {
+	html.has-default-light-palette-background {
+		--global--color-background: var(--global--color-dark-gray);
+		--global--color-primary: var(--global--color-light-gray);
+		--global--color-secondary: var(--global--color-light-gray);
+		--button--color-text: var(--global--color-background);
+		--button--color-text-hover: var(--global--color-secondary);
+		--button--color-text-active: var(--global--color-secondary);
+		--button--color-background: var(--global--color-secondary);
+		--button--color-background-hover: var(--global--color-background);
+		--button--color-background-active: var(--global--color-background);
+	}
+	html.has-default-light-palette-background body {
+		background-color: var(--global--color-background);
 	}
 }
 
@@ -783,8 +801,8 @@ template {
 /**
  * Extends
  */
-.default-max-width, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce),
-*[class*="inner-container"] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce), .entry-content .wp-audio-shortcode, .post-thumbnail {
+.default-max-width, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce),
+*[class*="inner-container"] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce), .entry-content .wp-audio-shortcode, .post-thumbnail {
 	max-width: var(--responsive--aligndefault-width);
 	margin-left: auto;
 	margin-right: auto;
@@ -1503,6 +1521,12 @@ a:hover {
 .site a:focus {
 	outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
 	text-decoration: none;
+}
+
+.site a:focus.skip-link {
+	/* Only visible in Windows High Contrast mode */
+	outline: 2px solid transparent;
+	outline-offset: -2px;
 }
 
 .has-background:not(.has-background-background-color) .has-link-color a,
@@ -3145,6 +3169,7 @@ table.wp-calendar-table caption {
 	font-style: normal;
 	float: left;
 	margin: 0.1em 0.1em 0 0;
+	font-size: calc(1.2 * var(--heading--font-size-h1));
 }
 
 .has-drop-cap:not(:focus)::after {
@@ -3357,7 +3382,7 @@ a.custom-logo-link {
 	font-size: var(--branding--title--font-size);
 }
 
-.site-footer > .site-info .copyright {
+.site-footer > .site-info .powered-by {
 	margin-top: calc(0.5 * var(--global--spacing-vertical));
 }
 
@@ -3366,7 +3391,7 @@ a.custom-logo-link {
 		display: flex;
 		align-items: center;
 	}
-	.site-footer > .site-info .copyright {
+	.site-footer > .site-info .powered-by {
 		margin-top: initial;
 		margin-left: auto;
 	}
@@ -3519,13 +3544,20 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	column-gap: calc(2 * var(--global--spacing-horizontal));
 }
 
-.single .site-main > article > .entry-footer .posted-by .posted-on,
-.single .site-main > article > .entry-footer .posted-by .byline {
-	display: block;
+.single .site-main > article > .entry-footer .post-taxonomies,
+.single .site-main > article > .entry-footer .full-size-link {
+	justify-content: flex-end;
+	text-align: right;
 }
 
-.single .site-main > article > .entry-footer .post-taxonomies .cat-links,
-.single .site-main > article > .entry-footer .post-taxonomies .tags-links {
+.single .site-main > article > .entry-footer .full-size-link:first-child:last-child {
+	grid-column: span 2;
+}
+
+.single .site-main > article > .entry-footer .posted-on,
+.single .site-main > article > .entry-footer .byline,
+.single .site-main > article > .entry-footer .cat-links,
+.single .site-main > article > .entry-footer .tags-links {
 	display: block;
 }
 
@@ -3533,25 +3565,13 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	.single .site-main > article > .entry-footer {
 		display: block;
 	}
-	.single .site-main > article > .entry-footer .post-taxonomies .cat-links,
-	.single .site-main > article > .entry-footer .post-taxonomies .tags-links {
+	.single .site-main > article > .entry-footer .full-size-link {
+		display: block;
+	}
+	.single .site-main > article > .entry-footer .post-taxonomies,
+	.single .site-main > article > .entry-footer .full-size-link {
 		text-align: left;
 	}
-}
-
-.single .site-main > article > .entry-footer > span {
-	margin-right: 0;
-}
-
-.single .site-main > article > .entry-footer .cat-links,
-.single .site-main > article > .entry-footer .tags-links,
-.single .site-main > article > .entry-footer .full-size-link {
-	justify-self: end;
-	text-align: right;
-}
-
-.single .site-main > article > .entry-footer .tags-links {
-	grid-column-start: 2;
 }
 
 /**
@@ -3688,6 +3708,7 @@ h1.page-title {
 }
 
 .comments-area.show-avatars .fn {
+	display: inline-block;
 	padding-left: 85px;
 }
 
@@ -4720,12 +4741,15 @@ h1.page-title {
 
 .widget_search > .search-form .search-field {
 	margin-right: calc(-1 * var(--button--border-width));
+	-webkit-appearance: none;
+	margin-bottom: calc(0.5 * var(--global--spacing-vertical));
 }
 
 .widget_search > .search-form .search-submit {
 	margin-left: 0;
 	background-color: transparent;
 	color: var(--button--color-text-hover);
+	margin-bottom: calc(0.5 * var(--global--spacing-vertical));
 }
 
 .widget_search > .search-form .search-submit:hover {

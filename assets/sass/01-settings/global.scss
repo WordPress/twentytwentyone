@@ -168,9 +168,9 @@ $baseline-unit: 10px;
 	/* Main navigation */
 	--primary-nav--font-family: var(--global--font-secondary);
 	--primary-nav--font-family-mobile: var(--global--font-primary);
-	--primary-nav--font-size: var(--global--font-size-sm);
+	--primary-nav--font-size: var(--global--font-size-md);
 	--primary-nav--font-size-sub-menu: var(--global--font-size-xs);
-	--primary-nav--font-size-mobile: var(--global--font-size-md);
+	--primary-nav--font-size-mobile: var(--global--font-size-sm);
 	--primary-nav--font-size-sub-menu-mobile: var(--global--font-size-sm);
 	--primary-nav--font-size-button: var(--global--font-size-xs);
 	--primary-nav--font-style: normal;
@@ -250,5 +250,27 @@ $baseline-unit: 10px;
 		--global--font-size-xxxl: 9rem; // 144px / 16px
 		--heading--font-size-h3: 2rem; // 32px / 16px
 		--heading--font-size-h2: 3rem; // 48px / 16px
+	}
+}
+
+/* OS dark theme preference */
+@media (prefers-color-scheme: dark) {
+
+	html.has-default-light-palette-background {
+		--global--color-background: var(--global--color-dark-gray);
+		--global--color-primary: var(--global--color-light-gray);
+		--global--color-secondary: var(--global--color-light-gray);
+
+		// These need to be redefined for comment-submit buttons.
+		--button--color-text: var(--global--color-background);
+		--button--color-text-hover: var(--global--color-secondary);
+		--button--color-text-active: var(--global--color-secondary);
+		--button--color-background: var(--global--color-secondary);
+		--button--color-background-hover: var(--global--color-background);
+		--button--color-background-active: var(--global--color-background);
+
+		body {
+			background-color: var(--global--color-background);
+		}
 	}
 }

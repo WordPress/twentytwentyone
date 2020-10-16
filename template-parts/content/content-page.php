@@ -13,12 +13,16 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="entry-header alignwide">
-		<?php if ( ! is_front_page() ) : ?>
+	<?php if ( ! is_front_page() ) : ?>
+		<header class="entry-header alignwide">
 			<?php get_template_part( 'template-parts/header/entry-header' ); ?>
-		<?php endif; ?>
-		<?php twenty_twenty_one_post_thumbnail(); ?>
-	</header>
+			<?php twenty_twenty_one_post_thumbnail(); ?>
+		</header>
+	<?php elseif ( has_post_thumbnail() ) : ?>
+		<header class="entry-header alignwide">
+			<?php twenty_twenty_one_post_thumbnail(); ?>
+		</header>
+	<?php endif; ?>
 
 	<div class="entry-content">
 		<?php
@@ -38,16 +42,9 @@
 			<?php
 			edit_post_link(
 				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'twentytwentyone' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
+					/* translators: %s: Name of current post. Only visible to screen readers. */
+					esc_html__( 'Edit %s', 'twentytwentyone' ),
+					'<span class="screen-reader-text">' . get_the_title() . '</span>'
 				),
 				'<span class="edit-link">',
 				'</span>'
