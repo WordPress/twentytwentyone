@@ -89,6 +89,13 @@ $baseline-unit: 10px;
 	--global--color-background: var(--global--color-green); /* Mint, default body background */
 	--global--color-border: var(--global--color-primary); /* Used for borders (separators) */
 
+	/* OS dark theme preference */
+	@media (prefers-color-scheme: dark) {
+		--global--color-background: var(--global--color-dark-gray);
+		--global--color-primary: var(--global--color-light-gray);
+		--global--color-secondary: var(--global--color-light-gray);
+	}
+
 	/* Spacing */
 	--global--spacing-unit: #{2 * $baseline-unit}; // 20px
 	--global--spacing-measure: unset; // Use ch units here. ie: 60ch = 60 character max-width
