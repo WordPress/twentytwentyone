@@ -84,3 +84,6 @@ La Berceuse (Woman Rocking a Cradle), Vincent van Gogh, 1889. Public domain. htt
 Two Poplars in the Alpilles near Saint-Rémy, Vincent Van Gogh, 1889. Public domain. https://www.clevelandart.org/art/1958.32
 Roses, Vincent Van Gogh, 1890. Public Domain. https://www.metmuseum.org/art/collection/search/436534
 Roses, Vincent Van Gogh, 1890. Public Domain. https://commons.wikimedia.org/wiki/File:Roses_-_Vincent_van_Gogh.JPG
+Roses Tremieres (Hollyhocks), by Berthe Morisot, 1884. Public Domain. https://www.wikiart.org/en/berthe-morisot/roses-tremieres-hollyhocks-1884
+In the Bois de Boulogne, Berthe Morisot, 1879. Public Domain. https://www.wikiart.org/en/berthe-morisot/in-the-bois-de-boulogne
+Young Woman in Mauve, Berthe Morisot, 1880. Public Domain. https://www.wikiart.org/en/berthe-morisot/young-woman-in-mauve
