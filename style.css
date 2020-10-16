@@ -2419,7 +2419,7 @@ p.has-text-color a {
 
 @media only screen and (min-width: 592px) {
 	.post-password-form__submit {
-		margin-left: 10px;
+		margin-left: calc(0.4 * var(--global--spacing-horizontal));
 	}
 }
 
