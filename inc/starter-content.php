@@ -74,7 +74,7 @@ function twenty_twenty_one_get_starter_content() {
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
-					<p>' . esc_html_x( 'To add a block pattern, select the Add Block button in the toolbar at the top of the editor. This button is a plus sign within a square. Underneath the search bar, you&rsquo;ll see some tabs, such as Blocks and Patterns. Select Patterns. Browse through the patterns and select one to add it to your content.', 'Theme starter content', 'twentytwentyone' ) . '</p>
+					<p>' . esc_html_x( 'Block patterns are pre-designed groups of blocks. To add one, select the Add Block button [+] in the toolbar at the top of the editor. Switch to the Patterns tab underneath the search bar, and choose a pattern.', 'Theme starter content', 'twentytwentyone' ) . '</p>
 					<!-- /wp:paragraph --></div>
 					<!-- /wp:column -->
 
@@ -84,7 +84,7 @@ function twenty_twenty_one_get_starter_content() {
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
-					<p>' . esc_html_x( 'Twenty Twenty-One comes with several block styles, including borders and frames for blocks like Image. Try it out by adding a new image block to your editor, and in the Editor sidebar, open the "Styles" panel and select the "Frame" block style. Your images will look like works of art!', 'Theme starter content', 'twentytwentyone' ) . '</p>
+					<p>' . esc_html_x( 'Twenty Twenty-One includes stylish borders for your content. With an Image block selected, open the "Styles" panel within the Editor sidebar. Select the "Frame" block style to activate it.', 'Theme starter content', 'twentytwentyone' ) . '</p>
 					<!-- /wp:paragraph --></div>
 					<!-- /wp:column -->
 
@@ -94,7 +94,7 @@ function twenty_twenty_one_get_starter_content() {
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
-					<p>' . esc_html_x( 'Another block style included with Twenty Twenty-One is an overlap for column blocks. This allows you to create stacked layouts like the gallery on this page. Add a columns block to your editor, and in the Editor sidebar, and in the "Styles" panel, select the "Overlap" block style.', 'Theme starter content', 'twentytwentyone' ) . '</p>
+					<p>' . esc_html_x( 'Twenty Twenty-One also includes an overlap style for column blocks. With a Columns block selected, open the "Styles" panel within the Editor sidebar. Choose the "Overlap" block style to try it out.', 'Theme starter content', 'twentytwentyone' ) . '</p>
 					<!-- /wp:paragraph --></div>
 					<!-- /wp:column --></div>
 					<!-- /wp:columns -->
