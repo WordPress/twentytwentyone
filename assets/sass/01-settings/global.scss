@@ -254,6 +254,7 @@ $baseline-unit: 10px;
 
 /* OS dark theme preference */
 @media (prefers-color-scheme: dark) {
+
 	html.has-default-light-palette-background {
 		--global--color-background: var(--global--color-dark-gray);
 		--global--color-primary: var(--global--color-light-gray);

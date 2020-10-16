@@ -528,7 +528,7 @@ add_action( 'customize_preview_init', 'twentytwentyone_customize_preview_init' )
  *
  * @since 1.0.0
  *
- * @return string
+ * @return void
  */
 function twentytwentyone_the_html_classes() {
 	$background_color             = get_theme_mod( 'background_color', 'D1E4DD' );
