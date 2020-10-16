@@ -34,7 +34,7 @@ while ( have_posts() ) :
 
 	if ( is_singular( 'post' ) ) {
 
-		// The next-post link.
+		// The next-post link - visual representation.
 		$next_text  = '<span class="meta-nav" aria-hidden="true">';
 		$next_text .= sprintf(
 			/* Translators: %s: The arrow. */
@@ -42,10 +42,18 @@ while ( have_posts() ) :
 			is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' )
 		);
 		$next_text .= '</span>';
-		$next_text .= '<span class="screen-reader-text">' . esc_html__( 'Next post:', 'twentytwentyone' ) . '</span>';
-		$next_text .= '<span class="post-title">&nbsp;%title</span>';
+		$next_text .= '<span class="post-title" aria-hidden="true">%title</span>';
 
-		// The previous-post link.
+		// The next-post link - screen-reader representation.
+		$next_text .= '<span class="screen-reader-text">';
+		$next_text .= sprintf(
+			/* Translators: $s: The post-title. */
+			esc_html__( 'Next post: "%s"', 'twentytwentyone' ),
+			'%title'
+		);
+		$next_text .= '</span>';
+
+		// The previous-post link - visual representation.
 		$prev_text  = '<span class="meta-nav" aria-hidden="true">';
 		$prev_text .= sprintf(
 			/* Translators: %s: The arrow. */
@@ -53,8 +61,16 @@ while ( have_posts() ) :
 			is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' )
 		);
 		$prev_text .= '</span>';
-		$prev_text .= '<span class="screen-reader-text">' . esc_html__( 'Previous post:', 'twentytwentyone' ) . '</span>';
-		$prev_text .= '<span class="post-title">&nbsp;%title</span>';
+		$prev_text .= '<span class="post-title" aria-hidden="true">%title</span>';
+
+		// The next-post link - screen-reader representation.
+		$prev_text .= '<span class="screen-reader-text">';
+		$prev_text .= sprintf(
+			/* Translators: $s: The post-title. */
+			esc_html__( 'Previous post: "%s"', 'twentytwentyone' ),
+			'%title'
+		);
+		$prev_text .= '</span>';
 
 		the_post_navigation(
 			array(
