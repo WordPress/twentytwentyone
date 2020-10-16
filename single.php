@@ -33,18 +33,35 @@ while ( have_posts() ) :
 	}
 
 	if ( is_singular( 'post' ) ) {
-		// Previous/next post navigation.
-		$twentytwentyone_next = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' );
-		$twentytwentyone_prev = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' );
+
+		// The next-post link.
+		$next_text  = '<span class="meta-nav" aria-hidden="true">';
+		$next_text .= sprintf(
+			/* Translators: %s: The arrow. */
+			esc_html__( 'Next Post %s', 'twentytwentyone' ),
+			is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' )
+		);
+		$next_text .= '</span>';
+		/* Translators: There is a space at the end, after the colon. */
+		$next_text .= '<span class="screen-reader-text">' . esc_html__( 'Next post: ', 'twentytwentyone' ) . '</span>';
+		$next_text .= '<span class="post-title">%title</span>';
+
+		// The previous-post link.
+		$prev_text  = '<span class="meta-nav" aria-hidden="true">';
+		$prev_text .= sprintf(
+			/* Translators: %s: The arrow. */
+			esc_html__( '%s Previous Post', 'twentytwentyone' ),
+			is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' )
+		);
+		$prev_text .= '</span>';
+		/* Translators: There is a space at the end, after the colon. */
+		$prev_text .= '<span class="screen-reader-text">' . esc_html__( 'Previous post: ', 'twentytwentyone' ) . '</span>';
+		$prev_text .= '<span class="post-title">%title</span>';
+
 		the_post_navigation(
 			array(
-				'next_text' => '<span class="meta-nav" aria-hidden="true">' .
-				esc_html__( 'Next Post', 'twentytwentyone' ) . $twentytwentyone_next . '</span> ' .
-				'<span class="screen-reader-text">' . esc_html__( 'Next post:', 'twentytwentyone' ) . '</span>' .
-				'<span class="post-title">%title</span>',
-				'prev_text' => '<span class="meta-nav" aria-hidden="true"> ' . $twentytwentyone_prev . esc_html__( 'Previous Post', 'twentytwentyone' ) . '</span> ' .
-				'<span class="screen-reader-text">' . esc_html__( 'Previous post:', 'twentytwentyone' ) . '</span>' .
-				'<span class="post-title">%title</span>',
+				'next_text' => $next_text,
+				'prev_text' => $prev_text,
 			)
 		);
 	}
