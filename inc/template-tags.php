@@ -220,13 +220,15 @@ if ( ! function_exists( 'twenty_twenty_one_the_posts_navigation' ) ) {
 	function twenty_twenty_one_the_posts_navigation() {
 		the_posts_pagination(
 			array(
-				'mid_size'  => 2,
-				'prev_text' => sprintf(
+				/* translators: There is a space after page. */
+				'before_page_number' => esc_html__( 'Page ', 'twentytwentyone' ),
+				'mid_size'           => 1,
+				'prev_text'          => sprintf(
 					'%s <span class="nav-prev-text">%s</span>',
 					is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ),
 					esc_html__( 'Newer posts', 'twentytwentyone' )
 				),
-				'next_text' => sprintf(
+				'next_text'          => sprintf(
 					'<span class="nav-next-text">%s</span> %s',
 					esc_html__( 'Older posts', 'twentytwentyone' ),
 					is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' )
