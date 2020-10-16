@@ -15,7 +15,6 @@
 
 	&__submit {
 		margin-top: calc(var(--global--spacing-vertical) / 3);
-		
 		@include media(tablet) {
 			margin-left: calc(0.4 * var(--global--spacing-horizontal));
 		}
