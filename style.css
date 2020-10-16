@@ -306,10 +306,11 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 }
 
 @media (prefers-color-scheme: dark) {
-	:root {
+	:root .has-default-light-palette-background {
 		--global--color-background: var(--global--color-dark-gray);
 		--global--color-primary: var(--global--color-light-gray);
 		--global--color-secondary: var(--global--color-light-gray);
+		background-color: var(--global--color-background);
 	}
 }
 
