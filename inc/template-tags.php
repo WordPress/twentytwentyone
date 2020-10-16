@@ -25,7 +25,7 @@ if ( ! function_exists( 'twenty_twenty_one_posted_on' ) ) {
 		);
 		echo '<span class="posted-on">';
 		printf(
-			/* translators: %s: publish date */
+			/* translators: %s: publish date. */
 			esc_html__( 'Published %s', 'twentytwentyone' ),
 			$time_string // phpcs:ignore WordPress.Security.EscapeOutput
 		);
