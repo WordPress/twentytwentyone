@@ -320,6 +320,12 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 		--global--color-background: var(--global--color-dark-gray);
 		--global--color-primary: var(--global--color-light-gray);
 		--global--color-secondary: var(--global--color-light-gray);
+		--button--color-text: var(--global--color-background);
+		--button--color-text-hover: var(--global--color-secondary);
+		--button--color-text-active: var(--global--color-secondary);
+		--button--color-background: var(--global--color-secondary);
+		--button--color-background-hover: var(--global--color-background);
+		--button--color-background-active: var(--global--color-background);
 	}
 	html.has-default-light-palette-background body {
 		background-color: var(--global--color-background);
