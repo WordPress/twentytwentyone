@@ -23,13 +23,13 @@ if ( ! function_exists( 'twenty_twenty_one_posted_on' ) ) {
 			esc_attr( get_the_date( DATE_W3C ) ),
 			esc_html( get_the_date() )
 		);
-
+		echo '<span class="posted-on">';
 		printf(
-			/* translators: 2: author name*/
-			'<span class="posted-on">%1$s %2$s</span>',
-			esc_html__( 'Published', 'twentytwentyone' ),
+			/* translators: %s: publish date */
+			esc_html__( 'Published %s', 'twentytwentyone' ),
 			$time_string // phpcs:ignore WordPress.Security.EscapeOutput
 		);
+		echo '</span>';
 	}
 }
 
@@ -49,24 +49,6 @@ if ( ! function_exists( 'twenty_twenty_one_posted_by' ) ) {
 				esc_html__( 'By %s', 'twentytwentyone' ),
 				'<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" rel="author">' . esc_html( get_the_author() ) . '</a>'
 			);
-			echo '</span>';
-		}
-	}
-}
-
-if ( ! function_exists( 'twenty_twenty_one_comment_count' ) ) {
-	/**
-	 * Prints HTML with the comment count for the current post.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return void
-	 */
-	function twenty_twenty_one_comment_count() {
-		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
-			/* translators: %s: Name of current post. Only visible to screen readers. */
-			comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'twentytwentyone' ), get_the_title() ) );
 			echo '</span>';
 		}
 	}
@@ -136,7 +118,7 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				}
 				echo '</div>';
 			}
-		} elseif ( 'post' === get_post_type() && is_single() ) {
+		} else {
 
 			echo '<div class="posted-by">';
 			// Posted on.
