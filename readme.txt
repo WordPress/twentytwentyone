@@ -76,14 +76,13 @@ https://codepen.io/chriscoyier/pen/FtnAa Copyright (c) 2020 Chris Coyier
 License: MIT.
 
 Images
-Irises, Vincent van Gogh, 1890. Public domain. https://www.metmuseum.org/art/collection/search/436528
-Girl in white, Vincent van Gogh, 1890. Public domain. https://www.nga.gov/collection/art-object-page.46505.html
-The smoker, Vincent van Gogh, 1888. Public domain. https://collection.barnesfoundation.org/objects/5177/The-Smoker-(Le-Fumeur)/
-La Mousmé, Vincent van Gogh, 1888. Public domain. https://www.nga.gov/collection/art-object-page.46626.html
-La Berceuse (Woman Rocking a Cradle), Vincent van Gogh, 1889. Public domain. https://www.metmuseum.org/art/collection/search/437984
-Two Poplars in the Alpilles near Saint-Rémy, Vincent Van Gogh, 1889. Public domain. https://www.clevelandart.org/art/1958.32
-Roses, Vincent Van Gogh, 1890. Public Domain. https://www.metmuseum.org/art/collection/search/436534
-Roses, Vincent Van Gogh, 1890. Public Domain. https://commons.wikimedia.org/wiki/File:Roses_-_Vincent_van_Gogh.JPG
-Roses Tremieres (Hollyhocks), by Berthe Morisot, 1884. Public Domain. https://www.wikiart.org/en/berthe-morisot/roses-tremieres-hollyhocks-1884
-In the Bois de Boulogne, Berthe Morisot, 1879. Public Domain. https://www.wikiart.org/en/berthe-morisot/in-the-bois-de-boulogne
-Young Woman in Mauve, Berthe Morisot, 1880. Public Domain. https://www.wikiart.org/en/berthe-morisot/young-woman-in-mauve
+Art by Berthe Morisot 1841-1895. Public domain.
+https://www.wikiart.org/en/berthe-morisot/playing-in-the-sand
+https://www.wikiart.org/en/berthe-morisot/roses-tremieres-hollyhocks-1884
+https://www.wikiart.org/en/berthe-morisot/young-woman-in-mauve
+https://www.wikiart.org/en/berthe-morisot/in-the-bois-de-boulogne
+https://www.wikiart.org/en/berthe-morisot/daffodils
+https://www.wikiart.org/en/berthe-morisot/self-portrait-1885
+https://www.wikiart.org/en/berthe-morisot/the-garden-at-bougival-1884
+https://www.wikiart.org/en/berthe-morisot/villa-with-orange-trees-nice
+https://www.wikiart.org/en/berthe-morisot/reading
