@@ -61,7 +61,7 @@ $twenty_twenty_one_comment_count = get_comments_number();
 			array(
 				/* translators: There is a space after page. */
 				'before_page_number' => esc_html__( 'Page ', 'twentytwentyone' ),
-				'mid_size'           => 1,
+				'mid_size'           => 0,
 				'prev_text'          => sprintf(
 					'%s <span class="nav-prev-text">%s</span>',
 					is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ),
