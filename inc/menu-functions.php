@@ -91,7 +91,7 @@ function twenty_twenty_one_add_menu_description_args( $args, $item, $depth ) {
 	$args->link_after = '';
 	if ( 0 === $depth && isset( $item->description ) && $item->description ) {
 		// The extra <span> element is here for styling purposes: Allows the description to not be underslined on hover.
-		$args->link_after = ' <span class="menu-item-description"><span>' . $item->description . '</span></span>';
+		$args->link_after = '<p class="menu-item-description"><span>' . $item->description . '</span></p>';
 	}
 	return $args;
 }
