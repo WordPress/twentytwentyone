@@ -22,7 +22,7 @@ video {
 figcaption,
 .wp-caption,
 .wp-caption-text {
-	color: inherit;
+	color: currentColor;
 	font-size: var(--global--font-size-xs);
 	line-height: var(--global--line-height-body);
 	margin-top: calc(0.5 * var(--global--spacing-unit));
