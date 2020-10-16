@@ -42,9 +42,8 @@ while ( have_posts() ) :
 			is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' )
 		);
 		$next_text .= '</span>';
-		/* Translators: There is a space at the end, after the colon. */
-		$next_text .= '<span class="screen-reader-text">' . esc_html__( 'Next post: ', 'twentytwentyone' ) . '</span>';
-		$next_text .= '<span class="post-title">%title</span>';
+		$next_text .= '<span class="screen-reader-text">' . esc_html__( 'Next post:', 'twentytwentyone' ) . '</span>';
+		$next_text .= '<span class="post-title">&nbsp;%title</span>';
 
 		// The previous-post link.
 		$prev_text  = '<span class="meta-nav" aria-hidden="true">';
@@ -54,9 +53,8 @@ while ( have_posts() ) :
 			is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' )
 		);
 		$prev_text .= '</span>';
-		/* Translators: There is a space at the end, after the colon. */
-		$prev_text .= '<span class="screen-reader-text">' . esc_html__( 'Previous post: ', 'twentytwentyone' ) . '</span>';
-		$prev_text .= '<span class="post-title">%title</span>';
+		$prev_text .= '<span class="screen-reader-text">' . esc_html__( 'Previous post:', 'twentytwentyone' ) . '</span>';
+		$prev_text .= '<span class="post-title">&nbsp;%title</span>';
 
 		the_post_navigation(
 			array(
