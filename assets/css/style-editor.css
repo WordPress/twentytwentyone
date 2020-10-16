@@ -24,7 +24,6 @@
 	--global--line-height-page-title: 1.1;
 	/* Headings */
 	--heading--font-family: var(--global--font-primary);
-	--heading--line-height: var(--global--line-height-heading);
 	--heading--font-size-h6: var(--global--font-size-xs);
 	--heading--font-size-h5: var(--global--font-size-sm);
 	--heading--font-size-h4: var(--global--font-size-lg);
@@ -40,8 +39,8 @@
 	--heading--line-height-h6: var(--global--line-height-heading);
 	--heading--line-height-h5: var(--global--line-height-heading);
 	--heading--line-height-h4: var(--global--line-height-heading);
-	--heading--line-height-h3: var(--heading--line-height);
-	--heading--line-height-h2: var(--heading--line-height);
+	--heading--line-height-h3: var(--global--line-height-heading);
+	--heading--line-height-h2: var(--global--line-height-heading);
 	--heading--line-height-h1: var(--global--line-height-page-title);
 	--heading--font-weight: normal;
 	--heading--font-weight-page-title: 300;
@@ -344,7 +343,7 @@ blockquote {
 blockquote p {
 	font-size: var(--heading--font-size-h4);
 	letter-spacing: var(--heading--letter-spacing-h4);
-	line-height: var(--heading--line-height);
+	line-height: var(--heading--line-height-h4);
 }
 
 blockquote cite,
@@ -594,7 +593,7 @@ a:hover {
 .wp-block-cover-image h2 {
 	font-size: var(--heading--font-size-h2);
 	letter-spacing: var(--heading--letter-spacing-h2);
-	line-height: var(--heading--line-height);
+	line-height: var(--heading--line-height-h2);
 	padding: 0;
 	max-width: inherit;
 	text-align: inherit;

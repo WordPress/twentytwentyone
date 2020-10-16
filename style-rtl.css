@@ -116,7 +116,6 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--global--line-height-page-title: 1.1;
 	/* Headings */
 	--heading--font-family: var(--global--font-primary);
-	--heading--line-height: var(--global--line-height-heading);
 	--heading--font-size-h6: var(--global--font-size-xs);
 	--heading--font-size-h5: var(--global--font-size-sm);
 	--heading--font-size-h4: var(--global--font-size-lg);
@@ -132,8 +131,8 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--heading--line-height-h6: var(--global--line-height-heading);
 	--heading--line-height-h5: var(--global--line-height-heading);
 	--heading--line-height-h4: var(--global--line-height-heading);
-	--heading--line-height-h3: var(--heading--line-height);
-	--heading--line-height-h2: var(--heading--line-height);
+	--heading--line-height-h3: var(--global--line-height-heading);
+	--heading--line-height-h2: var(--global--line-height-heading);
 	--heading--line-height-h1: var(--global--line-height-page-title);
 	--heading--font-weight: normal;
 	--heading--font-weight-page-title: 300;
@@ -1118,7 +1117,7 @@ blockquote {
 blockquote p {
 	font-size: var(--heading--font-size-h4);
 	letter-spacing: var(--heading--letter-spacing-h4);
-	line-height: var(--heading--line-height);
+	line-height: var(--heading--line-height-h4);
 }
 
 blockquote cite,
@@ -1717,7 +1716,7 @@ a:hover {
 .wp-block-cover-image h2 {
 	font-size: var(--heading--font-size-h2);
 	letter-spacing: var(--heading--letter-spacing-h2);
-	line-height: var(--heading--line-height);
+	line-height: var(--heading--line-height-h2);
 	max-width: inherit;
 	text-align: inherit;
 	padding: 0;
@@ -3442,7 +3441,7 @@ a.custom-logo-link {
 	color: var(--entry-header--color);
 	font-size: var(--entry-header--font-size);
 	letter-spacing: var(--heading--letter-spacing-h2);
-	line-height: var(--heading--line-height);
+	line-height: var(--heading--line-height-h2);
 	overflow-wrap: break-word;
 }
 
@@ -4526,7 +4525,7 @@ h1.page-title {
 	font-family: var(--global--font-primary);
 	font-size: var(--global--font-size-lg);
 	font-weight: var(--pagination--font-weight-strong);
-	line-height: var(--heading--line-height);
+	line-height: var(--global--line-height-heading);
 }
 
 @media only screen and (min-width: 822px) {

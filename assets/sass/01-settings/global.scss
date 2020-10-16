@@ -28,7 +28,6 @@ $baseline-unit: 10px;
 
 	/* Headings */
 	--heading--font-family: var(--global--font-primary);
-	--heading--line-height: var(--global--line-height-heading);
 
 	--heading--font-size-h6: var(--global--font-size-xs);
 	--heading--font-size-h5: var(--global--font-size-sm);
@@ -47,8 +46,8 @@ $baseline-unit: 10px;
 	--heading--line-height-h6: var(--global--line-height-heading);
 	--heading--line-height-h5: var(--global--line-height-heading);
 	--heading--line-height-h4: var(--global--line-height-heading);
-	--heading--line-height-h3: var(--heading--line-height);
-	--heading--line-height-h2: var(--heading--line-height);
+	--heading--line-height-h3: var(--global--line-height-heading);
+	--heading--line-height-h2: var(--global--line-height-heading);
 	--heading--line-height-h1: var(--global--line-height-page-title);
 
 	--heading--font-weight: normal;
