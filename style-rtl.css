@@ -4583,7 +4583,6 @@ h1.page-title {
 
 .widget-area ul li > a {
 	display: inline-block;
-	line-height: 1;
 	padding: calc(var(--widget--line-height-list) * 0.2em) 0;
 }
 

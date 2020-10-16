@@ -522,3 +522,5 @@ function twentytwentyone_customize_preview_init() {
 	);
 }
 add_action( 'customize_preview_init', 'twentytwentyone_customize_preview_init' );
+
+add_filter( 'show_recent_comments_widget_style', '__return_false' );
