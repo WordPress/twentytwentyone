@@ -34,30 +34,13 @@ while ( have_posts() ) :
 
 	if ( is_singular( 'post' ) ) {
 
-		// The next-post link.
-		$next_text  = '<p class="meta-nav">';
-		$next_text .= sprintf(
-			/* Translators: %s: The arrow. */
-			esc_html__( 'Next Post %s', 'twentytwentyone' ),
-			is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' )
-		);
-		$next_text .= '</p>';
-		$next_text .= '<p class="post-title">%title</p>';
-
-		// The previous-post link - visual representation.
-		$prev_text  = '<p class="meta-nav">';
-		$prev_text .= sprintf(
-			/* Translators: %s: The arrow. */
-			esc_html__( '%s Previous Post', 'twentytwentyone' ),
-			is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' )
-		);
-		$prev_text .= '</p>';
-		$prev_text .= '<p class="post-title">%title</p>';
-
+		// Previous/next post navigation icons.
+		$twentytwentyone_next = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' );
+		$twentytwentyone_prev = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' );
 		the_post_navigation(
 			array(
-				'next_text' => $next_text,
-				'prev_text' => $prev_text,
+				'next_text' => '<p class="meta-nav">' . esc_html__( 'Next Post', 'twentytwentyone' ) . $twentytwentyone_next . '</p><p class="post-title">%title</p>',
+				'prev_text' => '<p class="meta-nav">' . $twentytwentyone_prev . esc_html__( 'Previous Post', 'twentytwentyone' ) . '</p><p class="post-title">%title</p>',
 			)
 		);
 	}
