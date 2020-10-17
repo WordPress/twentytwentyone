@@ -2397,6 +2397,10 @@ p.has-text-color a {
 	color: var(--wp--style--color--link, var(--global--color-primary));
 }
 
+.post-password-message {
+	font-size: var(--global--font-size-lg);
+}
+
 .post-password-form {
 	display: flex;
 	flex-wrap: wrap;

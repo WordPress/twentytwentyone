@@ -3412,6 +3412,10 @@ p.has-text-color a {
 	color: #28303d;
 }
 
+.post-password-message {
+	font-size: 1.5rem;
+}
+
 .post-password-form {
 	display: flex;
 	flex-wrap: wrap;
