@@ -33,10 +33,13 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'twentytwentyone' ),
-				'after'  => '</div>',
+				'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'twentytwentyone' ) . '">',
+				'after'    => '</nav>',
+				/* translaors: There is a space after page. */
+				'pagelink' => esc_html__( 'Page ', 'twentytwentyone' ) . '%',
 			)
 		);
+
 		?>
 	</div><!-- .entry-content -->
 
