@@ -538,6 +538,18 @@ a:hover {
 	outline-offset: 2px;
 }
 
+.wp-block-code code {
+	font-size: var(--global--font-size-xs);
+}
+
+.wp-block-code {
+	border-color: var(--global--color-border);
+	border-radius: 0;
+	border-style: solid;
+	border-width: 0.1rem;
+	padding: var(--global--spacing-unit);
+}
+
 .wp-block-cover,
 .wp-block-cover-image {
 	background-color: var(--cover--color-background);
