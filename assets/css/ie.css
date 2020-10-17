@@ -5360,6 +5360,13 @@ h1.page-title {
 	flex-grow: 1;
 }
 
+@media only screen and (max-width: 481px) {
+	.comment-form .comment-form-author,
+	.comment-form .comment-form-email {
+		flex-basis: 100%;
+	}
+}
+
 .comment-form .comment-form-cookies-consent > label {
 	font-size: 1rem;
 	font-weight: normal;

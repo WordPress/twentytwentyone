@@ -238,6 +238,10 @@
 	.comment-form-email {
 		flex-basis: 0;
 		flex-grow: 1;
+
+		@include media(mobile-only) {
+			flex-basis: 100%;
+		}
 	}
 
 	.comment-form-cookies-consent > label,
