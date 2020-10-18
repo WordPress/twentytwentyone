@@ -1,0 +1,31 @@
+name: Lighthouse CI
+on: [push, pull_request]
+jobs:
+  lhci:
+    name: Lighthouse
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Install @lhci/cli and @wordpress/env
+        run: |
+          npm install -g @lhci/cli@0.5.x @wordpress/env
+      - name: Run local server on port 8888
+        run: |
+          wp-env start
+      - name: Run Lighthouse CI
+        run: |
+          lhci collect --url=http://localhost:8888 --numberOfRuns=1 --silent
+      - name: Upload Artifact to Lighthouse CI Server
+        run: |
+          lhci upload
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
+          LHCI_SERVER_BASE_URL: ${{secrets.LHCI_SERVER_BASE_URL}}
+          LHCI_TOKEN: ${{secrets.LHCI_TOKEN}}
+      # - name: Assert Artifact
+      #   run: |
+      #     lhci assert
