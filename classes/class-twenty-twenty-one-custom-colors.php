@@ -63,7 +63,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 */
 	public function generate_custom_color_variables( $context = null ) {
 
-		$theme_css = 'editor' === $context ? ':root .editor-styles-wrapper{' : ':root{';
+		$theme_css        = 'editor' === $context ? ':root .editor-styles-wrapper{' : ':root{';
 		$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
 		
 		if ( 'd1e4dd' !== strtolower( $background_color ) ) {
