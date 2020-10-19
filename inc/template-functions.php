@@ -151,7 +151,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_post_type_archive() ) {
 		return sprintf(
-			/* translators: %s: Post type singular name. */
+			/* Translators: %s: Post type singular name. */
 			esc_html__( '%s Archives', 'twentytwentyone' ),
 			get_post_type_object( get_queried_object()->name )->labels->singular_name
 		);
@@ -159,7 +159,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_tax() ) {
 		return sprintf(
-			/* translators: %s: Taxonomy singular name. */
+			/* Translators: %s: Taxonomy singular name. */
 			esc_html__( '%s Archives', 'twentytwentyone' ),
 			get_taxonomy( get_queried_object()->taxonomy )->labels->singular_name
 		);
@@ -199,7 +199,7 @@ function twenty_twenty_one_get_avatar_size() {
  */
 function twenty_twenty_one_continue_reading_text() {
 	$continue_reading = sprintf(
-		/* translators: %s: Name of current post. */
+		/* Translators: %s: Name of current post. */
 		esc_html__( 'Continue reading %s', 'twentytwentyone' ),
 		the_title( '<span class="screen-reader-text">', '</span>', false )
 	);

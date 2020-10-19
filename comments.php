@@ -59,7 +59,7 @@ $twenty_twenty_one_comment_count = get_comments_number();
 		<?php
 		the_comments_pagination(
 			array(
-				/* translators: There is a space after page. */
+				/* Translators: There is a space after page. */
 				'before_page_number' => esc_html__( 'Page ', 'twentytwentyone' ),
 				'mid_size'           => 0,
 				'prev_text'          => sprintf(

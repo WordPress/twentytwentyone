@@ -25,7 +25,7 @@ if ( ! function_exists( 'twenty_twenty_one_posted_on' ) ) {
 		);
 		echo '<span class="posted-on">';
 		printf(
-			/* translators: %s: publish date. */
+			/* Translators: %s: publish date. */
 			esc_html__( 'Published %s', 'twentytwentyone' ),
 			$time_string // phpcs:ignore WordPress.Security.EscapeOutput
 		);
@@ -45,7 +45,7 @@ if ( ! function_exists( 'twenty_twenty_one_posted_by' ) ) {
 		if ( ! get_the_author_meta( 'description' ) && post_type_supports( get_post_type(), 'author' ) ) {
 			echo '<span class="byline">';
 			printf(
-				/* translators: %s author name. */
+				/* Translators: %s author name. */
 				esc_html__( 'By %s', 'twentytwentyone' ),
 				'<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" rel="author">' . esc_html( get_the_author() ) . '</a>'
 			);
@@ -78,7 +78,7 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 			// Edit post link.
 			edit_post_link(
 				sprintf(
-					/* translators: %s: Name of current post. Only visible to screen readers. */
+					/* Translators: %s: Name of current post. Only visible to screen readers. */
 					esc_html__( 'Edit %s', 'twentytwentyone' ),
 					'<span class="screen-reader-text">' . get_the_title() . '</span>'
 				),
@@ -90,21 +90,21 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 
 				echo '<div class="post-taxonomies">';
 
-				/* translators: used between list items, there is a space after the comma. */
+				/* Translators: used between list items, there is a space after the comma. */
 				$categories_list = get_the_category_list( __( ', ', 'twentytwentyone' ) );
 				if ( $categories_list ) {
 					printf(
-						/* translators: %s: list of categories. */
+						/* Translators: %s: list of categories. */
 						'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . '. </span>',
 						$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
 					);
 				}
 
-				/* translators: used between list items, there is a space after the comma. */
+				/* Translators: used between list items, there is a space after the comma. */
 				$tags_list = get_the_tag_list( '', __( ', ', 'twentytwentyone' ) );
 				if ( $tags_list ) {
 					printf(
-						/* translators: %s: list of tags. */
+						/* Translators: %s: list of tags. */
 						'<span class="tags-links">' . esc_html__( 'Tagged %s', 'twentytwentyone' ) . '.</span>',
 						$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
 					);
@@ -121,7 +121,7 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 			// Edit post link.
 			edit_post_link(
 				sprintf(
-					/* translators: %s: Name of current post. Only visible to screen readers. */
+					/* Translators: %s: Name of current post. Only visible to screen readers. */
 					esc_html__( 'Edit %s', 'twentytwentyone' ),
 					'<span class="screen-reader-text">' . get_the_title() . '</span>'
 				),
@@ -134,21 +134,21 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 
 				echo '<div class="post-taxonomies">';
 
-				/* translators: used between list items, there is a space after the comma. */
+				/* Translators: used between list items, there is a space after the comma. */
 				$categories_list = get_the_category_list( __( ', ', 'twentytwentyone' ) );
 				if ( $categories_list ) {
 					printf(
-						/* translators: %s: list of categories. */
+						/* Translators: %s: list of categories. */
 						'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . ' </span>',
 						$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
 					);
 				}
 
-				/* translators: used between list items, there is a space after the comma. */
+				/* Translators: used between list items, there is a space after the comma. */
 				$tags_list = get_the_tag_list( '', __( ', ', 'twentytwentyone' ) );
 				if ( $tags_list ) {
 					printf(
-						/* translators: %s: list of tags. */
+						/* Translators: %s: list of tags. */
 						'<span class="tags-links">' . esc_html__( 'Tagged %s', 'twentytwentyone' ) . '</span>',
 						$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
 					);
@@ -209,7 +209,7 @@ if ( ! function_exists( 'twenty_twenty_one_the_posts_navigation' ) ) {
 	function twenty_twenty_one_the_posts_navigation() {
 		the_posts_pagination(
 			array(
-				/* translators: There is a space after page. */
+				/* Translators: There is a space after page. */
 				'before_page_number' => esc_html__( 'Page ', 'twentytwentyone' ),
 				'mid_size'           => 0,
 				'prev_text'          => sprintf(
