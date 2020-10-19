@@ -21,11 +21,14 @@ $baseline-unit: 10px;
 	--global--font-size-xl: 2.25rem; // 36px / 16px
 	--global--font-size-xxl: 4rem; // 64px / 16px
 	--global--font-size-xxxl: 5rem; // 80px / 16px
+	--global--font-size-page-title: var(--global--font-size-xxl);
 	--global--letter-spacing: normal;
 
 	/* Line Height */
+	--global--line-height-base: 1;
 	--global--line-height-body: 1.7;
 	--global--line-height-heading: 1.3;
+	--global--line-height-page-title: 1.1;
 
 	/* Headings */
 	--heading--font-family: var(--global--font-primary);
@@ -34,9 +37,9 @@ $baseline-unit: 10px;
 	--heading--font-size-h6: var(--global--font-size-xs);
 	--heading--font-size-h5: var(--global--font-size-sm);
 	--heading--font-size-h4: var(--global--font-size-lg);
-	--heading--font-size-h3: calc(1.25 * var(--global--font-size-lg)); // 30px / 16px
-	--heading--font-size-h2: var(--global--font-size-xl);
-	--heading--font-size-h1: var(--global--font-size-xxl);
+	--heading--font-size-h3: 1.875rem; // 30px / 16px
+	--heading--font-size-h2: 2.25rem; // 36px / 16px
+	--heading--font-size-h1: var(--global--font-size-page-title);
 
 	--heading--letter-spacing-h6: 0.05em;
 	--heading--letter-spacing-h5: 0.05em;
@@ -50,7 +53,7 @@ $baseline-unit: 10px;
 	--heading--line-height-h4: var(--global--line-height-heading);
 	--heading--line-height-h3: var(--heading--line-height);
 	--heading--line-height-h2: var(--heading--line-height);
-	--heading--line-height-h1: 1.1;
+	--heading--line-height-h1: var(--global--line-height-page-title);
 
 	--heading--font-weight: normal;
 	--heading--font-weight-page-title: 300;
@@ -146,7 +149,7 @@ $baseline-unit: 10px;
 	/* Header */
 	--branding--color-text: var(--global--color-primary);
 	--branding--color-link: var(--global--color-primary);
-	--branding--color-link-hover: var(--global--color-secondary);
+	--branding--color-link-hover: var(--global--color-primary-hover);
 	--branding--title--font-family: var(--global--font-primary);
 	--branding--title--font-size: var(--global--font-size-lg);
 	--branding--title--font-size-mobile: var(--heading--font-size-h4);
@@ -154,7 +157,7 @@ $baseline-unit: 10px;
 	--branding--title--text-transform: uppercase;
 	--branding--description--font-family: var(--global--font-secondary);
 	--branding--description--font-size: var(--global--font-size-sm);
-
+	--branding--description--font-family: var(--global--font-secondary);
 
 	--branding--logo--max-width: 300px;
 	--branding--logo--max-height: 100px;
@@ -179,6 +182,7 @@ $baseline-unit: 10px;
 	--primary-nav--color-link-border: var(--global--color-primary);
 	--primary-nav--color-text: var(--global--color-primary);
 	--primary-nav--padding: calc(0.66 * var(--global--spacing-unit));
+	--primary-nav--justify-content: right;
 
 	/* Pagination */
 	--pagination--color-text: var(--global--color-primary);
@@ -188,6 +192,9 @@ $baseline-unit: 10px;
 	--pagination--font-size: var(--global--font-size-lg);
 	--pagination--font-weight: normal;
 	--pagination--font-weight-strong: 600;
+
+	/* Comments */
+	--comments--border-color: var(--global--color-border);
 
 	/* Footer */
 	--footer--color-text: var(--global--color-primary);

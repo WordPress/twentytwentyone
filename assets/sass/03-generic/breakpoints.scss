@@ -16,6 +16,7 @@ $breakpoint_xxl: 1024px;
 
 // Responsive breakpoints mixin
 @mixin media( $res ) {
+
 	@if mobile-only == $res {
 		@media only screen and (max-width: #{$breakpoint_sm - 1}) {
 			@content;
@@ -130,7 +131,6 @@ $breakpoint_xxl: 1024px;
 }
 
 @include media(mobile) {
-
 	%responsive-alignfull-width {
 		max-width: var(--responsive--alignfull-width);
 		width: auto;
@@ -154,7 +154,6 @@ $breakpoint_xxl: 1024px;
 }
 
 @include media(desktop) {
-
 	%responsive-alignfull-width-nested {
 		margin-left: auto;
 		margin-right: auto;
@@ -162,6 +161,7 @@ $breakpoint_xxl: 1024px;
 		max-width: var(--responsive--alignfull-width);
 	}
 }
+
 
 %responsive-alignleft-mobile {
 
@@ -173,7 +173,6 @@ $breakpoint_xxl: 1024px;
 }
 
 @include media(mobile) {
-
 	%responsive-alignleft {
 
 		/*rtl:ignore*/
@@ -194,7 +193,6 @@ $breakpoint_xxl: 1024px;
 }
 
 @include media(mobile) {
-
 	%responsive-alignright {
 
 		/*rtl:ignore*/

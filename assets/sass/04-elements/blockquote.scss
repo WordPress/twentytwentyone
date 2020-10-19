@@ -1,4 +1,6 @@
 blockquote {
+	margin: 0;
+	padding: 0;
 
 	p {
 		font-size: var(--heading--font-size-h4);
@@ -8,8 +10,9 @@ blockquote {
 
 	cite,
 	footer {
+		color: var(--global--color-primary);
 		font-size: var(--global--font-size-xs);
-
+		letter-spacing: var(--global--letter-spacing);
 	}
 
 	> * {
@@ -25,5 +28,21 @@ blockquote {
 		}
 	}
 
+	&.alignleft,
+	&.alignright {
 
+		padding-left: inherit;
+
+		p {
+			font-size: var(--heading--font-size-h5);
+			max-width: inherit;
+			width: inherit;
+		}
+
+		cite,
+		footer {
+			font-size: var(--global--font-size-xs);
+			letter-spacing: var(--global--letter-spacing);
+		}
+	}
 }
