@@ -126,6 +126,10 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 
 		// Add support for editor styles.
 		add_theme_support( 'editor-styles' );
+		$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
+		if ( 127 > Twenty_Twenty_One_Custom_Colors::get_relative_luminance_from_hex( $background_color ) ) {
+			add_theme_support( 'dark-editor-style' );
+		}
 
 		$editor_stylesheet_path = './assets/css/style-editor.css';
 
