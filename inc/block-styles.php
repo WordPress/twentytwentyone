@@ -23,7 +23,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			'core/columns',
 			array(
 				'name'  => 'twentytwentyone-columns-overlap',
-				'label' => __( 'Overlap', 'twentytwentyone' ),
+				'label' => esc_html__( 'Overlap', 'twentytwentyone' ),
 			)
 		);
 
