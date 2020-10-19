@@ -2216,14 +2216,16 @@ a:hover {
 }
 
 .wp-block-code {
-	color: #28303d;
-	font-size: 1.125rem;
-	padding: 20px;
 	border-color: #28303d;
+	border-radius: 0;
+	border-style: solid;
+	border-width: 0.1rem;
+	padding: 20px;
 }
 
-.wp-block-code pre {
-	color: #28303d;
+.wp-block-code code {
+	font-size: 1rem;
+	overflow: auto;
 }
 
 .wp-block-columns .wp-block-column > * {
