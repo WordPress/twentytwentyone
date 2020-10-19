@@ -455,6 +455,14 @@ add_action( 'enqueue_block_editor_assets', 'twentytwentyone_block_editor_script'
  * @link https://git.io/vWdr2
  */
 function twenty_twenty_one_skip_link_focus_fix() {
+
+	// If SCRIPT_DEBUG is defined and true, print the unminified file.
+	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
+		echo '<script>';
+		include get_template_directory() . '/assets/js/skip-link-focus-fix.js';
+		echo '</script>';
+	}
+
 	// The following is minified via `npx terser --compress --mangle -- assets/js/skip-link-focus-fix.js`.
 	?>
 	<script>
@@ -508,7 +516,7 @@ require get_template_directory() . '/inc/block-styles.php';
 /**
  * Enqueue scripts for the customizer preview.
  *
- * @since Twenty Twenty-One 1.0
+ * @since 1.0.0
  *
  * @return void
  */
@@ -522,3 +530,18 @@ function twentytwentyone_customize_preview_init() {
 	);
 }
 add_action( 'customize_preview_init', 'twentytwentyone_customize_preview_init' );
+
+/**
+ * Calculate any classes we may want to add to the main <html> element.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function twentytwentyone_the_html_classes() {
+	$background_color             = get_theme_mod( 'background_color', 'D1E4DD' );
+	$light_colors_default_palette = array( '#D1E4DD', '#D1DFE4', '#D1D1E4', '#E4D1D1', '#E4DAD1', '#EEEADD', '#FFFFFF' );
+	if ( in_array( strtoupper( '#' . ltrim( $background_color, '#' ) ), $light_colors_default_palette, true ) ) {
+		echo 'class="has-default-light-palette-background"';
+	}
+}

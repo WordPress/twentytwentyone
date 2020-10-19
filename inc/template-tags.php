@@ -25,7 +25,7 @@ if ( ! function_exists( 'twenty_twenty_one_posted_on' ) ) {
 		);
 		echo '<span class="posted-on">';
 		printf(
-			/* translators: %s: publish date */
+			/* translators: %s: publish date. */
 			esc_html__( 'Published %s', 'twentytwentyone' ),
 			$time_string // phpcs:ignore WordPress.Security.EscapeOutput
 		);
@@ -42,7 +42,7 @@ if ( ! function_exists( 'twenty_twenty_one_posted_by' ) ) {
 	 * @return void
 	 */
 	function twenty_twenty_one_posted_by() {
-		if ( ! get_the_author_meta( 'description' ) ) {
+		if ( ! get_the_author_meta( 'description' ) && post_type_supports( get_post_type(), 'author' ) ) {
 			echo '<span class="byline">';
 			printf(
 				/* translators: %s author name. */
@@ -78,15 +78,8 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 			// Edit post link.
 			edit_post_link(
 				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers. */
-						__( 'Edit %s', 'twentytwentyone' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
+					/* translators: %s: Name of current post. Only visible to screen readers. */
+					esc_html__( 'Edit %s', 'twentytwentyone' ),
 					'<span class="screen-reader-text">' . get_the_title() . '</span>'
 				),
 				'<span class="edit-link">',
@@ -128,15 +121,8 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 			// Edit post link.
 			edit_post_link(
 				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers. */
-						__( 'Edit %s', 'twentytwentyone' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
+					/* translators: %s: Name of current post. Only visible to screen readers. */
+					esc_html__( 'Edit %s', 'twentytwentyone' ),
 					'<span class="screen-reader-text">' . get_the_title() . '</span>'
 				),
 				'<span class="edit-link">',
@@ -193,7 +179,10 @@ if ( ! function_exists( 'twenty_twenty_one_post_thumbnail' ) ) {
 		<?php if ( is_singular() ) : ?>
 
 			<figure class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
+				<?php
+				// Thumbnail is loaded eagerly because it's going to be in the viewport immediately.
+				the_post_thumbnail( 'post-thumbnail', array( 'loading' => 'eager' ) );
+				?>
 			</figure><!-- .post-thumbnail -->
 
 		<?php else : ?>
@@ -220,13 +209,15 @@ if ( ! function_exists( 'twenty_twenty_one_the_posts_navigation' ) ) {
 	function twenty_twenty_one_the_posts_navigation() {
 		the_posts_pagination(
 			array(
-				'mid_size'  => 2,
-				'prev_text' => sprintf(
+				/* translators: There is a space after page. */
+				'before_page_number' => esc_html__( 'Page ', 'twentytwentyone' ),
+				'mid_size'           => 0,
+				'prev_text'          => sprintf(
 					'%s <span class="nav-prev-text">%s</span>',
 					is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ),
 					esc_html__( 'Newer posts', 'twentytwentyone' )
 				),
-				'next_text' => sprintf(
+				'next_text'          => sprintf(
 					'<span class="nav-next-text">%s</span> %s',
 					esc_html__( 'Older posts', 'twentytwentyone' ),
 					is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' )

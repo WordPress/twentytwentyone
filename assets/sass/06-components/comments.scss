@@ -25,6 +25,7 @@
 		}
 
 		.fn {
+			display: inline-block;
 			padding-left: 85px;
 		}
 
@@ -125,7 +126,7 @@
 
 	.comment-metadata {
 		color: var(--global--color-primary);
-		font-size: var(--global--font-size-sm);
+		font-size: var(--global--font-size-xs);
 		padding: 8px 0 9px 0;
 
 		.edit-link {
@@ -237,6 +238,10 @@
 	.comment-form-email {
 		flex-basis: 0;
 		flex-grow: 1;
+
+		@include media(mobile-only) {
+			flex-basis: 100%;
+		}
 	}
 
 	.comment-form-cookies-consent > label,
@@ -266,7 +271,7 @@
 		font-size: var(--global--font-size-sm);
 		margin-bottom: calc(.5 * var(--global--spacing-unit));
 		width: 100%;
-		font-weight: var(--form--label-weight-strong);
+		font-weight: var(--form--label-weight);
 	}
 
 	&.comment-form-cookies-consent {

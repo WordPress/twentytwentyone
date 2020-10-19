@@ -36,7 +36,17 @@
 | @hareesh-pillai | @hareesh-pillai |
 | @mager19 | @mager19 |
 | @rolf-yoast | @rolfsiebers
+| @web-migrates | @webmigrates
 | @SResok | @sresok |
 | @GuidoOffermans | @guidooffermans |
 | @francescamarano | @francina |
 | @marybaum | @marybaum |
+| @hareshlive | @hareshlive
+| @imnavanath | @navanathbhosale |
+| @afercia | @afercia |
+| @richtabor | @richtabor |
+| @joyously | @joyously |
+| @sarahricker | @sarahricker |
+| @enriquesanchez | @nrqsnchz |
+
+

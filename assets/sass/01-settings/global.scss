@@ -101,8 +101,7 @@ $baseline-unit: 10px;
 	--form--line-height: var(--global--line-height-body);
 	--form--color-text: var(--global--color-dark-gray); // Text color in input fields is always dark over light background.
 	--form--color-ranged: var(--global--color-secondary);
-	--form--label-weight: normal;
-	--form--label-weight-strong: 500;
+	--form--label-weight: 500;
 	--form--border-color: var(--global--color-secondary);
 	--form--border-width: 3px;
 	--form--border-radius: 0;
@@ -208,15 +207,16 @@ $baseline-unit: 10px;
 	--pullquote--color-foreground: var(--global--color-primary);
 	--pullquote--color-background: var(--global--color-background);
 
-	--quote--border-color: var(--global--color-secondary);
-	--quote--border-width: 1px;
 	--quote--font-family: var(--global--font-secondary);
 	--quote--font-size: var(--global--font-size-md);
-	--quote--font-size-large: var(--global--font-size-lg);
+	--quote--font-size-large: var(--global--font-size-xl);
 	--quote--font-style: normal;
+	--quote--font-weight: normal;
+	--quote--font-weight-strong: 700;
 	--quote--font-style-large: normal;
+	--quote--font-style-cite: normal;
 	--quote--line-height: var(--global--line-height-body);
-	--quote--line-height-large: 1.5;
+	--quote--line-height-large: 1.35;
 
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
@@ -242,5 +242,27 @@ $baseline-unit: 10px;
 		--global--font-size-xxxl: 9rem; // 144px / 16px
 		--heading--font-size-h3: 2rem; // 32px / 16px
 		--heading--font-size-h2: 3rem; // 48px / 16px
+	}
+}
+
+/* OS dark theme preference */
+@media (prefers-color-scheme: dark) {
+
+	html.has-default-light-palette-background {
+		--global--color-background: var(--global--color-dark-gray);
+		--global--color-primary: var(--global--color-light-gray);
+		--global--color-secondary: var(--global--color-light-gray);
+
+		// These need to be redefined for comment-submit buttons.
+		--button--color-text: var(--global--color-background);
+		--button--color-text-hover: var(--global--color-secondary);
+		--button--color-text-active: var(--global--color-secondary);
+		--button--color-background: var(--global--color-secondary);
+		--button--color-background-hover: var(--global--color-background);
+		--button--color-background-active: var(--global--color-background);
+
+		body {
+			background-color: var(--global--color-background);
+		}
 	}
 }

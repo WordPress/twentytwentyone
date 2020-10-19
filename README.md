@@ -68,6 +68,13 @@ https://github.com/WordPress/gutenberg/tree/master/packages/icons
 This theme bundles the following third-party resources:
 
 Images
-Irises, Vincent van Gogh, 1890. Public domain. https://www.metmuseum.org/art/collection/search/436528
-Girl in white, Vincent van Gogh, 1890. Public domain. https://www.nga.gov/collection/art-object-page.46505.html
-The smoker, Vincent van Gogh, 1888. Public domain. https://collection.barnesfoundation.org/objects/5177/The-Smoker-(Le-Fumeur)/
+Art by Berthe Morisot 1841-1895. Public domain.
+https://www.wikiart.org/en/berthe-morisot/playing-in-the-sand
+https://www.wikiart.org/en/berthe-morisot/roses-tremieres-hollyhocks-1884
+https://www.wikiart.org/en/berthe-morisot/young-woman-in-mauve
+https://www.wikiart.org/en/berthe-morisot/in-the-bois-de-boulogne
+https://www.wikiart.org/en/berthe-morisot/daffodils
+https://www.wikiart.org/en/berthe-morisot/self-portrait-1885
+https://www.wikiart.org/en/berthe-morisot/the-garden-at-bougival-1884
+https://www.wikiart.org/en/berthe-morisot/villa-with-orange-trees-nice
+https://www.wikiart.org/en/berthe-morisot/reading

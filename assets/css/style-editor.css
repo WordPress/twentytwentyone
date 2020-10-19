@@ -93,8 +93,7 @@
 	--form--line-height: var(--global--line-height-body);
 	--form--color-text: var(--global--color-dark-gray);
 	--form--color-ranged: var(--global--color-secondary);
-	--form--label-weight: normal;
-	--form--label-weight-strong: 500;
+	--form--label-weight: 500;
 	--form--border-color: var(--global--color-secondary);
 	--form--border-width: 3px;
 	--form--border-radius: 0;
@@ -189,15 +188,16 @@
 	--pullquote--border-color: var(--global--color-primary);
 	--pullquote--color-foreground: var(--global--color-primary);
 	--pullquote--color-background: var(--global--color-background);
-	--quote--border-color: var(--global--color-secondary);
-	--quote--border-width: 1px;
 	--quote--font-family: var(--global--font-secondary);
 	--quote--font-size: var(--global--font-size-md);
-	--quote--font-size-large: var(--global--font-size-lg);
+	--quote--font-size-large: var(--global--font-size-xl);
 	--quote--font-style: normal;
+	--quote--font-weight: normal;
+	--quote--font-weight-strong: 700;
 	--quote--font-style-large: normal;
+	--quote--font-style-cite: normal;
 	--quote--line-height: var(--global--line-height-body);
-	--quote--line-height-large: 1.5;
+	--quote--line-height-large: 1.35;
 	--separator--border-color: var(--global--color-border);
 	--separator--height: 1px;
 	/* Block: Table */
@@ -219,6 +219,24 @@
 		--global--font-size-xxxl: 9rem;
 		--heading--font-size-h3: 2rem;
 		--heading--font-size-h2: 3rem;
+	}
+}
+
+/* OS dark theme preference */
+@media (prefers-color-scheme: dark) {
+	html.has-default-light-palette-background {
+		--global--color-background: var(--global--color-dark-gray);
+		--global--color-primary: var(--global--color-light-gray);
+		--global--color-secondary: var(--global--color-light-gray);
+		--button--color-text: var(--global--color-background);
+		--button--color-text-hover: var(--global--color-secondary);
+		--button--color-text-active: var(--global--color-secondary);
+		--button--color-background: var(--global--color-secondary);
+		--button--color-background-hover: var(--global--color-background);
+		--button--color-background-active: var(--global--color-background);
+	}
+	html.has-default-light-palette-background body {
+		background-color: var(--global--color-background);
 	}
 }
 
@@ -402,7 +420,7 @@ video {
 figcaption,
 .wp-caption,
 .wp-caption-text {
-	color: var(--global--color-primary);
+	color: currentColor;
 	font-size: var(--global--font-size-xs);
 	line-height: var(--global--line-height-body);
 	margin-top: calc(0.5 * var(--global--spacing-unit));
@@ -519,6 +537,18 @@ a:hover {
 .is-style-outline .wp-block-button__link[style*="radius"],
 .wp-block-button__link[style*="radius"] {
 	outline-offset: 2px;
+}
+
+.wp-block-code code {
+	font-size: var(--global--font-size-xs);
+}
+
+.wp-block-code {
+	border-color: var(--global--color-border);
+	border-radius: 0;
+	border-style: solid;
+	border-width: 0.1rem;
+	padding: var(--global--spacing-unit);
 }
 
 .wp-block-cover,
@@ -664,6 +694,18 @@ a:hover {
 
 .wp-block-gallery figcaption {
 	margin-bottom: 0;
+}
+
+.wp-block-group {
+	display: block;
+	clear: both;
+	display: flow-root;
+}
+
+.wp-block-group:before, .wp-block-group:after {
+	content: "";
+	display: block;
+	clear: both;
 }
 
 .wp-block-group.has-background {
@@ -1085,13 +1127,11 @@ p.has-background {
 	margin-left: 0;
 	margin-right: 0;
 	text-align: center;
-	border-top-color: var(--pullquote--border-color);
-	border-top-style: solid;
-	border-top-width: var(--pullquote--border-width);
-	border-bottom-color: var(--pullquote--border-color);
+	border-width: var(--pullquote--border-width);
 	border-bottom-style: solid;
-	border-bottom-width: var(--pullquote--border-width);
-	color: var(--pullquote--color-foreground);
+	border-top-style: solid;
+	color: currentColor;
+	border-color: currentColor;
 	position: relative;
 }
 
@@ -1121,7 +1161,6 @@ p.has-background {
 .wp-block-pullquote .wp-block-pullquote__citation,
 .wp-block-pullquote cite,
 .wp-block-pullquote footer {
-	color: var(--global--color-primary);
 	font-size: var(--global--font-size-xs);
 	font-style: var(--pullquote--font-style);
 	text-transform: none;
@@ -1133,7 +1172,6 @@ p.has-background {
 
 .wp-block-pullquote.is-style-solid-color {
 	background-color: var(--pullquote--color-background);
-	color: var(--pullquote--color-foreground);
 	padding: calc(2.5 * var(--global--spacing-unit));
 	border-width: var(--pullquote--border-width);
 	border-style: solid;
@@ -1177,22 +1215,66 @@ p.has-background {
 }
 
 .wp-block-quote {
-	border-left-color: var(--quote--border-color);
-	border-left-width: var(--quote--border-width);
-	margin: var(--global--spacing-vertical) auto;
-	padding-left: var(--global--spacing-horizontal);
+	position: relative;
+	border-left: none;
+	margin: var(--global--spacing-vertical) auto var(--global--spacing-vertical) var(--global--spacing-horizontal);
 }
 
 .wp-block-quote p {
 	font-family: var(--quote--font-family);
 	font-size: var(--quote--font-size);
 	font-style: var(--quote--font-style);
+	font-weight: var(--quote--font-weight-strong);
 	line-height: var(--quote--line-height);
 }
 
+.wp-block-quote strong {
+	font-weight: var(--quote--font-weight);
+}
+
+.wp-block-quote:before {
+	content: "\201C";
+	font-size: var(--quote--font-size);
+	line-height: var(--quote--line-height);
+	position: absolute;
+	left: calc(-0.5 * var(--global--spacing-horizontal));
+}
+
+.wp-block-quote .wp-block-quote__citation {
+	color: var(--global--color-primary);
+	font-size: var(--global--font-size-xs);
+	font-style: var(--quote--font-style-cite);
+}
+
+.has-background:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
+[class*="background-color"]:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
+[style*="background-color"]:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
+.wp-block-cover[style*="background-image"] .wp-block-quote .wp-block-quote__citation {
+	color: currentColor;
+}
+
+.wp-block-quote.has-text-align-right {
+	margin: var(--global--spacing-vertical) var(--global--spacing-horizontal) var(--global--spacing-vertical) auto;
+	padding-right: 0;
+	border-right: none;
+}
+
+.wp-block-quote.has-text-align-right:before {
+	content: "\201D";
+	left: initial;
+	right: calc(-0.5 * var(--global--spacing-horizontal));
+}
+
+.wp-block-quote.has-text-align-center {
+	margin: var(--global--spacing-vertical) auto;
+}
+
+.wp-block-quote.has-text-align-center:before {
+	display: none;
+}
+
 .wp-block-quote.is-large, .wp-block-quote.is-style-large {
-	border-left: var(--quote--border-width) solid var(--quote--border-color);
-	padding-left: var(--global--spacing-horizontal);
+	padding-left: 0;
 	/* Resetting margins to match _block-container.scss */
 	margin-top: var(--global--spacing-vertical);
 	margin-bottom: var(--global--spacing-vertical);
@@ -1204,36 +1286,60 @@ p.has-background {
 	line-height: var(--quote--line-height-large);
 }
 
-.wp-block-quote.is-large.has-text-align-right, .wp-block-quote.is-style-large.has-text-align-right {
-	border-left: none;
-	border-right: var(--quote--border-width) solid var(--quote--border-color);
+.wp-block-quote.is-large:before, .wp-block-quote.is-style-large:before {
+	font-size: var(--quote--font-size-large);
+	line-height: var(--quote--line-height-large);
+	left: calc(-1 * var(--global--spacing-horizontal));
 }
 
-.wp-block-quote.has-text-align-right {
-	border-right: var(--quote--border-width) solid var(--quote--border-color);
+.wp-block-quote.is-large.has-text-align-right:before, .wp-block-quote.is-style-large.has-text-align-right:before {
+	left: initial;
+	right: calc(-1 * var(--global--spacing-horizontal));
 }
 
-.wp-block-quote.has-text-align-center {
-	border: none;
+@media only screen and (max-width: 481px) {
+	.wp-block-quote.is-large, .wp-block-quote.is-style-large {
+		padding-left: var(--global--spacing-horizontal);
+	}
+	.wp-block-quote.is-large:before, .wp-block-quote.is-style-large:before {
+		left: 0;
+	}
+	.wp-block-quote.is-large.has-text-align-right, .wp-block-quote.is-style-large.has-text-align-right {
+		padding-left: 0;
+		padding-right: var(--global--spacing-horizontal);
+	}
+	.wp-block-quote.is-large.has-text-align-right:before, .wp-block-quote.is-style-large.has-text-align-right:before {
+		right: 0;
+	}
 }
 
-.has-background:not(.has-background-background-color) .wp-block-quote,
-[class*="background-color"]:not(.has-background-background-color) .wp-block-quote,
-[style*="background-color"]:not(.has-background-background-color) .wp-block-quote,
-.wp-block-cover[style*="background-image"] .wp-block-quote {
-	border-color: currentColor;
+@media only screen and (max-width: 481px) {
+	.wp-block-quote {
+		padding-left: calc(0.5 * var(--global--spacing-horizontal));
+	}
+	.wp-block-quote:before {
+		left: 0;
+	}
+	.wp-block-quote.has-text-align-right {
+		padding-left: 0;
+		padding-right: calc(0.5 * var(--global--spacing-horizontal));
+	}
+	.wp-block-quote.has-text-align-right:before {
+		right: 0;
+	}
+	.wp-block-quote.has-text-align-center {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
-.wp-block-quote .wp-block-quote__citation {
-	color: var(--global--color-primary);
-	font-size: var(--global--font-size-xs);
-}
-
-.has-background:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
-[class*="background-color"]:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
-[style*="background-color"]:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
-.wp-block-cover[style*="background-image"] .wp-block-quote .wp-block-quote__citation {
-	color: currentColor;
+@media only screen and (min-width: 482px) {
+	.wp-block-quote {
+		margin-left: auto;
+	}
+	.wp-block-quote.has-text-align-right {
+		margin-right: auto;
+	}
 }
 
 .wp-block-rss {
@@ -1342,7 +1448,7 @@ p.has-background {
 
 .wp-block-search .wp-block-search__label {
 	font-size: var(--form--font-size);
-	font-weight: var(--form--label-weight-strong);
+	font-weight: var(--form--label-weight);
 	margin-bottom: calc(var(--global--spacing-vertical) / 3);
 }
 
@@ -1684,7 +1790,14 @@ pre.wp-block-verse {
 }
 
 .has-drop-cap:not(:focus)::first-letter {
-	font-size: calc(2 * var(--heading--font-size-h1));
+	font-family: var(--heading--font-family);
+	font-weight: var(--heading--font-weight);
+	line-height: 0.66;
+	text-transform: uppercase;
+	font-style: normal;
+	float: left;
+	margin: 0.1em 0.1em 0 0;
+	font-size: calc(1.2 * var(--heading--font-size-h1));
 }
 
 @media only screen and (min-width: 482px) {
