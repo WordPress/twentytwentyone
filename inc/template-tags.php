@@ -42,7 +42,7 @@ if ( ! function_exists( 'twenty_twenty_one_posted_by' ) ) {
 	 * @return void
 	 */
 	function twenty_twenty_one_posted_by() {
-		if ( ! get_the_author_meta( 'description' ) ) {
+		if ( ! get_the_author_meta( 'description' ) && post_type_supports( get_post_type(), 'author' ) ) {
 			echo '<span class="byline">';
 			printf(
 				/* translators: %s author name. */
@@ -179,7 +179,7 @@ if ( ! function_exists( 'twenty_twenty_one_post_thumbnail' ) ) {
 		<?php if ( is_singular() ) : ?>
 
 			<figure class="post-thumbnail">
-				<?php 
+				<?php
 				// Thumbnail is loaded eagerly because it's going to be in the viewport immediately.
 				the_post_thumbnail( 'post-thumbnail', array( 'loading' => 'eager' ) );
 				?>
