@@ -1998,7 +1998,17 @@ input[type="range"]::-ms-thumb {
 }
 
 fieldset {
+	display: grid;
+	border-color: #39414d;
 	padding: 25px;
+}
+
+fieldset legend {
+	font-size: 1.5rem;
+}
+
+fieldset input[type="submit"] {
+	max-width: max-content;
 }
 
 fieldset input:not([type="submit"]) {

@@ -249,9 +249,19 @@ input[type="range"]::-ms-thumb {
 }
 
 fieldset {
+	display: grid;
+	border-color: var(--global--color-secondary);
 	padding: var(--global--spacing-horizontal);
 
+	legend {
+		font-size: var(--global--font-size-lg);
+	}
+
 	input {
+
+		&[type="submit"] {
+			max-width: max-content;
+		}
 
 		&:not([type="submit"]) {
 			margin-bottom: var(--global--spacing-unit);

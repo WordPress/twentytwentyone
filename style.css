@@ -1432,7 +1432,17 @@ input[type="range"]::-ms-thumb {
 }
 
 fieldset {
+	display: grid;
+	border-color: var(--global--color-secondary);
 	padding: var(--global--spacing-horizontal);
+}
+
+fieldset legend {
+	font-size: var(--global--font-size-lg);
+}
+
+fieldset input[type="submit"] {
+	max-width: max-content;
 }
 
 fieldset input:not([type="submit"]) {
