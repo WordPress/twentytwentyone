@@ -4416,11 +4416,12 @@ h1.page-title {
 	color: var(--footer--color-link-hover);
 }
 
-.footer-navigation-wrapper li svg {
+.footer-navigation-wrapper li .svg-icon {
 	vertical-align: middle;
+	fill: var(--footer--color-link);
 }
 
-.footer-navigation-wrapper li svg:hover {
+.footer-navigation-wrapper li .svg-icon:hover {
 	transform: scale(1.1);
 }
 
