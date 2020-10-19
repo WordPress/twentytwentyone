@@ -1171,7 +1171,6 @@ p.has-background {
 }
 
 .wp-block-pullquote.is-style-solid-color {
-	background-color: var(--pullquote--color-background);
 	padding: calc(2.5 * var(--global--spacing-unit));
 	border-width: var(--pullquote--border-width);
 	border-style: solid;
