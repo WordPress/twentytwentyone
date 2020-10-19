@@ -760,6 +760,18 @@ a:hover {
 	margin-bottom: 0;
 }
 
+.wp-block-group {
+	display: block;
+	clear: both;
+	display: flow-root;
+}
+
+.wp-block-group:before, .wp-block-group:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
 .wp-block-group.has-background {
 	padding: 30px;
 }
