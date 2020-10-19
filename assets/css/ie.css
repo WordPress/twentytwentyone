@@ -4876,17 +4876,22 @@ a.custom-logo-link {
 	margin-bottom: 0;
 }
 
-.sticky-post {
-	color: #d1e4dd;
-	background-color: #39414d;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1rem;
-	line-height: 1;
-	padding: 5px 7px;
-}
-
 .no-results.not-found > *:first-child {
 	margin-bottom: 90px;
+}
+
+.page-links {
+	clear: both;
+}
+
+.page-links .post-page-numbers {
+	margin-left: 13px;
+	margin-right: 13px;
+	padding: 10px 0;
+}
+
+.page-links .post-page-numbers:first-child {
+	margin-left: 0;
 }
 
 .entry-title {

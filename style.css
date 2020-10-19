@@ -3431,17 +3431,22 @@ a.custom-logo-link {
 	margin-bottom: 0;
 }
 
-.sticky-post {
-	color: var(--global--color-background);
-	background-color: var(--global--color-secondary);
-	font-family: var(--global--font-secondary);
-	font-size: var(--global--font-size-xs);
-	line-height: 1;
-	padding: calc(0.25 * var(--global--spacing-unit)) calc(0.33 * var(--global--spacing-unit));
-}
-
 .no-results.not-found > *:first-child {
 	margin-bottom: calc(3 * var(--global--spacing-vertical));
+}
+
+.page-links {
+	clear: both;
+}
+
+.page-links .post-page-numbers {
+	margin-left: calc(0.66 * var(--global--spacing-unit));
+	margin-right: calc(0.66 * var(--global--spacing-unit));
+	padding: calc(0.33 * var(--global--spacing-vertical)) 0;
+}
+
+.page-links .post-page-numbers:first-child {
+	margin-left: 0;
 }
 
 .entry-title {
