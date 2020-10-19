@@ -6227,6 +6227,10 @@ h1.page-title {
 	margin-left: 13px;
 }
 
+.widget-area ul.children {
+	margin-left: 13px;
+}
+
 .widget-area ul .sub-menu-toggle {
 	display: none;
 }

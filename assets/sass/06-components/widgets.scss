@@ -20,7 +20,8 @@
 			line-height: var(--widget--line-height-list);
 		}
 
-		&.sub-menu {
+		&.sub-menu,
+		&.children {
 			margin-left: var(--widget--spacing-menu);
 		}
 
