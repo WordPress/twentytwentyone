@@ -25,7 +25,6 @@
 		display: flex;
 		font-size: var(--primary-nav--font-size-button);
 		font-weight: var(--primary-nav--font-weight-button);
-		text-transform: var(--branding--title--text-transform);
 		background-color: transparent;
 		border: none;
 		color: var(--primary-nav--color-link);
@@ -59,10 +58,14 @@
 
 				&.close {
 					display: flex;
+
+					.has-logo.has-title-and-tagline & {
+						animation-name: twentytwentyone-close-button-transition;
+						animation-duration: 0.3s;
+					}
 				}
 			}
 		}
-
 	}
 
 	// When the menu is open, hide the close button and show the hide button.
@@ -83,7 +86,6 @@
 	right: 0;
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
-	text-transform: var(--branding--title--text-transform);
 	line-height: 1.15;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -113,6 +115,15 @@
 			z-index: 499;
 			border-left: 4px solid transparent;
 
+			.has-logo.has-title-and-tagline & {
+				position: fixed;
+				transform: translateY(0) translateX(100%);
+			}
+
+			.admin-bar .has-logo.has-title-and-tagline & {
+				top: 46px;
+			}
+
 			.admin-bar & {
 				height: calc(100vh - 46px);
 			}
@@ -129,6 +140,7 @@
 		@include media(mobile-only) {
 			width: 100%;
 			position: fixed;
+			z-index: 2; // To be greater than the cover block and embeds.
 		}
 
 		> .primary-menu-container {
@@ -136,7 +148,15 @@
 			opacity: 1;
 			transform: translateY(0);
 		}
+	}
 
+	.primary-navigation-open .has-logo.has-title-and-tagline & {
+		@include media(mobile-only) {
+
+			> .primary-menu-container {
+				transform: translateX(0) translateY(0);
+			}
+		}
 	}
 
 	// Adjust positions when logged-in
@@ -217,7 +237,7 @@
 		// Sub-menu buttons
 		.sub-menu-toggle {
 			display: flex;
-			height: 100%;
+			height: calc(2 * var(--primary-nav--padding) + 1.15em + 1px);
 			width: 44px;
 			padding: 0;
 			justify-content: center;
@@ -313,7 +333,6 @@
 			// Top-level Menu Item
 			> ul > .menu-item {
 				display: flex;
-				align-items: center;
 
 				> a {
 					padding-left: var(--primary-nav--padding);
@@ -334,6 +353,7 @@
 		font-size: var(--primary-nav--font-size-mobile);
 		font-weight: var(--primary-nav--font-weight);
 		padding: var(--primary-nav--padding) 0;
+		text-decoration: none;
 
 		@include media(mobile) {
 			display: block;
@@ -353,7 +373,8 @@
 		}
 
 		&:hover {
-			text-decoration: underline dotted;
+			text-decoration: underline;
+			text-decoration-style: dotted;
 		}
 
 		&:focus {
@@ -365,10 +386,12 @@
 
 	.current-menu-item > a:first-child,
 	.current_page_item > a:first-child {
-		text-decoration: underline solid;
+		text-decoration: underline;
+		text-decoration-style: solid;
 
 		&:hover {
-			text-decoration: underline dotted;
+			text-decoration: underline;
+			text-decoration-style: dotted;
 		}
 	}
 
@@ -433,6 +456,17 @@
 
 	}
 
+	.menu-item-description {
+		display: block;
+		clear: both;
+		font-size: var(--global--font-size-xs);
+		text-transform: none;
+		line-height: 1.7;
+
+		> span {
+			display: inline-block;
+		}
+	}
 }
 
 // Keep the menu pinned to the top when the menu is open.
@@ -442,5 +476,17 @@
 		position: fixed;
 		max-width: 100%;
 		width: 100%;
+	}
+}
+
+// Close button animation for when a custom logo is present.
+@keyframes twentytwentyone-close-button-transition {
+
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
 	}
 }

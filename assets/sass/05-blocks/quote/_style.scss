@@ -1,7 +1,6 @@
 .wp-block-quote {
-	border-left: var(--quote--border-width) solid var(--quote--border-color);
-	margin: var(--global--spacing-vertical) 0;
-	padding-left: var(--global--spacing-horizontal);
+	position: relative;
+	margin: var(--global--spacing-vertical) 0 var(--global--spacing-vertical) var(--global--spacing-horizontal);
 
 	> * {
 		margin-top: var(--global--spacing-unit);
@@ -20,7 +19,21 @@
 		font-family: var(--quote--font-family);
 		font-size: var(--quote--font-size);
 		font-style: var(--quote--font-style);
+		font-weight: var(--quote--font-weight-strong);
 		line-height: var(--quote--line-height);
+	}
+
+	strong {
+		// "Bold" text is intentionally unbolded to differentiate from the rest of the quote.
+		font-weight: var(--quote--font-weight);
+	}
+
+	&:before {
+		content: "\201C";
+		font-size: var(--quote--font-size);
+		line-height: var(--quote--line-height);
+		position: absolute;
+		left: calc(-0.5 * var(--global--spacing-horizontal));
 	}
 
 	.wp-block-quote__citation,
@@ -28,6 +41,7 @@
 	footer {
 		color: var(--global--color-primary);
 		font-size: var(--global--font-size-xs);
+		font-style: var(--quote--font-style-cite);
 
 		.has-background:not(.has-background-background-color) &,
 		[class*="background-color"]:not(.has-background-background-color) &,
@@ -41,32 +55,33 @@
 	 * Block Options
 	 */
 	&.has-text-align-right {
-		border-left: none;
-		border-right: var(--quote--border-width) solid var(--quote--border-color);
-		padding-left: 0;
-		padding-right: var(--global--spacing-horizontal);
+		margin: var(--global--spacing-vertical) var(--global--spacing-horizontal) var(--global--spacing-vertical) auto;
+		padding-right: 0;
+		border-right: none;
+
+		&:before {
+			content: "\201D";
+			left: initial;
+			right: calc(-0.5 * var(--global--spacing-horizontal));
+		}
 	}
 
 	&.has-text-align-center {
-		border: none;
+		margin: var(--global--spacing-vertical) auto;
+
+		&:before {
+			display: none;
+		}
 	}
 
-	&.is-style-large,
-	&.is-large {
+	&.is-large,
+	&.is-style-large {
+		padding-left: 0;
+		padding-right: 0;
 
 		/* Resetting margins to match _block-container.scss */
 		margin-top: var(--global--spacing-vertical);
 		margin-bottom: var(--global--spacing-vertical);
-		padding-left: var(--global--spacing-horizontal);
-
-		&.has-text-align-right {
-			padding-left: 0;
-			padding-right: var(--global--spacing-horizontal);
-		}
-
-		&.has-text-align-center {
-			padding: 0 var(--global--spacing-horizontal);
-		}
 
 		p {
 			font-size: var(--quote--font-size-large);
@@ -74,18 +89,69 @@
 			line-height: var(--quote--line-height-large);
 		}
 
+		&:before {
+			font-size: var(--quote--font-size-large);
+			line-height: var(--quote--line-height-large);
+			left: calc(-1 * var(--global--spacing-horizontal));
+		}
+
+		&.has-text-align-right {
+
+			&:before {
+				left: initial;
+				right: calc(-1 * var(--global--spacing-horizontal));
+			}
+		}
+
 		.wp-block-quote__citation,
 		cite,
 		footer {
 			color: var(--global--color-primary);
-			font-size: var(--global--font-size-xs);
+			font-size: var(--global--font-size-sm);
+		}
+
+		@include media(mobile-only) {
+			padding-left: var(--global--spacing-horizontal);
+
+			&:before {
+				left: 0;
+			}
+
+			&.has-text-align-right {
+				padding-left: 0;
+				padding-right: var(--global--spacing-horizontal);
+
+				&:before {
+					right: 0;
+				}
+			}
+
+			&.has-text-align-center {
+				padding-left: 0;
+				padding-right: 0;
+			}
 		}
 	}
 
-	.has-background:not(.has-background-background-color) &,
-	[class*="background-color"]:not(.has-background-background-color) &,
-	[style*="background-color"] &,
-	.wp-block-cover[style*="background-image"] & {
-		border-color: currentColor;
+	@include media(mobile-only) {
+		padding-left: calc(0.5 * var(--global--spacing-horizontal));
+
+		&:before {
+			left: 0;
+		}
+
+		&.has-text-align-right {
+			padding-left: 0;
+			padding-right: calc(0.5 * var(--global--spacing-horizontal));
+
+			&:before {
+				right: 0;
+			}
+		}
+
+		&.has-text-align-center {
+			padding-left: 0;
+			padding-right: 0;
+		}
 	}
 }

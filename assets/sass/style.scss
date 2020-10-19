@@ -62,6 +62,7 @@
  * 404..................404 styles.
  * Search...............Search styles.
  * Navigation...........Navigation styles.
+ * Footer Navigation....Footer Navigation styles.
  * Pagination...........Pagination styles.
  * Single...............Single page and post styles.
  * Posts and pages......Misc, sticky post styles.
@@ -112,6 +113,7 @@
 @import "06-components/search";
 @import "06-components/comments";
 @import "06-components/navigation";
+@import "06-components/footer-navigation";
 @import "06-components/pagination";
 @import "06-components/widgets";
 

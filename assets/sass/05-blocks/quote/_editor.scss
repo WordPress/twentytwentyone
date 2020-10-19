@@ -1,20 +1,65 @@
 .wp-block-quote {
-	border-left-color: var(--quote--border-color);
-	border-left-width: var(--quote--border-width);
-	margin: var(--global--spacing-vertical) 0;
-	padding-left: var(--global--spacing-horizontal);
+	position: relative;
+	border-left: none;
+	margin: var(--global--spacing-vertical) auto var(--global--spacing-vertical) var(--global--spacing-horizontal);
 
 	p {
 		font-family: var(--quote--font-family);
 		font-size: var(--quote--font-size);
 		font-style: var(--quote--font-style);
+		font-weight: var(--quote--font-weight-strong);
 		line-height: var(--quote--line-height);
+	}
+
+	strong {
+		// "Bold" text is intentionally unbolded to differentiate from the rest of the quote.
+		font-weight: var(--quote--font-weight);
+	}
+
+	&:before {
+		content: "\201C";
+		font-size: var(--quote--font-size);
+		line-height: var(--quote--line-height);
+		position: absolute;
+		left: calc(-0.5 * var(--global--spacing-horizontal));
+	}
+
+	.wp-block-quote__citation {
+		color: var(--global--color-primary);
+		font-size: var(--global--font-size-xs);
+		font-style: var(--quote--font-style-cite);
+
+		.has-background:not(.has-background-background-color) &,
+		[class*="background-color"]:not(.has-background-background-color) &,
+		[style*="background-color"]:not(.has-background-background-color) &,
+		.wp-block-cover[style*="background-image"] & {
+			color: currentColor;
+		}
+	}
+
+	&.has-text-align-right {
+		margin: var(--global--spacing-vertical) var(--global--spacing-horizontal) var(--global--spacing-vertical) auto;
+		padding-right: 0;
+		border-right: none;
+
+		&:before {
+			content: "\201D";
+			left: initial;
+			right: calc(-0.5 * var(--global--spacing-horizontal));
+		}
+	}
+
+	&.has-text-align-center {
+		margin: var(--global--spacing-vertical) auto;
+
+		&:before {
+			display: none;
+		}
 	}
 
 	&.is-large,
 	&.is-style-large {
-		border-left: var(--quote--border-width) solid var(--quote--border-color);
-		padding-left: var(--global--spacing-horizontal);
+		padding-left: 0;
 
 		/* Resetting margins to match _block-container.scss */
 		margin-top: var(--global--spacing-vertical);
@@ -26,36 +71,65 @@
 			line-height: var(--quote--line-height-large);
 		}
 
+		&:before {
+			font-size: var(--quote--font-size-large);
+			line-height: var(--quote--line-height-large);
+			left: calc(-1 * var(--global--spacing-horizontal));
+		}
+
 		&.has-text-align-right {
-			border-left: none;
-			border-right: var(--quote--border-width) solid var(--quote--border-color);
+
+			&:before {
+				left: initial;
+				right: calc(-1 * var(--global--spacing-horizontal));
+			}
+		}
+
+		@include media(mobile-only) {
+			padding-left: var(--global--spacing-horizontal);
+
+			&:before {
+				left: 0;
+			}
+
+			&.has-text-align-right {
+				padding-left: 0;
+				padding-right: var(--global--spacing-horizontal);
+
+				&:before {
+					right: 0;
+				}
+			}
 		}
 	}
 
-	&.has-text-align-right {
-		border-right: var(--quote--border-width) solid var(--quote--border-color);
+	@include media(mobile-only) {
+		padding-left: calc(0.5 * var(--global--spacing-horizontal));
+
+		&:before {
+			left: 0;
+		}
+
+		&.has-text-align-right {
+			padding-left: 0;
+			padding-right: calc(0.5 * var(--global--spacing-horizontal));
+
+			&:before {
+				right: 0;
+			}
+		}
+
+		&.has-text-align-center {
+			padding-left: 0;
+			padding-right: 0;
+		}
 	}
 
-	&.has-text-align-center {
-		border: none;
-	}
+	@include media(mobile) {
+		margin-left: auto;
 
-	.has-background:not(.has-background-background-color) &,
-	[class*="background-color"]:not(.has-background-background-color) &,
-	[style*="background-color"]:not(.has-background-background-color) &,
-	.wp-block-cover[style*="background-image"] & {
-		border-color: currentColor;
-	}
-
-	.wp-block-quote__citation {
-		color: var(--global--color-primary);
-		font-size: var(--global--font-size-xs);
-
-		.has-background:not(.has-background-background-color) &,
-		[class*="background-color"]:not(.has-background-background-color) &,
-		[style*="background-color"]:not(.has-background-background-color) &,
-		.wp-block-cover[style*="background-image"] & {
-			color: currentColor;
+		&.has-text-align-right {
+			margin-right: auto;
 		}
 	}
 }

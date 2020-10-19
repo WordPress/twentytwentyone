@@ -36,6 +36,11 @@ function twenty_twenty_one_body_classes( $classes ) {
 		$classes[] = 'has-main-navigation';
 	}
 
+	// Add a body class if there are no footer widgets.
+	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+		$classes[] = 'no-widgets';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'twenty_twenty_one_body_classes' );
@@ -146,7 +151,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_post_type_archive() ) {
 		return sprintf(
-			/* translators: %s: Post type singular name */
+			/* translators: %s: Post type singular name. */
 			esc_html__( '%s Archives', 'twentytwentyone' ),
 			get_post_type_object( get_queried_object()->name )->labels->singular_name
 		);
@@ -154,7 +159,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_tax() ) {
 		return sprintf(
-			/* translators: %s: Taxonomy singular name */
+			/* translators: %s: Taxonomy singular name. */
 			esc_html__( '%s Archives', 'twentytwentyone' ),
 			get_taxonomy( get_queried_object()->taxonomy )->labels->singular_name
 		);
@@ -195,7 +200,7 @@ function twenty_twenty_one_get_avatar_size() {
 function twenty_twenty_one_continue_reading_text() {
 	$continue_reading = sprintf(
 		/* translators: %s: Name of current post. */
-		wp_kses( esc_html__( 'Continue reading %s', 'twentytwentyone' ), array( 'span' => array( 'class' => array() ) ) ),
+		esc_html__( 'Continue reading %s', 'twentytwentyone' ),
 		the_title( '<span class="screen-reader-text">', '</span>', false )
 	);
 
@@ -206,7 +211,6 @@ function twenty_twenty_one_continue_reading_text() {
  * Create the continue reading link for excerpt.
  */
 function twenty_twenty_one_continue_reading_link_excerpt() {
-
 	if ( ! is_admin() ) {
 		return '&hellip; <a class="more-link" href="' . esc_url( get_permalink() ) . '">' . twenty_twenty_one_continue_reading_text() . '</a>';
 	}
@@ -219,7 +223,6 @@ add_filter( 'excerpt_more', 'twenty_twenty_one_continue_reading_link_excerpt' );
  * Create the continue reading link.
  */
 function twenty_twenty_one_continue_reading_link() {
-
 	if ( ! is_admin() ) {
 		return '<div class="more-link-container"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . twenty_twenty_one_continue_reading_text() . '</a></div>';
 	}
@@ -249,15 +252,15 @@ add_filter( 'the_title', 'twenty_twenty_one_post_title' );
  *
  * @since 1.0.0
  *
+ * @param string $group The icon group.
  * @param string $icon The icon.
  * @param int    $size The icon size in pixels.
  *
  * @return string
  */
-function twenty_twenty_one_get_icon_svg( $icon, $size = 24 ) {
-	return Twenty_Twenty_One_SVG_Icons::get_svg( $icon, $size );
+function twenty_twenty_one_get_icon_svg( $group, $icon, $size = 24 ) {
+	return Twenty_Twenty_One_SVG_Icons::get_svg( $group, $icon, $size );
 }
-
 
 /**
  * Changes the default navigation arrows to svg icons
@@ -267,8 +270,8 @@ function twenty_twenty_one_get_icon_svg( $icon, $size = 24 ) {
  * @return string
  */
 function twenty_twenty_one_change_calendar_nav_arrows( $calendar_output ) {
-	$calendar_output = str_replace( '&laquo; ', twenty_twenty_one_get_icon_svg( 'arrow_left' ), $calendar_output );
-	$calendar_output = str_replace( ' &raquo;', twenty_twenty_one_get_icon_svg( 'arrow_right' ), $calendar_output );
+	$calendar_output = str_replace( '&laquo; ', twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ), $calendar_output );
+	$calendar_output = str_replace( ' &raquo;', twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ), $calendar_output );
 	return $calendar_output;
 }
 add_filter( 'get_calendar', 'twenty_twenty_one_change_calendar_nav_arrows' );
@@ -387,3 +390,75 @@ function twenty_twenty_one_get_non_latin_css( $type = 'front-end' ) {
 		false
 	);
 }
+
+/**
+ * Print the first instance of a block in the content, and then break away.
+ *
+ * @since 1.0.0
+ *
+ * @param string      $block_name The block name/type. Example: `core/image`.
+ * @param string|null $content    The content we need to search in. Use null for get_the_content().
+ * @param int         $instances  How many instances of the block we want to print. Defaults to 1.
+ *
+ * @return bool Returns true if a block was located & printed, otherwise false.
+ */
+function twenty_twenty_one_print_first_instance_of_block( $block_name, $content = null, $instances = 1 ) {
+	$instances_count = 0;
+	$blocks_content  = '';
+
+	if ( ! $content ) {
+		$content = get_the_content();
+	}
+
+	// Parse blocks in the content.
+	$blocks = parse_blocks( $content );
+
+	// Loop blocks.
+	foreach ( $blocks as $block ) {
+
+		// Sanity check.
+		if ( ! isset( $block['blockName'] ) ) {
+			continue;
+		}
+
+		// Check if this the block we're looking for.
+		if ( $block_name === $block['blockName'] ) {
+			// Increment count.
+			$instances_count++;
+
+			// Add the block HTML.
+			$blocks_content .= render_block( $block );
+
+			// Break the loop if we've reached the $instances count.
+			if ( $instances_count >= $instances ) {
+				break;
+			}
+		}
+	}
+
+	if ( $blocks_content ) {
+		echo apply_filters( 'the_content', $blocks_content ); // phpcs:ignore WordPress.Security.EscapeOutput
+		return true;
+	}
+
+	return false;
+}
+
+/**
+ * Retrieve protected post password form content.
+ *
+ * @since 1.0.0
+ *
+ * @param int|WP_Post $post Optional. Post ID or WP_Post object. Default is global $post.
+ * @return string HTML content for password form for password protected post.
+ */
+function twenty_twenty_one_password_form( $post = 0 ) {
+	$post   = get_post( $post );
+	$label  = 'pwbox-' . ( empty( $post->ID ) ? wp_rand() : $post->ID );
+	$output = '<p class="post-password-message">' . esc_html__( 'This content is password protected. Please enter a password to view.', 'twentytwentyone' ) . '</p>
+	<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" class="post-password-form" method="post">
+	<label class="post-password-form__label" for="' . esc_attr( $label ) . '">' . esc_html__( 'Password', 'twentytwentyone' ) . '</label><input class="post-password-form__input" name="post_password" id="' . esc_attr( $label ) . '" type="password" size="20" /><input type="submit" class="post-password-form__submit" name="' . esc_attr__( 'Submit', 'twentytwentyone' ) . '" value="' . esc_attr_x( 'Enter', 'post password form', 'twentytwentyone' ) . '" /></form>
+	';
+	return $output;
+}
+add_filter( 'the_password_form', 'twenty_twenty_one_password_form' );
