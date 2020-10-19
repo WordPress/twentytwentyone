@@ -1503,13 +1503,11 @@ p.has-background {
 	margin-left: 0;
 	margin-right: 0;
 	text-align: center;
-	border-top-color: #28303d;
-	border-top-style: solid;
-	border-top-width: 3px;
-	border-bottom-color: #28303d;
+	border-width: 3px;
 	border-bottom-style: solid;
-	border-bottom-width: 3px;
-	color: #28303d;
+	border-top-style: solid;
+	color: currentColor;
+	border-color: currentColor;
 	position: relative;
 }
 
@@ -1543,21 +1541,18 @@ p.has-background {
 }
 
 .wp-block-pullquote .wp-block-pullquote__citation {
-	color: #28303d;
 	font-size: 1rem;
 	font-style: normal;
 	text-transform: none;
 }
 
 .wp-block-pullquote cite {
-	color: #28303d;
 	font-size: 1rem;
 	font-style: normal;
 	text-transform: none;
 }
 
 .wp-block-pullquote footer {
-	color: #28303d;
 	font-size: 1rem;
 	font-style: normal;
 	text-transform: none;
@@ -1569,7 +1564,6 @@ p.has-background {
 
 .wp-block-pullquote.is-style-solid-color {
 	background-color: #d1e4dd;
-	color: #28303d;
 	padding: 50px;
 	border-width: 3px;
 	border-style: solid;

@@ -1103,13 +1103,11 @@ p.has-background {
 	margin-left: 0;
 	margin-right: 0;
 	text-align: center;
-	border-top-color: var(--pullquote--border-color);
-	border-top-style: solid;
-	border-top-width: var(--pullquote--border-width);
-	border-bottom-color: var(--pullquote--border-color);
+	border-width: var(--pullquote--border-width);
 	border-bottom-style: solid;
-	border-bottom-width: var(--pullquote--border-width);
-	color: var(--pullquote--color-foreground);
+	border-top-style: solid;
+	color: currentColor;
+	border-color: currentColor;
 	position: relative;
 }
 
@@ -1139,7 +1137,6 @@ p.has-background {
 .wp-block-pullquote .wp-block-pullquote__citation,
 .wp-block-pullquote cite,
 .wp-block-pullquote footer {
-	color: var(--global--color-primary);
 	font-size: var(--global--font-size-xs);
 	font-style: var(--pullquote--font-style);
 	text-transform: none;
@@ -1151,7 +1148,6 @@ p.has-background {
 
 .wp-block-pullquote.is-style-solid-color {
 	background-color: var(--pullquote--color-background);
-	color: var(--pullquote--color-foreground);
 	padding: calc(2.5 * var(--global--spacing-unit));
 	border-width: var(--pullquote--border-width);
 	border-style: solid;
