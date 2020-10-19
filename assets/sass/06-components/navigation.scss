@@ -161,8 +161,6 @@
 
 	@include media(mobile) {
 		position: relative;
-		display: flex;
-		justify-content: var(--primary-nav--justify-content);
 		margin-left: auto;
 
 		// Hide Mobile menu on desktop

@@ -24,7 +24,6 @@
 	/* Header */
 	/* Main navigation */
 	/* Pagination */
-	/* Comments */
 	/* Footer */
 	/* Block: Pull quote */
 	/* Block: Table */
@@ -224,11 +223,6 @@
 	}
 }
 
-blockquote {
-	margin: 0;
-	padding: 0;
-}
-
 blockquote p {
 	font-size: 1.5rem;
 	letter-spacing: normal;
@@ -236,15 +230,11 @@ blockquote p {
 }
 
 blockquote cite {
-	color: #28303d;
 	font-size: 1rem;
-	letter-spacing: normal;
 }
 
 blockquote footer {
-	color: #28303d;
 	font-size: 1rem;
-	letter-spacing: normal;
 }
 
 blockquote > * {
@@ -258,42 +248,6 @@ blockquote > *:first-child {
 
 blockquote > *:last-child {
 	margin-bottom: 0;
-}
-
-blockquote.alignleft, blockquote.alignright {
-	padding-left: inherit;
-}
-
-blockquote.alignleft p {
-	font-size: 1.125rem;
-	max-width: inherit;
-	width: inherit;
-}
-
-blockquote.alignright p {
-	font-size: 1.125rem;
-	max-width: inherit;
-	width: inherit;
-}
-
-blockquote.alignleft cite {
-	font-size: 1rem;
-	letter-spacing: normal;
-}
-
-blockquote.alignleft footer {
-	font-size: 1rem;
-	letter-spacing: normal;
-}
-
-blockquote.alignright cite {
-	font-size: 1rem;
-	letter-spacing: normal;
-}
-
-blockquote.alignright footer {
-	font-size: 1rem;
-	letter-spacing: normal;
 }
 
 img {
@@ -606,6 +560,12 @@ a:hover {
 	}
 }
 
+@media only screen and (min-width: 652px){
+	.wp-block-cover h2{
+	font-size: 3rem;
+	}
+}
+
 .wp-block-cover-image h2 {
 	font-size: 2.25rem;
 	letter-spacing: normal;
@@ -613,6 +573,12 @@ a:hover {
 	padding: 0;
 	max-width: inherit;
 	text-align: inherit;
+}
+
+@media only screen and (min-width: 652px){
+	.wp-block-cover-image h2{
+	font-size: 3rem;
+	}
 }
 
 @media only screen and (min-width: 652px){
@@ -1090,10 +1056,22 @@ h1 {
 	}
 }
 
+@media only screen and (min-width: 652px){
+	.wp-block-heading h2{
+	font-size: 3rem;
+	}
+}
+
 h2 {
 	font-size: 2.25rem;
 	letter-spacing: normal;
 	line-height: 1.3;
+}
+
+@media only screen and (min-width: 652px){
+	h2{
+	font-size: 3rem;
+	}
 }
 
 @media only screen and (min-width: 652px){
@@ -1114,8 +1092,14 @@ h2 {
 	}
 }
 
+@media only screen and (min-width: 652px){
+	.h2{
+	font-size: 3rem;
+	}
+}
+
 .wp-block-heading h3 {
-	font-size: 1.875rem;
+	font-size: 2rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
@@ -1127,7 +1111,7 @@ h2 {
 }
 
 h3 {
-	font-size: 1.875rem;
+	font-size: 2rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
@@ -1139,7 +1123,7 @@ h3 {
 }
 
 .h3 {
-	font-size: 1.875rem;
+	font-size: 2rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
@@ -1279,7 +1263,7 @@ h6 {
 .wp-block-latest-posts > li > a {
 	display: inline-block;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1.875rem;
+	font-size: 2rem;
 	font-weight: normal;
 	line-height: 1.3;
 	margin-bottom: 10px;
@@ -1546,7 +1530,7 @@ p.has-background {
 
 .wp-block-pullquote p {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1.875rem;
+	font-size: 2rem;
 	font-style: normal;
 	font-weight: 700;
 	letter-spacing: normal;
@@ -1622,7 +1606,7 @@ p.has-background {
 }
 
 .wp-block-pullquote.is-style-solid-color blockquote p {
-	font-size: 1.875rem;
+	font-size: 2rem;
 }
 
 @media only screen and (min-width: 652px){
@@ -1882,7 +1866,7 @@ p.has-background {
 .wp-block-rss .wp-block-rss__item-title > a {
 	display: inline-block;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1.875rem;
+	font-size: 2rem;
 	font-weight: normal;
 	line-height: 1.3;
 	margin-bottom: 10px;
@@ -2538,6 +2522,7 @@ html {
 }
 
 body {
+	line-height: --global--line-height-body;
 	color: #28303d;
 	background-color: #d1e4dd;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
