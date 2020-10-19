@@ -146,6 +146,27 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 					)
 				)
 			);
+
+			$wp_customize->add_setting(
+				'respect_user_color_preference',
+				array(
+					'capability'        => 'edit_theme_options',
+					'default'           => true,
+					'sanitize_callback' => function( $value ) {
+						return (bool) $value;
+					},
+				)
+			);
+
+			$wp_customize->add_control(
+				'respect_user_color_preference',
+				array(
+					'type'    => 'checkbox',
+					'section' => 'colors',
+					'label'   => esc_html__( 'Support visitor\'s color scheme preference', 'twentytwentyone' ),
+					'description' => __( 'Show your site in dark mode if a visitor to your site requests it. More info? Accessibility warning?', 'twentytwentyone' ),
+				)
+			);
 		}
 
 		/**
