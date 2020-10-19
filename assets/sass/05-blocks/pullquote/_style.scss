@@ -66,8 +66,6 @@
 	}
 
 	&.is-style-solid-color {
-
-		background-color: var(--pullquote--color-background);
 		color: var(--pullquote--color-foreground);
 		padding: calc(2.5 * var(--global--spacing-unit));
 		border-width: var(--pullquote--border-width);
