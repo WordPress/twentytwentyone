@@ -92,7 +92,7 @@ class Twenty_Twenty_One_Custom_Colors {
 				$theme_css .= '--table--stripes-border-color: var(--global--color-dark-gray);';
 				$theme_css .= '--table--stripes-background-color: var(--global--color-dark-gray);';
 			}
-		} 
+		}
 
 		$theme_css .= '}';
 
