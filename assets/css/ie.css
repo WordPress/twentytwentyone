@@ -2660,7 +2660,14 @@ a:hover {
 }
 
 .wp-block-group {
-	display: flow-root;
+	display: block;
+	clear: both;
+}
+
+.wp-block-group:before, .wp-block-group:after {
+	content: "";
+	display: block;
+	clear: both;
 }
 
 .wp-block-group .wp-block-group__inner-container {
