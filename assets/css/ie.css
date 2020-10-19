@@ -6082,11 +6082,12 @@ h1.page-title {
 	color: #28303d;
 }
 
-.footer-navigation-wrapper li svg {
+.footer-navigation-wrapper li .svg-icon {
 	vertical-align: middle;
+	fill: #28303d;
 }
 
-.footer-navigation-wrapper li svg:hover {
+.footer-navigation-wrapper li .svg-icon:hover {
 	transform: scale(1.1);
 }
 

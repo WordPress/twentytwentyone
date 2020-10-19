@@ -38,8 +38,9 @@
 			}
 		}
 
-		svg {
+		.svg-icon {
 			vertical-align: middle;
+			fill: var(--footer--color-link);
 
 			&:hover {
 				transform: scale(1.1);
