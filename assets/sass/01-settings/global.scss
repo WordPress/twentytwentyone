@@ -9,9 +9,6 @@ $baseline-unit: 10px;
 	--global--font-primary: var(--font-headings, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
 	--global--font-secondary: var(--font-base, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
 
-	--global--font-code: monospace;
-	--global--font-ui: var(--font-base, var(--global--font-secondary));
-
 	/* Font Size */
 	--global--font-size-base: 1.25rem; // 20px / 16px
 	--global--font-size-xs: 1rem; // 16px / 16px
@@ -25,20 +22,18 @@ $baseline-unit: 10px;
 	--global--letter-spacing: normal;
 
 	/* Line Height */
-	--global--line-height-base: 1;
 	--global--line-height-body: 1.7;
 	--global--line-height-heading: 1.3;
 	--global--line-height-page-title: 1.1;
 
 	/* Headings */
 	--heading--font-family: var(--global--font-primary);
-	--heading--line-height: var(--global--line-height-heading);
 
 	--heading--font-size-h6: var(--global--font-size-xs);
 	--heading--font-size-h5: var(--global--font-size-sm);
 	--heading--font-size-h4: var(--global--font-size-lg);
-	--heading--font-size-h3: 1.875rem; // 30px / 16px
-	--heading--font-size-h2: 2.25rem; // 36px / 16px
+	--heading--font-size-h3: calc(1.25 * var(--global--font-size-lg));
+	--heading--font-size-h2: var(--global--font-size-xl);
 	--heading--font-size-h1: var(--global--font-size-page-title);
 
 	--heading--letter-spacing-h6: 0.05em;
@@ -51,8 +46,8 @@ $baseline-unit: 10px;
 	--heading--line-height-h6: var(--global--line-height-heading);
 	--heading--line-height-h5: var(--global--line-height-heading);
 	--heading--line-height-h4: var(--global--line-height-heading);
-	--heading--line-height-h3: var(--heading--line-height);
-	--heading--line-height-h2: var(--heading--line-height);
+	--heading--line-height-h3: var(--global--line-height-heading);
+	--heading--line-height-h2: var(--global--line-height-heading);
 	--heading--line-height-h1: var(--global--line-height-page-title);
 
 	--heading--font-weight: normal;
@@ -85,7 +80,6 @@ $baseline-unit: 10px;
 	--global--color-primary: var(--global--color-dark-gray); /* Body text color, site title, footer text color. */
 	--global--color-secondary: var(--global--color-gray); /* Headings */
 	--global--color-primary-hover: var(--global--color-primary);
-	--global--color-secondary-hover: var(--global--color-secondary);
 	--global--color-background: var(--global--color-green); /* Mint, default body background */
 	--global--color-border: var(--global--color-primary); /* Used for borders (separators) */
 
@@ -121,7 +115,6 @@ $baseline-unit: 10px;
 	--button--color-text-hover: var(--global--color-secondary);
 	--button--color-text-active: var(--global--color-secondary);
 	--button--color-background: var(--global--color-secondary);
-	--button--color-background-hover: var(--global--color-background);
 	--button--color-background-active: var(--global--color-background);
 	// Fonts
 	--button--font-family: var(--global--font-primary);
@@ -140,7 +133,6 @@ $baseline-unit: 10px;
 	--entry-header--color-link: currentColor;
 	--entry-header--color-hover: var(--global--color-primary-hover);
 	--entry-header--color-focus: var(--global--color-secondary);
-	--entry-header--font-family: var(--heading--font-family);
 	--entry-header--font-size: var(--heading--font-size-h2);
 	--entry-content--font-family: var(--global--font-secondary);
 	--entry-author-bio--font-family: var(--heading--font-family);
@@ -149,7 +141,7 @@ $baseline-unit: 10px;
 	/* Header */
 	--branding--color-text: var(--global--color-primary);
 	--branding--color-link: var(--global--color-primary);
-	--branding--color-link-hover: var(--global--color-primary-hover);
+	--branding--color-link-hover: var(--global--color-secondary);
 	--branding--title--font-family: var(--global--font-primary);
 	--branding--title--font-size: var(--global--font-size-lg);
 	--branding--title--font-size-mobile: var(--heading--font-size-h4);
@@ -176,25 +168,18 @@ $baseline-unit: 10px;
 	--primary-nav--font-style-sub-menu-mobile: normal;
 	--primary-nav--font-weight: normal;
 	--primary-nav--font-weight-button: 500;
-	--primary-nav--line-height: var(--global--line-height-body);
 	--primary-nav--color-link: var(--global--color-primary);
 	--primary-nav--color-link-hover: var(--global--color-primary-hover);
-	--primary-nav--color-link-border: var(--global--color-primary);
 	--primary-nav--color-text: var(--global--color-primary);
 	--primary-nav--padding: calc(0.66 * var(--global--spacing-unit));
-	--primary-nav--justify-content: right;
 
 	/* Pagination */
 	--pagination--color-text: var(--global--color-primary);
-	--pagination--color-link: var(--global--color-primary);
 	--pagination--color-link-hover: var(--global--color-primary-hover);
 	--pagination--font-family: var(--global--font-secondary);
 	--pagination--font-size: var(--global--font-size-lg);
 	--pagination--font-weight: normal;
 	--pagination--font-weight-strong: 600;
-
-	/* Comments */
-	--comments--border-color: var(--global--color-border);
 
 	/* Footer */
 	--footer--color-text: var(--global--color-primary);
@@ -231,7 +216,6 @@ $baseline-unit: 10px;
 	/* Block: Table */
 	--table--stripes-border-color: var(--global--color-light-gray);
 	--table--stripes-background-color: var(--global--color-light-gray);
-	--table--has-background-border-color: var(--global--color-dark-gray);
 	--table--has-background-text-color: var(--global--color-dark-gray);
 
 	/* Widgets */
@@ -265,7 +249,6 @@ $baseline-unit: 10px;
 		--button--color-text-hover: var(--global--color-secondary);
 		--button--color-text-active: var(--global--color-secondary);
 		--button--color-background: var(--global--color-secondary);
-		--button--color-background-hover: var(--global--color-background);
 		--button--color-background-active: var(--global--color-background);
 
 		body {
