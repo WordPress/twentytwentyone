@@ -1,3 +1,7 @@
+.post-password-message {
+	font-size: var(--global--font-size-lg);
+}
+
 .post-password-form {
 	display: flex;
 	flex-wrap: wrap;
@@ -8,11 +12,15 @@
 	}
 
 	&__input {
+		flex-grow: 1;
 		margin-top: calc(var(--global--spacing-vertical) / 3);
-		margin-right: calc(-1 * var(--button--border-width));
+		margin-right: calc(0.66 * var(--global--spacing-horizontal));
 	}
 
 	&__submit {
 		margin-top: calc(var(--global--spacing-vertical) / 3);
+		@include media(tablet) {
+			margin-left: calc(0.4 * var(--global--spacing-horizontal));
+		}
 	}
 }

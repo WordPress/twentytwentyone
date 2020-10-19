@@ -231,51 +231,51 @@ input[type="reset"]:after,
 }
 
 .site button.mejs-inner:not(button):not(.customize-partial-edit-shortcut-button):before {
-	margin-bottom: -calc(1em - 0);
+	margin-bottom: -calc(1em + 0);
 }
 
 .site .button:before {
-	margin-bottom: -calc(1em - 0);
+	margin-bottom: -calc(1em + 0);
 }
 
 input[type="submit"]:before {
-	margin-bottom: -calc(1em - 0);
+	margin-bottom: -calc(1em + 0);
 }
 
 input[type="reset"]:before {
-	margin-bottom: -calc(1em - 0);
+	margin-bottom: -calc(1em + 0);
 }
 
 .wp-block-button .wp-block-button__link:before {
-	margin-bottom: -calc(1em - 0);
+	margin-bottom: -calc(1em + 0);
 }
 
 .wp-block-file .wp-block-file__button:before {
-	margin-bottom: -calc(1em - 0);
+	margin-bottom: -calc(1em + 0);
 }
 
 .site button.mejs-inner:not(button):not(.customize-partial-edit-shortcut-button):after {
-	margin-top: -calc(1em - 0);
+	margin-top: -calc(1em + 0);
 }
 
 .site .button:after {
-	margin-top: -calc(1em - 0);
+	margin-top: -calc(1em + 0);
 }
 
 input[type="submit"]:after {
-	margin-top: -calc(1em - 0);
+	margin-top: -calc(1em + 0);
 }
 
 input[type="reset"]:after {
-	margin-top: -calc(1em - 0);
+	margin-top: -calc(1em + 0);
 }
 
 .wp-block-button .wp-block-button__link:after {
-	margin-top: -calc(1em - 0);
+	margin-top: -calc(1em + 0);
 }
 
 .wp-block-file .wp-block-file__button:after {
-	margin-top: -calc(1em - 0);
+	margin-top: -calc(1em + 0);
 }
 
 .site button.mejs-inner:active:not(.customize-partial-edit-shortcut-button):not(button) {
@@ -1075,23 +1075,23 @@ template {
 @media only screen and (min-width: 482px) {
 	.entry-content > .alignleft {
 		/*rtl:ignore*/
-		margin-left: calc(50vw - min(calc(100vw - 4 * 25px), 610px)*1);
+		margin-left: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		/*rtl:ignore*/
 		margin-right: 25px;
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignleft{
-		margin-left: calc(50vw - min(calc(100vw - 4 * 25px), 610px)*1);
+		margin-left: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignleft{
-		margin-left: calc(50vw - min(calc(100vw - 4 * 25px), 610px)*1);
+		margin-left: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 822px){
 		.entry-content > .alignleft{
-		margin-left: calc(50vw - min(calc(100vw - 4 * 25px), 610px)*1);
+		margin-left: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 }
@@ -1101,21 +1101,21 @@ template {
 		/*rtl:ignore*/
 		margin-left: 25px;
 		/*rtl:ignore*/
-		margin-right: calc(50vw - min(calc(100vw - 4 * 25px), 610px)*1);
+		margin-right: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignright{
-		margin-right: calc(50vw - min(calc(100vw - 4 * 25px), 610px)*1);
+		margin-right: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignright{
-		margin-right: calc(50vw - min(calc(100vw - 4 * 25px), 610px)*1);
+		margin-right: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 822px){
 		.entry-content > .alignright{
-		margin-right: calc(50vw - min(calc(100vw - 4 * 25px), 610px)*1);
+		margin-right: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 }
@@ -2640,11 +2640,11 @@ a:hover {
 }
 
 .wp-block-gallery .blocks-gallery-image {
-	width: calc(50% - 10px);
+	width: calc((100% - 20px)/2);
 }
 
 .wp-block-gallery .blocks-gallery-item {
-	width: calc(50% - 10px);
+	width: calc((100% - 20px)/2);
 }
 
 .wp-block-gallery .blocks-gallery-image figcaption {
@@ -3424,6 +3424,10 @@ p.has-text-color a {
 	color: #28303d;
 }
 
+.post-password-message {
+	font-size: 1.5rem;
+}
+
 .post-password-form {
 	display: flex;
 	flex-wrap: wrap;
@@ -3435,12 +3439,19 @@ p.has-text-color a {
 }
 
 .post-password-form__input {
+	flex-grow: 1;
 	margin-top: 10px;
-	margin-right: -3px;
+	margin-right: 17px;
 }
 
 .post-password-form__submit {
 	margin-top: 10px;
+}
+
+@media only screen and (min-width: 592px) {
+	.post-password-form__submit {
+		margin-left: 10px;
+	}
 }
 
 .wp-block-pullquote {
@@ -4338,21 +4349,21 @@ table.wp-calendar-table caption {
 		margin-bottom: 30px;
 	}
 	.entry-content > .alignleft {
-		max-width: calc(50% - 50vw + min(calc(100vw - 4 * 25px), 610px)*1);
+		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignleft{
-		max-width: calc(50% - 50vw + min(calc(100vw - 4 * 25px), 610px)*1);
+		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignleft{
-		max-width: calc(50% - 50vw + min(calc(100vw - 4 * 25px), 610px)*1);
+		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 822px){
 		.entry-content > .alignleft{
-		max-width: calc(50% - 50vw + min(calc(100vw - 4 * 25px), 610px)*1);
+		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 }
@@ -4401,21 +4412,21 @@ table.wp-calendar-table caption {
 		margin-left: 25px;
 	}
 	.entry-content > .alignright {
-		max-width: calc(50% - 50vw + min(calc(100vw - 4 * 25px), 610px)*1);
+		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignright{
-		max-width: calc(50% - 50vw + min(calc(100vw - 4 * 25px), 610px)*1);
+		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignright{
-		max-width: calc(50% - 50vw + min(calc(100vw - 4 * 25px), 610px)*1);
+		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 822px){
 		.entry-content > .alignright{
-		max-width: calc(50% - 50vw + min(calc(100vw - 4 * 25px), 610px)*1);
+		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 }

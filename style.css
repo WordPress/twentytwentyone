@@ -2414,6 +2414,10 @@ p.has-text-color a {
 	color: var(--wp--style--color--link, var(--global--color-primary));
 }
 
+.post-password-message {
+	font-size: var(--global--font-size-lg);
+}
+
 .post-password-form {
 	display: flex;
 	flex-wrap: wrap;
@@ -2425,12 +2429,19 @@ p.has-text-color a {
 }
 
 .post-password-form__input {
+	flex-grow: 1;
 	margin-top: calc(var(--global--spacing-vertical) / 3);
-	margin-right: calc(-1 * var(--button--border-width));
+	margin-right: calc(0.66 * var(--global--spacing-horizontal));
 }
 
 .post-password-form__submit {
 	margin-top: calc(var(--global--spacing-vertical) / 3);
+}
+
+@media only screen and (min-width: 592px) {
+	.post-password-form__submit {
+		margin-left: calc(0.4 * var(--global--spacing-horizontal));
+	}
 }
 
 .wp-block-pullquote {
