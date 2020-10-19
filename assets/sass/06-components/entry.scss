@@ -8,6 +8,7 @@
 
 	a {
 		color: var(--entry-header--color-link);
+		text-underline-offset: 0.15em;
 
 		&:hover {
 			color: var(--entry-header--color-hover);
@@ -71,70 +72,24 @@ h1.entry-title {
 	}
 }
 
-.entry-meta {
-
-	color: var(--entry-meta--color);
-	clear: both;
-	float: none;
-	font-size: var(--entry-meta--font-size);
-	display: block;
-
-	> span {
-		display: inline-block;
-		margin-right: var(--global--spacing-unit);
-
-		> *,
-		span .fn {
-			display: inline-block;
-			vertical-align: middle;
-		}
-
-		&:last-child {
-			margin-right: 0;
-		}
-	}
-
-	a {
-		border-color: transparent;
-		color: var(--entry-meta--color-link);
-
-		&:hover,
-		&:focus {
-			color: var(--entry-meta--color-hover);
-		}
-
-		&:hover {
-			border-color: var(--global--color-secondary);
-		}
-
-		&:focus {
-			color: var(--global--color-secondary);
-		}
-
-		&:active {
-			color: var(--entry-meta--color-link);
-		}
-	}
-}
-
 .entry-footer {
 
-	color: var(--entry-meta--color);
+	color: var(--global--color-primary);
 	clear: both;
 	float: none;
-	font-size: var(--entry-meta--font-size);
+	font-size: var(--global--font-size-xs);
 	display: block;
 
 	a {
-		color: var(--entry-meta--color-link);
+		color: currentColor;
 
 		&:hover,
 		&:focus {
-			color: var(--entry-meta--color-hover);
+			color: var(--global--color-primary-hover);
 		}
 
 		&:active {
-			color: var(--entry-meta--color-link);
+			color: currentColor;
 		}
 	}
 }
@@ -162,50 +117,35 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	grid-template-columns: repeat(2, 1fr);
 	column-gap: calc(2 * var(--global--spacing-horizontal));
 
-	.posted-by {
-
-		.posted-on,
-		.byline {
-			display: block;
-		}
+	.post-taxonomies,
+	.full-size-link {
+		justify-content: flex-end;
+		text-align: right;
 	}
 
-	.post-taxonomies {
+	.full-size-link:first-child:last-child {
+		grid-column: span 2;
+	}
 
-		.cat-links,
-		.tags-links {
-			display: block;
-		}
+	.posted-on,
+	.byline,
+	.cat-links,
+	.tags-links {
+		display: block;
 	}
 
 	@include media(mobile-only) {
 		display: block;
 
-		.post-taxonomies {
+		.full-size-link {
+			display: block;
+		}
 
-			.cat-links,
-			.tags-links {
-				text-align: left;
-			}
+		.post-taxonomies,
+		.full-size-link {
+			text-align: left;
 		}
 	}
-
-}
-
-.single .site-main > article > .entry-footer > span {
-	margin-right: 0;
-}
-
-.single .site-main > article > .entry-footer .cat-links,
-.single .site-main > article > .entry-footer .tags-links,
-.single .site-main > article > .entry-footer .full-size-link {
-	justify-self: end;
-	text-align: right;
-}
-
-// Place tag links in last grid column space
-.single .site-main > article > .entry-footer .tags-links {
-	grid-column-start: 2;
 }
 
 /**

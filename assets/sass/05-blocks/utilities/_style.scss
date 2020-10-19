@@ -3,8 +3,8 @@
 /**
  * These selectors set the default max width for content appearing inside a post or page.
  */
-.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce),
-*[class*="inner-container"] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce) {
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce),
+*[class*="inner-container"] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce) {
 	@extend %responsive-aligndefault-width;
 }
 
@@ -141,6 +141,7 @@
 	font-style: normal;
 	float: left;
 	margin: 0.1em 0.1em 0 0;
+	font-size: calc(1.2 * var(--heading--font-size-h1));
 }
 
 .has-drop-cap:not(:focus)::after {

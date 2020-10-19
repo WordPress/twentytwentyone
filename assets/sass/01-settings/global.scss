@@ -104,8 +104,7 @@ $baseline-unit: 10px;
 	--form--line-height: var(--global--line-height-body);
 	--form--color-text: var(--global--color-dark-gray); // Text color in input fields is always dark over light background.
 	--form--color-ranged: var(--global--color-secondary);
-	--form--label-weight: normal;
-	--form--label-weight-strong: 500;
+	--form--label-weight: 500;
 	--form--border-color: var(--global--color-secondary);
 	--form--border-width: 3px;
 	--form--border-radius: 0;
@@ -144,11 +143,6 @@ $baseline-unit: 10px;
 	--entry-header--font-family: var(--heading--font-family);
 	--entry-header--font-size: var(--heading--font-size-h2);
 	--entry-content--font-family: var(--global--font-secondary);
-	--entry-meta--color: var(--global--color-primary);
-	--entry-meta--color-link: currentColor;
-	--entry-meta--color-hover: var(--global--color-primary-hover);
-	--entry-meta--font-family: var(--global--font-primary);
-	--entry-meta--font-size: var(--global--font-size-xs);
 	--entry-author-bio--font-family: var(--heading--font-family);
 	--entry-author-bio--font-size: var(--heading--font-size-h4);
 
@@ -173,9 +167,9 @@ $baseline-unit: 10px;
 	/* Main navigation */
 	--primary-nav--font-family: var(--global--font-secondary);
 	--primary-nav--font-family-mobile: var(--global--font-primary);
-	--primary-nav--font-size: var(--global--font-size-sm);
+	--primary-nav--font-size: var(--global--font-size-md);
 	--primary-nav--font-size-sub-menu: var(--global--font-size-xs);
-	--primary-nav--font-size-mobile: var(--global--font-size-md);
+	--primary-nav--font-size-mobile: var(--global--font-size-sm);
 	--primary-nav--font-size-sub-menu-mobile: var(--global--font-size-sm);
 	--primary-nav--font-size-button: var(--global--font-size-xs);
 	--primary-nav--font-style: normal;
@@ -254,5 +248,27 @@ $baseline-unit: 10px;
 		--global--font-size-xxxl: 9rem; // 144px / 16px
 		--heading--font-size-h3: 2rem; // 32px / 16px
 		--heading--font-size-h2: 3rem; // 48px / 16px
+	}
+}
+
+/* OS dark theme preference */
+@media (prefers-color-scheme: dark) {
+
+	html.has-default-light-palette-background {
+		--global--color-background: var(--global--color-dark-gray);
+		--global--color-primary: var(--global--color-light-gray);
+		--global--color-secondary: var(--global--color-light-gray);
+
+		// These need to be redefined for comment-submit buttons.
+		--button--color-text: var(--global--color-background);
+		--button--color-text-hover: var(--global--color-secondary);
+		--button--color-text-active: var(--global--color-secondary);
+		--button--color-background: var(--global--color-secondary);
+		--button--color-background-hover: var(--global--color-background);
+		--button--color-background-active: var(--global--color-background);
+
+		body {
+			background-color: var(--global--color-background);
+		}
 	}
 }

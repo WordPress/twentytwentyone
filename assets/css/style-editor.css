@@ -93,8 +93,7 @@
 	--form--line-height: var(--global--line-height-body);
 	--form--color-text: var(--global--color-dark-gray);
 	--form--color-ranged: var(--global--color-secondary);
-	--form--label-weight: normal;
-	--form--label-weight-strong: 500;
+	--form--label-weight: 500;
 	--form--border-color: var(--global--color-secondary);
 	--form--border-width: 3px;
 	--form--border-radius: 0;
@@ -126,11 +125,6 @@
 	--entry-header--font-family: var(--heading--font-family);
 	--entry-header--font-size: var(--heading--font-size-h2);
 	--entry-content--font-family: var(--global--font-secondary);
-	--entry-meta--color: var(--global--color-primary);
-	--entry-meta--color-link: currentColor;
-	--entry-meta--color-hover: var(--global--color-primary-hover);
-	--entry-meta--font-family: var(--global--font-primary);
-	--entry-meta--font-size: var(--global--font-size-xs);
 	--entry-author-bio--font-family: var(--heading--font-family);
 	--entry-author-bio--font-size: var(--heading--font-size-h4);
 	/* Header */
@@ -152,9 +146,9 @@
 	/* Main navigation */
 	--primary-nav--font-family: var(--global--font-secondary);
 	--primary-nav--font-family-mobile: var(--global--font-primary);
-	--primary-nav--font-size: var(--global--font-size-sm);
+	--primary-nav--font-size: var(--global--font-size-md);
 	--primary-nav--font-size-sub-menu: var(--global--font-size-xs);
-	--primary-nav--font-size-mobile: var(--global--font-size-md);
+	--primary-nav--font-size-mobile: var(--global--font-size-sm);
 	--primary-nav--font-size-sub-menu-mobile: var(--global--font-size-sm);
 	--primary-nav--font-size-button: var(--global--font-size-xs);
 	--primary-nav--font-style: normal;
@@ -224,6 +218,24 @@
 		--global--font-size-xxxl: 9rem;
 		--heading--font-size-h3: 2rem;
 		--heading--font-size-h2: 3rem;
+	}
+}
+
+/* OS dark theme preference */
+@media (prefers-color-scheme: dark) {
+	html.has-default-light-palette-background {
+		--global--color-background: var(--global--color-dark-gray);
+		--global--color-primary: var(--global--color-light-gray);
+		--global--color-secondary: var(--global--color-light-gray);
+		--button--color-text: var(--global--color-background);
+		--button--color-text-hover: var(--global--color-secondary);
+		--button--color-text-active: var(--global--color-secondary);
+		--button--color-background: var(--global--color-secondary);
+		--button--color-background-hover: var(--global--color-background);
+		--button--color-background-active: var(--global--color-background);
+	}
+	html.has-default-light-palette-background body {
+		background-color: var(--global--color-background);
 	}
 }
 
@@ -407,7 +419,7 @@ video {
 figcaption,
 .wp-caption,
 .wp-caption-text {
-	color: var(--global--color-primary);
+	color: currentColor;
 	font-size: var(--global--font-size-xs);
 	line-height: var(--global--line-height-body);
 	margin-top: calc(0.5 * var(--global--spacing-unit));
@@ -471,6 +483,12 @@ a:hover {
 .site a:focus {
 	outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
 	text-decoration: none;
+}
+
+.site a:focus.skip-link {
+	/* Only visible in Windows High Contrast mode */
+	outline: 2px solid transparent;
+	outline-offset: -2px;
 }
 
 .has-background:not(.has-background-background-color) .has-link-color a,
@@ -1341,7 +1359,7 @@ p.has-background {
 
 .wp-block-search .wp-block-search__label {
 	font-size: var(--form--font-size);
-	font-weight: var(--form--label-weight-strong);
+	font-weight: var(--form--label-weight);
 	margin-bottom: calc(var(--global--spacing-vertical) / 3);
 }
 
@@ -1683,7 +1701,14 @@ pre.wp-block-verse {
 }
 
 .has-drop-cap:not(:focus)::first-letter {
-	font-size: calc(2 * var(--heading--font-size-h1));
+	font-family: var(--heading--font-family);
+	font-weight: var(--heading--font-weight);
+	line-height: 0.66;
+	text-transform: uppercase;
+	font-style: normal;
+	float: left;
+	margin: 0.1em 0.1em 0 0;
+	font-size: calc(1.2 * var(--heading--font-size-h1));
 }
 
 @media only screen and (min-width: 482px) {

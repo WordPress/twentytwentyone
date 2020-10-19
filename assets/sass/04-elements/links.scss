@@ -16,8 +16,16 @@ a:hover {
 }
 
 .site a:focus {
+
 	outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
 	text-decoration: none;
+
+	&.skip-link {
+
+		/* Only visible in Windows High Contrast mode */
+		outline: 2px solid transparent;
+		outline-offset: -2px;
+	}
 }
 
 // Enforce the custom link color even if a custom background color has been set.

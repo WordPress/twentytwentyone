@@ -165,6 +165,13 @@ class Twenty_Twenty_One_Custom_Colors {
 		$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
 		if ( 127 > $this->get_relative_luminance_from_hex( $background_color ) ) {
 			$classes[] = 'is-background-dark';
+		} else {
+			$classes[] = 'is-background-light';
+		}
+
+		$light_colors_default_palette = array( '#D1E4DD', '#D1DFE4', '#D1D1E4', '#E4D1D1', '#E4DAD1', '#EEEADD', '#FFFFFF' );
+		if ( in_array( strtoupper( '#' . ltrim( $background_color, '#' ) ), $light_colors_default_palette, true ) ) {
+			$classes[] = 'has-default-light-palette-background';
 		}
 
 		return $classes;

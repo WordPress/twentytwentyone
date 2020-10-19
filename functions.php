@@ -455,10 +455,10 @@ add_action( 'enqueue_block_editor_assets', 'twentytwentyone_block_editor_script'
  * @link https://git.io/vWdr2
  */
 function twenty_twenty_one_skip_link_focus_fix() {
-	// The following is minified via `terser --compress --mangle -- js/skip-link-focus-fix.js`.
+	// The following is minified via `npx terser --compress --mangle -- assets/js/skip-link-focus-fix.js`.
 	?>
 	<script>
-	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",(function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())}),!1);
 	</script>
 	<?php
 }
@@ -508,7 +508,7 @@ require get_template_directory() . '/inc/block-styles.php';
 /**
  * Enqueue scripts for the customizer preview.
  *
- * @since Twenty Twenty-One 1.0
+ * @since 1.0.0
  *
  * @return void
  */
@@ -522,3 +522,18 @@ function twentytwentyone_customize_preview_init() {
 	);
 }
 add_action( 'customize_preview_init', 'twentytwentyone_customize_preview_init' );
+
+/**
+ * Calculate any classes we may want to add to the main <html> element.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function twentytwentyone_the_html_classes() {
+	$background_color             = get_theme_mod( 'background_color', 'D1E4DD' );
+	$light_colors_default_palette = array( '#D1E4DD', '#D1DFE4', '#D1D1E4', '#E4D1D1', '#E4DAD1', '#EEEADD', '#FFFFFF' );
+	if ( in_array( strtoupper( '#' . ltrim( $background_color, '#' ) ), $light_colors_default_palette, true ) ) {
+		echo 'class="has-default-light-palette-background"';
+	}
+}

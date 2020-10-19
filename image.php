@@ -33,7 +33,7 @@ while ( have_posts() ) {
 				<?php if ( wp_get_attachment_caption() ) : ?>
 					<figcaption class="wp-caption-text"><?php echo wp_kses_post( wp_get_attachment_caption() ); ?></figcaption>
 				<?php endif; ?>
-			</figure><!-- .entry-attachment -->
+			</figure><!-- .wp-block-image -->
 
 			<?php
 			the_content();
@@ -55,27 +55,20 @@ while ( have_posts() ) {
 			<?php
 			// Check if there is a parent, then add the published in link.
 			if ( wp_get_post_parent_id( $post ) ) {
+				echo '<span class="posted-on">';
 				printf(
-					/* translators: 2: parent post link. 3: parent post title*/
-					'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
-					esc_html__( 'Published in', 'twentytwentyone' ),
-					esc_url( get_the_permalink( wp_get_post_parent_id( $post ) ) ),
-					esc_html( get_the_title( wp_get_post_parent_id( $post ) ) )
+					/* translators: %s: parent post. */
+					esc_html__( 'Published in %s', 'twentytwentyone' ),
+					'<a href="' . esc_url( get_the_permalink( wp_get_post_parent_id( $post ) ) ) . '">' . esc_html( get_the_title( wp_get_post_parent_id( $post ) ) ) . '</a>'
 				);
+				echo '</span>';
 			} else {
 				// Edit post link.
 				edit_post_link(
 					sprintf(
-						wp_kses(
-							/* translators: %s: Name of current post. Only visible to screen readers. */
-							__( 'Edit<span class="screen-reader-text"> %s</span>', 'twentytwentyone' ),
-							array(
-								'span' => array(
-									'class' => array(),
-								),
-							)
-						),
-						get_the_title()
+						/* translators: %s: Name of current post. Only visible to screen readers. */
+						esc_html__( 'Edit %s', 'twentytwentyone' ),
+						'<span class="screen-reader-text">' . get_the_title() . '</span>'
 					),
 					'<span class="edit-link">',
 					'</span>'
@@ -98,16 +91,9 @@ while ( have_posts() ) {
 				// Edit post link.
 				edit_post_link(
 					sprintf(
-						wp_kses(
-							/* translators: %s: Name of current post. Only visible to screen readers. */
-							__( 'Edit<span class="screen-reader-text"> %s</span>', 'twentytwentyone' ),
-							array(
-								'span' => array(
-									'class' => array(),
-								),
-							)
-						),
-						get_the_title()
+						/* translators: %s: Name of current post. Only visible to screen readers. */
+						esc_html__( 'Edit %s', 'twentytwentyone' ),
+						'<span class="screen-reader-text">' . get_the_title() . '</span>'
 					),
 					'<span class="edit-link">',
 					'</span><br>'

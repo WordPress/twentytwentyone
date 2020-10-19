@@ -20,7 +20,8 @@
 			line-height: var(--widget--line-height-list);
 		}
 
-		&.sub-menu {
+		&.sub-menu,
+		&.children {
 			margin-left: var(--widget--spacing-menu);
 		}
 
@@ -82,7 +83,7 @@
 	> label {
 		width: 100%;
 		margin-bottom: 0;
-		font-weight: var(--form--label-weight-strong);
+		font-weight: var(--form--label-weight);
 	}
 
 	.search-field {
@@ -102,12 +103,15 @@
 
 	.search-field {
 		margin-right: calc(-1 * var(--button--border-width));
+		-webkit-appearance: none;
+		margin-bottom: calc(0.5 * var(--global--spacing-vertical));
 	}
 
 	.search-submit {
 		margin-left: 0;
 		background-color: transparent;
 		color: var(--button--color-text-hover);
+		margin-bottom: calc(0.5 * var(--global--spacing-vertical));
 
 		&:hover {
 			background-color: var(--button--color-background);

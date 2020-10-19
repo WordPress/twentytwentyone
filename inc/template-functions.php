@@ -151,7 +151,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_post_type_archive() ) {
 		return sprintf(
-			/* translators: %s: Post type singular name */
+			/* translators: %s: Post type singular name. */
 			esc_html__( '%s Archives', 'twentytwentyone' ),
 			get_post_type_object( get_queried_object()->name )->labels->singular_name
 		);
@@ -159,7 +159,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_tax() ) {
 		return sprintf(
-			/* translators: %s: Taxonomy singular name */
+			/* translators: %s: Taxonomy singular name. */
 			esc_html__( '%s Archives', 'twentytwentyone' ),
 			get_taxonomy( get_queried_object()->taxonomy )->labels->singular_name
 		);
@@ -200,7 +200,7 @@ function twenty_twenty_one_get_avatar_size() {
 function twenty_twenty_one_continue_reading_text() {
 	$continue_reading = sprintf(
 		/* translators: %s: Name of current post. */
-		wp_kses( esc_html__( 'Continue reading %s', 'twentytwentyone' ), array( 'span' => array( 'class' => array() ) ) ),
+		esc_html__( 'Continue reading %s', 'twentytwentyone' ),
 		the_title( '<span class="screen-reader-text">', '</span>', false )
 	);
 
@@ -211,7 +211,6 @@ function twenty_twenty_one_continue_reading_text() {
  * Create the continue reading link for excerpt.
  */
 function twenty_twenty_one_continue_reading_link_excerpt() {
-
 	if ( ! is_admin() ) {
 		return '&hellip; <a class="more-link" href="' . esc_url( get_permalink() ) . '">' . twenty_twenty_one_continue_reading_text() . '</a>';
 	}
@@ -224,7 +223,6 @@ add_filter( 'excerpt_more', 'twenty_twenty_one_continue_reading_link_excerpt' );
  * Create the continue reading link.
  */
 function twenty_twenty_one_continue_reading_link() {
-
 	if ( ! is_admin() ) {
 		return '<div class="more-link-container"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . twenty_twenty_one_continue_reading_text() . '</a></div>';
 	}
@@ -445,3 +443,22 @@ function twenty_twenty_one_print_first_instance_of_block( $block_name, $content 
 
 	return false;
 }
+
+/**
+ * Retrieve protected post password form content.
+ *
+ * @since 1.0.0
+ *
+ * @param int|WP_Post $post Optional. Post ID or WP_Post object. Default is global $post.
+ * @return string HTML content for password form for password protected post.
+ */
+function twenty_twenty_one_password_form( $post = 0 ) {
+	$post   = get_post( $post );
+	$label  = 'pwbox-' . ( empty( $post->ID ) ? wp_rand() : $post->ID );
+	$output = '<p class="post-password-message">' . esc_html__( 'This content is password protected. Please enter a password to view.', 'twentytwentyone' ) . '</p>
+	<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" class="post-password-form" method="post">
+	<label class="post-password-form__label" for="' . esc_attr( $label ) . '">' . esc_html__( 'Password', 'twentytwentyone' ) . '</label><input class="post-password-form__input" name="post_password" id="' . esc_attr( $label ) . '" type="password" size="20" /><input type="submit" class="post-password-form__submit" name="' . esc_attr__( 'Submit', 'twentytwentyone' ) . '" value="' . esc_attr_x( 'Enter', 'post password form', 'twentytwentyone' ) . '" /></form>
+	';
+	return $output;
+}
+add_filter( 'the_password_form', 'twenty_twenty_one_password_form' );

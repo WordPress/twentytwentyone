@@ -23,13 +23,13 @@ if ( ! function_exists( 'twenty_twenty_one_posted_on' ) ) {
 			esc_attr( get_the_date( DATE_W3C ) ),
 			esc_html( get_the_date() )
 		);
-
+		echo '<span class="posted-on">';
 		printf(
-			/* translators: 2: author name*/
-			'<span class="posted-on">%1$s %2$s</span>',
-			esc_html__( 'Published', 'twentytwentyone' ),
+			/* translators: %s: publish date. */
+			esc_html__( 'Published %s', 'twentytwentyone' ),
 			$time_string // phpcs:ignore WordPress.Security.EscapeOutput
 		);
+		echo '</span>';
 	}
 }
 
@@ -42,31 +42,13 @@ if ( ! function_exists( 'twenty_twenty_one_posted_by' ) ) {
 	 * @return void
 	 */
 	function twenty_twenty_one_posted_by() {
-		if ( ! get_the_author_meta( 'description' ) ) {
+		if ( ! get_the_author_meta( 'description' ) && post_type_supports( get_post_type(), 'author' ) ) {
 			echo '<span class="byline">';
 			printf(
 				/* translators: %s author name. */
 				esc_html__( 'By %s', 'twentytwentyone' ),
-				'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+				'<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" rel="author">' . esc_html( get_the_author() ) . '</a>'
 			);
-			echo '</span>';
-		}
-	}
-}
-
-if ( ! function_exists( 'twenty_twenty_one_comment_count' ) ) {
-	/**
-	 * Prints HTML with the comment count for the current post.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return void
-	 */
-	function twenty_twenty_one_comment_count() {
-		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
-			/* translators: %s: Name of current post. Only visible to screen readers. */
-			comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'twentytwentyone' ), get_the_title() ) );
 			echo '</span>';
 		}
 	}
@@ -96,15 +78,8 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 			// Edit post link.
 			edit_post_link(
 				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers. */
-						__( 'Edit %s', 'twentytwentyone' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
+					/* translators: %s: Name of current post. Only visible to screen readers. */
+					esc_html__( 'Edit %s', 'twentytwentyone' ),
 					'<span class="screen-reader-text">' . get_the_title() . '</span>'
 				),
 				'<span class="edit-link">',
@@ -136,7 +111,7 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				}
 				echo '</div>';
 			}
-		} elseif ( 'post' === get_post_type() && is_single() ) {
+		} else {
 
 			echo '<div class="posted-by">';
 			// Posted on.
@@ -146,15 +121,8 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 			// Edit post link.
 			edit_post_link(
 				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers. */
-						__( 'Edit %s', 'twentytwentyone' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
+					/* translators: %s: Name of current post. Only visible to screen readers. */
+					esc_html__( 'Edit %s', 'twentytwentyone' ),
 					'<span class="screen-reader-text">' . get_the_title() . '</span>'
 				),
 				'<span class="edit-link">',
@@ -211,7 +179,10 @@ if ( ! function_exists( 'twenty_twenty_one_post_thumbnail' ) ) {
 		<?php if ( is_singular() ) : ?>
 
 			<figure class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
+				<?php
+				// Thumbnail is loaded eagerly because it's going to be in the viewport immediately.
+				the_post_thumbnail( 'post-thumbnail', array( 'loading' => 'eager' ) );
+				?>
 			</figure><!-- .post-thumbnail -->
 
 		<?php else : ?>
@@ -238,13 +209,15 @@ if ( ! function_exists( 'twenty_twenty_one_the_posts_navigation' ) ) {
 	function twenty_twenty_one_the_posts_navigation() {
 		the_posts_pagination(
 			array(
-				'mid_size'  => 2,
-				'prev_text' => sprintf(
+				/* translators: There is a space after page. */
+				'before_page_number' => esc_html__( 'Page ', 'twentytwentyone' ),
+				'mid_size'           => 0,
+				'prev_text'          => sprintf(
 					'%s <span class="nav-prev-text">%s</span>',
 					is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ),
 					esc_html__( 'Newer posts', 'twentytwentyone' )
 				),
-				'next_text' => sprintf(
+				'next_text'          => sprintf(
 					'<span class="nav-next-text">%s</span> %s',
 					esc_html__( 'Older posts', 'twentytwentyone' ),
 					is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' )

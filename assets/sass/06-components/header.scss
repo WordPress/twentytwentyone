@@ -118,3 +118,94 @@ a.custom-logo-link {
 		}
 	}
 }
+
+@include media(mobile-only) {
+
+	.site-header {
+
+		&.has-logo {
+
+			&:not(.has-title-and-tagline) {
+
+				&.has-menu {
+
+					.site-logo {
+						position: absolute;
+						padding-top: calc(0.5 * var(--global--spacing-vertical));
+						margin-top: 0;
+						top: 0;
+
+						.admin-bar & {
+							top: 46px;
+						}
+
+						.primary-navigation-open & {
+							display: none;
+						}
+
+						img {
+							max-height: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit)) + 1.7em);
+						}
+					}
+				}
+			}
+
+			&.has-title-and-tagline {
+				align-items: flex-start;
+
+				&.has-menu {
+					justify-content: space-between;
+
+					.site-branding {
+						max-width: calc(100% - 160px);
+					}
+				}
+
+				.site-branding {
+					margin-right: 0;
+				}
+
+				body:not(.primary-navigation-open) & {
+
+					&:after {
+						display: none;
+					}
+
+					.primary-navigation {
+						position: relative;
+						top: 0;
+					}
+
+					.menu-button-container {
+						position: relative;
+						padding-top: 0;
+						margin-top: calc(0px - var(--button--padding-vertical) + (0.25 * var(--global--spacing-unit)));
+
+						#primary-mobile-menu {
+							// The 4.5px here is to offset the icon size horizontallly
+							// (the icon's width is larger than the path's width and has extra space on the sides).
+							padding-left: calc(var(--global--spacing-horizontal) * 0.6 - 4.5px);
+							padding-right: calc(var(--global--spacing-horizontal) * 0.6 - 4.5px);
+							margin-right: calc(0px - var(--global--spacing-horizontal) * 0.6);
+						}
+					}
+				}
+			}
+		}
+
+		&:not(.has-logo) {
+
+			&.has-title-and-tagline {
+
+				.site-branding {
+					margin-right: 0;
+					max-width: calc(100% - 160px);
+				}
+			}
+		}
+
+		&:not(.has-menu) {
+			justify-content: center;
+		}
+	}
+}

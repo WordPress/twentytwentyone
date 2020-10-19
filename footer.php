@@ -47,12 +47,12 @@
 						<?php if ( is_front_page() && ! is_paged() ) : ?>
 							<?php bloginfo( 'name' ); ?>
 						<?php else : ?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
 						<?php endif; ?>
 					<?php endif; ?>
 				<?php endif; ?>
 			</div><!-- .site-name -->
-			<div class="copyright">
+			<div class="powered-by">
 				<?php
 				printf(
 					/* translators: %s: WordPress. */
@@ -61,7 +61,7 @@
 				);
 				?>
 				</a>
-			</div><!-- .copyright -->
+			</div><!-- .powered-by -->
 
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
