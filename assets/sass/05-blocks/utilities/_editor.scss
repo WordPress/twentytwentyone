@@ -13,7 +13,7 @@
 	.editor-post-title__input {
 		color: var(--global--color-secondary);
 		font-family: var(--heading--font-family);
-		font-size: var(--global--font-size-xxl);
+		font-size: var(--global--font-size-page-title);
 		font-weight: var(--heading--font-weight-page-title);
 		line-height: var(--heading--line-height-h1);
 	}
@@ -115,7 +115,7 @@
 		&[data-align="full"],
 		&.alignfull {
 
-			> [data-block] {
+			>[data-block] {
 				margin-top: 0;
 				margin-bottom: 0;
 			}

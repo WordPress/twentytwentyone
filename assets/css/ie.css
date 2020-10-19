@@ -116,6 +116,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	/* Header */
 	/* Main navigation */
 	/* Pagination */
+	/* Comments */
 	/* Footer */
 	/* Block: Pull quote */
 	/* Block: Table */
@@ -1471,6 +1472,11 @@ button {
 }
 
 /* Category 04 can contain any default HTML element. Do not add classes here, just give the elements some basic styles. */
+blockquote {
+	margin: 0;
+	padding: 0;
+}
+
 blockquote p {
 	font-size: 1.5rem;
 	letter-spacing: normal;
@@ -1478,11 +1484,15 @@ blockquote p {
 }
 
 blockquote cite {
+	color: #28303d;
 	font-size: 1rem;
+	letter-spacing: normal;
 }
 
 blockquote footer {
+	color: #28303d;
 	font-size: 1rem;
+	letter-spacing: normal;
 }
 
 blockquote > * {
@@ -1496,6 +1506,42 @@ blockquote > *:first-child {
 
 blockquote > *:last-child {
 	margin-bottom: 0;
+}
+
+blockquote.alignleft, blockquote.alignright {
+	padding-left: inherit;
+}
+
+blockquote.alignleft p {
+	font-size: 1.125rem;
+	max-width: inherit;
+	width: inherit;
+}
+
+blockquote.alignright p {
+	font-size: 1.125rem;
+	max-width: inherit;
+	width: inherit;
+}
+
+blockquote.alignleft cite {
+	font-size: 1rem;
+	letter-spacing: normal;
+}
+
+blockquote.alignleft footer {
+	font-size: 1rem;
+	letter-spacing: normal;
+}
+
+blockquote.alignright cite {
+	font-size: 1rem;
+	letter-spacing: normal;
+}
+
+blockquote.alignright footer {
+	font-size: 1rem;
+	letter-spacing: normal;
 }
 
 input[type="text"] {
@@ -2446,12 +2492,6 @@ a:hover {
 	}
 }
 
-@media only screen and (min-width: 652px){
-	.wp-block-cover h2{
-	font-size: 3rem;
-	}
-}
-
 .wp-block-cover-image h2 {
 	font-size: 2.25rem;
 	letter-spacing: normal;
@@ -2459,12 +2499,6 @@ a:hover {
 	max-width: inherit;
 	text-align: inherit;
 	padding: 0;
-}
-
-@media only screen and (min-width: 652px){
-	.wp-block-cover-image h2{
-	font-size: 3rem;
-	}
 }
 
 @media only screen and (min-width: 652px){
@@ -2835,12 +2869,6 @@ h2 {
 	}
 }
 
-@media only screen and (min-width: 652px){
-	h2{
-	font-size: 3rem;
-	}
-}
-
 .h2 {
 	font-size: 2.25rem;
 	letter-spacing: normal;
@@ -2853,14 +2881,8 @@ h2 {
 	}
 }
 
-@media only screen and (min-width: 652px){
-	.h2{
-	font-size: 3rem;
-	}
-}
-
 h3 {
-	font-size: 2rem;
+	font-size: 1.875rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
@@ -2872,7 +2894,7 @@ h3 {
 }
 
 .h3 {
-	font-size: 2rem;
+	font-size: 1.875rem;
 	letter-spacing: normal;
 	line-height: 1.3;
 }
@@ -3064,7 +3086,7 @@ img {
 .wp-block-latest-posts > li > a {
 	display: inline-block;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 2rem;
+	font-size: 1.875rem;
 	font-weight: normal;
 	line-height: 1.3;
 	margin-bottom: 10px;
@@ -3469,7 +3491,7 @@ p.has-text-color a {
 
 .wp-block-pullquote p {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 2rem;
+	font-size: 1.875rem;
 	font-style: normal;
 	font-weight: 700;
 	letter-spacing: normal;
@@ -3584,7 +3606,7 @@ p.has-text-color a {
 }
 
 .wp-block-pullquote.is-style-solid-color blockquote p {
-	font-size: 2rem;
+	font-size: 1.875rem;
 }
 
 @media only screen and (min-width: 652px){
@@ -3908,7 +3930,7 @@ p.has-text-color a {
 .wp-block-rss .wp-block-rss__item-title > a {
 	display: inline-block;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 2rem;
+	font-size: 1.875rem;
 	font-weight: normal;
 	line-height: 1.3;
 	margin-bottom: 10px;
@@ -4859,12 +4881,6 @@ a.custom-logo-link {
 	}
 }
 
-@media only screen and (min-width: 652px){
-	.entry-title{
-	font-size: 3rem;
-	}
-}
-
 .entry-title a {
 	color: currentColor;
 	text-underline-offset: 0.15em;
@@ -5254,19 +5270,9 @@ h1.page-title {
 	font-size: 3rem;
 	}
 }
-@media only screen and (min-width: 652px){
-	.comments-title{
-	font-size: 3rem;
-	}
-}
 .comment-reply-title {
 	font-size: 2.25rem;
 	letter-spacing: normal;
-}
-@media only screen and (min-width: 652px){
-	.comment-reply-title{
-	font-size: 3rem;
-	}
 }
 @media only screen and (min-width: 652px){
 	.comment-reply-title{
@@ -5697,6 +5703,8 @@ h1.page-title {
 @media only screen and (min-width: 482px) {
 	.primary-navigation {
 		position: relative;
+		display: flex;
+		justify-content: right;
 		margin-left: auto;
 	}
 	.primary-navigation > .primary-menu-container {

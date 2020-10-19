@@ -4,7 +4,7 @@ html {
 }
 
 body {
-	line-height: var(--wp--typography--line-height, --global--line-height-body);
+	--wp--typography--line-height: var(--global--line-height-body);
 	color: var(--global--color-primary);
 	background-color: var(--global--color-background);
 	font-family: var(--global--font-secondary);
