@@ -92,7 +92,7 @@
 
 	// Mobile menu closed
 	> .primary-menu-container {
-		position: absolute;
+		position: fixed;
 		visibility: hidden;
 		opacity: 0;
 		top: 0;
@@ -105,7 +105,7 @@
 		padding-right: var(--global--spacing-unit);
 		padding-bottom: var(--global--spacing-horizontal);
 		background-color: var(--global--color-background);
-		overflow-x: scroll;
+		overflow-x: hidden;
 		overflow-y: auto;
 		transition: all .15s ease-in-out;
 		transform: translateY(var(--global--spacing-vertical));
@@ -139,6 +139,7 @@
 		}
 
 		> .primary-menu-container {
+			position: absolute;
 			visibility: visible;
 			opacity: 1;
 			transform: translateY(0);
