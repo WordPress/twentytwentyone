@@ -43,3 +43,10 @@
 | @marybaum | @marybaum |
 | @hareshlive | @hareshlive
 | @imnavanath | @navanathbhosale |
+| @afercia | @afercia |
+| @richtabor | @richtabor |
+| @joyously | @joyously |
+| @sarahricker | @sarahricker |
+| @enriquesanchez | @nrqsnchz |
+
+
