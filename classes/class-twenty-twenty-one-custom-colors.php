@@ -66,14 +66,14 @@ class Twenty_Twenty_One_Custom_Colors {
 		$theme_css = 'editor' === $context ? ':root .editor-styles-wrapper{' : ':root{';
 		$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
 		
-		if ( 'd1e4dd' !== strtolower( $background_color ) ) ) {
+		if ( 'd1e4dd' !== strtolower( $background_color ) ) {
 			$theme_css .= '--global--color-background: #' . $background_color . ';';
 			$theme_css .= '--global--color-primary: ' . $this->custom_get_readable_color( $background_color ) . ';';
 			$theme_css .= '--global--color-secondary: ' . $this->custom_get_readable_color( $background_color ) . ';';
 			$theme_css .= '--button--color-background: ' . $this->custom_get_readable_color( $background_color ) . ';';
 			$theme_css .= '--button--color-text-hover: ' . $this->custom_get_readable_color( $background_color ) . ';';
 
-			if ( '#fff' === $this->custom_get_readable_color( $background_color ) ) ) {
+			if ( '#fff' === $this->custom_get_readable_color( $background_color ) ) {
 				$theme_css .= '--table--stripes-border-color: var(--global--color-dark-gray);';
 				$theme_css .= '--table--stripes-background-color: var(--global--color-dark-gray);';
 			}
