@@ -748,6 +748,10 @@ a:hover {
 	margin-bottom: 0;
 }
 
+.wp-block-group {
+	display: flow-root;
+}
+
 .wp-block-group.has-background {
 	padding: 30px;
 }

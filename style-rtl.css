@@ -1832,6 +1832,10 @@ a:hover {
 	font-size: var(--global--font-size-xs);
 }
 
+.wp-block-group {
+	display: flow-root;
+}
+
 .wp-block-group .wp-block-group__inner-container {
 	margin-right: auto;
 	margin-left: auto;

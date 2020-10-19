@@ -2659,6 +2659,10 @@ a:hover {
 	font-size: 1rem;
 }
 
+.wp-block-group {
+	display: flow-root;
+}
+
 .wp-block-group .wp-block-group__inner-container {
 	margin-left: auto;
 	margin-right: auto;
