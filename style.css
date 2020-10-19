@@ -1431,6 +1431,14 @@ input[type="range"]::-ms-thumb {
 	cursor: pointer;
 }
 
+fieldset {
+	padding: var(--global--spacing-horizontal);
+}
+
+fieldset input:not([type="submit"]) {
+	margin-bottom: var(--global--spacing-unit);
+}
+
 img {
 	display: block;
 	height: auto;

@@ -1997,6 +1997,14 @@ input[type="range"]::-ms-thumb {
 	cursor: pointer;
 }
 
+fieldset {
+	padding: 25px;
+}
+
+fieldset input:not([type="submit"]) {
+	margin-bottom: 20px;
+}
+
 img {
 	display: block;
 	height: auto;

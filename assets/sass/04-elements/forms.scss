@@ -247,3 +247,14 @@ input[type="range"]::-ms-thumb {
 	background: var(--global--color-background);
 	cursor: pointer;
 }
+
+fieldset {
+	padding: var(--global--spacing-horizontal);
+
+	input {
+
+		&:not([type="submit"]) {
+			margin-bottom: var(--global--spacing-unit);
+		}
+	}
+}
