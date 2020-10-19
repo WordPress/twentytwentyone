@@ -455,6 +455,14 @@ add_action( 'enqueue_block_editor_assets', 'twentytwentyone_block_editor_script'
  * @link https://git.io/vWdr2
  */
 function twenty_twenty_one_skip_link_focus_fix() {
+
+	// If SCRIPT_DEBUG is defined and true, print the unminified file.
+	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
+		echo '<script>';
+		include get_template_directory() . '/assets/js/skip-link-focus-fix.js';
+		echo '</script>';
+	}
+
 	// The following is minified via `npx terser --compress --mangle -- assets/js/skip-link-focus-fix.js`.
 	?>
 	<script>

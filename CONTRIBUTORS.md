@@ -42,4 +42,11 @@
 | @francescamarano | @francina |
 | @marybaum | @marybaum |
 | @hareshlive | @hareshlive
-| @jdevalk | @joostdevalk |
+| @imnavanath | @navanathbhosale |
+| @afercia | @afercia |
+| @richtabor | @richtabor |
+| @joyously | @joyously |
+| @sarahricker | @sarahricker |
+| @enriquesanchez | @nrqsnchz |
+
+
