@@ -5,6 +5,8 @@
 	display: block;
 	clear: both;
 
+	display: flow-root; // stylelint-disable-line declaration-block-no-duplicate-properties
+
 	&:before,
 	&:after {
 		content: "";

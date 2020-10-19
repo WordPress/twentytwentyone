@@ -1835,6 +1835,7 @@ a:hover {
 .wp-block-group {
 	display: block;
 	clear: both;
+	display: flow-root;
 }
 
 .wp-block-group:before, .wp-block-group:after {
