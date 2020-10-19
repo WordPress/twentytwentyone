@@ -396,7 +396,8 @@ function twenty_twenty_one_get_non_latin_css( $type = 'front-end' ) {
  *
  * @since 1.0.0
  *
- * @param string      $block_name The block name/type. Example: `core/image`.
+ * @param string      $block_name The full block type name, or a partial match.
+ *                                Example: `core/image`, `core-embed/*`.
  * @param string|null $content    The content we need to search in. Use null for get_the_content().
  * @param int         $instances  How many instances of the block we want to print. Defaults to 1.
  *
@@ -422,7 +423,16 @@ function twenty_twenty_one_print_first_instance_of_block( $block_name, $content 
 		}
 
 		// Check if this the block we're looking for.
-		if ( $block_name === $block['blockName'] ) {
+		$is_matching_block = false;
+
+		// If the block ends with *, we should just try to match the first portion.
+		if ( '*' === $block_name[-1] ) {
+			$is_matching_block = 0 === strpos( $block['blockName'], rtrim( $block_name, '*' ) );
+		} else {
+			$is_matching_block = $block_name === $block['blockName'];
+		}
+
+		if ( $is_matching_block ) {
 			// Increment count.
 			$instances_count++;
 

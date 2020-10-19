@@ -1,6 +1,6 @@
 <?php
 /**
- * Show the excerpt.
+ * Show the appropriate content for the Quote post format.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -9,10 +9,13 @@
  * @since 1.0.0
  */
 
-// If there is no quote or pullquote print the excerpt.
-if (
-	! twenty_twenty_one_print_first_instance_of_block( 'core/quote', get_the_content() ) &&
-	! twenty_twenty_one_print_first_instance_of_block( 'core/pullquote', get_the_content() )
-) {
-	the_content();
+$content = get_the_content();
+
+// If there is no quote or pullquote print the content.
+if ( has_block( 'core/quote', $content ) ) {
+	twenty_twenty_one_print_first_instance_of_block( 'core/quote', $content );
+} elseif ( has_block( 'core/pullquote', $content ) ) {
+	twenty_twenty_one_print_first_instance_of_block( 'core/pullquote', $content );
+} else {
+	the_excerpt();
 }
