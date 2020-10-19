@@ -10,7 +10,7 @@
 	border-color: currentColor;
 	position: relative;
 
-	&::before {
+	blockquote::before {
 		color: currentColor;
 		content: "\201C";
 		display: block;
@@ -56,7 +56,7 @@
 			padding: calc(5 * var(--global--spacing-unit));
 		}
 
-		&::before {
+		blockquote::before {
 			text-align: left;
 		}
 

@@ -6,7 +6,7 @@
 	border-top-style: solid;
 	position: relative;
 
-	&::before {
+	blockquote::before {
 		color: currentColor;
 		content: "\201C";
 		display: block;
@@ -48,7 +48,7 @@
 
 	&.alignleft {
 
-		&:before,
+		blockquote:before,
 		cite {
 			text-align: center;
 		}
@@ -76,7 +76,7 @@
 			padding: calc(5 * var(--global--spacing-unit));
 		}
 
-		&::before {
+		blockquote::before {
 			text-align: left;
 		}
 
