@@ -131,9 +131,7 @@ class Twenty_Twenty_One_Custom_Colors {
 			(string) filemtime( get_theme_file_path( 'assets/css/custom-color-overrides.css' ) )
 		);
 
-		$background_color             = strtolower( get_theme_mod( 'background_color', 'D1E4DD' ) );
-		$light_colors_default_palette = array( '#D1E4DD', '#D1DFE4', '#D1D1E4', '#E4D1D1', '#E4DAD1', '#EEEADD', '#FFFFFF' );
-		if ( 'd1e4dd' !== $background_color ) {
+		if ( 'd1e4dd' !== strtolower( get_theme_mod( 'background_color', 'D1E4DD' ) ) ) {
 			wp_add_inline_style( 'twenty-twenty-one-custom-color-overrides', $this->generate_custom_color_variables( 'editor' ) );
 		} elseif ( $this->is_default_palette() ) {
 			// Add dark mode variable overrides.
