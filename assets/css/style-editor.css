@@ -1120,7 +1120,7 @@ p.has-background {
 	position: relative;
 }
 
-.wp-block-pullquote::before {
+.wp-block-pullquote blockquote::before {
 	color: currentColor;
 	content: "\201C";
 	display: block;
@@ -1168,7 +1168,7 @@ p.has-background {
 	}
 }
 
-.wp-block-pullquote.is-style-solid-color::before {
+.wp-block-pullquote.is-style-solid-color blockquote::before {
 	text-align: left;
 }
 

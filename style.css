@@ -2456,7 +2456,7 @@ p.has-text-color a {
 	 */
 }
 
-.wp-block-pullquote::before {
+.wp-block-pullquote blockquote::before {
 	color: currentColor;
 	content: "\201C";
 	display: block;
@@ -2493,7 +2493,7 @@ p.has-text-color a {
 	background: none;
 }
 
-.wp-block-pullquote.alignleft:before,
+.wp-block-pullquote.alignleft blockquote:before,
 .wp-block-pullquote.alignleft cite {
 	text-align: center;
 }
@@ -2522,7 +2522,7 @@ p.has-text-color a {
 	}
 }
 
-.wp-block-pullquote.is-style-solid-color::before {
+.wp-block-pullquote.is-style-solid-color blockquote::before {
 	text-align: left;
 }
 
