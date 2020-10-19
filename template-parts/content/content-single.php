@@ -20,12 +20,7 @@
 
 	<div class="entry-content">
 		<?php
-		the_content(
-			sprintf(
-				twenty_twenty_one_continue_reading_text(),
-				get_the_title()
-			)
-		);
+		the_content();
 
 		wp_link_pages(
 			array(
