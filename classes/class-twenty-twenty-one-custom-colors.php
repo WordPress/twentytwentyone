@@ -47,6 +47,21 @@ class Twenty_Twenty_One_Custom_Colors {
 	}
 
 	/**
+	 * Determine if the background color is of the theme's default palette.
+	 *
+	 * @access public
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return bool
+	 */
+	public function is_default_palette() {
+		$background_color             = get_theme_mod( 'background_color', 'D1E4DD' );
+		$light_colors_default_palette = array( '#D1E4DD', '#D1DFE4', '#D1D1E4', '#E4D1D1', '#E4DAD1', '#EEEADD', '#FFFFFF' );
+		return in_array( strtoupper( '#' . ltrim( $background_color, '#' ) ), $light_colors_default_palette, true );
+	}
+
+	/**
 	 * Generate color variables.
 	 *
 	 * Adjust the color value of the CSS variables depending on the background color theme mod.
@@ -77,7 +92,7 @@ class Twenty_Twenty_One_Custom_Colors {
 				$theme_css .= '--table--stripes-border-color: var(--global--color-dark-gray);';
 				$theme_css .= '--table--stripes-background-color: var(--global--color-dark-gray);';
 			}
-		}
+		} 
 
 		$theme_css .= '}';
 
@@ -115,8 +130,14 @@ class Twenty_Twenty_One_Custom_Colors {
 			array(),
 			(string) filemtime( get_theme_file_path( 'assets/css/custom-color-overrides.css' ) )
 		);
-		if ( 'd1e4dd' !== strtolower( get_theme_mod( 'background_color', 'D1E4DD' ) ) ) {
+
+		$background_color             = strtolower( get_theme_mod( 'background_color', 'D1E4DD' ) );
+		$light_colors_default_palette = array( '#D1E4DD', '#D1DFE4', '#D1D1E4', '#E4D1D1', '#E4DAD1', '#EEEADD', '#FFFFFF' );
+		if ( 'd1e4dd' !== $background_color ) {
 			wp_add_inline_style( 'twenty-twenty-one-custom-color-overrides', $this->generate_custom_color_variables( 'editor' ) );
+		} elseif ( $this->is_default_palette() ) {
+			// Add dark mode variable overrides.
+			wp_add_inline_style( 'twenty-twenty-one-custom-color-overrides', '@media (prefers-color-scheme: dark) { :root .editor-styles-wrapper { --global--color-background: var(--global--color-dark-gray); --global--color-primary: var(--global--color-light-gray); --global--color-secondary: var(--global--color-light-gray); } }' );
 		}
 	}
 
@@ -170,8 +191,7 @@ class Twenty_Twenty_One_Custom_Colors {
 			$classes[] = 'is-background-light';
 		}
 
-		$light_colors_default_palette = array( '#D1E4DD', '#D1DFE4', '#D1D1E4', '#E4D1D1', '#E4DAD1', '#EEEADD', '#FFFFFF' );
-		if ( in_array( strtoupper( '#' . ltrim( $background_color, '#' ) ), $light_colors_default_palette, true ) ) {
+		if ( $this->is_default_palette() ) {
 			$classes[] = 'has-default-light-palette-background';
 		}
 
