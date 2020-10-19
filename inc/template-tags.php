@@ -72,6 +72,12 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 
 		// Hide meta information on pages.
 		if ( ! is_single() ) {
+
+			$post_format = get_post_format();
+			if ( 'aside' === $post_format || 'status' === $post_format ) {
+				echo '<p><a href="' . esc_url( get_permalink() ) . '">' . twenty_twenty_one_continue_reading_text() . '</a></p>';
+			}
+
 			// Posted on.
 			twenty_twenty_one_posted_on();
 
