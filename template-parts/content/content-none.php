@@ -18,7 +18,7 @@
 			<h1 class="page-title">
 				<?php
 				printf(
-					/* Translators: %s: search term. */
+					/* translators: %s: search term. */
 					esc_html__( 'Results for "%s"', 'twentytwentyone' ),
 					'<span class="page-description search-term">' . esc_html( get_search_query() ) . '</span>'
 				);
@@ -39,7 +39,7 @@
 			<?php
 			printf(
 				'<p>' . wp_kses(
-					/* Translators: 1: link to WP admin new post page. */
+					/* translators: 1: link to WP admin new post page. */
 					__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'twentytwentyone' ),
 					array(
 						'a' => array(

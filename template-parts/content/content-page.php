@@ -42,7 +42,7 @@
 			<?php
 			edit_post_link(
 				sprintf(
-					/* Translators: %s: Name of current post. Only visible to screen readers. */
+					/* translators: %s: Name of current post. Only visible to screen readers. */
 					esc_html__( 'Edit %s', 'twentytwentyone' ),
 					'<span class="screen-reader-text">' . get_the_title() . '</span>'
 				),

@@ -36,7 +36,7 @@ $twenty_twenty_one_comment_count = get_comments_number();
 			<?php else : ?>
 				<?php
 				printf(
-					/* Translators: %s: comment count number. */
+					/* translators: %s: comment count number. */
 					esc_html( _nx( '%s Reply', '%s Replies', $twenty_twenty_one_comment_count, 'comments title', 'twentytwentyone' ) ),
 					esc_html( number_format_i18n( $twenty_twenty_one_comment_count ) )
 				);
@@ -59,7 +59,7 @@ $twenty_twenty_one_comment_count = get_comments_number();
 		<?php
 		the_comments_pagination(
 			array(
-				/* Translators: There is a space after page. */
+				/* translators: There is a space after page. */
 				'before_page_number' => esc_html__( 'Page ', 'twentytwentyone' ),
 				'mid_size'           => 0,
 				'prev_text'          => sprintf(

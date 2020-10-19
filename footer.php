@@ -55,7 +55,7 @@
 			<div class="powered-by">
 				<?php
 				printf(
-					/* Translators: %s: WordPress. */
+					/* translators: %s: WordPress. */
 					esc_html__( 'Proudly powered by %s.', 'twentytwentyone' ),
 					'<a href="' . esc_attr__( 'https://wordpress.org/', 'twentytwentyone' ) . '">WordPress</a>'
 				);

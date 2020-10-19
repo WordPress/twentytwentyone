@@ -103,7 +103,7 @@ add_filter( 'comment_form_defaults', 'twenty_twenty_one_comment_form_defaults' )
 function twenty_twenty_one_get_the_archive_title() {
 	if ( is_category() ) {
 		return sprintf(
-			/* Translators: %s: The term title. */
+			/* translators: %s: The term title. */
 			esc_html__( 'Category Archives: %s', 'twentytwentyone' ),
 			'<span class="page-description">' . single_term_title( '', false ) . '</span>'
 		);
@@ -111,7 +111,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_tag() ) {
 		return sprintf(
-			/* Translators: %s: The term title. */
+			/* translators: %s: The term title. */
 			esc_html__( 'Tag Archives: %s', 'twentytwentyone' ),
 			'<span class="page-description">' . single_term_title( '', false ) . '</span>'
 		);
@@ -119,7 +119,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_author() ) {
 		return sprintf(
-			/* Translators: %s: The author name. */
+			/* translators: %s: The author name. */
 			esc_html__( 'Author Archives: %s', 'twentytwentyone' ),
 			'<span class="page-description">' . get_the_author_meta( 'display_name' ) . '</span>'
 		);
@@ -127,7 +127,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_year() ) {
 		return sprintf(
-			/* Translators: %s: The year. */
+			/* translators: %s: The year. */
 			esc_html__( 'Yearly Archives: %s', 'twentytwentyone' ),
 			'<span class="page-description">' . get_the_date( _x( 'Y', 'yearly archives date format', 'twentytwentyone' ) ) . '</span>'
 		);
@@ -135,7 +135,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_month() ) {
 		return sprintf(
-			/* Translators: %s: The month. */
+			/* translators: %s: The month. */
 			esc_html__( 'Monthly Archives: %s', 'twentytwentyone' ),
 			'<span class="page-description">' . get_the_date( _x( 'F Y', 'monthly archives date format', 'twentytwentyone' ) ) . '</span>'
 		);
@@ -143,7 +143,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_day() ) {
 		return sprintf(
-			/* Translators: %s: The day. */
+			/* translators: %s: The day. */
 			esc_html__( 'Daily Archives: %s', 'twentytwentyone' ),
 			'<span class="page-description">' . get_the_date() . '</span>'
 		);
@@ -151,7 +151,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_post_type_archive() ) {
 		return sprintf(
-			/* Translators: %s: Post type singular name. */
+			/* translators: %s: Post type singular name. */
 			esc_html__( '%s Archives', 'twentytwentyone' ),
 			get_post_type_object( get_queried_object()->name )->labels->singular_name
 		);
@@ -159,7 +159,7 @@ function twenty_twenty_one_get_the_archive_title() {
 
 	if ( is_tax() ) {
 		return sprintf(
-			/* Translators: %s: Taxonomy singular name. */
+			/* translators: %s: Taxonomy singular name. */
 			esc_html__( '%s Archives', 'twentytwentyone' ),
 			get_taxonomy( get_queried_object()->taxonomy )->labels->singular_name
 		);
@@ -199,7 +199,7 @@ function twenty_twenty_one_get_avatar_size() {
  */
 function twenty_twenty_one_continue_reading_text() {
 	$continue_reading = sprintf(
-		/* Translators: %s: Name of current post. */
+		/* translators: %s: Name of current post. */
 		esc_html__( 'Continue reading %s', 'twentytwentyone' ),
 		the_title( '<span class="screen-reader-text">', '</span>', false )
 	);

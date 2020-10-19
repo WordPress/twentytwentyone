@@ -17,7 +17,7 @@ if ( have_posts() ) {
 		<h1 class="page-title">
 			<?php
 			printf(
-				/* Translators: %s: search term. */
+				/* translators: %s: search term. */
 				esc_html__( 'Results for "%s"', 'twentytwentyone' ),
 				'<span class="page-description search-term">' . esc_html( get_search_query() ) . '</span>'
 			);
@@ -29,7 +29,7 @@ if ( have_posts() ) {
 		<?php
 		printf(
 			esc_html(
-				/* Translators: %d: the number of search results. */
+				/* translators: %d: the number of search results. */
 				_n(
 					'We found %d result for your search.',
 					'We found %d results for your search.',
