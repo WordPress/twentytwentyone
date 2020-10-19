@@ -5742,8 +5742,6 @@ h1.page-title {
 @media only screen and (min-width: 482px) {
 	.primary-navigation {
 		position: relative;
-		display: flex;
-		justify-content: right;
 		margin-left: auto;
 	}
 	.primary-navigation > .primary-menu-container {

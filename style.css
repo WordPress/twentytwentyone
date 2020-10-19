@@ -244,7 +244,6 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--primary-nav--color-link-hover: var(--global--color-primary-hover);
 	--primary-nav--color-text: var(--global--color-primary);
 	--primary-nav--padding: calc(0.66 * var(--global--spacing-unit));
-	--primary-nav--justify-content: right;
 	/* Pagination */
 	--pagination--color-text: var(--global--color-primary);
 	--pagination--color-link-hover: var(--global--color-primary-hover);
@@ -4113,8 +4112,6 @@ h1.page-title {
 @media only screen and (min-width: 482px) {
 	.primary-navigation {
 		position: relative;
-		display: flex;
-		justify-content: var(--primary-nav--justify-content);
 		margin-left: auto;
 	}
 	.primary-navigation > .primary-menu-container {
