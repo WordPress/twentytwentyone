@@ -1,10 +1,10 @@
 /**
  * Button
  */
-.site button:not(.customize-partial-edit-shortcut-button).mejs-inner:not(button),
 .site .button,
 input[type="submit"],
 input[type="reset"],
+.wp-block-search__button,
 .wp-block-button .wp-block-button__link {
 	// Extend button style
 	@extend %button-style;
