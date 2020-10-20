@@ -32,7 +32,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	}
 
 	/**
-	 * Determine the luminance of the given color and then return #fff or #000 so that our text is always readable.
+	 * Determine the luminance of the given color and then return #fff or #000 so that the text is always readable.
 	 *
 	 * @access public
 	 *
@@ -138,7 +138,7 @@ class Twenty_Twenty_One_Custom_Colors {
 		// Remove the "#" symbol from the beginning of the color.
 		$hex = ltrim( $hex, '#' );
 
-		// Make sure we have 6 digits for the below calculations.
+		// Make sure there are 6 digits for the below calculations.
 		if ( 3 === strlen( $hex ) ) {
 			$hex = substr( $hex, 0, 1 ) . substr( $hex, 0, 1 ) . substr( $hex, 1, 1 ) . substr( $hex, 1, 1 ) . substr( $hex, 2, 1 ) . substr( $hex, 2, 1 );
 		}
