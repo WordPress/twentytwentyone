@@ -270,8 +270,8 @@ function twenty_twenty_one_get_icon_svg( $group, $icon, $size = 24 ) {
  * @return string
  */
 function twenty_twenty_one_change_calendar_nav_arrows( $calendar_output ) {
-	$calendar_output = str_replace( '&laquo; ', twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ), $calendar_output );
-	$calendar_output = str_replace( ' &raquo;', twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ), $calendar_output );
+	$calendar_output = str_replace( '&laquo; ', is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ), $calendar_output );
+	$calendar_output = str_replace( ' &raquo;', is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ), $calendar_output );
 	return $calendar_output;
 }
 add_filter( 'get_calendar', 'twenty_twenty_one_change_calendar_nav_arrows' );
