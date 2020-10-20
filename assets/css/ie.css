@@ -2015,6 +2015,22 @@ fieldset input:not([type="submit"]) {
 	margin-bottom: 20px;
 }
 
+fieldset input[type="radio"], fieldset input[type="checkbox"] {
+	margin-bottom: 0;
+}
+
+fieldset input[type="radio"] + label {
+	font-size: 1.125rem;
+	padding-left: 0;
+	margin-bottom: 20px;
+}
+
+fieldset input[type="checkbox"] + label {
+	font-size: 1.125rem;
+	padding-left: 0;
+	margin-bottom: 20px;
+}
+
 img {
 	display: block;
 	height: auto;

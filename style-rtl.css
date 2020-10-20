@@ -1445,6 +1445,17 @@ fieldset input:not([type="submit"]) {
 	margin-bottom: var(--global--spacing-unit);
 }
 
+fieldset input[type="radio"], fieldset input[type="checkbox"] {
+	margin-bottom: 0;
+}
+
+fieldset input[type="radio"] + label,
+fieldset input[type="checkbox"] + label {
+	font-size: var(--form--font-size);
+	padding-right: 0;
+	margin-bottom: var(--global--spacing-unit);
+}
+
 img {
 	display: block;
 	height: auto;

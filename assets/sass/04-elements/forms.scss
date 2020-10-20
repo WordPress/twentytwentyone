@@ -266,5 +266,17 @@ fieldset {
 		&:not([type="submit"]) {
 			margin-bottom: var(--global--spacing-unit);
 		}
+
+		&[type="radio"],
+		&[type="checkbox"] {
+			margin-bottom: 0;
+		}
+
+		&[type="radio"] + label,
+		&[type="checkbox"] + label {
+			font-size: var(--form--font-size);
+			padding-left: 0;
+			margin-bottom: var(--global--spacing-unit);
+		}
 	}
 }
