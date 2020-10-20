@@ -3610,6 +3610,22 @@ h1.page-title {
 	margin-top: calc(2 * var(--global--spacing-vertical));
 }
 
+.archive .entry-footer .posted-on,
+.archive .entry-footer .byline,
+.archive .entry-footer .cat-links,
+.archive .entry-footer .tags-links,
+.search .entry-footer .posted-on,
+.search .entry-footer .byline,
+.search .entry-footer .cat-links,
+.search .entry-footer .tags-links,
+.blog .entry-footer .posted-on,
+.blog .entry-footer .byline,
+.blog .entry-footer .cat-links,
+.blog .entry-footer .tags-links {
+	display: block;
+}
+
+
 .archive.logged-in .entry-footer .posted-on,
 .search.logged-in .entry-footer .posted-on,
 .blog.logged-in .entry-footer .posted-on {
