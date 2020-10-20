@@ -53,13 +53,15 @@ table.wp-calendar-table {
 
 	thead,
 	tbody {
-		border: 1px solid var(--global--color-dark-gray);
+		color: currentColor;
+		border: 1px solid;
 	}
 
 	caption {
 		font-weight: bold;
 		text-align: left;
 		margin-bottom: var(--global--spacing-unit);
+		color: currentColor;
 	}
 }
 
