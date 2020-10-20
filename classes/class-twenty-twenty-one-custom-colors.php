@@ -194,7 +194,7 @@ class Twenty_Twenty_One_Custom_Colors {
 			$classes[] = 'is-background-light';
 		}
 
-		$should_respect_color_scheme  = get_theme_mod( 'respect_user_color_preference', true ); // @phpstan-ignore-line. Passing true instead of default value of false to get_theme_mod.
+		$should_respect_color_scheme = get_theme_mod( 'respect_user_color_preference', true ); // @phpstan-ignore-line. Passing true instead of default value of false to get_theme_mod.
 		if ( $should_respect_color_scheme && $this->is_default_palette() ) {
 			$classes[] = 'has-default-light-palette-background';
 		}
