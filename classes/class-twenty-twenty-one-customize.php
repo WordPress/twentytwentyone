@@ -163,8 +163,8 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 				array(
 					'type'        => 'checkbox',
 					'section'     => 'colors',
-					'label'       => esc_html__( 'Support visitor\'s color scheme preference', 'twentytwentyone' ),
-					'description' => __( 'Show your site in dark mode if a visitor to your site requests it. More info? Accessibility warning?', 'twentytwentyone' ),
+					'label'       => esc_html__( 'Respect visitor\'s device light/dark mode settings', 'twentytwentyone' ),
+					'description' => __( 'Show your site in dark mode if a visitor to your site requests it.', 'twentytwentyone' ),
 				)
 			);
 		}
