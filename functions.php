@@ -555,7 +555,7 @@ function twentytwentyone_customize_controls_enqueue_scripts() {
 		'isDarkMode'                 => twentytwentyone_supports_dark_mode(),
 		'lightPaletteColors'         => array( '#D1E4DD', '#D1DFE4', '#D1D1E4', '#E4D1D1', '#E4DAD1', '#EEEADD', '#FFFFFF' ),
 		'darkModeEnabledMessage'     => esc_html__( 'You currently have dark mode enabled in your device. Changing the color picker will allow you to preview the light mode.', 'twentytwentyone' ),
-		'darkModeUnavailableMessage' => esc_html__( 'Selecting a custom color disables dark mode support. Select one of the light colors from the palette if you need to support dark-mode.', 'twentytwentyone' ),
+		'darkModeUnavailableMessage' => esc_html__( 'Selecting a custom color disables dark mode support. Select one of the light colors from the palette if you need to support dark mode.', 'twentytwentyone' ),
 	);
 
 	wp_localize_script(
