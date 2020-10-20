@@ -42,8 +42,8 @@ while ( have_posts() ) {
 				array(
 					'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'twentytwentyone' ) . '">',
 					'after'    => '</nav>',
-					/* translators: There is a space after page. */
-					'pagelink' => esc_html__( 'Page ', 'twentytwentyone' ) . '%',
+					/* translators: %: page number. */
+					'pagelink' => esc_html__( 'Page %', 'twentytwentyone' ),
 				)
 			);
 			?>
