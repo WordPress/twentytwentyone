@@ -4249,18 +4249,17 @@ table.wp-calendar-table th {
 	font-weight: bold;
 }
 
-table.wp-calendar-table thead {
-	border: 1px solid #28303d;
-}
-
+table.wp-calendar-table thead,
 table.wp-calendar-table tbody {
-	border: 1px solid #28303d;
+	color: currentColor;
+	border: 1px solid;
 }
 
 table.wp-calendar-table caption {
 	font-weight: bold;
 	text-align: left;
 	margin-bottom: 20px;
+	color: currentColor;
 }
 
 .wp-calendar-nav {
@@ -4809,7 +4808,7 @@ a.custom-logo-link {
 	padding-top: 30px;
 	color: #28303d;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1rem;
+	font-size: 1.125rem;
 	line-height: 1.7;
 	border-top: 3px solid #28303d;
 }
@@ -5705,6 +5704,7 @@ h1.page-title {
 	.primary-navigation > .primary-menu-container {
 		height: 100vh;
 		z-index: 499;
+		border: 2px solid transparent;
 	}
 	.has-logo.has-title-and-tagline .primary-navigation > .primary-menu-container {
 		position: fixed;
@@ -5715,6 +5715,9 @@ h1.page-title {
 	}
 	.admin-bar .primary-navigation > .primary-menu-container {
 		height: calc(100vh - 46px);
+	}
+	.primary-navigation > .primary-menu-container:focus {
+		border: 2px solid #28303d;
 	}
 }
 
@@ -6360,7 +6363,7 @@ h1.page-title {
 	margin-top: 180px;
 	padding-bottom: 10px;
 	color: #28303d;
-	font-size: 1rem;
+	font-size: 1.125rem;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 

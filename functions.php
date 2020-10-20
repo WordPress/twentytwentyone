@@ -40,9 +40,8 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 
 		/*
 		 * Let WordPress manage the document title.
-		 * By adding theme support, we declare that this theme does not use a
-		 * hard-coded <title> tag in the document head, and expect WordPress to
-		 * provide it for us.
+		 * This theme does not use a hard-coded <title> tag in the document head,
+		 * WordPress will provide it for us.
 		 */
 		add_theme_support( 'title-tag' );
 
@@ -126,6 +125,10 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 
 		// Add support for editor styles.
 		add_theme_support( 'editor-styles' );
+		$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
+		if ( 127 > Twenty_Twenty_One_Custom_Colors::get_relative_luminance_from_hex( $background_color ) ) {
+			add_theme_support( 'dark-editor-style' );
+		}
 
 		$editor_stylesheet_path = './assets/css/style-editor.css';
 
@@ -145,43 +148,43 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 			array(
 				array(
 					'name'      => esc_html__( 'Extra small', 'twentytwentyone' ),
-					'shortName' => esc_html__( 'XS', 'twentytwentyone' ),
+					'shortName' => esc_html_x( 'XS', 'Font size', 'twentytwentyone' ),
 					'size'      => 16,
 					'slug'      => 'extra-small',
 				),
 				array(
 					'name'      => esc_html__( 'Small', 'twentytwentyone' ),
-					'shortName' => esc_html__( 'S', 'twentytwentyone' ),
+					'shortName' => esc_html_x( 'S', 'Font size', 'twentytwentyone' ),
 					'size'      => 18,
 					'slug'      => 'small',
 				),
 				array(
 					'name'      => esc_html__( 'Normal', 'twentytwentyone' ),
-					'shortName' => esc_html__( 'M', 'twentytwentyone' ),
+					'shortName' => esc_html_x( 'M', 'Font size', 'twentytwentyone' ),
 					'size'      => 20,
 					'slug'      => 'normal',
 				),
 				array(
 					'name'      => esc_html__( 'Large', 'twentytwentyone' ),
-					'shortName' => esc_html__( 'L', 'twentytwentyone' ),
+					'shortName' => esc_html_x( 'L', 'Font size', 'twentytwentyone' ),
 					'size'      => 24,
 					'slug'      => 'large',
 				),
 				array(
 					'name'      => esc_html__( 'Extra Large', 'twentytwentyone' ),
-					'shortName' => esc_html__( 'XL', 'twentytwentyone' ),
+					'shortName' => esc_html_x( 'XL', 'Font size', 'twentytwentyone' ),
 					'size'      => 40,
 					'slug'      => 'extra-large',
 				),
 				array(
 					'name'      => esc_html__( 'Huge', 'twentytwentyone' ),
-					'shortName' => esc_html__( 'XXL', 'twentytwentyone' ),
+					'shortName' => esc_html_x( 'XXL', 'Font size', 'twentytwentyone' ),
 					'size'      => 96,
 					'slug'      => 'huge',
 				),
 				array(
 					'name'      => esc_html__( 'Gigantic', 'twentytwentyone' ),
-					'shortName' => esc_html__( 'XXXL', 'twentytwentyone' ),
+					'shortName' => esc_html_x( 'XXXL', 'Font size', 'twentytwentyone' ),
 					'size'      => 144,
 					'slug'      => 'gigantic',
 				),
@@ -532,7 +535,7 @@ function twentytwentyone_customize_preview_init() {
 add_action( 'customize_preview_init', 'twentytwentyone_customize_preview_init' );
 
 /**
- * Calculate any classes we may want to add to the main <html> element.
+ * Calculate classes for the main <html> element.
  *
  * @since 1.0.0
  *
