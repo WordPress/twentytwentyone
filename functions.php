@@ -572,7 +572,7 @@ function twentytwentyone_customize_controls_enqueue_scripts() {
 		'twentytwentyone-customize-controls',
 		'backgroundColorNotice',
 		array(
-			'message' => esc_html__( 'You currently have dark mode enabled on your device. Changing the color will allow you to preview the light mode.', 'twentytwentyone' ),
+			'message' => esc_html__( 'You currently have dark mode enabled on your device. Changing the color picker will allow you to preview light mode.', 'twentytwentyone' ),
 		)
 	);
 }
