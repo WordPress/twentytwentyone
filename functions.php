@@ -567,6 +567,14 @@ function twentytwentyone_customize_controls_enqueue_scripts() {
 		get_theme_file_path( 'assets/js/customize.js' ),
 		true
 	);
+
+	wp_localize_script(
+		'twentytwentyone-customize-controls',
+		'backgroundColorNotice',
+		array(
+			'message' => esc_html__( 'You currently have dark mode enabled on your device. Changing the color will allow you to preview the light mode.', 'twentytwentyone' ),
+		)
+	);
 }
 add_action( 'customize_controls_enqueue_scripts', 'twentytwentyone_customize_controls_enqueue_scripts' );
 
