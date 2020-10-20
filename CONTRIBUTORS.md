@@ -49,6 +49,11 @@
 | @sarahricker | @sarahricker |
 | @enriquesanchez | @nrqsnchz |
 | @glauberm | @glauberglauber |
-
-
-
+| @sabernhardt | @sabernhardt |
+| @shamikakumar | @shamikakumar |
+| @kraftbj | @kraftbj |
+| @ItsJonQ | @ItsJonQ |
+| @jasmussen | @joen |
+| @ct-martin | @CTMartin0 |
+| @decrecementofeliz | @decrecementofeliz |
+| @bhautikvirani | @bhautikvirani |
