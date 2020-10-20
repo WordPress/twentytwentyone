@@ -586,10 +586,9 @@ add_action( 'customize_controls_enqueue_scripts', 'twentytwentyone_customize_con
  * @return void
  */
 function twentytwentyone_the_html_classes() {
-	$should_respect_color_scheme  = get_theme_mod( 'respect_user_color_preference', true );
-	$background_color             = get_theme_mod( 'background_color', 'D1E4DD' );
-	$light_colors_default_palette = array( '#D1E4DD', '#D1DFE4', '#D1D1E4', '#E4D1D1', '#E4DAD1', '#EEEADD', '#FFFFFF' );
-	if ( $should_respect_color_scheme && in_array( strtoupper( '#' . ltrim( $background_color, '#' ) ), $light_colors_default_palette, true ) ) {
-		echo 'class="has-default-light-palette-background"';
+	$background_color            = get_theme_mod( 'background_color', 'D1E4DD' );
+	$should_respect_color_scheme = get_theme_mod( 'respect_user_color_preference', true );
+	if ( $should_respect_color_scheme && 127 <= Twenty_Twenty_One_Custom_Colors::get_relative_luminance_from_hex( $background_color ) ) {
+		echo 'class="respect-color-scheme-preference"';
 	}
 }
