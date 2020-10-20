@@ -1008,11 +1008,11 @@ template {
 
 .entry-content > *.alignleft, .entry-content > *.alignright,
 .entry-content > *.alignleft:first-child + *,
-.entry-content > *.alignright:first-child + *, .entry-content > *.alignfull {
+.entry-content > *.alignright:first-child + *, .entry-content > *.alignfull.has-background {
 	margin-top: 0;
 }
 
-.entry-content > *:last-child, .entry-content > *.alignfull {
+.entry-content > *:last-child, .entry-content > *.alignfull.has-background {
 	margin-bottom: 0;
 }
 
