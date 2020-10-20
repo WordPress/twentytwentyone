@@ -163,8 +163,8 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 				array(
 					'type'            => 'checkbox',
 					'section'         => 'colors',
-					'label'           => esc_html__( 'Respect visitor\'s device light/dark mode settings', 'twentytwentyone' ),
-					'description'     => __( 'Show your site in dark mode if a visitor to your site requests it.', 'twentytwentyone' ),
+					'label'           => esc_html__( 'Respect visitor\'s device dark mode settings', 'twentytwentyone' ),
+					'description'     => __( 'Dark mode is a device setting. If a visitor to your site requests it, your site will be shown with a dark background and light text.', 'twentytwentyone' ),
 					'active_callback' => function( $value ) {
 						return 127 < Twenty_Twenty_One_Custom_Colors::get_relative_luminance_from_hex( get_theme_mod( 'background_color', 'D1E4DD' ) );
 					},
