@@ -155,12 +155,12 @@
 	&.alignright,
 	&.alignleft:first-child + *,
 	&.alignright:first-child + *,
-	&.alignfull {
+	&.alignfull.has-background {
 		margin-top: 0;
 	}
 
 	&:last-child,
-	&.alignfull {
+	&.alignfull.has-background {
 		margin-bottom: 0;
 	}
 
