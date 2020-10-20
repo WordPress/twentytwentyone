@@ -525,14 +525,23 @@ require get_template_directory() . '/inc/block-styles.php';
  */
 function twentytwentyone_customize_preview_init() {
 	wp_enqueue_script(
+		'twentytwentyone-customize-helpers',
+		get_theme_file_uri( '/assets/js/customize-helpers.js' ),
+		array(),
+		get_theme_file_path( 'assets/js/customize-helpers.js' ),
+		true
+	);
+
+	wp_enqueue_script(
 		'twentytwentyone-customize-preview',
 		get_theme_file_uri( '/assets/js/customize-preview.js' ),
-		array( 'customize-preview', 'customize-selective-refresh', 'jquery' ),
+		array( 'customize-preview', 'customize-selective-refresh', 'jquery', 'twentytwentyone-customize-helpers' ),
 		get_theme_file_path( 'assets/js/customize-preview.js' ),
 		true
 	);
 }
 add_action( 'customize_preview_init', 'twentytwentyone_customize_preview_init' );
+
 
 /**
  * Enqueue scripts for the customizer.
@@ -544,43 +553,22 @@ add_action( 'customize_preview_init', 'twentytwentyone_customize_preview_init' )
 function twentytwentyone_customize_controls_enqueue_scripts() {
 
 	wp_enqueue_script(
-		'twentytwentyone-customize-controls',
-		get_theme_file_uri( '/assets/js/customize.js' ),
-		array( 'customize-base', 'customize-controls', 'underscore', 'jquery' ),
-		get_theme_file_path( 'assets/js/customize.js' ),
+		'twentytwentyone-customize-helpers',
+		get_theme_file_uri( '/assets/js/customize-helpers.js' ),
+		array(),
+		get_theme_file_path( 'assets/js/customize-helpers.js' ),
 		true
 	);
 
-	$background_color_notice_vars = array(
-		'isDarkMode'                 => twentytwentyone_supports_dark_mode(),
-		'lightPaletteColors'         => array( '#D1E4DD', '#D1DFE4', '#D1D1E4', '#E4D1D1', '#E4DAD1', '#EEEADD', '#FFFFFF' ),
-		'darkModeEnabledMessage'     => esc_html__( 'You currently have dark mode enabled on your device. Changing the color will allow you to preview the light mode.', 'twentytwentyone' ),
-		'darkModeUnavailableMessage' => esc_html__( 'Selecting a custom color disables dark mode support. Select one of the light colors from the palette if you need to support dark mode.', 'twentytwentyone' ),
-	);
-
-	wp_localize_script(
+	wp_enqueue_script(
 		'twentytwentyone-customize-controls',
-		'backgroundColorNotice',
-		$background_color_notice_vars
+		get_theme_file_uri( '/assets/js/customize.js' ),
+		array( 'customize-base', 'customize-controls', 'underscore', 'jquery', 'twentytwentyone-customize-helpers' ),
+		get_theme_file_path( 'assets/js/customize.js' ),
+		true
 	);
 }
 add_action( 'customize_controls_enqueue_scripts', 'twentytwentyone_customize_controls_enqueue_scripts' );
-
-/**
- * Determine if the theme supports dark-mode based on the settings.
- *
- * @since 1.0.0
- *
- * @return bool
- */
-function twentytwentyone_supports_dark_mode() {
-	$background_color             = get_theme_mod( 'background_color', 'D1E4DD' );
-	$light_colors_default_palette = array( '#D1E4DD', '#D1DFE4', '#D1D1E4', '#E4D1D1', '#E4DAD1', '#EEEADD', '#FFFFFF' );
-	if ( in_array( strtoupper( '#' . ltrim( $background_color, '#' ) ), $light_colors_default_palette, true ) ) {
-		return true;
-	}
-	return false;
-}
 
 /**
  * Calculate classes for the main <html> element.
@@ -590,7 +578,10 @@ function twentytwentyone_supports_dark_mode() {
  * @return void
  */
 function twentytwentyone_the_html_classes() {
-	if ( twentytwentyone_supports_dark_mode() ) {
+	$should_respect_color_scheme  = get_theme_mod( 'respect_user_color_preference', true );
+	$background_color             = get_theme_mod( 'background_color', 'D1E4DD' );
+	$light_colors_default_palette = array( '#D1E4DD', '#D1DFE4', '#D1D1E4', '#E4D1D1', '#E4DAD1', '#EEEADD', '#FFFFFF' );
+	if ( $should_respect_color_scheme && in_array( strtoupper( '#' . ltrim( $background_color, '#' ) ), $light_colors_default_palette, true ) ) {
 		echo 'class="has-default-light-palette-background"';
 	}
 }

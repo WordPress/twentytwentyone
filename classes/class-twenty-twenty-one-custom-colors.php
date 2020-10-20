@@ -135,7 +135,8 @@ class Twenty_Twenty_One_Custom_Colors {
 			wp_add_inline_style( 'twenty-twenty-one-custom-color-overrides', $this->generate_custom_color_variables( 'editor' ) );
 		} 
 
-		if ( $this->is_default_palette() ) {
+		$should_respect_color_scheme = get_theme_mod( 'respect_user_color_preference', true ); // @phpstan-ignore-line. Passing true instead of default value of false to get_theme_mod.
+		if ( $should_respect_color_scheme && $this->is_default_palette() ) {
 			// Add dark mode variable overrides.
 			wp_add_inline_style( 'twenty-twenty-one-custom-color-overrides', '@media (prefers-color-scheme: dark) { :root .editor-styles-wrapper { --global--color-background: var(--global--color-dark-gray); --global--color-primary: var(--global--color-light-gray); --global--color-secondary: var(--global--color-light-gray); } }' );
 		}
@@ -193,7 +194,8 @@ class Twenty_Twenty_One_Custom_Colors {
 			$classes[] = 'is-background-light';
 		}
 
-		if ( $this->is_default_palette() ) {
+		$should_respect_color_scheme = get_theme_mod( 'respect_user_color_preference', true ); // @phpstan-ignore-line. Passing true instead of default value of false to get_theme_mod.
+		if ( $should_respect_color_scheme && $this->is_default_palette() ) {
 			$classes[] = 'has-default-light-palette-background';
 		}
 
