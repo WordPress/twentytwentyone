@@ -119,7 +119,7 @@ class Twenty_Twenty_One_Custom_Colors {
 		$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
 		if ( 'd1e4dd' !== strtolower( $background_color ) ) {
 			wp_add_inline_style( 'twenty-twenty-one-custom-color-overrides', $this->generate_custom_color_variables( 'editor' ) );
-		} 
+		}
 
 		$should_respect_color_scheme = get_theme_mod( 'respect_user_color_preference', true ); // @phpstan-ignore-line. Passing true instead of default value of false to get_theme_mod.
 		if ( $should_respect_color_scheme && self::get_relative_luminance_from_hex( $background_color ) > 127 ) {
