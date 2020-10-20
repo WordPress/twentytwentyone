@@ -3,7 +3,7 @@
 ( function() {
 	// Wait until the customizer has finished loading.
 	wp.customize.bind( 'ready', function() {
-		var supportsDarkMode = ( 127 < twentytwentyoneGetHexLum( wp.customize( 'background_color' ).get() ) && wp.customize( 'respect_user_color_preference' ).get() );
+		var supportsDarkMode = ( 127 <= twentytwentyoneGetHexLum( wp.customize( 'background_color' ).get() ) && wp.customize( 'respect_user_color_preference' ).get() );
 
 		// Hide the "respect_user_color_preference" setting if the background-color is dark.
 		if ( 127 > twentytwentyoneGetHexLum( wp.customize( 'background_color' ).get() ) ) {
