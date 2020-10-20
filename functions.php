@@ -525,14 +525,50 @@ require get_template_directory() . '/inc/block-styles.php';
  */
 function twentytwentyone_customize_preview_init() {
 	wp_enqueue_script(
+		'twentytwentyone-customize-helpers',
+		get_theme_file_uri( '/assets/js/customize-helpers.js' ),
+		array(),
+		get_theme_file_path( 'assets/js/customize-helpers.js' ),
+		true
+	);
+
+	wp_enqueue_script(
 		'twentytwentyone-customize-preview',
 		get_theme_file_uri( '/assets/js/customize-preview.js' ),
-		array( 'customize-preview', 'customize-selective-refresh', 'jquery' ),
+		array( 'customize-preview', 'customize-selective-refresh', 'jquery', 'twentytwentyone-customize-helpers' ),
 		get_theme_file_path( 'assets/js/customize-preview.js' ),
 		true
 	);
 }
 add_action( 'customize_preview_init', 'twentytwentyone_customize_preview_init' );
+
+
+/**
+ * Enqueue scripts for the customizer.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function twentytwentyone_customize_controls_enqueue_scripts() {
+
+	wp_enqueue_script(
+		'twentytwentyone-customize-helpers',
+		get_theme_file_uri( '/assets/js/customize-helpers.js' ),
+		array(),
+		get_theme_file_path( 'assets/js/customize-helpers.js' ),
+		true
+	);
+
+	wp_enqueue_script(
+		'twentytwentyone-customize-controls',
+		get_theme_file_uri( '/assets/js/customize.js' ),
+		array( 'customize-base', 'customize-controls', 'underscore', 'jquery', 'twentytwentyone-customize-helpers' ),
+		get_theme_file_path( 'assets/js/customize.js' ),
+		true
+	);
+}
+add_action( 'customize_controls_enqueue_scripts', 'twentytwentyone_customize_controls_enqueue_scripts' );
 
 /**
  * Calculate classes for the main <html> element.
