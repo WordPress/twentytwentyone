@@ -113,7 +113,7 @@
 		@include media(mobile-only) {
 			height: 100vh;
 			z-index: 499;
-			border-left: 4px solid transparent;
+			border: 2px solid transparent;
 
 			.has-logo.has-title-and-tagline & {
 				position: fixed;
@@ -129,7 +129,7 @@
 			}
 
 			&:focus {
-				border-left: 4px solid var(--global--color-primary);
+				border: 2px solid var(--global--color-primary);
 			}
 		}
 	}
