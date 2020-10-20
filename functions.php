@@ -40,9 +40,8 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 
 		/*
 		 * Let WordPress manage the document title.
-		 * By adding theme support, we declare that this theme does not use a
-		 * hard-coded <title> tag in the document head, and expect WordPress to
-		 * provide it for us.
+		 * This theme does not use a hard-coded <title> tag in the document head,
+		 * WordPress will provide it for us.
 		 */
 		add_theme_support( 'title-tag' );
 
@@ -536,7 +535,7 @@ function twentytwentyone_customize_preview_init() {
 add_action( 'customize_preview_init', 'twentytwentyone_customize_preview_init' );
 
 /**
- * Calculate any classes we may want to add to the main <html> element.
+ * Calculate classes for the main <html> element.
  *
  * @since 1.0.0
  *

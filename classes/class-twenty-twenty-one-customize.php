@@ -40,8 +40,8 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 		public function register( $wp_customize ) {
 
 			// Change site-title & description to postMessage.
-			$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage'; // @phpstan-ignore-line. We will assume that this setting exist.
-			$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage'; // @phpstan-ignore-line. We will assume that this setting exist.
+			$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage'; // @phpstan-ignore-line. Assume that this setting exists.
+			$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage'; // @phpstan-ignore-line. Assume that this setting exists.
 
 			// Add partial for blogname.
 			$wp_customize->selective_refresh->add_partial(
@@ -126,7 +126,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 			// Get the palette from theme-supports.
 			$palette = get_theme_support( 'editor-color-palette' );
 
-			// Build the colors array from our theme-support.
+			// Build the colors array from theme-support.
 			$colors = array();
 			if ( isset( $palette[0] ) && is_array( $palette[0] ) ) {
 				foreach ( $palette[0] as $palette_color ) {
