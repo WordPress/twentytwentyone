@@ -49,6 +49,13 @@ h1.page-title {
 			.posted-on {
 				margin-right: calc(0.5 * var(--global--spacing-unit));
 			}
+
+			.posted-on,
+			.byline,
+			.cat-links,
+			.tags-links {
+				display: block;
+			}
 		}
 	}
 }
