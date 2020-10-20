@@ -113,6 +113,7 @@
 		@include media(mobile-only) {
 			height: 100vh;
 			z-index: 499;
+			border: 2px solid transparent;
 
 			.has-logo.has-title-and-tagline & {
 				position: fixed;
@@ -125,6 +126,10 @@
 
 			.admin-bar & {
 				height: calc(100vh - 46px);
+			}
+
+			&:focus {
+				border: 2px solid var(--global--color-primary);
 			}
 		}
 	}

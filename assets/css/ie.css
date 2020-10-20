@@ -5705,6 +5705,7 @@ h1.page-title {
 	.primary-navigation > .primary-menu-container {
 		height: 100vh;
 		z-index: 499;
+		border: 2px solid transparent;
 	}
 	.has-logo.has-title-and-tagline .primary-navigation > .primary-menu-container {
 		position: fixed;
@@ -5715,6 +5716,9 @@ h1.page-title {
 	}
 	.admin-bar .primary-navigation > .primary-menu-container {
 		height: calc(100vh - 46px);
+	}
+	.primary-navigation > .primary-menu-container:focus {
+		border: 2px solid #28303d;
 	}
 }
 
