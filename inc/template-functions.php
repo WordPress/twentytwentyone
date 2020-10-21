@@ -472,3 +472,43 @@ function twenty_twenty_one_password_form( $post = 0 ) {
 	return $output;
 }
 add_filter( 'the_password_form', 'twenty_twenty_one_password_form' );
+
+/**
+ * Add night/day switch.
+ *
+ * Inspired from https://codepen.io/waynedunkley/pen/YybgGo (MIT-licensed)
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function twenty_twenty_one_night_switch() {
+	if (
+		! get_theme_mod( 'respect_user_color_preference', true ) ||
+		127 > Twenty_Twenty_One_Custom_Colors::get_relative_luminance_from_hex( get_theme_mod( 'background_color', 'D1E4DD' ) )
+	) {
+		return;
+	}
+	?>
+	<div id="night-day-toggle">
+		<input type="checkbox" id="night-day-toggle-input"/>
+		<label for="night-day-toggle-input" class="toggle">
+			<span class="toggle__handler">
+				<span class="crater crater--1"></span>
+				<span class="crater crater--2"></span>
+				<span class="crater crater--3"></span>
+			</span>
+			<span class="star star--1"></span>
+			<span class="star star--2"></span>
+			<span class="star star--3"></span>
+			<span class="star star--4"></span>
+			<span class="star star--5"></span>
+			<span class="star star--6"></span>
+		</label>
+	</div>
+	<script>
+		<?php include get_template_directory() . '/assets/js/night-day.js'; ?>
+	</script>
+	<?php
+}
+add_action( 'wp_footer', 'twenty_twenty_one_night_switch' );
