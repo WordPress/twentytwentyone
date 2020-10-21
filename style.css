@@ -5005,7 +5005,7 @@ footer {
 }
 
 #night-day-toggle input + label:before {
-	content: '';
+	content: "";
 	width: inherit;
 	height: inherit;
 	border-radius: inherit;
@@ -5016,7 +5016,7 @@ footer {
 }
 
 #night-day-toggle input + label:after {
-	content: '';
+	content: "";
 	width: 8px;
 	height: 8px;
 	border-radius: 50%;
