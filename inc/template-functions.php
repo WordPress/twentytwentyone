@@ -507,7 +507,7 @@ function twenty_twenty_one_night_switch() {
 		</label>
 	</div>
 	<script>
-		<?php include get_template_directory() . '/assets/js/night-day.js'; ?>
+		<?php include get_template_directory() . '/assets/js/night-day.js'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude ?>
 	</script>
 	<?php
 }
