@@ -1,36 +1,92 @@
 
+.wp-block-file .wp-block-file__button:active,
+.wp-block-search .wp-block-search__button:active {
+	color: var(--button--color-text-active);
+	background-color: var(--button--color-background-active);
+}
+
+.wp-block-file .wp-block-file__button:hover,
+.wp-block-search .wp-block-search__button:hover {
+	color: var(--button--color-text-hover);
+	background: transparent;
+}
+
 .wp-block-button__link {
 	// Extend button style
 	@extend %button-style;
+}
 
-	// Outline Style
-	&.is-style-outline,
-	.is-style-outline & {
-		color: var(--button--color-background);
-		background: transparent;
-		border: var(--button--border-width) solid currentColor;
+/**
+ * Block Options
+ */
+.wp-block-button {
 
-		&:visited {
+	&:not(.is-style-outline) {
+
+		.wp-block-button__link {
+
+			&:not(.has-background):not(.has-text-color) {
+
+				&:active {
+					color: var(--button--color-text-active);
+					background-color: var(--button--color-background-active);
+				}
+
+				&:hover {
+					color: var(--button--color-text-hover);
+					background: transparent;
+				}
+			}
+
+			&.has-background,
+			&.has-text-color {
+
+				&:active,
+				&:hover {
+					outline-offset: -7px;
+					outline: 2px dotted currentColor;
+				}
+			}
+		}
+	}
+
+	// Outline Style.
+	&.is-style-outline {
+
+		.wp-block-button__link {
+
 			color: var(--button--color-background);
-		}
-
-		&:active,
-		&:hover {
-			background-color: var(--button--color-background);
-			color: var(--button--color-text);
-			border: var(--button--border-width) solid var(--button--color-background);
-		}
-
-		&:focus,
-		&.has-focus {
-			outline-offset: -7px;
 			background: transparent;
+			border: var(--button--border-width) solid currentColor;
+			padding: var(--button--padding-vertical) var(--button--padding-horizontal);
+
+			&:visited {
+				color: var(--button--color-background);
+			}
+
+			&:active,
+			&:hover {
+				background-color: var(--button--color-background);
+				color: var(--button--color-text);
+				border: var(--button--border-width) solid var(--button--color-background);
+			}
+
+			&.has-background,
+			&.has-text-color {
+
+				&:active,
+				&:hover {
+					outline-offset: -7px;
+					background: transparent;
+					outline: 2px dotted currentColor;
+					border: var(--button--border-width) solid currentColor;
+				}
+			}
 		}
 	}
 
 	// Squared Style
-	&.is-style-squared,
-	.is-style-squared & {
+	&.is-style-squared {
 		border-radius: 0;
 	}
 }

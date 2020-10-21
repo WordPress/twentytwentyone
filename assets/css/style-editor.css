@@ -255,17 +255,7 @@
 	margin-top: -calc(.5em * var(--button--line-height) + -.39);
 }
 
-.wp-block-button__link:active, .wp-block-file .wp-block-file__button:active, .wp-block-search .wp-block-search__button:active {
-	color: var(--button--color-text-active);
-	background-color: var(--button--color-background-active);
-}
-
-.wp-block-button__link:hover, .wp-block-file .wp-block-file__button:hover, .wp-block-search .wp-block-search__button:hover {
-	color: var(--button--color-text-hover);
-	background: transparent;
-}
-
-.wp-block-button__link:focus, .wp-block-file .wp-block-file__button:focus, .wp-block-search .wp-block-search__button:focus, .has-focus.wp-block-button__link, .wp-block-file .has-focus.wp-block-file__button, .wp-block-search .has-focus.wp-block-search__button {
+.wp-block-button__link:focus, .wp-block-file .wp-block-file__button:focus, .wp-block-search .wp-block-search__button:focus {
 	outline-offset: -4px;
 	outline: 2px dotted currentColor;
 }
@@ -482,35 +472,61 @@ a:hover {
 	color: var(--wp--style--color--link, var(--global--color-primary));
 }
 
-.wp-block-button__link.is-style-outline,
-.is-style-outline .wp-block-button__link {
+.wp-block-file .wp-block-file__button:active,
+.wp-block-search .wp-block-search__button:active {
+	color: var(--button--color-text-active);
+	background-color: var(--button--color-background-active);
+}
+
+.wp-block-file .wp-block-file__button:hover,
+.wp-block-search .wp-block-search__button:hover {
+	color: var(--button--color-text-hover);
+	background: transparent;
+}
+
+/**
+ * Block Options
+ */
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-background):not(.has-text-color):active {
+	color: var(--button--color-text-active);
+	background-color: var(--button--color-background-active);
+}
+
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-background):not(.has-text-color):hover {
+	color: var(--button--color-text-hover);
+	background: transparent;
+}
+
+.wp-block-button:not(.is-style-outline) .wp-block-button__link.has-background:active, .wp-block-button:not(.is-style-outline) .wp-block-button__link.has-background:hover, .wp-block-button:not(.is-style-outline) .wp-block-button__link.has-text-color:active, .wp-block-button:not(.is-style-outline) .wp-block-button__link.has-text-color:hover {
+	outline-offset: -7px;
+	outline: 2px dotted currentColor;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
 	color: var(--button--color-background);
 	background: transparent;
 	border: var(--button--border-width) solid currentColor;
+	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
 
-.wp-block-button__link.is-style-outline:visited,
-.is-style-outline .wp-block-button__link:visited {
+.wp-block-button.is-style-outline .wp-block-button__link:visited {
 	color: var(--button--color-background);
 }
 
-.wp-block-button__link.is-style-outline:active, .wp-block-button__link.is-style-outline:hover,
-.is-style-outline .wp-block-button__link:active,
-.is-style-outline .wp-block-button__link:hover {
+.wp-block-button.is-style-outline .wp-block-button__link:active, .wp-block-button.is-style-outline .wp-block-button__link:hover {
 	background-color: var(--button--color-background);
 	color: var(--button--color-text);
 	border: var(--button--border-width) solid var(--button--color-background);
 }
 
-.wp-block-button__link.is-style-outline:focus, .wp-block-button__link.is-style-outline.has-focus,
-.is-style-outline .wp-block-button__link:focus,
-.is-style-outline .wp-block-button__link.has-focus {
+.wp-block-button.is-style-outline .wp-block-button__link.has-background:active, .wp-block-button.is-style-outline .wp-block-button__link.has-background:hover, .wp-block-button.is-style-outline .wp-block-button__link.has-text-color:active, .wp-block-button.is-style-outline .wp-block-button__link.has-text-color:hover {
 	outline-offset: -7px;
 	background: transparent;
+	outline: 2px dotted currentColor;
+	border: var(--button--border-width) solid currentColor;
 }
 
-.wp-block-button__link.is-style-squared,
-.is-style-squared .wp-block-button__link {
+.wp-block-button.is-style-squared {
 	border-radius: 0;
 }
 
