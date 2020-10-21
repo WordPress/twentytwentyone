@@ -122,22 +122,11 @@ function twentytwentyoneExpandSubMenu( el ) { // eslint-disable-line no-unused-v
 		} );
 
 		document.getElementById( 'site-navigation' ).querySelectorAll( '.menu-wrapper > .menu-item-has-children' ).forEach( function( li ) {
-			var i;
 			li.addEventListener( 'mouseenter', function() {
-				if ( 'false' === this.querySelector( '.sub-menu-toggle' ).getAttribute( 'aria-expanded' ) ) {
-					for ( i = 0; i < this.children.length; i++ ) {
-						if ( this.children[ i ].classList.contains( 'sub-menu-toggle' ) ) {
-							this.children[ i ].setAttribute( 'aria-expanded', 'true' );
-						}
-					}
-				}
+				this.querySelector( '.sub-menu-toggle' ).setAttribute( 'aria-expanded', 'true' );
 			} );
 			li.addEventListener( 'mouseleave', function() {
-				for ( i = 0; i < this.children.length; i++ ) {
-					if ( this.children[ i ].classList.contains( 'sub-menu-toggle' ) ) {
-						this.children[ i ].setAttribute( 'aria-expanded', 'false' );
-					}
-				}
+				this.querySelector( '.sub-menu-toggle' ).setAttribute( 'aria-expanded', 'false' );
 			} );
 		} );
 	};
