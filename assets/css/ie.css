@@ -5769,7 +5769,7 @@ h1.page-title {
 	.primary-navigation #toggle-menu {
 		display: none;
 	}
-	.primary-navigation > .primary-menu-container ul > li:not(.hover) .sub-menu-toggle[aria-expanded="false"] ~ ul {
+	.primary-navigation > .primary-menu-container ul > li .sub-menu-toggle[aria-expanded="false"] ~ ul {
 		display: none;
 	}
 	.admin-bar .primary-navigation {
@@ -5856,14 +5856,6 @@ h1.page-title {
 }
 
 .primary-navigation > div > .menu-wrapper .sub-menu-toggle[aria-expanded="true"] .icon-plus {
-	display: none;
-}
-
-.primary-navigation > div > .menu-wrapper .hover .sub-menu-toggle .icon-minus {
-	display: flex;
-}
-
-.primary-navigation > div > .menu-wrapper .hover .sub-menu-toggle .icon-plus {
 	display: none;
 }
 
