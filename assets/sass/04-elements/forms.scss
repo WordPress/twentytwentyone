@@ -50,6 +50,13 @@ input[type="color"] {
 	height: calc(4 * var(--form--spacing-unit));
 }
 
+input[type="email"],
+input[type="url"] {
+
+	/*rtl:ignore*/
+	direction: ltr;
+}
+
 select {
 	border: var(--form--border-width) solid var(--form--border-color);
 	color: var(--form--color-text);
