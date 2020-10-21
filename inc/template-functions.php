@@ -490,7 +490,7 @@ function twenty_twenty_one_night_switch() {
 		return;
 	}
 	?>
-	<div id="night-day-toggle">
+	<div id="night-day-toggle" aria-hidden="true">
 		<input type="checkbox" id="night-day-toggle-input"/>
 		<label for="night-day-toggle-input" class="toggle">
 			<span class="toggle__handler">
