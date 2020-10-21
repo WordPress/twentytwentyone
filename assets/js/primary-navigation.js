@@ -39,13 +39,6 @@ function twentytwentyoneCollapseMenuOnClickOutside( event ) {
  * @param {Element} el - The element.
  */
 function twentytwentyoneExpandSubMenu( el ) { // eslint-disable-line no-unused-vars
-	// Close submenu that was opened from a hover action.
-	// We'll return early in this case to avoid changing the aria-expanded attribute.
-	if ( el.parentNode.classList.contains( 'hover' ) ) {
-		el.parentNode.classList.remove( 'hover' );
-		return;
-	}
-
 	// Close other expanded items.
 	el.closest( 'nav' ).querySelectorAll( '.sub-menu-toggle' ).forEach( function( button ) {
 		if ( button !== el ) {
@@ -129,13 +122,22 @@ function twentytwentyoneExpandSubMenu( el ) { // eslint-disable-line no-unused-v
 		} );
 
 		document.getElementById( 'site-navigation' ).querySelectorAll( '.menu-wrapper > .menu-item-has-children' ).forEach( function( li ) {
+			var i;
 			li.addEventListener( 'mouseenter', function() {
 				if ( 'false' === this.querySelector( '.sub-menu-toggle' ).getAttribute( 'aria-expanded' ) ) {
-					this.classList.add( 'hover' );
+					for ( i = 0; i < this.children.length; i++ ) {
+						if ( this.children[ i ].classList.contains( 'sub-menu-toggle' ) ) {
+							this.children[ i ].setAttribute( 'aria-expanded', 'true' );
+						}
+					}
 				}
 			} );
 			li.addEventListener( 'mouseleave', function() {
-				this.classList.remove( 'hover' );
+				for ( i = 0; i < this.children.length; i++ ) {
+					if ( this.children[ i ].classList.contains( 'sub-menu-toggle' ) ) {
+						this.children[ i ].setAttribute( 'aria-expanded', 'false' );
+					}
+				}
 			} );
 		} );
 	};
