@@ -1422,6 +1422,35 @@ input[type="range"]::-ms-thumb {
 	cursor: pointer;
 }
 
+fieldset {
+	display: grid;
+	border-color: var(--global--color-secondary);
+	padding: var(--global--spacing-horizontal);
+}
+
+fieldset legend {
+	font-size: var(--global--font-size-lg);
+}
+
+fieldset input[type="submit"] {
+	max-width: max-content;
+}
+
+fieldset input:not([type="submit"]) {
+	margin-bottom: var(--global--spacing-unit);
+}
+
+fieldset input[type="radio"], fieldset input[type="checkbox"] {
+	margin-bottom: 0;
+}
+
+fieldset input[type="radio"] + label,
+fieldset input[type="checkbox"] + label {
+	font-size: var(--form--font-size);
+	padding-left: 0;
+	margin-bottom: var(--global--spacing-unit);
+}
+
 img {
 	display: block;
 	height: auto;
