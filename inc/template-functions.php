@@ -476,7 +476,7 @@ add_filter( 'the_password_form', 'twenty_twenty_one_password_form' );
 /**
  * Add night/day switch.
  *
- * Inspired from https://codepen.io/waynedunkley/pen/YybgGo (MIT-licensed)
+ * Inspired from https://codepen.io/aaroniker/pen/KGpXZo (MIT-licensed)
  *
  * @since 1.0.0
  *
@@ -492,20 +492,7 @@ function twenty_twenty_one_night_switch() {
 	?>
 	<div id="night-day-toggle" aria-hidden="true">
 		<input type="checkbox" id="night-day-toggle-input"/>
-		<label for="night-day-toggle-input" class="toggle">
-			<span class="toggle__handler">
-				<span class="crater crater--1"></span>
-				<span class="crater crater--2"></span>
-				<span class="crater crater--3"></span>
-			</span>
-			<span class="star star--1"></span>
-			<span class="star star--2"></span>
-			<span class="star star--3"></span>
-			<span class="star star--4"></span>
-			<span class="star star--5"></span>
-			<span class="star star--6"></span>
-		</label>
-	</div>
+		<label for="night-day-toggle-input"></label>
 	<script>
 		<?php include get_template_directory() . '/assets/js/night-day.js'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude ?>
 	</script>
