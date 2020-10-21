@@ -1800,6 +1800,10 @@ input[type="color"] {
 	height: 40px;
 }
 
+input:placeholder-shown {
+	background: #fff;
+}
+
 select {
 	border: 3px solid #39414d;
 	color: #28303d;

@@ -50,6 +50,10 @@ input[type="color"] {
 	height: calc(4 * var(--form--spacing-unit));
 }
 
+input:placeholder-shown {
+	background: var(--global--color-white);
+}
+
 select {
 	border: var(--form--border-width) solid var(--form--border-color);
 	color: var(--form--color-text);
