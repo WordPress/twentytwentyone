@@ -1,5 +1,7 @@
 .wp-block-code code {
 	font-size: var(--global--font-size-xs);
+	white-space: pre !important;
+	overflow-x: auto;
 }
 
 .wp-block-code {
@@ -8,4 +10,5 @@
 	border-style: solid;
 	border-width: 0.1rem;
 	padding: var(--global--spacing-unit);
+	color: currentColor;
 }
