@@ -5278,6 +5278,15 @@ h1.page-title {
 	margin-top: 60px;
 }
 
+.archive .entry-footer .cat-links,
+.archive .entry-footer .tags-links,
+.search .entry-footer .cat-links,
+.search .entry-footer .tags-links,
+.blog .entry-footer .cat-links,
+.blog .entry-footer .tags-links {
+	display: block;
+}
+
 .archive.logged-in .entry-footer .posted-on {
 	margin-right: 10px;
 }
