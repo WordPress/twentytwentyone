@@ -490,9 +490,11 @@ function twenty_twenty_one_night_switch() {
 		return;
 	}
 	?>
-	<div id="night-day-toggle" aria-hidden="true">
+	<div id="night-day-toggle">
 		<input type="checkbox" id="night-day-toggle-input"/>
-		<label for="night-day-toggle-input"></label>
+		<label for="night-day-toggle-input">
+			<span class="screen-reader-text"><?php esc_html_e( 'Toggle color scheme', 'twentytwentyone' ); ?></span>
+		</label>
 	<script>
 		<?php include get_template_directory() . '/assets/js/night-day.js'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude ?>
 	</script>

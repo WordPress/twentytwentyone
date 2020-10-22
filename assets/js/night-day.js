@@ -28,5 +28,13 @@ function twentytwentyoneNightDayToggler() {
 			window.localStorage.setItem( 'twentytwentyoneDarkMode', 'no' );
 		}
 	} );
+
+	toggler.addEventListener( 'focus', function() {
+		document.getElementById( 'night-day-toggle' ).classList.add( 'focused' );
+	} );
+
+	toggler.addEventListener( 'blur', function() {
+		document.getElementById( 'night-day-toggle' ).classList.remove( 'focused' );
+	} );
 }
 twentytwentyoneNightDayToggler();

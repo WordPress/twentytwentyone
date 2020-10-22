@@ -5014,23 +5014,22 @@ footer {
 	position: fixed;
 	bottom: 1em;
 	left: 1em;
+	padding: 24px;
 }
 
-#night-day-toggle input {
-	display: none;
-}
-
-#night-day-toggle input + label {
+#night-day-toggle label {
 	border-radius: 50%;
 	width: 36px;
 	height: 36px;
-	position: relative;
+	position: absolute;
+	top: 5px;
+	right: 5px;
 	box-shadow: inset -16px -16px 0 0 var(--global--color-dark-gray);
 	transform: scale(1) rotate(2deg);
 	transition: box-shadow .5s ease 0s, transform .4s ease .1s;
 }
 
-#night-day-toggle input + label:before {
+#night-day-toggle label:before {
 	content: "";
 	width: inherit;
 	height: inherit;
@@ -5041,7 +5040,7 @@ footer {
 	transition: background .3s ease;
 }
 
-#night-day-toggle input + label:after {
+#night-day-toggle label:after {
 	content: "";
 	width: 8px;
 	height: 8px;
@@ -5053,6 +5052,14 @@ footer {
 	box-shadow: 0 -23px 0 #fff, 0 23px 0 #fff, -23px 0 0 #fff, 23px 0 0 #fff, -15px 15px 0 #fff, 15px 15px 0 #fff, -15px -15px 0 #fff, 15px -15px 0 #fff;
 	transform: scale(0);
 	transition: all .3s ease;
+}
+
+#night-day-toggle input {
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
 }
 
 #night-day-toggle input:checked + label {
@@ -5069,4 +5076,8 @@ footer {
 #night-day-toggle input:checked + label:after {
 	transform: scale(1.5);
 	transition: transform .5s ease .15s;
+}
+
+#night-day-toggle.focused {
+	box-shadow: 0 0 0 2px currentColor;
 }
