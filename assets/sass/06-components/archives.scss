@@ -42,6 +42,14 @@ h1.page-title {
 		}
 	}
 
+	.entry-footer {
+
+		.cat-links,
+		.tags-links {
+			display: block;
+		}
+	}
+
 	&.logged-in {
 
 		.entry-footer {
