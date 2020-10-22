@@ -21,6 +21,7 @@
  */
 .wp-block-button {
 
+	// Target the default and filled button states. 
 	&:not(.is-style-outline) {
 
 		.wp-block-button__link {
