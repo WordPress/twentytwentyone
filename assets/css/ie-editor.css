@@ -1553,8 +1553,6 @@ p.has-background {
 
 .wp-block-pullquote {
 	padding: 40px 0;
-	margin-left: 0;
-	margin-right: 0;
 	text-align: center;
 	border-width: 3px;
 	border-bottom-style: solid;
@@ -1616,6 +1614,8 @@ p.has-background {
 }
 
 .wp-block-pullquote.is-style-solid-color {
+	margin-left: auto;
+	margin-right: auto;
 	padding: 50px;
 	border-width: 3px;
 	border-style: solid;
