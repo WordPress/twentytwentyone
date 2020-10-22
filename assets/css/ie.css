@@ -2116,7 +2116,8 @@ i {
 }
 
 pre {
-	white-space: pre-wrap;
+	white-space: pre;
+	overflow-x: auto;
 }
 
 /*
@@ -2264,7 +2265,9 @@ a:hover {
 
 .wp-block-code code {
 	font-size: 1rem;
-	overflow: auto;
+	white-space: pre;
+	overflow-x: auto;
+	display: block;
 }
 
 .wp-block-columns .wp-block-column > * {
@@ -3529,6 +3532,11 @@ p.has-text-color a {
 	.post-password-form__submit {
 		margin-left: 10px;
 	}
+}
+
+pre.wp-block-preformatted {
+	overflow-x: auto;
+	white-space: pre;
 }
 
 .wp-block-pullquote {

@@ -480,6 +480,8 @@ a:hover {
 
 .wp-block-code code {
 	font-size: 1rem;
+	white-space: pre !important;
+	overflow-x: auto;
 }
 
 .wp-block-code {
@@ -488,6 +490,7 @@ a:hover {
 	border-style: solid;
 	border-width: 0.1rem;
 	padding: 20px;
+	color: currentColor;
 }
 
 .wp-block-cover {
@@ -1549,6 +1552,12 @@ p {
 
 p.has-background {
 	padding: 20px;
+}
+
+pre.wp-block-preformatted {
+	overflow-x: auto;
+	white-space: pre !important;
+	font-size: 1rem;
 }
 
 .wp-block-pullquote {
