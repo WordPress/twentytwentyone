@@ -3545,6 +3545,10 @@ h1.entry-title {
 	display: block;
 }
 
+.entry-footer > span {
+	display: inline-block;
+}
+
 .entry-footer a {
 	color: currentColor;
 }
