@@ -26,6 +26,7 @@
 
 		.wp-block-button__link {
 
+			// Apply default button styles when custom text and background colors are not selected.
 			&:not(.has-background):not(.has-text-color) {
 
 				&:active {
