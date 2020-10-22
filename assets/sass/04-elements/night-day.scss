@@ -1,46 +1,13 @@
 #night-day-toggle {
 	cursor: pointer;
 	position: fixed;
-	bottom: 1em;
-	right: 1em;
-	padding: 24px;
+	bottom: 5px;
+	right: 5px;
+	padding: 5px;
 
-	label {
-		border-radius: 50%;
-		width: 36px;
-		height: 36px;
-		position: absolute;
-		top: 5px;
-		left: 5px;
-		box-shadow: inset 16px -16px 0 0 var(--global--color-dark-gray);
-		transform: scale(1) rotate(-2deg);
-		transition: box-shadow .5s ease 0s, transform .4s ease .1s;
-
-		&:before {
-			content: "";
-			width: inherit;
-			height: inherit;
-			border-radius: inherit;
-			position: absolute;
-			left: 0;
-			top: 0;
-			transition: background .3s ease;
-		}
-
-		&:after {
-			content: "";
-			width: 8px;
-			height: 8px;
-			border-radius: 50%;
-			margin: -4px 0 0 -4px;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			box-shadow: 0 -23px 0 #fff, 0 23px 0 #fff, 23px 0 0 #fff, -23px 0 0 #fff, 15px 15px 0 #fff, -15px 15px 0 #fff, 15px -15px 0 #fff, -15px -15px 0 #fff;
-			transform: scale(0);
-			transition: all .3s ease;
-		}
-	}
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	input {
 		width: 1px;
@@ -48,20 +15,57 @@
 		opacity: 0;
 		overflow: hidden;
 		position: absolute;
+	}
+	*,
+	*:after,
+	*:before {
+		box-sizing: border-box;
+	}
+
+	label {
+		position: relative;
+		display: block;
+		width: 60px;
+		height: 33px;
+		border-radius: 33px;
+		background-color: currentColor;
+		overflow: hidden;
+		cursor: pointer;
+		margin: 0;
+
+		&:before,
+		&:after {
+			display: block;
+			position: absolute;
+			content: "";
+			width: 24px;
+			height: 24px;
+			border-radius: 50%;
+			top: 4.5px;
+			left: 4.5px;
+			transition: .1s ease-in-out;
+		}
+		&:before {
+			background-color: var(--global--color-background);
+		}
+
+		&:after {
+			background-color: currentColor;
+			left: -19px;
+			transform: scale(0.00001);
+		}
+	}
+
+	input[type="checkbox"] {
 
 		&:checked + label {
-			box-shadow: inset 32px -32px 0 0 var(--global--color-dark-gray);
-			transform: scale(.5) rotate(0deg);
-			transition: transform .3s ease .1s, box-shadow .2s ease 0s;
-
 			&:before {
-				background: #fff;
-				transition: background .3s ease .1s;
+				background-color: var(--global--color-background);
+				transform: translateX(27px);
 			}
 
 			&:after {
-				transform: scale(1.5);
-				transition: transform .5s ease .15s;
+				transform: translateX(40px) scale(1);
 			}
 		}
 	}

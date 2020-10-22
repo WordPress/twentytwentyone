@@ -6782,46 +6782,12 @@ footer {
 #night-day-toggle {
 	cursor: pointer;
 	position: fixed;
-	bottom: 1em;
-	right: 1em;
-	padding: 24px;
-}
-
-#night-day-toggle label {
-	border-radius: 50%;
-	width: 36px;
-	height: 36px;
-	position: absolute;
-	top: 5px;
-	left: 5px;
-	box-shadow: inset 16px -16px 0 0 #28303d;
-	transform: scale(1) rotate(-2deg);
-	transition: box-shadow .5s ease 0s, transform .4s ease .1s;
-}
-
-#night-day-toggle label:before {
-	content: "";
-	width: inherit;
-	height: inherit;
-	border-radius: inherit;
-	position: absolute;
-	left: 0;
-	top: 0;
-	transition: background .3s ease;
-}
-
-#night-day-toggle label:after {
-	content: "";
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	margin: -4px 0 0 -4px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	box-shadow: 0 -23px 0 #fff, 0 23px 0 #fff, 23px 0 0 #fff, -23px 0 0 #fff, 15px 15px 0 #fff, -15px 15px 0 #fff, 15px -15px 0 #fff, -15px -15px 0 #fff;
-	transform: scale(0);
-	transition: all .3s ease;
+	bottom: 5px;
+	right: 5px;
+	padding: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #night-day-toggle input {
@@ -6832,20 +6798,53 @@ footer {
 	position: absolute;
 }
 
-#night-day-toggle input:checked + label {
-	box-shadow: inset 32px -32px 0 0 #28303d;
-	transform: scale(0.5) rotate(0deg);
-	transition: transform .3s ease .1s, box-shadow .2s ease 0s;
+#night-day-toggle *,
+#night-day-toggle *:after,
+#night-day-toggle *:before {
+	box-sizing: border-box;
 }
 
-#night-day-toggle input:checked + label:before {
-	background: #fff;
-	transition: background .3s ease .1s;
+#night-day-toggle label {
+	position: relative;
+	display: block;
+	width: 60px;
+	height: 33px;
+	border-radius: 33px;
+	background-color: currentColor;
+	overflow: hidden;
+	cursor: pointer;
+	margin: 0;
 }
 
-#night-day-toggle input:checked + label:after {
-	transform: scale(1.5);
-	transition: transform .5s ease .15s;
+#night-day-toggle label:before, #night-day-toggle label:after {
+	display: block;
+	position: absolute;
+	content: "";
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	top: 4.5px;
+	left: 4.5px;
+	transition: .1s ease-in-out;
+}
+
+#night-day-toggle label:before {
+	background-color: #d1e4dd;
+}
+
+#night-day-toggle label:after {
+	background-color: currentColor;
+	left: -19px;
+	transform: scale(0.00001);
+}
+
+#night-day-toggle input[type="checkbox"]:checked + label:before {
+	background-color: #d1e4dd;
+	transform: translateX(27px);
+}
+
+#night-day-toggle input[type="checkbox"]:checked + label:after {
+	transform: translateX(40px) scale(1);
 }
 
 #night-day-toggle.focused {
