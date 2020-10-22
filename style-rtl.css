@@ -1109,21 +1109,9 @@ button {
 
 /* Category 04 can contain any default HTML element. Do not add classes here, just give the elements some basic styles. */
 blockquote {
-	margin: 0;
 	padding: 0;
-}
-
-blockquote p {
-	font-size: var(--heading--font-size-h4);
-	letter-spacing: var(--heading--letter-spacing-h4);
-	line-height: var(--heading--line-height-h4);
-}
-
-blockquote cite,
-blockquote footer {
-	color: var(--global--color-primary);
-	font-size: var(--global--font-size-xs);
-	letter-spacing: var(--global--letter-spacing);
+	position: relative;
+	margin: var(--global--spacing-vertical) var(--global--spacing-horizontal) var(--global--spacing-vertical) 0;
 }
 
 blockquote > * {
@@ -1137,6 +1125,24 @@ blockquote > *:first-child {
 
 blockquote > *:last-child {
 	margin-bottom: 0;
+}
+
+blockquote p {
+	letter-spacing: var(--heading--letter-spacing-h4);
+	line-height: var(--heading--line-height-h4);
+	font-family: var(--quote--font-family);
+	font-size: var(--quote--font-size);
+	font-style: var(--quote--font-style);
+	font-weight: var(--quote--font-weight-strong);
+	line-height: var(--quote--line-height);
+}
+
+blockquote cite,
+blockquote footer {
+	font-weight: normal;
+	color: var(--global--color-primary);
+	font-size: var(--global--font-size-xs);
+	letter-spacing: var(--global--letter-spacing);
 }
 
 blockquote.alignleft, blockquote.alignright {
@@ -1154,6 +1160,35 @@ blockquote.alignleft footer, blockquote.alignright cite,
 blockquote.alignright footer {
 	font-size: var(--global--font-size-xs);
 	letter-spacing: var(--global--letter-spacing);
+}
+
+blockquote strong {
+	font-weight: var(--quote--font-weight);
+}
+
+blockquote:before {
+	content: "\201C";
+	font-size: var(--quote--font-size);
+	line-height: var(--quote--line-height);
+	position: absolute;
+	right: calc(-0.5 * var(--global--spacing-horizontal));
+}
+
+blockquote .wp-block-quote__citation,
+blockquote cite,
+blockquote footer {
+	color: var(--global--color-primary);
+	font-size: var(--global--font-size-xs);
+	font-style: var(--quote--font-style-cite);
+}
+
+@media only screen and (max-width: 481px) {
+	blockquote {
+		padding-right: calc(0.5 * var(--global--spacing-horizontal));
+	}
+	blockquote:before {
+		right: 0;
+	}
 }
 
 input[type="text"],
@@ -2571,52 +2606,9 @@ p.has-text-color a {
 }
 
 .wp-block-quote {
-	position: relative;
-	margin: var(--global--spacing-vertical) var(--global--spacing-horizontal) var(--global--spacing-vertical) 0;
 	/**
 	 * Block Options
 	 */
-}
-
-.wp-block-quote > * {
-	margin-top: var(--global--spacing-unit);
-	margin-bottom: var(--global--spacing-unit);
-}
-
-.wp-block-quote > *:first-child {
-	margin-top: 0;
-}
-
-.wp-block-quote > *:last-child {
-	margin-bottom: 0;
-}
-
-.wp-block-quote p {
-	font-family: var(--quote--font-family);
-	font-size: var(--quote--font-size);
-	font-style: var(--quote--font-style);
-	font-weight: var(--quote--font-weight-strong);
-	line-height: var(--quote--line-height);
-}
-
-.wp-block-quote strong {
-	font-weight: var(--quote--font-weight);
-}
-
-.wp-block-quote:before {
-	content: "\201C";
-	font-size: var(--quote--font-size);
-	line-height: var(--quote--line-height);
-	position: absolute;
-	right: calc(-0.5 * var(--global--spacing-horizontal));
-}
-
-.wp-block-quote .wp-block-quote__citation,
-.wp-block-quote cite,
-.wp-block-quote footer {
-	color: var(--global--color-primary);
-	font-size: var(--global--font-size-xs);
-	font-style: var(--quote--font-style-cite);
 }
 
 .has-background:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
@@ -2715,12 +2707,6 @@ p.has-text-color a {
 }
 
 @media only screen and (max-width: 481px) {
-	.wp-block-quote {
-		padding-right: calc(0.5 * var(--global--spacing-horizontal));
-	}
-	.wp-block-quote:before {
-		right: 0;
-	}
 	.wp-block-quote.has-text-align-right {
 		padding-right: 0;
 		padding-left: calc(0.5 * var(--global--spacing-horizontal));
