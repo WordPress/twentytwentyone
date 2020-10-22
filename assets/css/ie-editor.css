@@ -2228,6 +2228,10 @@ table.wp-calendar-table caption {
 	float: right;
 }
 
+.wp-block-tag-cloud.aligncenter {
+	text-align: center;
+}
+
 pre.wp-block-verse {
 	padding: 0;
 }
