@@ -2013,6 +2013,10 @@ p.has-background {
 	color: #d1e4dd;
 }
 
+.wp-block[data-align="center"] > * {
+	text-align: center;
+}
+
 .wp-block-separator {
 	border-bottom: 1px solid #28303d;
 	clear: both;

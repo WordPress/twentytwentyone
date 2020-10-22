@@ -1463,6 +1463,10 @@ p.has-background {
 	color: var(--button--color-text);
 }
 
+.wp-block[data-align="center"] > * {
+	text-align: center;
+}
+
 .wp-block-separator,
 hr {
 	border-bottom: var(--separator--height) solid var(--separator--border-color);

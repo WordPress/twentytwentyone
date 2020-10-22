@@ -2838,6 +2838,10 @@ p.has-text-color a {
 	max-width: var(--responsive--aligndefault-width);
 }
 
+.wp-block-search__button-inside .wp-block-search__inside-wrapper {
+	background-color: var(--global--color-white);
+}
+
 .wp-block-search .wp-block-search__label {
 	font-size: var(--form--font-size);
 	font-weight: var(--form--label-weight);
@@ -2852,6 +2856,7 @@ p.has-text-color a {
 	max-width: inherit;
 	margin-left: calc(-1 * var(--button--border-width));
 	padding: var(--form--spacing-unit);
+	background-color: var(--global--color-white);
 }
 
 .wp-block-search .wp-block-search__input:focus {
