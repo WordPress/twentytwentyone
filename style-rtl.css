@@ -5033,3 +5033,43 @@ section,
 footer {
 	max-width: none;
 }
+
+.is-IE.has-background-dark {
+	color: #fff;
+}
+
+.is-IE.has-background-dark *,
+.is-IE.has-background-dark a,
+.is-IE.has-background-dark .site-description,
+.is-IE.has-background-dark .entry-title,
+.is-IE.has-background-dark .entry-footer,
+.is-IE.has-background-dark .widget-area,
+.is-IE.has-background-dark .post-navigation .meta-nav,
+.is-IE.has-background-dark .footer-navigation-wrapper li a:link,
+.is-IE.has-background-dark .site-footer > .site-info,
+.is-IE.has-background-dark .site-footer > .site-info a,
+.is-IE.has-background-dark .site-footer > .site-info a:visited {
+	color: #fff;
+}
+
+.is-IE.has-background-dark .sub-menu-toggle svg,
+.is-IE.has-background-dark .sub-menu-toggle path,
+.is-IE.has-background-dark .post-navigation .meta-nav svg,
+.is-IE.has-background-dark .post-navigation .meta-nav path {
+	fill: #fff;
+}
+
+.is-IE.has-background-dark .primary-navigation > div > .menu-wrapper > li > .sub-menu li {
+	background: #000;
+}
+
+@media only screen and (max-width: 481px) {
+	.is-IE.has-background-dark.primary-navigation-open .primary-navigation > .primary-menu-container,
+	.is-IE.has-background-dark.primary-navigation-open .menu-button-container {
+		background-color: #000;
+	}
+}
+
+.is-IE.has-background-dark .skip-link:focus {
+	color: #21759b;
+}
