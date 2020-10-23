@@ -3055,6 +3055,11 @@ table.wp-calendar-table caption {
 	float: right;
 }
 
+.wp-block-tag-cloud.alignfull {
+	padding-left: var(--global--spacing-unit);
+	padding-right: var(--global--spacing-unit);
+}
+
 .wp-block-verse {
 	font-family: var(--entry-content--font-family);
 }
