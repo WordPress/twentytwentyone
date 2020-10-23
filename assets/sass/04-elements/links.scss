@@ -17,14 +17,32 @@ a:hover {
 
 .site a:focus {
 
-	outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
-	text-decoration: none;
+	/* Only visible in Windows High Contrast mode */
+	outline: 2px solid transparent;
+
+	background: rgba(255, 255, 255, .9);
+
+	// Change text color when the body background is dark.
+	.has-background-dark & {
+		color: var(--wp--style--color--link, var(--global--color-background));
+	}
+
+	// Change colors when the body background is white.
+	.has-background-white & {
+		background: rgba(0, 0, 0, .9);
+		color: var(--wp--style--color--link, var(--global--color-white));
+	}
 
 	&.skip-link {
 
 		/* Only visible in Windows High Contrast mode */
 		outline: 2px solid transparent;
 		outline-offset: -2px;
+
+		&:focus {
+			color: #21759b;
+			background-color: #f1f1f1;
+		}
 	}
 }
 

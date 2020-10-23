@@ -1534,14 +1534,29 @@ a:hover {
 }
 
 .site a:focus {
-	outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
-	text-decoration: none;
+	/* Only visible in Windows High Contrast mode */
+	outline: 2px solid transparent;
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.has-background-dark .site a:focus {
+	color: var(--wp--style--color--link, var(--global--color-background));
+}
+
+.has-background-white .site a:focus {
+	background: rgba(0, 0, 0, 0.9);
+	color: var(--wp--style--color--link, var(--global--color-white));
 }
 
 .site a:focus.skip-link {
 	/* Only visible in Windows High Contrast mode */
 	outline: 2px solid transparent;
 	outline-offset: -2px;
+}
+
+.site a:focus.skip-link:focus {
+	color: #21759b;
+	background-color: #f1f1f1;
 }
 
 .has-background:not(.has-background-background-color) .has-link-color a,
