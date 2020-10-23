@@ -2856,6 +2856,10 @@ pre.wp-block-preformatted {
 	background-color: var(--global--color-white);
 }
 
+.wp-block-search__button-only.aligncenter .wp-block-search__inside-wrapper {
+	justify-content: center;
+}
+
 .wp-block-search .wp-block-search__label {
 	font-size: var(--form--font-size);
 	font-weight: var(--form--label-weight);

@@ -1476,6 +1476,10 @@ pre.wp-block-preformatted {
 	text-align: center;
 }
 
+.wp-block[data-align="center"] .wp-block-search__button-only .wp-block-search__inside-wrapper {
+	justify-content: center;
+}
+
 .wp-block-separator,
 hr {
 	border-bottom: var(--separator--height) solid var(--separator--border-color);

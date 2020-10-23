@@ -4075,6 +4075,10 @@ pre.wp-block-preformatted {
 	background-color: #fff;
 }
 
+.wp-block-search__button-only.aligncenter .wp-block-search__inside-wrapper {
+	justify-content: center;
+}
+
 .wp-block-search .wp-block-search__label {
 	font-size: 1.125rem;
 	font-weight: 500;
