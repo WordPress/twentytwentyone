@@ -5763,8 +5763,6 @@ h1.page-title {
 	padding-right: 20px;
 	padding-bottom: 25px;
 	background-color: #d1e4dd;
-	overflow-x: hidden;
-	overflow-y: auto;
 	transition: all .15s ease-in-out;
 	transform: translateY(30px);
 }
@@ -5773,6 +5771,8 @@ h1.page-title {
 	.primary-navigation > .primary-menu-container {
 		height: 100vh;
 		z-index: 499;
+		overflow-x: hidden;
+		overflow-y: auto;
 		border: 2px solid transparent;
 	}
 	.has-logo.has-title-and-tagline .primary-navigation > .primary-menu-container {
