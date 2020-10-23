@@ -4070,6 +4070,10 @@ pre.wp-block-preformatted {
 	}
 }
 
+.wp-block-search__button-inside .wp-block-search__inside-wrapper {
+	background-color: #fff;
+}
+
 .wp-block-search .wp-block-search__label {
 	font-size: 1.125rem;
 	font-weight: 500;
@@ -4084,6 +4088,7 @@ pre.wp-block-preformatted {
 	max-width: inherit;
 	margin-right: -3px;
 	padding: 10px;
+	background-color: #fff;
 }
 
 .wp-block-search .wp-block-search__input:focus {
