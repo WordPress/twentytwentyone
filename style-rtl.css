@@ -2861,16 +2861,22 @@ pre.wp-block-preformatted {
 	border: var(--form--border-width) solid var(--form--border-color);
 	border-radius: var(--form--border-radius);
 	color: var(--form--color-text);
-	line-height: var(--global--line-height-body);
+	line-height: var(--form--line-height);
 	max-width: inherit;
 	margin-left: calc(-1 * var(--button--border-width));
 	padding: var(--form--spacing-unit);
-	background-color: var(--global--color-white);
 }
 
 .wp-block-search .wp-block-search__input:focus {
 	color: var(--form--color-text);
 	border-color: var(--form--border-color);
+}
+
+.has-background:not(.has-background-background-color) .wp-block-search .wp-block-search__input,
+[class*="background-color"]:not(.has-background-background-color) .wp-block-search .wp-block-search__input,
+[style*="background-color"] .wp-block-search .wp-block-search__input,
+.wp-block-cover[style*="background-image"] .wp-block-search .wp-block-search__input {
+	border-color: currentColor;
 }
 
 .wp-block-search button.wp-block-search__button {
@@ -2882,6 +2888,24 @@ pre.wp-block-preformatted {
 .wp-block-search button.wp-block-search__button:hover {
 	background-color: var(--button--color-background);
 	color: var(--button--color-text);
+}
+
+.wp-block-search button.wp-block-search__button.has-icon {
+	padding: 6px calc(0.5 * var(--button--padding-horizontal));
+}
+
+.wp-block-search button.wp-block-search__button.has-icon svg {
+	width: 40px;
+	height: 40px;
+	fill: currentColor;
+}
+
+.has-background:not(.has-background-background-color) .wp-block-search button.wp-block-search__button,
+[class*="background-color"]:not(.has-background-background-color) .wp-block-search button.wp-block-search__button,
+[style*="background-color"] .wp-block-search button.wp-block-search__button,
+.wp-block-cover[style*="background-image"] .wp-block-search button.wp-block-search__button {
+	color: currentColor;
+	border-color: currentColor;
 }
 
 .wp-block-search__button {
@@ -3536,6 +3560,10 @@ h1.entry-title {
 
 .entry-content p {
 	word-wrap: break-word;
+}
+
+.entry-content .more-link:hover {
+	text-decoration: none;
 }
 
 .entry-content > iframe[style] {

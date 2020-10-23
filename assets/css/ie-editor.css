@@ -2010,6 +2010,22 @@ pre.wp-block-preformatted {
 	border-color: #39414d;
 }
 
+.has-background:not(.has-background-background-color) .wp-block-search .wp-block-search__input {
+	border: 3px solid currentColor;
+}
+
+[class*="background-color"]:not(.has-background-background-color) .wp-block-search .wp-block-search__input {
+	border: 3px solid currentColor;
+}
+
+[style*="background-color"] .wp-block-search .wp-block-search__input {
+	border: 3px solid currentColor;
+}
+
+.wp-block-cover[style*="background-image"] .wp-block-search .wp-block-search__input {
+	border: 3px solid currentColor;
+}
+
 .wp-block-search .wp-block-search__button {
 	box-shadow: none;
 	margin-left: 0;
@@ -2020,6 +2036,23 @@ pre.wp-block-preformatted {
 .wp-block-search .wp-block-search__button:hover {
 	background-color: #39414d;
 	color: #d1e4dd;
+}
+
+.wp-block-search .wp-block-search__button.has-icon {
+	padding: 30px 15px;
+}
+
+.wp-block-search .wp-block-search__button.has-icon svg {
+	width: 40px;
+	height: 40px;
+}
+
+.has-background:not(.has-background-background-color) .wp-block-search .wp-block-search__button,
+[class*="background-color"]:not(.has-background-background-color) .wp-block-search .wp-block-search__button,
+[style*="background-color"]:not(.has-background-background-color) .wp-block-search .wp-block-search__button,
+.wp-block-cover[style*="background-image"] .wp-block-search .wp-block-search__button {
+	color: currentColor;
+	border-color: currentColor;
 }
 
 .wp-block[data-align="center"] > * {

@@ -18,15 +18,21 @@
 		border: var(--form--border-width) solid var(--form--border-color);
 		border-radius: var(--form--border-radius);
 		color: var(--form--color-text);
-		line-height: var(--global--line-height-body);
+		line-height: var(--form--line-height);
 		max-width: inherit;
 		margin-right: calc(-1 * var(--button--border-width));
 		padding: var(--form--spacing-unit);
-		background-color: var(--global--color-white);
 
 		&:focus {
 			color: var(--form--color-text);
 			border-color: var(--form--border-color);
+		}
+
+		.has-background:not(.has-background-background-color) &,
+		[class*="background-color"]:not(.has-background-background-color) &,
+		[style*="background-color"] &,
+		.wp-block-cover[style*="background-image"] & {
+			border-color: currentColor;
 		}
 	}
 
@@ -38,6 +44,24 @@
 		&:hover {
 			background-color: var(--button--color-background);
 			color: var(--button--color-text);
+		}
+
+		&.has-icon {
+			padding: 6px calc(0.5 * var(--button--padding-horizontal));
+
+			svg {
+				width: 40px;
+				height: 40px;
+				fill: currentColor;
+			}
+		}
+
+		.has-background:not(.has-background-background-color) &,
+		[class*="background-color"]:not(.has-background-background-color) &,
+		[style*="background-color"] &,
+		.wp-block-cover[style*="background-image"] & {
+			color: currentColor;
+			border-color: currentColor;
 		}
 	}
 }

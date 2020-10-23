@@ -1460,6 +1460,13 @@ pre.wp-block-preformatted {
 	border-color: var(--form--border-color);
 }
 
+.has-background:not(.has-background-background-color) .wp-block-search .wp-block-search__input,
+[class*="background-color"]:not(.has-background-background-color) .wp-block-search .wp-block-search__input,
+[style*="background-color"] .wp-block-search .wp-block-search__input,
+.wp-block-cover[style*="background-image"] .wp-block-search .wp-block-search__input {
+	border: var(--form--border-width) solid currentColor;
+}
+
 .wp-block-search .wp-block-search__button {
 	box-shadow: none;
 	margin-left: 0;
@@ -1470,6 +1477,23 @@ pre.wp-block-preformatted {
 .wp-block-search .wp-block-search__button:hover {
 	background-color: var(--button--color-background);
 	color: var(--button--color-text);
+}
+
+.wp-block-search .wp-block-search__button.has-icon {
+	padding: calc(2 * var(--button--padding-vertical)) calc(0.5 * var(--button--padding-horizontal));
+}
+
+.wp-block-search .wp-block-search__button.has-icon svg {
+	width: 40px;
+	height: 40px;
+}
+
+.has-background:not(.has-background-background-color) .wp-block-search .wp-block-search__button,
+[class*="background-color"]:not(.has-background-background-color) .wp-block-search .wp-block-search__button,
+[style*="background-color"]:not(.has-background-background-color) .wp-block-search .wp-block-search__button,
+.wp-block-cover[style*="background-image"] .wp-block-search .wp-block-search__button {
+	color: currentColor;
+	border-color: currentColor;
 }
 
 .wp-block[data-align="center"] > * {

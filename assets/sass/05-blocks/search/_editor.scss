@@ -20,6 +20,13 @@
 		&:focus {
 			border-color: var(--form--border-color);
 		}
+
+		.has-background:not(.has-background-background-color) &,
+		[class*="background-color"]:not(.has-background-background-color) &,
+		[style*="background-color"] &,
+		.wp-block-cover[style*="background-image"] & {
+			border: var(--form--border-width) solid currentColor;
+		}
 	}
 
 	.wp-block-search__button {
@@ -33,6 +40,24 @@
 			background-color: var(--button--color-background);
 			color: var(--button--color-text);
 		}
+
+		&.has-icon {
+			padding: calc(2 * var(--button--padding-vertical)) calc(0.5 * var(--button--padding-horizontal));
+
+			svg {
+				width: 40px;
+				height: 40px;
+			}
+		}
+
+		.has-background:not(.has-background-background-color) &,
+		[class*="background-color"]:not(.has-background-background-color) &,
+		[style*="background-color"]:not(.has-background-background-color) &,
+		.wp-block-cover[style*="background-image"] & {
+			color: currentColor;
+			border-color: currentColor;
+		}
+
 	}
 }
 
