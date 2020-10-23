@@ -1573,27 +1573,34 @@ input[type="reset"]:hover,
 }
 
 .wp-block-button.is-style-outline .wp-block-button__link {
-	color: var(--button--color-background);
 	background: transparent;
-	border: var(--button--border-width) solid currentColor;
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
 
-.wp-block-button.is-style-outline .wp-block-button__link:visited {
+.wp-block-button.is-style-outline .wp-block-button__link:not(.has-background):not(.has-text-color) {
 	color: var(--button--color-background);
+	border: var(--button--border-width) solid currentColor;
 }
 
-.wp-block-button.is-style-outline .wp-block-button__link:active, .wp-block-button.is-style-outline .wp-block-button__link:hover {
+.wp-block-button.is-style-outline .wp-block-button__link:not(.has-background):not(.has-text-color):active, .wp-block-button.is-style-outline .wp-block-button__link:not(.has-background):not(.has-text-color):hover {
 	background-color: var(--button--color-background);
 	color: var(--button--color-text);
 	border: var(--button--border-width) solid var(--button--color-background);
 }
 
-.wp-block-button.is-style-outline .wp-block-button__link:focus {
+.wp-block-button.is-style-outline .wp-block-button__link:not(.has-background):not(.has-text-color):focus {
 	outline-offset: -7px;
 	background: transparent;
 	outline: 2px dotted var(--button--color-background);
 	color: var(--button--color-background);
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:not(.has-background):not(.has-text-color):visited {
+	color: var(--button--color-background);
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link.has-background, .wp-block-button.is-style-outline .wp-block-button__link.has-text-color {
+	border: var(--button--border-width) solid currentColor;
 }
 
 .wp-block-button.is-style-outline .wp-block-button__link.has-background:active, .wp-block-button.is-style-outline .wp-block-button__link.has-background:hover, .wp-block-button.is-style-outline .wp-block-button__link.has-background:focus, .wp-block-button.is-style-outline .wp-block-button__link.has-text-color:active, .wp-block-button.is-style-outline .wp-block-button__link.has-text-color:hover, .wp-block-button.is-style-outline .wp-block-button__link.has-text-color:focus {
@@ -1852,6 +1859,13 @@ input[type="reset"]:hover,
 
 .wp-block-file .wp-block-file__button {
 	display: inline-block;
+}
+
+.wp-block-file .wp-block-file__button:focus {
+	outline-offset: -7px;
+	background: transparent;
+	outline: 2px dotted var(--button--color-background);
+	color: var(--button--color-background);
 }
 
 .wp-block-gallery {

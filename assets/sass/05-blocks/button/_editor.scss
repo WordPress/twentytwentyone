@@ -21,7 +21,7 @@
  */
 .wp-block-button {
 
-	// Target the default and filled button states. 
+	// Target the default and filled button states.
 	&:not(.is-style-outline) {
 
 		.wp-block-button__link {
@@ -73,11 +73,17 @@
 				border: var(--button--border-width) solid var(--button--color-background);
 			}
 
+			// Override the editors inline background color for the outline button.
+			&.has-background {
+				background: transparent !important;
+			}
+
 			&.has-background,
 			&.has-text-color {
 
 				&:active,
 				&:hover {
+					color: var(--button--color-background);
 					outline-offset: -7px;
 					background: transparent;
 					outline: 2px dotted currentColor;

@@ -13,5 +13,12 @@
 		// Extend button style
 		@extend %button-style;
 		display: inline-block;
+
+		&:focus {
+			outline-offset: -7px;
+			background: transparent;
+			outline: 2px dotted var(--button--color-background);
+			color: var(--button--color-background);
+		}
 	}
 }

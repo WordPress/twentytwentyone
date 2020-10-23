@@ -519,7 +519,12 @@ a:hover {
 	border: var(--button--border-width) solid var(--button--color-background);
 }
 
+.wp-block-button.is-style-outline .wp-block-button__link.has-background {
+	background: transparent !important;
+}
+
 .wp-block-button.is-style-outline .wp-block-button__link.has-background:active, .wp-block-button.is-style-outline .wp-block-button__link.has-background:hover, .wp-block-button.is-style-outline .wp-block-button__link.has-text-color:active, .wp-block-button.is-style-outline .wp-block-button__link.has-text-color:hover {
+	color: var(--button--color-background);
 	outline-offset: -7px;
 	background: transparent;
 	outline: 2px dotted currentColor;

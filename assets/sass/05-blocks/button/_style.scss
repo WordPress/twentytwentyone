@@ -32,10 +32,12 @@ input[type="reset"],
  */
 .wp-block-button {
 
+	// Target the default and filled button states.
 	&:not(.is-style-outline) {
 
 		.wp-block-button__link {
 
+			// Apply default button styles when custom text and background colors are not selected.
 			&:not(.has-background):not(.has-text-color) {
 
 				&:active {
@@ -66,32 +68,35 @@ input[type="reset"],
 	&.is-style-outline {
 
 		.wp-block-button__link {
-
-			color: var(--button--color-background);
 			background: transparent;
-			border: var(--button--border-width) solid currentColor;
 			padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 
-			&:visited {
+			&:not(.has-background):not(.has-text-color) {
 				color: var(--button--color-background);
-			}
+				border: var(--button--border-width) solid currentColor;
 
-			&:active,
-			&:hover {
-				background-color: var(--button--color-background);
-				color: var(--button--color-text);
-				border: var(--button--border-width) solid var(--button--color-background);
-			}
+				&:active,
+				&:hover {
+					background-color: var(--button--color-background);
+					color: var(--button--color-text);
+					border: var(--button--border-width) solid var(--button--color-background);
+				}
 
-			&:focus {
-				outline-offset: -7px;
-				background: transparent;
-				outline: 2px dotted var(--button--color-background);
-				color: var(--button--color-background);
+				&:focus {
+					outline-offset: -7px;
+					background: transparent;
+					outline: 2px dotted var(--button--color-background);
+					color: var(--button--color-background);
+				}
+
+				&:visited {
+					color: var(--button--color-background);
+				}
 			}
 
 			&.has-background,
 			&.has-text-color {
+				border: var(--button--border-width) solid currentColor;
 
 				&:active,
 				&:hover,
