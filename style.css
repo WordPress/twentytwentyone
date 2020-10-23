@@ -5052,4 +5052,9 @@ footer {
 	color: #fff;
 }
 
+.is-IE.has-background-dark .sub-menu-toggle svg,
+.is-IE.has-background-dark .sub-menu-toggle path {
+	fill: #fff;
+}
+
 /*# sourceMappingURL=style.css.map */

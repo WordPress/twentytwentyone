@@ -5041,3 +5041,8 @@ footer {
 .is-IE.has-background-dark a {
 	color: #fff;
 }
+
+.is-IE.has-background-dark .sub-menu-toggle svg,
+.is-IE.has-background-dark .sub-menu-toggle path {
+	fill: #fff;
+}
