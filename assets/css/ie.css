@@ -2118,6 +2118,10 @@ fieldset input[type="checkbox"] + label {
 	margin-bottom: 20px;
 }
 
+::-moz-placeholder {
+	opacity: 1;
+}
+
 img {
 	display: block;
 	height: auto;

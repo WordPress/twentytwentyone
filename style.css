@@ -1476,6 +1476,10 @@ fieldset input[type="checkbox"] + label {
 	margin-bottom: var(--global--spacing-unit);
 }
 
+::-moz-placeholder {
+	opacity: 1;
+}
+
 img {
 	display: block;
 	height: auto;
