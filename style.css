@@ -5080,4 +5080,8 @@ footer {
 	}
 }
 
+.is-IE.has-background-dark .skip-link:focus {
+	color: #21759b;
+}
+
 /*# sourceMappingURL=style.css.map */
