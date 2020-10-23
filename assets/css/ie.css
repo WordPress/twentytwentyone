@@ -4320,7 +4320,7 @@ table.wp-calendar-table caption {
 	float: right;
 }
 
-.wp-block-tag-cloud {
+.wp-block-tag-cloud.alignfull {
 	padding-left: 20px;
 	padding-right: 20px;
 }
