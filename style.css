@@ -5073,4 +5073,11 @@ footer {
 	background: #000;
 }
 
+@media only screen and (max-width: 481px) {
+	.is-IE.has-background-dark.primary-navigation-open .primary-navigation > .primary-menu-container,
+	.is-IE.has-background-dark.primary-navigation-open .menu-button-container {
+		background-color: #000;
+	}
+}
+
 /*# sourceMappingURL=style.css.map */

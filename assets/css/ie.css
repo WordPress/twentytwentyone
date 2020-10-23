@@ -6832,4 +6832,11 @@ footer {
 .is-IE.has-background-dark .primary-navigation > div > .menu-wrapper > li > .sub-menu li {
 	background: #000;
 }
+
+@media only screen and (max-width: 481px) {
+	.is-IE.has-background-dark.primary-navigation-open .primary-navigation > .primary-menu-container,
+	.is-IE.has-background-dark.primary-navigation-open .menu-button-container {
+		background-color: #000;
+	}
+}
 /*# sourceMappingURL=ie.css.map */

@@ -27,5 +27,15 @@
 		.primary-navigation > div > .menu-wrapper > li > .sub-menu li {
 			background: #000;
 		}
+
+		&.primary-navigation-open {
+			@include media(mobile-only) {
+
+				.primary-navigation > .primary-menu-container,
+				.menu-button-container {
+					background-color: #000;
+				}
+			}
+		}
 	}
 }
