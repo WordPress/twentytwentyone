@@ -3538,10 +3538,6 @@ h1.entry-title {
 	word-wrap: break-word;
 }
 
-.entry-content .more-link:hover {
-	text-decoration: none;
-}
-
 .entry-content > iframe[style] {
 	margin: var(--global--spacing-vertical) 0 !important;
 	max-width: 100% !important;
