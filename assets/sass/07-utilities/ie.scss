@@ -1,0 +1,9 @@
+.is-IE {
+	&.has-background-dark {
+		color: #fff;
+
+		a {
+			color: #fff;
+		}
+	}
+}

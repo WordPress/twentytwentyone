@@ -5033,3 +5033,11 @@ section,
 footer {
 	max-width: none;
 }
+
+.is-IE.has-background-dark {
+	color: #fff;
+}
+
+.is-IE.has-background-dark a {
+	color: #fff;
+}
