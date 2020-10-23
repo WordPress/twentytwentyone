@@ -4937,9 +4937,11 @@ a.custom-logo-link {
 }
 
 .page-links .post-page-numbers {
+	display: inline-block;
 	margin-left: 13px;
 	margin-right: 13px;
-	padding: 10px 0;
+	min-width: 44px;
+	min-height: 44px;
 }
 
 .page-links .post-page-numbers:first-child {
@@ -6178,6 +6180,11 @@ h1.page-title {
 
 .navigation a:active {
 	color: #28303d;
+}
+
+.navigation .nav-links > * {
+	min-width: 44px;
+	min-height: 44px;
 }
 
 .navigation .nav-links .nav-next a,
