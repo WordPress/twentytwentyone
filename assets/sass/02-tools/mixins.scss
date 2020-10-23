@@ -42,6 +42,8 @@
 	}
 }
 
+// Button style
+// - Applies button styles to blocks and elements that share them.
 @mixin button-style() {
 	@include crop-text(var(--button--line-height));
 	color: var(--button--color-text);
