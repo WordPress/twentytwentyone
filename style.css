@@ -3477,9 +3477,11 @@ a.custom-logo-link {
 }
 
 .page-links .post-page-numbers {
+	display: inline-block;
 	margin-left: calc(0.66 * var(--global--spacing-unit));
 	margin-right: calc(0.66 * var(--global--spacing-unit));
-	padding: calc(0.33 * var(--global--spacing-vertical)) 0;
+	min-width: 44px;
+	min-height: 44px;
 }
 
 .page-links .post-page-numbers:first-child {

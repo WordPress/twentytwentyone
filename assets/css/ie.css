@@ -4924,9 +4924,11 @@ a.custom-logo-link {
 }
 
 .page-links .post-page-numbers {
+	display: inline-block;
 	margin-left: 13px;
 	margin-right: 13px;
-	padding: 10px 0;
+	min-width: 44px;
+	min-height: 44px;
 }
 
 .page-links .post-page-numbers:first-child {
