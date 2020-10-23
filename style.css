@@ -5048,12 +5048,15 @@ footer {
 	color: #fff;
 }
 
-.is-IE.has-background-dark a {
+.is-IE.has-background-dark a,
+.is-IE.has-background-dark .post-navigation .meta-nav {
 	color: #fff;
 }
 
 .is-IE.has-background-dark .sub-menu-toggle svg,
-.is-IE.has-background-dark .sub-menu-toggle path {
+.is-IE.has-background-dark .sub-menu-toggle path,
+.is-IE.has-background-dark .post-navigation .meta-nav svg,
+.is-IE.has-background-dark .post-navigation .meta-nav path {
 	fill: #fff;
 }
 

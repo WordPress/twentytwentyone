@@ -3,12 +3,15 @@
 	&.has-background-dark {
 		color: #fff;
 
-		a {
+		a,
+		.post-navigation .meta-nav {
 			color: #fff;
 		}
 
 		.sub-menu-toggle svg,
-		.sub-menu-toggle path {
+		.sub-menu-toggle path,
+		.post-navigation .meta-nav svg,
+		.post-navigation .meta-nav path {
 			fill: #fff;
 		}
 	}
