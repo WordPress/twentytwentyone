@@ -80,6 +80,10 @@ h1.entry-title {
 	font-size: var(--global--font-size-xs);
 	display: block;
 
+	> span {
+		display: inline-block;
+	}
+
 	a {
 		color: currentColor;
 

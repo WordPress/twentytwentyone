@@ -105,14 +105,14 @@
 		padding-right: var(--global--spacing-unit);
 		padding-bottom: var(--global--spacing-horizontal);
 		background-color: var(--global--color-background);
-		overflow-x: hidden;
-		overflow-y: auto;
 		transition: all .15s ease-in-out;
 		transform: translateY(var(--global--spacing-vertical));
 
 		@include media(mobile-only) {
 			height: 100vh;
 			z-index: 499;
+			overflow-x: hidden;
+			overflow-y: auto;
 			border: 2px solid transparent;
 
 			.has-logo.has-title-and-tagline & {
@@ -186,7 +186,7 @@
 		}
 
 		// Hide sub-sub-menus
-		> .primary-menu-container ul > li:not(.hover) .sub-menu-toggle[aria-expanded="false"] ~ ul {
+		> .primary-menu-container ul > li .sub-menu-toggle[aria-expanded="false"] ~ ul {
 			display: none;
 		}
 
@@ -278,17 +278,6 @@
 				.icon-plus {
 					display: none;
 				}
-			}
-		}
-
-		.hover .sub-menu-toggle {
-
-			.icon-minus {
-				display: flex;
-			}
-
-			.icon-plus {
-				display: none;
 			}
 		}
 

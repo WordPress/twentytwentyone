@@ -542,6 +542,8 @@ a:hover {
 
 .wp-block-code code {
 	font-size: var(--global--font-size-xs);
+	white-space: pre !important;
+	overflow-x: auto;
 }
 
 .wp-block-code {
@@ -550,6 +552,7 @@ a:hover {
 	border-style: solid;
 	border-width: 0.1rem;
 	padding: var(--global--spacing-unit);
+	color: currentColor;
 }
 
 .wp-block-cover,
@@ -1123,10 +1126,14 @@ p.has-background {
 	padding: var(--global--spacing-unit);
 }
 
+pre.wp-block-preformatted {
+	overflow-x: auto;
+	white-space: pre !important;
+	font-size: var(--global--font-size-xs);
+}
+
 .wp-block-pullquote {
 	padding: calc(2 * var(--global--spacing-unit)) 0;
-	margin-left: 0;
-	margin-right: 0;
 	text-align: center;
 	border-width: var(--pullquote--border-width);
 	border-bottom-style: solid;
@@ -1172,6 +1179,8 @@ p.has-background {
 }
 
 .wp-block-pullquote.is-style-solid-color {
+	margin-left: auto;
+	margin-right: auto;
 	padding: calc(2.5 * var(--global--spacing-unit));
 	border-width: var(--pullquote--border-width);
 	border-style: solid;
@@ -1477,6 +1486,10 @@ p.has-background {
 .wp-block-search .wp-block-search__button:hover {
 	background-color: var(--button--color-background);
 	color: var(--button--color-text);
+}
+
+.wp-block[data-align="center"] > * {
+	text-align: center;
 }
 
 .wp-block-separator,
