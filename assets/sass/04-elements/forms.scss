@@ -258,3 +258,36 @@ input[type="range"]::-ms-thumb {
 	background: var(--global--color-background);
 	cursor: pointer;
 }
+
+fieldset {
+	display: grid;
+	border-color: var(--global--color-secondary);
+	padding: var(--global--spacing-horizontal);
+
+	legend {
+		font-size: var(--global--font-size-lg);
+	}
+
+	input {
+
+		&[type="submit"] {
+			max-width: max-content;
+		}
+
+		&:not([type="submit"]) {
+			margin-bottom: var(--global--spacing-unit);
+		}
+
+		&[type="radio"],
+		&[type="checkbox"] {
+			margin-bottom: 0;
+		}
+
+		&[type="radio"] + label,
+		&[type="checkbox"] + label {
+			font-size: var(--form--font-size);
+			padding-left: 0;
+			margin-bottom: var(--global--spacing-unit);
+		}
+	}
+}
