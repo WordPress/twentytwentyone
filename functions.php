@@ -336,6 +336,7 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 		add_theme_support( 'experimental-custom-spacing' );
 
 		// Add support for custom units.
+		// This was removed in WordPress 5.6 but is still required to properly support WP 5.5.
 		add_theme_support( 'custom-units' );
 	}
 }
