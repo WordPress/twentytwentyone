@@ -39,3 +39,13 @@
 .wp-block[data-align="center"] > * {
 	text-align: center;
 }
+
+.wp-block[data-align="center"] {
+
+	.wp-block-search__button-only {
+
+		.wp-block-search__inside-wrapper {
+			justify-content: center;
+		}
+	}
+}

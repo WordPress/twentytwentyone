@@ -2026,6 +2026,10 @@ pre.wp-block-preformatted {
 	text-align: center;
 }
 
+.wp-block[data-align="center"] .wp-block-search__button-only .wp-block-search__inside-wrapper {
+	justify-content: center;
+}
+
 .wp-block-separator {
 	border-bottom: 1px solid #28303d;
 	clear: both;
