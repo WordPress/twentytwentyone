@@ -317,75 +317,6 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	}
 }
 
-/* Button extends */
-.site .button,
-input[type="submit"],
-input[type="reset"],
-.wp-block-search__button,
-.wp-block-button .wp-block-button__link, .wp-block-file .wp-block-file__button {
-	line-height: var(--button--line-height);
-	color: var(--button--color-text);
-	cursor: pointer;
-	font-weight: var(--button--font-weight);
-	font-family: var(--button--font-family);
-	font-size: var(--button--font-size);
-	background-color: var(--button--color-background);
-	border-radius: var(--button--border-radius);
-	border: var(--button--border-width) solid var(--button--color-background);
-	text-decoration: none;
-	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
-}
-
-.site .button:before,
-input[type="submit"]:before,
-input[type="reset"]:before,
-.wp-block-search__button:before,
-.wp-block-button .wp-block-button__link:before, .wp-block-file .wp-block-file__button:before, .site .button:after,
-input[type="submit"]:after,
-input[type="reset"]:after,
-.wp-block-search__button:after,
-.wp-block-button .wp-block-button__link:after, .wp-block-file .wp-block-file__button:after {
-	content: "";
-	display: block;
-	height: 0;
-	width: 0;
-}
-
-.site .button:before,
-input[type="submit"]:before,
-input[type="reset"]:before,
-.wp-block-search__button:before,
-.wp-block-button .wp-block-button__link:before, .wp-block-file .wp-block-file__button:before {
-	margin-bottom: -calc(.5em * var(--button--line-height) + -.38);
-}
-
-.site .button:after,
-input[type="submit"]:after,
-input[type="reset"]:after,
-.wp-block-search__button:after,
-.wp-block-button .wp-block-button__link:after, .wp-block-file .wp-block-file__button:after {
-	margin-top: -calc(.5em * var(--button--line-height) + -.39);
-}
-
-.site .button:focus,
-input:focus[type="submit"],
-input:focus[type="reset"],
-.wp-block-search__button:focus,
-.wp-block-button .wp-block-button__link:focus, .wp-block-file .wp-block-file__button:focus {
-	outline-offset: -4px;
-	outline: 2px dotted currentColor;
-}
-
-.site .button:disabled,
-input:disabled[type="submit"],
-input:disabled[type="reset"],
-.wp-block-search__button:disabled,
-.wp-block-button .wp-block-button__link:disabled, .wp-block-file .wp-block-file__button:disabled {
-	background-color: var(--global--color-white-50);
-	border-color: var(--global--color-white-50);
-	color: var(--button--color-text-active);
-}
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1536,6 +1467,74 @@ a:hover {
 /**
  * Button
  */
+.site .button,
+input[type="submit"],
+input[type="reset"],
+.wp-block-search__button,
+.wp-block-button .wp-block-button__link {
+	line-height: var(--button--line-height);
+	color: var(--button--color-text);
+	cursor: pointer;
+	font-weight: var(--button--font-weight);
+	font-family: var(--button--font-family);
+	font-size: var(--button--font-size);
+	background-color: var(--button--color-background);
+	border-radius: var(--button--border-radius);
+	border: var(--button--border-width) solid var(--button--color-background);
+	text-decoration: none;
+	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
+}
+
+.site .button:before, .site .button:after,
+input[type="submit"]:before,
+input[type="submit"]:after,
+input[type="reset"]:before,
+input[type="reset"]:after,
+.wp-block-search__button:before,
+.wp-block-search__button:after,
+.wp-block-button .wp-block-button__link:before,
+.wp-block-button .wp-block-button__link:after {
+	content: "";
+	display: block;
+	height: 0;
+	width: 0;
+}
+
+.site .button:before,
+input[type="submit"]:before,
+input[type="reset"]:before,
+.wp-block-search__button:before,
+.wp-block-button .wp-block-button__link:before {
+	margin-bottom: -calc(.5em * var(--button--line-height) + -.38);
+}
+
+.site .button:after,
+input[type="submit"]:after,
+input[type="reset"]:after,
+.wp-block-search__button:after,
+.wp-block-button .wp-block-button__link:after {
+	margin-top: -calc(.5em * var(--button--line-height) + -.39);
+}
+
+.site .button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+.wp-block-search__button:focus,
+.wp-block-button .wp-block-button__link:focus {
+	outline-offset: -4px;
+	outline: 2px dotted currentColor;
+}
+
+.site .button:disabled,
+input[type="submit"]:disabled,
+input[type="reset"]:disabled,
+.wp-block-search__button:disabled,
+.wp-block-button .wp-block-button__link:disabled {
+	background-color: var(--global--color-white-50);
+	border-color: var(--global--color-white-50);
+	color: var(--button--color-text-active);
+}
+
 .site .button:active,
 input[type="submit"]:active,
 input[type="reset"]:active,
@@ -1858,7 +1857,44 @@ input[type="reset"]:hover,
 }
 
 .wp-block-file .wp-block-file__button {
+	line-height: var(--button--line-height);
+	color: var(--button--color-text);
+	cursor: pointer;
+	font-weight: var(--button--font-weight);
+	font-family: var(--button--font-family);
+	font-size: var(--button--font-size);
+	background-color: var(--button--color-background);
+	border-radius: var(--button--border-radius);
+	border: var(--button--border-width) solid var(--button--color-background);
+	text-decoration: none;
+	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 	display: inline-block;
+}
+
+.wp-block-file .wp-block-file__button:before, .wp-block-file .wp-block-file__button:after {
+	content: "";
+	display: block;
+	height: 0;
+	width: 0;
+}
+
+.wp-block-file .wp-block-file__button:before {
+	margin-bottom: -calc(.5em * var(--button--line-height) + -.38);
+}
+
+.wp-block-file .wp-block-file__button:after {
+	margin-top: -calc(.5em * var(--button--line-height) + -.39);
+}
+
+.wp-block-file .wp-block-file__button:focus {
+	outline-offset: -4px;
+	outline: 2px dotted currentColor;
+}
+
+.wp-block-file .wp-block-file__button:disabled {
+	background-color: var(--global--color-white-50);
+	border-color: var(--global--color-white-50);
+	color: var(--button--color-text-active);
 }
 
 .wp-block-file .wp-block-file__button:focus {

@@ -13,7 +13,7 @@
 
 .wp-block-button__link {
 	// Extend button style
-	@extend %button-style;
+	@include button-style();
 }
 
 /**
