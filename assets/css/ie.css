@@ -6434,7 +6434,15 @@ h1.page-title {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
-@media only screen and (min-width: 822px) {
+@media only screen and (min-width: 652px) {
+	.widget-area {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 50px;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
 	.widget-area {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);

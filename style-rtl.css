@@ -4726,7 +4726,15 @@ h1.page-title {
 	font-family: var(--footer--font-family);
 }
 
-@media only screen and (min-width: 822px) {
+@media only screen and (min-width: 652px) {
+	.widget-area {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: calc(2 * var(--global--spacing-horizontal));
+	}
+}
+
+@media only screen and (min-width: 1024px) {
 	.widget-area {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);

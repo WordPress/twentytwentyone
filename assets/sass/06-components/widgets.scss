@@ -6,10 +6,14 @@
 	font-size: var(--footer--font-size);
 	font-family: var(--footer--font-family);
 
-	@include media(desktop) {
+	@include media(laptop) {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		column-gap: calc(2 * var(--global--spacing-horizontal));
+	}
+
+	@include media(wide) {
+		grid-template-columns: repeat(3, 1fr);
 	}
 
 	ul {
