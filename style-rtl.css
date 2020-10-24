@@ -2086,6 +2086,10 @@ img {
 	margin-bottom: 0;
 }
 
+.wp-block-latest-posts.is-grid {
+	word-wrap: anywhere;
+}
+
 .wp-block-latest-posts.is-grid > li {
 	margin-bottom: var(--global--spacing-vertical);
 }
