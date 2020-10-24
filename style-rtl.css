@@ -3112,6 +3112,11 @@ table.wp-calendar-table caption {
 	float: left;
 }
 
+.wp-block-tag-cloud.alignfull {
+	padding-right: var(--global--spacing-unit);
+	padding-left: var(--global--spacing-unit);
+}
+
 .wp-block-verse {
 	font-family: var(--entry-content--font-family);
 }
@@ -3598,10 +3603,6 @@ h1.entry-title {
 
 .entry-content p {
 	word-wrap: break-word;
-}
-
-.entry-content .more-link:hover {
-	text-decoration: none;
 }
 
 .entry-content > iframe[style] {
