@@ -2418,7 +2418,7 @@ dd {
 	padding: 0;
 	position: absolute;
 	top: 100%;
-	border: 1px solid var(--global--color-dark-gray);
+	border: 1px solid var(--global--color-gray);
 }
 
 .wp-block-navigation:not(.has-background) .wp-block-navigation__container {
@@ -4385,7 +4385,7 @@ h1.page-title {
 	padding: 0;
 	list-style: none;
 	margin-right: var(--primary-nav--padding);
-	border: 1px solid var(--global--color-dark-gray);
+	border: 1px solid var(--global--color-gray);
 }
 
 @media only screen and (min-width: 482px) {
