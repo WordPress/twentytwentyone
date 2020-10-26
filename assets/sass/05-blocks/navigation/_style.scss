@@ -113,6 +113,11 @@
 				&:focus {
 					color: var(--primary-nav--color-link-hover);
 				}
+
+				&:hover {
+					text-decoration: underline;
+					text-decoration-style: dotted;
+				}
 			}
 		}
 
