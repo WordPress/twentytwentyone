@@ -175,9 +175,9 @@ class Twenty_Twenty_One_Custom_Colors {
 	public function body_class( $classes ) {
 		$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
 		if ( 127 > self::get_relative_luminance_from_hex( $background_color ) ) {
-			$classes[] = 'is-background-dark';
+			$classes[] = 'has-background-dark';
 		} else {
-			$classes[] = 'is-background-light';
+			$classes[] = 'has-background-light';
 		}
 
 		return $classes;

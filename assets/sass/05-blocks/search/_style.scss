@@ -1,6 +1,20 @@
 .wp-block-search {
 	max-width: var(--responsive--aligndefault-width);
 
+	&__button-inside {
+
+		.wp-block-search__inside-wrapper {
+			background-color: var(--global--color-white);
+		}
+	}
+
+	&__button-only.aligncenter {
+
+		.wp-block-search__inside-wrapper {
+			justify-content: center;
+		}
+	}
+
 	.wp-block-search__label {
 		font-size: var(--form--font-size);
 		font-weight: var(--form--label-weight);
@@ -15,6 +29,7 @@
 		max-width: inherit;
 		margin-right: calc(-1 * var(--button--border-width));
 		padding: var(--form--spacing-unit);
+		background-color: var(--global--color-white);
 
 		&:focus {
 			color: var(--form--color-text);

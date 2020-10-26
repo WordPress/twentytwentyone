@@ -48,13 +48,6 @@ h1.entry-title {
 		word-wrap: break-word;
 	}
 
-	.more-link {
-
-		&:hover {
-			text-decoration: none;
-		}
-	}
-
 	// Overwrite iframe embeds that have inline styles.
 	> iframe[style] {
 

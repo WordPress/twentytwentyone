@@ -1686,10 +1686,11 @@ a:hover {
 	}
 }
 
+.wp-block-columns.is-style-twentytwentyone-columns-overlap {
+	justify-content: space-around;
+}
+
 @media only screen and (min-width: 652px) {
-	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column {
-		flex-grow: 1;
-	}
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) {
 		margin-right: calc(-2 * var(--global--spacing-horizontal));
 		margin-top: calc(2.5 * var(--global--spacing-horizontal));
@@ -2875,6 +2876,14 @@ pre.wp-block-preformatted {
 	max-width: var(--responsive--aligndefault-width);
 }
 
+.wp-block-search__button-inside .wp-block-search__inside-wrapper {
+	background-color: var(--global--color-white);
+}
+
+.wp-block-search__button-only.aligncenter .wp-block-search__inside-wrapper {
+	justify-content: center;
+}
+
 .wp-block-search .wp-block-search__label {
 	font-size: var(--form--font-size);
 	font-weight: var(--form--label-weight);
@@ -2889,6 +2898,7 @@ pre.wp-block-preformatted {
 	max-width: inherit;
 	margin-left: calc(-1 * var(--button--border-width));
 	padding: var(--form--spacing-unit);
+	background-color: var(--global--color-white);
 }
 
 .wp-block-search .wp-block-search__input:focus {
@@ -3071,6 +3081,11 @@ table.wp-calendar-table caption {
 
 .wp-calendar-nav .wp-calendar-nav-next {
 	float: left;
+}
+
+.wp-block-tag-cloud.alignfull {
+	padding-right: var(--global--spacing-unit);
+	padding-left: var(--global--spacing-unit);
 }
 
 .wp-block-verse {
@@ -3504,9 +3519,11 @@ a.custom-logo-link {
 }
 
 .page-links .post-page-numbers {
+	display: inline-block;
 	margin-right: calc(0.66 * var(--global--spacing-unit));
 	margin-left: calc(0.66 * var(--global--spacing-unit));
-	padding: calc(0.33 * var(--global--spacing-vertical)) 0;
+	min-width: 44px;
+	min-height: 44px;
 }
 
 .page-links .post-page-numbers:first-child {
@@ -3557,10 +3574,6 @@ h1.entry-title {
 
 .entry-content p {
 	word-wrap: break-word;
-}
-
-.entry-content .more-link:hover {
-	text-decoration: none;
 }
 
 .entry-content > iframe[style] {
@@ -4142,8 +4155,6 @@ h1.page-title {
 	padding-left: var(--global--spacing-unit);
 	padding-bottom: var(--global--spacing-horizontal);
 	background-color: var(--global--color-background);
-	overflow-x: hidden;
-	overflow-y: auto;
 	transition: all .15s ease-in-out;
 	transform: translateY(var(--global--spacing-vertical));
 }
@@ -4152,6 +4163,8 @@ h1.page-title {
 	.primary-navigation > .primary-menu-container {
 		height: 100vh;
 		z-index: 499;
+		overflow-x: hidden;
+		overflow-y: auto;
 		border: 2px solid transparent;
 	}
 	.has-logo.has-title-and-tagline .primary-navigation > .primary-menu-container {
@@ -4546,6 +4559,11 @@ h1.page-title {
 	color: var(--global--color-primary);
 }
 
+.navigation .nav-links > * {
+	min-width: 44px;
+	min-height: 44px;
+}
+
 .navigation .nav-links .nav-next a,
 .navigation .nav-links .nav-previous a {
 	display: flex;
@@ -4741,11 +4759,17 @@ h1.page-title {
 	font-family: var(--footer--font-family);
 }
 
-@media only screen and (min-width: 822px) {
+@media only screen and (min-width: 652px) {
 	.widget-area {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		column-gap: calc(2 * var(--global--spacing-horizontal));
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.widget-area {
+		grid-template-columns: repeat(3, 1fr);
 	}
 }
 
@@ -5048,4 +5072,44 @@ main,
 section,
 footer {
 	max-width: none;
+}
+
+.is-IE.has-background-dark {
+	color: #fff;
+}
+
+.is-IE.has-background-dark *,
+.is-IE.has-background-dark a,
+.is-IE.has-background-dark .site-description,
+.is-IE.has-background-dark .entry-title,
+.is-IE.has-background-dark .entry-footer,
+.is-IE.has-background-dark .widget-area,
+.is-IE.has-background-dark .post-navigation .meta-nav,
+.is-IE.has-background-dark .footer-navigation-wrapper li a:link,
+.is-IE.has-background-dark .site-footer > .site-info,
+.is-IE.has-background-dark .site-footer > .site-info a,
+.is-IE.has-background-dark .site-footer > .site-info a:visited {
+	color: #fff;
+}
+
+.is-IE.has-background-dark .sub-menu-toggle svg,
+.is-IE.has-background-dark .sub-menu-toggle path,
+.is-IE.has-background-dark .post-navigation .meta-nav svg,
+.is-IE.has-background-dark .post-navigation .meta-nav path {
+	fill: #fff;
+}
+
+.is-IE.has-background-dark .primary-navigation > div > .menu-wrapper > li > .sub-menu li {
+	background: #000;
+}
+
+@media only screen and (max-width: 481px) {
+	.is-IE.has-background-dark.primary-navigation-open .primary-navigation > .primary-menu-container,
+	.is-IE.has-background-dark.primary-navigation-open .menu-button-container {
+		background-color: #000;
+	}
+}
+
+.is-IE.has-background-dark .skip-link:focus {
+	color: #21759b;
 }

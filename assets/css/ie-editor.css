@@ -2021,6 +2021,14 @@ pre.wp-block-preformatted {
 	color: #d1e4dd;
 }
 
+.wp-block[data-align="center"] > * {
+	text-align: center;
+}
+
+.wp-block[data-align="center"] .wp-block-search__button-only .wp-block-search__inside-wrapper {
+	justify-content: center;
+}
+
 .wp-block-separator {
 	border-bottom: 1px solid #28303d;
 	clear: both;
@@ -2234,6 +2242,10 @@ table.wp-calendar-table caption {
 
 .wp-calendar-nav .wp-calendar-nav-next {
 	float: right;
+}
+
+.wp-block-tag-cloud.aligncenter {
+	text-align: center;
 }
 
 pre.wp-block-verse {
