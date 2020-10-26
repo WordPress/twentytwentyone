@@ -1245,6 +1245,12 @@ h6 {
 	line-height: 1.3;
 }
 
+[data-type="core/html"] textarea {
+	color: #28303d;
+	border-radius: 0;
+	padding: 20px;
+}
+
 /* Center image block by default in the editor */
 .wp-block-image > div {
 	text-align: center;
