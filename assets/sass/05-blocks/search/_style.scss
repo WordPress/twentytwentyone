@@ -34,12 +34,17 @@
 		.wp-block-cover[style*="background-image"] & {
 			border-color: currentColor;
 		}
+
+		.has-background.has-black-background-color & {
+			border-color: var(--form--border-color);
+		}
 	}
 
 	button.wp-block-search__button {
 		margin-left: 0;
 		background-color: transparent;
 		color: var(--button--color-text-hover);
+		line-height: 1;
 
 		&:hover {
 			background-color: var(--button--color-background);
@@ -63,6 +68,24 @@
 			color: currentColor;
 			border-color: currentColor;
 		}
+
+		.has-background.has-black-background-color & {
+
+			&:hover {
+				color: var(--button--color-text);
+				border-color: var(--button--color-background);
+			}
+		}
+
+		.has-background.has-white-background-color & {
+
+			&:hover {
+				background-color: var(--button--color-text);
+				border-color: var(--button--color-text);
+				color: var(--global--color-white);
+			}
+		}
+
 	}
 }
 

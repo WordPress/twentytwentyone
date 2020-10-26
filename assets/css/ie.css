@@ -4103,10 +4103,15 @@ pre.wp-block-preformatted {
 	border-color: currentColor;
 }
 
+.has-background.has-black-background-color .wp-block-search .wp-block-search__input {
+	border-color: #39414d;
+}
+
 .wp-block-search button.wp-block-search__button {
 	margin-left: 0;
 	background-color: transparent;
 	color: #39414d;
+	line-height: 1;
 }
 
 .wp-block-search button.wp-block-search__button:hover {
@@ -4130,6 +4135,17 @@ pre.wp-block-preformatted {
 .wp-block-cover[style*="background-image"] .wp-block-search button.wp-block-search__button {
 	color: currentColor;
 	border-color: currentColor;
+}
+
+.has-background.has-black-background-color .wp-block-search button.wp-block-search__button:hover {
+	color: #d1e4dd;
+	border-color: #39414d;
+}
+
+.has-background.has-white-background-color .wp-block-search button.wp-block-search__button:hover {
+	background-color: #d1e4dd;
+	border-color: #d1e4dd;
+	color: #fff;
 }
 
 .wp-block-search__button {
@@ -5037,10 +5053,6 @@ h1.entry-title {
 
 .entry-content p {
 	word-wrap: break-word;
-}
-
-.entry-content .more-link:hover {
-	text-decoration: none;
 }
 
 .entry-content > iframe[style] {
