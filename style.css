@@ -1221,20 +1221,20 @@ input[type="color"]:disabled,
 	opacity: 0.7;
 }
 
-.is-background-dark input[type="text"], .is-background-dark
-input[type="email"], .is-background-dark
-input[type="url"], .is-background-dark
-input[type="password"], .is-background-dark
-input[type="search"], .is-background-dark
-input[type="number"], .is-background-dark
-input[type="tel"], .is-background-dark
-input[type="date"], .is-background-dark
-input[type="month"], .is-background-dark
-input[type="week"], .is-background-dark
-input[type="time"], .is-background-dark
-input[type="datetime"], .is-background-dark
-input[type="datetime-local"], .is-background-dark
-input[type="color"], .is-background-dark
+.has-background-dark input[type="text"], .has-background-dark
+input[type="email"], .has-background-dark
+input[type="url"], .has-background-dark
+input[type="password"], .has-background-dark
+input[type="search"], .has-background-dark
+input[type="number"], .has-background-dark
+input[type="tel"], .has-background-dark
+input[type="date"], .has-background-dark
+input[type="month"], .has-background-dark
+input[type="week"], .has-background-dark
+input[type="time"], .has-background-dark
+input[type="datetime"], .has-background-dark
+input[type="datetime-local"], .has-background-dark
+input[type="color"], .has-background-dark
 .site textarea {
 	background: var(--global--color-white-90);
 }
@@ -1243,7 +1243,7 @@ input[type="search"]:focus {
 	outline-offset: -7px;
 }
 
-.is-background-dark input[type="search"]:focus {
+.has-background-dark input[type="search"]:focus {
 	outline-color: var(--global--color-background);
 }
 
@@ -1277,7 +1277,7 @@ select:focus {
 	outline: 2px dotted var(--form--border-color);
 }
 
-.is-background-dark select {
+.has-background-dark select {
 	/* stylelint-disable */
 	background: var(--global--color-white-90) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2328303d'><polygon points='0,0 10,0 5,5'/></svg>") no-repeat;
 	/* stylelint-enable */
@@ -1314,7 +1314,7 @@ License: MIT.
 	input[type="radio"]:disabled {
 		opacity: 0.7;
 	}
-	.is-background-dark input[type="checkbox"], .is-background-dark
+	.has-background-dark input[type="checkbox"], .has-background-dark
 	input[type="radio"] {
 		background: var(--global--color-white-90);
 	}

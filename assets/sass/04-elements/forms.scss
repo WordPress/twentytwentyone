@@ -31,7 +31,7 @@ input[type="color"],
 		opacity: 0.7;
 	}
 
-	.is-background-dark & {
+	.has-background-dark & {
 		background: var(--global--color-white-90);
 	}
 
@@ -43,7 +43,7 @@ input[type="search"] {
 	&:focus {
 		outline-offset: -7px;
 
-		.is-background-dark & {
+		.has-background-dark & {
 			outline-color: var(--global--color-background);
 		}
 	}
@@ -79,7 +79,7 @@ select {
 		outline: 2px dotted var(--form--border-color);
 	}
 
-	.is-background-dark & {
+	.has-background-dark & {
 		/* stylelint-disable */
 		background: var(--global--color-white-90) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2328303d'><polygon points='0,0 10,0 5,5'/></svg>") no-repeat;
 		/* stylelint-enable */
@@ -118,7 +118,7 @@ License: MIT.
 			opacity: 0.7;
 		}
 
-		.is-background-dark & {
+		.has-background-dark & {
 			background: var(--global--color-white-90);
 		}
 	}

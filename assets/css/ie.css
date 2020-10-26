@@ -1785,76 +1785,76 @@ input[type="color"]:disabled,
 	opacity: 0.7;
 }
 
-.is-background-dark input[type="text"] {
+.has-background-dark input[type="text"] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.is-background-dark
+.has-background-dark
 input[type="email"] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.is-background-dark
+.has-background-dark
 input[type="url"] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.is-background-dark
+.has-background-dark
 input[type="password"] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.is-background-dark
+.has-background-dark
 input[type="search"] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.is-background-dark
+.has-background-dark
 input[type="number"] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.is-background-dark
+.has-background-dark
 input[type="tel"] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.is-background-dark
+.has-background-dark
 input[type="date"] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.is-background-dark
+.has-background-dark
 input[type="month"] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.is-background-dark
+.has-background-dark
 input[type="week"] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.is-background-dark
+.has-background-dark
 input[type="time"] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.is-background-dark
+.has-background-dark
 input[type="datetime"] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.is-background-dark
+.has-background-dark
 input[type="datetime-local"] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.is-background-dark
+.has-background-dark
 input[type="color"] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.is-background-dark
+.has-background-dark
 .site textarea {
 	background: rgba(255, 255, 255, 0.9);
 }
@@ -1863,7 +1863,7 @@ input[type="search"]:focus {
 	outline-offset: -7px;
 }
 
-.is-background-dark input[type="search"]:focus {
+.has-background-dark input[type="search"]:focus {
 	outline-color: #d1e4dd;
 }
 
@@ -1897,7 +1897,7 @@ select:focus {
 	outline: 2px dotted #39414d;
 }
 
-.is-background-dark select {
+.has-background-dark select {
 	/* stylelint-disable */
 	background: rgba(255, 255, 255, 0.9) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2328303d'><polygon points='0,0 10,0 5,5'/></svg>") no-repeat;
 	/* stylelint-enable */
@@ -1942,10 +1942,10 @@ License: MIT.
 	input[type="radio"]:disabled {
 		opacity: 0.7;
 	}
-	.is-background-dark input[type="checkbox"] {
+	.has-background-dark input[type="checkbox"] {
 		background: rgba(255, 255, 255, 0.9);
 	}
-	.is-background-dark
+	.has-background-dark
 	input[type="radio"] {
 		background: rgba(255, 255, 255, 0.9);
 	}
