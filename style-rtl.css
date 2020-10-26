@@ -377,7 +377,7 @@ input.has-focus[type="submit"],
 input.has-focus[type="reset"],
 .has-focus.wp-block-search__button,
 .wp-block-button .has-focus.wp-block-button__link, .wp-block-file .has-focus.wp-block-file__button {
-	outline-offset: -4px;
+	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }
 

@@ -249,7 +249,7 @@
 }
 
 .wp-block-button__link:focus, .wp-block-file .wp-block-file__button:focus, .wp-block-search .wp-block-search__button:focus, .has-focus.wp-block-button__link, .wp-block-file .has-focus.wp-block-file__button, .wp-block-search .has-focus.wp-block-search__button {
-	outline-offset: -4px;
+	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }
 
