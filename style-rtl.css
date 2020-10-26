@@ -1112,7 +1112,6 @@ blockquote > *:last-child {
 
 blockquote p {
 	letter-spacing: var(--heading--letter-spacing-h4);
-	line-height: var(--heading--line-height-h4);
 	font-family: var(--quote--font-family);
 	font-size: var(--quote--font-size);
 	font-style: var(--quote--font-style);
