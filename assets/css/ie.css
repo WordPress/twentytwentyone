@@ -122,18 +122,6 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	/* Widgets */
 }
 
-/* OS dark theme preference */
-@media (prefers-color-scheme: dark) {
-	html.respect-color-scheme-preference body {
-		background-color: #28303d;
-	}
-	@media (prefers-color-scheme: dark){
-		html.respect-color-scheme-preference body{
-		background-color: #28303d;
-		}
-	}
-}
-
 /* Button extends */
 .site .button {
 	line-height: 1.5;
@@ -6340,12 +6328,6 @@ h1.page-title {
 	margin-right: 13px;
 }
 
-@media (prefers-color-scheme: dark){
-	.pagination .nav-links > *{
-	color: #f0f0f0;
-	}
-}
-
 .comments-pagination .nav-links > * {
 	color: #28303d;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -6353,12 +6335,6 @@ h1.page-title {
 	font-weight: normal;
 	margin-left: 13px;
 	margin-right: 13px;
-}
-
-@media (prefers-color-scheme: dark){
-	.comments-pagination .nav-links > *{
-	color: #f0f0f0;
-	}
 }
 
 .pagination .nav-links > *.current {
@@ -6813,45 +6789,5 @@ main,
 section,
 footer {
 	max-width: none;
-}
-
-.is-IE.has-background-dark {
-	color: #fff;
-}
-
-.is-IE.has-background-dark *,
-.is-IE.has-background-dark a,
-.is-IE.has-background-dark .site-description,
-.is-IE.has-background-dark .entry-title,
-.is-IE.has-background-dark .entry-footer,
-.is-IE.has-background-dark .widget-area,
-.is-IE.has-background-dark .post-navigation .meta-nav,
-.is-IE.has-background-dark .footer-navigation-wrapper li a:link,
-.is-IE.has-background-dark .site-footer > .site-info,
-.is-IE.has-background-dark .site-footer > .site-info a,
-.is-IE.has-background-dark .site-footer > .site-info a:visited {
-	color: #fff;
-}
-
-.is-IE.has-background-dark .sub-menu-toggle svg,
-.is-IE.has-background-dark .sub-menu-toggle path,
-.is-IE.has-background-dark .post-navigation .meta-nav svg,
-.is-IE.has-background-dark .post-navigation .meta-nav path {
-	fill: #fff;
-}
-
-.is-IE.has-background-dark .primary-navigation > div > .menu-wrapper > li > .sub-menu li {
-	background: #000;
-}
-
-@media only screen and (max-width: 481px) {
-	.is-IE.has-background-dark.primary-navigation-open .primary-navigation > .primary-menu-container,
-	.is-IE.has-background-dark.primary-navigation-open .menu-button-container {
-		background-color: #000;
-	}
-}
-
-.is-IE.has-background-dark .skip-link:focus {
-	color: #21759b;
 }
 /*# sourceMappingURL=ie.css.map */

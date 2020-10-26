@@ -235,24 +235,3 @@ $baseline-unit: 10px;
 		--heading--font-size-h2: 3rem; // 48px / 16px
 	}
 }
-
-/* OS dark theme preference */
-@media (prefers-color-scheme: dark) {
-
-	html.respect-color-scheme-preference {
-		--global--color-background: var(--global--color-dark-gray);
-		--global--color-primary: var(--global--color-light-gray);
-		--global--color-secondary: var(--global--color-light-gray);
-
-		// These need to be redefined for comment-submit buttons.
-		--button--color-text: var(--global--color-background);
-		--button--color-text-hover: var(--global--color-secondary);
-		--button--color-text-active: var(--global--color-secondary);
-		--button--color-background: var(--global--color-secondary);
-		--button--color-background-active: var(--global--color-background);
-
-		body {
-			background-color: var(--global--color-background);
-		}
-	}
-}
