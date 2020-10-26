@@ -44,3 +44,10 @@ figcaption,
 	margin-top: 0;
 	padding: 0;
 }
+
+.post-thumbnail img.attachment-post-thumbnail {
+	width: 100%;
+	--img-width: attr(width);
+	--img-height: attr(height);
+	height: calc(var(--img-width) / var(--img-height) * 1%);
+}

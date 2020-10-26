@@ -1498,6 +1498,13 @@ figcaption,
 	padding: 0;
 }
 
+.post-thumbnail img.attachment-post-thumbnail {
+	width: 100%;
+	--img-width: attr(width);
+	--img-height: attr(height);
+	height: calc(var(--img-width) / var(--img-height) * 1%);
+}
+
 /* Over here, place any elements that do not need to have their own file. */
 b,
 strong {

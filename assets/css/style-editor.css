@@ -434,6 +434,13 @@ figcaption,
 	padding: 0;
 }
 
+.post-thumbnail img.attachment-post-thumbnail {
+	width: 100%;
+	--img-width: attr(width);
+	--img-height: attr(height);
+	height: calc(var(--img-width) / var(--img-height) * 1%);
+}
+
 select {
 	border: var(--form--border-width) solid var(--form--border-color);
 	border-radius: var(--form--border-radius);
