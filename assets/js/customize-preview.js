@@ -43,6 +43,15 @@
 				textColor = ! isDark ? 'var(--global--color-dark-gray)' : 'var(--global--color-light-gray)',
 				tableColor = ! isDark ? 'var(--global--color-light-gray)' : 'var(--global--color-dark-gray)';
 
+			// Modify the body class depending on whether this is a dark background or not.
+			if ( isDark ) {
+				if ( ! document.body.classList.contains( 'has-background-dark' ) ) {
+					document.body.classList.add( 'has-background-dark' );
+				}
+			} else {
+				document.body.classList.remove( 'has-background-dark' );
+			}
+
 			document.documentElement.style.setProperty( '--global--color-primary', textColor );
 			document.documentElement.style.setProperty( '--global--color-secondary', textColor );
 			document.documentElement.style.setProperty( '--global--color-background', to );
