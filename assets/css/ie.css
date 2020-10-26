@@ -6705,6 +6705,10 @@ h1.page-title {
 	color: #fff;
 }
 
+:not(.has-text-color).has-background {
+	color: #28303d;
+}
+
 :not(.has-text-color).has-green-background-color[class] {
 	color: #28303d;
 }
