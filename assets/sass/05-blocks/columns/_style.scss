@@ -68,6 +68,47 @@
 							background-color: var(--global--color-background);
 							padding: var(--global--spacing-unit);
 						}
+
+						.has-black-background-color[class] & {
+							background-color: var(--global--color-black);
+						}
+
+						.has-gray-background-color[class] & {
+							background-color: var(--global--color-gray);
+						}
+
+						.has-dark-gray-background-color[class] & {
+							background-color: var(--global--color-dark-gray);
+						}
+
+						.has-green-background-color[class] & {
+							background-color: var(--global--color-green);
+						}
+
+						.has-blue-background-color[class] & {
+							background-color: var(--global--color-blue);
+						}
+
+						.has-purple-background-color[class] & {
+							background-color: var(--global--color-purple);
+						}
+
+						.has-red-background-color[class] & {
+							background-color: var(--global--color-red);
+						}
+
+						.has-orange-background-color[class] & {
+							background-color: var(--global--color-orange);
+						}
+
+						.has-yellow-background-color[class] & {
+							background-color: var(--global--color-yellow);
+						}
+
+						.has-white-background-color[class] & {
+							background-color: var(--global--color-white);
+						}
+
 					}
 
 					// Lists should still have their usual left padding.

@@ -656,6 +656,7 @@ a:hover {
 		margin-left: -50px;
 		margin-top: 63px;
 		z-index: 2;
+		background: inherit;
 	}
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p:not(.has-background) {
 		background-color: #d1e4dd;
@@ -696,6 +697,396 @@ a:hover {
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre:not(.has-background) {
 		background-color: #d1e4dd;
 		padding: 20px;
+	}
+	.has-black-background-color[class] .wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p {
+		background-color: #000;
+	}
+	.has-black-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1 {
+		background-color: #000;
+	}
+	.has-black-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h2 {
+		background-color: #000;
+	}
+	.has-black-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h3 {
+		background-color: #000;
+	}
+	.has-black-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h4 {
+		background-color: #000;
+	}
+	.has-black-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h5 {
+		background-color: #000;
+	}
+	.has-black-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h6 {
+		background-color: #000;
+	}
+	.has-black-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul {
+		background-color: #000;
+	}
+	.has-black-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol {
+		background-color: #000;
+	}
+	.has-black-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre {
+		background-color: #000;
+	}
+	.has-gray-background-color[class] .wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p {
+		background-color: #39414d;
+	}
+	.has-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1 {
+		background-color: #39414d;
+	}
+	.has-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h2 {
+		background-color: #39414d;
+	}
+	.has-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h3 {
+		background-color: #39414d;
+	}
+	.has-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h4 {
+		background-color: #39414d;
+	}
+	.has-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h5 {
+		background-color: #39414d;
+	}
+	.has-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h6 {
+		background-color: #39414d;
+	}
+	.has-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul {
+		background-color: #39414d;
+	}
+	.has-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol {
+		background-color: #39414d;
+	}
+	.has-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre {
+		background-color: #39414d;
+	}
+	.has-dark-gray-background-color[class] .wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p {
+		background-color: #28303d;
+	}
+	.has-dark-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1 {
+		background-color: #28303d;
+	}
+	.has-dark-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h2 {
+		background-color: #28303d;
+	}
+	.has-dark-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h3 {
+		background-color: #28303d;
+	}
+	.has-dark-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h4 {
+		background-color: #28303d;
+	}
+	.has-dark-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h5 {
+		background-color: #28303d;
+	}
+	.has-dark-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h6 {
+		background-color: #28303d;
+	}
+	.has-dark-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul {
+		background-color: #28303d;
+	}
+	.has-dark-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol {
+		background-color: #28303d;
+	}
+	.has-dark-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre {
+		background-color: #28303d;
+	}
+	.has-green-background-color[class] .wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p {
+		background-color: #d1e4dd;
+	}
+	.has-green-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1 {
+		background-color: #d1e4dd;
+	}
+	.has-green-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h2 {
+		background-color: #d1e4dd;
+	}
+	.has-green-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h3 {
+		background-color: #d1e4dd;
+	}
+	.has-green-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h4 {
+		background-color: #d1e4dd;
+	}
+	.has-green-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h5 {
+		background-color: #d1e4dd;
+	}
+	.has-green-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h6 {
+		background-color: #d1e4dd;
+	}
+	.has-green-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul {
+		background-color: #d1e4dd;
+	}
+	.has-green-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol {
+		background-color: #d1e4dd;
+	}
+	.has-green-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre {
+		background-color: #d1e4dd;
+	}
+	.has-blue-background-color[class] .wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p {
+		background-color: #d1dfe4;
+	}
+	.has-blue-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1 {
+		background-color: #d1dfe4;
+	}
+	.has-blue-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h2 {
+		background-color: #d1dfe4;
+	}
+	.has-blue-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h3 {
+		background-color: #d1dfe4;
+	}
+	.has-blue-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h4 {
+		background-color: #d1dfe4;
+	}
+	.has-blue-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h5 {
+		background-color: #d1dfe4;
+	}
+	.has-blue-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h6 {
+		background-color: #d1dfe4;
+	}
+	.has-blue-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul {
+		background-color: #d1dfe4;
+	}
+	.has-blue-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol {
+		background-color: #d1dfe4;
+	}
+	.has-blue-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre {
+		background-color: #d1dfe4;
+	}
+	.has-purple-background-color[class] .wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p {
+		background-color: #d1d1e4;
+	}
+	.has-purple-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1 {
+		background-color: #d1d1e4;
+	}
+	.has-purple-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h2 {
+		background-color: #d1d1e4;
+	}
+	.has-purple-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h3 {
+		background-color: #d1d1e4;
+	}
+	.has-purple-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h4 {
+		background-color: #d1d1e4;
+	}
+	.has-purple-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h5 {
+		background-color: #d1d1e4;
+	}
+	.has-purple-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h6 {
+		background-color: #d1d1e4;
+	}
+	.has-purple-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul {
+		background-color: #d1d1e4;
+	}
+	.has-purple-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol {
+		background-color: #d1d1e4;
+	}
+	.has-purple-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre {
+		background-color: #d1d1e4;
+	}
+	.has-red-background-color[class] .wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p {
+		background-color: #e4d1d1;
+	}
+	.has-red-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1 {
+		background-color: #e4d1d1;
+	}
+	.has-red-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h2 {
+		background-color: #e4d1d1;
+	}
+	.has-red-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h3 {
+		background-color: #e4d1d1;
+	}
+	.has-red-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h4 {
+		background-color: #e4d1d1;
+	}
+	.has-red-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h5 {
+		background-color: #e4d1d1;
+	}
+	.has-red-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h6 {
+		background-color: #e4d1d1;
+	}
+	.has-red-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul {
+		background-color: #e4d1d1;
+	}
+	.has-red-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol {
+		background-color: #e4d1d1;
+	}
+	.has-red-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre {
+		background-color: #e4d1d1;
+	}
+	.has-orange-background-color[class] .wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p {
+		background-color: #e4dad1;
+	}
+	.has-orange-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1 {
+		background-color: #e4dad1;
+	}
+	.has-orange-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h2 {
+		background-color: #e4dad1;
+	}
+	.has-orange-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h3 {
+		background-color: #e4dad1;
+	}
+	.has-orange-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h4 {
+		background-color: #e4dad1;
+	}
+	.has-orange-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h5 {
+		background-color: #e4dad1;
+	}
+	.has-orange-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h6 {
+		background-color: #e4dad1;
+	}
+	.has-orange-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul {
+		background-color: #e4dad1;
+	}
+	.has-orange-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol {
+		background-color: #e4dad1;
+	}
+	.has-orange-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre {
+		background-color: #e4dad1;
+	}
+	.has-yellow-background-color[class] .wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p {
+		background-color: #eeeadd;
+	}
+	.has-yellow-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1 {
+		background-color: #eeeadd;
+	}
+	.has-yellow-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h2 {
+		background-color: #eeeadd;
+	}
+	.has-yellow-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h3 {
+		background-color: #eeeadd;
+	}
+	.has-yellow-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h4 {
+		background-color: #eeeadd;
+	}
+	.has-yellow-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h5 {
+		background-color: #eeeadd;
+	}
+	.has-yellow-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h6 {
+		background-color: #eeeadd;
+	}
+	.has-yellow-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul {
+		background-color: #eeeadd;
+	}
+	.has-yellow-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol {
+		background-color: #eeeadd;
+	}
+	.has-yellow-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre {
+		background-color: #eeeadd;
+	}
+	.has-white-background-color[class] .wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p {
+		background-color: #fff;
+	}
+	.has-white-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1 {
+		background-color: #fff;
+	}
+	.has-white-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h2 {
+		background-color: #fff;
+	}
+	.has-white-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h3 {
+		background-color: #fff;
+	}
+	.has-white-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h4 {
+		background-color: #fff;
+	}
+	.has-white-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h5 {
+		background-color: #fff;
+	}
+	.has-white-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h6 {
+		background-color: #fff;
+	}
+	.has-white-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul {
+		background-color: #fff;
+	}
+	.has-white-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol {
+		background-color: #fff;
+	}
+	.has-white-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre {
+		background-color: #fff;
 	}
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul:not(.has-background) {
 		padding-left: 50px;

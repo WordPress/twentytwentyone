@@ -614,6 +614,7 @@ a:hover {
 		margin-left: calc(-2 * var(--global--spacing-horizontal));
 		margin-top: calc(2.5 * var(--global--spacing-horizontal));
 		z-index: 2;
+		background: inherit;
 	}
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p:not(.has-background),
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1:not(.has-background),
@@ -627,6 +628,126 @@ a:hover {
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre:not(.has-background) {
 		background-color: var(--global--color-background);
 		padding: var(--global--spacing-unit);
+	}
+	.has-black-background-color[class] .wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p, .has-black-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1, .has-black-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h2, .has-black-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h3, .has-black-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h4, .has-black-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h5, .has-black-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h6, .has-black-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul, .has-black-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol, .has-black-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre {
+		background-color: var(--global--color-black);
+	}
+	.has-gray-background-color[class] .wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p, .has-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1, .has-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h2, .has-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h3, .has-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h4, .has-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h5, .has-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h6, .has-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul, .has-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol, .has-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre {
+		background-color: var(--global--color-gray);
+	}
+	.has-dark-gray-background-color[class] .wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p, .has-dark-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1, .has-dark-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h2, .has-dark-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h3, .has-dark-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h4, .has-dark-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h5, .has-dark-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h6, .has-dark-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul, .has-dark-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol, .has-dark-gray-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre {
+		background-color: var(--global--color-dark-gray);
+	}
+	.has-green-background-color[class] .wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p, .has-green-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1, .has-green-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h2, .has-green-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h3, .has-green-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h4, .has-green-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h5, .has-green-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h6, .has-green-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul, .has-green-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol, .has-green-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre {
+		background-color: var(--global--color-green);
+	}
+	.has-blue-background-color[class] .wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p, .has-blue-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1, .has-blue-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h2, .has-blue-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h3, .has-blue-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h4, .has-blue-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h5, .has-blue-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h6, .has-blue-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul, .has-blue-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol, .has-blue-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre {
+		background-color: var(--global--color-blue);
+	}
+	.has-purple-background-color[class] .wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p, .has-purple-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1, .has-purple-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h2, .has-purple-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h3, .has-purple-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h4, .has-purple-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h5, .has-purple-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h6, .has-purple-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul, .has-purple-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol, .has-purple-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre {
+		background-color: var(--global--color-purple);
+	}
+	.has-red-background-color[class] .wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p, .has-red-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1, .has-red-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h2, .has-red-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h3, .has-red-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h4, .has-red-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h5, .has-red-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h6, .has-red-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul, .has-red-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol, .has-red-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre {
+		background-color: var(--global--color-red);
+	}
+	.has-orange-background-color[class] .wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p, .has-orange-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1, .has-orange-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h2, .has-orange-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h3, .has-orange-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h4, .has-orange-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h5, .has-orange-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h6, .has-orange-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul, .has-orange-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol, .has-orange-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre {
+		background-color: var(--global--color-orange);
+	}
+	.has-yellow-background-color[class] .wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p, .has-yellow-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1, .has-yellow-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h2, .has-yellow-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h3, .has-yellow-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h4, .has-yellow-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h5, .has-yellow-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h6, .has-yellow-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul, .has-yellow-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol, .has-yellow-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre {
+		background-color: var(--global--color-yellow);
+	}
+	.has-white-background-color[class] .wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p, .has-white-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1, .has-white-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h2, .has-white-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h3, .has-white-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h4, .has-white-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h5, .has-white-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h6, .has-white-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul, .has-white-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol, .has-white-background-color[class]
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre {
+		background-color: var(--global--color-white);
 	}
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul:not(.has-background),
 	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol:not(.has-background) {
