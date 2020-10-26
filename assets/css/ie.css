@@ -122,18 +122,6 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	/* Widgets */
 }
 
-/* OS dark theme preference */
-@media (prefers-color-scheme: dark) {
-	html.respect-color-scheme-preference body {
-		background-color: #28303d;
-	}
-	@media (prefers-color-scheme: dark){
-		html.respect-color-scheme-preference body{
-		background-color: #28303d;
-		}
-	}
-}
-
 /* Button extends */
 .site .button {
 	line-height: 1.5;
@@ -6340,12 +6328,6 @@ h1.page-title {
 	margin-right: 13px;
 }
 
-@media (prefers-color-scheme: dark){
-	.pagination .nav-links > *{
-	color: #f0f0f0;
-	}
-}
-
 .comments-pagination .nav-links > * {
 	color: #28303d;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -6353,12 +6335,6 @@ h1.page-title {
 	font-weight: normal;
 	margin-left: 13px;
 	margin-right: 13px;
-}
-
-@media (prefers-color-scheme: dark){
-	.comments-pagination .nav-links > *{
-	color: #f0f0f0;
-	}
 }
 
 .pagination .nav-links > *.current {

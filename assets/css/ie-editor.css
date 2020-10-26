@@ -30,18 +30,6 @@
 	/* Widgets */
 }
 
-/* OS dark theme preference */
-@media (prefers-color-scheme: dark) {
-	html.respect-color-scheme-preference body {
-		background-color: #28303d;
-	}
-	@media (prefers-color-scheme: dark){
-		html.respect-color-scheme-preference body{
-		background-color: #28303d;
-		}
-	}
-}
-
 /* Button extends */
 .wp-block-button__link {
 	line-height: 1.5;
