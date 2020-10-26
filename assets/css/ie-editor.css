@@ -361,9 +361,8 @@ figcaption {
 	padding: 0;
 }
 
-.post-thumbnail img.attachment-post-thumbnail {
-	width: 100%;
-	height: calc(attr(width)/attr(height)*1%);
+img.has-calculated-ratio {
+	height: undefined;
 }
 
 select {
