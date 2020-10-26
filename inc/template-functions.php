@@ -491,13 +491,13 @@ function twenty_twenty_one_get_attachment_image_attributes( $attr, $attachment, 
 	$height = false;
 
 	if ( is_array( $size ) ) {
-		$width  = $size[0];
-		$height = $size[1];
+		$width  = (int) $size[0];
+		$height = (int) $size[1];
 	} elseif ( $attachment && is_object( $attachment ) && $attachment->ID ) {
 		$meta = wp_get_attachment_metadata( $attachment->ID );
 		if ( $meta['width'] && $meta['height'] ) {
-			$width  = $meta['width'];
-			$height = $meta['height'];
+			$width  = (int) $meta['width'];
+			$height = (int) $meta['height'];
 		}
 	}
 
