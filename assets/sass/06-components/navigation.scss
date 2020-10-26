@@ -389,6 +389,7 @@
 		padding: 0;
 		list-style: none;
 		margin-left: var(--primary-nav--padding);
+		border: 1px solid var(--global--color-gray);
 
 		// Sub-menu items om wide screens.
 		@include media(mobile) {

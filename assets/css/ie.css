@@ -6034,6 +6034,7 @@ h1.page-title {
 	padding: 0;
 	list-style: none;
 	margin-left: 13px;
+	border: 1px solid #39414d;
 }
 
 @media only screen and (min-width: 482px) {

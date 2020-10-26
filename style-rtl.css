@@ -4384,6 +4384,7 @@ h1.page-title {
 	padding: 0;
 	list-style: none;
 	margin-right: var(--primary-nav--padding);
+	border: 1px solid var(--global--color-gray);
 }
 
 @media only screen and (min-width: 482px) {
