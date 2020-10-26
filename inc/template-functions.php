@@ -503,12 +503,9 @@ function twenty_twenty_one_get_attachment_image_attributes( $attr, $attachment, 
 
 	if ( $width && $height ) {
 
-		// Append a new custom class so it's easier to target this element.
-		$attr['class'] .= ' has-calculated-ratio';
-
-		// Add styles.
+		// Add style.
 		$attr['style'] = isset( $attr['style'] ) ? $attr['style'] : '';
-		$attr['style'] = '--image-ratio:' . round( $meta['width'] / $meta['height'], 2 ) . ';' . $attr['style'];
+		$attr['style'] = 'height:' . round( 100 * $meta['height'] / $meta['width'], 2 ) . '%;' . $attr['style'];
 	}
 
 	return $attr;

@@ -44,7 +44,3 @@ figcaption,
 	margin-top: 0;
 	padding: 0;
 }
-
-img.has-calculated-ratio {
-	height: calc(100% / var(--image-ratio));
-}

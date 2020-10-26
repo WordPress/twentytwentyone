@@ -434,10 +434,6 @@ figcaption,
 	padding: 0;
 }
 
-img.has-calculated-ratio {
-	height: calc(100% / var(--image-ratio));
-}
-
 select {
 	border: var(--form--border-width) solid var(--form--border-color);
 	border-radius: var(--form--border-radius);

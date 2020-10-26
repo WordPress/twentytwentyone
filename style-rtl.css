@@ -1498,10 +1498,6 @@ figcaption,
 	padding: 0;
 }
 
-img.has-calculated-ratio {
-	height: calc(100% / var(--image-ratio));
-}
-
 /* Over here, place any elements that do not need to have their own file. */
 b,
 strong {
