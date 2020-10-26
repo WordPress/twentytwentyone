@@ -3739,6 +3739,10 @@ h1.page-title {
 	margin-right: calc(0.5 * var(--global--spacing-unit));
 }
 
+.archive-description {
+	margin-top: var(--global--spacing-vertical);
+}
+
 .error404 main p {
 	font-size: var(--global--font-size-lg);
 	margin-bottom: calc(var(--global--spacing-vertical) * 1.6666666667);

@@ -16,6 +16,9 @@ get_header();
 
 	<header class="page-header alignwide">
 		<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
+		<div class="archive-description">
+			<?php echo wp_kses_post( wpautop( get_the_archive_description() ) ); ?>
+		</div>
 	</header><!-- .page-header -->
 
 	<?php while ( have_posts() ) : ?>

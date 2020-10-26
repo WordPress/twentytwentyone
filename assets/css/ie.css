@@ -5312,6 +5312,10 @@ h1.page-title {
 	margin-right: 10px;
 }
 
+.archive-description {
+	margin-top: 30px;
+}
+
 .error404 main p {
 	font-size: 1.5rem;
 	margin-bottom: 50px;
