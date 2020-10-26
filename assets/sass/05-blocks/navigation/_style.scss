@@ -65,12 +65,29 @@
 
 			> .wp-block-navigation__container {
 				background: var(--global--color-background);
-				box-shadow: var(--global--elevation);
 				margin: 0;
 				padding: 0;
 				position: absolute;
 				top: 100%;
-				border: 1px solid var(--global--color-gray);
+				border: 1px solid var(--primary-nav--border-color);
+
+				&:before,
+				&:after {
+					content: "";
+					display: block;
+					position: absolute;
+					width: 0;
+					top: -10px;
+					left: var(--global--spacing-horizontal);
+					border-style: solid;
+					border-color: var(--primary-nav--border-color) transparent;
+					border-width: 0 7px 10px 7px;
+				}
+
+				&:after {
+					top: -9px;
+					border-color: var(--global--color-background) transparent;
+				}
 			}
 		}
 	}
