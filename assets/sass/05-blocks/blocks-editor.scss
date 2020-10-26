@@ -20,6 +20,7 @@
 @import "media-text/editor";
 @import "navigation/editor";
 @import "paragraph/editor";
+@import "preformatted/editor";
 @import "pullquote/editor";
 @import "quote/editor";
 @import "rss/editor";
@@ -27,6 +28,7 @@
 @import "separator/editor";
 @import "social-icons/editor";
 @import "table/editor";
+@import "tag-clould/editor";
 @import "verse/editor";
 @import "utilities/font-sizes";
 @import "utilities/editor"; // Import LAST to cascade properly

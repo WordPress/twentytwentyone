@@ -25,6 +25,11 @@
 
 	.nav-links {
 
+		> * {
+			min-width: 44px;
+			min-height: 44px;
+		}
+
 		.nav-next a,
 		.nav-previous a {
 			display: flex;

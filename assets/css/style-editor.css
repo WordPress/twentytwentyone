@@ -208,23 +208,6 @@
 	}
 }
 
-/* OS dark theme preference */
-@media (prefers-color-scheme: dark) {
-	html.respect-color-scheme-preference {
-		--global--color-background: var(--global--color-dark-gray);
-		--global--color-primary: var(--global--color-light-gray);
-		--global--color-secondary: var(--global--color-light-gray);
-		--button--color-text: var(--global--color-background);
-		--button--color-text-hover: var(--global--color-secondary);
-		--button--color-text-active: var(--global--color-secondary);
-		--button--color-background: var(--global--color-secondary);
-		--button--color-background-active: var(--global--color-background);
-	}
-	html.respect-color-scheme-preference body {
-		background-color: var(--global--color-background);
-	}
-}
-
 /* Button extends */
 .wp-block-button__link, .wp-block-file .wp-block-file__button, .wp-block-search .wp-block-search__button {
 	line-height: var(--button--line-height);
@@ -561,6 +544,8 @@ a:hover {
 
 .wp-block-code code {
 	font-size: var(--global--font-size-xs);
+	white-space: pre !important;
+	overflow-x: auto;
 }
 
 .wp-block-code {
@@ -569,6 +554,7 @@ a:hover {
 	border-style: solid;
 	border-width: 0.1rem;
 	padding: var(--global--spacing-unit);
+	color: currentColor;
 }
 
 .wp-block-cover,
@@ -1142,6 +1128,12 @@ p.has-background {
 	padding: var(--global--spacing-unit);
 }
 
+pre.wp-block-preformatted {
+	overflow-x: auto;
+	white-space: pre !important;
+	font-size: var(--global--font-size-xs);
+}
+
 .wp-block-pullquote {
 	padding: calc(2 * var(--global--spacing-unit)) 0;
 	text-align: center;
@@ -1498,6 +1490,14 @@ p.has-background {
 	color: var(--button--color-text);
 }
 
+.wp-block[data-align="center"] > * {
+	text-align: center;
+}
+
+.wp-block[data-align="center"] .wp-block-search__button-only .wp-block-search__inside-wrapper {
+	justify-content: center;
+}
+
 .wp-block-separator,
 hr {
 	border-bottom: var(--separator--height) solid var(--separator--border-color);
@@ -1651,6 +1651,10 @@ table.wp-calendar-table caption {
 
 .wp-calendar-nav .wp-calendar-nav-next {
 	float: right;
+}
+
+.wp-block-tag-cloud.aligncenter {
+	text-align: center;
 }
 
 pre.wp-block-verse {
