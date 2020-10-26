@@ -5078,4 +5078,12 @@ footer {
 	color: #21759b;
 }
 
+.is-IE .navigation .nav-links {
+	display: block;
+}
+
+.is-IE .post-thumbnail .wp-post-image {
+	min-width: auto;
+}
+
 /*# sourceMappingURL=style.css.map */
