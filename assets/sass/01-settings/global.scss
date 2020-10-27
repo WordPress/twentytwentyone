@@ -75,7 +75,8 @@ $baseline-unit: 10px;
 	--global--color-orange: #e4dad1;
 	--global--color-yellow: #eeeadd;
 	--global--color-white: #fff;
-	--global--color-white-50: rgba(255, 255, 255, 0.5); /* white 50% opacity used in form fields.*/
+	--global--color-white-50: rgba(255, 255, 255, 0.5); // Used for disabled buttons
+	--global--color-white-90: rgba(255, 255, 255, 0.9); // Used in form fields.
 
 	--global--color-primary: var(--global--color-dark-gray); /* Body text color, site title, footer text color. */
 	--global--color-secondary: var(--global--color-gray); /* Headings */
@@ -233,26 +234,5 @@ $baseline-unit: 10px;
 		--global--font-size-xxxl: 9rem; // 144px / 16px
 		--heading--font-size-h3: 2rem; // 32px / 16px
 		--heading--font-size-h2: 3rem; // 48px / 16px
-	}
-}
-
-/* OS dark theme preference */
-@media (prefers-color-scheme: dark) {
-
-	html.respect-color-scheme-preference {
-		--global--color-background: var(--global--color-dark-gray);
-		--global--color-primary: var(--global--color-light-gray);
-		--global--color-secondary: var(--global--color-light-gray);
-
-		// These need to be redefined for comment-submit buttons.
-		--button--color-text: var(--global--color-background);
-		--button--color-text-hover: var(--global--color-secondary);
-		--button--color-text-active: var(--global--color-secondary);
-		--button--color-background: var(--global--color-secondary);
-		--button--color-background-active: var(--global--color-background);
-
-		body {
-			background-color: var(--global--color-background);
-		}
 	}
 }

@@ -11,7 +11,7 @@
 
 	.wp-block-file__button {
 		// Extend button style
-		@extend %button-style;
+		@include button-style();
 		display: inline-block;
 	}
 }
