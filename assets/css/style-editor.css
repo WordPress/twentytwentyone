@@ -1717,6 +1717,7 @@ table.wp-calendar-table caption {
 
 pre.wp-block-verse {
 	padding: 0;
+	color: currentColor;
 }
 
 :root .is-extra-small-text,
