@@ -6916,4 +6916,12 @@ footer {
 .is-IE.has-background-dark .skip-link:focus {
 	color: #21759b;
 }
+
+.is-IE .navigation .nav-links {
+	display: block;
+}
+
+.is-IE .post-thumbnail .wp-post-image {
+	min-width: auto;
+}
 /*# sourceMappingURL=ie.css.map */
