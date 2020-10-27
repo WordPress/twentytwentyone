@@ -217,51 +217,51 @@ input[type="reset"]:after,
 }
 
 .site .button:before {
-	margin-bottom: -calc(1em + 0);
+	margin-bottom: -calc(1em - 0);
 }
 
 input[type="submit"]:before {
-	margin-bottom: -calc(1em + 0);
+	margin-bottom: -calc(1em - 0);
 }
 
 input[type="reset"]:before {
-	margin-bottom: -calc(1em + 0);
+	margin-bottom: -calc(1em - 0);
 }
 
 .wp-block-search__button:before {
-	margin-bottom: -calc(1em + 0);
+	margin-bottom: -calc(1em - 0);
 }
 
 .wp-block-button .wp-block-button__link:before {
-	margin-bottom: -calc(1em + 0);
+	margin-bottom: -calc(1em - 0);
 }
 
 .wp-block-file .wp-block-file__button:before {
-	margin-bottom: -calc(1em + 0);
+	margin-bottom: -calc(1em - 0);
 }
 
 .site .button:after {
-	margin-top: -calc(1em + 0);
+	margin-top: -calc(1em - 0);
 }
 
 input[type="submit"]:after {
-	margin-top: -calc(1em + 0);
+	margin-top: -calc(1em - 0);
 }
 
 input[type="reset"]:after {
-	margin-top: -calc(1em + 0);
+	margin-top: -calc(1em - 0);
 }
 
 .wp-block-search__button:after {
-	margin-top: -calc(1em + 0);
+	margin-top: -calc(1em - 0);
 }
 
 .wp-block-button .wp-block-button__link:after {
-	margin-top: -calc(1em + 0);
+	margin-top: -calc(1em - 0);
 }
 
 .wp-block-file .wp-block-file__button:after {
-	margin-top: -calc(1em + 0);
+	margin-top: -calc(1em - 0);
 }
 
 .site .button:active {
@@ -1061,23 +1061,23 @@ template {
 @media only screen and (min-width: 482px) {
 	.entry-content > .alignleft {
 		/*rtl:ignore*/
-		margin-left: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		margin-left: calc(50vw - min(calc(100vw - 4 * 25px), 610px)*1);
 		/*rtl:ignore*/
 		margin-right: 25px;
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignleft{
-		margin-left: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		margin-left: calc(50vw - min(calc(100vw - 4 * 25px), 610px)*1);
 		}
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignleft{
-		margin-left: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		margin-left: calc(50vw - min(calc(100vw - 4 * 25px), 610px)*1);
 		}
 	}
 	@media only screen and (min-width: 822px){
 		.entry-content > .alignleft{
-		margin-left: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		margin-left: calc(50vw - min(calc(100vw - 4 * 25px), 610px)*1);
 		}
 	}
 }
@@ -1087,21 +1087,21 @@ template {
 		/*rtl:ignore*/
 		margin-left: 25px;
 		/*rtl:ignore*/
-		margin-right: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		margin-right: calc(50vw - min(calc(100vw - 4 * 25px), 610px)*1);
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignright{
-		margin-right: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		margin-right: calc(50vw - min(calc(100vw - 4 * 25px), 610px)*1);
 		}
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignright{
-		margin-right: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		margin-right: calc(50vw - min(calc(100vw - 4 * 25px), 610px)*1);
 		}
 	}
 	@media only screen and (min-width: 822px){
 		.entry-content > .alignright{
-		margin-right: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		margin-right: calc(50vw - min(calc(100vw - 4 * 25px), 610px)*1);
 		}
 	}
 }
@@ -2771,11 +2771,11 @@ a:hover {
 }
 
 .wp-block-gallery .blocks-gallery-image {
-	width: calc((100% - 20px)/2);
+	width: calc(50% - 10px);
 }
 
 .wp-block-gallery .blocks-gallery-item {
-	width: calc((100% - 20px)/2);
+	width: calc(50% - 10px);
 }
 
 .wp-block-gallery .blocks-gallery-image figcaption {
@@ -4611,21 +4611,21 @@ table.wp-calendar-table caption {
 		margin-bottom: 30px;
 	}
 	.entry-content > .alignleft {
-		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		max-width: calc(50% - 50vw + min(calc(100vw - 4 * 25px), 610px)*1);
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignleft{
-		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		max-width: calc(50% - 50vw + min(calc(100vw - 4 * 25px), 610px)*1);
 		}
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignleft{
-		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		max-width: calc(50% - 50vw + min(calc(100vw - 4 * 25px), 610px)*1);
 		}
 	}
 	@media only screen and (min-width: 822px){
 		.entry-content > .alignleft{
-		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		max-width: calc(50% - 50vw + min(calc(100vw - 4 * 25px), 610px)*1);
 		}
 	}
 }
@@ -4674,21 +4674,21 @@ table.wp-calendar-table caption {
 		margin-left: 25px;
 	}
 	.entry-content > .alignright {
-		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		max-width: calc(50% - 50vw + min(calc(100vw - 4 * 25px), 610px)*1);
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignright{
-		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		max-width: calc(50% - 50vw + min(calc(100vw - 4 * 25px), 610px)*1);
 		}
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignright{
-		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		max-width: calc(50% - 50vw + min(calc(100vw - 4 * 25px), 610px)*1);
 		}
 	}
 	@media only screen and (min-width: 822px){
 		.entry-content > .alignright{
-		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
+		max-width: calc(50% - 50vw + min(calc(100vw - 4 * 25px), 610px)*1);
 		}
 	}
 }
