@@ -23,7 +23,7 @@
 	}
 
 	.wp-block-search__button {
-		@extend %button-style;
+		@include button-style();
 		box-shadow: none;
 		margin-left: 0;
 		background-color: transparent;
