@@ -863,6 +863,12 @@ h6,
 	line-height: var(--heading--line-height-h6);
 }
 
+[data-type="core/html"] textarea {
+	color: var(--global--color-dark-gray);
+	border-radius: 0;
+	padding: var(--global--spacing-unit);
+}
+
 /* Center image block by default in the editor */
 .wp-block-image > div {
 	text-align: center;
