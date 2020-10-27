@@ -102,7 +102,6 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	/* Headings */
 	/* Block: Latest posts */
 	/* Colors */
-	/* white 50% opacity used in form fields.*/
 	/* Body text color, site title, footer text color. */
 	/* Headings */
 	/* Mint, default body background */
@@ -1535,225 +1534,225 @@ input[type="text"] {
 	border: 3px solid #39414d;
 	border-radius: 0;
 	color: #28303d;
-	background: rgba(255, 255, 255, 0.5);
 	line-height: 1.7;
 	padding: 10px;
+	margin: 0 2px;
 }
 
 input[type="email"] {
 	border: 3px solid #39414d;
 	border-radius: 0;
 	color: #28303d;
-	background: rgba(255, 255, 255, 0.5);
 	line-height: 1.7;
 	padding: 10px;
+	margin: 0 2px;
 }
 
 input[type="url"] {
 	border: 3px solid #39414d;
 	border-radius: 0;
 	color: #28303d;
-	background: rgba(255, 255, 255, 0.5);
 	line-height: 1.7;
 	padding: 10px;
+	margin: 0 2px;
 }
 
 input[type="password"] {
 	border: 3px solid #39414d;
 	border-radius: 0;
 	color: #28303d;
-	background: rgba(255, 255, 255, 0.5);
 	line-height: 1.7;
 	padding: 10px;
+	margin: 0 2px;
 }
 
 input[type="search"] {
 	border: 3px solid #39414d;
 	border-radius: 0;
 	color: #28303d;
-	background: rgba(255, 255, 255, 0.5);
 	line-height: 1.7;
 	padding: 10px;
+	margin: 0 2px;
 }
 
 input[type="number"] {
 	border: 3px solid #39414d;
 	border-radius: 0;
 	color: #28303d;
-	background: rgba(255, 255, 255, 0.5);
 	line-height: 1.7;
 	padding: 10px;
+	margin: 0 2px;
 }
 
 input[type="tel"] {
 	border: 3px solid #39414d;
 	border-radius: 0;
 	color: #28303d;
-	background: rgba(255, 255, 255, 0.5);
 	line-height: 1.7;
 	padding: 10px;
+	margin: 0 2px;
 }
 
 input[type="date"] {
 	border: 3px solid #39414d;
 	border-radius: 0;
 	color: #28303d;
-	background: rgba(255, 255, 255, 0.5);
 	line-height: 1.7;
 	padding: 10px;
+	margin: 0 2px;
 }
 
 input[type="month"] {
 	border: 3px solid #39414d;
 	border-radius: 0;
 	color: #28303d;
-	background: rgba(255, 255, 255, 0.5);
 	line-height: 1.7;
 	padding: 10px;
+	margin: 0 2px;
 }
 
 input[type="week"] {
 	border: 3px solid #39414d;
 	border-radius: 0;
 	color: #28303d;
-	background: rgba(255, 255, 255, 0.5);
 	line-height: 1.7;
 	padding: 10px;
+	margin: 0 2px;
 }
 
 input[type="time"] {
 	border: 3px solid #39414d;
 	border-radius: 0;
 	color: #28303d;
-	background: rgba(255, 255, 255, 0.5);
 	line-height: 1.7;
 	padding: 10px;
+	margin: 0 2px;
 }
 
 input[type="datetime"] {
 	border: 3px solid #39414d;
 	border-radius: 0;
 	color: #28303d;
-	background: rgba(255, 255, 255, 0.5);
 	line-height: 1.7;
 	padding: 10px;
+	margin: 0 2px;
 }
 
 input[type="datetime-local"] {
 	border: 3px solid #39414d;
 	border-radius: 0;
 	color: #28303d;
-	background: rgba(255, 255, 255, 0.5);
 	line-height: 1.7;
 	padding: 10px;
+	margin: 0 2px;
 }
 
 input[type="color"] {
 	border: 3px solid #39414d;
 	border-radius: 0;
 	color: #28303d;
-	background: rgba(255, 255, 255, 0.5);
 	line-height: 1.7;
 	padding: 10px;
+	margin: 0 2px;
 }
 
 .site textarea {
 	border: 3px solid #39414d;
 	border-radius: 0;
 	color: #28303d;
-	background: rgba(255, 255, 255, 0.5);
 	line-height: 1.7;
 	padding: 10px;
+	margin: 0 2px;
 }
 
 input[type="text"]:focus {
 	color: #28303d;
-	outline: 1px solid #39414d;
-	background: #fff;
+	outline-offset: 2px;
+	outline: 2px dotted #39414d;
 }
 
 input[type="email"]:focus {
 	color: #28303d;
-	outline: 1px solid #39414d;
-	background: #fff;
+	outline-offset: 2px;
+	outline: 2px dotted #39414d;
 }
 
 input[type="url"]:focus {
 	color: #28303d;
-	outline: 1px solid #39414d;
-	background: #fff;
+	outline-offset: 2px;
+	outline: 2px dotted #39414d;
 }
 
 input[type="password"]:focus {
 	color: #28303d;
-	outline: 1px solid #39414d;
-	background: #fff;
+	outline-offset: 2px;
+	outline: 2px dotted #39414d;
 }
 
 input[type="search"]:focus {
 	color: #28303d;
-	outline: 1px solid #39414d;
-	background: #fff;
+	outline-offset: 2px;
+	outline: 2px dotted #39414d;
 }
 
 input[type="number"]:focus {
 	color: #28303d;
-	outline: 1px solid #39414d;
-	background: #fff;
+	outline-offset: 2px;
+	outline: 2px dotted #39414d;
 }
 
 input[type="tel"]:focus {
 	color: #28303d;
-	outline: 1px solid #39414d;
-	background: #fff;
+	outline-offset: 2px;
+	outline: 2px dotted #39414d;
 }
 
 input[type="date"]:focus {
 	color: #28303d;
-	outline: 1px solid #39414d;
-	background: #fff;
+	outline-offset: 2px;
+	outline: 2px dotted #39414d;
 }
 
 input[type="month"]:focus {
 	color: #28303d;
-	outline: 1px solid #39414d;
-	background: #fff;
+	outline-offset: 2px;
+	outline: 2px dotted #39414d;
 }
 
 input[type="week"]:focus {
 	color: #28303d;
-	outline: 1px solid #39414d;
-	background: #fff;
+	outline-offset: 2px;
+	outline: 2px dotted #39414d;
 }
 
 input[type="time"]:focus {
 	color: #28303d;
-	outline: 1px solid #39414d;
-	background: #fff;
+	outline-offset: 2px;
+	outline: 2px dotted #39414d;
 }
 
 input[type="datetime"]:focus {
 	color: #28303d;
-	outline: 1px solid #39414d;
-	background: #fff;
+	outline-offset: 2px;
+	outline: 2px dotted #39414d;
 }
 
 input[type="datetime-local"]:focus {
 	color: #28303d;
-	outline: 1px solid #39414d;
-	background: #fff;
+	outline-offset: 2px;
+	outline: 2px dotted #39414d;
 }
 
 input[type="color"]:focus {
 	color: #28303d;
-	outline: 1px solid #39414d;
-	background: #fff;
+	outline-offset: 2px;
+	outline: 2px dotted #39414d;
 }
 
 .site textarea:focus {
 	color: #28303d;
-	outline: 1px solid #39414d;
-	background: #fff;
+	outline-offset: 2px;
+	outline: 2px dotted #39414d;
 }
 
 input[type="text"]:disabled,
@@ -1774,16 +1773,89 @@ input[type="color"]:disabled,
 	opacity: 0.7;
 }
 
-input[type="search"]:focus {
-	outline-offset: 0;
+.has-background-dark input[type="text"] {
+	background: rgba(255, 255, 255, 0.9);
 }
 
+.has-background-dark
+input[type="email"] {
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.has-background-dark
+input[type="url"] {
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.has-background-dark
+input[type="password"] {
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.has-background-dark
+input[type="search"] {
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.has-background-dark
+input[type="number"] {
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.has-background-dark
+input[type="tel"] {
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.has-background-dark
 input[type="date"] {
-	background: #fff;
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.has-background-dark
+input[type="month"] {
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.has-background-dark
+input[type="week"] {
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.has-background-dark
+input[type="time"] {
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.has-background-dark
+input[type="datetime"] {
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.has-background-dark
+input[type="datetime-local"] {
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.has-background-dark
+input[type="color"] {
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.has-background-dark
+.site textarea {
+	background: rgba(255, 255, 255, 0.9);
+}
+
+input[type="search"]:focus {
+	outline-offset: -7px;
+}
+
+.has-background-dark input[type="search"]:focus {
+	outline-color: #d1e4dd;
 }
 
 input[type="color"] {
-	background: #fff;
 	padding: 5px;
 	height: 40px;
 }
@@ -1809,7 +1881,15 @@ select {
 }
 
 select:focus {
-	outline: 1px solid #39414d;
+	outline-offset: 2px;
+	outline: 2px dotted #39414d;
+}
+
+.has-background-dark select {
+	/* stylelint-disable */
+	background: rgba(255, 255, 255, 0.9) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2328303d'><polygon points='0,0 10,0 5,5'/></svg>") no-repeat;
+	/* stylelint-enable */
+	background-position: right 10px top 60%;
 }
 
 textarea {
@@ -1834,9 +1914,8 @@ License: MIT.
 		position: relative;
 		width: 25px;
 		height: 25px;
-		background: rgba(255, 255, 255, 0.5);
 		border: 3px solid #39414d;
-		outline-offset: 0;
+		background: #fff;
 	}
 	input[type="radio"] {
 		-webkit-appearance: none;
@@ -1844,17 +1923,23 @@ License: MIT.
 		position: relative;
 		width: 25px;
 		height: 25px;
-		background: rgba(255, 255, 255, 0.5);
 		border: 3px solid #39414d;
-		outline-offset: 0;
+		background: #fff;
 	}
 	input[type="checkbox"]:disabled,
 	input[type="radio"]:disabled {
 		opacity: 0.7;
 	}
+	.has-background-dark input[type="checkbox"] {
+		background: rgba(255, 255, 255, 0.9);
+	}
+	.has-background-dark
+	input[type="radio"] {
+		background: rgba(255, 255, 255, 0.9);
+	}
 	input[type="checkbox"]:focus {
-		outline: 1px solid #39414d;
-		background: #fff;
+		outline-offset: 2px;
+		outline: 2px dotted #39414d;
 	}
 	input[type="checkbox"]:after {
 		content: "";
@@ -1871,7 +1956,6 @@ License: MIT.
 		transform: rotate(30deg);
 	}
 	input[type="checkbox"]:checked {
-		background: #fff;
 		color: #28303d;
 	}
 	input[type="checkbox"]:checked:after {
@@ -1881,9 +1965,8 @@ License: MIT.
 		border-radius: 50%;
 	}
 	input[type="radio"]:focus {
-		background: #fff;
-		border: 4px solid #39414d;
-		outline: 1px dotted transparent;
+		outline-offset: 2px;
+		outline: 2px dotted #39414d;
 	}
 	input[type="radio"]:after {
 		content: "";
@@ -1898,15 +1981,14 @@ License: MIT.
 		background: #28303d;
 	}
 	input[type="radio"]:checked {
-		background: #fff;
 		border: 4px solid #39414d;
-		outline: 1px dotted transparent;
 	}
 	input[type="radio"]:checked:after {
 		opacity: 1;
 	}
 	input[type="radio"]:checked:focus {
-		box-shadow: 0 0 0 2px #39414d;
+		outline-offset: 4px;
+		outline: 2px dotted #39414d;
 	}
 }
 
@@ -2022,6 +2104,10 @@ fieldset input[type="checkbox"] + label {
 	font-size: 1.125rem;
 	padding-left: 0;
 	margin-bottom: 20px;
+}
+
+::-moz-placeholder {
+	opacity: 1;
 }
 
 img {
