@@ -16,18 +16,23 @@ input[type="color"],
 	border: var(--form--border-width) solid var(--form--border-color);
 	border-radius: var(--form--border-radius);
 	color: var(--form--color-text);
-	background: var(--global--color-white-50);
 	line-height: var(--global--line-height-body);
 	padding: var(--form--spacing-unit);
+	// Gives a little more space for the outline offset.
+	margin: 0 2px;
 
 	&:focus {
 		color: var(--form--color-text);
-		outline: 1px solid var(--form--border-color);
-		background: var(--global--color-white);
+		outline-offset: 2px;
+		outline: 2px dotted var(--form--border-color);
 	}
 
 	&:disabled {
 		opacity: 0.7;
+	}
+
+	.has-background-dark & {
+		background: var(--global--color-white-90);
 	}
 
 }
@@ -36,16 +41,15 @@ input[type="color"],
 input[type="search"] {
 
 	&:focus {
-		outline-offset: 0;
+		outline-offset: -7px;
+
+		.has-background-dark & {
+			outline-color: var(--global--color-background);
+		}
 	}
 }
 
-input[type="date"] {
-	background: var(--global--color-white);
-}
-
 input[type="color"] {
-	background: var(--global--color-white);
 	padding: calc(var(--form--spacing-unit) / 2);
 	height: calc(4 * var(--form--spacing-unit));
 }
@@ -71,7 +75,15 @@ select {
 	background-position: right var(--form--spacing-unit) top 60%;
 
 	&:focus {
-		outline: 1px solid var(--form--border-color);
+		outline-offset: 2px;
+		outline: 2px dotted var(--form--border-color);
+	}
+
+	.has-background-dark & {
+		/* stylelint-disable */
+		background: var(--global--color-white-90) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2328303d'><polygon points='0,0 10,0 5,5'/></svg>") no-repeat;
+		/* stylelint-enable */
+		background-position: right var(--form--spacing-unit) top 60%;
 	}
 }
 
@@ -99,20 +111,23 @@ License: MIT.
 		position: relative;
 		width: 25px;
 		height: 25px;
-		background: var(--global--color-white-50);
 		border: var(--form--border-width) solid var(--form--border-color);
-		outline-offset: 0;
+		background: var(--global--color-white);
 
 		&:disabled {
 			opacity: 0.7;
+		}
+
+		.has-background-dark & {
+			background: var(--global--color-white-90);
 		}
 	}
 
 	input[type="checkbox"] {
 
 		&:focus {
-			outline: 1px solid var(--form--border-color);
-			background: var(--global--color-white);
+			outline-offset: 2px;
+			outline: 2px dotted var(--form--border-color);
 		}
 
 		&:after {
@@ -131,7 +146,6 @@ License: MIT.
 		}
 
 		&:checked {
-			background: var(--global--color-white);
 			color: var(--form--color-text);
 
 			&:after {
@@ -144,9 +158,8 @@ License: MIT.
 		border-radius: 50%;
 
 		&:focus {
-			background: var(--global--color-white);
-			border: 4px solid var(--form--border-color);
-			outline: 1px dotted transparent;
+			outline-offset: 2px;
+			outline: 2px dotted var(--form--border-color);
 		}
 
 		&:after {
@@ -163,9 +176,7 @@ License: MIT.
 		}
 
 		&:checked {
-			background: var(--global--color-white);
 			border: 4px solid var(--form--border-color);
-			outline: 1px dotted transparent;
 
 			&:after {
 				opacity: 1;
@@ -173,7 +184,8 @@ License: MIT.
 
 			// Focus style for checked radio buttons.
 			&:focus {
-				box-shadow: 0 0 0 2px var(--form--border-color);
+				outline-offset: 4px;
+				outline: 2px dotted var(--form--border-color);
 			}
 		}
 	}
@@ -286,4 +298,8 @@ fieldset {
 			margin-bottom: var(--global--spacing-unit);
 		}
 	}
+}
+
+::-moz-placeholder { // Firefox 19+
+	opacity: 1;
 }

@@ -75,7 +75,8 @@ $baseline-unit: 10px;
 	--global--color-orange: #e4dad1;
 	--global--color-yellow: #eeeadd;
 	--global--color-white: #fff;
-	--global--color-white-50: rgba(255, 255, 255, 0.5); /* white 50% opacity used in form fields.*/
+	--global--color-white-50: rgba(255, 255, 255, 0.5); // Used for disabled buttons
+	--global--color-white-90: rgba(255, 255, 255, 0.9); // Used in form fields.
 
 	--global--color-primary: var(--global--color-dark-gray); /* Body text color, site title, footer text color. */
 	--global--color-secondary: var(--global--color-gray); /* Headings */
