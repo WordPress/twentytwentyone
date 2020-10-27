@@ -41,3 +41,30 @@
 		margin-top: -($offset-bottom);
 	}
 }
+
+// Button style
+// - Applies button styles to blocks and elements that share them.
+@mixin button-style() {
+	@include crop-text(var(--button--line-height));
+	color: var(--button--color-text);
+	cursor: pointer;
+	font-weight: var(--button--font-weight);
+	font-family: var(--button--font-family);
+	font-size: var(--button--font-size);
+	background-color: var(--button--color-background);
+	border-radius: var(--button--border-radius);
+	border: var(--button--border-width) solid var(--button--color-background);
+	text-decoration: none;
+	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
+
+	&:focus {
+		outline-offset: -4px;
+		outline: 2px dotted currentColor;
+	}
+
+	&:disabled {
+		background-color: var(--global--color-white-50);
+		border-color: var(--global--color-white-50);
+		color: var(--button--color-text-active);
+	}
+}
