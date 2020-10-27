@@ -1532,7 +1532,7 @@ input[type="submit"]:focus,
 input[type="reset"]:focus,
 .wp-block-search__button:focus,
 .wp-block-button .wp-block-button__link:focus {
-	outline-offset: -4px;
+	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }
 
@@ -1898,7 +1898,7 @@ input[type="reset"]:hover,
 }
 
 .wp-block-file .wp-block-file__button:focus {
-	outline-offset: -4px;
+	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }
 

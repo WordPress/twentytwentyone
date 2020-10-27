@@ -304,7 +304,7 @@ a:hover {
 }
 
 .wp-block-button__link:focus {
-	outline-offset: -4px;
+	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }
 
@@ -724,7 +724,7 @@ a:hover {
 }
 
 .wp-block-file .wp-block-file__button:focus {
-	outline-offset: -4px;
+	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }
 
@@ -2019,7 +2019,7 @@ pre.wp-block-preformatted {
 }
 
 .wp-block-search .wp-block-search__button:focus {
-	outline-offset: -4px;
+	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }
 
