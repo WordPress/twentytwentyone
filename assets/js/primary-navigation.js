@@ -14,6 +14,7 @@
 function twentytwentyoneToggleAriaExpanded( el, withListeners ) {
 	if ( 'true' !== el.getAttribute( 'aria-expanded' ) ) {
 		el.setAttribute( 'aria-expanded', 'true' );
+		twentytwentyoneSubmenuPosition( el.parentElement );
 		if ( withListeners ) {
 			document.addEventListener( 'click', twentytwentyoneCollapseMenuOnClickOutside );
 		}
@@ -30,6 +31,24 @@ function twentytwentyoneCollapseMenuOnClickOutside( event ) {
 		document.getElementById( 'site-navigation' ).querySelectorAll( '.sub-menu-toggle' ).forEach( function( button ) {
 			button.setAttribute( 'aria-expanded', 'false' );
 		} );
+	}
+}
+
+/**
+ * Changes the position of submenus so they always fit the screen horizontally.
+ *
+ * @param {Element} li - The li element.
+ */
+function twentytwentyoneSubmenuPosition( li ) {
+	var subMenu = li.querySelector( 'ul.sub-menu' ),
+		rect = subMenu.getBoundingClientRect();
+
+	if ( rect.right > window.innerWidth ) {
+		subMenu.style.left = ( window.innerWidth - rect.right ) + 'px';
+	} else if ( rect.left < 0 ) {
+		subMenu.style.left = ( 0 - rect.left ) + 'px';
+	} else {
+		subMenu.style.left = 0;
 	}
 }
 
@@ -124,6 +143,7 @@ function twentytwentyoneExpandSubMenu( el ) { // eslint-disable-line no-unused-v
 		document.getElementById( 'site-navigation' ).querySelectorAll( '.menu-wrapper > .menu-item-has-children' ).forEach( function( li ) {
 			li.addEventListener( 'mouseenter', function() {
 				this.querySelector( '.sub-menu-toggle' ).setAttribute( 'aria-expanded', 'true' );
+				twentytwentyoneSubmenuPosition( li );
 			} );
 			li.addEventListener( 'mouseleave', function() {
 				this.querySelector( '.sub-menu-toggle' ).setAttribute( 'aria-expanded', 'false' );
