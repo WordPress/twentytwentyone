@@ -27,6 +27,12 @@
 		.wp-block-cover[style*="background-image"] & {
 			border: var(--form--border-width) solid currentColor;
 		}
+
+		.has-background.has-gray-background-color &,
+		.has-background.has-dark-gray-background-color &,
+		.has-background.has-black-background-color & {
+			border-color: var(--global--color-white);
+		}
 	}
 
 	.wp-block-search__button {
@@ -54,10 +60,61 @@
 		[class*="background-color"]:not(.has-background-background-color) &,
 		[style*="background-color"]:not(.has-background-background-color) &,
 		.wp-block-cover[style*="background-image"] & {
-			color: currentColor;
+			color: var(--global--color-white);
 			border-color: currentColor;
+
+			&:hover {
+				background-color: var(--button--color-background);
+				color: var(--button--color-text);
+				border-color: var(--global--color-white);
+			}
 		}
 
+		.has-background.has-white-background-color & {
+			border-color: var(--form--border-color);
+			color: var(--form--border-color);
+			background: var(--button--color-text);
+
+			&:hover {
+				background-color: var(--form--border-color);
+				border-color: var(--form--border-color);
+				color: var(--button--color-text);
+			}
+		}
+
+	}
+
+	&.wp-block-search__button-inside {
+
+		.wp-block-search__input,
+		.has-background.has-white-background-color & .wp-block-search__input {
+			border: none;
+		}
+
+		&.wp-block-search__text-button {
+
+			.wp-block-search__button {
+				// Match the text button size with the icon button.
+				padding: var(--button--padding-vertical) var(--button--padding-horizontal);
+			}
+		}
+
+		.wp-block-search__button {
+
+			.has-background:not(.has-background-background-color) &,
+			[class*="background-color"]:not(.has-background-background-color) &,
+			[style*="background-color"] &,
+			.wp-block-cover[style*="background-image"] & {
+				border-color: var(--button--color-background);
+				background-color: var(--global--color-white);
+				color: var(--button--color-text-hover);
+
+				&:hover {
+					background-color: var(--button--color-background);
+					color: var(--button--color-text);
+				}
+			}
+		}
 	}
 }
 

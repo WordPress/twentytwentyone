@@ -4200,8 +4200,16 @@ pre.wp-block-preformatted {
 	border-color: currentColor;
 }
 
+.has-background.has-gray-background-color .wp-block-search .wp-block-search__input {
+	border-color: #fff;
+}
+
+.has-background.has-dark-gray-background-color .wp-block-search .wp-block-search__input {
+	border-color: #fff;
+}
+
 .has-background.has-black-background-color .wp-block-search .wp-block-search__input {
-	border-color: #39414d;
+	border-color: #fff;
 }
 
 .wp-block-search button.wp-block-search__button {
@@ -4226,23 +4234,108 @@ pre.wp-block-preformatted {
 	fill: currentColor;
 }
 
-.has-background:not(.has-background-background-color) .wp-block-search button.wp-block-search__button,
-[class*="background-color"]:not(.has-background-background-color) .wp-block-search button.wp-block-search__button,
-[style*="background-color"] .wp-block-search button.wp-block-search__button,
-.wp-block-cover[style*="background-image"] .wp-block-search button.wp-block-search__button {
-	color: currentColor;
+.has-background:not(.has-background-background-color) .wp-block-search button.wp-block-search__button {
+	color: #fff;
 	border-color: currentColor;
 }
 
-.has-background.has-black-background-color .wp-block-search button.wp-block-search__button:hover {
+[class*="background-color"]:not(.has-background-background-color) .wp-block-search button.wp-block-search__button {
+	color: #fff;
+	border-color: currentColor;
+}
+
+[style*="background-color"] .wp-block-search button.wp-block-search__button {
+	color: #fff;
+	border-color: currentColor;
+}
+
+.wp-block-cover[style*="background-image"] .wp-block-search button.wp-block-search__button {
+	color: #fff;
+	border-color: currentColor;
+}
+
+.has-background:not(.has-background-background-color) .wp-block-search button.wp-block-search__button:hover {
+	background-color: #39414d;
 	color: #d1e4dd;
+	border-color: #fff;
+}
+
+[class*="background-color"]:not(.has-background-background-color) .wp-block-search button.wp-block-search__button:hover {
+	background-color: #39414d;
+	color: #d1e4dd;
+	border-color: #fff;
+}
+
+[style*="background-color"] .wp-block-search button.wp-block-search__button:hover {
+	background-color: #39414d;
+	color: #d1e4dd;
+	border-color: #fff;
+}
+
+.wp-block-cover[style*="background-image"] .wp-block-search button.wp-block-search__button:hover {
+	background-color: #39414d;
+	color: #d1e4dd;
+	border-color: #fff;
+}
+
+.has-background.has-white-background-color .wp-block-search button.wp-block-search__button {
 	border-color: #39414d;
+	color: #39414d;
+	background: #d1e4dd;
 }
 
 .has-background.has-white-background-color .wp-block-search button.wp-block-search__button:hover {
-	background-color: #d1e4dd;
-	border-color: #d1e4dd;
-	color: #fff;
+	background-color: #39414d;
+	border-color: #39414d;
+	color: #d1e4dd;
+}
+
+.wp-block-search.wp-block-search__button-inside.wp-block-search__text-button button.wp-block-search__button {
+	padding: 15px 30px;
+}
+
+.has-background:not(.has-background-background-color) .wp-block-search.wp-block-search__button-inside button.wp-block-search__button {
+	border-color: #39414d;
+	background-color: #fff;
+	color: #39414d;
+}
+
+[class*="background-color"]:not(.has-background-background-color) .wp-block-search.wp-block-search__button-inside button.wp-block-search__button {
+	border-color: #39414d;
+	background-color: #fff;
+	color: #39414d;
+}
+
+[style*="background-color"] .wp-block-search.wp-block-search__button-inside button.wp-block-search__button {
+	border-color: #39414d;
+	background-color: #fff;
+	color: #39414d;
+}
+
+.wp-block-cover[style*="background-image"] .wp-block-search.wp-block-search__button-inside button.wp-block-search__button {
+	border-color: #39414d;
+	background-color: #fff;
+	color: #39414d;
+}
+
+.has-background:not(.has-background-background-color) .wp-block-search.wp-block-search__button-inside button.wp-block-search__button:hover {
+	background-color: #39414d;
+	color: #d1e4dd;
+}
+
+[class*="background-color"]:not(.has-background-background-color) .wp-block-search.wp-block-search__button-inside button.wp-block-search__button:hover {
+	background-color: #39414d;
+	color: #d1e4dd;
+}
+
+[style*="background-color"] .wp-block-search.wp-block-search__button-inside button.wp-block-search__button:hover {
+	background-color: #39414d;
+	color: #d1e4dd;
+}
+
+.wp-block-cover[style*="background-image"] .wp-block-search.wp-block-search__button-inside button.wp-block-search__button:hover {
+	background-color: #39414d;
+	color: #d1e4dd;
 }
 
 .wp-block-search__button {
