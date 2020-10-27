@@ -3559,11 +3559,40 @@ dd {
 
 .wp-block-navigation > .wp-block-navigation__container > .has-child > .wp-block-navigation__container {
 	background: #d1e4dd;
-	box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.2);
 	margin: 0;
 	padding: 0;
 	position: absolute;
 	top: 100%;
+	border: 1px solid #28303d;
+}
+
+.wp-block-navigation > .wp-block-navigation__container > .has-child > .wp-block-navigation__container:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	top: -10px;
+	left: 25px;
+	border-style: solid;
+	border-color: #28303d transparent;
+	border-width: 0 7px 10px 7px;
+}
+
+.wp-block-navigation > .wp-block-navigation__container > .has-child > .wp-block-navigation__container:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	top: -10px;
+	left: 25px;
+	border-style: solid;
+	border-color: #28303d transparent;
+	border-width: 0 7px 10px 7px;
+}
+
+.wp-block-navigation > .wp-block-navigation__container > .has-child > .wp-block-navigation__container:after {
+	top: -9px;
+	border-color: #d1e4dd transparent;
 }
 
 .wp-block-navigation:not(.has-background) .wp-block-navigation__container {
@@ -3580,6 +3609,11 @@ dd {
 
 .wp-block-navigation:not(.has-text-color) .wp-block-navigation-link > a:focus {
 	color: #28303d;
+}
+
+.wp-block-navigation:not(.has-text-color) .wp-block-navigation-link > a:hover {
+	text-decoration: underline;
+	text-decoration-style: dotted;
 }
 
 .wp-block-navigation:not(.has-text-color) .wp-block-navigation-link__content {
@@ -6047,13 +6081,35 @@ h1.page-title {
 		transition: all 0.5s ease;
 		z-index: 88888;
 	}
+	.primary-navigation > div > .menu-wrapper > li > .sub-menu:before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 0;
+		top: -10px;
+		left: 25px;
+		border-style: solid;
+		border-color: #28303d transparent;
+		border-width: 0 7px 10px 7px;
+	}
+	.primary-navigation > div > .menu-wrapper > li > .sub-menu:after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 0;
+		top: -10px;
+		left: 25px;
+		border-style: solid;
+		border-color: #28303d transparent;
+		border-width: 0 7px 10px 7px;
+	}
+	.primary-navigation > div > .menu-wrapper > li > .sub-menu:after {
+		top: -9px;
+		border-color: #d1e4dd transparent;
+	}
 	.primary-navigation > div > .menu-wrapper > li > .sub-menu li {
 		background: #d1e4dd;
 	}
-}
-
-.primary-navigation > div > .menu-wrapper > li > .sub-menu .sub-menu {
-	width: 100%;
 }
 
 .primary-navigation .primary-menu > .menu-item:hover > a {
@@ -6139,6 +6195,11 @@ h1.page-title {
 	padding: 0;
 	list-style: none;
 	margin-left: 13px;
+	border: 1px solid #28303d;
+}
+
+.primary-navigation .sub-menu .sub-menu {
+	border: none;
 }
 
 @media only screen and (min-width: 482px) {
