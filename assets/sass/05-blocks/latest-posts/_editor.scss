@@ -15,11 +15,19 @@
 		}
 	}
 
-	&.is-grid > li {
-		margin-bottom: var(--global--spacing-vertical);
+	&.is-grid {
+		word-wrap: break-word;
+	
+		& > li {
+			margin-bottom: var(--global--spacing-vertical);
 
-		&:last-child {
-			margin-bottom: 0;
+			& > :first-child {
+				display: inline;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 

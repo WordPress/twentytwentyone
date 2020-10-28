@@ -16,10 +16,14 @@
 	}
 
 	&.is-grid {
-		word-wrap: anywhere;
+		word-wrap: break-word;
 
 		> li {
 			margin-bottom: var(--global--spacing-vertical);
+
+			& > :first-child {
+				display: inline;
+			}
 
 			&:last-child {
 				margin-bottom: 0;

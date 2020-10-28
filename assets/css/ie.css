@@ -3117,11 +3117,15 @@ img {
 }
 
 .wp-block-latest-posts.is-grid {
-	word-wrap: anywhere;
+	word-wrap: break-word;
 }
 
 .wp-block-latest-posts.is-grid > li {
 	margin-bottom: 30px;
+}
+
+.wp-block-latest-posts.is-grid > li > :first-child {
+	display: inline;
 }
 
 .wp-block-latest-posts.is-grid > li:last-child {
