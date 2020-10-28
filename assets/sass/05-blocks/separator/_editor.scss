@@ -45,8 +45,8 @@ hr {
 .wp-block[data-align="full"],
 .wp-block[data-align="wide"] {
 
-	.wp-block-separator,
-	hr {
+	> .wp-block-separator,
+	> hr {
 
 		&:not(.is-style-dots) {
 			max-width: inherit;

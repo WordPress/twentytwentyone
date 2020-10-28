@@ -2164,10 +2164,10 @@ hr {
 	border-color: currentColor;
 }
 
-.wp-block[data-align="full"] .wp-block-separator:not(.is-style-dots),
-.wp-block[data-align="full"] hr:not(.is-style-dots),
-.wp-block[data-align="wide"] .wp-block-separator:not(.is-style-dots),
-.wp-block[data-align="wide"] hr:not(.is-style-dots) {
+.wp-block[data-align="full"] > .wp-block-separator:not(.is-style-dots),
+.wp-block[data-align="full"] > hr:not(.is-style-dots),
+.wp-block[data-align="wide"] > .wp-block-separator:not(.is-style-dots),
+.wp-block[data-align="wide"] > hr:not(.is-style-dots) {
 	max-width: inherit;
 }
 
