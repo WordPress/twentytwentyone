@@ -7,7 +7,6 @@
  * Global...............Project-specific, globally available variables.
  *
  * TOOLS
- * Extends..............Global extends.
  * Functions............Global functions.
  * Mixins...............Global mixins.
  *
@@ -84,7 +83,6 @@
 
 @import "02-tools/mixins";
 @import "02-tools/functions";
-@import "02-tools/extends";
 
 @import "03-generic/normalize";
 @import "03-generic/breakpoints";
@@ -121,3 +119,4 @@
 @import "07-utilities/a11y";
 @import "07-utilities/color-palette";
 @import "07-utilities/measure";
+@import "07-utilities/ie";

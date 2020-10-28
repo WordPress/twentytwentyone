@@ -42,6 +42,14 @@ h1.page-title {
 		}
 	}
 
+	.entry-footer {
+
+		.cat-links,
+		.tags-links {
+			display: block;
+		}
+	}
+
 	&.logged-in {
 
 		.entry-footer {
@@ -53,3 +61,8 @@ h1.page-title {
 	}
 }
 
+.archive-description {
+	margin-top: var(--global--spacing-vertical);
+	font-size: var(--global--font-size-xl);
+	line-height: var(--global--line-height-heading);
+}

@@ -13,5 +13,8 @@
 		"_": "readonly",
 		"NodeList": "readonly",
 		"Element": "readonly"
+	},
+	"rules": {
+		"comma-dangle": "off"
 	}
 }

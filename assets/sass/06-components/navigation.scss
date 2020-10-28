@@ -92,7 +92,7 @@
 
 	// Mobile menu closed
 	> .primary-menu-container {
-		position: absolute;
+		position: fixed;
 		visibility: hidden;
 		opacity: 0;
 		top: 0;
@@ -105,14 +105,15 @@
 		padding-right: var(--global--spacing-unit);
 		padding-bottom: var(--global--spacing-horizontal);
 		background-color: var(--global--color-background);
-		overflow-x: scroll;
-		overflow-y: auto;
 		transition: all .15s ease-in-out;
 		transform: translateY(var(--global--spacing-vertical));
 
 		@include media(mobile-only) {
 			height: 100vh;
 			z-index: 499;
+			overflow-x: hidden;
+			overflow-y: auto;
+			border: 2px solid transparent;
 
 			.has-logo.has-title-and-tagline & {
 				position: fixed;
@@ -125,6 +126,10 @@
 
 			.admin-bar & {
 				height: calc(100vh - 46px);
+			}
+
+			&:focus {
+				border: 2px solid var(--global--color-primary);
 			}
 		}
 	}
@@ -139,6 +144,7 @@
 		}
 
 		> .primary-menu-container {
+			position: absolute;
 			visibility: visible;
 			opacity: 1;
 			transform: translateY(0);
@@ -161,8 +167,6 @@
 
 	@include media(mobile) {
 		position: relative;
-		display: flex;
-		justify-content: var(--primary-nav--justify-content);
 		margin-left: auto;
 
 		// Hide Mobile menu on desktop
@@ -182,7 +186,7 @@
 		}
 
 		// Hide sub-sub-menus
-		> .primary-menu-container ul > li:not(.hover) .sub-menu-toggle[aria-expanded="false"] ~ ul {
+		> .primary-menu-container ul > li .sub-menu-toggle[aria-expanded="false"] ~ ul {
 			display: none;
 		}
 
@@ -277,17 +281,6 @@
 			}
 		}
 
-		.hover .sub-menu-toggle {
-
-			.icon-minus {
-				display: flex;
-			}
-
-			.icon-plus {
-				display: none;
-			}
-		}
-
 		// Sub-menus Flyout
 		> li > .sub-menu {
 
@@ -303,13 +296,27 @@
 				transition: all 0.5s ease;
 				z-index: 88888;
 
+				&:before,
+				&:after {
+					content: "";
+					display: block;
+					position: absolute;
+					width: 0;
+					top: -10px;
+					left: var(--global--spacing-horizontal);
+					border-style: solid;
+					border-color: var(--primary-nav--border-color) transparent;
+					border-width: 0 7px 10px 7px;
+				}
+
+				&:after {
+					top: -9px;
+					border-color: var(--global--color-background) transparent;
+				}
+
 				li {
 					background: var(--global--color-background);
 				}
-			}
-
-			.sub-menu {
-				width: 100%;
 			}
 		}
 	}
@@ -396,6 +403,11 @@
 		padding: 0;
 		list-style: none;
 		margin-left: var(--primary-nav--padding);
+		border: 1px solid var(--primary-nav--border-color);
+
+		.sub-menu {
+			border: none;
+		}
 
 		// Sub-menu items om wide screens.
 		@include media(mobile) {

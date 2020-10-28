@@ -1,6 +1,6 @@
 <?php
 /**
- * Show the excerpt.
+ * Show the appropriate content for the Image post format.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -9,16 +9,13 @@
  * @since 1.0.0
  */
 
-// If there is no featured-image print the first image block we can find.
+// If there is no featured-image, print the first image block found.
 if (
 	! twenty_twenty_one_can_show_post_thumbnail() &&
-	! twenty_twenty_one_print_first_instance_of_block( 'core/image', get_the_content() )
+	has_block( 'core/image', get_the_content() )
 ) {
 
-	// Fallback to the content.
-	the_content();
-} else {
-
-	// Add the excerpt.
-	the_excerpt();
+	twenty_twenty_one_print_first_instance_of_block( 'core/image', get_the_content() );
 }
+
+the_excerpt();

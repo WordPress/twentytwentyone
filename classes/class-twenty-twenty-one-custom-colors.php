@@ -32,7 +32,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	}
 
 	/**
-	 * Determine the luminance of the given color and then return #fff or #000 so that our text is always readable.
+	 * Determine the luminance of the given color and then return #fff or #000 so that the text is always readable.
 	 *
 	 * @access public
 	 *
@@ -43,7 +43,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 * @return string (hex color)
 	 */
 	public function custom_get_readable_color( $background_color ) {
-		return ( 127 < $this->get_relative_luminance_from_hex( $background_color ) ) ? '#000' : '#fff';
+		return ( 127 < self::get_relative_luminance_from_hex( $background_color ) ) ? '#000' : '#fff';
 	}
 
 	/**
@@ -63,16 +63,17 @@ class Twenty_Twenty_One_Custom_Colors {
 	 */
 	public function generate_custom_color_variables( $context = null ) {
 
-		$theme_css = 'editor' === $context ? ':root .editor-styles-wrapper{' : ':root{';
+		$theme_css        = 'editor' === $context ? ':root .editor-styles-wrapper{' : ':root{';
+		$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
 
-		if ( 'd1e4dd' !== strtolower( get_theme_mod( 'background_color', 'D1E4DD' ) ) ) {
-			$theme_css .= '--global--color-background: #' . get_theme_mod( 'background_color', 'D1E4DD' ) . ';';
-			$theme_css .= '--global--color-primary: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
-			$theme_css .= '--global--color-secondary: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
-			$theme_css .= '--button--color-background: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
-			$theme_css .= '--button--color-text-hover: ' . $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) . ';';
+		if ( 'd1e4dd' !== strtolower( $background_color ) ) {
+			$theme_css .= '--global--color-background: #' . $background_color . ';';
+			$theme_css .= '--global--color-primary: ' . $this->custom_get_readable_color( $background_color ) . ';';
+			$theme_css .= '--global--color-secondary: ' . $this->custom_get_readable_color( $background_color ) . ';';
+			$theme_css .= '--button--color-background: ' . $this->custom_get_readable_color( $background_color ) . ';';
+			$theme_css .= '--button--color-text-hover: ' . $this->custom_get_readable_color( $background_color ) . ';';
 
-			if ( '#fff' === $this->custom_get_readable_color( get_theme_mod( 'background_color', 'D1E4DD' ) ) ) {
+			if ( '#fff' === $this->custom_get_readable_color( $background_color ) ) {
 				$theme_css .= '--table--stripes-border-color: var(--global--color-dark-gray);';
 				$theme_css .= '--table--stripes-background-color: var(--global--color-dark-gray);';
 			}
@@ -114,13 +115,17 @@ class Twenty_Twenty_One_Custom_Colors {
 			array(),
 			(string) filemtime( get_theme_file_path( 'assets/css/custom-color-overrides.css' ) )
 		);
-		if ( 'd1e4dd' !== strtolower( get_theme_mod( 'background_color', 'D1E4DD' ) ) ) {
+
+		$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
+		if ( 'd1e4dd' !== strtolower( $background_color ) ) {
 			wp_add_inline_style( 'twenty-twenty-one-custom-color-overrides', $this->generate_custom_color_variables( 'editor' ) );
 		}
 	}
 
 	/**
 	 * Get luminance from a HEX color.
+	 *
+	 * @static
 	 *
 	 * @access public
 	 *
@@ -130,12 +135,12 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @return int Returns a number (0-255).
 	 */
-	public function get_relative_luminance_from_hex( $hex ) {
+	public static function get_relative_luminance_from_hex( $hex ) {
 
 		// Remove the "#" symbol from the beginning of the color.
 		$hex = ltrim( $hex, '#' );
 
-		// Make sure we have 6 digits for the below calculations.
+		// Make sure there are 6 digits for the below calculations.
 		if ( 3 === strlen( $hex ) ) {
 			$hex = substr( $hex, 0, 1 ) . substr( $hex, 0, 1 ) . substr( $hex, 1, 1 ) . substr( $hex, 1, 1 ) . substr( $hex, 2, 1 ) . substr( $hex, 2, 1 );
 		}
@@ -163,15 +168,10 @@ class Twenty_Twenty_One_Custom_Colors {
 	 */
 	public function body_class( $classes ) {
 		$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
-		if ( 127 > $this->get_relative_luminance_from_hex( $background_color ) ) {
-			$classes[] = 'is-background-dark';
+		if ( 127 > self::get_relative_luminance_from_hex( $background_color ) ) {
+			$classes[] = 'has-background-dark';
 		} else {
-			$classes[] = 'is-background-light';
-		}
-
-		$light_colors_default_palette = array( '#D1E4DD', '#D1DFE4', '#D1D1E4', '#E4D1D1', '#E4DAD1', '#EEEADD', '#FFFFFF' );
-		if ( in_array( strtoupper( '#' . ltrim( $background_color, '#' ) ), $light_colors_default_palette, true ) ) {
-			$classes[] = 'has-default-light-palette-background';
+			$classes[] = 'has-background-light';
 		}
 
 		return $classes;

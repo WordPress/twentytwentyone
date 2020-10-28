@@ -1,17 +1,12 @@
 .wp-block-pullquote {
 	padding: calc(2 * var(--global--spacing-unit)) 0;
 	text-align: center;
-	// Theme?
-	border-top-color: var(--pullquote--border-color);
-	border-top-style: solid;
-	border-top-width: var(--pullquote--border-width);
-	border-bottom-color: var(--pullquote--border-color);
+	border-width: var(--pullquote--border-width);
 	border-bottom-style: solid;
-	border-bottom-width: var(--pullquote--border-width);
-	color: var(--pullquote--color-foreground);
+	border-top-style: solid;
 	position: relative;
 
-	&::before {
+	blockquote::before {
 		color: currentColor;
 		content: "\201C";
 		display: block;
@@ -53,7 +48,7 @@
 
 	&.alignleft {
 
-		&:before,
+		blockquote:before,
 		cite {
 			text-align: center;
 		}
@@ -71,8 +66,6 @@
 	}
 
 	&.is-style-solid-color {
-
-		background-color: var(--pullquote--color-background);
 		color: var(--pullquote--color-foreground);
 		padding: calc(2.5 * var(--global--spacing-unit));
 		border-width: var(--pullquote--border-width);
@@ -83,7 +76,7 @@
 			padding: calc(5 * var(--global--spacing-unit));
 		}
 
-		&::before {
+		blockquote::before {
 			text-align: left;
 		}
 

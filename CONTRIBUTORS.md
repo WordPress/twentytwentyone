@@ -42,4 +42,21 @@
 | @francescamarano | @francina |
 | @marybaum | @marybaum |
 | @hareshlive | @hareshlive
-| @jdevalk | @joostdevalk |
+| @imnavanath | @navanathbhosale |
+| @afercia | @afercia |
+| @richtabor | @richtabor |
+| @joyously | @joyously |
+| @sarahricker | @sarahricker |
+| @enriquesanchez | @nrqsnchz |
+| @glauberm | @glauberglauber |
+| @sabernhardt | @sabernhardt |
+| @shamikakumar | @shamikakumar |
+| @kraftbj | @kraftbj |
+| @ItsJonQ | @ItsJonQ |
+| @jasmussen | @joen |
+| @ct-martin | @CTMartin0 |
+| @decrecementofeliz | @decrecementofeliz |
+| @bhautikvirani | @bhautikvirani |
+| @desrosj | @desrosj |
+| @kafleg | @kafleg |
+| @bph| @bph |

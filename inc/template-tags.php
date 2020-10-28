@@ -72,6 +72,16 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 
 		// Hide meta information on pages.
 		if ( ! is_single() ) {
+
+			if ( is_sticky() ) {
+				echo '<p>' . esc_html__( 'Featured post', 'twentytwentyone' ) . '</p>';
+			}
+
+			$post_format = get_post_format();
+			if ( 'aside' === $post_format || 'status' === $post_format ) {
+				echo '<p><a href="' . esc_url( get_permalink() ) . '">' . twenty_twenty_one_continue_reading_text() . '</a></p>'; // phpcs:ignore WordPress.Security.EscapeOutput
+			}
+
 			// Posted on.
 			twenty_twenty_one_posted_on();
 
@@ -95,7 +105,7 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				if ( $categories_list ) {
 					printf(
 						/* translators: %s: list of categories. */
-						'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . '. </span>',
+						'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . ' </span>',
 						$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
 					);
 				}
@@ -105,7 +115,7 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				if ( $tags_list ) {
 					printf(
 						/* translators: %s: list of tags. */
-						'<span class="tags-links">' . esc_html__( 'Tagged %s', 'twentytwentyone' ) . '.</span>',
+						'<span class="tags-links">' . esc_html__( 'Tagged %s', 'twentytwentyone' ) . '</span>',
 						$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
 					);
 				}

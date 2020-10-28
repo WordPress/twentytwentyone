@@ -3,7 +3,7 @@
 	color: var(--entry-header--color);
 	font-size: var(--entry-header--font-size);
 	letter-spacing: var(--heading--letter-spacing-h2);
-	line-height: var(--heading--line-height);
+	line-height: var(--heading--line-height-h2);
 	overflow-wrap: break-word;
 
 	a {
@@ -48,13 +48,6 @@ h1.entry-title {
 		word-wrap: break-word;
 	}
 
-	.more-link {
-
-		&:hover {
-			text-decoration: none;
-		}
-	}
-
 	// Overwrite iframe embeds that have inline styles.
 	> iframe[style] {
 
@@ -79,6 +72,10 @@ h1.entry-title {
 	float: none;
 	font-size: var(--global--font-size-xs);
 	display: block;
+
+	> span {
+		display: inline-block;
+	}
 
 	a {
 		color: currentColor;

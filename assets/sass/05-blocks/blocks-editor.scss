@@ -5,12 +5,14 @@
 //   files and conditionally loaded
 
 @import "button/editor";
+@import "code/editor";
 @import "cover/editor";
 @import "columns/editor";
 @import "file/editor";
 @import "gallery/editor";
 @import "group/editor";
 @import "heading/editor";
+@import "html/editor";
 @import "image/editor";
 @import "latest-comments/editor";
 @import "latest-posts/editor";
@@ -19,6 +21,7 @@
 @import "media-text/editor";
 @import "navigation/editor";
 @import "paragraph/editor";
+@import "preformatted/editor";
 @import "pullquote/editor";
 @import "quote/editor";
 @import "rss/editor";
@@ -26,6 +29,7 @@
 @import "separator/editor";
 @import "social-icons/editor";
 @import "table/editor";
+@import "tag-clould/editor";
 @import "verse/editor";
 @import "utilities/font-sizes";
 @import "utilities/editor"; // Import LAST to cascade properly

@@ -41,10 +41,11 @@
 
 	&.is-style-twentytwentyone-columns-overlap {
 
+		justify-content: space-around;
+
 		@include media(laptop) {
 
 			.wp-block-column {
-				flex-grow: 1;
 
 				&:nth-child(2n) {
 					margin-left: calc(-2 * var(--global--spacing-horizontal));

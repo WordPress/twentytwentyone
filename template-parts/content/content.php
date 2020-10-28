@@ -25,18 +25,18 @@
 	<div class="entry-content">
 		<?php
 		the_content(
-			sprintf(
-				twenty_twenty_one_continue_reading_text(),
-				get_the_title()
-			)
+			twenty_twenty_one_continue_reading_text()
 		);
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'twentytwentyone' ),
-				'after'  => '</div>',
+				'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'twentytwentyone' ) . '">',
+				'after'    => '</nav>',
+				/* translators: %: page number. */
+				'pagelink' => esc_html__( 'Page %', 'twentytwentyone' ),
 			)
 		);
+
 		?>
 	</div><!-- .entry-content -->
 
