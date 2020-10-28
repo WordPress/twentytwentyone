@@ -256,14 +256,29 @@ a:hover {
 }
 
 .site a:focus {
-	outline: 2px solid #28303d;
-	text-decoration: none;
+	/* Only visible in Windows High Contrast mode */
+	outline: 2px solid transparent;
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.has-background-dark .site a:focus {
+	color: #d1e4dd;
+}
+
+.has-background-white .site a:focus {
+	background: rgba(0, 0, 0, 0.9);
+	color: #fff;
 }
 
 .site a:focus.skip-link {
 	/* Only visible in Windows High Contrast mode */
 	outline: 2px solid transparent;
 	outline-offset: -2px;
+}
+
+.site a:focus.skip-link:focus {
+	color: #21759b;
+	background-color: #f1f1f1;
 }
 
 .has-background:not(.has-background-background-color) .has-link-color a {
@@ -304,7 +319,7 @@ a:hover {
 }
 
 .wp-block-button__link:focus {
-	outline-offset: -4px;
+	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }
 
@@ -724,7 +739,7 @@ a:hover {
 }
 
 .wp-block-file .wp-block-file__button:focus {
-	outline-offset: -4px;
+	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }
 
@@ -2019,7 +2034,7 @@ pre.wp-block-preformatted {
 }
 
 .wp-block-search .wp-block-search__button:focus {
-	outline-offset: -4px;
+	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }
 
