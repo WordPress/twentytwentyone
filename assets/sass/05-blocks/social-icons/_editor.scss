@@ -1,8 +1,9 @@
 .wp-block-social-links {
 
-	// Override the [data-block]:first-child margin from utilities _editor.scss.
-	li.wp-block-social-link:first-child {
-		margin-top: var(--global--spacing-vertical);
+	// Social icons are horizontal, so they don't need vertical spacing.
+	[data-block] {
+		margin-top: 0;
+		margin-bottom: 0;
 	}
 
 	&.is-style-twentytwentyone-social-icons-color {
