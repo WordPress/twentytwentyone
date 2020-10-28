@@ -317,6 +317,44 @@
 				li {
 					background: var(--global--color-background);
 				}
+
+				&.submenu-reposition-left {
+
+					/* rtl:ignore */
+					left: 0;
+
+					/* rtl:ignore */
+					right: auto;
+
+					&:before,
+					&:after {
+
+						/* rtl:ignore */
+						left: var(--global--spacing-horizontal);
+
+						/* rtl:ignore */
+						right: auto;
+					}
+				}
+
+				&.submenu-reposition-right {
+
+					/* rtl:ignore */
+					right: 0;
+
+					/* rtl:ignore */
+					left: auto;
+
+					&:before,
+					&:after {
+
+						/* rtl:ignore */
+						left: auto;
+
+						/* rtl:ignore */
+						right: var(--global--spacing-horizontal);
+					}
+				}
 			}
 		}
 	}

@@ -4428,6 +4428,22 @@ h1.page-title {
 	.primary-navigation > div > .menu-wrapper > li > .sub-menu li {
 		background: var(--global--color-background);
 	}
+	.primary-navigation > div > .menu-wrapper > li > .sub-menu.submenu-reposition-left {
+		left: 0;
+		right: auto;
+	}
+	.primary-navigation > div > .menu-wrapper > li > .sub-menu.submenu-reposition-left:before, .primary-navigation > div > .menu-wrapper > li > .sub-menu.submenu-reposition-left:after {
+		left: var(--global--spacing-horizontal);
+		right: auto;
+	}
+	.primary-navigation > div > .menu-wrapper > li > .sub-menu.submenu-reposition-right {
+		right: 0;
+		left: auto;
+	}
+	.primary-navigation > div > .menu-wrapper > li > .sub-menu.submenu-reposition-right:before, .primary-navigation > div > .menu-wrapper > li > .sub-menu.submenu-reposition-right:after {
+		left: auto;
+		right: var(--global--spacing-horizontal);
+	}
 }
 
 .primary-navigation .primary-menu > .menu-item:hover > a {

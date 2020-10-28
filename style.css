@@ -4438,6 +4438,30 @@ h1.page-title {
 	.primary-navigation > div > .menu-wrapper > li > .sub-menu li {
 		background: var(--global--color-background);
 	}
+	.primary-navigation > div > .menu-wrapper > li > .sub-menu.submenu-reposition-left {
+		/* rtl:ignore */
+		left: 0;
+		/* rtl:ignore */
+		right: auto;
+	}
+	.primary-navigation > div > .menu-wrapper > li > .sub-menu.submenu-reposition-left:before, .primary-navigation > div > .menu-wrapper > li > .sub-menu.submenu-reposition-left:after {
+		/* rtl:ignore */
+		left: var(--global--spacing-horizontal);
+		/* rtl:ignore */
+		right: auto;
+	}
+	.primary-navigation > div > .menu-wrapper > li > .sub-menu.submenu-reposition-right {
+		/* rtl:ignore */
+		right: 0;
+		/* rtl:ignore */
+		left: auto;
+	}
+	.primary-navigation > div > .menu-wrapper > li > .sub-menu.submenu-reposition-right:before, .primary-navigation > div > .menu-wrapper > li > .sub-menu.submenu-reposition-right:after {
+		/* rtl:ignore */
+		left: auto;
+		/* rtl:ignore */
+		right: var(--global--spacing-horizontal);
+	}
 }
 
 .primary-navigation .primary-menu > .menu-item:hover > a {
