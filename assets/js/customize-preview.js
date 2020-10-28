@@ -52,6 +52,13 @@
 				document.body.classList.remove( 'has-background-dark' );
 			}
 
+			// Toggle the white background class.
+			if ( '#ffffff' === to ) {
+				document.body.classList.add( 'has-background-white' );
+			} else {
+				document.body.classList.remove( 'has-background-white' );
+			}
+
 			document.documentElement.style.setProperty( '--global--color-primary', textColor );
 			document.documentElement.style.setProperty( '--global--color-secondary', textColor );
 			document.documentElement.style.setProperty( '--global--color-background', to );
