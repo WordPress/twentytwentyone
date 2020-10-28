@@ -97,9 +97,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 				array(
 					'capability'        => 'edit_theme_options',
 					'default'           => 'excerpt',
-					'sanitize_callback' => function( $value ) {
-						return 'excerpt' === $value || 'full' === $value ? $value : 'excerpt';
-					},
+					'sanitize_callback' => array( __CLASS__, 'sanitize_content_type' ),
 				)
 			);
 
@@ -187,6 +185,16 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 		 */
 		public function partial_blogdescription() {
 			bloginfo( 'description' );
+		}
+
+		/**
+		 * [sanitize_content_type] > Sanitize Input Text
+		 *
+		 * @param  [text] $value [description].
+		 * @return [text]        [description].
+		 */
+		public function sanitize_content_type( $value ) {
+			return 'excerpt' === $value || 'full' === $value ? $value : 'excerpt';
 		}
 	}
 }
