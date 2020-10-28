@@ -1541,9 +1541,16 @@ dt {
 	font-weight: bold;
 }
 
-.wp-block-media-text .block-editor-inner-blocks {
-	padding-right: 25px;
-	padding-left: 25px;
+.wp-block-media-text .wp-block-media-text__content {
+	padding: 25px;
+}
+
+.wp-block-media-text .wp-block-media-text__content [data-block]:first-child {
+	margin-top: 0;
+}
+
+.wp-block-media-text .wp-block-media-text__content [data-block]:last-child {
+	margin-bottom: 0;
 }
 
 .wp-block-media-text.is-style-twentytwentyone-border {
