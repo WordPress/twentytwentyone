@@ -41,14 +41,15 @@ function twentytwentyoneCollapseMenuOnClickOutside( event ) {
  */
 function twentytwentyoneSubmenuPosition( li ) {
 	var subMenu = li.querySelector( 'ul.sub-menu' ),
-		rect = subMenu.getBoundingClientRect();
+		rect = subMenu.getBoundingClientRect(),
+		right = Math.round( rect.right ),
+		left = Math.round( rect.left ),
+		windowWidth = Math.round( window.innerWidth );
 
-	if ( rect.right > window.innerWidth ) {
-		subMenu.style.left = ( window.innerWidth - rect.right ) + 'px';
-	} else if ( rect.left < 0 ) {
-		subMenu.style.left = ( 0 - rect.left ) + 'px';
-	} else {
-		subMenu.style.left = 0;
+	if ( right > windowWidth ) {
+		subMenu.classList.add( 'submenu-reposition-right' );
+	} else if ( document.body.classList.contains( 'rtl' ) && left < 0 ) {
+		subMenu.classList.add( 'submenu-reposition-left' );
 	}
 }
 
