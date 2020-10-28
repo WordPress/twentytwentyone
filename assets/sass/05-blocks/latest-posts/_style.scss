@@ -17,13 +17,10 @@
 
 	&.is-grid {
 		word-wrap: break-word;
+		word-break: break-word;
 
 		> li {
 			margin-bottom: var(--global--spacing-vertical);
-
-			& > :first-child {
-				display: inline;
-			}
 
 			&:last-child {
 				margin-bottom: 0;

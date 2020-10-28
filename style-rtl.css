@@ -2088,14 +2088,11 @@ img {
 
 .wp-block-latest-posts.is-grid {
 	word-wrap: break-word;
+	word-break: break-word;
 }
 
 .wp-block-latest-posts.is-grid > li {
 	margin-bottom: var(--global--spacing-vertical);
-}
-
-.wp-block-latest-posts.is-grid > li > :first-child {
-	display: inline;
 }
 
 .wp-block-latest-posts.is-grid > li:last-child {

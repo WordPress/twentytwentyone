@@ -1289,14 +1289,11 @@ h6 {
 
 .wp-block-latest-posts.is-grid {
 	word-wrap: break-word;
+	word-break: break-word;
 }
 
 .wp-block-latest-posts.is-grid > li {
 	margin-bottom: 30px;
-}
-
-.wp-block-latest-posts.is-grid > li > :first-child {
-	display: inline;
 }
 
 .wp-block-latest-posts.is-grid > li:last-child {
