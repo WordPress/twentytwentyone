@@ -25,7 +25,7 @@
 		padding: var(--global--spacing-vertical);
 	}
 
-	.wp-block-group__inner-container *:last-child {
+	.wp-block-group__inner-container > :last-child {
 		margin-bottom: 0;
 	}
 }
