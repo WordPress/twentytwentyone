@@ -1587,7 +1587,7 @@ hr[style*="text-align: right"] {
 
 .wp-block-separator:not(.is-style-dots),
 hr:not(.is-style-dots) {
-	max-width: inherit;
+	max-width: var(--responsive--aligndefault-width);
 }
 
 .wp-block-separator.is-style-twentytwentyone-separator-thick,
@@ -1629,6 +1629,13 @@ hr,
 .wp-block-cover[style*="background-image"]
 hr {
 	border-color: currentColor;
+}
+
+.wp-block[data-align="full"] .wp-block-separator:not(.is-style-dots),
+.wp-block[data-align="full"] hr:not(.is-style-dots),
+.wp-block[data-align="wide"] .wp-block-separator:not(.is-style-dots),
+.wp-block[data-align="wide"] hr:not(.is-style-dots) {
+	max-width: inherit;
 }
 
 .wp-block-social-links li.wp-block-social-link:first-child {

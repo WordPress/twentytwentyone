@@ -10,7 +10,7 @@ hr {
 	}
 
 	&:not(.is-style-dots) {
-		max-width: inherit;
+		max-width: var(--responsive--aligndefault-width);
 	}
 
 	&.is-style-twentytwentyone-separator-thick {
@@ -18,7 +18,6 @@ hr {
 	}
 
 	&.is-style-dots {
-
 		border-bottom: none;
 
 		&.has-background,
@@ -40,5 +39,17 @@ hr {
 	[style*="background-color"]:not(.has-background-background-color) &,
 	.wp-block-cover[style*="background-image"] & {
 		border-color: currentColor;
+	}
+}
+
+.wp-block[data-align="full"],
+.wp-block[data-align="wide"] {
+
+	.wp-block-separator,
+	hr {
+
+		&:not(.is-style-dots) {
+			max-width: inherit;
+		}
 	}
 }

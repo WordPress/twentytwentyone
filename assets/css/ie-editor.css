@@ -2085,9 +2085,36 @@ hr[style*="text-align: right"] {
 	border-right-color: #28303d;
 }
 
-.wp-block-separator:not(.is-style-dots),
+.wp-block-separator:not(.is-style-dots) {
+	max-width: calc(100vw - 30px);
+}
+
+@media only screen and (min-width: 482px){
+	.wp-block-separator:not(.is-style-dots){
+	max-width: min(calc(100vw - 100px), 610px);
+	}
+}
+
+@media only screen and (min-width: 822px){
+	.wp-block-separator:not(.is-style-dots){
+	max-width: min(calc(100vw - 200px), 610px);
+	}
+}
+
 hr:not(.is-style-dots) {
-	max-width: inherit;
+	max-width: calc(100vw - 30px);
+}
+
+@media only screen and (min-width: 482px){
+	hr:not(.is-style-dots){
+	max-width: min(calc(100vw - 100px), 610px);
+	}
+}
+
+@media only screen and (min-width: 822px){
+	hr:not(.is-style-dots){
+	max-width: min(calc(100vw - 200px), 610px);
+	}
 }
 
 .wp-block-separator.is-style-twentytwentyone-separator-thick {
@@ -2135,6 +2162,13 @@ hr,
 .wp-block-cover[style*="background-image"]
 hr {
 	border-color: currentColor;
+}
+
+.wp-block[data-align="full"] .wp-block-separator:not(.is-style-dots),
+.wp-block[data-align="full"] hr:not(.is-style-dots),
+.wp-block[data-align="wide"] .wp-block-separator:not(.is-style-dots),
+.wp-block[data-align="wide"] hr:not(.is-style-dots) {
+	max-width: inherit;
 }
 
 .wp-block-social-links li.wp-block-social-link:first-child {
