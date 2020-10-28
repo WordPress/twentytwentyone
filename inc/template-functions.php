@@ -505,7 +505,7 @@ function twenty_twenty_one_get_attachment_image_attributes( $attr, $attachment, 
 
 		// Add style.
 		$attr['style'] = isset( $attr['style'] ) ? $attr['style'] : '';
-		$attr['style'] = 'width:100%;height:' . round( 100 * $meta['height'] / $meta['width'], 2 ) . '%;' . $attr['style'];
+		$attr['style'] = 'width:100%;height:' . round( 100 * $height / $width, 2 ) . '%;' . $attr['style'];
 	}
 
 	return $attr;
