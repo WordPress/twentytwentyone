@@ -19,7 +19,7 @@
 		word-wrap: break-word;
 		word-break: break-word;
 	
-		& > li {
+		> li {
 			margin-bottom: var(--global--spacing-vertical);
 
 			&:last-child {
