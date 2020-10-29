@@ -825,6 +825,12 @@ a:hover {
 	padding: 30px;
 }
 
+.wp-block-group.is-style-twentytwentyone-border .wp-block-group__inner-container > [data-align="full"] {
+	max-width: calc(100% + 60px);
+	width: calc(100% + 60px);
+	margin-left: -30px;
+}
+
 .wp-block-group .wp-block-group__inner-container > *:last-child {
 	margin-bottom: 0;
 }
