@@ -13,6 +13,11 @@ hr {
 		max-width: var(--responsive--aligndefault-width);
 	}
 
+	[data-align="full"] > &,
+	[data-align="wide"] > & {
+		max-width: inherit;
+	}
+
 	&.is-style-twentytwentyone-separator-thick {
 		border-bottom-width: calc(3 * var(--separator--height));
 	}
@@ -39,17 +44,5 @@ hr {
 	[style*="background-color"]:not(.has-background-background-color) &,
 	.wp-block-cover[style*="background-image"] & {
 		border-color: currentColor;
-	}
-}
-
-.wp-block[data-align="full"],
-.wp-block[data-align="wide"] {
-
-	> .wp-block-separator,
-	> hr {
-
-		&:not(.is-style-dots) {
-			max-width: inherit;
-		}
 	}
 }
