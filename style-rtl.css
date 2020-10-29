@@ -2038,6 +2038,14 @@ input[type="reset"]:hover,
 	padding: var(--global--spacing-vertical);
 }
 
+.wp-block-group.has-background .wp-block-group__inner-container > .alignfull, .wp-block-group.is-style-twentytwentyone-border .wp-block-group__inner-container > .alignfull {
+	max-width: calc(var(--responsive--alignfull-width) + (2 * var(--global--spacing-vertical)));
+	width: calc(var(--responsive--alignfull-width) + (2 * var(--global--spacing-vertical)));
+	margin-right: auto;
+	margin-left: auto;
+	transform: translateX(calc(-1*(-1 * var(--global--spacing-vertical))));
+}
+
 h1,
 .h1,
 h2,
