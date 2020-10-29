@@ -938,10 +938,6 @@ h6,
 	padding: var(--global--spacing-unit);
 }
 
-.wp-block-latest-comments {
-	margin-left: 0;
-}
-
 .wp-block-latest-posts {
 	padding-left: 0;
 }
