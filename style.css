@@ -2046,9 +2046,7 @@ input[type="reset"]:hover,
 .wp-block-group.has-background .wp-block-group__inner-container > .alignfull, .wp-block-group.is-style-twentytwentyone-border .wp-block-group__inner-container > .alignfull {
 	max-width: calc(var(--responsive--alignfull-width) + (2 * var(--global--spacing-vertical)));
 	width: calc(var(--responsive--alignfull-width) + (2 * var(--global--spacing-vertical)));
-	margin-left: auto;
-	margin-right: auto;
-	transform: translateX(calc(-1 * var(--global--spacing-vertical)));
+	margin-left: calc(-1 * var(--global--spacing-vertical));
 }
 
 h1,
