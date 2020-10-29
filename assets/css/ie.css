@@ -118,6 +118,7 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	/* Block: Pull quote */
 	/* Block: Table */
 	/* Widgets */
+	/* Admin-bar height */
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -4939,9 +4940,6 @@ a.custom-logo-link {
 		margin-top: 0;
 		top: 0;
 	}
-	.admin-bar .site-header.has-logo:not(.has-title-and-tagline).has-menu .site-logo {
-		top: 46px;
-	}
 	.primary-navigation-open .site-header.has-logo:not(.has-title-and-tagline).has-menu .site-logo {
 		display: none;
 	}
@@ -5925,10 +5923,20 @@ h1.page-title {
 		transform: translateY(0) translateX(100%);
 	}
 	.admin-bar .has-logo.has-title-and-tagline .primary-navigation > .primary-menu-container {
+		top: 32px;
+	}
+	@media only screen and (max-width: 782px){
+		.admin-bar .has-logo.has-title-and-tagline .primary-navigation > .primary-menu-container{
 		top: 46px;
+		}
 	}
 	.admin-bar .primary-navigation > .primary-menu-container {
+		height: calc(100vh - 32px);
+	}
+	@media only screen and (max-width: 782px){
+		.admin-bar .primary-navigation > .primary-menu-container{
 		height: calc(100vh - 46px);
+		}
 	}
 	.primary-navigation > .primary-menu-container:focus {
 		border: 2px solid #28303d;
@@ -5954,10 +5962,6 @@ h1.page-title {
 	.primary-navigation-open .has-logo.has-title-and-tagline .primary-navigation > .primary-menu-container {
 		transform: translateX(0) translateY(0);
 	}
-}
-
-.admin-bar .primary-navigation {
-	top: 46px;
 }
 
 @media only screen and (min-width: 482px) {

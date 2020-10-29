@@ -82,7 +82,7 @@
 
 .primary-navigation {
 	position: absolute;
-	top: 0;
+	top: var(--global--admin-bar--height);
 	right: 0;
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
@@ -121,11 +121,11 @@
 			}
 
 			.admin-bar .has-logo.has-title-and-tagline & {
-				top: 46px;
+				top: var(--global--admin-bar--height);
 			}
 
 			.admin-bar & {
-				height: calc(100vh - 46px);
+				height: calc(100vh - var(--global--admin-bar--height));
 			}
 
 			&:focus {
@@ -158,11 +158,6 @@
 				transform: translateX(0) translateY(0);
 			}
 		}
-	}
-
-	// Adjust positions when logged-in
-	.admin-bar & {
-		top: 46px;
 	}
 
 	@include media(mobile) {

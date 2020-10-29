@@ -288,6 +288,18 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 	--widget--line-height-title: 1.4;
 	--widget--font-weight-title: 700;
 	--widget--spacing-menu: calc(0.66 * var(--global--spacing-unit));
+	/* Admin-bar height */
+	--global--admin-bar--height: 0;
+}
+
+.admin-bar {
+	--global--admin-bar--height: 32px;
+}
+
+@media only screen and (max-width: 782px) {
+	.admin-bar {
+		--global--admin-bar--height: 46px;
+	}
 }
 
 @media only screen and (min-width: 652px) {
@@ -3463,10 +3475,7 @@ a.custom-logo-link {
 		position: absolute;
 		padding-top: calc(0.5 * var(--global--spacing-vertical));
 		margin-top: 0;
-		top: 0;
-	}
-	.admin-bar .site-header.has-logo:not(.has-title-and-tagline).has-menu .site-logo {
-		top: 46px;
+		top: var(--global--admin-bar--height);
 	}
 	.primary-navigation-open .site-header.has-logo:not(.has-title-and-tagline).has-menu .site-logo {
 		display: none;
@@ -4209,7 +4218,7 @@ h1.page-title {
 
 .primary-navigation {
 	position: absolute;
-	top: 0;
+	top: var(--global--admin-bar--height);
 	right: 0;
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
@@ -4248,10 +4257,10 @@ h1.page-title {
 		transform: translateY(0) translateX(100%);
 	}
 	.admin-bar .has-logo.has-title-and-tagline .primary-navigation > .primary-menu-container {
-		top: 46px;
+		top: var(--global--admin-bar--height);
 	}
 	.admin-bar .primary-navigation > .primary-menu-container {
-		height: calc(100vh - 46px);
+		height: calc(100vh - var(--global--admin-bar--height));
 	}
 	.primary-navigation > .primary-menu-container:focus {
 		border: 2px solid var(--global--color-primary);
@@ -4277,10 +4286,6 @@ h1.page-title {
 	.primary-navigation-open .has-logo.has-title-and-tagline .primary-navigation > .primary-menu-container {
 		transform: translateX(0) translateY(0);
 	}
-}
-
-.admin-bar .primary-navigation {
-	top: 46px;
 }
 
 @media only screen and (min-width: 482px) {

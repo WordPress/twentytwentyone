@@ -226,6 +226,16 @@ $baseline-unit: 10px;
 	--widget--font-weight-title: 700;
 	--widget--spacing-menu: calc(0.66 * var(--global--spacing-unit));
 
+	/* Admin-bar height */
+	--global--admin-bar--height: 0;
+}
+
+.admin-bar {
+	--global--admin-bar--height: 32px;
+
+	@media only screen and (max-width: 782px) {
+		--global--admin-bar--height: 46px;
+	}
 }
 
 @media only screen and (min-width: 652px) { // Not using the mixin because it's compiled after this file
