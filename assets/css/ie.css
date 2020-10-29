@@ -3218,10 +3218,6 @@ img {
 	padding: 20px;
 }
 
-.wp-block-latest-comments {
-	margin-left: 0;
-}
-
 .wp-block-latest-comments .wp-block-latest-comments__comment {
 	font-size: 1.125rem;
 	line-height: 1.7;
