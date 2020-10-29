@@ -2524,7 +2524,7 @@ input[type="reset"]:hover {
 }
 
 .wp-block-cover {
-	background-color: #fff;
+	background-color: #000;
 	min-height: 450px;
 	margin-top: inherit;
 	margin-bottom: inherit;
@@ -2534,7 +2534,7 @@ input[type="reset"]:hover {
 }
 
 .wp-block-cover-image {
-	background-color: #fff;
+	background-color: #000;
 	min-height: 450px;
 	margin-top: inherit;
 	margin-bottom: inherit;
