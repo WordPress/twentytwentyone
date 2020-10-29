@@ -2013,8 +2013,16 @@ a:hover {
 	color: #d1e4dd;
 }
 
+.has-background-dark .site a:focus .meta-nav {
+	color: #d1e4dd;
+}
+
 .has-background-white .site a:focus {
 	background: rgba(0, 0, 0, 0.9);
+	color: #fff;
+}
+
+.has-background-white .site a:focus .meta-nav {
 	color: #fff;
 }
 

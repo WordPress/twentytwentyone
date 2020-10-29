@@ -23,7 +23,8 @@ a:hover {
 	background: rgba(255, 255, 255, .9);
 
 	// Change text color when the body background is dark.
-	.has-background-dark & {
+	.has-background-dark &,
+	.has-background-dark & .meta-nav {
 		color: var(--wp--style--color--link, var(--global--color-background));
 	}
 
@@ -31,6 +32,10 @@ a:hover {
 	.has-background-white & {
 		background: rgba(0, 0, 0, .9);
 		color: var(--wp--style--color--link, var(--global--color-white));
+
+		.meta-nav {
+			color: var(--wp--style--color--link, var(--global--color-white));
+		}
 	}
 
 	&.skip-link {
