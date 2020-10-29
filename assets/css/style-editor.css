@@ -1665,8 +1665,9 @@ hr {
 	border-color: currentColor;
 }
 
-.wp-block-social-links li.wp-block-social-link:first-child {
-	margin-top: auto;
+.wp-block-social-links [data-block] {
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .wp-block-social-links.is-style-twentytwentyone-social-icons-color button {
