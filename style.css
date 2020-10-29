@@ -2167,6 +2167,10 @@ img {
 	padding: var(--global--spacing-unit);
 }
 
+.wp-block-latest-comments {
+	padding-left: 0;
+}
+
 .wp-block-latest-comments .wp-block-latest-comments__comment {
 	font-size: var(--global--font-size-sm);
 	line-height: var(--global--line-height-body);
