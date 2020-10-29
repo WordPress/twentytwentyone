@@ -1,47 +1,8 @@
 .wp-block-quote {
-	position: relative;
-	margin: var(--global--spacing-vertical) 0 var(--global--spacing-vertical) var(--global--spacing-horizontal);
-
-	> * {
-		margin-top: var(--global--spacing-unit);
-		margin-bottom: var(--global--spacing-unit);
-
-		&:first-child {
-			margin-top: 0;
-		}
-
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-
-	p {
-		font-family: var(--quote--font-family);
-		font-size: var(--quote--font-size);
-		font-style: var(--quote--font-style);
-		font-weight: var(--quote--font-weight-strong);
-		line-height: var(--quote--line-height);
-	}
-
-	strong {
-		// "Bold" text is intentionally unbolded to differentiate from the rest of the quote.
-		font-weight: var(--quote--font-weight);
-	}
-
-	&:before {
-		content: "\201C";
-		font-size: var(--quote--font-size);
-		line-height: var(--quote--line-height);
-		position: absolute;
-		left: calc(-0.5 * var(--global--spacing-horizontal));
-	}
 
 	.wp-block-quote__citation,
 	cite,
 	footer {
-		color: var(--global--color-primary);
-		font-size: var(--global--font-size-xs);
-		font-style: var(--quote--font-style-cite);
 
 		.has-background:not(.has-background-background-color) &,
 		[class*="background-color"]:not(.has-background-background-color) &,
@@ -134,11 +95,6 @@
 	}
 
 	@include media(mobile-only) {
-		padding-left: calc(0.5 * var(--global--spacing-horizontal));
-
-		&:before {
-			left: 0;
-		}
 
 		&.has-text-align-right {
 			padding-left: 0;

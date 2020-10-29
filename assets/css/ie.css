@@ -1206,26 +1206,9 @@ button {
 
 /* Category 04 can contain any default HTML element. Do not add classes here, just give the elements some basic styles. */
 blockquote {
-	margin: 0;
 	padding: 0;
-}
-
-blockquote p {
-	font-size: 1.5rem;
-	letter-spacing: normal;
-	line-height: 1.3;
-}
-
-blockquote cite {
-	color: #28303d;
-	font-size: 1rem;
-	letter-spacing: normal;
-}
-
-blockquote footer {
-	color: #28303d;
-	font-size: 1rem;
-	letter-spacing: normal;
+	position: relative;
+	margin: 30px 0 30px 25px;
 }
 
 blockquote > * {
@@ -1239,6 +1222,29 @@ blockquote > *:first-child {
 
 blockquote > *:last-child {
 	margin-bottom: 0;
+}
+
+blockquote p {
+	letter-spacing: normal;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: 1.25rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1.7;
+}
+
+blockquote cite {
+	font-weight: normal;
+	color: #28303d;
+	font-size: 1rem;
+	letter-spacing: normal;
+}
+
+blockquote footer {
+	font-weight: normal;
+	color: #28303d;
+	font-size: 1rem;
+	letter-spacing: normal;
 }
 
 blockquote.alignleft, blockquote.alignright {
@@ -1275,6 +1281,45 @@ blockquote.alignright cite {
 blockquote.alignright footer {
 	font-size: 1rem;
 	letter-spacing: normal;
+}
+
+blockquote strong {
+	font-weight: normal;
+}
+
+blockquote:before {
+	content: "\201C";
+	font-size: 1.25rem;
+	line-height: 1.7;
+	position: absolute;
+	left: -12px;
+}
+
+blockquote .wp-block-quote__citation {
+	color: #28303d;
+	font-size: 1rem;
+	font-style: normal;
+}
+
+blockquote cite {
+	color: #28303d;
+	font-size: 1rem;
+	font-style: normal;
+}
+
+blockquote footer {
+	color: #28303d;
+	font-size: 1rem;
+	font-style: normal;
+}
+
+@media only screen and (max-width: 481px) {
+	blockquote {
+		padding-left: 13px;
+	}
+	blockquote:before {
+		left: 0;
+	}
 }
 
 input[type="text"] {
@@ -3835,62 +3880,9 @@ pre.wp-block-preformatted {
 }
 
 .wp-block-quote {
-	position: relative;
-	margin: 30px 0 30px 25px;
 	/**
 	 * Block Options
 	 */
-}
-
-.wp-block-quote > * {
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-
-.wp-block-quote > *:first-child {
-	margin-top: 0;
-}
-
-.wp-block-quote > *:last-child {
-	margin-bottom: 0;
-}
-
-.wp-block-quote p {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1.25rem;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 1.7;
-}
-
-.wp-block-quote strong {
-	font-weight: normal;
-}
-
-.wp-block-quote:before {
-	content: "\201C";
-	font-size: 1.25rem;
-	line-height: 1.7;
-	position: absolute;
-	left: -12px;
-}
-
-.wp-block-quote .wp-block-quote__citation {
-	color: #28303d;
-	font-size: 1rem;
-	font-style: normal;
-}
-
-.wp-block-quote cite {
-	color: #28303d;
-	font-size: 1rem;
-	font-style: normal;
-}
-
-.wp-block-quote footer {
-	color: #28303d;
-	font-size: 1rem;
-	font-style: normal;
 }
 
 .has-background:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
@@ -4066,12 +4058,6 @@ pre.wp-block-preformatted {
 }
 
 @media only screen and (max-width: 481px) {
-	.wp-block-quote {
-		padding-left: 13px;
-	}
-	.wp-block-quote:before {
-		left: 0;
-	}
 	.wp-block-quote.has-text-align-right {
 		padding-left: 0;
 		padding-right: 13px;
