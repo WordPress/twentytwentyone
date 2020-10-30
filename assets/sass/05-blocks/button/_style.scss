@@ -1,13 +1,18 @@
 /**
  * Button
  */
-.site .button,
-input[type="submit"],
-input[type="reset"],
-.wp-block-search__button,
-.wp-block-button .wp-block-button__link {
-	// Extend button style
-	@include button-style();
+
+// Place the button styles inside .site to override to link focus style specificity.
+.site {
+
+	.button,
+	input[type="submit"],
+	input[type="reset"],
+	.wp-block-search__button,
+	.wp-block-button .wp-block-button__link {
+		// Extend button style
+		@include button-style();
+	}
 }
 
 .site .button,
