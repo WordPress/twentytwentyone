@@ -8,6 +8,11 @@
 		display: block;
 	}
 
+	a:focus img {
+		outline-offset: -2px;
+		outline: 2px dotted var(--wp--style--color--link, var(--global--color-primary));
+	}
+
 	.gallery-columns-2 & {
 		max-width: 50%;
 	}
@@ -43,4 +48,10 @@
 
 .gallery-caption {
 	display: block;
+}
+
+// Legacy images, linked
+figure.wp-caption a:focus img {
+	outline-offset: 2px;
+	outline: 2px dotted var(--wp--style--color--link, var(--global--color-primary));
 }
