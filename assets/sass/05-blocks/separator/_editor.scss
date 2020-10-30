@@ -10,6 +10,11 @@ hr {
 	}
 
 	&:not(.is-style-dots) {
+		max-width: var(--responsive--aligndefault-width);
+	}
+
+	[data-align="full"] > &,
+	[data-align="wide"] > & {
 		max-width: inherit;
 	}
 
@@ -18,7 +23,6 @@ hr {
 	}
 
 	&.is-style-dots {
-
 		border-bottom: none;
 
 		&.has-background,

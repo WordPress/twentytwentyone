@@ -1640,6 +1640,14 @@ hr[style*="text-align: right"] {
 
 .wp-block-separator:not(.is-style-dots),
 hr:not(.is-style-dots) {
+	max-width: var(--responsive--aligndefault-width);
+}
+
+[data-align="full"] > .wp-block-separator,
+[data-align="wide"] > .wp-block-separator, [data-align="full"] >
+hr,
+[data-align="wide"] >
+hr {
 	max-width: inherit;
 }
 
