@@ -1712,6 +1712,10 @@ input[type="reset"]:hover,
 	display: block;
 }
 
+.wp-block-columns:not(.alignwide):not(.alignfull) {
+	clear: both;
+}
+
 .wp-block-columns .wp-block-column > * {
 	margin-top: calc(0.66 * var(--global--spacing-vertical));
 	margin-bottom: calc(0.66 * var(--global--spacing-vertical));

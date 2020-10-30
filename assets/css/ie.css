@@ -2387,6 +2387,10 @@ input[type="reset"]:hover {
 	display: block;
 }
 
+.wp-block-columns:not(.alignwide):not(.alignfull) {
+	clear: both;
+}
+
 .wp-block-columns .wp-block-column > * {
 	margin-top: 20px;
 	margin-bottom: 20px;

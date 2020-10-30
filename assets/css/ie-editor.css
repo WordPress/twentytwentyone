@@ -646,6 +646,10 @@ a:hover {
 	border: 3px solid #28303d;
 }
 
+.wp-block-columns:not(.alignwide):not(.alignfull) {
+	clear: both;
+}
+
 .wp-block-columns .wp-block,
 .wp-block-columns .wp-block-column {
 	max-width: inherit;

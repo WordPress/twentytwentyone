@@ -1,5 +1,9 @@
 .wp-block-columns {
 
+	&:not(.alignwide):not(.alignfull) {
+		clear: both;
+	}
+
 	.wp-block,
 	.wp-block-column {
 		// Allow Gutenberg to set the width of a block that lives inside the columns block.

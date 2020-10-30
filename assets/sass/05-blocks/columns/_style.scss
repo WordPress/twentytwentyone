@@ -1,5 +1,9 @@
 .wp-block-columns {
 
+	&:not(.alignwide):not(.alignfull) {
+		clear: both;
+	}
+
 	.wp-block-column {
 
 		> * {
