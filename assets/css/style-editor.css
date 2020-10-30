@@ -1167,9 +1167,16 @@ dt {
 	font-weight: bold;
 }
 
-.wp-block-media-text .block-editor-inner-blocks {
-	padding-right: var(--global--spacing-horizontal);
-	padding-left: var(--global--spacing-horizontal);
+.wp-block-media-text .wp-block-media-text__content {
+	padding: var(--global--spacing-horizontal);
+}
+
+.wp-block-media-text .wp-block-media-text__content [data-block]:first-child {
+	margin-top: 0;
+}
+
+.wp-block-media-text .wp-block-media-text__content [data-block]:last-child {
+	margin-bottom: 0;
 }
 
 .wp-block-media-text.is-style-twentytwentyone-border {
