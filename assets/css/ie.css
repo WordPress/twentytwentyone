@@ -2928,7 +2928,19 @@ input[type="reset"]:hover {
 	margin-left: -30px;
 }
 
+.wp-block-group.has-background .wp-block-group__inner-container > hr.wp-block-separator:not(.is-style-dots):not(.alignwide).alignfull {
+	max-width: calc(100% + 60px);
+	width: calc(100% + 60px);
+	margin-left: -30px;
+}
+
 .wp-block-group.is-style-twentytwentyone-border .wp-block-group__inner-container > .alignfull {
+	max-width: calc(100% + 60px);
+	width: calc(100% + 60px);
+	margin-left: -30px;
+}
+
+.wp-block-group.is-style-twentytwentyone-border .wp-block-group__inner-container > hr.wp-block-separator:not(.is-style-dots):not(.alignwide).alignfull {
 	max-width: calc(100% + 60px);
 	width: calc(100% + 60px);
 	margin-left: -30px;
