@@ -3218,6 +3218,21 @@ img {
 	padding: 20px;
 }
 
+@media only screen and (min-width: 482px) {
+	.entry-content > .wp-block-image > .alignleft,
+	.entry-content > .wp-block-image > .alignright {
+		max-width: 50%;
+	}
+}
+
+@media only screen and (max-width: 481px) {
+	.entry-content > .wp-block-image > .alignleft,
+	.entry-content > .wp-block-image > .alignright {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
 .wp-block-latest-comments {
 	padding-left: 0;
 }
