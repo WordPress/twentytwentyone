@@ -1323,6 +1323,11 @@ h6 {
 	margin-bottom: 0;
 }
 
+.wp-block-latest-posts.is-grid {
+	word-wrap: break-word;
+	word-break: break-word;
+}
+
 .wp-block-latest-posts.is-grid > li {
 	margin-bottom: 30px;
 }
