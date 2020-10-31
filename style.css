@@ -2677,6 +2677,7 @@ pre.wp-block-preformatted {
 	font-size: 3rem;
 	font-weight: 500;
 	line-height: 1;
+	position: static;
 }
 
 .wp-block-pullquote p {

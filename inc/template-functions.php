@@ -316,6 +316,47 @@ function twenty_twenty_one_get_non_latin_css( $type = 'front-end' ) {
 }
 
 /**
+ * Return the custom CSS needed for the open quote sign in the
+ * blockquote block.
+ *
+ * @param string $type Whether to return CSS for the "front-end", "block-editor" or "classic-editor".
+ *
+ * @return string
+ */
+function twenty_twenty_one_get_open_pullquote_css( $type = 'front-end' ) {
+	/* translators: Open quotes for the pullquote block */
+	$open_quotes = __( '“', 'twentytwentyone' );
+
+	// If open quotes sign isn't different in the current language, return.
+	if ( '“' === $open_quotes ) {
+		return;
+	}
+
+	$pullquote_block_open_quote = "'{$open_quotes}'";
+
+	$selectors = array(
+		'front-end'      => '.wp-block-pullquote blockquote::before',
+		'block-editor'   => '.editor-styles-wrapper .wp-block-pullquote blockquote::before',
+		'classic-editor' => 'body#tinymce.wp-editor .wp-block-pullquote blockquote::before',
+	);
+
+	// Include file if function doesn't exist.
+	if ( ! function_exists( 'twenty_twenty_one_generate_css' ) ) {
+		require_once get_theme_file_path( 'inc/custom-css.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+	}
+
+	// Return the specified styles.
+	return twenty_twenty_one_generate_css( // @phpstan-ignore-line.
+		$selectors[ $type ],
+		'content',
+		$pullquote_block_open_quote,
+		null,
+		null,
+		false
+	);
+}
+
+/**
  * Print the first instance of a block in the content, and then break away.
  *
  * @since 1.0.0
