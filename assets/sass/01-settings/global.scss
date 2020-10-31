@@ -75,7 +75,8 @@ $baseline-unit: 10px;
 	--global--color-orange: #e4dad1;
 	--global--color-yellow: #eeeadd;
 	--global--color-white: #fff;
-	--global--color-white-50: rgba(255, 255, 255, 0.5); /* white 50% opacity used in form fields.*/
+	--global--color-white-50: rgba(255, 255, 255, 0.5); // Used for disabled buttons
+	--global--color-white-90: rgba(255, 255, 255, 0.9); // Used in form fields.
 
 	--global--color-primary: var(--global--color-dark-gray); /* Body text color, site title, footer text color. */
 	--global--color-secondary: var(--global--color-gray); /* Headings */
@@ -172,6 +173,7 @@ $baseline-unit: 10px;
 	--primary-nav--color-link-hover: var(--global--color-primary-hover);
 	--primary-nav--color-text: var(--global--color-primary);
 	--primary-nav--padding: calc(0.66 * var(--global--spacing-unit));
+	--primary-nav--border-color: var(--global--color-primary);
 
 	/* Pagination */
 	--pagination--color-text: var(--global--color-primary);
@@ -224,6 +226,16 @@ $baseline-unit: 10px;
 	--widget--font-weight-title: 700;
 	--widget--spacing-menu: calc(0.66 * var(--global--spacing-unit));
 
+	/* Admin-bar height */
+	--global--admin-bar--height: 0;
+}
+
+.admin-bar {
+	--global--admin-bar--height: 32px;
+
+	@media only screen and (max-width: 782px) {
+		--global--admin-bar--height: 46px;
+	}
 }
 
 @media only screen and (min-width: 652px) { // Not using the mixin because it's compiled after this file
@@ -233,26 +245,5 @@ $baseline-unit: 10px;
 		--global--font-size-xxxl: 9rem; // 144px / 16px
 		--heading--font-size-h3: 2rem; // 32px / 16px
 		--heading--font-size-h2: 3rem; // 48px / 16px
-	}
-}
-
-/* OS dark theme preference */
-@media (prefers-color-scheme: dark) {
-
-	html.respect-color-scheme-preference {
-		--global--color-background: var(--global--color-dark-gray);
-		--global--color-primary: var(--global--color-light-gray);
-		--global--color-secondary: var(--global--color-light-gray);
-
-		// These need to be redefined for comment-submit buttons.
-		--button--color-text: var(--global--color-background);
-		--button--color-text-hover: var(--global--color-secondary);
-		--button--color-text-active: var(--global--color-secondary);
-		--button--color-background: var(--global--color-secondary);
-		--button--color-background-active: var(--global--color-background);
-
-		body {
-			background-color: var(--global--color-background);
-		}
 	}
 }

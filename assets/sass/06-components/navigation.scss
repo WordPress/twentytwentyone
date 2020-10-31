@@ -82,7 +82,7 @@
 
 .primary-navigation {
 	position: absolute;
-	top: 0;
+	top: var(--global--admin-bar--height);
 	right: 0;
 	color: var(--primary-nav--color-text);
 	font-size: var(--primary-nav--font-size);
@@ -121,11 +121,11 @@
 			}
 
 			.admin-bar .has-logo.has-title-and-tagline & {
-				top: 46px;
+				top: var(--global--admin-bar--height);
 			}
 
 			.admin-bar & {
-				height: calc(100vh - 46px);
+				height: calc(100vh - var(--global--admin-bar--height));
 			}
 
 			&:focus {
@@ -158,11 +158,6 @@
 				transform: translateX(0) translateY(0);
 			}
 		}
-	}
-
-	// Adjust positions when logged-in
-	.admin-bar & {
-		top: 46px;
 	}
 
 	@include media(mobile) {
@@ -296,13 +291,65 @@
 				transition: all 0.5s ease;
 				z-index: 88888;
 
+				&:before,
+				&:after {
+					content: "";
+					display: block;
+					position: absolute;
+					width: 0;
+					top: -10px;
+					left: var(--global--spacing-horizontal);
+					border-style: solid;
+					border-color: var(--primary-nav--border-color) transparent;
+					border-width: 0 7px 10px 7px;
+				}
+
+				&:after {
+					top: -9px;
+					border-color: var(--global--color-background) transparent;
+				}
+
 				li {
 					background: var(--global--color-background);
 				}
-			}
 
-			.sub-menu {
-				width: 100%;
+				&.submenu-reposition-left {
+
+					/* rtl:ignore */
+					left: 0;
+
+					/* rtl:ignore */
+					right: auto;
+
+					&:before,
+					&:after {
+
+						/* rtl:ignore */
+						left: var(--global--spacing-horizontal);
+
+						/* rtl:ignore */
+						right: auto;
+					}
+				}
+
+				&.submenu-reposition-right {
+
+					/* rtl:ignore */
+					right: 0;
+
+					/* rtl:ignore */
+					left: auto;
+
+					&:before,
+					&:after {
+
+						/* rtl:ignore */
+						left: auto;
+
+						/* rtl:ignore */
+						right: var(--global--spacing-horizontal);
+					}
+				}
 			}
 		}
 	}
@@ -389,6 +436,11 @@
 		padding: 0;
 		list-style: none;
 		margin-left: var(--primary-nav--padding);
+		border: 1px solid var(--primary-nav--border-color);
+
+		.sub-menu {
+			border: none;
+		}
 
 		// Sub-menu items om wide screens.
 		@include media(mobile) {

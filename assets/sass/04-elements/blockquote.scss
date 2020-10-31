@@ -1,19 +1,7 @@
 blockquote {
-	margin: 0;
 	padding: 0;
-
-	p {
-		font-size: var(--heading--font-size-h4);
-		letter-spacing: var(--heading--letter-spacing-h4);
-		line-height: var(--heading--line-height-h4);
-	}
-
-	cite,
-	footer {
-		color: var(--global--color-primary);
-		font-size: var(--global--font-size-xs);
-		letter-spacing: var(--global--letter-spacing);
-	}
+	position: relative;
+	margin: var(--global--spacing-vertical) 0 var(--global--spacing-vertical) var(--global--spacing-horizontal);
 
 	> * {
 		margin-top: var(--global--spacing-unit);
@@ -26,6 +14,23 @@ blockquote {
 		&:last-child {
 			margin-bottom: 0;
 		}
+	}
+
+	p {
+		letter-spacing: var(--heading--letter-spacing-h4);
+		font-family: var(--quote--font-family);
+		font-size: var(--quote--font-size);
+		font-style: var(--quote--font-style);
+		font-weight: var(--quote--font-weight-strong);
+		line-height: var(--quote--line-height);
+	}
+
+	cite,
+	footer {
+		font-weight: normal;
+		color: var(--global--color-primary);
+		font-size: var(--global--font-size-xs);
+		letter-spacing: var(--global--letter-spacing);
 	}
 
 	&.alignleft,
@@ -43,6 +48,35 @@ blockquote {
 		footer {
 			font-size: var(--global--font-size-xs);
 			letter-spacing: var(--global--letter-spacing);
+		}
+	}
+
+	strong {
+		// "Bold" text is intentionally unbolded to differentiate from the rest of the quote.
+		font-weight: var(--quote--font-weight);
+	}
+
+	&:before {
+		content: "\201C";
+		font-size: var(--quote--font-size);
+		line-height: var(--quote--line-height);
+		position: absolute;
+		left: calc(-0.5 * var(--global--spacing-horizontal));
+	}
+
+	.wp-block-quote__citation,
+	cite,
+	footer {
+		color: var(--global--color-primary);
+		font-size: var(--global--font-size-xs);
+		font-style: var(--quote--font-style-cite);
+	}
+
+	@include media(mobile-only) {
+		padding-left: calc(0.5 * var(--global--spacing-horizontal));
+
+		&:before {
+			left: 0;
 		}
 	}
 }

@@ -1,7 +1,9 @@
 .wp-block-social-links {
 
-	li.wp-block-social-link:first-child {
-		margin-top: auto;
+	// Social icons are horizontal, so they don't need vertical spacing.
+	[data-block] {
+		margin-top: 0;
+		margin-bottom: 0;
 	}
 
 	&.is-style-twentytwentyone-social-icons-color {

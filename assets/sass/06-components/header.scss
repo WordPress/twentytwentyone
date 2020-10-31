@@ -133,11 +133,7 @@ a.custom-logo-link {
 						position: absolute;
 						padding-top: calc(0.5 * var(--global--spacing-vertical));
 						margin-top: 0;
-						top: 0;
-
-						.admin-bar & {
-							top: 46px;
-						}
+						top: var(--global--admin-bar--height);
 
 						.primary-navigation-open & {
 							display: none;
