@@ -190,8 +190,8 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 		/**
 		 * [sanitize_content_type] > Sanitize Input Text
 		 *
-		 * @param  [text] $value [description].
-		 * @return [text]        [description].
+		 * @param  string $value [option vlue].
+		 * @return string 
 		 */
 		public function sanitize_content_type( $value ) {
 			return 'excerpt' === $value || 'full' === $value ? $value : 'excerpt';
