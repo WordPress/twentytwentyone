@@ -311,8 +311,16 @@ a:hover {
 	color: #d1e4dd;
 }
 
+.has-background-dark .site a:focus .meta-nav {
+	color: #d1e4dd;
+}
+
 .has-background-white .site a:focus {
 	background: rgba(0, 0, 0, 0.9);
+	color: #fff;
+}
+
+.has-background-white .site a:focus .meta-nav {
 	color: #fff;
 }
 
@@ -325,6 +333,10 @@ a:hover {
 .site a:focus.skip-link:focus {
 	color: #21759b;
 	background-color: #f1f1f1;
+}
+
+.site a:focus img {
+	outline: 2px dotted #28303d;
 }
 
 .has-background:not(.has-background-background-color) .has-link-color a {
@@ -398,10 +410,6 @@ a:hover {
 	background: transparent;
 	border: 3px solid currentColor;
 	padding: 15px 30px;
-}
-
-.wp-block-button.is-style-outline .wp-block-button__link:visited {
-	color: #39414d;
 }
 
 .wp-block-button.is-style-outline .wp-block-button__link:active {
@@ -493,6 +501,11 @@ a:hover {
 	min-height: 450px;
 	margin-top: inherit;
 	margin-bottom: inherit;
+}
+
+.wp-block-cover:not(.alignwide):not(.alignfull),
+.wp-block-cover-image:not(.alignwide):not(.alignfull) {
+	clear: both;
 }
 
 .wp-block-cover .wp-block-cover__inner-container,
@@ -644,6 +657,10 @@ a:hover {
 
 .wp-block-cover-image.is-style-twentytwentyone-border {
 	border: 3px solid #28303d;
+}
+
+.wp-block-columns:not(.alignwide):not(.alignfull) {
+	clear: both;
 }
 
 .wp-block-columns .wp-block,
@@ -804,6 +821,10 @@ a:hover {
 	margin-bottom: 0;
 }
 
+.wp-block-gallery figcaption a {
+	color: #fff;
+}
+
 .wp-block-group {
 	display: block;
 	clear: both;
@@ -823,6 +844,12 @@ a:hover {
 .wp-block-group.is-style-twentytwentyone-border {
 	border: 3px solid #28303d;
 	padding: 30px;
+}
+
+.wp-block-group.is-style-twentytwentyone-border .wp-block-group__inner-container > [data-align="full"] {
+	max-width: calc(100% + 60px);
+	width: calc(100% + 60px);
+	margin-left: -30px;
 }
 
 .wp-block-group .wp-block-group__inner-container > *:last-child {
@@ -1321,6 +1348,11 @@ h6 {
 
 .wp-block-latest-posts:not(.is-grid) > li:last-child {
 	margin-bottom: 0;
+}
+
+.wp-block-latest-posts.is-grid {
+	word-wrap: break-word;
+	word-break: break-word;
 }
 
 .wp-block-latest-posts.is-grid > li {

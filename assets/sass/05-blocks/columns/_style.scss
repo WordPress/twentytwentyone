@@ -1,5 +1,9 @@
 .wp-block-columns {
 
+	&:not(.alignwide):not(.alignfull) {
+		clear: both;
+	}
+
 	.wp-block-column {
 
 		> * {
@@ -32,9 +36,7 @@
 			margin-bottom: var(--global--spacing-vertical);
 		}
 
-		@include media(laptop) {
-
-			/* Resetting margins to match _block-container.scss */
+		@include media(desktop) {
 			margin-bottom: 0;
 		}
 	}
