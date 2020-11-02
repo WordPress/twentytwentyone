@@ -58,8 +58,17 @@
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 
 	&:focus {
+		background: transparent;
 		outline-offset: -6px;
 		outline: 2px dotted currentColor;
+
+		.has-background-dark & {
+			color: var(--button--color-background);
+		}
+
+		&:not(.has-background) {
+			color: var(--button--color-text-hover);
+		}
 	}
 
 	&:disabled {

@@ -1603,8 +1603,25 @@ input[type="submit"]:focus,
 input[type="reset"]:focus,
 .wp-block-search__button:focus,
 .wp-block-button .wp-block-button__link:focus {
+	background: transparent;
 	outline-offset: -6px;
 	outline: 2px dotted currentColor;
+}
+
+.has-background-dark .site .button:focus, .has-background-dark
+input[type="submit"]:focus, .has-background-dark
+input[type="reset"]:focus, .has-background-dark
+.wp-block-search__button:focus, .has-background-dark
+.wp-block-button .wp-block-button__link:focus {
+	color: var(--button--color-background);
+}
+
+.site .button:focus:not(.has-background),
+input[type="submit"]:focus:not(.has-background),
+input[type="reset"]:focus:not(.has-background),
+.wp-block-search__button:focus:not(.has-background),
+.wp-block-button .wp-block-button__link:focus:not(.has-background) {
+	color: var(--button--color-text-hover);
 }
 
 .site .button:disabled,
@@ -1980,8 +1997,17 @@ input[type="reset"]:hover,
 }
 
 .wp-block-file .wp-block-file__button:focus {
+	background: transparent;
 	outline-offset: -6px;
 	outline: 2px dotted currentColor;
+}
+
+.has-background-dark .wp-block-file .wp-block-file__button:focus {
+	color: var(--button--color-background);
+}
+
+.wp-block-file .wp-block-file__button:focus:not(.has-background) {
+	color: var(--button--color-text-hover);
 }
 
 .wp-block-file .wp-block-file__button:disabled {
