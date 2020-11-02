@@ -21,7 +21,7 @@ blockquote {
 		font-family: var(--quote--font-family);
 		font-size: var(--quote--font-size);
 		font-style: var(--quote--font-style);
-		font-weight: var(--quote--font-weight-strong);
+		font-weight: var(--quote--font-weight);
 		line-height: var(--quote--line-height);
 	}
 
@@ -52,8 +52,7 @@ blockquote {
 	}
 
 	strong {
-		// "Bold" text is intentionally unbolded to differentiate from the rest of the quote.
-		font-weight: var(--quote--font-weight);
+		font-weight: var(--quote--font-weight-strong);
 	}
 
 	&:before {
