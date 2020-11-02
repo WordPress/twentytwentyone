@@ -6511,6 +6511,10 @@ h1.page-title {
 	flex-direction: column;
 }
 
+.navigation .nav-links .dots {
+	text-align: center;
+}
+
 @media only screen and (min-width: 592px) {
 	.navigation .nav-links {
 		display: flex;
@@ -6643,11 +6647,20 @@ h1.page-title {
 	}
 }
 
+.pagination .nav-links {
+	margin-top: -30px;
+}
+
+.comments-pagination .nav-links {
+	margin-top: -30px;
+}
+
 .pagination .nav-links > * {
 	color: #28303d;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1.5rem;
 	font-weight: normal;
+	margin-top: 30px;
 	margin-left: 13px;
 	margin-right: 13px;
 }
@@ -6657,6 +6670,7 @@ h1.page-title {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1.5rem;
 	font-weight: normal;
+	margin-top: 30px;
 	margin-left: 13px;
 	margin-right: 13px;
 }
@@ -6697,7 +6711,7 @@ h1.page-title {
 	margin-right: auto;
 }
 
-@media only screen and (max-width: 591px) {
+@media only screen and (max-width: 821px) {
 	.pagination .nav-links,
 	.comments-pagination .nav-links {
 		display: flex;
