@@ -62,6 +62,7 @@ html.is-dark-mode {
 		}
 
 		~ nav {
+
 			body:not(.primary-navigation-open) & {
 				@media only screen and (max-width: 481px) {
 					top: calc(44px + 44px);
