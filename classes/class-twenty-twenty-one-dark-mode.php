@@ -131,7 +131,7 @@ class Twenty_Twenty_One_Dark_Mode {
 			'twentytwentyone-customize-controls',
 			'backgroundColorNotice',
 			array(
-				'message' => esc_html__( 'You currently have dark mode enabled on your device. Changing the color picker will allow you to preview light mode.', 'twentytwentyone' ),
+				'message' => esc_html__( 'Changes will only be visible if Dark Mode is "Off" in the preview', 'twentytwentyone' ),
 			)
 		);
 	}
