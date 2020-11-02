@@ -411,6 +411,11 @@ add_filter( 'the_password_form', 'twenty_twenty_one_password_form' );
  * @return array
  */
 function twenty_twenty_one_get_attachment_image_attributes( $attr, $attachment, $size ) {
+
+	if ( 'custom-logo' === $attr['class'] ) {
+		return $attr;
+	}
+
 	$width  = false;
 	$height = false;
 
