@@ -515,6 +515,8 @@ a:hover {
 }
 
 .wp-block-button__link:focus {
+	color: var(--button--color-text-hover);
+	background: transparent;
 	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }
@@ -774,6 +776,8 @@ a:hover {
 }
 
 .wp-block-file .wp-block-file__button:focus {
+	color: var(--button--color-text-hover);
+	background: transparent;
 	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }
@@ -1631,6 +1635,8 @@ pre.wp-block-preformatted {
 }
 
 .wp-block-search .wp-block-search__button:focus {
+	color: var(--button--color-text-hover);
+	background: transparent;
 	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }

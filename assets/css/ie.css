@@ -809,23 +809,23 @@ template {
 @media only screen and (min-width: 482px) {
 	.entry-content > .alignleft {
 		/*rtl:ignore*/
-		margin-left: calc(50vw - min(calc(100vw - 4 * 25px), 610px)*1);
+		margin-left: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		/*rtl:ignore*/
 		margin-right: 25px;
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignleft{
-		margin-left: calc(50vw - min(calc(100vw - 4 * 25px), 610px)*1);
+		margin-left: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignleft{
-		margin-left: calc(50vw - min(calc(100vw - 4 * 25px), 610px)*1);
+		margin-left: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 822px){
 		.entry-content > .alignleft{
-		margin-left: calc(50vw - min(calc(100vw - 4 * 25px), 610px)*1);
+		margin-left: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 }
@@ -835,21 +835,21 @@ template {
 		/*rtl:ignore*/
 		margin-left: 25px;
 		/*rtl:ignore*/
-		margin-right: calc(50vw - min(calc(100vw - 4 * 25px), 610px)*1);
+		margin-right: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignright{
-		margin-right: calc(50vw - min(calc(100vw - 4 * 25px), 610px)*1);
+		margin-right: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignright{
-		margin-right: calc(50vw - min(calc(100vw - 4 * 25px), 610px)*1);
+		margin-right: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 822px){
 		.entry-content > .alignright{
-		margin-right: calc(50vw - min(calc(100vw - 4 * 25px), 610px)*1);
+		margin-right: calc(1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 }
@@ -2141,50 +2141,76 @@ input[type="reset"]:after,
 }
 
 .site .button:before {
-	margin-bottom: -calc(1em - 0);
+	margin-bottom: -calc(1em + 0);
 }
 
 input[type="submit"]:before {
-	margin-bottom: -calc(1em - 0);
+	margin-bottom: -calc(1em + 0);
 }
 
 input[type="reset"]:before {
-	margin-bottom: -calc(1em - 0);
+	margin-bottom: -calc(1em + 0);
 }
 
 .wp-block-search__button:before {
-	margin-bottom: -calc(1em - 0);
+	margin-bottom: -calc(1em + 0);
 }
 
 .wp-block-button .wp-block-button__link:before {
-	margin-bottom: -calc(1em - 0);
+	margin-bottom: -calc(1em + 0);
 }
 
 .site .button:after {
-	margin-top: -calc(1em - 0);
+	margin-top: -calc(1em + 0);
 }
 
 input[type="submit"]:after {
-	margin-top: -calc(1em - 0);
+	margin-top: -calc(1em + 0);
 }
 
 input[type="reset"]:after {
-	margin-top: -calc(1em - 0);
+	margin-top: -calc(1em + 0);
 }
 
 .wp-block-search__button:after {
-	margin-top: -calc(1em - 0);
+	margin-top: -calc(1em + 0);
 }
 
 .wp-block-button .wp-block-button__link:after {
-	margin-top: -calc(1em - 0);
+	margin-top: -calc(1em + 0);
 }
 
-.site .button:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-.wp-block-search__button:focus,
+.site .button:focus {
+	color: #39414d;
+	background: transparent;
+	outline-offset: -6px;
+	outline: 2px dotted currentColor;
+}
+
+input[type="submit"]:focus {
+	color: #39414d;
+	background: transparent;
+	outline-offset: -6px;
+	outline: 2px dotted currentColor;
+}
+
+input[type="reset"]:focus {
+	color: #39414d;
+	background: transparent;
+	outline-offset: -6px;
+	outline: 2px dotted currentColor;
+}
+
+.wp-block-search__button:focus {
+	color: #39414d;
+	background: transparent;
+	outline-offset: -6px;
+	outline: 2px dotted currentColor;
+}
+
 .wp-block-button .wp-block-button__link:focus {
+	color: #39414d;
+	background: transparent;
 	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }
@@ -2224,7 +2250,17 @@ input[type="reset"]:disabled {
 	background-color: #d1e4dd;
 }
 
+.site .button:focus {
+	color: #39414d;
+	background-color: #d1e4dd;
+}
+
 input[type="submit"]:active {
+	color: #39414d;
+	background-color: #d1e4dd;
+}
+
+input[type="submit"]:focus {
 	color: #39414d;
 	background-color: #d1e4dd;
 }
@@ -2234,12 +2270,27 @@ input[type="reset"]:active {
 	background-color: #d1e4dd;
 }
 
+input[type="reset"]:focus {
+	color: #39414d;
+	background-color: #d1e4dd;
+}
+
 .wp-block-search .wp-block-search__button:active {
 	color: #39414d;
 	background-color: #d1e4dd;
 }
 
+.wp-block-search .wp-block-search__button:focus {
+	color: #39414d;
+	background-color: #d1e4dd;
+}
+
 .wp-block-file .wp-block-file__button:active {
+	color: #39414d;
+	background-color: #d1e4dd;
+}
+
+.wp-block-file .wp-block-file__button:focus {
 	color: #39414d;
 	background-color: #d1e4dd;
 }
@@ -2847,14 +2898,16 @@ input[type="reset"]:hover {
 }
 
 .wp-block-file .wp-block-file__button:before {
-	margin-bottom: -calc(1em - 0);
+	margin-bottom: -calc(1em + 0);
 }
 
 .wp-block-file .wp-block-file__button:after {
-	margin-top: -calc(1em - 0);
+	margin-top: -calc(1em + 0);
 }
 
 .wp-block-file .wp-block-file__button:focus {
+	color: #39414d;
+	background: transparent;
 	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }
@@ -2870,11 +2923,11 @@ input[type="reset"]:hover {
 }
 
 .wp-block-gallery .blocks-gallery-image {
-	width: calc(50% - 10px);
+	width: calc((100% - 20px)/2);
 }
 
 .wp-block-gallery .blocks-gallery-item {
-	width: calc(50% - 10px);
+	width: calc((100% - 20px)/2);
 }
 
 .wp-block-gallery .blocks-gallery-image figcaption {
@@ -4770,21 +4823,21 @@ table.wp-calendar-table caption {
 		margin-bottom: 30px;
 	}
 	.entry-content > .alignleft {
-		max-width: calc(50% - 50vw + min(calc(100vw - 4 * 25px), 610px)*1);
+		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignleft{
-		max-width: calc(50% - 50vw + min(calc(100vw - 4 * 25px), 610px)*1);
+		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignleft{
-		max-width: calc(50% - 50vw + min(calc(100vw - 4 * 25px), 610px)*1);
+		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 822px){
 		.entry-content > .alignleft{
-		max-width: calc(50% - 50vw + min(calc(100vw - 4 * 25px), 610px)*1);
+		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 }
@@ -4833,21 +4886,21 @@ table.wp-calendar-table caption {
 		margin-left: 25px;
 	}
 	.entry-content > .alignright {
-		max-width: calc(50% - 50vw + min(calc(100vw - 4 * 25px), 610px)*1);
+		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignright{
-		max-width: calc(50% - 50vw + min(calc(100vw - 4 * 25px), 610px)*1);
+		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 482px){
 		.entry-content > .alignright{
-		max-width: calc(50% - 50vw + min(calc(100vw - 4 * 25px), 610px)*1);
+		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 	@media only screen and (min-width: 822px){
 		.entry-content > .alignright{
-		max-width: calc(50% - 50vw + min(calc(100vw - 4 * 25px), 610px)*1);
+		max-width: calc(50% - 1*(100vw - min(calc(100vw - 4 * 25px), 610px)));
 		}
 	}
 }

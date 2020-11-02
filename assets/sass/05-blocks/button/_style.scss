@@ -16,7 +16,8 @@ input[type="reset"],
 .wp-block-search .wp-block-search__button,
 .wp-block-file .wp-block-file__button {
 
-	&:active {
+	&:active,
+	&:focus {
 		color: var(--button--color-text-active);
 		background-color: var(--button--color-background-active);
 	}
