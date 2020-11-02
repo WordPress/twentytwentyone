@@ -2316,10 +2316,6 @@ input[type="reset"]:hover {
 	color: #39414d;
 }
 
-.wp-block-button.is-style-outline .wp-block-button__link:not(.has-background):not(.has-text-color):visited {
-	color: #39414d;
-}
-
 .wp-block-button.is-style-outline .wp-block-button__link.has-background {
 	border: 3px solid currentColor;
 }
@@ -2821,8 +2817,11 @@ input[type="reset"]:hover {
 }
 
 .wp-block-file a.wp-block-file__button:visited {
+	color: #d1e4dd;
+}
+
+.wp-block-file a.wp-block-file__button:visited:hover {
 	color: #39414d;
-	opacity: inherit;
 }
 
 .wp-block-file .wp-block-file__button {

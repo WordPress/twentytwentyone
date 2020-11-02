@@ -412,10 +412,6 @@ a:hover {
 	padding: 15px 30px;
 }
 
-.wp-block-button.is-style-outline .wp-block-button__link:visited {
-	color: #39414d;
-}
-
 .wp-block-button.is-style-outline .wp-block-button__link:active {
 	background-color: #39414d;
 	color: #d1e4dd;

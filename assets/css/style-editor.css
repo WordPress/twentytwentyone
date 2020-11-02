@@ -550,10 +550,6 @@ a:hover {
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
 
-.wp-block-button.is-style-outline .wp-block-button__link:visited {
-	color: var(--button--color-background);
-}
-
 .wp-block-button.is-style-outline .wp-block-button__link:active, .wp-block-button.is-style-outline .wp-block-button__link:hover {
 	background-color: var(--button--color-background);
 	color: var(--button--color-text);
