@@ -304,6 +304,9 @@ class Twenty_Twenty_One_Dark_Mode {
 				.components-editor-notices__pinned ~ .edit-post-visual-editor #dark-mode-toggler {
 					z-index: 20;
 				}
+				html.is-dark-mode #dark-mode-toggler:not(:hover):not(:focus) {
+					color: var(--global--color-primary);
+				}
 				@media only screen and (max-width: 782px) {
 					#dark-mode-toggler {
 						margin-top: 32px;
