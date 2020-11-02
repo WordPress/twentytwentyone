@@ -17,6 +17,10 @@
 	.alignleft {
 		margin-right: var(--global--spacing-horizontal);
 	}
+
+	a:focus img {
+		outline-offset: 2px;
+	}
 }
 
 // Remove vertical margins from image block wrappers when floated

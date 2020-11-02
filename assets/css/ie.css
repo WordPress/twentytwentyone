@@ -2038,6 +2038,10 @@ a:hover {
 	background-color: #f1f1f1;
 }
 
+.site a:focus img {
+	outline: 2px dotted #28303d;
+}
+
 .has-background:not(.has-background-background-color) .has-link-color a {
 	color: #28303d;
 }
@@ -2906,6 +2910,11 @@ input[type="reset"]:hover {
 	text-decoration: none;
 }
 
+.wp-block-gallery .blocks-gallery-image a:focus img,
+.wp-block-gallery .blocks-gallery-item a:focus img {
+	outline-offset: 2px;
+}
+
 .wp-block-group {
 	display: block;
 	clear: both;
@@ -3249,6 +3258,10 @@ h6 {
 	margin-right: 25px;
 }
 
+.wp-block-image a:focus img {
+	outline-offset: 2px;
+}
+
 .entry-content > *[class="wp-block-image"],
 .entry-content [class*="inner-container"] > *[class="wp-block-image"] {
 	margin-top: 0;
@@ -3524,6 +3537,10 @@ img {
 	display: block;
 }
 
+.gallery-item a:focus img {
+	outline-offset: -2px;
+}
+
 .gallery-columns-2 .gallery-item {
 	max-width: 50%;
 }
@@ -3558,6 +3575,10 @@ img {
 
 .gallery-caption {
 	display: block;
+}
+
+figure.wp-caption a:focus img {
+	outline-offset: 2px;
 }
 
 ul {
@@ -3607,6 +3628,10 @@ dd {
 	/**
 	 * Block Options
 	 */
+}
+
+.wp-block-media-text a:focus img {
+	outline-offset: -1px;
 }
 
 .wp-block-media-text .wp-block-media-text__content {

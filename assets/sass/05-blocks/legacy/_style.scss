@@ -8,6 +8,10 @@
 		display: block;
 	}
 
+	a:focus img {
+		outline-offset: -2px;
+	}
+
 	.gallery-columns-2 & {
 		max-width: 50%;
 	}
@@ -43,4 +47,9 @@
 
 .gallery-caption {
 	display: block;
+}
+
+// Legacy images, linked
+figure.wp-caption a:focus img {
+	outline-offset: 2px;
 }

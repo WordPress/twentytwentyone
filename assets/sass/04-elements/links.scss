@@ -49,6 +49,10 @@ a:hover {
 			background-color: #f1f1f1;
 		}
 	}
+
+	img {
+		outline: 2px dotted var(--wp--style--color--link, var(--global--color-primary));
+	}
 }
 
 // Enforce the custom link color even if a custom background color has been set.
