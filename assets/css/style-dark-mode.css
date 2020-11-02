@@ -18,6 +18,10 @@ html.is-dark-mode .site a:focus {
 	background: #000;
 }
 
+html.is-dark-mode img {
+	filter: brightness(0.85) contrast(1.1);
+}
+
 #dark-mode-toggler {
 	cursor: pointer;
 	display: flex;
