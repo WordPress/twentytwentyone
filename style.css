@@ -1639,15 +1639,11 @@ input[type="reset"]:disabled,
 	color: var(--button--color-text-active);
 }
 
-.site .button:active, .site .button:focus,
+.site .button:active,
 input[type="submit"]:active,
-input[type="submit"]:focus,
 input[type="reset"]:active,
-input[type="reset"]:focus,
 .wp-block-search .wp-block-search__button:active,
-.wp-block-search .wp-block-search__button:focus,
-.wp-block-file .wp-block-file__button:active,
-.wp-block-file .wp-block-file__button:focus {
+.wp-block-file .wp-block-file__button:active {
 	color: var(--button--color-text-active);
 	background-color: var(--button--color-background-active);
 }

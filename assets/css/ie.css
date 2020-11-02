@@ -2269,17 +2269,7 @@ input[type="reset"]:disabled {
 	background-color: #d1e4dd;
 }
 
-.site .button:focus {
-	color: #39414d;
-	background-color: #d1e4dd;
-}
-
 input[type="submit"]:active {
-	color: #39414d;
-	background-color: #d1e4dd;
-}
-
-input[type="submit"]:focus {
 	color: #39414d;
 	background-color: #d1e4dd;
 }
@@ -2289,27 +2279,12 @@ input[type="reset"]:active {
 	background-color: #d1e4dd;
 }
 
-input[type="reset"]:focus {
-	color: #39414d;
-	background-color: #d1e4dd;
-}
-
 .wp-block-search .wp-block-search__button:active {
 	color: #39414d;
 	background-color: #d1e4dd;
 }
 
-.wp-block-search .wp-block-search__button:focus {
-	color: #39414d;
-	background-color: #d1e4dd;
-}
-
 .wp-block-file .wp-block-file__button:active {
-	color: #39414d;
-	background-color: #d1e4dd;
-}
-
-.wp-block-file .wp-block-file__button:focus {
 	color: #39414d;
 	background-color: #d1e4dd;
 }
