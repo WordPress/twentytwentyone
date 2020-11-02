@@ -209,7 +209,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @return string
 	 */
-	public function tt1_dark_mode_admin_body_classes( $classes ) {
+	public function admin_body_classes( $classes ) {
 		if ( ! $this->switch_should_render() ) {
 			return $classes;
 		}
