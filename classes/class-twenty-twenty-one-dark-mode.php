@@ -279,7 +279,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @return void
 	 */
-	public function the_html( $classes = 'relative' ) {
+	public function the_html( $classes = 'fixed-bottom' ) {
 		?>
 		<button id="dark-mode-toggler" class="<?php echo esc_attr( $classes ); ?>" aria-pressed="false" onClick="toggleDarkMode()">
 			<?php
