@@ -171,6 +171,19 @@ class Twenty_Twenty_One_Dark_Mode {
 				},
 			)
 		);
+
+		// Add partial for background_color.
+		$wp_customize->selective_refresh->add_partial(
+			'background_color',
+			array(
+				'selector'            => '#dark-mode-toggler',
+				'container_inclusive' => true,
+				'render_callback'     => function() {
+					$attrs = ( $this->switch_should_render() ) ? array() : array( 'style' => 'display:none;' );
+					$this->the_html( $attrs );
+				},
+			)
+		);
 	}
 
 	/**
@@ -275,21 +288,32 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param string $classes The classes to add.
+	 * @param array $attrs The attributes to add to our <button> element.
 	 *
 	 * @return void
 	 */
-	public function the_html( $classes = 'fixed-bottom' ) {
+	public function the_html( $attrs = array() ) {
+		$attrs = wp_parse_args(
+			$attrs,
+			array(
+				'id'           => 'dark-mode-toggler',
+				'class'        => 'fixed-bottom',
+				'aria-pressed' => 'false',
+				'onClick'      => 'toggleDarkMode()',
+			)
+		);
+		echo '<button';
+		foreach ( $attrs as $key => $val ) {
+			echo ' ' . esc_attr( $key ) . '="' . esc_attr( $val ) . '"';
+		}
+		echo '>';
+		printf(
+			/* translators: %s: On/Off */
+			esc_html__( 'Dark Mode: %s', 'twentytwentyone' ),
+			'<span aria-hidden="true"></span>'
+		);
+		echo '</button>';
 		?>
-		<button id="dark-mode-toggler" class="<?php echo esc_attr( $classes ); ?>" aria-pressed="false" onClick="toggleDarkMode()">
-			<?php
-			printf(
-				/* translators: %s: On/Off */
-				esc_html__( 'Dark Mode: %s', 'twentytwentyone' ),
-				'<span aria-hidden="true"></span>'
-			);
-			?>
-		</button>
 		<style>
 			#dark-mode-toggler > span {
 				margin-<?php echo is_rtl() ? 'right' : 'left'; ?>: 5px;
