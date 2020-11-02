@@ -2870,6 +2870,26 @@ input[type="reset"]:hover {
 	font-size: 1rem;
 }
 
+.wp-block-gallery .blocks-gallery-image figcaption a {
+	color: #fff;
+}
+
+.wp-block-gallery .blocks-gallery-item figcaption a {
+	color: #fff;
+}
+
+.wp-block-gallery .blocks-gallery-image figcaption a:focus {
+	background-color: transparent;
+	outline: 2px solid #28303d;
+	text-decoration: none;
+}
+
+.wp-block-gallery .blocks-gallery-item figcaption a:focus {
+	background-color: transparent;
+	outline: 2px solid #28303d;
+	text-decoration: none;
+}
+
 .wp-block-group {
 	display: block;
 	clear: both;

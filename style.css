@@ -1991,6 +1991,18 @@ input[type="reset"]:hover,
 	font-size: var(--global--font-size-xs);
 }
 
+.wp-block-gallery .blocks-gallery-image figcaption a,
+.wp-block-gallery .blocks-gallery-item figcaption a {
+	color: var(--global--color-white);
+}
+
+.wp-block-gallery .blocks-gallery-image figcaption a:focus,
+.wp-block-gallery .blocks-gallery-item figcaption a:focus {
+	background-color: transparent;
+	outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
+	text-decoration: none;
+}
+
 .wp-block-group {
 	display: block;
 	clear: both;

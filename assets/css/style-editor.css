@@ -779,6 +779,10 @@ a:hover {
 	margin-bottom: 0;
 }
 
+.wp-block-gallery figcaption a {
+	color: var(--global--color-white);
+}
+
 .wp-block-group {
 	display: block;
 	clear: both;
