@@ -1707,6 +1707,10 @@ input[type="reset"]:hover,
 	display: block;
 }
 
+.wp-block-columns:not(.alignwide):not(.alignfull) {
+	clear: both;
+}
+
 .wp-block-columns .wp-block-column > * {
 	margin-top: calc(0.66 * var(--global--spacing-vertical));
 	margin-bottom: calc(0.66 * var(--global--spacing-vertical));
@@ -1741,9 +1745,8 @@ input[type="reset"]:hover,
 	}
 }
 
-@media only screen and (min-width: 652px) {
+@media only screen and (min-width: 822px) {
 	.wp-block-columns .wp-block-column:not(:last-child) {
-		/* Resetting margins to match _block-container.scss */
 		margin-bottom: 0;
 	}
 }
@@ -1800,6 +1803,11 @@ input[type="reset"]:hover,
 	/* default & custom background-color */
 	/* Treating H2 separately to account for legacy /core styles */
 	/* Block Styles */
+}
+
+.wp-block-cover:not(.alignwide):not(.alignfull),
+.wp-block-cover-image:not(.alignwide):not(.alignfull) {
+	clear: both;
 }
 
 .wp-block-cover .wp-block-cover__inner-container,
@@ -1992,6 +2000,18 @@ input[type="reset"]:hover,
 	outline: 2px dotted var(--wp--style--color--link, var(--global--color-primary));
 }
 
+.wp-block-gallery .blocks-gallery-image figcaption a,
+.wp-block-gallery .blocks-gallery-item figcaption a {
+	color: var(--global--color-white);
+}
+
+.wp-block-gallery .blocks-gallery-image figcaption a:focus,
+.wp-block-gallery .blocks-gallery-item figcaption a:focus {
+	background-color: transparent;
+	outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
+	text-decoration: none;
+}
+
 .wp-block-group {
 	display: block;
 	clear: both;
@@ -2042,6 +2062,14 @@ input[type="reset"]:hover,
 .wp-block-group.is-style-twentytwentyone-border {
 	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
 	padding: var(--global--spacing-vertical);
+}
+
+.wp-block-group.has-background .wp-block-group__inner-container > .alignfull,
+.wp-block-group.has-background .wp-block-group__inner-container > hr.wp-block-separator:not(.is-style-dots):not(.alignwide).alignfull, .wp-block-group.is-style-twentytwentyone-border .wp-block-group__inner-container > .alignfull,
+.wp-block-group.is-style-twentytwentyone-border .wp-block-group__inner-container > hr.wp-block-separator:not(.is-style-dots):not(.alignwide).alignfull {
+	max-width: calc(var(--responsive--alignfull-width) + (2 * var(--global--spacing-vertical)));
+	width: calc(var(--responsive--alignfull-width) + (2 * var(--global--spacing-vertical)));
+	margin-right: calc(-1 * var(--global--spacing-vertical));
 }
 
 h1,
@@ -2238,6 +2266,11 @@ img {
 
 .wp-block-latest-posts:not(.is-grid) > li:last-child {
 	margin-bottom: 0;
+}
+
+.wp-block-latest-posts.is-grid {
+	word-wrap: break-word;
+	word-break: break-word;
 }
 
 .wp-block-latest-posts.is-grid > li {
