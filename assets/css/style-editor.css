@@ -471,6 +471,10 @@ a:hover {
 	background-color: #f1f1f1;
 }
 
+.site a:focus img {
+	outline: 2px dotted var(--wp--style--color--link, var(--global--color-primary));
+}
+
 .has-background:not(.has-background-background-color) .has-link-color a,
 .has-background:not(.has-background-background-color).has-link-color a {
 	color: var(--wp--style--color--link, var(--global--color-primary));

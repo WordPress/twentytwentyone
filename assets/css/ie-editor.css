@@ -327,6 +327,10 @@ a:hover {
 	background-color: #f1f1f1;
 }
 
+.site a:focus img {
+	outline: 2px dotted #28303d;
+}
+
 .has-background:not(.has-background-background-color) .has-link-color a {
 	color: #28303d;
 }

@@ -2030,6 +2030,10 @@ a:hover {
 	background-color: #f1f1f1;
 }
 
+.site a:focus img {
+	outline: 2px dotted #28303d;
+}
+
 .has-background:not(.has-background-background-color) .has-link-color a {
 	color: #28303d;
 }
@@ -2878,16 +2882,6 @@ input[type="reset"]:hover {
 	font-size: 1rem;
 }
 
-.wp-block-gallery .blocks-gallery-image a:focus img {
-	outline-offset: 2px;
-	outline: 2px dotted #28303d;
-}
-
-.wp-block-gallery .blocks-gallery-item a:focus img {
-	outline-offset: 2px;
-	outline: 2px dotted #28303d;
-}
-
 .wp-block-gallery .blocks-gallery-image figcaption a {
 	color: #fff;
 }
@@ -2906,6 +2900,11 @@ input[type="reset"]:hover {
 	background-color: transparent;
 	outline: 2px solid #28303d;
 	text-decoration: none;
+}
+
+.wp-block-gallery .blocks-gallery-image a:focus img,
+.wp-block-gallery .blocks-gallery-item a:focus img {
+	outline-offset: 2px;
 }
 
 .wp-block-group {
@@ -3253,7 +3252,6 @@ h6 {
 
 .wp-block-image a:focus img {
 	outline-offset: 2px;
-	outline: 2px dotted #28303d;
 }
 
 .entry-content > *[class="wp-block-image"],
@@ -3533,7 +3531,6 @@ img {
 
 .gallery-item a:focus img {
 	outline-offset: -2px;
-	outline: 2px dotted #28303d;
 }
 
 .gallery-columns-2 .gallery-item {
@@ -3574,7 +3571,6 @@ img {
 
 figure.wp-caption a:focus img {
 	outline-offset: 2px;
-	outline: 2px dotted #28303d;
 }
 
 ul {
@@ -3628,7 +3624,6 @@ dd {
 
 .wp-block-media-text a:focus img {
 	outline-offset: -1px;
-	outline: 2px dotted #28303d;
 }
 
 .wp-block-media-text .wp-block-media-text__content {
