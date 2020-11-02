@@ -1,6 +1,10 @@
 .wp-block-cover,
 .wp-block-cover-image {
 
+	&:not(.alignwide):not(.alignfull) {
+		clear: both;
+	}
+
 	background-color: var(--cover--color-background);
 	min-height: var(--cover--height);
 	margin-top: inherit;

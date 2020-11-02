@@ -1707,6 +1707,10 @@ input[type="reset"]:hover,
 	display: block;
 }
 
+.wp-block-columns:not(.alignwide):not(.alignfull) {
+	clear: both;
+}
+
 .wp-block-columns .wp-block-column > * {
 	margin-top: calc(0.66 * var(--global--spacing-vertical));
 	margin-bottom: calc(0.66 * var(--global--spacing-vertical));
@@ -1799,6 +1803,11 @@ input[type="reset"]:hover,
 	/* default & custom background-color */
 	/* Treating H2 separately to account for legacy /core styles */
 	/* Block Styles */
+}
+
+.wp-block-cover:not(.alignwide):not(.alignfull),
+.wp-block-cover-image:not(.alignwide):not(.alignfull) {
+	clear: both;
 }
 
 .wp-block-cover .wp-block-cover__inner-container,

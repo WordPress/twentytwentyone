@@ -600,6 +600,11 @@ a:hover {
 	margin-bottom: inherit;
 }
 
+.wp-block-cover:not(.alignwide):not(.alignfull),
+.wp-block-cover-image:not(.alignwide):not(.alignfull) {
+	clear: both;
+}
+
 .wp-block-cover .wp-block-cover__inner-container,
 .wp-block-cover .wp-block-cover-image-text,
 .wp-block-cover .wp-block-cover-text,
@@ -672,6 +677,10 @@ a:hover {
 .wp-block-cover.is-style-twentytwentyone-border,
 .wp-block-cover-image.is-style-twentytwentyone-border {
 	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+}
+
+.wp-block-columns:not(.alignwide):not(.alignfull) {
+	clear: both;
 }
 
 .wp-block-columns .wp-block,

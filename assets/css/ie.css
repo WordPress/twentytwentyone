@@ -2387,6 +2387,10 @@ input[type="reset"]:hover {
 	display: block;
 }
 
+.wp-block-columns:not(.alignwide):not(.alignfull) {
+	clear: both;
+}
+
 .wp-block-columns .wp-block-column > * {
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -2541,6 +2545,11 @@ input[type="reset"]:hover {
 	/* default & custom background-color */
 	/* Treating H2 separately to account for legacy /core styles */
 	/* Block Styles */
+}
+
+.wp-block-cover:not(.alignwide):not(.alignfull),
+.wp-block-cover-image:not(.alignwide):not(.alignfull) {
+	clear: both;
 }
 
 .wp-block-cover .wp-block-cover__inner-container {
