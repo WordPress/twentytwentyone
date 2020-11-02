@@ -16,6 +16,9 @@
 				if ( ! document.body.classList.contains( 'has-background-dark' ) ) {
 					document.body.classList.add( 'has-background-dark' );
 				}
+				if ( document.documentElement.classList.contains( 'is-dark-mode' ) ) {
+					document.documentElement.classList.remove( 'is-dark-mode' );
+				}
 			} else {
 				document.body.classList.remove( 'has-background-dark' );
 			}
