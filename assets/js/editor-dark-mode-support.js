@@ -24,13 +24,14 @@ function twentytwentyoneDarkModeEditorToggle() {
 
 	// On success call funtions that need to run.
 	request.onload = function() {
-		var editor,
+		var selector = '.editor-styles-wrapper,.edit-post-visual-editor',
+			editor,
 			attemptDelay = 25,
 			attempt = 0,
 			maxAttempts = 8;
 
 		if ( 200 <= this.status && 400 > this.status ) {
-			editor = document.querySelector( '.editor-styles-wrapper,.edit-post-visual-editor' );
+			editor = document.querySelector( selector );
 
 			if ( null === editor ) {
 				// Try again.
@@ -48,7 +49,7 @@ function twentytwentyoneDarkModeEditorToggle() {
 				return;
 			}
 			// Inject the toggle.
-			document.querySelector( '.editor-styles-wrapper,.edit-post-visual-editor' ).insertAdjacentHTML( 'afterbegin', this.response );
+			document.querySelector( selector ).insertAdjacentHTML( 'afterbegin', this.response );
 
 			// Re-position the toggle.
 			twentytwentyoneDarkModeEditorTogglePosition();
@@ -127,7 +128,11 @@ function twentytwentyoneDarkModeEditorTogglePosition() {
 	// Add styles to reposition toggle.
 	toggle.style.position = 'fixed';
 	toggle.style.bottom = '30px';
-	toggle.style.left = 'calc(' + workSpaceWidth + ' - ' + toggleWidth + ' - 5px)';
+	if ( document.body.classList.contains( 'is-fullscreen-mode' ) ) {
+		toggle.style.left = 'calc(' + workSpaceWidth + ' - ' + toggleWidth + ' - 5px)';
+	} else {
+		toggle.style.left = 'calc(' + workSpaceWidth + ' - ' + toggleWidth + ' + 155px)';
+	}
 }
 
 /**
