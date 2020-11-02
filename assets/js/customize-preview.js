@@ -1,7 +1,7 @@
 /* global twentytwentyoneGetHexLum, jQuery */
-( function( api ) {
+( function() {
 	// Add listener for the "background_color" control.
-	api( 'background_color', function( value ) {
+	wp.customize( 'background_color', function( value ) {
 		value.bind( function( to ) {
 			var lum = twentytwentyoneGetHexLum( to ),
 				isDark = 127 > lum,
@@ -54,4 +54,4 @@
 			stylesheet.html( ':root{' + styles + '}' );
 		} );
 	} );
-}( wp.customize, _ ) );
+}() );
