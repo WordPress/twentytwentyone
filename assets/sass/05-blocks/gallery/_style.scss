@@ -24,5 +24,10 @@
 				}
 			}
 		}
+
+		a:focus img {
+			outline-offset: 2px;
+		}
+
 	}
 }
