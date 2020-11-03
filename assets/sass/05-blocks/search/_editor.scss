@@ -17,15 +17,21 @@
 		margin-right: calc(-1 * var(--button--border-width));
 		padding: var(--form--spacing-unit);
 
-		&:focus {
-			border-color: var(--form--border-color);
+		.is-dark-theme & {
+			background: var(--global--color-white-90);
 		}
 
-		.has-background:not(.has-background-background-color) &,
-		[class*="background-color"]:not(.has-background-background-color) &,
-		[style*="background-color"] &,
-		.wp-block-cover[style*="background-image"] & {
-			border: var(--form--border-width) solid currentColor;
+		.has-background.has-white-background-color &,
+		.has-background.has-green-background-color &,
+		.has-background.has-blue-background-color &,
+		.has-background.has-purple-background-color &,
+		.has-background.has-red-background-color &,
+		.has-background.has-orange-background-color &,
+		.has-background.has-yellow-background-color & {
+
+			.is-dark-theme & {
+				border-color: var(--form--color-text);
+			}
 		}
 
 		.has-background.has-gray-background-color &,
@@ -43,8 +49,8 @@
 		color: var(--button--color-text-hover);
 
 		&:hover {
-			background-color: var(--button--color-background);
 			color: var(--button--color-text);
+			background-color: var(--button--color-background);
 		}
 
 		&.has-icon {
@@ -63,9 +69,14 @@
 			border-color: currentColor;
 
 			&:hover {
+				color: var(--global--color-white);
 				background-color: var(--button--color-background);
 				border-color: var(--global--color-white);
-				color: var(--global--color-white);
+
+				.is-dark-theme & {
+					color: var(--button--color-text);
+					background-color: var(--button--color-background);
+				}
 			}
 		}
 
@@ -76,13 +87,22 @@
 		.has-background.has-red-background-color &,
 		.has-background.has-orange-background-color &,
 		.has-background.has-yellow-background-color & {
-			border-color: currentColor;
-			color: currentColor;
 
 			&:hover {
+				color: var(--global--color-white);
 				background-color: var(--form--border-color);
 				border-color: var(--form--border-color);
-				color: var(--global--color-white);
+			}
+
+			.is-dark-theme & {
+				color: var(--form--color-text);
+				border-color: currentColor;
+
+				&:hover {
+					color: var(--global--color-white);
+					background-color: var(--button--color-text);
+					border-color: var(--button--color-text);
+				}
 			}
 		}
 	}
@@ -109,23 +129,39 @@
 		}
 
 		.wp-block-search__button {
-			border-color: var(--button--color-text-hover);
-			color: var(--button--color-text-hover);
 
-			&:hover {
+			.is-dark-theme & {
 				color: var(--button--color-text);
+				border-color: currentColor;
+
+				&:hover {
+					color: var(--global--color-white);
+					background-color: var(--button--color-text);
+					border-color: var(--button--color-text);
+				}
 			}
 
 			.has-background.has-gray-background-color &,
 			.has-background.has-dark-gray-background-color &,
 			.has-background.has-black-background-color & {
-				border-color: var(--button--color-text-hover);
 				color: var(--button--color-text-hover);
+				border-color: currentColor;
 
 				&:hover {
-					background-color: var(--button--color-background);
-					border-color: var(--global--color-white);
 					color: var(--global--color-white);
+					background-color: var(--button--color-background);
+					border-color: var(--button--color-background);
+				}
+
+				.is-dark-theme & {
+					color: var(--button--color-text);
+					border-color: currentColor;
+
+					&:hover {
+						color: var(--global--color-white);
+						background-color: var(--button--color-text);
+						border-color: var(--button--color-text);
+					}
 				}
 			}
 		}
