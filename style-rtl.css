@@ -3119,54 +3119,101 @@ pre.wp-block-preformatted {
 	fill: currentColor;
 }
 
-.has-background:not(.has-background-background-color) .wp-block-search button.wp-block-search__button,
-[class*="background-color"]:not(.has-background-background-color) .wp-block-search button.wp-block-search__button,
-[style*="background-color"] .wp-block-search button.wp-block-search__button,
-.wp-block-cover[style*="background-image"] .wp-block-search button.wp-block-search__button {
+.has-background.has-gray-background-color .wp-block-search button.wp-block-search__button,
+.has-background.has-dark-gray-background-color .wp-block-search button.wp-block-search__button,
+.has-background.has-black-background-color .wp-block-search button.wp-block-search__button {
 	color: var(--global--color-white);
 	border-color: currentColor;
 }
 
-.has-background:not(.has-background-background-color) .wp-block-search button.wp-block-search__button:hover,
-[class*="background-color"]:not(.has-background-background-color) .wp-block-search button.wp-block-search__button:hover,
-[style*="background-color"] .wp-block-search button.wp-block-search__button:hover,
-.wp-block-cover[style*="background-image"] .wp-block-search button.wp-block-search__button:hover {
+.has-background.has-gray-background-color .wp-block-search button.wp-block-search__button:hover,
+.has-background.has-dark-gray-background-color .wp-block-search button.wp-block-search__button:hover,
+.has-background.has-black-background-color .wp-block-search button.wp-block-search__button:hover {
 	background-color: var(--button--color-background);
-	color: var(--button--color-text);
 	border-color: var(--global--color-white);
+	color: var(--global--color-white);
 }
 
-.has-background.has-white-background-color .wp-block-search button.wp-block-search__button {
-	border-color: var(--form--border-color);
-	color: var(--form--border-color);
-	background: var(--button--color-text);
+.has-background-dark .has-background.has-gray-background-color .wp-block-search button.wp-block-search__button:hover, .has-background-dark
+.has-background.has-dark-gray-background-color .wp-block-search button.wp-block-search__button:hover, .has-background-dark
+.has-background.has-black-background-color .wp-block-search button.wp-block-search__button:hover {
+	color: var(--button--color-text);
 }
 
-.has-background.has-white-background-color .wp-block-search button.wp-block-search__button:hover {
+.has-background.has-white-background-color .wp-block-search button.wp-block-search__button,
+.has-background.has-green-background-color .wp-block-search button.wp-block-search__button,
+.has-background.has-blue-background-color .wp-block-search button.wp-block-search__button,
+.has-background.has-purple-background-color .wp-block-search button.wp-block-search__button,
+.has-background.has-red-background-color .wp-block-search button.wp-block-search__button,
+.has-background.has-orange-background-color .wp-block-search button.wp-block-search__button,
+.has-background.has-yellow-background-color .wp-block-search button.wp-block-search__button {
+	border-color: currentColor;
+	color: currentColor;
+}
+
+.has-background.has-white-background-color .wp-block-search button.wp-block-search__button:hover,
+.has-background.has-green-background-color .wp-block-search button.wp-block-search__button:hover,
+.has-background.has-blue-background-color .wp-block-search button.wp-block-search__button:hover,
+.has-background.has-purple-background-color .wp-block-search button.wp-block-search__button:hover,
+.has-background.has-red-background-color .wp-block-search button.wp-block-search__button:hover,
+.has-background.has-orange-background-color .wp-block-search button.wp-block-search__button:hover,
+.has-background.has-yellow-background-color .wp-block-search button.wp-block-search__button:hover {
 	background-color: var(--form--border-color);
 	border-color: var(--form--border-color);
-	color: var(--button--color-text);
+	color: var(--global--color-white);
+}
+
+.has-background-dark .has-background.has-white-background-color .wp-block-search button.wp-block-search__button:hover, .has-background-dark
+.has-background.has-green-background-color .wp-block-search button.wp-block-search__button:hover, .has-background-dark
+.has-background.has-blue-background-color .wp-block-search button.wp-block-search__button:hover, .has-background-dark
+.has-background.has-purple-background-color .wp-block-search button.wp-block-search__button:hover, .has-background-dark
+.has-background.has-red-background-color .wp-block-search button.wp-block-search__button:hover, .has-background-dark
+.has-background.has-orange-background-color .wp-block-search button.wp-block-search__button:hover, .has-background-dark
+.has-background.has-yellow-background-color .wp-block-search button.wp-block-search__button:hover {
+	border-color: var(--button--color-text);
+	background-color: var(--button--color-text);
+	color: var(--button--color-background);
 }
 
 .wp-block-search.wp-block-search__button-inside.wp-block-search__text-button button.wp-block-search__button {
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
 
-.has-background:not(.has-background-background-color) .wp-block-search.wp-block-search__button-inside button.wp-block-search__button,
-[class*="background-color"]:not(.has-background-background-color) .wp-block-search.wp-block-search__button-inside button.wp-block-search__button,
-[style*="background-color"] .wp-block-search.wp-block-search__button-inside button.wp-block-search__button,
-.wp-block-cover[style*="background-image"] .wp-block-search.wp-block-search__button-inside button.wp-block-search__button {
+.has-background.has-gray-background-color .wp-block-search.wp-block-search__button-inside button.wp-block-search__button,
+.has-background.has-dark-gray-background-color .wp-block-search.wp-block-search__button-inside button.wp-block-search__button,
+.has-background.has-black-background-color .wp-block-search.wp-block-search__button-inside button.wp-block-search__button {
 	border-color: var(--button--color-background);
-	background-color: var(--global--color-white);
-	color: var(--button--color-text-hover);
+	color: var(--button--color-background);
 }
 
-.has-background:not(.has-background-background-color) .wp-block-search.wp-block-search__button-inside button.wp-block-search__button:hover,
-[class*="background-color"]:not(.has-background-background-color) .wp-block-search.wp-block-search__button-inside button.wp-block-search__button:hover,
-[style*="background-color"] .wp-block-search.wp-block-search__button-inside button.wp-block-search__button:hover,
-.wp-block-cover[style*="background-image"] .wp-block-search.wp-block-search__button-inside button.wp-block-search__button:hover {
-	background-color: var(--button--color-background);
+.has-background.has-gray-background-color .wp-block-search.wp-block-search__button-inside button.wp-block-search__button:hover,
+.has-background.has-dark-gray-background-color .wp-block-search.wp-block-search__button-inside button.wp-block-search__button:hover,
+.has-background.has-black-background-color .wp-block-search.wp-block-search__button-inside button.wp-block-search__button:hover {
+	color: var(--global--color-white);
+}
+
+.has-background-dark .has-background.has-gray-background-color .wp-block-search.wp-block-search__button-inside button.wp-block-search__button, .has-background-dark
+.has-background.has-dark-gray-background-color .wp-block-search.wp-block-search__button-inside button.wp-block-search__button, .has-background-dark
+.has-background.has-black-background-color .wp-block-search.wp-block-search__button-inside button.wp-block-search__button {
+	border-color: var(--button--color-text);
 	color: var(--button--color-text);
+}
+
+.has-background-dark .has-background.has-gray-background-color .wp-block-search.wp-block-search__button-inside button.wp-block-search__button:hover, .has-background-dark
+.has-background.has-dark-gray-background-color .wp-block-search.wp-block-search__button-inside button.wp-block-search__button:hover, .has-background-dark
+.has-background.has-black-background-color .wp-block-search.wp-block-search__button-inside button.wp-block-search__button:hover {
+	color: var(--global--color-white);
+}
+
+.has-background-dark .wp-block-search.wp-block-search__button-inside button.wp-block-search__button {
+	border-color: var(--button--color-text);
+	color: var(--button--color-text);
+}
+
+.has-background-dark .wp-block-search.wp-block-search__button-inside button.wp-block-search__button:hover {
+	border-color: var(--button--color-text);
+	background-color: var(--button--color-text);
+	color: var(--button--color-background);
 }
 
 .wp-block-search__button {

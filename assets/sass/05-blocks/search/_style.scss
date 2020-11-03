@@ -70,32 +70,45 @@
 			}
 		}
 
-		.has-background:not(.has-background-background-color) &,
-		[class*="background-color"]:not(.has-background-background-color) &,
-		[style*="background-color"] &,
-		.wp-block-cover[style*="background-image"] & {
+		.has-background.has-gray-background-color &,
+		.has-background.has-dark-gray-background-color &,
+		.has-background.has-black-background-color & {
 			color: var(--global--color-white);
 			border-color: currentColor;
 
 			&:hover {
 				background-color: var(--button--color-background);
-				color: var(--button--color-text);
 				border-color: var(--global--color-white);
+				color: var(--global--color-white);
+
+				.has-background-dark & {
+					color: var(--button--color-text);
+				}
 			}
 		}
 
-		.has-background.has-white-background-color & {
-			border-color: var(--form--border-color);
-			color: var(--form--border-color);
-			background: var(--button--color-text);
+		.has-background.has-white-background-color &,
+		.has-background.has-green-background-color &,
+		.has-background.has-blue-background-color &,
+		.has-background.has-purple-background-color &,
+		.has-background.has-red-background-color &,
+		.has-background.has-orange-background-color &,
+		.has-background.has-yellow-background-color & {
+			border-color: currentColor;
+			color: currentColor;
 
 			&:hover {
 				background-color: var(--form--border-color);
 				border-color: var(--form--border-color);
-				color: var(--button--color-text);
+				color: var(--global--color-white);
+
+				.has-background-dark & {
+					border-color: var(--button--color-text);
+					background-color: var(--button--color-text);
+					color: var(--button--color-background);
+				}
 			}
 		}
-
 	}
 
 	&.wp-block-search__button-inside {
@@ -110,17 +123,34 @@
 
 		button.wp-block-search__button {
 
-			.has-background:not(.has-background-background-color) &,
-			[class*="background-color"]:not(.has-background-background-color) &,
-			[style*="background-color"] &,
-			.wp-block-cover[style*="background-image"] & {
+			.has-background.has-gray-background-color &,
+			.has-background.has-dark-gray-background-color &,
+			.has-background.has-black-background-color & {
 				border-color: var(--button--color-background);
-				background-color: var(--global--color-white);
-				color: var(--button--color-text-hover);
+				color: var(--button--color-background);
 
 				&:hover {
-					background-color: var(--button--color-background);
+					color: var(--global--color-white);
+				}
+
+				.has-background-dark & {
+					border-color: var(--button--color-text);
 					color: var(--button--color-text);
+
+					&:hover {
+						color: var(--global--color-white);
+					}
+				}
+			}
+
+			.has-background-dark & {
+				border-color: var(--button--color-text);
+				color: var(--button--color-text);
+
+				&:hover {
+					border-color: var(--button--color-text);
+					background-color: var(--button--color-text);
+					color: var(--button--color-background);
 				}
 			}
 		}
