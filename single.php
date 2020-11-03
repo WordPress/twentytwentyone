@@ -32,7 +32,7 @@ while ( have_posts() ) :
 		comments_template();
 	}
 
-	if ( is_singular( 'post' ) ) {
+	if ( is_singular() ) {
 		// Previous/next post navigation.
 		$twentytwentyone_next = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' );
 		$twentytwentyone_prev = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' );
