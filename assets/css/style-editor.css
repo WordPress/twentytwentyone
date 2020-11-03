@@ -180,8 +180,8 @@
 	--quote--font-size: var(--global--font-size-md);
 	--quote--font-size-large: var(--global--font-size-xl);
 	--quote--font-style: normal;
-	--quote--font-weight: normal;
-	--quote--font-weight-strong: 700;
+	--quote--font-weight: 700;
+	--quote--font-weight-strong: bolder;
 	--quote--font-style-large: normal;
 	--quote--font-style-cite: normal;
 	--quote--line-height: var(--global--line-height-body);
@@ -303,7 +303,7 @@ blockquote p {
 	font-family: var(--quote--font-family);
 	font-size: var(--quote--font-size);
 	font-style: var(--quote--font-style);
-	font-weight: var(--quote--font-weight-strong);
+	font-weight: var(--quote--font-weight);
 	line-height: var(--quote--line-height);
 }
 
@@ -333,7 +333,7 @@ blockquote.alignright footer {
 }
 
 blockquote strong {
-	font-weight: var(--quote--font-weight);
+	font-weight: var(--quote--font-weight-strong);
 }
 
 blockquote:before {
@@ -1372,12 +1372,12 @@ pre.wp-block-preformatted {
 	font-family: var(--quote--font-family);
 	font-size: var(--quote--font-size);
 	font-style: var(--quote--font-style);
-	font-weight: var(--quote--font-weight-strong);
+	font-weight: var(--quote--font-weight);
 	line-height: var(--quote--line-height);
 }
 
 .wp-block-quote strong {
-	font-weight: var(--quote--font-weight);
+	font-weight: var(--quote--font-weight-strong);
 }
 
 .wp-block-quote:before {
