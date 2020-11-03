@@ -49,10 +49,6 @@
 			border: var(--button--border-width) solid currentColor;
 			padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 
-			&:visited {
-				color: var(--button--color-background);
-			}
-
 			&:active,
 			&:hover {
 				background-color: var(--button--color-background);

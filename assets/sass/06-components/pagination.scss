@@ -2,7 +2,6 @@
 
 // All navigation
 .navigation {
-
 	color: var(--global--color-primary);
 
 	a {
@@ -34,6 +33,10 @@
 		.nav-previous a {
 			display: flex;
 			flex-direction: column;
+		}
+
+		.dots {
+			text-align: center;
 		}
 
 		@include media(tablet) {
@@ -146,11 +149,17 @@
 
 	@extend %responsive-alignwide-width;
 
+	// Resets the top margin added to the .nav-links items below.
+	.nav-links {
+		margin-top: calc(-1 * var(--global--spacing-vertical));
+	}
+
 	.nav-links > * {
 		color: var(--pagination--color-text);
 		font-family: var(--pagination--font-family);
 		font-size: var(--pagination--font-size);
 		font-weight: var(--pagination--font-weight);
+		margin-top: var(--global--spacing-vertical);
 		margin-left: calc(0.66 * var(--global--spacing-unit));
 		margin-right: calc(0.66 * var(--global--spacing-unit));
 
@@ -179,7 +188,7 @@
 		}
 	}
 
-	@include media(tablet-only) {
+	@include media(desktop-only) {
 
 		.nav-links {
 			display: flex;

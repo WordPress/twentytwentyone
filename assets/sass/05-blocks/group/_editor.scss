@@ -23,9 +23,15 @@
 	&.is-style-twentytwentyone-border {
 		border: calc(3 * var(--separator--height)) solid var(--global--color-border);
 		padding: var(--global--spacing-vertical);
+
+		.wp-block-group__inner-container > [data-align="full"] {
+			max-width: calc(var(--responsive--alignfull-width) + (2 * var(--global--spacing-vertical)));
+			width: calc(var(--responsive--alignfull-width) + (2 * var(--global--spacing-vertical)));
+			margin-left: calc(-1 * var(--global--spacing-vertical));
+		}
 	}
 
-	.wp-block-group__inner-container *:last-child {
+	.wp-block-group__inner-container > *:last-child {
 		margin-bottom: 0;
 	}
 }

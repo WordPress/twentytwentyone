@@ -1,5 +1,9 @@
 .wp-block-columns {
 
+	&:not(.alignwide):not(.alignfull) {
+		clear: both;
+	}
+
 	.wp-block,
 	.wp-block-column {
 		// Allow Gutenberg to set the width of a block that lives inside the columns block.
@@ -45,18 +49,18 @@
 			}
 		}
 	}
-}
 
-.wp-block[data-align="full"] {
+	.wp-block[data-align="full"] & {
 
-	p:not(.has-background),
-	h1:not(.has-background),
-	h2:not(.has-background),
-	h3:not(.has-background),
-	h4:not(.has-background),
-	h5:not(.has-background),
-	h6:not(.has-background) {
-		padding-left: var(--global--spacing-unit);
-		padding-right: var(--global--spacing-unit);
+		p:not(.has-background),
+		h1:not(.has-background),
+		h2:not(.has-background),
+		h3:not(.has-background),
+		h4:not(.has-background),
+		h5:not(.has-background),
+		h6:not(.has-background) {
+			padding-left: var(--global--spacing-unit);
+			padding-right: var(--global--spacing-unit);
+		}
 	}
 }

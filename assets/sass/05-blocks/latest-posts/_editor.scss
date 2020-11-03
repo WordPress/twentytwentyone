@@ -15,11 +15,16 @@
 		}
 	}
 
-	&.is-grid > li {
-		margin-bottom: var(--global--spacing-vertical);
+	&.is-grid {
+		word-wrap: break-word;
+		word-break: break-word;
 
-		&:last-child {
-			margin-bottom: 0;
+		> li {
+			margin-bottom: var(--global--spacing-vertical);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 

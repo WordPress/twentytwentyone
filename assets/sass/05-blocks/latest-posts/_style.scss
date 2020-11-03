@@ -16,6 +16,8 @@
 	}
 
 	&.is-grid {
+		word-wrap: break-word;
+		word-break: break-word;
 
 		> li {
 			margin-bottom: var(--global--spacing-vertical);
