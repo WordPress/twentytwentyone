@@ -5,6 +5,11 @@
 		clear: both;
 	}
 
+	&.alignfull {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
 	background-color: var(--cover--color-background);
 	min-height: var(--cover--height);
 	margin-top: inherit;
