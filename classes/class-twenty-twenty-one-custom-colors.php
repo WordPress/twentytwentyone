@@ -29,6 +29,9 @@ class Twenty_Twenty_One_Custom_Colors {
 
 		// Add body-class if needed.
 		add_filter( 'body_class', array( $this, 'body_class' ) );
+
+		// Add classes to <body> in the dashboard.
+		add_filter( 'admin_body_class', array( $this, 'admin_body_classes' ) );
 	}
 
 	/**
@@ -176,6 +179,30 @@ class Twenty_Twenty_One_Custom_Colors {
 
 		if ( 'ffffff' === strtolower( $background_color ) ) {
 			$classes[] = 'has-background-white';
+		}
+
+		return $classes;
+	}
+
+	/**
+	 * Adds a class to the <body> element in the editor for dark backgrounds.
+	 *
+	 * @access public
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param string $classes The admin body-classes.
+	 *
+	 * @return string
+	 */
+	public function admin_body_classes( $classes ) {
+		global $current_screen;
+		if ( empty( $current_screen ) ) {
+			set_current_screen();
+		}
+
+		if ( $current_screen->is_block_editor() ) {
+			$classes .= ' ' . implode( ' ', $this->body_class( array() ) );
 		}
 
 		return $classes;
