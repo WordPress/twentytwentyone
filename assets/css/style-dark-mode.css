@@ -38,6 +38,10 @@ html.is-dark-mode img {
 	z-index: 9998;
 }
 
+.no-js #dark-mode-toggler {
+	display: none !important;
+}
+
 .wp-admin #dark-mode-toggler {
 	z-index: 99999;
 

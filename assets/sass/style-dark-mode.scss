@@ -37,6 +37,10 @@ html.is-dark-mode {
 	color: var(--button--color-background);
 	z-index: 9998;
 
+	.no-js & {
+		display: none;
+	}
+
 	.wp-admin & {
 		z-index: 99999; /* Necessary for the editor. */
 	}
