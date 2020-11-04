@@ -28,6 +28,9 @@ add_action( 'wp_print_styles', 'twenty_twenty_one_deregister_styles', 100 );
  */
 function twenty_twenty_one_body_classes( $classes ) {
 
+	// Helps detect if JS is enabled or not.
+	$classes[] = 'no-js';
+
 	// Adds `singular` to singular pages, and `hfeed` to all other pages.
 	$classes[] = is_singular() ? 'singular' : 'hfeed';
 
@@ -74,6 +77,18 @@ function twenty_twenty_one_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'twenty_twenty_one_pingback_header' );
+
+/**
+ * Remove the `no-js` class from body if JS is supported.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function twenty_twenty_one_supports_js() {
+	echo '<script>document.body.classList.remove("no-js");</script>';
+}
+add_action( 'wp_footer', 'twenty_twenty_one_supports_js' );
 
 /**
  * Changes comment form default fields.

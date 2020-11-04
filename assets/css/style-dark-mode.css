@@ -38,8 +38,13 @@ html.is-dark-mode img {
 	z-index: 9998;
 }
 
+.no-js #dark-mode-toggler {
+	display: none;
+}
+
 .wp-admin #dark-mode-toggler {
 	z-index: 99999;
+
 	/* Necessary for the editor. */
 }
 
@@ -59,20 +64,20 @@ html.is-dark-mode img {
 .admin-bar #dark-mode-toggler.relative {
 	top: calc(2.4 * var(--global--spacing-vertical) - 44px + 32px);
 }
-
 @media only screen and (max-width: 782px) {
+
 	.admin-bar #dark-mode-toggler.relative {
 		top: calc(2.4 * var(--global--spacing-vertical) - 44px + 46px);
 	}
 }
-
 @media only screen and (max-width: 481px) {
+
 	.admin-bar #dark-mode-toggler.relative {
 		top: calc(2.4 * var(--global--spacing-vertical) - 44px + 26px);
 	}
 }
-
 @media only screen and (max-width: 481px) {
+
 	body:not(.primary-navigation-open) #dark-mode-toggler.relative ~ nav {
 		top: calc(44px + 44px);
 	}
@@ -82,7 +87,8 @@ html.is-dark-mode img {
 	display: none;
 }
 
-#dark-mode-toggler:hover, #dark-mode-toggler:focus {
+#dark-mode-toggler:hover,
+#dark-mode-toggler:focus {
 	color: var(--button--color-background-active);
 	border: 2px solid var(--button--color-text-active);
 	background-color: var(--button--color-text-active);
@@ -91,5 +97,3 @@ html.is-dark-mode img {
 .is-IE #dark-mode-toggler {
 	display: none;
 }
-
-/*# sourceMappingURL=style-dark-mode.css.map */
