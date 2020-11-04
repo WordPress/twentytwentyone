@@ -39,7 +39,7 @@ html.is-dark-mode img {
 }
 
 .no-js #dark-mode-toggler {
-	display: none !important;
+	display: none;
 }
 
 .wp-admin #dark-mode-toggler {
