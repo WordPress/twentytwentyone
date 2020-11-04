@@ -2,6 +2,7 @@
 Adding print support. The print styles are based on the the great work of
 Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272/.
 */
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -12,17 +13,21 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 # Visibility
 --------------------------------------------------------------*/
 @media print {
+
 	/* Margins */
 	@page {
 		margin: 2cm;
 	}
+
 	.entry {
 		margin-top: 1em;
 	}
+
 	.entry .entry-header,
 	.site-footer .site-info {
 		margin: 0;
 	}
+
 	/* Fonts */
 	body {
 		font: 13pt Georgia, "Times New Roman", Times, serif;
@@ -31,9 +36,11 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		background: #fff !important;
 		color: #000;
 	}
+
 	h1 {
 		font-size: 24pt;
 	}
+
 	h2,
 	h3,
 	h4,
@@ -45,13 +52,16 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		font-size: 14pt;
 		margin-top: 25px;
 	}
+
 	/* Page breaks */
 	a {
 		page-break-inside: avoid;
 	}
+
 	blockquote {
 		page-break-inside: avoid;
 	}
+
 	h1,
 	h2,
 	h3,
@@ -61,19 +71,23 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		page-break-after: avoid;
 		page-break-inside: avoid;
 	}
+
 	img {
 		page-break-inside: avoid;
 		page-break-after: avoid;
 	}
+
 	table,
 	pre {
 		page-break-inside: avoid;
 	}
+
 	ul,
 	ol,
 	dl {
 		page-break-before: avoid;
 	}
+
 	/* Links */
 	a:link,
 	a:visited,
@@ -83,18 +97,23 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		text-decoration: underline;
 		text-align: left;
 	}
-	a[href^="http"]:after {
+
+	a[href^=http]:after {
 		content: " < " attr(href) "> ";
 	}
+
 	a:after > img {
 		content: "";
 	}
+
 	article a[href^="#"]:after {
 		content: "";
 	}
+
 	a:not(:local-link):after {
 		content: " < " attr(href) "> ";
 	}
+
 	/* Visibility */
 	.primary-navigation,
 	.site-title + .primary-navigation,
@@ -109,15 +128,18 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	.comment .comment-metadata .edit-link {
 		display: none;
 	}
+
 	.entry .entry-content .wp-block-button .wp-block-button__link,
 	.entry .entry-content .button {
 		color: #000;
 		background: none;
 	}
+
 	/* Site Header (With Featured Image) */
 	.site-header.featured-image {
 		min-height: 0;
 	}
+
 	.site-header.featured-image .primary-navigation a,
 	.site-header.featured-image .primary-navigation a + svg,
 	.site-header.featured-image .site-title a,
@@ -132,11 +154,13 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		color: #000;
 		text-shadow: none;
 	}
+
 	.site-header.featured-image .site-featured-image .entry-header,
 	.site-header.featured-image .site-branding-container {
 		margin-top: 0;
 		margin-bottom: 0;
 	}
+
 	.site-header.featured-image .site-featured-image .post-thumbnail img {
 		position: relative;
 		height: initial;
@@ -147,16 +171,17 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		max-width: 100%;
 		margin-top: 1rem;
 	}
+
 	/* Remove image filters from featured image */
 	.image-filters-enabled *:after {
 		display: none !important;
 	}
+
 	.image-filters-enabled .site-header.featured-image .site-featured-image:before {
 		display: none;
 	}
+
 	.image-filters-enabled .site-header.featured-image .site-featured-image .post-thumbnail img {
 		filter: none;
 	}
 }
-
-/*# sourceMappingURL=print.css.map */
