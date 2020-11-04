@@ -8,16 +8,6 @@
  */
 
 /**
- * Remove Gutenberg `Theme` Block Styles.
- *
- * @since 1.0.0
- */
-function twenty_twenty_one_deregister_styles() {
-	wp_dequeue_style( 'wp-block-library-theme' );
-}
-add_action( 'wp_print_styles', 'twenty_twenty_one_deregister_styles', 100 );
-
-/**
  * Adds custom classes to the array of body classes.
  *
  * @since 1.0.0

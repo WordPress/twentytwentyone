@@ -6,7 +6,7 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Margins
+# Margins & paddings
 # Typography
 # Page breaks
 # Links
@@ -15,19 +15,25 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 
 @media print {
 
-	/* Margins */
+	/* Margins & paddings */
 
 	@page {
 		margin: 2cm;
 	}
 
-	.entry {
-		margin-top: 1em;
+	.entry .entry-header,
+	.entry,
+	.single .site-main > article > .entry-footer {
+		margin-top: 0;
+		margin-bottom: 0;
 	}
 
-	.entry .entry-header,
 	.site-footer .site-info {
 		margin: 0;
+	}
+
+	.site-header {
+		padding: 0;
 	}
 
 	/* Fonts */
@@ -40,8 +46,17 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		color: #000;
 	}
 
-	h1 {
-		font-size: 24pt;
+	// Override color settings that changes the text to white.
+	.has-background-dark * {
+		color: #000 !important;
+	}
+
+	h1,
+	.entry-title,
+	.singular .entry-title,
+	.page-title {
+		font-size: 22pt;
+		font-weight: bold;
 	}
 
 	h2,
@@ -51,9 +66,15 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	.has-large-font-size,
 	h2.author-title,
 	p.author-bio,
-	.comments-title {
+	.comments-title,
+	.archive-description {
 		font-size: 14pt;
 		margin-top: 25px;
+	}
+
+	.comment-meta,
+	.comment-meta .comment-author .fn {
+		font-size: 13pt;
 	}
 
 	/* Page breaks */
@@ -82,7 +103,8 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	}
 
 	table,
-	pre {
+	pre,
+	figure {
 		page-break-inside: avoid;
 	}
 
@@ -119,77 +141,38 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		content: " < " attr(href) "> ";
 	}
 
+	.cat-links a:after,
+	.tags-links a:after,
+	.byline a:after,
+	.comment-metadata a:after,
+	.wp-block-calendar a:after,
+	.wp-block-tag-cloud a:after,
+	.page-links a:after {
+		content: "";
+	}
+
 	/* Visibility */
 	.primary-navigation,
 	.site-title + .primary-navigation,
-	.site-branding-container:before,
-	.entry .entry-title:before,
+	.footer-navigation,
 	.entry-footer,
-	.author-description:before,
 	.post-navigation,
+	.navigation.pagination,
 	.widget-area,
-	.comment-form-flex,
+	.edit-link,
+	.more-link,
 	.comment-reply,
-	.comment .comment-metadata .edit-link {
-		display: none;
+	.reply,
+	.comment .comment-metadata .edit-link,
+	.comment-respond,
+	#dark-mode-toggler {
+		display: none !important;
 	}
 
 	.entry .entry-content .wp-block-button .wp-block-button__link,
-	.entry .entry-content .button {
+	.entry .entry-content .button,
+	.entry .entry-content .wp-block-file__button {
 		color: #000;
 		background: none;
-	}
-
-	/* Site Header (With Featured Image) */
-	.site-header.featured-image {
-		min-height: 0;
-
-		.primary-navigation a,
-		.primary-navigation a + svg,
-		.site-title a,
-		.site-featured-image a,
-		.site-branding .site-title,
-		.site-branding .site-description,
-		.primary-navigation a:after,
-		.primary-navigation .menu-wrapper > li.menu-item-has-children:after,
-		.primary-navigation li,
-		.entry-title,
-		&#masthead .site-title a {
-			color: #000;
-			text-shadow: none;
-		}
-
-		.site-featured-image .entry-header,
-		.site-branding-container {
-			margin-top: 0;
-			margin-bottom: 0;
-		}
-
-		.site-featured-image .post-thumbnail img {
-			position: relative;
-			height: initial;
-			width: initial;
-			object-fit: none;
-			min-width: 0;
-			min-height: 0;
-			max-width: 100%;
-			margin-top: 1rem;
-		}
-	}
-
-	/* Remove image filters from featured image */
-	.image-filters-enabled {
-
-		*:after {
-			display: none !important;
-		}
-
-		.site-header.featured-image .site-featured-image:before {
-			display: none;
-		}
-
-		.site-header.featured-image .site-featured-image .post-thumbnail img {
-			filter: none;
-		}
 	}
 }
