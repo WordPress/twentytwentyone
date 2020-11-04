@@ -2923,6 +2923,7 @@ pre.wp-block-preformatted {
 	font-size: 3rem;
 	font-weight: 500;
 	line-height: 1;
+	left: calc(-1 * var(--global--spacing-horizontal));
 }
 
 .wp-block-pullquote p {
