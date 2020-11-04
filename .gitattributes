@@ -20,6 +20,7 @@
 .gitignore export-ignore
 .stylelintignore export-ignore
 .stylelintrc.json export-ignore
+.stylelintrc-css.json export-ignore
 .wp-env.json export-ignore
 composer.json export-ignore
 composer.lock export-ignore
