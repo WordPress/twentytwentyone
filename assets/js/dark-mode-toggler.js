@@ -1,5 +1,5 @@
 function toggleDarkMode() { // eslint-disable-line no-unused-vars
-	var toggler = document.getElementById( 'dark-mode-toggler' ),
+	var toggler = document.getElementById( 'dark-mode-toggler' );
 
 	if ( 'false' === toggler.getAttribute( 'aria-pressed' ) ) {
 		toggler.setAttribute( 'aria-pressed', 'true' );

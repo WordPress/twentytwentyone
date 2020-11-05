@@ -14,12 +14,14 @@
 			// Modify the body class depending on whether this is a dark background or not.
 			if ( isDark ) {
 				document.body.classList.add( 'is-dark-theme' );
+				document.documentElement.classList.add( 'is-dark-theme' );
 			} else {
 				document.body.classList.remove( 'is-dark-theme' );
+				document.documentElement.classList.remove( 'is-dark-theme' );
 			}
 
 			// Toggle the white background class.
-			if ( '#ffffff' === to ) {
+			if ( '#ffffff' === to.toLowerCase() ) {
 				document.body.classList.add( 'has-background-white' );
 			} else {
 				document.body.classList.remove( 'has-background-white' );
