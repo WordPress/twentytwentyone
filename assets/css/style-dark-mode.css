@@ -14,8 +14,11 @@
 	background-color: var(--global--color-background);
 }
 
-.is-dark-theme.is-dark-theme .site a:focus {
+.is-dark-theme.is-dark-theme .site a:focus,
+.is-dark-theme.is-dark-theme .site a:focus .meta-nav {
 	background: #000;
+	color: #fff;
+	text-decoration: none;
 }
 
 .is-dark-theme.is-dark-theme img {

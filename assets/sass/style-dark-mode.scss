@@ -13,8 +13,11 @@
 		background-color: var(--global--color-background);
 	}
 
-	.site a:focus {
+	.site a:focus,
+	.site a:focus .meta-nav {
 		background: #000;
+		color: #fff;
+		text-decoration: none;
 	}
 
 	img {
