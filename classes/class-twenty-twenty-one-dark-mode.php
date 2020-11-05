@@ -62,7 +62,7 @@ class Twenty_Twenty_One_Dark_Mode {
 		$background_color            = get_theme_mod( 'background_color', 'D1E4DD' );
 		$should_respect_color_scheme = get_theme_mod( 'respect_user_color_preference', false );
 		if ( $should_respect_color_scheme && Twenty_Twenty_One_Custom_Colors::get_relative_luminance_from_hex( $background_color ) > 127 ) {
-			// Add dark mode variable overrides.
+			// Add Dark Mode variable overrides.
 			wp_add_inline_style(
 				'twenty-twenty-one-custom-color-overrides',
 				'html.is-dark-mode .editor-styles-wrapper { --global--color-background: var(--global--color-dark-gray); --global--color-primary: var(--global--color-light-gray); --global--color-secondary: var(--global--color-light-gray); }'
@@ -131,7 +131,7 @@ class Twenty_Twenty_One_Dark_Mode {
 			'twentytwentyone-customize-controls',
 			'backgroundColorNotice',
 			array(
-				'message' => esc_html__( 'Changes will only be visible if Dark Mode is "Off" in the preview', 'twentytwentyone' ),
+				'message' => esc_html__( 'Changes will only be visible if Dark Mode is "Off" in the preview.', 'twentytwentyone' ),
 			)
 		);
 	}
@@ -164,8 +164,8 @@ class Twenty_Twenty_One_Dark_Mode {
 			array(
 				'type'            => 'checkbox',
 				'section'         => 'colors',
-				'label'           => esc_html__( 'Respect visitor\'s device dark mode settings', 'twentytwentyone' ),
-				'description'     => __( 'Dark mode is a device setting. If a visitor to your site requests it, your site will be shown with a dark background and light text.', 'twentytwentyone' ),
+				'label'           => esc_html_x( 'Respect visitor\'s device Dark Mode settings.', 'Label for customizer control','twentytwentyone' ),
+				'description'     => esc_html_x( 'Dark Mode is a device setting. If a visitor to your site requests it, your site will be shown with a dark background and light text.', 'Customizer option description', 'twentytwentyone' ),
 				'active_callback' => function( $value ) {
 					return 127 < Twenty_Twenty_One_Custom_Colors::get_relative_luminance_from_hex( get_theme_mod( 'background_color', 'D1E4DD' ) );
 				},
