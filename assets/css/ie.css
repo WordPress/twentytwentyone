@@ -1436,8 +1436,6 @@ blockquote:before {
 	content: "“";
 	font-size: 1.25rem;
 	line-height: 1.7;
-	position: absolute;
-	left: -12px;
 }
 
 blockquote .wp-block-quote__citation {
@@ -4103,7 +4101,6 @@ pre.wp-block-preformatted {
 	font-size: 3rem;
 	font-weight: 500;
 	line-height: 1;
-	left: -25px;
 }
 
 .wp-block-pullquote p {
