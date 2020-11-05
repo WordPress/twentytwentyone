@@ -1174,8 +1174,6 @@ blockquote:before {
 	content: "“";
 	font-size: var(--quote--font-size);
 	line-height: var(--quote--line-height);
-	position: absolute;
-	right: calc(-0.5 * var(--global--spacing-horizontal));
 }
 
 blockquote .wp-block-quote__citation,

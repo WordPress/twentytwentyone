@@ -206,8 +206,6 @@ blockquote:before {
 	content: "“";
 	font-size: 1.25rem;
 	line-height: 1.7;
-	position: absolute;
-	left: -12px;
 }
 
 blockquote .wp-block-quote__citation {
