@@ -10,6 +10,11 @@
 	margin-top: inherit;
 	margin-bottom: inherit;
 
+	[data-align="full"] & {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
 	.wp-block-cover__inner-container,
 	.wp-block-cover-image-text,
 	.wp-block-cover-text,

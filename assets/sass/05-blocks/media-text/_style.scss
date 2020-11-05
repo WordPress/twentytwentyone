@@ -1,5 +1,10 @@
 .wp-block-media-text {
 
+	&.alignfull {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
 	a:focus img {
 		outline-offset: -1px;
 	}

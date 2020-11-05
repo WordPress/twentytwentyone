@@ -1979,6 +1979,12 @@ input[type=reset]:hover,
 	clear: both;
 }
 
+.wp-block-cover.alignfull,
+.wp-block-cover-image.alignfull {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 .wp-block-cover .wp-block-cover__inner-container,
 .wp-block-cover .wp-block-cover-image-text,
 .wp-block-cover .wp-block-cover-text,
@@ -2711,6 +2717,11 @@ dd {
 	/**
    * Block Options
    */
+}
+
+.wp-block-media-text.alignfull {
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .wp-block-media-text a:focus img {
