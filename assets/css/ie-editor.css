@@ -435,6 +435,19 @@ a:hover {
 /**
  * Block Options
  */
+.wp-block.wp-block-buttons {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.wp-block.wp-block-buttons .wp-block-button:first-child {
+	margin-top: 30px;
+}
+
+.wp-block.wp-block-buttons .wp-block-button:last-child {
+	margin-bottom: 30px;
+}
+
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-background):not(.has-text-color):active {
 	color: #39414d;
 	background-color: #d1e4dd;
@@ -556,8 +569,8 @@ a:hover {
 	clear: both;
 }
 
-[data-align="full"] .wp-block-cover, [data-align="full"]
-.wp-block-cover-image {
+[data-align=full] .wp-block-cover,
+[data-align=full] .wp-block-cover-image {
 	margin-top: 0;
 	margin-bottom: 0;
 }
@@ -1669,7 +1682,7 @@ dt {
 	font-weight: bold;
 }
 
-[data-align="full"] .wp-block-media-text {
+[data-align=full] .wp-block-media-text {
 	margin-top: 0;
 	margin-bottom: 0;
 }
