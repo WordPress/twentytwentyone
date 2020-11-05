@@ -108,7 +108,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 				array(
 					'type'    => 'radio',
 					'section' => 'excerpt_settings',
-					'label'   => esc_html__( 'On Archive pages, posts show:', 'twentytwentyone' ),
+					'label'   => esc_html__( 'On Archive Pages, posts show:', 'twentytwentyone' ),
 					'choices' => array(
 						'excerpt' => esc_html__( 'Summary', 'twentytwentyone' ),
 						'full'    => esc_html__( 'Full text', 'twentytwentyone' ),
