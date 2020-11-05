@@ -164,7 +164,7 @@ class Twenty_Twenty_One_Dark_Mode {
 			array(
 				'type'            => 'checkbox',
 				'section'         => 'colors',
-				'label'           => esc_html_x( 'Respect visitor\'s device Dark Mode settings.', 'Label for customizer control','twentytwentyone' ),
+				'label'           => esc_html_x( 'Respect visitor\'s device Dark Mode settings.', 'Label for customizer control', 'twentytwentyone' ),
 				'description'     => esc_html_x( 'Dark Mode is a device setting. If a visitor to your site requests it, your site will be shown with a dark background and light text.', 'Customizer option description', 'twentytwentyone' ),
 				'active_callback' => function( $value ) {
 					return 127 < Twenty_Twenty_One_Custom_Colors::get_relative_luminance_from_hex( get_theme_mod( 'background_color', 'D1E4DD' ) );
