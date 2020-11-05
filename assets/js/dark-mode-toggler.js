@@ -39,6 +39,5 @@ function darkModeInitialLoad() {
 		document.body.classList.remove( 'is-dark-theme' );
 	}
 }
-console.log('lalalaa');
 
 darkModeInitialLoad();
