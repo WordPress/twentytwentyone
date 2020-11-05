@@ -556,8 +556,8 @@ a:hover {
 	clear: both;
 }
 
-[data-align="full"] .wp-block-cover, [data-align="full"]
-.wp-block-cover-image {
+[data-align=full] .wp-block-cover,
+[data-align=full] .wp-block-cover-image {
 	margin-top: 0;
 	margin-bottom: 0;
 }
@@ -917,6 +917,11 @@ a:hover {
 
 .wp-block-group.has-background {
 	padding: 30px;
+}
+
+[data-align=full] .wp-block-group.has-background {
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .wp-block-group.is-style-twentytwentyone-border {
@@ -1669,7 +1674,7 @@ dt {
 	font-weight: bold;
 }
 
-[data-align="full"] .wp-block-media-text {
+[data-align=full] .wp-block-media-text {
 	margin-top: 0;
 	margin-bottom: 0;
 }
