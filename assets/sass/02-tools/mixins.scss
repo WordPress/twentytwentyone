@@ -62,7 +62,7 @@
 		outline-offset: -6px;
 		outline: 2px dotted currentColor;
 
-		.has-background-dark & {
+		.is-dark-theme & {
 			color: var(--button--color-background);
 		}
 

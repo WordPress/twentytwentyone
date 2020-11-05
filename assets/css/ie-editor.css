@@ -339,11 +339,11 @@ a:hover {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.has-background-dark .site a:focus {
+.is-dark-theme .site a:focus {
 	color: #d1e4dd;
 }
 
-.has-background-dark .site a:focus .meta-nav {
+.is-dark-theme .site a:focus .meta-nav {
 	color: #d1e4dd;
 }
 
@@ -416,7 +416,7 @@ a:hover {
 	outline: 2px dotted currentColor;
 }
 
-.has-background-dark .wp-block-button__link:focus {
+.is-dark-theme .wp-block-button__link:focus {
 	color: #39414d;
 }
 
@@ -552,6 +552,12 @@ a:hover {
 .wp-block-cover:not(.alignwide):not(.alignfull),
 .wp-block-cover-image:not(.alignwide):not(.alignfull) {
 	clear: both;
+}
+
+[data-align=full] .wp-block-cover,
+[data-align=full] .wp-block-cover-image {
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .wp-block-cover .wp-block-cover__inner-container,
@@ -867,7 +873,7 @@ a:hover {
 	outline: 2px dotted currentColor;
 }
 
-.has-background-dark .wp-block-file .wp-block-file__button:focus {
+.is-dark-theme .wp-block-file .wp-block-file__button:focus {
 	color: #39414d;
 }
 
@@ -909,6 +915,11 @@ a:hover {
 
 .wp-block-group.has-background {
 	padding: 30px;
+}
+
+[data-align=full] .wp-block-group.has-background {
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .wp-block-group.is-style-twentytwentyone-border {
@@ -1661,6 +1672,11 @@ dt {
 	font-weight: bold;
 }
 
+[data-align=full] .wp-block-media-text {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 .wp-block-media-text .wp-block-media-text__content {
 	padding: 25px;
 }
@@ -2268,7 +2284,7 @@ pre.wp-block-preformatted {
 	outline: 2px dotted currentColor;
 }
 
-.has-background-dark .wp-block-search .wp-block-search__button:focus {
+.is-dark-theme .wp-block-search .wp-block-search__button:focus {
 	color: #39414d;
 }
 
@@ -3108,12 +3124,6 @@ pre.wp-block-verse {
 .wp-block[data-align=full],
 .wp-block.alignfull {
 	max-width: none;
-}
-
-.block-editor-block-list__layout:not(.edit-site-block-editor__block-list) .wp-block[data-align=full] > [data-block],
-.block-editor-block-list__layout:not(.edit-site-block-editor__block-list) .wp-block.alignfull > [data-block] {
-	margin-top: 0;
-	margin-bottom: 0;
 }
 
 .alignleft {

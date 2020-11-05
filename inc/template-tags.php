@@ -74,7 +74,7 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 		if ( ! is_single() ) {
 
 			if ( is_sticky() ) {
-				echo '<p>' . esc_html__( 'Featured post', 'twentytwentyone' ) . '</p>';
+				echo '<p>' . esc_html_x( 'Featured post', 'Label for sticky posts', 'twentytwentyone' ) . '</p>';
 			}
 
 			$post_format = get_post_format();
