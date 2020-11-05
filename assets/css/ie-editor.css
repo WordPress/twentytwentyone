@@ -435,16 +435,16 @@ a:hover {
 /**
  * Block Options
  */
-.wp-block.wp-block-buttons {
+[data-block].wp-block-buttons {
 	margin-top: 0;
 	margin-bottom: 0;
 }
 
-.wp-block.wp-block-buttons .wp-block-button:first-child {
+[data-block].wp-block-buttons .wp-block-button:first-child {
 	margin-top: 30px;
 }
 
-.wp-block.wp-block-buttons .wp-block-button:last-child {
+[data-block].wp-block-buttons .wp-block-button:last-child {
 	margin-bottom: 30px;
 }
 

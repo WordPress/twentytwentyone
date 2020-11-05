@@ -9,7 +9,7 @@
 
 // The parent container does not need outer margins applied.
 // The children should all have top and bottom margins.
-.wp-block.wp-block-buttons {
+[data-block].wp-block-buttons {
 	margin-top: 0;
 	margin-bottom: 0;
 
