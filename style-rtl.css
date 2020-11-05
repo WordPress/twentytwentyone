@@ -5359,6 +5359,12 @@ h1.page-title {
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
+@media only screen and (max-width: 481px) {
+
+	.widget-area {
+		margin-top: var(--global--spacing-vertical);
+	}
+}
 
 .widget-area ul {
 	list-style-type: none;
