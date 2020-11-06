@@ -4007,9 +4007,16 @@ a.custom-logo-link {
 	color: var(--footer--color-link);
 }
 
-.site-footer > .site-info a:hover,
+.site-footer > .site-info a:hover {
+	color: var(--footer--color-link-hover);
+}
+
 .site-footer > .site-info a:focus {
 	color: var(--footer--color-link-hover);
+}
+
+.is-dark-theme .site-footer > .site-info a:focus {
+	color: var(--wp--style--color--link, var(--global--color-background));
 }
 
 .singular .entry-header {
@@ -5126,6 +5133,10 @@ h1.page-title {
 	text-decoration-style: dotted;
 	text-decoration-skip-ink: none;
 	color: var(--footer--color-link-hover);
+}
+
+.is-dark-theme .footer-navigation-wrapper li a:focus .svg-icon {
+	fill: var(--wp--style--color--link, var(--global--color-background));
 }
 
 .footer-navigation-wrapper li .svg-icon {
