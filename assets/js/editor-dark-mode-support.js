@@ -1,4 +1,4 @@
-/* global ajaxurl, XMLHttpRequest, ResizeObserver, darkModeInitialLoad, setTimeout */
+/* global ajaxurl, XMLHttpRequest, darkModeInitialLoad, setTimeout */
 
 // Check the body class to determine if we want to add the toggler and handle dark-mode or not.
 if ( document.body.classList.contains( 'twentytwentyone-supports-dark-theme' ) ) {
