@@ -45,7 +45,7 @@
 	}
 
 	.wp-admin & {
-		z-index: 99999; /* Necessary for the editor. */
+		display: none;
 	}
 
 	&.fixed-bottom {
