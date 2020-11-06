@@ -40,4 +40,23 @@ function darkModeInitialLoad() {
 	}
 }
 
+function darkModeRepositionTogglerOnScroll() {
+	var prevScroll = window.scrollY || document.documentElement.scrollTop,
+		currentScroll,
+
+		checkScroll = function() {
+			currentScroll = window.scrollY || document.documentElement.scrollTop;
+			if ( currentScroll > prevScroll ) {
+				if ( 250 < currentScroll ) {
+					document.getElementById( 'dark-mode-toggler' ).classList.add( 'hide' );
+				}
+			} else if ( currentScroll < prevScroll ) {
+				document.getElementById( 'dark-mode-toggler' ).classList.remove( 'hide' );
+			}
+			prevScroll = currentScroll;
+		};
+	window.addEventListener( 'scroll', checkScroll );
+}
+
 darkModeInitialLoad();
+darkModeRepositionTogglerOnScroll();

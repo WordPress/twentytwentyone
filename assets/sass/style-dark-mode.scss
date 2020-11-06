@@ -52,6 +52,11 @@
 		position: fixed;
 		bottom: 5px;
 		right: 5px;
+		transition: bottom 0.5s;
+
+		&.hide {
+			bottom: -80px;
+		}
 	}
 
 	&.relative {
