@@ -17,6 +17,11 @@
 
 	&.has-background {
 		padding: var(--global--spacing-vertical);
+
+		[data-align="full"] & {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
 	}
 
 	// Block Styles

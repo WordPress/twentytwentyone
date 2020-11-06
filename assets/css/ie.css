@@ -1436,8 +1436,6 @@ blockquote:before {
 	content: "“";
 	font-size: 1.25rem;
 	line-height: 1.7;
-	position: absolute;
-	left: -12px;
 }
 
 blockquote .wp-block-quote__citation {
@@ -1711,63 +1709,63 @@ input[type=color]:disabled,
 	opacity: 0.7;
 }
 
-.has-background-dark input[type=text] {
+.is-dark-theme input[type=text] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.has-background-dark input[type=email] {
+.is-dark-theme input[type=email] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.has-background-dark input[type=url] {
+.is-dark-theme input[type=url] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.has-background-dark input[type=password] {
+.is-dark-theme input[type=password] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.has-background-dark input[type=search] {
+.is-dark-theme input[type=search] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.has-background-dark input[type=number] {
+.is-dark-theme input[type=number] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.has-background-dark input[type=tel] {
+.is-dark-theme input[type=tel] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.has-background-dark input[type=date] {
+.is-dark-theme input[type=date] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.has-background-dark input[type=month] {
+.is-dark-theme input[type=month] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.has-background-dark input[type=week] {
+.is-dark-theme input[type=week] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.has-background-dark input[type=time] {
+.is-dark-theme input[type=time] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.has-background-dark input[type=datetime] {
+.is-dark-theme input[type=datetime] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.has-background-dark input[type=datetime-local] {
+.is-dark-theme input[type=datetime-local] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.has-background-dark input[type=color] {
+.is-dark-theme input[type=color] {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.has-background-dark .site textarea {
+.is-dark-theme .site textarea {
 	background: rgba(255, 255, 255, 0.9);
 }
 
@@ -1775,7 +1773,7 @@ input[type=search]:focus {
 	outline-offset: -7px;
 }
 
-.has-background-dark input[type=search]:focus {
+.is-dark-theme input[type=search]:focus {
 	outline-color: #d1e4dd;
 }
 
@@ -1808,7 +1806,7 @@ select:focus {
 	outline: 2px dotted #39414d;
 }
 
-.has-background-dark select {
+.is-dark-theme select {
 	background: rgba(255, 255, 255, 0.9) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2328303d'><polygon points='0,0 10,0 5,5'/></svg>") no-repeat;
 	background-position: right 10px top 60%;
 }
@@ -1855,11 +1853,11 @@ License: MIT.
 		opacity: 0.7;
 	}
 
-	.has-background-dark input[type=checkbox] {
+	.is-dark-theme input[type=checkbox] {
 		background: rgba(255, 255, 255, 0.9);
 	}
 
-	.has-background-dark input[type=radio] {
+	.is-dark-theme input[type=radio] {
 		background: rgba(255, 255, 255, 0.9);
 	}
 
@@ -2160,11 +2158,11 @@ a:hover {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.has-background-dark .site a:focus {
+.is-dark-theme .site a:focus {
 	color: #d1e4dd;
 }
 
-.has-background-dark .site a:focus .meta-nav {
+.is-dark-theme .site a:focus .meta-nav {
 	color: #d1e4dd;
 }
 
@@ -2346,23 +2344,23 @@ input[type=reset]:focus,
 	outline: 2px dotted currentColor;
 }
 
-.has-background-dark .site .button:focus {
+.is-dark-theme .site .button:focus {
 	color: #39414d;
 }
 
-.has-background-dark input[type=submit]:focus {
+.is-dark-theme input[type=submit]:focus {
 	color: #39414d;
 }
 
-.has-background-dark input[type=reset]:focus {
+.is-dark-theme input[type=reset]:focus {
 	color: #39414d;
 }
 
-.has-background-dark .wp-block-search__button:focus {
+.is-dark-theme .wp-block-search__button:focus {
 	color: #39414d;
 }
 
-.has-background-dark .wp-block-button .wp-block-button__link:focus {
+.is-dark-theme .wp-block-button .wp-block-button__link:focus {
 	color: #39414d;
 }
 
@@ -2781,6 +2779,12 @@ input[type=reset]:hover {
 	clear: both;
 }
 
+.wp-block-cover.alignfull,
+.wp-block-cover-image.alignfull {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 .wp-block-cover .wp-block-cover__inner-container {
 	color: currentColor;
 	margin-top: 30px;
@@ -3085,7 +3089,7 @@ input[type=reset]:hover {
 	outline: 2px dotted currentColor;
 }
 
-.has-background-dark .wp-block-file .wp-block-file__button:focus {
+.is-dark-theme .wp-block-file .wp-block-file__button:focus {
 	color: #39414d;
 }
 
@@ -3879,6 +3883,11 @@ dd {
    */
 }
 
+.wp-block-media-text.alignfull {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 .wp-block-media-text a:focus img {
 	outline-offset: -1px;
 }
@@ -4669,15 +4678,15 @@ pre.wp-block-preformatted {
 	color: #fff;
 }
 
-.has-background-dark .has-background.has-gray-background-color .wp-block-search button.wp-block-search__button:hover {
+.is-dark-theme .has-background.has-gray-background-color .wp-block-search button.wp-block-search__button:hover {
 	color: #d1e4dd;
 }
 
-.has-background-dark .has-background.has-dark-gray-background-color .wp-block-search button.wp-block-search__button:hover {
+.is-dark-theme .has-background.has-dark-gray-background-color .wp-block-search button.wp-block-search__button:hover {
 	color: #d1e4dd;
 }
 
-.has-background-dark .has-background.has-black-background-color .wp-block-search button.wp-block-search__button:hover {
+.is-dark-theme .has-background.has-black-background-color .wp-block-search button.wp-block-search__button:hover {
 	color: #d1e4dd;
 }
 
@@ -4734,43 +4743,43 @@ pre.wp-block-preformatted {
 	color: #fff;
 }
 
-.has-background-dark .has-background.has-white-background-color .wp-block-search button.wp-block-search__button:hover {
+.is-dark-theme .has-background.has-white-background-color .wp-block-search button.wp-block-search__button:hover {
 	border-color: #d1e4dd;
 	background-color: #d1e4dd;
 	color: #39414d;
 }
 
-.has-background-dark .has-background.has-green-background-color .wp-block-search button.wp-block-search__button:hover {
+.is-dark-theme .has-background.has-green-background-color .wp-block-search button.wp-block-search__button:hover {
 	border-color: #d1e4dd;
 	background-color: #d1e4dd;
 	color: #39414d;
 }
 
-.has-background-dark .has-background.has-blue-background-color .wp-block-search button.wp-block-search__button:hover {
+.is-dark-theme .has-background.has-blue-background-color .wp-block-search button.wp-block-search__button:hover {
 	border-color: #d1e4dd;
 	background-color: #d1e4dd;
 	color: #39414d;
 }
 
-.has-background-dark .has-background.has-purple-background-color .wp-block-search button.wp-block-search__button:hover {
+.is-dark-theme .has-background.has-purple-background-color .wp-block-search button.wp-block-search__button:hover {
 	border-color: #d1e4dd;
 	background-color: #d1e4dd;
 	color: #39414d;
 }
 
-.has-background-dark .has-background.has-red-background-color .wp-block-search button.wp-block-search__button:hover {
+.is-dark-theme .has-background.has-red-background-color .wp-block-search button.wp-block-search__button:hover {
 	border-color: #d1e4dd;
 	background-color: #d1e4dd;
 	color: #39414d;
 }
 
-.has-background-dark .has-background.has-orange-background-color .wp-block-search button.wp-block-search__button:hover {
+.is-dark-theme .has-background.has-orange-background-color .wp-block-search button.wp-block-search__button:hover {
 	border-color: #d1e4dd;
 	background-color: #d1e4dd;
 	color: #39414d;
 }
 
-.has-background-dark .has-background.has-yellow-background-color .wp-block-search button.wp-block-search__button:hover {
+.is-dark-theme .has-background.has-yellow-background-color .wp-block-search button.wp-block-search__button:hover {
 	border-color: #d1e4dd;
 	background-color: #d1e4dd;
 	color: #39414d;
@@ -4807,39 +4816,39 @@ pre.wp-block-preformatted {
 	color: #fff;
 }
 
-.has-background-dark .has-background.has-gray-background-color .wp-block-search.wp-block-search__button-inside button.wp-block-search__button {
+.is-dark-theme .has-background.has-gray-background-color .wp-block-search.wp-block-search__button-inside button.wp-block-search__button {
 	border-color: #d1e4dd;
 	color: #d1e4dd;
 }
 
-.has-background-dark .has-background.has-dark-gray-background-color .wp-block-search.wp-block-search__button-inside button.wp-block-search__button {
+.is-dark-theme .has-background.has-dark-gray-background-color .wp-block-search.wp-block-search__button-inside button.wp-block-search__button {
 	border-color: #d1e4dd;
 	color: #d1e4dd;
 }
 
-.has-background-dark .has-background.has-black-background-color .wp-block-search.wp-block-search__button-inside button.wp-block-search__button {
+.is-dark-theme .has-background.has-black-background-color .wp-block-search.wp-block-search__button-inside button.wp-block-search__button {
 	border-color: #d1e4dd;
 	color: #d1e4dd;
 }
 
-.has-background-dark .has-background.has-gray-background-color .wp-block-search.wp-block-search__button-inside button.wp-block-search__button:hover {
+.is-dark-theme .has-background.has-gray-background-color .wp-block-search.wp-block-search__button-inside button.wp-block-search__button:hover {
 	color: #fff;
 }
 
-.has-background-dark .has-background.has-dark-gray-background-color .wp-block-search.wp-block-search__button-inside button.wp-block-search__button:hover {
+.is-dark-theme .has-background.has-dark-gray-background-color .wp-block-search.wp-block-search__button-inside button.wp-block-search__button:hover {
 	color: #fff;
 }
 
-.has-background-dark .has-background.has-black-background-color .wp-block-search.wp-block-search__button-inside button.wp-block-search__button:hover {
+.is-dark-theme .has-background.has-black-background-color .wp-block-search.wp-block-search__button-inside button.wp-block-search__button:hover {
 	color: #fff;
 }
 
-.has-background-dark .wp-block-search.wp-block-search__button-inside button.wp-block-search__button {
+.is-dark-theme .wp-block-search.wp-block-search__button-inside button.wp-block-search__button {
 	border-color: #d1e4dd;
 	color: #d1e4dd;
 }
 
-.has-background-dark .wp-block-search.wp-block-search__button-inside button.wp-block-search__button:hover {
+.is-dark-theme .wp-block-search.wp-block-search__button-inside button.wp-block-search__button:hover {
 	border-color: #d1e4dd;
 	background-color: #d1e4dd;
 	color: #39414d;
@@ -7744,43 +7753,43 @@ footer {
 	max-width: none;
 }
 
-.is-IE.has-background-dark {
+.is-IE.is-dark-theme {
 	color: #fff;
 }
 
-.is-IE.has-background-dark *,
-.is-IE.has-background-dark a,
-.is-IE.has-background-dark .site-description,
-.is-IE.has-background-dark .entry-title,
-.is-IE.has-background-dark .entry-footer,
-.is-IE.has-background-dark .widget-area,
-.is-IE.has-background-dark .post-navigation .meta-nav,
-.is-IE.has-background-dark .footer-navigation-wrapper li a:link,
-.is-IE.has-background-dark .site-footer > .site-info,
-.is-IE.has-background-dark .site-footer > .site-info a,
-.is-IE.has-background-dark .site-footer > .site-info a:visited {
+.is-IE.is-dark-theme *,
+.is-IE.is-dark-theme a,
+.is-IE.is-dark-theme .site-description,
+.is-IE.is-dark-theme .entry-title,
+.is-IE.is-dark-theme .entry-footer,
+.is-IE.is-dark-theme .widget-area,
+.is-IE.is-dark-theme .post-navigation .meta-nav,
+.is-IE.is-dark-theme .footer-navigation-wrapper li a:link,
+.is-IE.is-dark-theme .site-footer > .site-info,
+.is-IE.is-dark-theme .site-footer > .site-info a,
+.is-IE.is-dark-theme .site-footer > .site-info a:visited {
 	color: #fff;
 }
 
-.is-IE.has-background-dark .sub-menu-toggle svg,
-.is-IE.has-background-dark .sub-menu-toggle path,
-.is-IE.has-background-dark .post-navigation .meta-nav svg,
-.is-IE.has-background-dark .post-navigation .meta-nav path {
+.is-IE.is-dark-theme .sub-menu-toggle svg,
+.is-IE.is-dark-theme .sub-menu-toggle path,
+.is-IE.is-dark-theme .post-navigation .meta-nav svg,
+.is-IE.is-dark-theme .post-navigation .meta-nav path {
 	fill: #fff;
 }
 
-.is-IE.has-background-dark .primary-navigation > div > .menu-wrapper > li > .sub-menu li {
+.is-IE.is-dark-theme .primary-navigation > div > .menu-wrapper > li > .sub-menu li {
 	background: #000;
 }
 @media only screen and (max-width: 481px) {
 
-	.is-IE.has-background-dark.primary-navigation-open .primary-navigation > .primary-menu-container,
-	.is-IE.has-background-dark.primary-navigation-open .menu-button-container {
+	.is-IE.is-dark-theme.primary-navigation-open .primary-navigation > .primary-menu-container,
+	.is-IE.is-dark-theme.primary-navigation-open .menu-button-container {
 		background-color: #000;
 	}
 }
 
-.is-IE.has-background-dark .skip-link:focus {
+.is-IE.is-dark-theme .skip-link:focus {
 	color: #21759b;
 }
 
