@@ -4177,7 +4177,6 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .post-thumbnail .wp-post-image {
 	display: block;
 	width: auto;
-	min-width: var(--responsive--aligndefault-width);
 	max-width: 100%;
 	margin-right: auto;
 	margin-left: auto;
