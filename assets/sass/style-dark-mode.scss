@@ -1,7 +1,7 @@
 /* OS dark theme preference */
 @media only screen {
 
-	html.is-dark-mode {
+	.is-dark-theme.is-dark-theme {
 		--global--color-background: var(--global--color-dark-gray);
 		--global--color-primary: var(--global--color-light-gray);
 		--global--color-secondary: var(--global--color-light-gray);
@@ -15,8 +15,11 @@
 			background-color: var(--global--color-background);
 		}
 
-		.site a:focus {
+		.site a:focus,
+		.site a:focus .meta-nav {
 			background: #000;
+			color: #fff;
+			text-decoration: none;
 		}
 
 		img {
@@ -38,6 +41,10 @@
 		background: var(--button--color-text);
 		color: var(--button--color-background);
 		z-index: 9998;
+
+		.no-js & {
+			display: none;
+		}
 
 		.wp-admin & {
 			z-index: 99999; /* Necessary for the editor. */
