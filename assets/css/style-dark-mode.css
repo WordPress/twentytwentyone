@@ -56,7 +56,7 @@
 	transition: bottom 0.5s;
 }
 
-#dark-mode-toggler.fixed-bottom.hide {
+#dark-mode-toggler.fixed-bottom.hide:not(:focus) {
 	bottom: -80px;
 }
 
