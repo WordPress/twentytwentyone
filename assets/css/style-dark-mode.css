@@ -46,9 +46,7 @@
 }
 
 .wp-admin #dark-mode-toggler {
-	z-index: 99999;
-
-	/* Necessary for the editor. */
+	display: none;
 }
 
 #dark-mode-toggler.fixed-bottom {
