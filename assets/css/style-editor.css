@@ -615,11 +615,15 @@ a:hover {
 }
 
 .wp-block-button.is-style-outline .wp-block-button__link.has-background {
-	background: transparent !important;
+	border-color: var(--button--color-background);
 }
 
 .wp-block-button.is-style-outline .wp-block-button__link.has-background:active,
-.wp-block-button.is-style-outline .wp-block-button__link.has-background:hover,
+.wp-block-button.is-style-outline .wp-block-button__link.has-background:hover {
+	outline-offset: -7px;
+	outline: 2px dotted currentColor;
+}
+
 .wp-block-button.is-style-outline .wp-block-button__link.has-text-color:active,
 .wp-block-button.is-style-outline .wp-block-button__link.has-text-color:hover {
 	color: var(--button--color-background);
@@ -627,6 +631,17 @@ a:hover {
 	background: transparent;
 	outline: 2px dotted currentColor;
 	border: var(--button--border-width) solid currentColor;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link.has-background.has-text-color {
+	border-color: currentColor;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link.has-background.has-text-color:active,
+.wp-block-button.is-style-outline .wp-block-button__link.has-background.has-text-color:hover {
+	outline-offset: -7px;
+	outline: 2px dotted currentColor;
+	border-color: currentColor;
 }
 
 .wp-block-button.is-style-squared {

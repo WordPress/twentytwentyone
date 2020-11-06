@@ -484,23 +484,13 @@ a:hover {
 }
 
 .wp-block-button.is-style-outline .wp-block-button__link.has-background {
-	background: transparent !important;
+	border-color: #39414d;
 }
 
-.wp-block-button.is-style-outline .wp-block-button__link.has-background:active {
-	color: #39414d;
-	outline-offset: -7px;
-	background: transparent;
-	outline: 2px dotted currentColor;
-	border: 3px solid currentColor;
-}
-
+.wp-block-button.is-style-outline .wp-block-button__link.has-background:active,
 .wp-block-button.is-style-outline .wp-block-button__link.has-background:hover {
-	color: #39414d;
 	outline-offset: -7px;
-	background: transparent;
 	outline: 2px dotted currentColor;
-	border: 3px solid currentColor;
 }
 
 .wp-block-button.is-style-outline .wp-block-button__link.has-text-color:active {
@@ -517,6 +507,17 @@ a:hover {
 	background: transparent;
 	outline: 2px dotted currentColor;
 	border: 3px solid currentColor;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link.has-background.has-text-color {
+	border-color: currentColor;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link.has-background.has-text-color:active,
+.wp-block-button.is-style-outline .wp-block-button__link.has-background.has-text-color:hover {
+	outline-offset: -7px;
+	outline: 2px dotted currentColor;
+	border-color: currentColor;
 }
 
 .wp-block-button.is-style-squared {

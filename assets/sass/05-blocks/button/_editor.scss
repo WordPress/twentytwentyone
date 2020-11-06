@@ -72,12 +72,16 @@
 				border: var(--button--border-width) solid var(--button--color-background);
 			}
 
-			// Override the editors inline background color for the outline button.
 			&.has-background {
-				background: transparent !important;
+				border-color: var(--button--color-background);
+
+				&:active,
+				&:hover {
+					outline-offset: -7px;
+					outline: 2px dotted currentColor;
+				}
 			}
 
-			&.has-background,
 			&.has-text-color {
 
 				&:active,
@@ -87,6 +91,17 @@
 					background: transparent;
 					outline: 2px dotted currentColor;
 					border: var(--button--border-width) solid currentColor;
+				}
+			}
+
+			&.has-background.has-text-color {
+				border-color: currentColor;
+
+				&:active,
+				&:hover {
+					outline-offset: -7px;
+					outline: 2px dotted currentColor;
+					border-color: currentColor;
 				}
 			}
 		}

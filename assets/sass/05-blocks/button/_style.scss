@@ -68,10 +68,14 @@ input[type="reset"],
 	&.is-style-outline {
 
 		.wp-block-button__link {
-			background: transparent;
 			padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 
+			&:not(.has-background) {
+				background: transparent;
+			}
+
 			&:not(.has-background):not(.has-text-color) {
+				background: transparent;
 				color: var(--button--color-background);
 				border: var(--button--border-width) solid currentColor;
 
@@ -91,8 +95,17 @@ input[type="reset"],
 
 			}
 
-			&.has-background,
-			&.has-text-color {
+			&.has-background {
+
+				&:active,
+				&:hover,
+				&:focus {
+					outline-offset: -7px;
+					outline: 2px dotted currentColor;
+				}
+			}
+
+			&.has-text-color:not(.has-background) {
 				border: var(--button--border-width) solid currentColor;
 
 				&:active,
@@ -102,6 +115,18 @@ input[type="reset"],
 					background: transparent;
 					outline: 2px dotted currentColor;
 					border: var(--button--border-width) solid currentColor;
+				}
+			}
+
+			&.has-background.has-text-color {
+				border-color: currentColor;
+
+				&:active,
+				&:hover,
+				&:focus {
+					outline-offset: -7px;
+					outline: 2px dotted currentColor;
+					border-color: currentColor;
 				}
 			}
 		}
