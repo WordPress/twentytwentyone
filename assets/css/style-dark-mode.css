@@ -8,6 +8,7 @@
 	--button--color-text-active: var(--global--color-secondary);
 	--button--color-background: var(--global--color-secondary);
 	--button--color-background-active: var(--global--color-background);
+	--global--color-border: #ffffff8c;
 }
 
 .is-dark-theme.is-dark-theme body {
