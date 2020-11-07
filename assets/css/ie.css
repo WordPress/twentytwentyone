@@ -5706,6 +5706,10 @@ a.custom-logo-link {
 	color: #28303d;
 }
 
+.is-dark-theme .site-footer > .site-info a:focus {
+	color: #d1e4dd;
+}
+
 .singular .entry-header {
 	border-bottom: 3px solid #28303d;
 	padding-bottom: 60px;
@@ -7075,6 +7079,10 @@ h1.page-title {
 	text-decoration-style: dotted;
 	text-decoration-skip-ink: none;
 	color: #28303d;
+}
+
+.is-dark-theme .footer-navigation-wrapper li a:focus .svg-icon {
+	fill: #d1e4dd;
 }
 
 .footer-navigation-wrapper li .svg-icon {
