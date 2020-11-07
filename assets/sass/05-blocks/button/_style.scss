@@ -51,15 +51,36 @@ input[type="reset"],
 				}
 			}
 
-			&.has-background,
 			&.has-text-color {
 
 				&:active,
-				&:hover,
-				&:focus {
-					outline-offset: -7px;
-					outline: 2px dotted currentColor;
+				&:hover {
+					background: transparent;
+					color: var(--button--color-background) !important;
+					border-color: var(--button--color-background);
 				}
+			}
+
+			&.has-background {
+
+				&:active,
+				&:hover {
+					background: transparent !important;
+				}
+			}
+
+			&.has-background.has-text-color {
+
+				&:active,
+				&:hover {
+					color: var(--button--color-background) !important;
+					background: transparent !important;
+				}
+			}
+
+			&:focus {
+				background: var(--button--color-background);
+				color: var(--button--color-text);
 			}
 		}
 	}
@@ -68,10 +89,14 @@ input[type="reset"],
 	&.is-style-outline {
 
 		.wp-block-button__link {
-			background: transparent;
 			padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 
+			&:not(.has-background) {
+				background: transparent;
+			}
+
 			&:not(.has-background):not(.has-text-color) {
+				background: transparent;
 				color: var(--button--color-background);
 				border: var(--button--border-width) solid currentColor;
 
@@ -79,29 +104,30 @@ input[type="reset"],
 				&:hover {
 					background-color: var(--button--color-background);
 					color: var(--button--color-text);
-					border: var(--button--border-width) solid var(--button--color-background);
+					border-color: var(--button--color-background);
 				}
-
-				&:focus {
-					outline-offset: -7px;
-					background: transparent;
-					outline: 2px dotted var(--button--color-background);
-					color: var(--button--color-background);
-				}
-
 			}
 
-			&.has-background,
-			&.has-text-color {
-				border: var(--button--border-width) solid currentColor;
+			&.has-text-color:not(.has-background) {
+				border-color: currentColor;
+			}
 
-				&:active,
-				&:hover,
+			&.has-background.has-text-color {
+				border-color: currentColor;
+
 				&:focus {
-					outline-offset: -7px;
-					background: transparent;
-					outline: 2px dotted currentColor;
-					border: var(--button--border-width) solid currentColor;
+					color: var(--button--color-background);
+				}
+			}
+
+			&:active,
+			&:hover {
+				color: var(--button--color-text) !important;
+				border-color: var(--button--color-background);
+				background: var(--button--color-background);
+
+				&.has-text-color {
+					border-color: var(--button--color-background);
 				}
 			}
 		}

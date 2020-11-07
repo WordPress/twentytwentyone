@@ -43,13 +43,30 @@
 				}
 			}
 
-			&.has-background,
 			&.has-text-color {
 
 				&:active,
 				&:hover {
-					outline-offset: -7px;
-					outline: 2px dotted currentColor;
+					background: transparent;
+					color: var(--button--color-background) !important;
+					border-color: var(--button--color-background);
+				}
+			}
+
+			&.has-background {
+
+				&:active,
+				&:hover {
+					background: transparent !important;
+				}
+			}
+
+			&.has-background.has-text-color {
+
+				&:active,
+				&:hover {
+					color: var(--button--color-background) !important;
+					background: transparent !important;
 				}
 			}
 		}
@@ -59,7 +76,6 @@
 	&.is-style-outline {
 
 		.wp-block-button__link {
-
 			color: var(--button--color-background);
 			background: transparent;
 			border: var(--button--border-width) solid currentColor;
@@ -69,24 +85,25 @@
 			&:hover {
 				background-color: var(--button--color-background);
 				color: var(--button--color-text);
-				border: var(--button--border-width) solid var(--button--color-background);
+				border-color: var(--button--color-background);
 			}
 
-			// Override the editors inline background color for the outline button.
 			&.has-background {
-				background: transparent !important;
-			}
-
-			&.has-background,
-			&.has-text-color {
+				border-color: var(--button--color-background);
 
 				&:active,
 				&:hover {
-					color: var(--button--color-background);
-					outline-offset: -7px;
-					background: transparent;
-					outline: 2px dotted currentColor;
-					border: var(--button--border-width) solid currentColor;
+					background-color: var(--button--color-background) !important;
+				}
+			}
+
+			&.has-text-color {
+				border-color: currentColor;
+
+				&:active,
+				&:hover {
+					color: var(--button--color-text) !important;
+					border-color: var(--button--color-background);
 				}
 			}
 		}
@@ -96,11 +113,6 @@
 	&.is-style-squared {
 		border-radius: 0;
 	}
-}
-
-.is-selected.is-style-outline .wp-block-button__link:hover {
-	background-color: transparent;
-	color: var(--button--color-background);
 }
 
 .is-style-outline .wp-block-button__link[style*="radius"],
