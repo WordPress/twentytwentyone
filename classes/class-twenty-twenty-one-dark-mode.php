@@ -147,11 +147,6 @@ class Twenty_Twenty_One_Dark_Mode {
 			$colors_section->description = __( 'To access the Dark Mode settings, select a light background color.', 'twentytwentyone' ) . '<br><a href="https://wordpress.org/support/article/twenty-twenty-one/">' . __( 'Learn more about Dark Mode.', 'twentytwentyone' ) . '</a>';
 		}
 
-		$background_color_control = $wp_customize->get_control( 'background_color' );
-		if ( is_object( $background_color_control ) ) {
-			$background_color_control->description = esc_html__( 'Selecting a dark background-color will disable the ability to switch between dark and light schemes', 'twentytwentyone' );
-		}
-
 		$wp_customize->add_setting(
 			'respect_user_color_preference',
 			array(
