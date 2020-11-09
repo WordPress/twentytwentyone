@@ -126,14 +126,6 @@ class Twenty_Twenty_One_Dark_Mode {
 			'1.0.0',
 			true
 		);
-
-		wp_localize_script(
-			'twentytwentyone-customize-controls',
-			'backgroundColorNotice',
-			array(
-				'message' => esc_html__( 'Changes will only be visible if Dark Mode is "Off" in the preview.', 'twentytwentyone' ),
-			)
-		);
 	}
 
 	/**
@@ -153,6 +145,11 @@ class Twenty_Twenty_One_Dark_Mode {
 		if ( is_object( $colors_section ) ) {
 			$colors_section->title       = __( 'Colors & Dark Mode', 'twentytwentyone' );
 			$colors_section->description = __( 'To access the Dark Mode settings, select a light background color.', 'twentytwentyone' ) . '<br><a href="https://wordpress.org/support/article/twenty-twenty-one/">' . __( 'Learn more about Dark Mode.', 'twentytwentyone' ) . '</a>';
+		}
+
+		$background_color_control = $wp_customize->get_control( 'background_color' );
+		if ( is_object( $background_color_control ) ) {
+			$background_color_control->description = esc_html__( 'Selecting a dark background-color will disable the ability to switch between dark and light schemes', 'twentytwentyone' );
 		}
 
 		$wp_customize->add_setting(
