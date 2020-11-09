@@ -40,7 +40,7 @@ class Twenty_Twenty_One_Dark_Mode {
 		add_filter( 'admin_body_class', array( $this, 'admin_body_classes' ) );
 
 		// Add the switch on the frontend & customizer.
-		add_action( 'get_template_part_template-parts/header/site-nav', array( $this, 'the_switch' ) );
+		add_action( 'wp_footer', array( $this, 'the_switch' ) );
 
 		// Add the switch in the editor.
 		add_action( 'wp_ajax_tt1_dark_mode_editor_switch', array( $this, 'editor_ajax_callback' ) );
