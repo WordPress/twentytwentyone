@@ -439,7 +439,7 @@ function twenty_twenty_one_get_attachment_image_attributes( $attr, $attachment, 
 
 		// Add style.
 		$attr['style'] = isset( $attr['style'] ) ? $attr['style'] : '';
-		$attr['style'] = 'width:100%;height:' . round( 100 * $height / $width, 2 ) . '%;' . $attr['style'];
+		$attr['style'] = 'width:100%;height:' . round( 100 * $height / $width, 2 ) . '%;max-width:' . $width . 'px;' . $attr['style'];
 	}
 
 	return $attr;

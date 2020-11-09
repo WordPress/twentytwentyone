@@ -206,6 +206,7 @@
 		position: relative;
 
 		@include media(mobile-only) {
+			padding-bottom: 100px;
 
 			ul {
 				padding-left: 0;

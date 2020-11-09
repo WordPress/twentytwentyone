@@ -11,13 +11,17 @@
 				stylesheet,
 				styles;
 
-			// Modify the body class depending on whether this is a dark background or not.
+			// Modify the html & body classes depending on whether this is a dark background or not.
 			if ( isDark ) {
 				document.body.classList.add( 'is-dark-theme' );
 				document.documentElement.classList.add( 'is-dark-theme' );
+				document.documentElement.classList.remove( 'respect-color-scheme-preference' );
 			} else {
 				document.body.classList.remove( 'is-dark-theme' );
 				document.documentElement.classList.remove( 'is-dark-theme' );
+				if ( wp.customize( 'respect_user_color_preference' ).get() ) {
+					document.documentElement.classList.add( 'respect-color-scheme-preference' );
+				}
 			}
 
 			// Toggle the white background class.
