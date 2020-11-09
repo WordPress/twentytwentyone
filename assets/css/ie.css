@@ -5653,6 +5653,12 @@ a.custom-logo-link {
 .no-widgets .site-footer {
 	margin-top: 180px;
 }
+@media only screen and (max-width: 481px) {
+
+	.no-widgets .site-footer {
+		margin-top: 30px;
+	}
+}
 
 .site-footer > .site-info {
 	padding-top: 30px;

@@ -3968,6 +3968,12 @@ a.custom-logo-link {
 .no-widgets .site-footer {
 	margin-top: calc(6 * var(--global--spacing-vertical));
 }
+@media only screen and (max-width: 481px) {
+
+	.no-widgets .site-footer {
+		margin-top: var(--global--spacing-vertical);
+	}
+}
 
 .site-footer > .site-info {
 	padding-top: var(--global--spacing-vertical);
