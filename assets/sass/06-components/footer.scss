@@ -47,9 +47,16 @@
 			color: var(--footer--color-link);
 		}
 
-		&:hover,
+		&:hover {
+			color: var(--footer--color-link-hover);
+		}
+
 		&:focus {
 			color: var(--footer--color-link-hover);
+
+			.is-dark-theme & {
+				color: var(--wp--style--color--link, var(--global--color-background));
+			}
 		}
 	}
 }

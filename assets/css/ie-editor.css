@@ -206,8 +206,6 @@ blockquote:before {
 	content: "“";
 	font-size: 1.25rem;
 	line-height: 1.7;
-	position: absolute;
-	left: -12px;
 }
 
 blockquote .wp-block-quote__citation {
@@ -341,11 +339,11 @@ a:hover {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.has-background-dark .site a:focus {
+.is-dark-theme .site a:focus {
 	color: #d1e4dd;
 }
 
-.has-background-dark .site a:focus .meta-nav {
+.is-dark-theme .site a:focus .meta-nav {
 	color: #d1e4dd;
 }
 
@@ -418,7 +416,7 @@ a:hover {
 	outline: 2px dotted currentColor;
 }
 
-.has-background-dark .wp-block-button__link:focus {
+.is-dark-theme .wp-block-button__link:focus {
 	color: #39414d;
 }
 
@@ -435,6 +433,19 @@ a:hover {
 /**
  * Block Options
  */
+[data-block].wp-block-buttons {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+[data-block].wp-block-buttons .wp-block-button:first-child {
+	margin-top: 30px;
+}
+
+[data-block].wp-block-buttons .wp-block-button:last-child {
+	margin-bottom: 30px;
+}
+
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-background):not(.has-text-color):active {
 	color: #39414d;
 	background-color: #d1e4dd;
@@ -875,7 +886,7 @@ a:hover {
 	outline: 2px dotted currentColor;
 }
 
-.has-background-dark .wp-block-file .wp-block-file__button:focus {
+.is-dark-theme .wp-block-file .wp-block-file__button:focus {
 	color: #39414d;
 }
 
@@ -2286,7 +2297,7 @@ pre.wp-block-preformatted {
 	outline: 2px dotted currentColor;
 }
 
-.has-background-dark .wp-block-search .wp-block-search__button:focus {
+.is-dark-theme .wp-block-search .wp-block-search__button:focus {
 	color: #39414d;
 }
 

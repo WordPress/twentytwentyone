@@ -81,7 +81,7 @@
 				border-color: var(--global--color-white);
 				color: var(--global--color-white);
 
-				.has-background-dark & {
+				.is-dark-theme & {
 					color: var(--button--color-text);
 				}
 			}
@@ -102,7 +102,7 @@
 				border-color: var(--form--border-color);
 				color: var(--global--color-white);
 
-				.has-background-dark & {
+				.is-dark-theme & {
 					border-color: var(--button--color-text);
 					background-color: var(--button--color-text);
 					color: var(--button--color-background);
@@ -133,7 +133,7 @@
 					color: var(--global--color-white);
 				}
 
-				.has-background-dark & {
+				.is-dark-theme & {
 					border-color: var(--button--color-text);
 					color: var(--button--color-text);
 
@@ -143,7 +143,7 @@
 				}
 			}
 
-			.has-background-dark & {
+			.is-dark-theme & {
 				border-color: var(--button--color-text);
 				color: var(--button--color-text);
 

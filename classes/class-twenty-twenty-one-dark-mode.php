@@ -62,10 +62,10 @@ class Twenty_Twenty_One_Dark_Mode {
 		$background_color            = get_theme_mod( 'background_color', 'D1E4DD' );
 		$should_respect_color_scheme = get_theme_mod( 'respect_user_color_preference', false );
 		if ( $should_respect_color_scheme && Twenty_Twenty_One_Custom_Colors::get_relative_luminance_from_hex( $background_color ) > 127 ) {
-			// Add dark mode variable overrides.
+			// Add Dark Mode variable overrides.
 			wp_add_inline_style(
 				'twenty-twenty-one-custom-color-overrides',
-				'html.is-dark-mode .editor-styles-wrapper { --global--color-background: var(--global--color-dark-gray); --global--color-primary: var(--global--color-light-gray); --global--color-secondary: var(--global--color-light-gray); }'
+				'.is-dark-theme.is-dark-theme .editor-styles-wrapper { --global--color-background: var(--global--color-dark-gray); --global--color-primary: var(--global--color-light-gray); --global--color-secondary: var(--global--color-light-gray); }'
 			);
 		}
 		wp_enqueue_script(
@@ -131,7 +131,7 @@ class Twenty_Twenty_One_Dark_Mode {
 			'twentytwentyone-customize-controls',
 			'backgroundColorNotice',
 			array(
-				'message' => esc_html__( 'Changes will only be visible if Dark Mode is "Off" in the preview', 'twentytwentyone' ),
+				'message' => esc_html__( 'Changes will only be visible if Dark Mode is "Off" in the preview.', 'twentytwentyone' ),
 			)
 		);
 	}
@@ -329,7 +329,7 @@ https://wordpress.org/support/article/twenty-twenty-one/">Learn more about Dark 
 				.components-editor-notices__pinned ~ .edit-post-visual-editor #dark-mode-toggler {
 					z-index: 20;
 				}
-				html.is-dark-mode #dark-mode-toggler:not(:hover):not(:focus) {
+				.is-dark-theme.is-dark-theme #dark-mode-toggler:not(:hover):not(:focus) {
 					color: var(--global--color-primary);
 				}
 				@media only screen and (max-width: 782px) {

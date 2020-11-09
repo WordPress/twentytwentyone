@@ -1,5 +1,5 @@
 /* OS dark theme preference */
-html.is-dark-mode {
+.is-dark-theme.is-dark-theme {
 	--global--color-background: var(--global--color-dark-gray);
 	--global--color-primary: var(--global--color-light-gray);
 	--global--color-secondary: var(--global--color-light-gray);
@@ -10,15 +10,18 @@ html.is-dark-mode {
 	--button--color-background-active: var(--global--color-background);
 }
 
-html.is-dark-mode body {
+.is-dark-theme.is-dark-theme body {
 	background-color: var(--global--color-background);
 }
 
-html.is-dark-mode .site a:focus {
+.is-dark-theme.is-dark-theme .site a:focus,
+.is-dark-theme.is-dark-theme .site a:focus .meta-nav {
 	background: #000;
+	color: #fff;
+	text-decoration: none;
 }
 
-html.is-dark-mode img {
+.is-dark-theme.is-dark-theme img {
 	filter: brightness(0.85) contrast(1.1);
 }
 
@@ -43,15 +46,18 @@ html.is-dark-mode img {
 }
 
 .wp-admin #dark-mode-toggler {
-	z-index: 99999;
-
-	/* Necessary for the editor. */
+	display: none;
 }
 
 #dark-mode-toggler.fixed-bottom {
 	position: fixed;
 	bottom: 5px;
 	right: 5px;
+	transition: bottom 0.5s;
+}
+
+#dark-mode-toggler.fixed-bottom.hide:not(:focus) {
+	bottom: -80px;
 }
 
 #dark-mode-toggler.relative {
