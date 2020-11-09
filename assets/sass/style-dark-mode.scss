@@ -10,10 +10,7 @@
 		--button--color-text-active: var(--global--color-secondary);
 		--button--color-background: var(--global--color-secondary);
 		--button--color-background-active: var(--global--color-background);
-
-		body {
-			background-color: var(--global--color-background);
-		}
+		--global--color-border: #ffffff8c; //55% opacity
 
 		.site a:focus,
 		.site a:focus .meta-nav {
@@ -25,6 +22,10 @@
 		img {
 			filter: brightness(.85) contrast(1.1);
 		}
+	}
+
+	.respect-color-scheme-preference.is-dark-theme body {
+		background-color: var(--global--color-background);
 	}
 
 	#dark-mode-toggler {
@@ -47,13 +48,18 @@
 		}
 
 		.wp-admin & {
-			z-index: 99999; /* Necessary for the editor. */
+			display: none;
 		}
 
 		&.fixed-bottom {
 			position: fixed;
 			bottom: 5px;
 			right: 5px;
+			transition: bottom 0.5s;
+
+			&.hide:not(:focus) {
+				bottom: -80px;
+			}
 		}
 
 		&.relative {
@@ -77,7 +83,6 @@
 			~ nav {
 
 				body:not(.primary-navigation-open) & {
-
 					@media only screen and (max-width: 481px) {
 						top: calc(44px + 44px);
 					}
