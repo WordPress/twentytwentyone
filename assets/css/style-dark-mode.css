@@ -8,10 +8,7 @@
 	--button--color-text-active: var(--global--color-secondary);
 	--button--color-background: var(--global--color-secondary);
 	--button--color-background-active: var(--global--color-background);
-}
-
-.is-dark-theme.is-dark-theme body {
-	background-color: var(--global--color-background);
+	--global--color-border: #ffffff8c;
 }
 
 .is-dark-theme.is-dark-theme .site a:focus,
@@ -23,6 +20,10 @@
 
 .is-dark-theme.is-dark-theme img {
 	filter: brightness(0.85) contrast(1.1);
+}
+
+.respect-color-scheme-preference.is-dark-theme body {
+	background-color: var(--global--color-background);
 }
 
 #dark-mode-toggler {

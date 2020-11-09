@@ -8,10 +8,7 @@
 	--button--color-text-active: var(--global--color-secondary);
 	--button--color-background: var(--global--color-secondary);
 	--button--color-background-active: var(--global--color-background);
-
-	body {
-		background-color: var(--global--color-background);
-	}
+	--global--color-border: #ffffff8c; //55% opacity
 
 	.site a:focus,
 	.site a:focus .meta-nav {
@@ -23,6 +20,10 @@
 	img {
 		filter: brightness(.85) contrast(1.1);
 	}
+}
+
+.respect-color-scheme-preference.is-dark-theme body {
+	background-color: var(--global--color-background);
 }
 
 #dark-mode-toggler {

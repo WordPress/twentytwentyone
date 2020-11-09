@@ -2050,6 +2050,36 @@ fieldset input[type=checkbox] + label {
 	opacity: 1;
 }
 
+.post-password-message {
+	font-size: 1.5rem;
+}
+
+.post-password-form {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.post-password-form__label {
+	width: 100%;
+	margin-bottom: 0;
+}
+
+.post-password-form input[type=password] {
+	flex-grow: 1;
+	margin-top: 10px;
+	margin-right: 17px;
+}
+
+.post-password-form__submit {
+	margin-top: 10px;
+}
+@media only screen and (min-width: 592px) {
+
+	.post-password-form__submit {
+		margin-left: 10px;
+	}
+}
+
 img {
 	display: block;
 	height: auto;
@@ -4058,36 +4088,6 @@ p.has-text-color a {
 	color: #28303d;
 }
 
-.post-password-message {
-	font-size: 1.5rem;
-}
-
-.post-password-form {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.post-password-form__label {
-	width: 100%;
-	margin-bottom: 0;
-}
-
-.post-password-form__input {
-	flex-grow: 1;
-	margin-top: 10px;
-	margin-right: 17px;
-}
-
-.post-password-form__submit {
-	margin-top: 10px;
-}
-@media only screen and (min-width: 592px) {
-
-	.post-password-form__submit {
-		margin-left: 10px;
-	}
-}
-
 pre.wp-block-preformatted {
 	overflow-x: auto;
 	white-space: pre;
@@ -5707,6 +5707,10 @@ a.custom-logo-link {
 	color: #28303d;
 }
 
+.is-dark-theme .site-footer > .site-info a:focus {
+	color: #d1e4dd;
+}
+
 .singular .entry-header {
 	border-bottom: 3px solid #28303d;
 	padding-bottom: 60px;
@@ -5919,23 +5923,10 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .post-thumbnail .wp-post-image {
 	display: block;
 	width: auto;
-	min-width: calc(100vw - 30px);
 	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 60px;
-}
-@media only screen and (min-width: 482px) {
-
-	.post-thumbnail .wp-post-image {
-		min-width: min(calc(100vw - 100px), 610px);
-	}
-}
-@media only screen and (min-width: 822px) {
-
-	.post-thumbnail .wp-post-image {
-		min-width: min(calc(100vw - 200px), 610px);
-	}
 }
 
 /**
@@ -7076,6 +7067,10 @@ h1.page-title {
 	text-decoration-style: dotted;
 	text-decoration-skip-ink: none;
 	color: #28303d;
+}
+
+.is-dark-theme .footer-navigation-wrapper li a:focus .svg-icon {
+	fill: #d1e4dd;
 }
 
 .footer-navigation-wrapper li .svg-icon {
