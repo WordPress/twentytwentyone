@@ -149,9 +149,11 @@ class Twenty_Twenty_One_Dark_Mode {
 	 */
 	public function customizer_controls( $wp_customize ) {
 
-		$wp_customize->get_section( 'colors' )->title       = __( 'Colors & Dark Mode', 'twentytwentyone' );
-		$wp_customize->get_section( 'colors' )->description = __( 'To access the Dark Mode settings, select a light background color.', 'twentytwentyone' ) . '<br><a href="https://wordpress.org/support/article/twenty-twenty-one/">' . __( 'Learn more about Dark Mode.', 'twentytwentyone' ) . '</a>';
-
+		$colors_section = $wp_customize->get_section( 'colors' );
+		if ( $colors_section ) {
+			$wp_customize->get_section( 'colors' )->title       = __( 'Colors & Dark Mode', 'twentytwentyone' );
+			$wp_customize->get_section( 'colors' )->description = __( 'To access the Dark Mode settings, select a light background color.', 'twentytwentyone' ) . '<br><a href="https://wordpress.org/support/article/twenty-twenty-one/">' . __( 'Learn more about Dark Mode.', 'twentytwentyone' ) . '</a>';
+		}
 
 		$wp_customize->add_setting(
 			'respect_user_color_preference',
