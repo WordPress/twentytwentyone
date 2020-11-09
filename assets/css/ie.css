@@ -6698,6 +6698,10 @@ h1.page-title {
 }
 @media only screen and (max-width: 481px) {
 
+	.primary-navigation > div > .menu-wrapper {
+		padding-bottom: 100px;
+	}
+
 	.primary-navigation > div > .menu-wrapper ul {
 		padding-left: 0;
 	}
