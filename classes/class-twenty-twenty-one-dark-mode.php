@@ -165,7 +165,8 @@ class Twenty_Twenty_One_Dark_Mode {
 				'type'            => 'checkbox',
 				'section'         => 'colors',
 				'label'           => esc_html__( 'Dark Mode Support', 'twentytwentyone' ),
-				'description'     => __( 'By enabling this option, visitors to your site will be able to switch to Dark Mode. In this mode, the background color of the site will be dark, with light text.', 'twentytwentyone' ),
+				'description'     => __( 'Respect visitor\'s device dark mode settings. <br>Dark mode is a device setting. If a visitor to your site requests it, your site will be shown with a dark background and light text.<br><br>Dark Mode can also be turned on and off with a button.<br><br><a href="
+https://wordpress.org/support/article/twenty-twenty-one/">Learn more about Dark Mode.</a>', 'twentytwentyone' ),
 				'active_callback' => function( $value ) {
 					return 127 < Twenty_Twenty_One_Custom_Colors::get_relative_luminance_from_hex( get_theme_mod( 'background_color', 'D1E4DD' ) );
 				},
