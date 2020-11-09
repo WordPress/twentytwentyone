@@ -126,14 +126,6 @@ class Twenty_Twenty_One_Dark_Mode {
 			'1.0.0',
 			true
 		);
-
-		wp_localize_script(
-			'twentytwentyone-customize-controls',
-			'backgroundColorNotice',
-			array(
-				'message' => esc_html__( 'Changes will only be visible if Dark Mode is "Off" in the preview.', 'twentytwentyone' ),
-			)
-		);
 	}
 
 	/**
