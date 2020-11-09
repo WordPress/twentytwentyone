@@ -2050,6 +2050,36 @@ fieldset input[type=checkbox] + label {
 	opacity: 1;
 }
 
+.post-password-message {
+	font-size: 1.5rem;
+}
+
+.post-password-form {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.post-password-form__label {
+	width: 100%;
+	margin-bottom: 0;
+}
+
+.post-password-form input[type=password] {
+	flex-grow: 1;
+	margin-top: 10px;
+	margin-right: 17px;
+}
+
+.post-password-form__submit {
+	margin-top: 10px;
+}
+@media only screen and (min-width: 592px) {
+
+	.post-password-form__submit {
+		margin-left: 10px;
+	}
+}
+
 img {
 	display: block;
 	height: auto;
@@ -4055,36 +4085,6 @@ p.has-background {
 
 p.has-text-color a {
 	color: #28303d;
-}
-
-.post-password-message {
-	font-size: 1.5rem;
-}
-
-.post-password-form {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.post-password-form__label {
-	width: 100%;
-	margin-bottom: 0;
-}
-
-.post-password-form__input {
-	flex-grow: 1;
-	margin-top: 10px;
-	margin-right: 17px;
-}
-
-.post-password-form__submit {
-	margin-top: 10px;
-}
-@media only screen and (min-width: 592px) {
-
-	.post-password-form__submit {
-		margin-left: 10px;
-	}
 }
 
 pre.wp-block-preformatted {
