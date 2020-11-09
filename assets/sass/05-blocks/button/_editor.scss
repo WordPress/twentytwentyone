@@ -53,20 +53,17 @@
 				}
 			}
 
+			&.has-background.has-text-color,
 			&.has-background {
 
-				&:active,
-				&:hover {
+				&:active {
 					background: transparent !important;
+					color: var(--button--color-text-active);
 				}
-			}
 
-			&.has-background.has-text-color {
-
-				&:active,
 				&:hover {
-					color: var(--button--color-background) !important;
 					background: transparent !important;
+					color: var(--button--color-text-hover);
 				}
 			}
 		}

@@ -468,19 +468,24 @@ a:hover {
 	border-color: #39414d;
 }
 
-.wp-block-button:not(.is-style-outline) .wp-block-button__link.has-background:active,
-.wp-block-button:not(.is-style-outline) .wp-block-button__link.has-background:hover {
+.wp-block-button:not(.is-style-outline) .wp-block-button__link.has-background.has-text-color:active {
 	background: transparent !important;
+	color: #39414d;
 }
 
-.wp-block-button:not(.is-style-outline) .wp-block-button__link.has-background.has-text-color:active {
-	color: #39414d !important;
+.wp-block-button:not(.is-style-outline) .wp-block-button__link.has-background:active {
 	background: transparent !important;
+	color: #39414d;
 }
 
 .wp-block-button:not(.is-style-outline) .wp-block-button__link.has-background.has-text-color:hover {
-	color: #39414d !important;
 	background: transparent !important;
+	color: #39414d;
+}
+
+.wp-block-button:not(.is-style-outline) .wp-block-button__link.has-background:hover {
+	background: transparent !important;
+	color: #39414d;
 }
 
 .wp-block-button.is-style-outline .wp-block-button__link {
@@ -532,12 +537,6 @@ a:hover {
 	border-radius: 0;
 }
 
-/*
-.is-selected.is-style-outline .wp-block-button__link:hover {
-	background-color: transparent;
-	color: var(--button--color-background);
-}
-*/
 .is-style-outline .wp-block-button__link[style*=radius],
 .wp-block-button__link[style*=radius] {
 	outline-offset: 2px;

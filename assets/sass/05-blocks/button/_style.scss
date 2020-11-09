@@ -61,26 +61,23 @@ input[type="reset"],
 				}
 			}
 
+			&.has-background.has-text-color,
 			&.has-background {
 
-				&:active,
-				&:hover {
+				&:active {
 					background: transparent !important;
+					color: var(--button--color-text-active);
 				}
-			}
 
-			&.has-background.has-text-color {
-
-				&:active,
 				&:hover {
-					color: var(--button--color-background) !important;
 					background: transparent !important;
+					color: var(--button--color-text-hover);
 				}
 			}
 
 			&:focus {
-				background: var(--button--color-background);
-				color: var(--button--color-text);
+				background: var(--button--color-background) !important;
+				color: var(--button--color-text) !important;
 			}
 		}
 	}
@@ -99,36 +96,34 @@ input[type="reset"],
 				background: transparent;
 				color: var(--button--color-background);
 				border: var(--button--border-width) solid currentColor;
-
-				&:active,
-				&:hover {
-					background-color: var(--button--color-background);
-					color: var(--button--color-text);
-					border-color: var(--button--color-background);
-				}
 			}
 
-			&.has-text-color:not(.has-background) {
+			&.has-text-color {
 				border-color: currentColor;
+			}
+
+			&.has-background {
+				color: var(--button--color-background);
 			}
 
 			&.has-background.has-text-color {
 				border-color: currentColor;
-
-				&:focus {
-					color: var(--button--color-background);
-				}
 			}
 
 			&:active,
 			&:hover {
 				color: var(--button--color-text) !important;
 				border-color: var(--button--color-background);
-				background: var(--button--color-background);
+				background: var(--button--color-background) !important;
 
 				&.has-text-color {
 					border-color: var(--button--color-background);
 				}
+			}
+
+			&:focus {
+				color: var(--button--color-background) !important;
+				background: transparent !important;
 			}
 		}
 	}
