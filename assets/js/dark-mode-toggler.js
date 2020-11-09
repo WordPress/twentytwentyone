@@ -46,12 +46,13 @@ function darkModeRepositionTogglerOnScroll() {
 
 		checkScroll = function() {
 			currentScroll = window.scrollY || document.documentElement.scrollTop;
-			if ( currentScroll > prevScroll ) {
-				if ( 250 < currentScroll ) {
-					document.getElementById( 'dark-mode-toggler' ).classList.add( 'hide' );
-				}
-			} else if ( currentScroll < prevScroll ) {
+			if (
+				currentScroll + ( window.innerHeight * 1.5 ) > document.body.clientHeight ||
+				currentScroll < prevScroll
+			) {
 				document.getElementById( 'dark-mode-toggler' ).classList.remove( 'hide' );
+			} else if ( currentScroll > prevScroll && 250 < currentScroll ) {
+				document.getElementById( 'dark-mode-toggler' ).classList.add( 'hide' );
 			}
 			prevScroll = currentScroll;
 		};
