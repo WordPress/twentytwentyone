@@ -23,9 +23,9 @@ Take it for a spin! See how Twenty Twenty-One elevates your portfolio, business 
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Privacy ==
-Twenty Twenty-One uses LocalStorage to save the setting when Dark Mode is turned on or off.
-LocalStorage is necesary for the setting to work and is only used when a user toggles the Dark Mode button.
-No data is saved or transferred.
+Twenty Twenty-One uses LocalStorage to save the setting when Dark Mode support is turned on or off.
+LocalStorage is necessary for the setting to work and is only used when a user clicks on the Dark Mode button.
+No data is saved in the database or transferred.
 
 == Changelog ==
 
