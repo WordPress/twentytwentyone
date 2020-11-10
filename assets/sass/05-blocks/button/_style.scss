@@ -82,6 +82,22 @@ input[type="reset"],
 				color: var(--global--color-white);
 			}
 
+			.is-dark-theme & {
+
+				&:not(.has-text-color) {
+
+					&.has-background.has-white-background-color,
+					&.has-background.has-green-background-color,
+					&.has-background.has-blue-background-color,
+					&.has-background.has-purple-background-color,
+					&.has-background.has-red-background-color,
+					&.has-background.has-orange-background-color,
+					&.has-background.has-yellow-background-color {
+						color: var(--global--color-dark-gray);
+					}
+				}
+			}
+
 			&.has-text-color,
 			&.has-background.has-text-color {
 				border-color: currentColor;
