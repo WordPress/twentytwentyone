@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom Colors Class
+ * Dark Mode Class
  *
  * @package WordPress
  * @subpackage Twenty_Twenty_One
@@ -8,7 +8,7 @@
  */
 
 /**
- * This class is in charge of color customization via the Customizer.
+ * This class is in charge of Dark Mode.
  */
 class Twenty_Twenty_One_Dark_Mode {
 
@@ -44,6 +44,9 @@ class Twenty_Twenty_One_Dark_Mode {
 
 		// Add the switch in the editor.
 		add_action( 'wp_ajax_tt1_dark_mode_editor_switch', array( $this, 'editor_ajax_callback' ) );
+
+		// Add the privacy policy content.
+		add_action( 'admin_init', array( $this, 'add_privacy_policy_content' ) );
 	}
 
 	/**
@@ -385,4 +388,24 @@ class Twenty_Twenty_One_Dark_Mode {
 		$this->the_styles();
 		wp_die();
 	}
+
+	/**
+	 * Adds information to the privacy policy.
+	 *
+	 * @access public
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return void
+	 */
+	public function add_privacy_policy_content() {
+		if ( ! function_exists( 'wp_add_privacy_policy_content' ) ) {
+			return;
+		}
+		$content = '<p class="privacy-policy-tutorial">' . __( 'Twenty Twenty-One uses LocalStorage when Dark Mode support is enabled.', 'twentytwentyone' ) . '</p>'
+				. '<strong class="privacy-policy-tutorial">' . __( 'Suggested Text:', 'twentytwentyone' ) . '</strong> '
+				. __( 'This website uses LocalStorage to save the setting when Dark Mode support is turned on or off.<br> LocalStorage is necessary for the setting to work and is only used when a user clicks on the Dark Mode button.<br> No data is saved in the database or transferred.', 'twentytwentyone' );
+		wp_add_privacy_policy_content( 'Twenty Twenty-One', wp_kses_post( wpautop( $content, false ) ) );
+	}
+
 }
