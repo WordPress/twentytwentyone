@@ -152,6 +152,11 @@
 	// Resets the top margin added to the .nav-links items below.
 	.nav-links {
 		margin-top: calc(-1 * var(--global--spacing-vertical));
+
+		a:hover {
+			color: var(--pagination--color-link-hover);
+		}
+
 	}
 
 	.nav-links > * {
@@ -169,10 +174,6 @@
 
 		&:first-child {
 			margin-left: 0;
-		}
-
-		a:hover {
-			color: var(--pagination--color-link-hover);
 		}
 
 		&:last-child {

@@ -7272,6 +7272,14 @@ h1.page-title {
 	margin-top: -30px;
 }
 
+.pagination .nav-links a:hover {
+	color: #28303d;
+}
+
+.comments-pagination .nav-links a:hover {
+	color: #28303d;
+}
+
 .pagination .nav-links > * {
 	color: #28303d;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -7303,14 +7311,6 @@ h1.page-title {
 .pagination .nav-links > *:first-child,
 .comments-pagination .nav-links > *:first-child {
 	margin-left: 0;
-}
-
-.pagination .nav-links > * a:hover {
-	color: #28303d;
-}
-
-.comments-pagination .nav-links > * a:hover {
-	color: #28303d;
 }
 
 .pagination .nav-links > *:last-child,

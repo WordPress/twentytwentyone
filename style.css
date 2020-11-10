@@ -5309,6 +5309,11 @@ h1.page-title {
 	margin-top: calc(-1 * var(--global--spacing-vertical));
 }
 
+.pagination .nav-links a:hover,
+.comments-pagination .nav-links a:hover {
+	color: var(--pagination--color-link-hover);
+}
+
 .pagination .nav-links > *,
 .comments-pagination .nav-links > * {
 	color: var(--pagination--color-text);
@@ -5328,11 +5333,6 @@ h1.page-title {
 .pagination .nav-links > *:first-child,
 .comments-pagination .nav-links > *:first-child {
 	margin-left: 0;
-}
-
-.pagination .nav-links > * a:hover,
-.comments-pagination .nav-links > * a:hover {
-	color: var(--pagination--color-link-hover);
 }
 
 .pagination .nav-links > *:last-child,
