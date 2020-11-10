@@ -141,6 +141,12 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		content: " < " attr(href) "> ";
 	}
 
+	.entry-title a:after {
+		content: "\a < " attr(href) "> ";
+		white-space: pre;
+		font-size: 14pt;
+	}
+
 	.cat-links a:after,
 	.tags-links a:after,
 	.byline a:after,
