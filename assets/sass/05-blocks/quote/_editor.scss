@@ -45,6 +45,7 @@
 		&:before {
 			display: none;
 		}
+
 		// Align the quote left of the text.
 		p:before {
 			content: "\201D";
@@ -89,6 +90,7 @@
 			&:before {
 				display: none;
 			}
+
 			// Align the quote left of the text.
 			p:before {
 				content: "\201D";
@@ -97,7 +99,6 @@
 				line-height: var(--quote--line-height-large);
 				margin-right: 10px;
 			}
-
 		}
 
 		@include media(mobile-only) {
