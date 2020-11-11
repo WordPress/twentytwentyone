@@ -69,7 +69,7 @@ input[type="reset"],
 			&:not(.has-background):not(.has-text-color) {
 				background: transparent;
 				color: var(--button--color-background);
-				border-color: currentColor;
+				border-color: var(--button--color-background);
 			}
 
 			&.has-background:not(.has-text-color) {
