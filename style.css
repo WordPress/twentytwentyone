@@ -3029,6 +3029,14 @@ pre.wp-block-preformatted {
    */
 }
 
+.wp-block-quote:before {
+	content: "“";
+	font-size: var(--quote--font-size);
+	line-height: var(--quote--line-height);
+	position: absolute;
+	left: 13px;
+}
+
 .has-background:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
 [class*=background-color]:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
 [style*=background-color] .wp-block-quote .wp-block-quote__citation,

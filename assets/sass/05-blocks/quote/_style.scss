@@ -1,6 +1,14 @@
 .wp-block-quote {
 	border-left: none;
 
+	&:before {
+		content: "\201C";
+		font-size: var(--quote--font-size);
+		line-height: var(--quote--line-height);
+		position: absolute;
+		left: 8px;
+	}
+
 	.wp-block-quote__citation,
 	cite,
 	footer {
