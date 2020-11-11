@@ -1840,7 +1840,7 @@ input[type=reset]:hover,
 .wp-block-button.is-style-outline .wp-block-button__link:not(.has-background):not(.has-text-color) {
 	background: transparent;
 	color: var(--button--color-background);
-	border-color: currentColor;
+	border-color: var(--button--color-background);
 }
 
 .wp-block-button.is-style-outline .wp-block-button__link.has-background:not(.has-text-color) {
