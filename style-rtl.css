@@ -3012,6 +3012,7 @@ pre.wp-block-preformatted {
 }
 
 .wp-block-quote {
+	border-right: none;
 
 	/**
    * Block Options

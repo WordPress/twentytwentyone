@@ -4240,6 +4240,7 @@ pre.wp-block-preformatted {
 }
 
 .wp-block-quote {
+	border-left: none;
 
 	/**
    * Block Options
