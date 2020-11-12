@@ -3,18 +3,22 @@
 ( function() {
 	// Wait until the customizer has finished loading.
 	wp.customize.bind( 'ready', function() {
-		// Hide the "respect_user_color_preference" setting if the background-color is dark.
+		// Get the checkbox element.
+		var input = wp.customize.control( 'respect_user_color_preference' ).container.find( 'input' )[0];
+		// Disable the "respect_user_color_preference" checkbox if the background-color is dark.
 		if ( 127 > twentytwentyoneGetHexLum( wp.customize( 'background_color' ).get() ) ) {
-			wp.customize.control( 'respect_user_color_preference' ).deactivate();
+			input.setAttribute( 'disabled', 'disabled' );
 		}
 
 		// Handle changes to the background-color.
 		wp.customize( 'background_color', function( setting ) {
 			setting.bind( function( value ) {
 				if ( 127 > twentytwentyoneGetHexLum( value ) ) {
-					wp.customize.control( 'respect_user_color_preference' ).deactivate();
+					// Disable the checkbox if the background-color is dark.
+					input.setAttribute( 'disabled', 'disabled' );
 				} else {
-					wp.customize.control( 'respect_user_color_preference' ).activate();
+					// Enable the checkbox if the background-color is dark.
+					input.removeAttribute( 'disabled' );
 				}
 			} );
 		} );

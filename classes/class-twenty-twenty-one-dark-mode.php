@@ -118,9 +118,6 @@ class Twenty_Twenty_One_Dark_Mode {
 	 * @return void
 	 */
 	public function customize_controls_enqueue_scripts() {
-		if ( ! $this->switch_should_render() ) {
-			return;
-		}
 		wp_enqueue_script(
 			'twentytwentyone-customize-controls',
 			get_template_directory_uri() . '/assets/js/customize.js',
@@ -167,9 +164,6 @@ class Twenty_Twenty_One_Dark_Mode {
 				'section'         => 'colors',
 				'label'           => esc_html__( 'Dark Mode Support', 'twentytwentyone' ),
 				'description'     => __( 'Respect visitor\'s device dark mode settings.<br>Dark mode is a device setting. If a visitor to your site requests it, your site will be shown with a dark background and light text.<br><br>Dark Mode can also be turned on and off with a button that you can find in the bottom right corner of the page.', 'twentytwentyone' ),
-				'active_callback' => function( $value ) {
-					return 127 < Twenty_Twenty_One_Custom_Colors::get_relative_luminance_from_hex( get_theme_mod( 'background_color', 'D1E4DD' ) );
-				},
 			)
 		);
 
