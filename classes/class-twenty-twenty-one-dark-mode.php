@@ -327,7 +327,8 @@ class Twenty_Twenty_One_Dark_Mode {
 			}
 			<?php if ( is_admin() || wp_is_json_request() ) : ?>
 				.components-editor-notices__pinned ~ .edit-post-visual-editor #dark-mode-toggler {
-					z-index: 20;
+					/* Needs to be >90 from .interface-interface-skeleton__sidebar */
+					z-index: 100;
 				}
 				.is-dark-theme.is-dark-theme #dark-mode-toggler:not(:hover):not(:focus) {
 					color: var(--global--color-primary);
