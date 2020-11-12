@@ -374,6 +374,8 @@ blockquote:before {
 	content: "“";
 	font-size: var(--quote--font-size);
 	line-height: var(--quote--line-height);
+	position: absolute;
+	left: calc(-0.5 * var(--global--spacing-horizontal));
 }
 
 blockquote .wp-block-quote__citation,
@@ -1377,6 +1379,8 @@ pre.wp-block-preformatted {
 	color: currentColor;
 	content: "“";
 	display: block;
+	position: relative;
+	left: 0;
 	font-size: 3rem;
 	font-weight: 500;
 	line-height: 1;
@@ -1475,7 +1479,6 @@ pre.wp-block-preformatted {
 	content: "“";
 	font-size: var(--quote--font-size);
 	line-height: var(--quote--line-height);
-	position: absolute;
 	left: calc(-0.5 * var(--global--spacing-horizontal));
 }
 
@@ -2223,9 +2226,6 @@ pre.wp-block-verse {
 	color: var(--global--color-primary);
 }
 
-/**
- * Spacing Overrides
- */
 [data-block] {
 	margin-top: var(--global--spacing-vertical);
 	margin-bottom: var(--global--spacing-vertical);
@@ -2239,7 +2239,6 @@ pre.wp-block-verse {
 	margin-bottom: 0;
 }
 
-/* Block Alignments */
 .wp-block {
 	max-width: var(--responsive--aligndefault-width);
 }
@@ -2286,6 +2285,14 @@ pre.wp-block-verse {
 		max-width: 290px;
 		margin-left: var(--global--spacing-horizontal);
 	}
+}
+
+.wp-block-freeform.block-library-rich-text__tinymce blockquote {
+	border: none;
+}
+
+.wp-block-freeform.block-library-rich-text__tinymce blockquote:before {
+	left: 5px;
 }
 
 html {

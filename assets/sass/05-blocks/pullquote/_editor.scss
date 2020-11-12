@@ -12,6 +12,8 @@
 		color: currentColor;
 		content: "\201C";
 		display: block;
+		position: relative; // Override the absolute position.
+		left: 0;
 		font-size: 3rem;
 		font-weight: 500;
 		line-height: 1;
