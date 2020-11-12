@@ -1,3 +1,5 @@
+/* global twentytwentyoneDarkModeEditorToggleEditorStyles */
+
 function toggleDarkMode() { // eslint-disable-line no-unused-vars
 	var toggler = document.getElementById( 'dark-mode-toggler' );
 
@@ -11,6 +13,10 @@ function toggleDarkMode() { // eslint-disable-line no-unused-vars
 		document.documentElement.classList.remove( 'is-dark-theme' );
 		document.body.classList.remove( 'is-dark-theme' );
 		window.localStorage.setItem( 'twentytwentyoneDarkMode', 'no' );
+	}
+
+	if ( 'function' === typeof twentytwentyoneDarkModeEditorToggleEditorStyles ) {
+		twentytwentyoneDarkModeEditorToggleEditorStyles();
 	}
 }
 
