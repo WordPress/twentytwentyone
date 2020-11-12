@@ -15,6 +15,7 @@ function toggleDarkMode() { // eslint-disable-line no-unused-vars
 		window.localStorage.setItem( 'twentytwentyoneDarkMode', 'no' );
 	}
 
+	// If this function exists, we're in wp-admin and need to run a few other tasks.
 	if ( 'function' === typeof twentytwentyoneDarkModeEditorToggleEditorStyles ) {
 		twentytwentyoneDarkModeEditorToggleEditorStyles();
 	}
