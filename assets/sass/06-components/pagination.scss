@@ -206,6 +206,13 @@
 			}
 		}
 	}
+
+	@include media(mobile-only) {
+
+		.nav-short {
+			display: none;
+		}
+	}
 }
 
 // Comments pagination

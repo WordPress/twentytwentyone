@@ -5405,6 +5405,13 @@ h1.page-title {
 		flex: 0 1 auto;
 	}
 }
+@media only screen and (max-width: 481px) {
+
+	.pagination .nav-short,
+	.comments-pagination .nav-short {
+		display: none;
+	}
+}
 
 .comments-pagination {
 	padding-top: calc(0.66 * var(--global--spacing-vertical));
