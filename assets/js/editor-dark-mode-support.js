@@ -74,12 +74,8 @@ function twentytwentyoneDarkModeEditorToggleEditorStyles() {
 	var toggler = document.getElementById( 'dark-mode-toggler' );
 
 	if ( 'true' === toggler.getAttribute( 'aria-pressed' ) ) {
-		document.body.classList.add( 'is-dark-theme' );
-		document.documentElement.classList.add( 'is-dark-theme' );
 		document.querySelector( '.block-editor__typewriter' ).classList.add( 'is-dark-theme' );
 	} else {
-		document.body.classList.remove( 'is-dark-theme' );
-		document.documentElement.classList.remove( 'is-dark-theme' );
 		document.querySelector( '.block-editor__typewriter' ).classList.remove( 'is-dark-theme' );
 	}
 }
