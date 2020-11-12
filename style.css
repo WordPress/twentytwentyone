@@ -3971,7 +3971,7 @@ a.custom-logo-link {
 @media only screen and (max-width: 481px) {
 
 	.no-widgets .site-footer {
-		margin-top: var(--global--spacing-vertical);
+		margin-top: calc(3 * var(--global--spacing-vertical));
 	}
 }
 
@@ -5404,7 +5404,7 @@ h1.page-title {
 @media only screen and (max-width: 481px) {
 
 	.widget-area {
-		margin-top: var(--global--spacing-vertical);
+		margin-top: calc(3 * var(--global--spacing-vertical));
 	}
 }
 

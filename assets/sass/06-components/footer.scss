@@ -12,7 +12,7 @@
 	@include media(mobile-only) {
 
 		.no-widgets & {
-			margin-top: var(--global--spacing-vertical);
+			margin-top: calc(3 * var(--global--spacing-vertical));
 		}
 	}
 }
