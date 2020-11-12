@@ -4087,6 +4087,7 @@ pre.wp-block-preformatted {
 }
 
 .wp-block-pullquote {
+	color: #39414d;
 	padding: 40px 0;
 	text-align: center;
 	border-width: 3px;

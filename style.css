@@ -2925,6 +2925,7 @@ pre.wp-block-preformatted {
 }
 
 .wp-block-pullquote {
+	color: var(--global--color-gray);
 	padding: calc(2 * var(--global--spacing-unit)) 0;
 	text-align: center;
 	border-width: var(--pullquote--border-width);
