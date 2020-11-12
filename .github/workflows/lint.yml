@@ -22,6 +22,11 @@ jobs:
               with:
                 php-version: 7.4
 
+            - name: Set up Node.js
+              uses: actions/setup-node@v1
+              with:
+                node-version: 12.x
+
             - name: Get composer cache directory
               id: composer-cache
               run: |
