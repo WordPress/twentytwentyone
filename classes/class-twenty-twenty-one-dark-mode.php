@@ -75,6 +75,14 @@ class Twenty_Twenty_One_Dark_Mode {
 			'1.0.0',
 			true
 		);
+
+		wp_enqueue_script(
+			'twentytwentyone-editor-dark-mode-support',
+			get_template_directory_uri() . '/assets/js/editor-dark-mode-support.js',
+			array( 'twentytwentyone-dark-mode-support-toggle' ),
+			'1.0.0',
+			true
+		);
 	}
 
 	/**
