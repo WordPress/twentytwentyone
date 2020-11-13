@@ -42,9 +42,6 @@ class Twenty_Twenty_One_Dark_Mode {
 		// Add the switch on the frontend & customizer.
 		add_action( 'wp_footer', array( $this, 'the_switch' ) );
 
-		// Add the switch in the editor.
-		add_action( 'wp_ajax_tt1_dark_mode_editor_switch', array( $this, 'editor_ajax_callback' ) );
-
 		// Add the privacy policy content.
 		add_action( 'admin_init', array( $this, 'add_privacy_policy_content' ) );
 	}
@@ -75,14 +72,6 @@ class Twenty_Twenty_One_Dark_Mode {
 			'twentytwentyone-dark-mode-support-toggle',
 			get_template_directory_uri() . '/assets/js/dark-mode-toggler.js',
 			array(),
-			'1.0.0',
-			true
-		);
-
-		wp_enqueue_script(
-			'twentytwentyone-editor-dark-mode-support',
-			get_template_directory_uri() . '/assets/js/editor-dark-mode-support.js',
-			array( 'twentytwentyone-dark-mode-support-toggle' ),
 			'1.0.0',
 			true
 		);
@@ -356,36 +345,6 @@ class Twenty_Twenty_One_Dark_Mode {
 		echo '<script>';
 		include get_template_directory() . '/assets/js/dark-mode-toggler.js'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude
 		echo '</script>';
-	}
-
-	/**
-	 * Print the dark-mode switch styles.
-	 *
-	 * @access public
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return void
-	 */
-	public function the_styles() {
-		echo '<style>';
-		include get_theme_file_path( 'assets/css/style-dark-mode.css' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude
-		echo '</style>';
-	}
-
-	/**
-	 * Call the tt1_the_dark_mode_switch and exit.
-	 *
-	 * @access public
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return void
-	 */
-	public function editor_ajax_callback() {
-		$this->the_html();
-		$this->the_styles();
-		wp_die();
 	}
 
 	/**
