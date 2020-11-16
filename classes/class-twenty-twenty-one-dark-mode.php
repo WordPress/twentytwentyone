@@ -162,8 +162,8 @@ class Twenty_Twenty_One_Dark_Mode {
 				$wp_customize,
 				'respect_user_color_preference_notice',
 				array(
-					'section'  => 'colors',
-					'priority' => 100,
+					'section'         => 'colors',
+					'priority'        => 100,
 					'active_callback' => function() {
 						return 127 >= Twenty_Twenty_One_Custom_Colors::get_relative_luminance_from_hex( get_theme_mod( 'background_color', 'D1E4DD' ) );
 					},
