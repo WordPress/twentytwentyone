@@ -48,10 +48,6 @@
 		display: none;
 	}
 
-	.wp-admin #dark-mode-toggler {
-		display: none;
-	}
-
 	#dark-mode-toggler.fixed-bottom {
 		position: fixed;
 		bottom: 5px;
