@@ -182,7 +182,13 @@ class Twenty_Twenty_One_Dark_Mode {
 			)
 		);
 
-		$description  = '<p>' . __( 'Dark Mode is a device setting. If a visitor to your site requests it, your site will be shown with a dark background and light text. <a href="https://wordpress.org/support/article/twenty-twenty-one/">Learn more about Dark Mode.</a>', 'twentytwentyone' ) . '</p>';
+		$description  = '<p>';
+		$description .= sprintf(
+			// translators: %s is the wordpress.org Twenty Twenty-One support article URL.
+			__( 'Dark Mode is a device setting. If a visitor to your site requests it, your site will be shown with a dark background and light text. <a href="%s">Learn more about Dark Mode.</a>', 'twentytwentyone' ),
+			__( 'https://wordpress.org/support/article/twenty-twenty-one/', 'twentytwentyone' )
+		);
+		$description .= '</p>';
 		$description .= '<p>' . __( 'Dark Mode can also be turned on and off with a button that you can find in the bottom right corner of the page.', 'twentytwentyone' ) . '</p>';
 
 		$wp_customize->add_control(
