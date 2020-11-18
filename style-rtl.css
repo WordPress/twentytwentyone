@@ -3958,6 +3958,12 @@ a.custom-logo-link {
 .no-widgets .site-footer {
 	margin-top: calc(6 * var(--global--spacing-vertical));
 }
+@media only screen and (max-width: 481px) {
+
+	.no-widgets .site-footer {
+		margin-top: calc(3 * var(--global--spacing-vertical));
+	}
+}
 
 .site-footer > .site-info {
 	padding-top: var(--global--spacing-vertical);
@@ -5388,6 +5394,12 @@ h1.page-title {
 
 	.widget-area {
 		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media only screen and (max-width: 481px) {
+
+	.widget-area {
+		margin-top: var(--global--spacing-vertical);
 	}
 }
 

@@ -5645,6 +5645,12 @@ a.custom-logo-link {
 .no-widgets .site-footer {
 	margin-top: 180px;
 }
+@media only screen and (max-width: 481px) {
+
+	.no-widgets .site-footer {
+		margin-top: 90px;
+	}
+}
 
 .site-footer > .site-info {
 	padding-top: 30px;
@@ -7384,6 +7390,12 @@ h1.page-title {
 
 	.widget-area {
 		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media only screen and (max-width: 481px) {
+
+	.widget-area {
+		margin-top: 30px;
 	}
 }
 
