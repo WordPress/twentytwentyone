@@ -94,3 +94,10 @@
 		}
 	}
 }
+
+.wp-block[data-align="left"],
+.wp-block[data-align="right"] {
+	.wp-block-pullquote.is-style-solid-color {
+		padding: var(--global--spacing-unit);
+	}
+}

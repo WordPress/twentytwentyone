@@ -2974,8 +2974,8 @@ pre.wp-block-preformatted {
 	background: none;
 }
 
-.wp-block-pullquote.alignleft blockquote:before,
-.wp-block-pullquote.alignleft cite {
+.wp-block-pullquote.alignleft:not(.is-style-solid-color) blockquote:before,
+.wp-block-pullquote.alignleft:not(.is-style-solid-color) cite {
 	text-align: center;
 }
 
@@ -3019,6 +3019,16 @@ pre.wp-block-preformatted {
 .wp-block-pullquote.is-style-solid-color cite,
 .wp-block-pullquote.is-style-solid-color footer {
 	color: currentColor;
+}
+
+.wp-block-pullquote.is-style-solid-color.alignleft,
+.wp-block-pullquote.is-style-solid-color.alignright {
+	padding: var(--global--spacing-unit);
+}
+
+.wp-block-pullquote.is-style-solid-color.alignleft blockquote,
+.wp-block-pullquote.is-style-solid-color.alignright blockquote {
+	max-width: initial;
 }
 
 .wp-block-quote {
