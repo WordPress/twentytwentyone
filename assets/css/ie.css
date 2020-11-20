@@ -4905,6 +4905,7 @@ hr {
 
 hr.wp-block-separator {
 	border-bottom: 1px solid #28303d;
+	opacity: 1;
 
 	/**
    * Block Options

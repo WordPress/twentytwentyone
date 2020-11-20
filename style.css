@@ -3455,6 +3455,7 @@ hr {
 
 hr.wp-block-separator {
 	border-bottom: var(--separator--height) solid var(--separator--border-color);
+	opacity: 1;
 
 	/**
    * Block Options
