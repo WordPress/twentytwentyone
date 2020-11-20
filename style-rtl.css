@@ -1174,6 +1174,8 @@ blockquote:before {
 	content: "“";
 	font-size: var(--quote--font-size);
 	line-height: var(--quote--line-height);
+	position: absolute;
+	right: calc(-0.5 * var(--global--spacing-horizontal));
 }
 
 blockquote .wp-block-quote__citation,
@@ -2931,6 +2933,8 @@ pre.wp-block-preformatted {
 	color: currentColor;
 	content: "“";
 	display: block;
+	position: relative;
+	right: 0;
 	font-size: 3rem;
 	font-weight: 500;
 	line-height: 1;
@@ -3012,10 +3016,18 @@ pre.wp-block-preformatted {
 }
 
 .wp-block-quote {
+	border-right: none;
 
 	/**
    * Block Options
    */
+}
+
+.wp-block-quote:before {
+	content: "“";
+	font-size: var(--quote--font-size);
+	line-height: var(--quote--line-height);
+	right: 8px;
 }
 
 .has-background:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
@@ -3040,9 +3052,15 @@ pre.wp-block-preformatted {
 }
 
 .wp-block-quote.has-text-align-right:before {
+	display: none;
+}
+
+.wp-block-quote.has-text-align-right p:before {
 	content: "”";
-	right: initial;
-	left: calc(-0.5 * var(--global--spacing-horizontal));
+	font-size: var(--quote--font-size);
+	font-weight: normal;
+	line-height: var(--quote--line-height);
+	margin-left: 5px;
 }
 
 .wp-block-quote.has-text-align-center {
@@ -3079,8 +3097,16 @@ pre.wp-block-preformatted {
 
 .wp-block-quote.is-large.has-text-align-right:before,
 .wp-block-quote.is-style-large.has-text-align-right:before {
-	right: initial;
-	left: calc(-1 * var(--global--spacing-horizontal));
+	display: none;
+}
+
+.wp-block-quote.is-large.has-text-align-right p:before,
+.wp-block-quote.is-style-large.has-text-align-right p:before {
+	content: "”";
+	font-size: var(--quote--font-size-large);
+	font-weight: normal;
+	line-height: var(--quote--line-height-large);
+	margin-left: 10px;
 }
 
 .wp-block-quote.is-large .wp-block-quote__citation,

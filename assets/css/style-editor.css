@@ -374,6 +374,8 @@ blockquote:before {
 	content: "“";
 	font-size: var(--quote--font-size);
 	line-height: var(--quote--line-height);
+	position: absolute;
+	left: calc(-0.5 * var(--global--spacing-horizontal));
 }
 
 blockquote .wp-block-quote__citation,
@@ -1377,6 +1379,8 @@ pre.wp-block-preformatted {
 	color: currentColor;
 	content: "“";
 	display: block;
+	position: relative;
+	left: 0;
 	font-size: 3rem;
 	font-weight: 500;
 	line-height: 1;
@@ -1475,7 +1479,6 @@ pre.wp-block-preformatted {
 	content: "“";
 	font-size: var(--quote--font-size);
 	line-height: var(--quote--line-height);
-	position: absolute;
 	left: calc(-0.5 * var(--global--spacing-horizontal));
 }
 
@@ -1499,9 +1502,15 @@ pre.wp-block-preformatted {
 }
 
 .wp-block-quote.has-text-align-right:before {
+	display: none;
+}
+
+.wp-block-quote.has-text-align-right p:before {
 	content: "”";
-	left: initial;
-	right: calc(-0.5 * var(--global--spacing-horizontal));
+	font-size: var(--quote--font-size);
+	font-weight: normal;
+	line-height: var(--quote--line-height);
+	margin-right: 5px;
 }
 
 .wp-block-quote.has-text-align-center {
@@ -1537,8 +1546,16 @@ pre.wp-block-preformatted {
 
 .wp-block-quote.is-large.has-text-align-right:before,
 .wp-block-quote.is-style-large.has-text-align-right:before {
-	left: initial;
-	right: calc(-1 * var(--global--spacing-horizontal));
+	display: none;
+}
+
+.wp-block-quote.is-large.has-text-align-right p:before,
+.wp-block-quote.is-style-large.has-text-align-right p:before {
+	content: "”";
+	font-size: var(--quote--font-size-large);
+	font-weight: normal;
+	line-height: var(--quote--line-height-large);
+	margin-right: 10px;
 }
 @media only screen and (max-width: 481px) {
 
@@ -2209,9 +2226,6 @@ pre.wp-block-verse {
 	color: var(--global--color-primary);
 }
 
-/**
- * Spacing Overrides
- */
 [data-block] {
 	margin-top: var(--global--spacing-vertical);
 	margin-bottom: var(--global--spacing-vertical);
@@ -2225,7 +2239,6 @@ pre.wp-block-verse {
 	margin-bottom: 0;
 }
 
-/* Block Alignments */
 .wp-block {
 	max-width: var(--responsive--aligndefault-width);
 }
@@ -2272,6 +2285,14 @@ pre.wp-block-verse {
 		max-width: 290px;
 		margin-left: var(--global--spacing-horizontal);
 	}
+}
+
+.wp-block-freeform.block-library-rich-text__tinymce blockquote {
+	border: none;
+}
+
+.wp-block-freeform.block-library-rich-text__tinymce blockquote:before {
+	left: 5px;
 }
 
 html {
