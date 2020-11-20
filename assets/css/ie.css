@@ -4094,6 +4094,8 @@ pre.wp-block-preformatted {
 	border-width: 3px;
 	border-bottom-style: solid;
 	border-top-style: solid;
+	color: currentColor;
+	border-color: currentColor;
 	position: relative;
 
 	/**
