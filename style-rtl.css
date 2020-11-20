@@ -3452,7 +3452,7 @@ hr.wp-block-separator {
    */
 }
 
-hr.wp-block-separator:not(.is-style-dots):not(.is-style-wide) {
+hr.wp-block-separator:not(.is-style-dots):not(.alignwide) {
 	max-width: var(--responsive--aligndefault-width);
 }
 
