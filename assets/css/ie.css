@@ -1978,6 +1978,7 @@ input[type=radio] + label {
 		border-radius: 50%;
 		background: #d1e4dd;
 		cursor: pointer;
+		box-sizing: border-box;
 	}
 }
 
