@@ -86,7 +86,7 @@
 	}
 
 	// Last child that is not the appender.
-	> *:last-child():not(.block-list-appender) {
+	> *:last-child:not(.block-list-appender) {
 		margin-bottom: 0;
 	}
 
