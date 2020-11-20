@@ -85,8 +85,13 @@
 		margin-top: 0;
 	}
 
-	// Needs to be the second-last child to avoid applying this to the appender.
-	> *:nth-last-child(2) {
+	// Last child that is not the appender.
+	> *:last-child():not(.block-list-appender) {
+		margin-bottom: 0;
+	}
+
+	// When selected, the last item becomes the second last because of the appender.
+	&.has-child-selected > *:nth-last-child(2) {
 		margin-bottom: 0;
 	}
 }
