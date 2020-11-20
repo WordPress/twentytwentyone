@@ -3008,6 +3008,7 @@ pre.wp-block-preformatted {
 }
 
 .wp-block-pullquote.is-style-solid-color blockquote {
+	margin: 0;
 	max-width: inherit;
 }
 
