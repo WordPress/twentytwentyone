@@ -1457,6 +1457,11 @@ pre.wp-block-preformatted {
 	padding: 0 calc(2 * var(--global--spacing-unit));
 }
 
+.wp-block[data-align=left] .wp-block-pullquote.is-style-solid-color,
+.wp-block[data-align=right] .wp-block-pullquote.is-style-solid-color {
+	padding: var(--global--spacing-unit);
+}
+
 .wp-block-quote {
 	position: relative;
 	border-left: none;

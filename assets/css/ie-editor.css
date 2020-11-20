@@ -1896,6 +1896,14 @@ pre.wp-block-preformatted {
 	padding: 0 40px;
 }
 
+.wp-block[data-align=left] .wp-block-pullquote.is-style-solid-color {
+	padding: 20px;
+}
+
+.wp-block[data-align=right] .wp-block-pullquote.is-style-solid-color {
+	padding: 20px;
+}
+
 .wp-block-quote {
 	position: relative;
 	border-left: none;
