@@ -10,6 +10,10 @@
 		max-width: inherit;
 	}
 
+	.wp-block-column {
+		@include innerblock-margin-clear();
+	}
+
 	&.is-style-twentytwentyone-columns-overlap {
 
 		@include media(laptop) {

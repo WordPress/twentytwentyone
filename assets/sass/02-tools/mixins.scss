@@ -77,3 +77,16 @@
 		color: var(--button--color-text-active);
 	}
 }
+
+@mixin innerblock-margin-clear() {
+
+	// Clear the top margin for the first-child.
+	> *:first-child {
+		margin-top: 0;
+	}
+
+	// Needs to be the second-last child to avoid applying this to the appender.
+	> *:nth-last-child(2) {
+		margin-bottom: 0;
+	}
+}
