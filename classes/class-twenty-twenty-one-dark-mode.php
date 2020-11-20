@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom Colors Class
+ * Dark Mode Class
  *
  * @package WordPress
  * @subpackage Twenty_Twenty_One
@@ -8,7 +8,7 @@
  */
 
 /**
- * This class is in charge of color customization via the Customizer.
+ * This class is in charge of Dark Mode.
  */
 class Twenty_Twenty_One_Dark_Mode {
 
@@ -42,8 +42,8 @@ class Twenty_Twenty_One_Dark_Mode {
 		// Add the switch on the frontend & customizer.
 		add_action( 'wp_footer', array( $this, 'the_switch' ) );
 
-		// Add the switch in the editor.
-		add_action( 'wp_ajax_tt1_dark_mode_editor_switch', array( $this, 'editor_ajax_callback' ) );
+		// Add the privacy policy content.
+		add_action( 'admin_init', array( $this, 'add_privacy_policy_content' ) );
 	}
 
 	/**
@@ -98,12 +98,11 @@ class Twenty_Twenty_One_Dark_Mode {
 		if ( ! $this->switch_should_render() ) {
 			return;
 		}
-		wp_enqueue_style(
-			'tt1-dark-mode',
-			get_template_directory_uri() . '/assets/css/style-dark-mode.css',
-			array( 'twenty-twenty-one-style' ),
-			'1.0.0'
-		);
+		$url = get_template_directory_uri() . '/assets/css/style-dark-mode.css';
+		if ( is_rtl() ) {
+			$url = get_template_directory_uri() . '/assets/css/style-dark-mode-rtl.css';
+		}
+		wp_enqueue_style( 'tt1-dark-mode', $url, array( 'twenty-twenty-one-style' ), wp_get_theme()->get( 'Version' ) ); // @phpstan-ignore-line. Version is always a string.
 	}
 
 	/**
@@ -143,9 +142,34 @@ class Twenty_Twenty_One_Dark_Mode {
 
 		$colors_section = $wp_customize->get_section( 'colors' );
 		if ( is_object( $colors_section ) ) {
-			$colors_section->title       = __( 'Colors & Dark Mode', 'twentytwentyone' );
-			$colors_section->description = __( 'To access the Dark Mode settings, select a light background color.', 'twentytwentyone' ) . '<br><a href="https://wordpress.org/support/article/twenty-twenty-one/">' . __( 'Learn more about Dark Mode.', 'twentytwentyone' ) . '</a>';
+			$colors_section->title = __( 'Colors & Dark Mode', 'twentytwentyone' );
 		}
+
+		// Custom notice control.
+		include_once get_theme_file_path( 'classes/class-twenty-twenty-one-customize-notice-control.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+
+		$wp_customize->add_setting(
+			'respect_user_color_preference_notice',
+			array(
+				'capability'        => 'edit_theme_options',
+				'default'           => '',
+				'sanitize_callback' => '__return_empty_string',
+			)
+		);
+
+		$wp_customize->add_control(
+			new Twenty_Twenty_One_Customize_Notice_Control(
+				$wp_customize,
+				'respect_user_color_preference_notice',
+				array(
+					'section'         => 'colors',
+					'priority'        => 100,
+					'active_callback' => function() {
+						return 127 >= Twenty_Twenty_One_Custom_Colors::get_relative_luminance_from_hex( get_theme_mod( 'background_color', 'D1E4DD' ) );
+					},
+				)
+			)
+		);
 
 		$wp_customize->add_setting(
 			'respect_user_color_preference',
@@ -158,13 +182,23 @@ class Twenty_Twenty_One_Dark_Mode {
 			)
 		);
 
+		$description  = '<p>';
+		$description .= sprintf(
+			// translators: %s is the wordpress.org Twenty Twenty-One support article URL.
+			__( 'Dark Mode is a device setting. If a visitor to your site requests it, your site will be shown with a dark background and light text. <a href="%s">Learn more about Dark Mode.</a>', 'twentytwentyone' ),
+			__( 'https://wordpress.org/support/article/twenty-twenty-one/', 'twentytwentyone' )
+		);
+		$description .= '</p>';
+		$description .= '<p>' . __( 'Dark Mode can also be turned on and off with a button that you can find in the bottom right corner of the page.', 'twentytwentyone' ) . '</p>';
+
 		$wp_customize->add_control(
 			'respect_user_color_preference',
 			array(
 				'type'            => 'checkbox',
 				'section'         => 'colors',
-				'label'           => esc_html__( 'Dark Mode Support', 'twentytwentyone' ),
-				'description'     => __( 'Respect visitor\'s device dark mode settings.<br>Dark mode is a device setting. If a visitor to your site requests it, your site will be shown with a dark background and light text.<br><br>Dark Mode can also be turned on and off with a button that you can find in the bottom right corner of the page.', 'twentytwentyone' ),
+				'label'           => esc_html__( 'Dark Mode support', 'twentytwentyone' ),
+				'priority'        => 110,
+				'description'     => $description,
 				'active_callback' => function( $value ) {
 					return 127 < Twenty_Twenty_One_Custom_Colors::get_relative_luminance_from_hex( get_theme_mod( 'background_color', 'D1E4DD' ) );
 				},
@@ -357,7 +391,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	}
 
 	/**
-	 * Print the dark-mode switch styles.
+	 * Adds information to the privacy policy.
 	 *
 	 * @access public
 	 *
@@ -365,24 +399,14 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @return void
 	 */
-	public function the_styles() {
-		echo '<style>';
-		include get_theme_file_path( 'assets/css/style-dark-mode.css' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude
-		echo '</style>';
+	public function add_privacy_policy_content() {
+		if ( ! function_exists( 'wp_add_privacy_policy_content' ) ) {
+			return;
+		}
+		$content = '<p class="privacy-policy-tutorial">' . __( 'Twenty Twenty-One uses LocalStorage when Dark Mode support is enabled.', 'twentytwentyone' ) . '</p>'
+				. '<strong class="privacy-policy-tutorial">' . __( 'Suggested text:', 'twentytwentyone' ) . '</strong> '
+				. __( 'This website uses LocalStorage to save the setting when Dark Mode support is turned on or off.<br> LocalStorage is necessary for the setting to work and is only used when a user clicks on the Dark Mode button.<br> No data is saved in the database or transferred.', 'twentytwentyone' );
+		wp_add_privacy_policy_content( 'Twenty Twenty-One', wp_kses_post( wpautop( $content, false ) ) );
 	}
 
-	/**
-	 * Call the tt1_the_dark_mode_switch and exit.
-	 *
-	 * @access public
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return void
-	 */
-	public function editor_ajax_callback() {
-		$this->the_html();
-		$this->the_styles();
-		wp_die();
-	}
 }

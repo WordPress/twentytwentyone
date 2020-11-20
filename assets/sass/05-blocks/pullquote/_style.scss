@@ -4,12 +4,16 @@
 	border-width: var(--pullquote--border-width);
 	border-bottom-style: solid;
 	border-top-style: solid;
+	color: currentColor;
+	border-color: currentColor;
 	position: relative;
 
 	blockquote::before {
 		color: currentColor;
 		content: "\201C";
 		display: block;
+		position: relative; // Override the absolute position.
+		left: 0;
 		font-size: 3rem;
 		font-weight: 500;
 		line-height: 1;

@@ -8,6 +8,13 @@
 	.no-widgets & {
 		margin-top: calc(6 * var(--global--spacing-vertical));
 	}
+
+	@include media(mobile-only) {
+
+		.no-widgets & {
+			margin-top: calc(3 * var(--global--spacing-vertical));
+		}
+	}
 }
 
 // Footer Branding
