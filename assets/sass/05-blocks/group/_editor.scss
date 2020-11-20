@@ -38,10 +38,6 @@
 
 	.wp-block-group__inner-container {
 		@include innerblock-margin-clear();
-
-		> *:last-child {
-			margin-bottom: 0;
-		}
 	}
 }
 
