@@ -4912,18 +4912,18 @@ hr.wp-block-separator {
    */
 }
 
-hr.wp-block-separator:not(.is-style-dots):not(.is-style-wide) {
+hr.wp-block-separator:not(.is-style-dots):not(.alignwide) {
 	max-width: calc(100vw - 30px);
 }
 @media only screen and (min-width: 482px) {
 
-	hr.wp-block-separator:not(.is-style-dots):not(.is-style-wide) {
+	hr.wp-block-separator:not(.is-style-dots):not(.alignwide) {
 		max-width: min(calc(100vw - 100px), 610px);
 	}
 }
 @media only screen and (min-width: 822px) {
 
-	hr.wp-block-separator:not(.is-style-dots):not(.is-style-wide) {
+	hr.wp-block-separator:not(.is-style-dots):not(.alignwide) {
 		max-width: min(calc(100vw - 200px), 610px);
 	}
 }
