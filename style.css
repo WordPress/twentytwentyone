@@ -3462,11 +3462,15 @@ hr.wp-block-separator {
    */
 }
 
-hr.wp-block-separator:not(.is-style-dots):not(.alignwide) {
+hr.wp-block-separator:not(.is-style-dots):not(.is-style-wide) {
 	max-width: var(--responsive--aligndefault-width);
 }
 
-hr.wp-block-separator:not(.is-style-dots):not(.alignwide).alignfull {
+hr.wp-block-separator:not(.is-style-dots).alignwide {
+	max-width: var(--responsive--alignwide-width);
+}
+
+hr.wp-block-separator:not(.is-style-dots).alignfull {
 	max-width: var(--responsive--alignfull-width);
 }
 
