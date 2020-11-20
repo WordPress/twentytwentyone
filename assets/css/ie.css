@@ -4905,6 +4905,7 @@ hr {
 
 hr.wp-block-separator {
 	border-bottom: 1px solid #28303d;
+	opacity: 1;
 
 	/**
    * Block Options
@@ -4927,7 +4928,23 @@ hr.wp-block-separator:not(.is-style-dots):not(.alignwide) {
 	}
 }
 
-hr.wp-block-separator:not(.is-style-dots):not(.alignwide).alignfull {
+hr.wp-block-separator:not(.is-style-dots).alignwide {
+	max-width: calc(100vw - 30px);
+}
+@media only screen and (min-width: 482px) {
+
+	hr.wp-block-separator:not(.is-style-dots).alignwide {
+		max-width: calc(100vw - 100px);
+	}
+}
+@media only screen and (min-width: 822px) {
+
+	hr.wp-block-separator:not(.is-style-dots).alignwide {
+		max-width: min(calc(100vw - 200px), 1240px);
+	}
+}
+
+hr.wp-block-separator:not(.is-style-dots).alignfull {
 	max-width: 100%;
 }
 

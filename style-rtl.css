@@ -3445,6 +3445,7 @@ hr {
 
 hr.wp-block-separator {
 	border-bottom: var(--separator--height) solid var(--separator--border-color);
+	opacity: 1;
 
 	/**
    * Block Options
@@ -3455,7 +3456,11 @@ hr.wp-block-separator:not(.is-style-dots):not(.alignwide) {
 	max-width: var(--responsive--aligndefault-width);
 }
 
-hr.wp-block-separator:not(.is-style-dots):not(.alignwide).alignfull {
+hr.wp-block-separator:not(.is-style-dots).alignwide {
+	max-width: var(--responsive--alignwide-width);
+}
+
+hr.wp-block-separator:not(.is-style-dots).alignfull {
 	max-width: var(--responsive--alignfull-width);
 }
 
