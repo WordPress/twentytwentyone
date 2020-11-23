@@ -1703,6 +1703,7 @@ pre.wp-block-preformatted {
 	margin-left: 0;
 	background-color: transparent;
 	color: var(--button--color-text-hover);
+	border: var(--button--border-width) solid var(--button--color-background);
 }
 
 .wp-block-search .wp-block-search__button:before,
@@ -1737,9 +1738,14 @@ pre.wp-block-preformatted {
 	color: var(--button--color-text-active);
 }
 
+.wp-block-search .wp-block-search__button:focus {
+	outline-offset: -7px;
+}
+
 .wp-block-search .wp-block-search__button:hover {
 	color: var(--button--color-text);
 	background-color: var(--button--color-background);
+	outline-offset: -7px;
 }
 
 .wp-block-search .wp-block-search__button.has-icon {

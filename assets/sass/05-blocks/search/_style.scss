@@ -53,11 +53,17 @@
 		margin-left: 0;
 		background-color: transparent;
 		color: var(--button--color-text-hover);
+		border: var(--button--border-width) solid var(--button--color-background);
 		line-height: 1;
+
+		&:focus {
+			outline-offset: -7px;
+		}
 
 		&:hover {
 			background-color: var(--button--color-background);
 			color: var(--button--color-text);
+			outline-offset: -7px;
 		}
 
 		&.has-icon {

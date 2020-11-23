@@ -3230,12 +3230,18 @@ pre.wp-block-preformatted {
 	margin-left: 0;
 	background-color: transparent;
 	color: var(--button--color-text-hover);
+	border: var(--button--border-width) solid var(--button--color-background);
 	line-height: 1;
+}
+
+.wp-block-search button.wp-block-search__button:focus {
+	outline-offset: -7px;
 }
 
 .wp-block-search button.wp-block-search__button:hover {
 	background-color: var(--button--color-background);
 	color: var(--button--color-text);
+	outline-offset: -7px;
 }
 
 .wp-block-search button.wp-block-search__button.has-icon {
