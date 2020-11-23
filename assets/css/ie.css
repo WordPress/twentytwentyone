@@ -7440,11 +7440,17 @@ h1.page-title {
 	background-color: transparent;
 	color: #39414d;
 	margin-bottom: 15px;
+	border: 3px solid #39414d;
+}
+
+.widget_search > .search-form .search-submit:focus {
+	outline-offset: -7px;
 }
 
 .widget_search > .search-form .search-submit:hover {
 	background-color: #39414d;
 	color: #d1e4dd;
+	outline-offset: -7px;
 }
 
 .widget_rss a.rsswidget .rss-widget-icon {

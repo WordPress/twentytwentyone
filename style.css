@@ -5475,11 +5475,17 @@ h1.page-title {
 	background-color: transparent;
 	color: var(--button--color-text-hover);
 	margin-bottom: calc(0.5 * var(--global--spacing-vertical));
+	border: var(--button--border-width) solid var(--button--color-background);
+}
+
+.widget_search > .search-form .search-submit:focus {
+	outline-offset: -7px;
 }
 
 .widget_search > .search-form .search-submit:hover {
 	background-color: var(--button--color-background);
 	color: var(--button--color-text);
+	outline-offset: -7px;
 }
 
 .widget_rss a.rsswidget .rss-widget-icon {

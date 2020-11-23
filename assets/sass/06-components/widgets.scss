@@ -120,10 +120,16 @@
 		background-color: transparent;
 		color: var(--button--color-text-hover);
 		margin-bottom: calc(0.5 * var(--global--spacing-vertical));
+		border: var(--button--border-width) solid var(--button--color-background);
+
+		&:focus {
+			outline-offset: -7px;
+		}
 
 		&:hover {
 			background-color: var(--button--color-background);
 			color: var(--button--color-text);
+			outline-offset: -7px;
 		}
 	}
 }
