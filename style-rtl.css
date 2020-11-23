@@ -3897,6 +3897,10 @@ a.custom-logo-link {
 	text-decoration: none;
 }
 
+.has-background-white a.custom-logo-link:focus {
+	background: none;
+}
+
 .site-title > a {
 	text-decoration-color: var(--global--color-secondary);
 }

@@ -79,6 +79,13 @@
 
 a.custom-logo-link {
 	text-decoration: none;
+
+	&:focus {
+		// Change colors when the body background is white.
+		.has-background-white & {
+			background: none;
+		}
+	}
 }
 
 .site-title > a {
