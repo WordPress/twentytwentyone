@@ -39,6 +39,23 @@
 	.wp-block-group__inner-container > *:last-child {
 		margin-bottom: 0;
 	}
+
+	.wp-block[data-align="full"] & {
+
+		.wp-block-columns {
+
+			p:not(.has-background),
+			h1:not(.has-background),
+			h2:not(.has-background),
+			h3:not(.has-background),
+			h4:not(.has-background),
+			h5:not(.has-background),
+			h6:not(.has-background) {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
 }
 
 .wp-block-group .wp-block-group.has-background > .block-editor-block-list__layout > [data-align="full"] {
