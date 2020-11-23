@@ -53,22 +53,18 @@
 	font-size: var(--button--font-size);
 	background-color: var(--button--color-background);
 	border-radius: var(--button--border-radius);
-	border: var(--button--border-width) solid var(--button--color-background);
+	border: var(--button--border-width) solid transparent;
 	text-decoration: none;
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 
 	&:focus {
-		background: transparent;
-		outline-offset: -6px;
-		outline: 2px dotted currentColor;
+		outline-offset: 2px;
+		outline: 2px dotted var(--button--color-background);
+	}
 
-		.is-dark-theme & {
-			color: var(--button--color-background);
-		}
-
-		&:not(.has-background) {
-			color: var(--button--color-text-hover);
-		}
+	&:hover {
+		outline-offset: 2px;
+		outline: 2px solid var(--button--color-background);
 	}
 
 	&:disabled {
