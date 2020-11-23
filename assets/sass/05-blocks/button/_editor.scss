@@ -5,7 +5,7 @@
 	.is-style-outline & {
 		border-color: var(--button--color-background);
 
-		:not(.has-text-color) {
+		&:not(.has-text-color) {
 			color: var(--button--color-background);
 		}
 	}

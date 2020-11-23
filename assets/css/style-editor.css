@@ -568,7 +568,7 @@ a:hover {
 	border-color: var(--button--color-background);
 }
 
-.is-style-outline .wp-block-button__link :not(.has-text-color) {
+.is-style-outline .wp-block-button__link:not(.has-text-color) {
 	color: var(--button--color-background);
 }
 

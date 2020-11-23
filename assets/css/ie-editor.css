@@ -432,7 +432,7 @@ a:hover {
 	border-color: #39414d;
 }
 
-.is-style-outline .wp-block-button__link :not(.has-text-color) {
+.is-style-outline .wp-block-button__link:not(.has-text-color) {
 	color: #39414d;
 }
 
