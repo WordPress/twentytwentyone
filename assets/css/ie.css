@@ -5614,6 +5614,11 @@ a.custom-logo-link {
 	text-decoration: none;
 }
 
+.has-background-white a.custom-logo-link:focus,
+.is-dark-theme a.custom-logo-link:focus {
+	background: none;
+}
+
 .site-title > a {
 	text-decoration-color: #39414d;
 }
@@ -5783,6 +5788,10 @@ a.custom-logo-link {
 
 .is-dark-theme .site-footer > .site-info a:focus {
 	color: #d1e4dd;
+}
+
+.has-background-white .site-footer > .site-info a:focus {
+	color: #fff;
 }
 
 .singular .entry-header {
@@ -7149,6 +7158,10 @@ h1.page-title {
 
 .is-dark-theme .footer-navigation-wrapper li a:focus .svg-icon {
 	fill: #d1e4dd;
+}
+
+.has-background-white .footer-navigation-wrapper li a:focus .svg-icon {
+	fill: #fff;
 }
 
 .footer-navigation-wrapper li .svg-icon {
