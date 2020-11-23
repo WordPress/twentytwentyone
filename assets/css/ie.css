@@ -5785,6 +5785,10 @@ a.custom-logo-link {
 	color: #d1e4dd;
 }
 
+.has-background-white .site-footer > .site-info a:focus {
+	color: #fff;
+}
+
 .singular .entry-header {
 	border-bottom: 3px solid #28303d;
 	padding-bottom: 60px;

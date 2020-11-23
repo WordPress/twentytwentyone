@@ -4082,6 +4082,10 @@ a.custom-logo-link {
 	color: var(--wp--style--color--link, var(--global--color-background));
 }
 
+.has-background-white .site-footer > .site-info a:focus {
+	color: var(--wp--style--color--link, var(--global--color-white));
+}
+
 .singular .entry-header {
 	border-bottom: 3px solid var(--global--color-border);
 	padding-bottom: calc(2 * var(--global--spacing-vertical));
