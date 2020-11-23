@@ -5169,6 +5169,10 @@ h1.page-title {
 	fill: var(--wp--style--color--link, var(--global--color-background));
 }
 
+.has-background-white .footer-navigation-wrapper li a:focus .svg-icon {
+	fill: var(--wp--style--color--link, var(--global--color-white));
+}
+
 .footer-navigation-wrapper li .svg-icon {
 	vertical-align: middle;
 	fill: var(--footer--color-link);
