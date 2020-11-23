@@ -1966,8 +1966,8 @@ input[type=radio] + label {
 	input[type=range]::-webkit-slider-thumb {
 		-webkit-appearance: none;
 		border: 3px solid #39414d;
-		height: 25px;
-		width: 25px;
+		height: 44px;
+		width: 44px;
 		border-radius: 50%;
 		background: #d1e4dd;
 		cursor: pointer;
@@ -1975,8 +1975,8 @@ input[type=radio] + label {
 
 	input[type=range]::-moz-range-thumb {
 		border: 3px solid #39414d;
-		height: 25px;
-		width: 25px;
+		height: 44px;
+		width: 44px;
 		border-radius: 50%;
 		background: #d1e4dd;
 		cursor: pointer;
@@ -2007,8 +2007,8 @@ input[type=range]::-ms-fill-lower {
 
 input[type=range]::-ms-thumb {
 	border: 3px solid #39414d;
-	height: 25px;
-	width: 25px;
+	height: 44px;
+	width: 44px;
 	border-radius: 50%;
 	background: #d1e4dd;
 	cursor: pointer;
