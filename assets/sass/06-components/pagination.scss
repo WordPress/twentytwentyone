@@ -163,8 +163,10 @@
 		margin-left: calc(0.66 * var(--global--spacing-unit));
 		margin-right: calc(0.66 * var(--global--spacing-unit));
 
-		&.current {
+		&.current,
+		&:not(.dots):hover {
 			border-bottom: 1px solid var(--pagination--color-text);
+			text-decoration: none;
 		}
 
 		&:first-child {

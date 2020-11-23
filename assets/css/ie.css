@@ -7295,10 +7295,22 @@ h1.page-title {
 
 .pagination .nav-links > *.current {
 	border-bottom: 1px solid #28303d;
+	text-decoration: none;
+}
+
+.pagination .nav-links > *:not(.dots):hover {
+	border-bottom: 1px solid #28303d;
+	text-decoration: none;
 }
 
 .comments-pagination .nav-links > *.current {
 	border-bottom: 1px solid #28303d;
+	text-decoration: none;
+}
+
+.comments-pagination .nav-links > *:not(.dots):hover {
+	border-bottom: 1px solid #28303d;
+	text-decoration: none;
 }
 
 .pagination .nav-links > *:first-child,

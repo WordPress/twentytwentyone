@@ -5307,8 +5307,11 @@ h1.page-title {
 }
 
 .pagination .nav-links > *.current,
-.comments-pagination .nav-links > *.current {
+.pagination .nav-links > *:not(.dots):hover,
+.comments-pagination .nav-links > *.current,
+.comments-pagination .nav-links > *:not(.dots):hover {
 	border-bottom: 1px solid var(--pagination--color-text);
+	text-decoration: none;
 }
 
 .pagination .nav-links > *:first-child,
