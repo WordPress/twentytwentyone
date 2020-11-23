@@ -1464,6 +1464,7 @@ input[type=radio] + label {
 		border-radius: 50%;
 		background: var(--global--color-background);
 		cursor: pointer;
+		box-sizing: border-box;
 	}
 }
 
