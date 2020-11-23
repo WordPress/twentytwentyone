@@ -82,7 +82,8 @@ a.custom-logo-link {
 
 	&:focus {
 		// Change colors when the body background is white.
-		.has-background-white & {
+		.has-background-white &,
+		.is-dark-theme & {
 			background: none;
 		}
 	}
@@ -93,7 +94,6 @@ a.custom-logo-link {
 }
 
 // Site logo
-
 .site-logo {
 
 	margin: calc(var(--global--spacing-vertical) / 2) 0;

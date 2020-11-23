@@ -3917,7 +3917,8 @@ a.custom-logo-link {
 	text-decoration: none;
 }
 
-.has-background-white a.custom-logo-link:focus {
+.has-background-white a.custom-logo-link:focus,
+.is-dark-theme a.custom-logo-link:focus {
 	background: none;
 }
 
