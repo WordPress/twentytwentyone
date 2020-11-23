@@ -157,6 +157,23 @@
 			color: var(--pagination--color-link-hover);
 		}
 
+		.is-dark-theme & {
+
+			a:active,
+			a:hover:active,
+			a:hover:focus {
+				color: var(--global--color-background);
+			}
+		}
+
+		.has-background-white & {
+
+			a:active,
+			a:hover:active,
+			a:hover:focus {
+				color: var(--global--color-white);
+			}
+		}
 	}
 
 	.nav-links > * {
