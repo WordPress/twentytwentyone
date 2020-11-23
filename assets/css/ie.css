@@ -7355,6 +7355,54 @@ h1.page-title {
 	color: #28303d;
 }
 
+.is-dark-theme .pagination .nav-links a:active {
+	color: #d1e4dd;
+}
+
+.is-dark-theme .pagination .nav-links a:hover:active {
+	color: #d1e4dd;
+}
+
+.is-dark-theme .pagination .nav-links a:hover:focus {
+	color: #d1e4dd;
+}
+
+.is-dark-theme .comments-pagination .nav-links a:active {
+	color: #d1e4dd;
+}
+
+.is-dark-theme .comments-pagination .nav-links a:hover:active {
+	color: #d1e4dd;
+}
+
+.is-dark-theme .comments-pagination .nav-links a:hover:focus {
+	color: #d1e4dd;
+}
+
+.has-background-white .pagination .nav-links a:active {
+	color: #fff;
+}
+
+.has-background-white .pagination .nav-links a:hover:active {
+	color: #fff;
+}
+
+.has-background-white .pagination .nav-links a:hover:focus {
+	color: #fff;
+}
+
+.has-background-white .comments-pagination .nav-links a:active {
+	color: #fff;
+}
+
+.has-background-white .comments-pagination .nav-links a:hover:active {
+	color: #fff;
+}
+
+.has-background-white .comments-pagination .nav-links a:hover:focus {
+	color: #fff;
+}
+
 .pagination .nav-links > * {
 	color: #28303d;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
