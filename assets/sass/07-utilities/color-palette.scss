@@ -43,7 +43,7 @@
 // Gutenberg background-color options
 .has-background {
 
-	&:not(.has-background-background-color) a:not(.wp-block-button__link),
+	&:not(.has-background-background-color) a:not(.wp-block-button__link):not(.wp-block-file__button),
 	p,
 	h1,
 	h2,
