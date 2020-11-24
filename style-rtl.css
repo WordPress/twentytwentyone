@@ -3504,6 +3504,10 @@ hr.wp-block-separator.is-style-dots:before {
 	border-color: currentColor;
 }
 
+.wp-block-social-links a:focus {
+	color: var(--global--color-primary);
+}
+
 .wp-block-social-links.is-style-twentytwentyone-social-icons-color a {
 	color: var(--global--color-primary);
 }
