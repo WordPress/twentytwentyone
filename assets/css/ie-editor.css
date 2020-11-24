@@ -3330,7 +3330,7 @@ a {
 	color: #fff;
 }
 
-.has-background:not(.has-background-background-color) a:not(.wp-block-button__link),
+.has-background:not(.has-background-background-color) a:not(.wp-block-button__link):not(.wp-block-file__button),
 .has-background p,
 .has-background h1,
 .has-background h2,

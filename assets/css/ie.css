@@ -3120,6 +3120,16 @@ body:not(.is-dark-theme) .has-background-dim .wp-block-button.is-style-outline .
 	color: #39414d;
 }
 
+.has-background-dim .wp-block-file a.wp-block-file__button:visited {
+	color: #d1e4dd !important;
+	border-color: #d1e4dd !important;
+}
+
+.has-background .wp-block-file a.wp-block-file__button:visited {
+	color: #d1e4dd !important;
+	border-color: #d1e4dd !important;
+}
+
 .wp-block-file .wp-block-file__button {
 	line-height: 1.5;
 	color: #d1e4dd;
@@ -7662,7 +7672,7 @@ h1.page-title {
 	color: #fff;
 }
 
-.has-background:not(.has-background-background-color) a:not(.wp-block-button__link),
+.has-background:not(.has-background-background-color) a:not(.wp-block-button__link):not(.wp-block-file__button),
 .has-background p,
 .has-background h1,
 .has-background h2,
