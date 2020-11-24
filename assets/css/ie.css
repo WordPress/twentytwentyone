@@ -7293,24 +7293,14 @@ h1.page-title {
 	margin-right: 13px;
 }
 
-.pagination .nav-links > *.current {
-	border-bottom: 1px solid #28303d;
-	text-decoration: none;
-}
-
-.pagination .nav-links > *:not(.dots):hover {
-	border-bottom: 1px solid #28303d;
-	text-decoration: none;
-}
-
+.pagination .nav-links > *.current,
 .comments-pagination .nav-links > *.current {
-	border-bottom: 1px solid #28303d;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
+.pagination .nav-links > *:not(.dots):hover,
 .comments-pagination .nav-links > *:not(.dots):hover {
-	border-bottom: 1px solid #28303d;
-	text-decoration: none;
+	text-decoration-style: dotted;
 }
 
 .pagination .nav-links > *:first-child,
