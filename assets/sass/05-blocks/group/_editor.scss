@@ -35,6 +35,8 @@
 			margin-left: calc(-1 * var(--global--spacing-vertical));
 		}
 	}
+
+	@include innerblock-margin-clear(".wp-block-group__inner-container");
 }
 
 .wp-block-group .wp-block-group.has-background > .block-editor-block-list__layout > [data-align="full"] {
