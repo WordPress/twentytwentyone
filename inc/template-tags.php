@@ -194,7 +194,7 @@ if ( ! function_exists( 'twenty_twenty_one_post_thumbnail' ) ) {
 				the_post_thumbnail( 'post-thumbnail', array( 'loading' => 'eager' ) );
 				?>
 				<?php if ( wp_get_attachment_caption( get_post_thumbnail_id() ) ) : ?>
-					<figcaption class="wp-caption-text"><?php echo wp_kses_post( wp_get_attachment_caption(  get_post_thumbnail_id() ) ); ?></figcaption>
+					<figcaption class="wp-caption-text"><?php echo wp_kses_post( wp_get_attachment_caption( get_post_thumbnail_id() ) ); ?></figcaption>
 				<?php endif; ?>
 			</figure><!-- .post-thumbnail -->
 
@@ -205,7 +205,7 @@ if ( ! function_exists( 'twenty_twenty_one_post_thumbnail' ) ) {
 					<?php the_post_thumbnail( 'post-thumbnail' ); ?>
 				</a>
 				<?php if ( wp_get_attachment_caption( get_post_thumbnail_id() ) ) : ?>
-					<figcaption class="wp-caption-text"><?php echo wp_kses_post( wp_get_attachment_caption(  get_post_thumbnail_id() ) ); ?></figcaption>
+					<figcaption class="wp-caption-text"><?php echo wp_kses_post( wp_get_attachment_caption( get_post_thumbnail_id() ) ); ?></figcaption>
 				<?php endif; ?>
 			</figure>
 
