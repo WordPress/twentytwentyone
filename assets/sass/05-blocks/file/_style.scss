@@ -21,6 +21,12 @@
 		&:hover {
 			color: var(--button--color-text-hover);
 		}
+
+		.has-background-dim &,
+		.has-background & {
+			color: var(--button--color-text) !important;
+			border-color: var(--button--color-text) !important;
+		}	
 	}
 
 	.wp-block-file__button {
