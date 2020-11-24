@@ -48,6 +48,12 @@ input[type="reset"],
 				background: transparent !important;
 				border-color: var(--button--color-background);
 			}
+			
+			.has-background-dim &:hover,
+			.has-background &:hover {
+				color: inherit !important;
+				border-color: inherit !important;
+			}
 
 			&:focus {
 				color: var(--button--color-text) !important;
@@ -70,6 +76,29 @@ input[type="reset"],
 				background: transparent;
 				color: var(--button--color-background);
 				border-color: var(--button--color-background);
+
+				body:not(.is-dark-theme) .has-background &,
+				body:not(.is-dark-theme) .has-background-dim & {
+					color: inherit !important;
+					border-color: inherit !important;
+				}
+		
+				body:not(.is-dark-theme) .has-background &:hover,
+				body:not(.is-dark-theme) .has-background-dim &:hover {
+					color: inherit !important;
+					border-color: transparent !important;
+				}
+
+				// Dark Theme
+				.is-dark-theme & {
+					color: var(--button--color-background) !important;
+					background-color: var(--button--color-text) !important;
+				}
+
+				.is-dark-theme &:hover {
+					color: var(--button--color-text) !important;
+					background-color: var(--button--color-background) !important;
+				}
 			}
 
 			&.has-background:not(.has-text-color) {
