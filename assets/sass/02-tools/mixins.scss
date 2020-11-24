@@ -91,7 +91,8 @@
 	}
 
 	// When selected, the last item becomes the second last because of the appender.
-	&.has-child-selected > #{$container} > *:nth-last-child(2) {
+	&.has-child-selected > #{$container} > *:nth-last-child(2),
+	&.is-selected > #{$container} > *:nth-last-child(2) {
 		margin-bottom: 0;
 	}
 }
