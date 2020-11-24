@@ -1669,12 +1669,12 @@ a:hover {
 	color: var(--wp--style--color--link, var(--global--color-background));
 }
 
-.has-background-white .site a:focus {
+.is-light-theme .site a:focus {
 	background: rgba(0, 0, 0, 0.9);
 	color: var(--wp--style--color--link, var(--global--color-white));
 }
 
-.has-background-white .site a:focus .meta-nav {
+.is-light-theme .site a:focus .meta-nav {
 	color: var(--wp--style--color--link, var(--global--color-white));
 }
 
@@ -3915,10 +3915,10 @@ table.wp-calendar-table caption {
 
 a.custom-logo-link {
 	text-decoration: none;
+	background: none;
 }
 
-.has-background-white a.custom-logo-link:focus,
-.is-dark-theme a.custom-logo-link:focus {
+a.custom-logo-link:focus {
 	background: none;
 }
 
@@ -4079,15 +4079,11 @@ a.custom-logo-link {
 	color: var(--footer--color-link-hover);
 }
 
-.site-footer > .site-info a:focus {
-	color: var(--footer--color-link-hover);
-}
-
 .is-dark-theme .site-footer > .site-info a:focus {
 	color: var(--wp--style--color--link, var(--global--color-background));
 }
 
-.has-background-white .site-footer > .site-info a:focus {
+.is-light-theme .site-footer > .site-info a:focus {
 	color: var(--wp--style--color--link, var(--global--color-white));
 }
 
@@ -5214,7 +5210,7 @@ h1.page-title {
 	fill: var(--wp--style--color--link, var(--global--color-background));
 }
 
-.has-background-white .footer-navigation-wrapper li a:focus .svg-icon {
+.is-light-theme .footer-navigation-wrapper li a:focus .svg-icon {
 	fill: var(--wp--style--color--link, var(--global--color-white));
 }
 
@@ -5399,12 +5395,12 @@ h1.page-title {
 	color: var(--global--color-background);
 }
 
-.has-background-white .pagination .nav-links a:active,
-.has-background-white .pagination .nav-links a:hover:active,
-.has-background-white .pagination .nav-links a:hover:focus,
-.has-background-white .comments-pagination .nav-links a:active,
-.has-background-white .comments-pagination .nav-links a:hover:active,
-.has-background-white .comments-pagination .nav-links a:hover:focus {
+.is-light-theme .pagination .nav-links a:active,
+.is-light-theme .pagination .nav-links a:hover:active,
+.is-light-theme .pagination .nav-links a:hover:focus,
+.is-light-theme .comments-pagination .nav-links a:active,
+.is-light-theme .comments-pagination .nav-links a:hover:active,
+.is-light-theme .comments-pagination .nav-links a:hover:focus {
 	color: var(--global--color-white);
 }
 

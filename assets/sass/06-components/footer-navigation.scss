@@ -38,7 +38,7 @@
 			}
 
 			&:focus {
-
+				// Change color when the body background is dark.
 				.is-dark-theme & {
 
 					.svg-icon {
@@ -46,8 +46,8 @@
 					}
 				}
 
-				// Change colors when the body background is white.
-				.has-background-white & {
+				// Change color when the body background is light.
+				.is-light-theme & {
 
 					.svg-icon {
 						fill: var(--wp--style--color--link, var(--global--color-white));

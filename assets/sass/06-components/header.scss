@@ -80,12 +80,11 @@
 a.custom-logo-link {
 	text-decoration: none;
 
+	// Hide link background color.
+	background: none;
+	// Override link color background on focus.
 	&:focus {
-		// Change colors when the body background is white.
-		.has-background-white &,
-		.is-dark-theme & {
-			background: none;
-		}
+		background: none;
 	}
 }
 

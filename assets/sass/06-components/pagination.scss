@@ -157,6 +157,7 @@
 			color: var(--pagination--color-link-hover);
 		}
 
+		// Override custom pagination link color when focused.
 		.is-dark-theme & {
 
 			a:active,
@@ -166,7 +167,7 @@
 			}
 		}
 
-		.has-background-white & {
+		.is-light-theme & {
 
 			a:active,
 			a:hover:active,

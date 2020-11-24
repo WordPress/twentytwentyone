@@ -59,14 +59,13 @@
 		}
 
 		&:focus {
-			color: var(--footer--color-link-hover);
-
+			// Change color when the body background is dark.
 			.is-dark-theme & {
 				color: var(--wp--style--color--link, var(--global--color-background));
 			}
 
-			// Change colors when the body background is white.
-			.has-background-white & {
+			// Change color when the body background is light.
+			.is-light-theme & {
 				color: var(--wp--style--color--link, var(--global--color-white));
 			}
 		}

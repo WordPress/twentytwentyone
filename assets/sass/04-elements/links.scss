@@ -22,14 +22,17 @@ a:hover {
 
 	background: rgba(255, 255, 255, .9);
 
-	// Change text color when the body background is dark.
+	// The dark and light theme color classes are used to increases the specificity,
+	// to override custom link colors while in focus.
+
+	// Change color when the body background is dark.
 	.is-dark-theme &,
 	.is-dark-theme & .meta-nav {
 		color: var(--wp--style--color--link, var(--global--color-background));
 	}
 
-	// Change colors when the body background is white.
-	.has-background-white & {
+	// Change colors when the body background is light.
+	.is-light-theme & {
 		background: rgba(0, 0, 0, .9);
 		color: var(--wp--style--color--link, var(--global--color-white));
 

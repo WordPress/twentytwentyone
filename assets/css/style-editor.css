@@ -488,12 +488,12 @@ a:hover {
 	color: var(--wp--style--color--link, var(--global--color-background));
 }
 
-.has-background-white .site a:focus {
+.is-light-theme .site a:focus {
 	background: rgba(0, 0, 0, 0.9);
 	color: var(--wp--style--color--link, var(--global--color-white));
 }
 
-.has-background-white .site a:focus .meta-nav {
+.is-light-theme .site a:focus .meta-nav {
 	color: var(--wp--style--color--link, var(--global--color-white));
 }
 
