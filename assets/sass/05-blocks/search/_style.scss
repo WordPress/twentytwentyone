@@ -100,11 +100,19 @@
 
 			button.wp-block-search__button {
 				
-				.is-dark-theme &,
 				.has-black-background-color &,
 				.has-dark-gray-background-color &,
 				.has-gray-background-color & {
-					background-color: var(--global--color-primary);
+					background-color: transparent;
+					color: var(--global--color-primary);
+				}
+
+				.is-dark-theme &,
+				.is-dark-theme .has-black-background-color &,
+				.is-dark-theme .has-dark-gray-background-color &,
+				.is-dark-theme .has-gray-background-color & {
+					background-color: transparent;
+					color: var(--global--color-background);
 				}
 
 /*
