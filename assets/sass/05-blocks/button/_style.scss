@@ -18,17 +18,21 @@ input[type="reset"],
 
 	// Dark theme + background-colors.
 	&:not(.is-style-outline):not(.has-background) {
+
 		.is-dark-theme .has-background:not(.has-black-background-color):not(.has-dark-gray-background-color):not(.has-gray-background-color) & .wp-block-button__link {
 			background-color: var(--button--color-text);
+
 			&:hover {
 				background-color: var(--button--color-background);
 			}
 		}
 	}
-	
+
 	&:not(.is-style-outline):not(.has-text-color) {
+
 		.is-dark-theme .has-background:not(.has-black-background-color):not(.has-dark-gray-background-color):not(.has-gray-background-color) & .wp-block-button__link {
 			color: var(--button--color-background);
+
 			&:hover {
 				color: var(--button--color-text);
 			}
