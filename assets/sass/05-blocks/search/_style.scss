@@ -56,7 +56,7 @@
 		padding: var(--button--padding-vertical) calc(0.5 * var(--button--padding-horizontal));
 		color: inherit;
 		border: var(--button--border-width) solid currentColor;
-		
+
 		.has-background &,
 		.has-background-dim & {
 			color: inherit;
@@ -86,7 +86,7 @@
 	}
 
 	&.wp-block-search__button-inside {
-		
+
 		&.wp-block-search__text-button {
 
 			button.wp-block-search__button {
@@ -99,7 +99,7 @@
 		&.wp-block-search__icon-button {
 
 			button.wp-block-search__button {
-				
+
 				.has-black-background-color &,
 				.has-dark-gray-background-color &,
 				.has-gray-background-color & {
