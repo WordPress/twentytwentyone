@@ -4753,24 +4753,6 @@ pre.wp-block-preformatted {
 	padding: 15px 15px;
 }
 
-.wp-block-search.wp-block-search__button-inside.wp-block-search__text-button button.wp-block-search__button,
-.wp-block-search.wp-block-search__button-inside.wp-block-search__icon-button button.wp-block-search__button {
-
-	/*
-  				.has-background &,
-  				.has-background-dim & {
-  					color: inherit;
-  				}
-
-  				.is-dark-theme .has-background &,
-  				.is-dark-theme .has-background-dim & {
-  					color: var(--button--color-text-hover);
-  					background: var(--button--color-background-active);
-  					border-color: transparent;
-  				}
-  */
-}
-
 .has-black-background-color .wp-block-search.wp-block-search__button-inside.wp-block-search__text-button button.wp-block-search__button {
 	background-color: transparent;
 	color: #28303d;
@@ -7603,14 +7585,7 @@ h1.page-title {
 
 .widget_search > .search-form .search-submit {
 	margin-left: 0;
-	background-color: transparent;
-	color: #39414d;
 	margin-bottom: 15px;
-}
-
-.widget_search > .search-form .search-submit:hover {
-	background-color: #39414d;
-	color: #d1e4dd;
 }
 
 .widget_rss a.rsswidget .rss-widget-icon {
