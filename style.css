@@ -2039,12 +2039,12 @@ input[type=reset]:hover,
 	margin-bottom: var(--global--spacing-vertical);
 }
 
-.wp-block-cover .wp-block-cover__inner-container a,
-.wp-block-cover .wp-block-cover-image-text a,
-.wp-block-cover .wp-block-cover-text a,
-.wp-block-cover-image .wp-block-cover__inner-container a,
-.wp-block-cover-image .wp-block-cover-image-text a,
-.wp-block-cover-image .wp-block-cover-text a {
+.wp-block-cover .wp-block-cover__inner-container a:not(.wp-block-button__link):not(.wp-block-file__button),
+.wp-block-cover .wp-block-cover-image-text a:not(.wp-block-button__link):not(.wp-block-file__button),
+.wp-block-cover .wp-block-cover-text a:not(.wp-block-button__link):not(.wp-block-file__button),
+.wp-block-cover-image .wp-block-cover__inner-container a:not(.wp-block-button__link):not(.wp-block-file__button),
+.wp-block-cover-image .wp-block-cover-image-text a:not(.wp-block-button__link):not(.wp-block-file__button),
+.wp-block-cover-image .wp-block-cover-text a:not(.wp-block-button__link):not(.wp-block-file__button) {
 	color: currentColor;
 }
 
