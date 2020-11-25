@@ -56,7 +56,7 @@
 	border: var(--button--border-width) solid transparent;
 	text-decoration: none;
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
-
+	
 	&:active {
 		background-color: var(--button--color-background-active);
 		border-color: var(--button--color-background-active);
@@ -66,7 +66,7 @@
 	&:hover {
 		background: transparent;
 		border-color: currentColor;
-		color: inherit;
+		color: inherit !important;
 	}
 
 	&:focus {

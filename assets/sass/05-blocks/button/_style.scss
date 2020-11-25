@@ -16,6 +16,25 @@ input[type="reset"],
  */
 .wp-block-button {
 
+	// Dark theme + background-colors.
+	&:not(.is-style-outline):not(.has-background) {
+		.is-dark-theme .has-background:not(.has-black-background-color):not(.has-dark-gray-background-color):not(.has-gray-background-color) & .wp-block-button__link {
+			background-color: var(--button--color-text);
+			&:hover {
+				background-color: var(--button--color-background);
+			}
+		}
+	}
+	
+	&:not(.is-style-outline):not(.has-text-color) {
+		.is-dark-theme .has-background:not(.has-black-background-color):not(.has-dark-gray-background-color):not(.has-gray-background-color) & .wp-block-button__link {
+			color: var(--button--color-background);
+			&:hover {
+				color: var(--button--color-text);
+			}
+		}
+	}
+
 	// Outline Style.
 	&.is-style-outline {
 
@@ -33,7 +52,7 @@ input[type="reset"],
 
 			&:active,
 			&:hover {
-				color: var(--button--color-text);
+				color: var(--button--color-text) !important;
 				background-color: var(--button--color-background) !important;
 				border-color: transparent;
 			}

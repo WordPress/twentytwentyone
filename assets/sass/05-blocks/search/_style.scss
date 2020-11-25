@@ -64,7 +64,7 @@
 
 		&:active,
 		&:hover {
-			color: var(--button--color-text);
+			color: var(--button--color-text) !important;
 			background-color: var(--button--color-background) !important;
 			border-color: transparent;
 		}
@@ -105,6 +105,7 @@
 				.has-gray-background-color & {
 					background-color: transparent;
 					color: var(--global--color-primary);
+					border-color: inherit;
 				}
 
 				.is-dark-theme &,
@@ -113,11 +114,12 @@
 				.is-dark-theme .has-gray-background-color & {
 					background-color: transparent;
 					color: var(--global--color-background);
+					border-color: inherit;
 				}
 
 				&:hover,
 				&:active {
-					color: var(--button--color-text);
+					color: var(--button--color-text) !important;
 				}
 			}
 		}
