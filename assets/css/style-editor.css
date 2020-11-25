@@ -557,7 +557,7 @@ a:hover {
 .wp-block-button__link:hover {
 	background: transparent;
 	border-color: currentColor;
-	color: inherit;
+	color: inherit !important;
 }
 
 .wp-block-button__link:focus {
@@ -880,7 +880,7 @@ a:hover {
 .wp-block-file .wp-block-file__button:hover {
 	background: transparent;
 	border-color: currentColor;
-	color: inherit;
+	color: inherit !important;
 }
 
 .wp-block-file .wp-block-file__button:focus {
@@ -1828,7 +1828,7 @@ pre.wp-block-preformatted {
 .wp-block-search .wp-block-search__button:hover {
 	background: transparent;
 	border-color: currentColor;
-	color: inherit;
+	color: inherit !important;
 }
 
 .wp-block-search .wp-block-search__button:focus {
