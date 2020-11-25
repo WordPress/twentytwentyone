@@ -115,20 +115,6 @@
 					color: var(--global--color-background);
 				}
 
-/*
-				.has-background &,
-				.has-background-dim & {
-					color: inherit;
-				}
-				
-				.is-dark-theme .has-background &,
-				.is-dark-theme .has-background-dim & {
-					color: var(--button--color-text-hover);
-					background: var(--button--color-background-active);
-					border-color: transparent;
-				}
-*/
-
 				&:hover,
 				&:active {
 					color: var(--button--color-text);
