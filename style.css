@@ -3386,15 +3386,26 @@ pre.wp-block-preformatted {
   */
 }
 
-.is-dark-theme .wp-block-search.wp-block-search__button-inside.wp-block-search__text-button button.wp-block-search__button,
 .has-black-background-color .wp-block-search.wp-block-search__button-inside.wp-block-search__text-button button.wp-block-search__button,
 .has-dark-gray-background-color .wp-block-search.wp-block-search__button-inside.wp-block-search__text-button button.wp-block-search__button,
 .has-gray-background-color .wp-block-search.wp-block-search__button-inside.wp-block-search__text-button button.wp-block-search__button,
-.is-dark-theme .wp-block-search.wp-block-search__button-inside.wp-block-search__icon-button button.wp-block-search__button,
 .has-black-background-color .wp-block-search.wp-block-search__button-inside.wp-block-search__icon-button button.wp-block-search__button,
 .has-dark-gray-background-color .wp-block-search.wp-block-search__button-inside.wp-block-search__icon-button button.wp-block-search__button,
 .has-gray-background-color .wp-block-search.wp-block-search__button-inside.wp-block-search__icon-button button.wp-block-search__button {
-	background-color: var(--global--color-primary);
+	background-color: transparent;
+	color: var(--global--color-primary);
+}
+
+.is-dark-theme .wp-block-search.wp-block-search__button-inside.wp-block-search__text-button button.wp-block-search__button,
+.is-dark-theme .has-black-background-color .wp-block-search.wp-block-search__button-inside.wp-block-search__text-button button.wp-block-search__button,
+.is-dark-theme .has-dark-gray-background-color .wp-block-search.wp-block-search__button-inside.wp-block-search__text-button button.wp-block-search__button,
+.is-dark-theme .has-gray-background-color .wp-block-search.wp-block-search__button-inside.wp-block-search__text-button button.wp-block-search__button,
+.is-dark-theme .wp-block-search.wp-block-search__button-inside.wp-block-search__icon-button button.wp-block-search__button,
+.is-dark-theme .has-black-background-color .wp-block-search.wp-block-search__button-inside.wp-block-search__icon-button button.wp-block-search__button,
+.is-dark-theme .has-dark-gray-background-color .wp-block-search.wp-block-search__button-inside.wp-block-search__icon-button button.wp-block-search__button,
+.is-dark-theme .has-gray-background-color .wp-block-search.wp-block-search__button-inside.wp-block-search__icon-button button.wp-block-search__button {
+	background-color: transparent;
+	color: var(--global--color-background);
 }
 
 .wp-block-search.wp-block-search__button-inside.wp-block-search__text-button button.wp-block-search__button:hover,
