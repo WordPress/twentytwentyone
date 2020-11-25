@@ -167,7 +167,7 @@
 			text-decoration: underline;
 		}
 
-		&:not(.dots):hover {
+		&:not(.dots):not(.current):hover {
 			text-decoration-style: dotted;
 		}
 
