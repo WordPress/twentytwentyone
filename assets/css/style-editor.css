@@ -119,7 +119,7 @@
 	--button--color-text-hover: var(--global--color-secondary);
 	--button--color-text-active: var(--global--color-secondary);
 	--button--color-background: var(--global--color-secondary);
-	--button--color-background-active: var(--global--color-background);
+	--button--color-background-active: transparent;
 	--button--font-family: var(--global--font-primary);
 	--button--font-size: var(--global--font-size-base);
 	--button--font-weight: 500;
@@ -548,8 +548,20 @@ a:hover {
 	margin-top: -calc(.5em * var(--button--line-height) + -.39);
 }
 
-.wp-block-button__link:focus {
+.wp-block-button__link:active {
+	background-color: var(--button--color-background-active);
+	border-color: var(--button--color-background-active);
+	color: var(--button--color-text-active);
+}
+
+.wp-block-button__link:hover {
 	background: transparent;
+	border-color: currentColor;
+	color: inherit;
+}
+
+.wp-block-button__link:focus {
+	background: var(--button--color-background-active);
 	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }
@@ -859,8 +871,20 @@ a:hover {
 	margin-top: -calc(.5em * var(--button--line-height) + -.39);
 }
 
-.wp-block-file .wp-block-file__button:focus {
+.wp-block-file .wp-block-file__button:active {
+	background-color: var(--button--color-background-active);
+	border-color: var(--button--color-background-active);
+	color: var(--button--color-text-active);
+}
+
+.wp-block-file .wp-block-file__button:hover {
 	background: transparent;
+	border-color: currentColor;
+	color: inherit;
+}
+
+.wp-block-file .wp-block-file__button:focus {
+	background: var(--button--color-background-active);
 	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }
@@ -1795,8 +1819,20 @@ pre.wp-block-preformatted {
 	margin-top: -calc(.5em * var(--button--line-height) + -.39);
 }
 
-.wp-block-search .wp-block-search__button:focus {
+.wp-block-search .wp-block-search__button:active {
+	background-color: var(--button--color-background-active);
+	border-color: var(--button--color-background-active);
+	color: var(--button--color-text-active);
+}
+
+.wp-block-search .wp-block-search__button:hover {
 	background: transparent;
+	border-color: currentColor;
+	color: inherit;
+}
+
+.wp-block-search .wp-block-search__button:focus {
+	background: var(--button--color-background-active);
 	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }
