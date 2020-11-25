@@ -57,8 +57,20 @@
 	text-decoration: none;
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 
-	&:focus {
+	&:active {
+		background-color: var(--button--color-background-active);
+		border-color: var(--button--color-background-active);
+		color: var(--button--color-text-active);
+	}
+
+	&:hover {
 		background: transparent;
+		border-color: currentColor;
+		color: inherit;
+	}
+
+	&:focus {
+		background: var(--button--color-background-active);
 		outline-offset: -6px;
 		outline: 2px dotted currentColor;
 

@@ -52,26 +52,26 @@
 	button.wp-block-search__button {
 		margin-left: 0;
 		background-color: transparent;
-		color: var(--button--color-text-hover);
 		line-height: 1;
 		padding: var(--button--padding-vertical) calc(0.5 * var(--button--padding-horizontal));
-		border: var(--button--border-width) solid var(--button--color-background);
+		color: inherit;
+		border: var(--button--border-width) solid currentColor;
+		
+		.has-background &,
+		.has-background-dim & {
+			color: inherit;
+		}
 
+		&:active,
 		&:hover {
-			background-color: var(--button--color-background);
 			color: var(--button--color-text);
+			background-color: var(--button--color-background) !important;
+			border-color: transparent;
 		}
 
-		body:not(.is-dark-theme) .has-background-dim &,
-		body:not(.is-dark-theme) .has-background & {
-			color: inherit !important;
-			border-color: inherit !important;
-		}
-
-		body:not(.is-dark-theme) .has-background-dim &:hover,
-		body:not(.is-dark-theme) .has-background &:hover {
-			color: inherit !important;
-			border-color: transparent !important;
+		&:focus {
+			color: var(--button--color-background) !important;
+			background-color: transparent !important;
 		}
 
 		&.has-icon {
@@ -99,34 +99,37 @@
 		&.wp-block-search__icon-button {
 
 			button.wp-block-search__button {
-
-				// Background-dim
-				body:not(.is-dark-theme) .has-background &,
-				body:not(.is-dark-theme) .has-background-dim & {
-					color: var(--button--color-text-hover) !important;
-					border-color: var(--button--color-background) !important;
+				
+				.is-dark-theme &,
+				.has-black-background-color &,
+				.has-dark-gray-background-color &,
+				.has-gray-background-color & {
+					background-color: var(--global--color-primary);
 				}
 
-				body:not(.is-dark-theme) .has-background &:hover,
-				body:not(.is-dark-theme) .has-background-dim &:hover {
-					color: var(--button--color-text) !important; 
+/*
+				.has-background &,
+				.has-background-dim & {
+					color: inherit;
 				}
-
-				// Dark Theme
-				.is-dark-theme & {
-					color: var(--button--color-background) !important;
-					background-color: var(--button--color-text) !important;
+				
+				.is-dark-theme .has-background &,
+				.is-dark-theme .has-background-dim & {
+					color: var(--button--color-text-hover);
+					background: var(--button--color-background-active);
+					border-color: transparent;
 				}
+*/
 
-				.is-dark-theme &:hover {
-					color: var(--button--color-text) !important;
-					background-color: var(--button--color-background) !important;
+				&:hover,
+				&:active {
+					color: var(--button--color-text);
 				}
 			}
 		}
 
 		.wp-block-search__inside-wrapper {
-			border: var(--button--border-width) solid var(--button--color-background);
+			border: var(--button--border-width) solid currentColor;
 		}
 
 	}

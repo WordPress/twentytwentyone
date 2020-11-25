@@ -1,5 +1,11 @@
 .wp-block-file {
 
+	.wp-block-file__button {
+		// Extend button style
+		@include button-style();
+		display: inline-block;
+	}
+
 	// Undo Gutenberg hover defaults
 	a.wp-block-file__button:active,
 	a.wp-block-file__button:focus,
@@ -10,8 +16,8 @@
 
 		.has-background-dim &,
 		.has-background & {
-			color: inherit !important;
-			border-color: inherit !important;
+			color: inherit;
+			border-color: inherit;
 		}	
 	}
 
@@ -24,14 +30,8 @@
 
 		.has-background-dim &,
 		.has-background & {
-			color: var(--button--color-text) !important;
-			border-color: var(--button--color-text) !important;
+			color: var(--button--color-text);
+			border-color: var(--button--color-text);
 		}	
-	}
-
-	.wp-block-file__button {
-		// Extend button style
-		@include button-style();
-		display: inline-block;
 	}
 }
