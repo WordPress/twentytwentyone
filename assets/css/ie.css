@@ -2311,62 +2311,6 @@ input[type=reset] {
 	padding: 15px 30px;
 }
 
-.site .button:before,
-.site .button:after,
-input[type=submit]:before,
-input[type=submit]:after,
-input[type=reset]:before,
-input[type=reset]:after,
-.wp-block-search__button:before,
-.wp-block-search__button:after,
-.wp-block-button .wp-block-button__link:before,
-.wp-block-button .wp-block-button__link:after {
-	content: "";
-	display: block;
-	height: 0;
-	width: 0;
-}
-
-.site .button:before {
-	margin-bottom: -calc(1em - 0);
-}
-
-input[type=submit]:before {
-	margin-bottom: -calc(1em - 0);
-}
-
-input[type=reset]:before {
-	margin-bottom: -calc(1em - 0);
-}
-
-.wp-block-search__button:before {
-	margin-bottom: -calc(1em - 0);
-}
-
-.wp-block-button .wp-block-button__link:before {
-	margin-bottom: -calc(1em - 0);
-}
-
-.site .button:after {
-	margin-top: -calc(1em - 0);
-}
-
-input[type=submit]:after {
-	margin-top: -calc(1em - 0);
-}
-
-input[type=reset]:after {
-	margin-top: -calc(1em - 0);
-}
-
-.wp-block-search__button:after {
-	margin-top: -calc(1em - 0);
-}
-
-.wp-block-button .wp-block-button__link:after {
-	margin-top: -calc(1em - 0);
-}
-
 .site .button:focus,
 input[type=submit]:focus,
 input[type=reset]:focus,
@@ -3092,22 +3036,6 @@ input[type=reset]:hover {
 	text-decoration: none;
 	padding: 15px 30px;
 	display: inline-block;
-}
-
-.wp-block-file .wp-block-file__button:before,
-.wp-block-file .wp-block-file__button:after {
-	content: "";
-	display: block;
-	height: 0;
-	width: 0;
-}
-
-.wp-block-file .wp-block-file__button:before {
-	margin-bottom: -calc(1em - 0);
-}
-
-.wp-block-file .wp-block-file__button:after {
-	margin-top: -calc(1em - 0);
 }
 
 .wp-block-file .wp-block-file__button:focus {
