@@ -72,6 +72,7 @@ $twenty_twenty_one_comment_count = get_comments_number();
 					esc_html__( 'Newer comments', 'twentytwentyone' ),
 					is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' )
 				),
+				'after_page_number' => esc_html__( '', 'twentytwentyone' ),
 			)
 		);
 		?>
