@@ -257,6 +257,7 @@ if ( ! function_exists( 'twenty_twenty_one_the_posts_navigation' ) ) {
 					),
 					is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' )
 				),
+				'after_page_number' => esc_html__( '', 'twentytwentyone' ),
 			)
 		);
 	}
