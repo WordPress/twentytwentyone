@@ -2440,36 +2440,42 @@ input[type=reset]:hover,
 
 .site .button:focus {
 	background: transparent;
+	border-color: currentColor;
 	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }
 
 input[type=submit]:focus {
 	background: transparent;
+	border-color: currentColor;
 	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }
 
 input[type=reset]:focus {
 	background: transparent;
+	border-color: currentColor;
 	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }
 
 .wp-block-button .wp-block-button__link:focus {
 	background: transparent;
+	border-color: currentColor;
 	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }
 
 .wp-block-file .wp-block-file__button:focus {
 	background: transparent;
+	border-color: currentColor;
 	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }
 
 .wp-block-search .wp-block-search__button:focus {
 	background: transparent;
+	border-color: currentColor;
 	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }
@@ -3115,6 +3121,7 @@ input[type=reset]:disabled {
 
 .wp-block-file .wp-block-file__button:focus {
 	background: transparent;
+	border-color: currentColor;
 	outline-offset: -6px;
 	outline: 2px dotted currentColor;
 }
