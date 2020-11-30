@@ -4885,7 +4885,7 @@ h1.page-title {
 }
 
 .primary-navigation > div > .menu-wrapper .sub-menu-toggle:focus {
-	outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
+	outline: 1px solid var(--wp--style--color--link, var(--global--color-primary));
 }
 @media only screen and (max-width: 481px) {
 
@@ -4999,7 +4999,7 @@ h1.page-title {
 	}
 
 	.primary-navigation .primary-menu-container > ul > .menu-item > a + .sub-menu-toggle {
-		margin-right: calc(0px - var(--primary-nav--padding));
+		margin-right: calc(5px - var(--primary-nav--padding));
 	}
 }
 
