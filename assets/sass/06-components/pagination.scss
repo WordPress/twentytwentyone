@@ -11,6 +11,7 @@
 		&:hover {
 			color: var(--global--color-primary-hover);
 			text-decoration: underline;
+			text-decoration-style: dotted;
 		}
 
 		&:focus {
@@ -167,7 +168,7 @@
 			text-decoration: underline;
 		}
 
-		&:not(.dots):hover {
+		&:not(.dots):not(.current):hover {
 			text-decoration-style: dotted;
 		}
 
