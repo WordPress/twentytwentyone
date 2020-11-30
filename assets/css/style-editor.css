@@ -513,8 +513,8 @@ a:hover {
 	outline: 2px dotted var(--wp--style--color--link, var(--global--color-primary));
 }
 
-.has-background:not(.has-background-background-color) .has-link-color a,
-.has-background:not(.has-background-background-color).has-link-color a {
+.has-background .has-link-color a,
+.has-background.has-link-color a {
 	color: var(--wp--style--color--link, var(--global--color-primary));
 }
 
@@ -704,6 +704,23 @@ a:hover {
 	margin-bottom: 0;
 }
 
+.wp-block-cover > .wp-block-cover__inner-container > *:first-child,
+.wp-block-cover-image > .wp-block-cover__inner-container > *:first-child {
+	margin-top: 0;
+}
+
+.wp-block-cover > .wp-block-cover__inner-container > *:last-child:not(.block-list-appender),
+.wp-block-cover-image > .wp-block-cover__inner-container > *:last-child:not(.block-list-appender) {
+	margin-bottom: 0;
+}
+
+.wp-block-cover.has-child-selected > .wp-block-cover__inner-container > *:nth-last-child(2),
+.wp-block-cover.is-selected > .wp-block-cover__inner-container > *:nth-last-child(2),
+.wp-block-cover-image.has-child-selected > .wp-block-cover__inner-container > *:nth-last-child(2),
+.wp-block-cover-image.is-selected > .wp-block-cover__inner-container > *:nth-last-child(2) {
+	margin-bottom: 0;
+}
+
 .wp-block-cover .wp-block-cover__inner-container,
 .wp-block-cover .wp-block-cover-image-text,
 .wp-block-cover .wp-block-cover-text,
@@ -785,6 +802,19 @@ a:hover {
 .wp-block-columns .wp-block,
 .wp-block-columns .wp-block-column {
 	max-width: inherit;
+}
+
+.wp-block-columns > .wp-block-column > *:first-child {
+	margin-top: 0;
+}
+
+.wp-block-columns > .wp-block-column > *:last-child:not(.block-list-appender) {
+	margin-bottom: 0;
+}
+
+.wp-block-columns.has-child-selected > .wp-block-column > *:nth-last-child(2),
+.wp-block-columns.is-selected > .wp-block-column > *:nth-last-child(2) {
+	margin-bottom: 0;
 }
 @media only screen and (min-width: 652px) {
 
@@ -949,7 +979,16 @@ a:hover {
 	margin-left: calc(-1 * var(--global--spacing-vertical));
 }
 
-.wp-block-group .wp-block-group__inner-container > *:last-child {
+.wp-block-group > .wp-block-group__inner-container > *:first-child {
+	margin-top: 0;
+}
+
+.wp-block-group > .wp-block-group__inner-container > *:last-child:not(.block-list-appender) {
+	margin-bottom: 0;
+}
+
+.wp-block-group.has-child-selected > .wp-block-group__inner-container > *:nth-last-child(2),
+.wp-block-group.is-selected > .wp-block-group__inner-container > *:nth-last-child(2) {
 	margin-bottom: 0;
 }
 
@@ -1330,16 +1369,21 @@ dt {
 	margin-bottom: 0;
 }
 
-.wp-block-media-text .wp-block-media-text__content {
-	padding: var(--global--spacing-horizontal);
-}
-
-.wp-block-media-text .wp-block-media-text__content [data-block]:first-child {
+.wp-block-media-text > .wp-block-media-text__content > *:first-child {
 	margin-top: 0;
 }
 
-.wp-block-media-text .wp-block-media-text__content [data-block]:last-child {
+.wp-block-media-text > .wp-block-media-text__content > *:last-child:not(.block-list-appender) {
 	margin-bottom: 0;
+}
+
+.wp-block-media-text.has-child-selected > .wp-block-media-text__content > *:nth-last-child(2),
+.wp-block-media-text.is-selected > .wp-block-media-text__content > *:nth-last-child(2) {
+	margin-bottom: 0;
+}
+
+.wp-block-media-text .wp-block-media-text__content {
+	padding: var(--global--spacing-horizontal);
 }
 
 .wp-block-media-text.is-style-twentytwentyone-border {
@@ -1517,9 +1561,9 @@ pre.wp-block-preformatted {
 	font-style: var(--quote--font-style-cite);
 }
 
-.has-background:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
-[class*=background-color]:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
-[style*=background-color]:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
+.has-background .wp-block-quote .wp-block-quote__citation,
+[class*=background-color] .wp-block-quote .wp-block-quote__citation,
+[style*=background-color] .wp-block-quote .wp-block-quote__citation,
 .wp-block-cover[style*=background-image] .wp-block-quote .wp-block-quote__citation {
 	color: currentColor;
 }
@@ -2041,13 +2085,13 @@ hr.is-style-dots:before {
 	color: var(--separator--border-color);
 }
 
-.has-background:not(.has-background-background-color) .wp-block-separator,
-[class*=background-color]:not(.has-background-background-color) .wp-block-separator,
-[style*=background-color]:not(.has-background-background-color) .wp-block-separator,
+.has-background .wp-block-separator,
+[class*=background-color] .wp-block-separator,
+[style*=background-color] .wp-block-separator,
 .wp-block-cover[style*=background-image] .wp-block-separator,
-.has-background:not(.has-background-background-color) hr,
-[class*=background-color]:not(.has-background-background-color) hr,
-[style*=background-color]:not(.has-background-background-color) hr,
+.has-background hr,
+[class*=background-color] hr,
+[style*=background-color] hr,
 .wp-block-cover[style*=background-image] hr {
 	border-color: currentColor;
 }
@@ -2236,7 +2280,7 @@ pre.wp-block-verse {
 	color: var(--global--color-secondary);
 }
 
-.has-background:not(.has-background-background-color) a:not(.wp-block-button__link),
+.has-background a,
 .has-background p,
 .has-background h1,
 .has-background h2,
@@ -2270,14 +2314,6 @@ pre.wp-block-verse {
 [data-block] {
 	margin-top: var(--global--spacing-vertical);
 	margin-bottom: var(--global--spacing-vertical);
-}
-
-[data-block] [data-block]:first-child {
-	margin-top: 0;
-}
-
-[data-block] [data-block]:nth-last-child(2) {
-	margin-bottom: 0;
 }
 
 .wp-block {
@@ -2365,8 +2401,8 @@ body {
 	text-decoration: none;
 }
 
-.has-background:not(.has-background-background-color) .has-link-color a,
-.has-background:not(.has-background-background-color).has-link-color a {
+.has-background .has-link-color a,
+.has-background.has-link-color a {
 	color: var(--wp--style--color--link, var(--global--color-primary));
 }
 
@@ -2415,7 +2451,7 @@ a {
 	color: var(--global--color-white);
 }
 
-.has-background:not(.has-background-background-color) a:not(.wp-block-button__link):not(.wp-block-file__button),
+.has-background a,
 .has-background p,
 .has-background h1,
 .has-background h2,
