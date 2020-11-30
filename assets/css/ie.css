@@ -7104,6 +7104,7 @@ h1.page-title {
 .navigation a:hover {
 	color: #28303d;
 	text-decoration: underline;
+	text-decoration-style: dotted;
 }
 
 .navigation a:focus {
@@ -7298,8 +7299,8 @@ h1.page-title {
 	text-decoration: underline;
 }
 
-.pagination .nav-links > *:not(.dots):hover,
-.comments-pagination .nav-links > *:not(.dots):hover {
+.pagination .nav-links > *:not(.dots):not(.current):hover,
+.comments-pagination .nav-links > *:not(.dots):not(.current):hover {
 	text-decoration-style: dotted;
 }
 
