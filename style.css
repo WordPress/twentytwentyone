@@ -1694,8 +1694,8 @@ a:hover {
 	outline: 2px dotted var(--wp--style--color--link, var(--global--color-primary));
 }
 
-.has-background:not(.has-background-background-color) .has-link-color a,
-.has-background:not(.has-background-background-color).has-link-color a {
+.has-background .has-link-color a,
+.has-background.has-link-color a {
 	color: var(--wp--style--color--link, var(--global--color-primary));
 }
 
@@ -3066,16 +3066,16 @@ pre.wp-block-preformatted {
 	left: 8px;
 }
 
-.has-background:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
-[class*=background-color]:not(.has-background-background-color) .wp-block-quote .wp-block-quote__citation,
+.has-background .wp-block-quote .wp-block-quote__citation,
+[class*=background-color] .wp-block-quote .wp-block-quote__citation,
 [style*=background-color] .wp-block-quote .wp-block-quote__citation,
 .wp-block-cover[style*=background-image] .wp-block-quote .wp-block-quote__citation,
-.has-background:not(.has-background-background-color) .wp-block-quote cite,
-[class*=background-color]:not(.has-background-background-color) .wp-block-quote cite,
+.has-background .wp-block-quote cite,
+[class*=background-color] .wp-block-quote cite,
 [style*=background-color] .wp-block-quote cite,
 .wp-block-cover[style*=background-image] .wp-block-quote cite,
-.has-background:not(.has-background-background-color) .wp-block-quote footer,
-[class*=background-color]:not(.has-background-background-color) .wp-block-quote footer,
+.has-background .wp-block-quote footer,
+[class*=background-color] .wp-block-quote footer,
 [style*=background-color] .wp-block-quote footer,
 .wp-block-cover[style*=background-image] .wp-block-quote footer {
 	color: currentColor;
@@ -3333,8 +3333,8 @@ pre.wp-block-preformatted {
 	border-color: var(--form--border-color);
 }
 
-.has-background:not(.has-background-background-color) .wp-block-search .wp-block-search__input,
-[class*=background-color]:not(.has-background-background-color) .wp-block-search .wp-block-search__input,
+.has-background .wp-block-search .wp-block-search__input,
+[class*=background-color] .wp-block-search .wp-block-search__input,
 [style*=background-color] .wp-block-search .wp-block-search__input,
 .wp-block-cover[style*=background-image] .wp-block-search .wp-block-search__input {
 	border-color: currentColor;
@@ -3475,11 +3475,15 @@ hr.wp-block-separator.is-style-dots:before {
 	padding-left: var(--global--font-size-sm);
 }
 
-.has-background:not(.has-background-background-color) hr.wp-block-separator,
-[class*=background-color]:not(.has-background-background-color) hr.wp-block-separator,
+.has-background hr.wp-block-separator,
+[class*=background-color] hr.wp-block-separator,
 [style*=background-color] hr.wp-block-separator,
 .wp-block-cover[style*=background-image] hr.wp-block-separator {
 	border-color: currentColor;
+}
+
+.wp-block-social-links a:focus {
+	color: var(--global--color-primary);
 }
 
 .wp-block-social-links.is-style-twentytwentyone-social-icons-color a {
@@ -5670,7 +5674,7 @@ h1.page-title {
 	color: var(--global--color-white);
 }
 
-.has-background:not(.has-background-background-color) a:not(.wp-block-button__link):not(.wp-block-file__button),
+.has-background a,
 .has-background p,
 .has-background h1,
 .has-background h2,
