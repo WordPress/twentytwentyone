@@ -27,9 +27,9 @@
 		font-size: var(--global--font-size-xs);
 		font-style: var(--quote--font-style-cite);
 
-		.has-background:not(.has-background-background-color) &,
-		[class*="background-color"]:not(.has-background-background-color) &,
-		[style*="background-color"]:not(.has-background-background-color) &,
+		.has-background &,
+		[class*="background-color"] &,
+		[style*="background-color"] &,
 		.wp-block-cover[style*="background-image"] & {
 			color: currentColor;
 		}
