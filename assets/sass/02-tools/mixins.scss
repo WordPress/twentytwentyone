@@ -71,6 +71,7 @@
 
 	&:focus {
 		background: var(--button--color-background-active);
+		border-color: currentColor;
 		outline-offset: -6px;
 		outline: 2px dotted currentColor;
 
