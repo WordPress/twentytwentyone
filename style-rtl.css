@@ -1584,7 +1584,8 @@ video {
 /* Media captions */
 figcaption,
 .wp-caption,
-.wp-caption-text {
+.wp-caption-text,
+.wp-block-embed figcaption {
 	color: currentColor;
 	font-size: var(--global--font-size-xs);
 	line-height: var(--global--line-height-body);
@@ -1598,7 +1599,9 @@ figcaption,
 .alignleft .wp-caption,
 .alignright .wp-caption,
 .alignleft .wp-caption-text,
-.alignright .wp-caption-text {
+.alignright .wp-caption-text,
+.alignleft .wp-block-embed figcaption,
+.alignright .wp-block-embed figcaption {
 	margin-bottom: 0;
 }
 
