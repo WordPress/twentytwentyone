@@ -2195,7 +2195,7 @@ a:hover {
 	text-decoration-skip-ink: none;
 }
 
-.site a:focus {
+.site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) {
 
 	/* Only visible in Windows High Contrast mode */
 	outline: 2px solid transparent;
@@ -2204,36 +2204,36 @@ a:hover {
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.is-dark-theme .site a:focus {
+.is-dark-theme .site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) {
 	color: #d1e4dd;
 }
 
-.is-dark-theme .site a:focus .meta-nav {
+.is-dark-theme .site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) .meta-nav {
 	color: #d1e4dd;
 }
 
-.has-background-white .site a:focus {
+.has-background-white .site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) {
 	background: rgba(0, 0, 0, 0.9);
 	color: #fff;
 }
 
-.has-background-white .site a:focus .meta-nav {
+.has-background-white .site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) .meta-nav {
 	color: #fff;
 }
 
-.site a:focus.skip-link {
+.site a:focus:not(.wp-block-button__link):not(.wp-block-file__button).skip-link {
 
 	/* Only visible in Windows High Contrast mode */
 	outline: 2px solid transparent;
 	outline-offset: -2px;
 }
 
-.site a:focus.skip-link:focus {
+.site a:focus:not(.wp-block-button__link):not(.wp-block-file__button).skip-link:focus {
 	color: #21759b;
 	background-color: #f1f1f1;
 }
 
-.site a:focus img {
+.site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) img {
 	outline: 2px dotted #28303d;
 }
 
