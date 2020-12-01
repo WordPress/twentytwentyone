@@ -1827,6 +1827,7 @@ input[type=reset]:disabled,
 .wp-block-button.is-style-outline .wp-block-button__link:focus {
 	color: var(--button--color-background) !important;
 	background-color: transparent !important;
+	border-color: var(--button--color-background) !important;
 }
 
 .wp-block-button .is-style-squared .wp-block-button__link {

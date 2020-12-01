@@ -2558,6 +2558,7 @@ input[type=reset]:disabled {
 .wp-block-button.is-style-outline .wp-block-button__link:focus {
 	color: #39414d !important;
 	background-color: transparent !important;
+	border-color: #39414d !important;
 }
 
 .wp-block-button .is-style-squared .wp-block-button__link {
