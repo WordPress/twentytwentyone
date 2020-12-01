@@ -4568,10 +4568,6 @@ pre.wp-block-preformatted {
 	}
 }
 
-.wp-block-search__button-inside .wp-block-search__inside-wrapper {
-	background-color: #fff;
-}
-
 .wp-block-search__button-only.aligncenter .wp-block-search__inside-wrapper {
 	justify-content: center;
 }
@@ -4776,6 +4772,12 @@ pre.wp-block-preformatted {
 	border-color: #d1e4dd;
 	background-color: #d1e4dd;
 	color: #39414d;
+}
+
+.wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper {
+	background-color: #fff;
+	border: 3px solid #39414d;
+	border-radius: 0;
 }
 
 .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper .wp-block-search__input {

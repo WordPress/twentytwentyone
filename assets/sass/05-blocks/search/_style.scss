@@ -1,13 +1,6 @@
 .wp-block-search {
 	max-width: var(--responsive--aligndefault-width);
 
-	&__button-inside {
-
-		.wp-block-search__inside-wrapper {
-			background-color: var(--global--color-white);
-		}
-	}
-
 	&__button-only.aligncenter {
 
 		.wp-block-search__inside-wrapper {
@@ -113,12 +106,18 @@
 
 	&.wp-block-search__button-inside {
 
-		.wp-block-search__inside-wrapper .wp-block-search__input {
-			margin-right: 0;
+		.wp-block-search__inside-wrapper {
+			background-color: var(--global--color-white);
+			border: var(--form--border-width) solid var(--form--border-color);
+			border-radius: var(--form--border-radius);
 
-			&:focus {
-				outline: 2px dotted var(--form--border-color);
-				outline-offset: -5px;
+			.wp-block-search__input {
+				margin-right: 0;
+
+				&:focus {
+					outline: 2px dotted var(--form--border-color);
+					outline-offset: -5px;
+				}
 			}
 		}
 
