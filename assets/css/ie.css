@@ -4778,6 +4778,10 @@ pre.wp-block-preformatted {
 	color: #39414d;
 }
 
+.wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper .wp-block-search__input {
+	margin-right: 0;
+}
+
 .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper .wp-block-search__input:focus {
 	outline: 2px dotted #39414d;
 	outline-offset: -5px;
