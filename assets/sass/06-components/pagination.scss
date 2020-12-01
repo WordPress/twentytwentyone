@@ -124,16 +124,7 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
-
-		&:hover {
-
-			.post-title {
-				text-decoration: underline;
-				text-decoration-thickness: 1px;
-			}
-		}
 	}
-
 }
 
 // Index/archive navigation
@@ -249,5 +240,4 @@
 	.nav-links > * {
 		font-size: var(--global--font-size-md);
 	}
-
 }
