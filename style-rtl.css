@@ -1584,7 +1584,8 @@ video {
 /* Media captions */
 figcaption,
 .wp-caption,
-.wp-caption-text {
+.wp-caption-text,
+.wp-block-embed figcaption {
 	color: currentColor;
 	font-size: var(--global--font-size-xs);
 	line-height: var(--global--line-height-body);
@@ -1598,7 +1599,9 @@ figcaption,
 .alignleft .wp-caption,
 .alignright .wp-caption,
 .alignleft .wp-caption-text,
-.alignright .wp-caption-text {
+.alignright .wp-caption-text,
+.alignleft .wp-block-embed figcaption,
+.alignright .wp-block-embed figcaption {
 	margin-bottom: 0;
 }
 
@@ -1647,40 +1650,42 @@ a:hover {
 	text-decoration-skip-ink: none;
 }
 
-.site a:focus {
+.site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) {
 
 	/* Only visible in Windows High Contrast mode */
 	outline: 2px solid transparent;
+	text-decoration: underline 1px dotted currentColor;
+	text-decoration-skip-ink: none;
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.is-dark-theme .site a:focus,
-.is-dark-theme .site a:focus .meta-nav {
+.is-dark-theme .site a:focus:not(.wp-block-button__link):not(.wp-block-file__button),
+.is-dark-theme .site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) .meta-nav {
 	color: var(--wp--style--color--link, var(--global--color-background));
 }
 
-.has-background-white .site a:focus {
+.has-background-white .site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) {
 	background: rgba(0, 0, 0, 0.9);
 	color: var(--wp--style--color--link, var(--global--color-white));
 }
 
-.has-background-white .site a:focus .meta-nav {
+.has-background-white .site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) .meta-nav {
 	color: var(--wp--style--color--link, var(--global--color-white));
 }
 
-.site a:focus.skip-link {
+.site a:focus:not(.wp-block-button__link):not(.wp-block-file__button).skip-link {
 
 	/* Only visible in Windows High Contrast mode */
 	outline: 2px solid transparent;
 	outline-offset: -2px;
 }
 
-.site a:focus.skip-link:focus {
+.site a:focus:not(.wp-block-button__link):not(.wp-block-file__button).skip-link:focus {
 	color: #21759b;
 	background-color: #f1f1f1;
 }
 
-.site a:focus img {
+.site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) img {
 	outline: 2px dotted var(--wp--style--color--link, var(--global--color-primary));
 }
 
@@ -1715,42 +1720,6 @@ input[type=reset],
 	border: var(--button--border-width) solid transparent;
 	text-decoration: none;
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
-}
-
-.site .button:before,
-.site .button:after,
-input[type=submit]:before,
-input[type=submit]:after,
-input[type=reset]:before,
-input[type=reset]:after,
-.wp-block-button .wp-block-button__link:before,
-.wp-block-button .wp-block-button__link:after,
-.wp-block-file .wp-block-file__button:before,
-.wp-block-file .wp-block-file__button:after,
-.wp-block-search .wp-block-search__button:before,
-.wp-block-search .wp-block-search__button:after {
-	content: "";
-	display: block;
-	height: 0;
-	width: 0;
-}
-
-.site .button:before,
-input[type=submit]:before,
-input[type=reset]:before,
-.wp-block-button .wp-block-button__link:before,
-.wp-block-file .wp-block-file__button:before,
-.wp-block-search .wp-block-search__button:before {
-	margin-bottom: -calc(.5em * var(--button--line-height) + -.38);
-}
-
-.site .button:after,
-input[type=submit]:after,
-input[type=reset]:after,
-.wp-block-button .wp-block-button__link:after,
-.wp-block-file .wp-block-file__button:after,
-.wp-block-search .wp-block-search__button:after {
-	margin-top: -calc(.5em * var(--button--line-height) + -.39);
 }
 
 .site .button:active,
@@ -2135,22 +2104,6 @@ input[type=reset]:disabled,
 	text-decoration: none;
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 	display: inline-block;
-}
-
-.wp-block-file .wp-block-file__button:before,
-.wp-block-file .wp-block-file__button:after {
-	content: "";
-	display: block;
-	height: 0;
-	width: 0;
-}
-
-.wp-block-file .wp-block-file__button:before {
-	margin-bottom: -calc(.5em * var(--button--line-height) + -.38);
-}
-
-.wp-block-file .wp-block-file__button:after {
-	margin-top: -calc(.5em * var(--button--line-height) + -.39);
 }
 
 .wp-block-file .wp-block-file__button:active {
@@ -3371,6 +3324,15 @@ pre.wp-block-preformatted {
 	width: 40px;
 	height: 40px;
 	fill: currentColor;
+}
+
+.wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper .wp-block-search__input {
+	margin-left: 0;
+}
+
+.wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper .wp-block-search__input:focus {
+	outline: 2px dotted var(--form--border-color);
+	outline-offset: -5px;
 }
 
 .wp-block-search.wp-block-search__button-inside.wp-block-search__text-button button.wp-block-search__button {
@@ -4973,7 +4935,7 @@ h1.page-title {
 	}
 
 	.primary-navigation .primary-menu-container > ul > .menu-item > a + .sub-menu-toggle {
-		margin-right: calc(0px - var(--primary-nav--padding));
+		margin-right: calc(5px - var(--primary-nav--padding));
 	}
 }
 
@@ -5014,6 +4976,7 @@ h1.page-title {
 	position: relative;
 	z-index: 99999;
 	outline-offset: 0;
+	text-decoration-thickness: 2px;
 }
 
 .primary-navigation .current-menu-item > a:first-child,
@@ -5187,6 +5150,7 @@ h1.page-title {
 .navigation a:hover {
 	color: var(--global--color-primary-hover);
 	text-decoration: underline;
+	text-decoration-style: dotted;
 }
 
 .navigation a:focus {
@@ -5302,12 +5266,6 @@ h1.page-title {
 	margin-bottom: 0;
 }
 
-.post-navigation .nav-next:hover .post-title,
-.post-navigation .nav-previous:hover .post-title {
-	text-decoration: underline;
-	text-decoration-thickness: 1px;
-}
-
 .pagination,
 .comments-pagination {
 	border-top: 3px solid var(--global--color-border);
@@ -5363,7 +5321,12 @@ h1.page-title {
 
 .pagination .nav-links > *.current,
 .comments-pagination .nav-links > *.current {
-	border-bottom: 1px solid var(--pagination--color-text);
+	text-decoration: underline;
+}
+
+.pagination .nav-links > *:not(.dots):not(.current):hover,
+.comments-pagination .nav-links > *:not(.dots):not(.current):hover {
+	text-decoration-style: dotted;
 }
 
 .pagination .nav-links > *:first-child,
