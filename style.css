@@ -4905,7 +4905,7 @@ h1.page-title {
 }
 
 .primary-navigation > div > .menu-wrapper .sub-menu-toggle:focus {
-	outline: 1px solid var(--wp--style--color--link, var(--global--color-primary));
+	outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
 }
 @media only screen and (max-width: 481px) {
 

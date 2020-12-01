@@ -6812,7 +6812,7 @@ h1.page-title {
 }
 
 .primary-navigation > div > .menu-wrapper .sub-menu-toggle:focus {
-	outline: 1px solid #28303d;
+	outline: 2px solid #28303d;
 }
 @media only screen and (max-width: 481px) {
 
