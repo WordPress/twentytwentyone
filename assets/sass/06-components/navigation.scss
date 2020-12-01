@@ -416,6 +416,7 @@
 			position: relative;
 			z-index: 99999; // Ensure focus styles appear above absolute positioned elements
 			outline-offset: 0;
+			text-decoration-thickness: 2px;
 		}
 	}
 
