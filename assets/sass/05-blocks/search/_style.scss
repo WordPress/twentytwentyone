@@ -113,6 +113,11 @@
 
 	&.wp-block-search__button-inside {
 
+		.wp-block-search__inside-wrapper .wp-block-search__input:focus {
+			outline: 2px dotted var(--form--border-color);
+			outline-offset: -5px;
+		}
+
 		&.wp-block-search__text-button {
 
 			button.wp-block-search__button {
