@@ -3380,6 +3380,10 @@ pre.wp-block-preformatted {
 	outline-offset: -5px;
 }
 
+.is-dark-theme .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper .wp-block-search__input:focus {
+	outline-color: currentColor;
+}
+
 .wp-block-search.wp-block-search__button-inside.wp-block-search__text-button button.wp-block-search__button {
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }

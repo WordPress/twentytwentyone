@@ -117,6 +117,10 @@
 				&:focus {
 					outline: 2px dotted var(--form--border-color);
 					outline-offset: -5px;
+
+					.is-dark-theme & {
+						outline-color: currentColor;
+					}
 				}
 			}
 		}
