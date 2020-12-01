@@ -7329,12 +7329,6 @@ h1.page-title {
 	margin-bottom: 0;
 }
 
-.post-navigation .nav-next:hover .post-title,
-.post-navigation .nav-previous:hover .post-title {
-	text-decoration: underline;
-	text-decoration-thickness: 1px;
-}
-
 .pagination {
 	border-top: 3px solid #28303d;
 	padding-top: 30px;
