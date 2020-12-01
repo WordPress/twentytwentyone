@@ -64,6 +64,7 @@ input[type="reset"],
 			&:focus {
 				color: var(--button--color-background) !important;
 				background-color: transparent !important;
+				border-color: var(--button--color-background) !important;
 			}
 		}
 	}
