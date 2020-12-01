@@ -4951,7 +4951,7 @@ h1.page-title {
 	}
 
 	.primary-navigation .primary-menu-container > ul > .menu-item > a + .sub-menu-toggle {
-		margin-right: calc(0px - var(--primary-nav--padding));
+		margin-right: calc(5px - var(--primary-nav--padding));
 	}
 }
 
