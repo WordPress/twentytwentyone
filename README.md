@@ -28,6 +28,6 @@ From this point on any new issues should be opened on the WordPress Core Trac in
 
 Please prefix tickets with Twenty Twenty-One: so that they are easy to find and collect with a search or filters. Thank you!
 
-https://core.trac.wordpress.org/newticket?component=Bundled+Theme
+https://core.trac.wordpress.org/newticket?component=Bundled+Theme&summary=Twenty+Twenty-One
 
-https://core.trac.wordpress.org/search?q=twenty+twenty%3A
+https://core.trac.wordpress.org/search?q=twenty+twenty-one.
