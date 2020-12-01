@@ -62,4 +62,10 @@
 | @bph| @bph |
 | @felipeelia | @felipeelia |
 | @aljullu | @aljullu |
-
+| @allancole | @allancole |
+| @kebbet | @kebbet |
+| @clorith | @clorith |
+| @paaljoachim | @paaljoachim |
+| @MarieComet | @chaton666 |
+| @mkaz | @mkaz |
+| @ingereck | @ingereck |
