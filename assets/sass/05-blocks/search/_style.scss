@@ -1,10 +1,12 @@
 .wp-block-search {
 	max-width: var(--responsive--aligndefault-width);
 
-	&__button-inside {
+	&.wp-block-search__button-inside {
 
 		.wp-block-search__inside-wrapper {
 			background-color: var(--global--color-white);
+			border: var(--form--border-width) solid var(--form--border-color);
+			border-radius: var(--form--border-radius);
 		}
 	}
 

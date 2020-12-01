@@ -3239,8 +3239,10 @@ pre.wp-block-preformatted {
 	max-width: var(--responsive--aligndefault-width);
 }
 
-.wp-block-search__button-inside .wp-block-search__inside-wrapper {
+.wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper {
 	background-color: var(--global--color-white);
+	border: var(--form--border-width) solid var(--form--border-color);
+	border-radius: var(--form--border-radius);
 }
 
 .wp-block-search__button-only.aligncenter .wp-block-search__inside-wrapper {
