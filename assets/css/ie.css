@@ -4877,6 +4877,14 @@ pre.wp-block-preformatted {
 	color: #d1e4dd !important;
 }
 
+.wp-block-search.wp-block-search__button-inside.wp-block-search__text-button button.wp-block-search__button:focus {
+	color: #39414d !important;
+}
+
+.wp-block-search.wp-block-search__button-inside.wp-block-search__icon-button button.wp-block-search__button:focus {
+	color: #39414d !important;
+}
+
 .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper {
 	border: 3px solid currentColor;
 }

@@ -3418,6 +3418,11 @@ pre.wp-block-preformatted {
 	color: var(--button--color-text) !important;
 }
 
+.wp-block-search.wp-block-search__button-inside.wp-block-search__text-button button.wp-block-search__button:focus,
+.wp-block-search.wp-block-search__button-inside.wp-block-search__icon-button button.wp-block-search__button:focus {
+	color: var(--button--color-background) !important;
+}
+
 .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper {
 	border: var(--button--border-width) solid currentColor;
 }

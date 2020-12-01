@@ -122,6 +122,10 @@
 				&:active {
 					color: var(--button--color-text) !important;
 				}
+
+				&:focus {
+					color: var(--button--color-background) !important;
+				}
 			}
 		}
 
