@@ -1651,6 +1651,8 @@ a:hover {
 
 	/* Only visible in Windows High Contrast mode */
 	outline: 2px solid transparent;
+	text-decoration: underline 1px dotted currentColor;
+	text-decoration-skip-ink: none;
 	background: rgba(255, 255, 255, 0.9);
 }
 
@@ -4992,6 +4994,7 @@ h1.page-title {
 	position: relative;
 	z-index: 99999;
 	outline-offset: 0;
+	text-decoration-thickness: 2px;
 }
 
 .primary-navigation .current-menu-item > a:first-child,

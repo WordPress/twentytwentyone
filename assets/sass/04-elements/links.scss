@@ -20,6 +20,8 @@ a:hover {
 	/* Only visible in Windows High Contrast mode */
 	outline: 2px solid transparent;
 
+	text-decoration: underline 1px dotted currentColor;
+	text-decoration-skip-ink: none;
 	background: rgba(255, 255, 255, .9);
 
 	// Change text color when the body background is dark.
