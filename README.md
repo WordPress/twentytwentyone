@@ -1,8 +1,8 @@
 **This theme has been merged into the WordPress Core SVN repository, and is no longer maintained on GitHub.**
 
-Please report all new bugs of reature requests on Trac: [https://core.trac.wordpress.org/newticket](https://core.trac.wordpress.org/newticket?component=Bundled+Theme&summary=Twenty+Twenty-One).
+**Please report all new bugs of reature requests on Trac: [https://core.trac.wordpress.org/newticket](https://core.trac.wordpress.org/newticket?component=Bundled+Theme&summary=Twenty+Twenty-One).**
 
-Browse open issues: https://core.trac.wordpress.org/search?q=twenty+twenty-one.
+**Browse open issues: https://core.trac.wordpress.org/search?q=twenty+twenty-one.**
 
 # Twenty Twenty-One
 
