@@ -72,6 +72,7 @@
 		&:focus {
 			color: var(--button--color-background) !important;
 			background-color: transparent !important;
+			border-color: var(--button--color-background) !important;
 		}
 
 		&.has-icon {
@@ -86,6 +87,15 @@
 	}
 
 	&.wp-block-search__button-inside {
+
+		.wp-block-search__inside-wrapper .wp-block-search__input {
+			margin-right: 0;
+
+			&:focus {
+				outline: 2px dotted var(--form--border-color);
+				outline-offset: -5px;
+			}
+		}
 
 		&.wp-block-search__text-button {
 
@@ -122,6 +132,10 @@
 				&:focus {
 					background-color: var(--button--color-text) !important;
 					color: var(--global--color-white) !important;
+				}
+
+				&:focus {
+					color: var(--button--color-background) !important;
 				}
 			}
 		}

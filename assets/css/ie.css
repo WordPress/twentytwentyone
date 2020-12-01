@@ -2130,12 +2130,23 @@ figcaption {
 	text-align: center;
 }
 
+.wp-block-embed figcaption {
+	color: currentColor;
+	font-size: 1rem;
+	line-height: 1.7;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
 .alignleft figcaption,
 .alignright figcaption,
 .alignleft .wp-caption,
 .alignright .wp-caption,
 .alignleft .wp-caption-text,
-.alignright .wp-caption-text {
+.alignright .wp-caption-text,
+.alignleft .wp-block-embed figcaption,
+.alignright .wp-block-embed figcaption {
 	margin-bottom: 0;
 }
 
@@ -2184,43 +2195,45 @@ a:hover {
 	text-decoration-skip-ink: none;
 }
 
-.site a:focus {
+.site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) {
 
 	/* Only visible in Windows High Contrast mode */
 	outline: 2px solid transparent;
+	text-decoration: underline 1px dotted currentColor;
+	text-decoration-skip-ink: none;
 	background: rgba(255, 255, 255, 0.9);
 }
 
-.is-dark-theme .site a:focus {
+.is-dark-theme .site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) {
 	color: #d1e4dd;
 }
 
-.is-dark-theme .site a:focus .meta-nav {
+.is-dark-theme .site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) .meta-nav {
 	color: #d1e4dd;
 }
 
-.has-background-white .site a:focus {
+.has-background-white .site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) {
 	background: rgba(0, 0, 0, 0.9);
 	color: #fff;
 }
 
-.has-background-white .site a:focus .meta-nav {
+.has-background-white .site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) .meta-nav {
 	color: #fff;
 }
 
-.site a:focus.skip-link {
+.site a:focus:not(.wp-block-button__link):not(.wp-block-file__button).skip-link {
 
 	/* Only visible in Windows High Contrast mode */
 	outline: 2px solid transparent;
 	outline-offset: -2px;
 }
 
-.site a:focus.skip-link:focus {
+.site a:focus:not(.wp-block-button__link):not(.wp-block-file__button).skip-link:focus {
 	color: #21759b;
 	background-color: #f1f1f1;
 }
 
-.site a:focus img {
+.site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) img {
 	outline: 2px dotted #28303d;
 }
 
@@ -2323,72 +2336,6 @@ input[type=reset] {
 	border: 3px solid transparent;
 	text-decoration: none;
 	padding: 15px 30px;
-}
-
-.site .button:before,
-.site .button:after,
-input[type=submit]:before,
-input[type=submit]:after,
-input[type=reset]:before,
-input[type=reset]:after,
-.wp-block-button .wp-block-button__link:before,
-.wp-block-button .wp-block-button__link:after,
-.wp-block-file .wp-block-file__button:before,
-.wp-block-file .wp-block-file__button:after,
-.wp-block-search .wp-block-search__button:before,
-.wp-block-search .wp-block-search__button:after {
-	content: "";
-	display: block;
-	height: 0;
-	width: 0;
-}
-
-.site .button:before {
-	margin-bottom: -calc(1em - 0);
-}
-
-input[type=submit]:before {
-	margin-bottom: -calc(1em - 0);
-}
-
-input[type=reset]:before {
-	margin-bottom: -calc(1em - 0);
-}
-
-.wp-block-button .wp-block-button__link:before {
-	margin-bottom: -calc(1em - 0);
-}
-
-.wp-block-file .wp-block-file__button:before {
-	margin-bottom: -calc(1em - 0);
-}
-
-.wp-block-search .wp-block-search__button:before {
-	margin-bottom: -calc(1em - 0);
-}
-
-.site .button:after {
-	margin-top: -calc(1em - 0);
-}
-
-input[type=submit]:after {
-	margin-top: -calc(1em - 0);
-}
-
-input[type=reset]:after {
-	margin-top: -calc(1em - 0);
-}
-
-.wp-block-button .wp-block-button__link:after {
-	margin-top: -calc(1em - 0);
-}
-
-.wp-block-file .wp-block-file__button:after {
-	margin-top: -calc(1em - 0);
-}
-
-.wp-block-search .wp-block-search__button:after {
-	margin-top: -calc(1em - 0);
 }
 
 .site .button:active {
@@ -3089,22 +3036,6 @@ input[type=reset]:disabled {
 	text-decoration: none;
 	padding: 15px 30px;
 	display: inline-block;
-}
-
-.wp-block-file .wp-block-file__button:before,
-.wp-block-file .wp-block-file__button:after {
-	content: "";
-	display: block;
-	height: 0;
-	width: 0;
-}
-
-.wp-block-file .wp-block-file__button:before {
-	margin-bottom: -calc(1em - 0);
-}
-
-.wp-block-file .wp-block-file__button:after {
-	margin-top: -calc(1em - 0);
 }
 
 .wp-block-file .wp-block-file__button:active {
@@ -4760,6 +4691,7 @@ pre.wp-block-preformatted {
 .wp-block-search button.wp-block-search__button:focus {
 	color: #39414d !important;
 	background-color: transparent !important;
+	border-color: #39414d !important;
 }
 
 .wp-block-search button.wp-block-search__button.has-icon {
@@ -4770,6 +4702,15 @@ pre.wp-block-preformatted {
 	width: 40px;
 	height: 40px;
 	fill: currentColor;
+}
+
+.wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper .wp-block-search__input {
+	margin-right: 0;
+}
+
+.wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper .wp-block-search__input:focus {
+	outline: 2px dotted #39414d;
+	outline-offset: -5px;
 }
 
 .wp-block-search.wp-block-search__button-inside.wp-block-search__text-button button.wp-block-search__button {
@@ -4888,6 +4829,14 @@ pre.wp-block-preformatted {
 .wp-block-search.wp-block-search__button-inside.wp-block-search__icon-button button.wp-block-search__button:focus {
 	background-color: #d1e4dd !important;
 	color: #fff !important;
+}
+
+.wp-block-search.wp-block-search__button-inside.wp-block-search__text-button button.wp-block-search__button:focus {
+	color: #39414d !important;
+}
+
+.wp-block-search.wp-block-search__button-inside.wp-block-search__icon-button button.wp-block-search__button:focus {
+	color: #39414d !important;
 }
 
 .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper {
@@ -6957,7 +6906,7 @@ h1.page-title {
 	}
 
 	.primary-navigation .primary-menu-container > ul > .menu-item > a + .sub-menu-toggle {
-		margin-left: -13px;
+		margin-left: -8px;
 	}
 }
 
@@ -7004,6 +6953,7 @@ h1.page-title {
 	position: relative;
 	z-index: 99999;
 	outline-offset: 0;
+	text-decoration-thickness: 2px;
 }
 
 .primary-navigation .current-menu-item > a:first-child,
@@ -7183,6 +7133,7 @@ h1.page-title {
 .navigation a:hover {
 	color: #28303d;
 	text-decoration: underline;
+	text-decoration-style: dotted;
 }
 
 .navigation a:focus {
@@ -7316,12 +7267,6 @@ h1.page-title {
 	margin-bottom: 0;
 }
 
-.post-navigation .nav-next:hover .post-title,
-.post-navigation .nav-previous:hover .post-title {
-	text-decoration: underline;
-	text-decoration-thickness: 1px;
-}
-
 .pagination {
 	border-top: 3px solid #28303d;
 	padding-top: 30px;
@@ -7428,12 +7373,14 @@ h1.page-title {
 	margin-right: 13px;
 }
 
-.pagination .nav-links > *.current {
-	border-bottom: 1px solid #28303d;
+.pagination .nav-links > *.current,
+.comments-pagination .nav-links > *.current {
+	text-decoration: underline;
 }
 
-.comments-pagination .nav-links > *.current {
-	border-bottom: 1px solid #28303d;
+.pagination .nav-links > *:not(.dots):not(.current):hover,
+.comments-pagination .nav-links > *:not(.dots):not(.current):hover {
+	text-decoration-style: dotted;
 }
 
 .pagination .nav-links > *:first-child,
