@@ -118,8 +118,10 @@
 				}
 
 				&:hover,
-				&:active {
-					color: var(--button--color-text) !important;
+				&:active,
+				&:focus {
+					background-color: var(--button--color-text) !important;
+					color: var(--global--color-white) !important;
 				}
 			}
 		}

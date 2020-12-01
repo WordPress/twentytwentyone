@@ -3402,9 +3402,12 @@ pre.wp-block-preformatted {
 
 .wp-block-search.wp-block-search__button-inside.wp-block-search__text-button button.wp-block-search__button:hover,
 .wp-block-search.wp-block-search__button-inside.wp-block-search__text-button button.wp-block-search__button:active,
+.wp-block-search.wp-block-search__button-inside.wp-block-search__text-button button.wp-block-search__button:focus,
 .wp-block-search.wp-block-search__button-inside.wp-block-search__icon-button button.wp-block-search__button:hover,
-.wp-block-search.wp-block-search__button-inside.wp-block-search__icon-button button.wp-block-search__button:active {
-	color: var(--button--color-text) !important;
+.wp-block-search.wp-block-search__button-inside.wp-block-search__icon-button button.wp-block-search__button:active,
+.wp-block-search.wp-block-search__button-inside.wp-block-search__icon-button button.wp-block-search__button:focus {
+	background-color: var(--button--color-text) !important;
+	color: var(--global--color-white) !important;
 }
 
 .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper {
