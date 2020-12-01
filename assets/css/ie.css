@@ -7195,6 +7195,7 @@ h1.page-title {
 .navigation a:hover {
 	color: #28303d;
 	text-decoration: underline;
+	text-decoration-style: dotted;
 }
 
 .navigation a:focus {
@@ -7440,12 +7441,14 @@ h1.page-title {
 	margin-right: 13px;
 }
 
-.pagination .nav-links > *.current {
-	border-bottom: 1px solid #28303d;
+.pagination .nav-links > *.current,
+.comments-pagination .nav-links > *.current {
+	text-decoration: underline;
 }
 
-.comments-pagination .nav-links > *.current {
-	border-bottom: 1px solid #28303d;
+.pagination .nav-links > *:not(.dots):not(.current):hover,
+.comments-pagination .nav-links > *:not(.dots):not(.current):hover {
+	text-decoration-style: dotted;
 }
 
 .pagination .nav-links > *:first-child,

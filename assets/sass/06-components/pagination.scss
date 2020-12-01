@@ -11,6 +11,7 @@
 		&:hover {
 			color: var(--global--color-primary-hover);
 			text-decoration: underline;
+			text-decoration-style: dotted;
 		}
 
 		&:focus {
@@ -186,7 +187,11 @@
 		margin-right: calc(0.66 * var(--global--spacing-unit));
 
 		&.current {
-			border-bottom: 1px solid var(--pagination--color-text);
+			text-decoration: underline;
+		}
+
+		&:not(.dots):not(.current):hover {
+			text-decoration-style: dotted;
 		}
 
 		&:first-child {
