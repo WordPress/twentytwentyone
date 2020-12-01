@@ -4760,6 +4760,7 @@ pre.wp-block-preformatted {
 .wp-block-search button.wp-block-search__button:focus {
 	color: #39414d !important;
 	background-color: transparent !important;
+	border-color: #39414d !important;
 }
 
 .wp-block-search button.wp-block-search__button.has-icon {

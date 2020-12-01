@@ -3370,6 +3370,7 @@ pre.wp-block-preformatted {
 .wp-block-search button.wp-block-search__button:focus {
 	color: var(--button--color-background) !important;
 	background-color: transparent !important;
+	border-color: var(--button--color-background) !important;
 }
 
 .wp-block-search button.wp-block-search__button.has-icon {
